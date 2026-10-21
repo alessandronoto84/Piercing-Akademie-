@@ -132,16 +132,17 @@ Auf den Rechtsseiten sind die offenen Punkte sichtbar als „Zur Prüfung“ mar
 
 ---
 
-## 7. Fachliche Punkte zur Prüfung (nicht verändert)
+## 7. Fachliche Punkte zur Prüfung
 
-Die Kursinhalte habe ich nicht verändert. Folgende Aussagen bitte fachlich und rechtlich prüfen:
+Am 21.10.2026 geklärt und eingearbeitet:
+- **Modul 04:** Lidocain-Salbe darf angewendet werden, wird aber nicht empfohlen. Das steht jetzt so in der Modulbeschreibung.
+- **„Snaptile“** im Datenblatt ist korrekt.
+- **Kurs-Buch:** gibt es in allen Paketen. Es steht jetzt in der Basis-Karte (Praxis und Komplett enthalten „Alles aus Basis“) und im Nachweis-Bereich. Bitte noch einmal bestätigen, die Antwort war „würde ich sagen“.
+- **Modelle:** Das Studio findet in der Regel genug Modelle, garantiert ist das aber nicht. Paketkarte, Praxistag-Text und FAQ sagen das jetzt so und versprechen nichts mehr.
 
-1. **Modul 04 „Schmerz und Betäubung“:** „welche Mittel du als Piercer nutzen darfst (Eisspray, Lidocain)“. Lidocain ist ein Arzneimittel; injizierbare Betäubung ist Ärzten vorbehalten. Ob und in welcher Form (z. B. als Creme oder Spray) ein Piercer es anwenden darf, ist rechtlich heikel und sollte genau so formuliert werden, wie es rechtlich haltbar ist.
-2. **Datenblatt im Hero:** „Klemme: Gazeklemme, Snaptile“. Bitte die Schreibweise und den Fachbegriff „Snaptile“ bestätigen.
-3. **„Das Kurs-Buch bekommst du dazu.“** In welchen Paketen ist das Buch enthalten? In den Paketkarten wird es nicht genannt.
-4. **Modul 01:** „ältesten Funden in Algerien“. Bitte mit der Quelle im Fachbuch abgleichen.
-5. **„Modelle vom Studio gestellt“ (Praxis-Paket, FAQ):** Ist das immer garantiert?
-6. **„Begrenzte Plätze“ (Komplett-Paket):** Gibt es eine konkrete Zahl?
+Noch offen:
+1. **Modul 01:** „ältesten Funden in Algerien“. Bitte mit der Quelle im Fachbuch abgleichen.
+2. **„Begrenzte Plätze“ (Komplett-Paket):** Gibt es eine konkrete Zahl?
 
 ---
 
