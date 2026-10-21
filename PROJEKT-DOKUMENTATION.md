@@ -13,7 +13,7 @@ Statische Website ohne Build-System, ohne Server-Logik und ohne Datenbank. Alle 
 | `index.html` | Landingpage: Hero, Ablauf, Zielgruppen, 11 Module, 3 Pakete, Praxistag, Nachweis und Galerie, Klartext, FAQ, Anmeldung |
 | `impressum.html` | Impressum (bisher ein Abschnitt in der Startseite) |
 | `datenschutz.html` | Datenschutzerklärung (neu, auf den tatsächlichen Technikstand zugeschnitten, Entwurf) |
-| `agb.html` | Platzhalterseite für AGB und Widerrufsbelehrung (ehrlich als „in Vorbereitung“ gekennzeichnet, `noindex`) |
+| `agb.html` | AGB (13 Paragrafen), gesetzliche Widerrufsbelehrung und Muster-Widerrufsformular; Entwurf auf Basis der Tattoo-Akademie-AGB |
 | `assets/styles.css` | gemeinsames Stylesheet für alle Seiten |
 | `assets/main.js` | Anfrageformular: Paket-Vorauswahl, Validierung, E-Mail-Entwurf |
 | `assets/fonts/` | lokal eingebundene Schriften (SIL Open Font License, Lizenztexte liegen bei) |
@@ -79,7 +79,7 @@ Bereits gut und deshalb beibehalten: das Designsystem (Farben, Schriften, Abstä
 - **Überschriften:** genau eine H1 pro Seite, saubere H2/H3-Hierarchie
 - **Alt-Texte:** beschreibend für alle 17 Bilder
 - **Ladezeit:** `loading="lazy"` für Bilder außerhalb des ersten Bildschirms
-- **Bewusst weggelassen:** keine erfundene Domain, kein Canonical, keine Bewertungen, keine strukturierten Daten
+- **Domain piercingakademie.de (seit 21.10.2026):** Canonical-URLs auf allen Seiten, `og:url`, `sitemap.xml`, `robots.txt` und strukturierte Daten (schema.org: Akademie mit Adresse und Kontakt, Kurs mit den drei Angeboten und Preisen). Keine Bewertungen und keine Sterne-Ratings.
 
 ---
 
@@ -122,11 +122,11 @@ Beim Testen gefunden und behoben: Fehlermeldungen erschienen schon beim Verlasse
 Auf den Rechtsseiten sind die offenen Punkte sichtbar als „Zur Prüfung“ markiert (CSS-Klasse `.pruefen`). Vor dem Livegang klären und die Markierungen entfernen.
 
 1. **Vertragspartner:** geklärt am 21.10.2026. Vertragspartner ist „Piercing Akademie / 740 Piercing, Inhaber: Alessandro Noto, Burgstraße 12, 49808 Lingen (Ems)“, wie auf der Website. Die Daten der 740 Art & Event GmbH & Co. KG aus dem Tattoo-Projekt gelten hier nicht. Offen bleibt nur die Steuerangabe (Punkt 2).
-2. **Umsatzsteuer:** USt-IdNr. vorhanden oder Kleinunternehmer nach § 19 UStG? Das gehört ins Impressum (die bestehende Seite kündigt „Steuernummer oder Umsatzsteuer-ID“ an). Außerdem müssen Preise für Verbraucher nach der Preisangabenverordnung Gesamtpreise sein. Bisher steht nur „Alle Preise in Euro“. Je nach Status sollte dort „inkl. MwSt.“ oder „gemäß § 19 UStG wird keine Umsatzsteuer berechnet“ stehen. Diesen Hinweis habe ich nicht selbst ergänzt, weil der Status unbekannt ist.
-3. **AGB und Widerrufsbelehrung** fehlen vollständig. Nötig sind unter anderem: Vertragsschluss, Zahlung, Termine, Verschiebung und Stornierung der Praxistage, Widerrufsrecht für digitale Inhalte (Online-Kurs) und Dienstleistungen (Praxistage), Laufzeit des Kurszugangs sowie Umfang der „12 Monate Support“.
+2. **Umsatzsteuer:** auf Wunsch vom 21.10.2026 vorerst weggelassen. Bei Gelegenheit nachholen: Laut Preisangabenverordnung müssen Preise für Verbraucher Gesamtpreise sein; ein Hinweis wie „inkl. MwSt.“ oder „gemäß § 19 UStG keine Umsatzsteuer“ gehört dann zu den Preisen und ggf. eine USt-IdNr. ins Impressum.
+3. **AGB und Widerrufsbelehrung:** seit 21.10.2026 als Entwurf auf `agb.html` (auf Basis der Tattoo-AGB, angepasst). Als Vorschlag gesetzt und zu bestätigen: Zugang zum Online-Kurs 12 Monate ab Freischaltung, einmalige kostenfreie Verschiebung bis 14 Tage vor dem Termin, Gerichtsstand Lingen für Kaufleute. Anwaltlich prüfen, besonders die Widerrufsbelehrung für die kombinierten Pakete (Online-Kurs, Dienstleistung und Buch in einem Vertrag).
 4. **Hosting-Anbieter** für die Datenschutzerklärung.
 5. **E-Mail-Postfach:** privates Gmail oder Google Workspace mit Auftragsverarbeitungsvertrag?
-6. **Verbraucherstreitbeilegung (§ 36 VSBG):** Ob ein Hinweis nötig ist, hängt von der Zahl der Beschäftigten und den AGB ab.
+6. **Verbraucherstreitbeilegung (§ 36 VSBG):** seit 21.10.2026 im Impressum: „Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.“ Das gilt so nur, solange die Akademie höchstens 10 Personen beschäftigt.
 7. **Bildrechte:** geklärt am 21.10.2026. Für alle Fotos auf der Website liegen schriftliche Einwilligungen vor.
 8. **Fernunterrichtsschutzgesetz (FernUSG):** Der Online-Kurs (asynchron, mit Quiz, Abschlusstest und Support) kann nach dem BGH-Urteil vom 12.06.2025 (III ZR 109/24) eine Zulassung der Staatlichen Zentralstelle für Fernunterricht (ZFU) brauchen. Ohne Zulassung wären die Verträge nichtig. Vor dem Start der Buchungen anwaltlich klären lassen; Details und Quellen in [KURS-RECHERCHE.md](KURS-RECHERCHE.md), Abschnitt 1.
 9. **Gesamtprüfung:** Datenschutz, Impressum und AGB vor dem Livegang anwaltlich prüfen lassen.
@@ -185,5 +185,5 @@ Die Markierung „neu“ auf der Website passt damit genau zu den Modulen, die �
 
 1. **Kursplattform:** Welche Plattform, welche URL? Danach den Buchungsbutton aktivieren und die Rechtstexte ergänzen.
 2. **Formular-Backend:** Den heutigen E-Mail-Entwurf beibehalten oder auf FormSubmit umstellen? FormSubmit wäre bequemer, weil das Formular dann direkt sendet. Es leitet aber alle Daten über einen US-Dienst; das muss in die Datenschutzerklärung, und die Zieladresse muss einmalig per Bestätigungs-Mail freigeschaltet werden. Umstellung nur nach Freigabe.
-3. **Domain:** Sobald sie feststeht, Canonical-URLs, `og:url`, ein Vorschaubild (`og:image`) und eine `sitemap.xml` ergänzen. Dann sind auch strukturierte Daten (z. B. `Course` mit den drei Angeboten) sinnvoll.
+3. **Domain:** erledigt (piercingakademie.de). Beim Hoster einstellen, dass `www.piercingakademie.de` auf `https://piercingakademie.de/` weiterleitet, weil die Canonical-URLs ohne „www“ gesetzt sind. Ein Vorschaubild fürs Teilen (`og:image`, 1200 × 630 px) fehlt noch.
 4. **Galerie:** Weitere Fotos, z. B. Bauchnabel oder Brustwarze (in Modul 08 genannt), können jederzeit ergänzt werden. Das Raster ist auf 1 großes plus 12 kleine Bilder ausgelegt.
