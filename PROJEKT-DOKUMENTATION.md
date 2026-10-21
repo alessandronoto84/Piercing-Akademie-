@@ -121,14 +121,15 @@ Beim Testen gefunden und behoben: Fehlermeldungen erschienen schon beim Verlasse
 
 Auf den Rechtsseiten sind die offenen Punkte sichtbar als „Zur Prüfung“ markiert (CSS-Klasse `.pruefen`). Vor dem Livegang klären und die Markierungen entfernen.
 
-1. **Vertragspartner:** Auf der Seite steht „740 Piercing, Inhaber: Alessandro Noto“. Im Tattoo-Protokoll gehört „740 Piercing“ zu den Partnermarken der 740 Art & Event GmbH & Co. KG. Wer verkauft die Kurse: Alessandro Noto als Einzelunternehmer oder die Gesellschaft? Davon hängen Impressum, Datenschutz und AGB ab. Die Daten der GmbH & Co. KG (HRB, Steuernummer, USt-IdNr., Geschäftsführer) wurden bewusst nicht übernommen. Das Impressum des Kursbuchs nennt ebenfalls „740 Piercing, Alessandro Noto, Burgstraße 12“ als Autor; das spricht für die Angaben auf der Website, ersetzt aber keine Bestätigung der Rechtsform.
+1. **Vertragspartner:** geklärt am 21.10.2026. Vertragspartner ist „Piercing Akademie / 740 Piercing, Inhaber: Alessandro Noto, Burgstraße 12, 49808 Lingen (Ems)“, wie auf der Website. Die Daten der 740 Art & Event GmbH & Co. KG aus dem Tattoo-Projekt gelten hier nicht. Offen bleibt nur die Steuerangabe (Punkt 2).
 2. **Umsatzsteuer:** USt-IdNr. vorhanden oder Kleinunternehmer nach § 19 UStG? Das gehört ins Impressum (die bestehende Seite kündigt „Steuernummer oder Umsatzsteuer-ID“ an). Außerdem müssen Preise für Verbraucher nach der Preisangabenverordnung Gesamtpreise sein. Bisher steht nur „Alle Preise in Euro“. Je nach Status sollte dort „inkl. MwSt.“ oder „gemäß § 19 UStG wird keine Umsatzsteuer berechnet“ stehen. Diesen Hinweis habe ich nicht selbst ergänzt, weil der Status unbekannt ist.
 3. **AGB und Widerrufsbelehrung** fehlen vollständig. Nötig sind unter anderem: Vertragsschluss, Zahlung, Termine, Verschiebung und Stornierung der Praxistage, Widerrufsrecht für digitale Inhalte (Online-Kurs) und Dienstleistungen (Praxistage), Laufzeit des Kurszugangs sowie Umfang der „12 Monate Support“.
 4. **Hosting-Anbieter** für die Datenschutzerklärung.
 5. **E-Mail-Postfach:** privates Gmail oder Google Workspace mit Auftragsverarbeitungsvertrag?
 6. **Verbraucherstreitbeilegung (§ 36 VSBG):** Ob ein Hinweis nötig ist, hängt von der Zahl der Beschäftigten und den AGB ab.
-7. **Bildrechte:** Auf mehreren Fotos sind Personen erkennbar (Zertifikatsübergaben, Gesichter bei den Nasen- und Lippenpiercings, Piercer). Liegen Einwilligungen für die Nutzung auf der Website vor? Eine Einwilligung für Instagram deckt das nicht automatisch ab.
-8. **Gesamtprüfung:** Datenschutz, Impressum und AGB vor dem Livegang anwaltlich prüfen lassen.
+7. **Bildrechte:** geklärt am 21.10.2026. Für alle Fotos auf der Website liegen schriftliche Einwilligungen vor.
+8. **Fernunterrichtsschutzgesetz (FernUSG):** Der Online-Kurs (asynchron, mit Quiz, Abschlusstest und Support) kann nach dem BGH-Urteil vom 12.06.2025 (III ZR 109/24) eine Zulassung der Staatlichen Zentralstelle für Fernunterricht (ZFU) brauchen. Ohne Zulassung wären die Verträge nichtig. Vor dem Start der Buchungen anwaltlich klären lassen; Details und Quellen in [KURS-RECHERCHE.md](KURS-RECHERCHE.md), Abschnitt 1.
+9. **Gesamtprüfung:** Datenschutz, Impressum und AGB vor dem Livegang anwaltlich prüfen lassen.
 
 ---
 
@@ -144,7 +145,7 @@ Am 21.10.2026 geklärt und eingearbeitet:
 - **Modul 01, Algerien:** im Kursbuch belegt (S. 3: „vor über 7000 Jahren in Algerien Gehänge in ihren Ohrläppchen“).
 
 Noch offen:
-1. **Kanülenstärken in der Grafik im Startbereich:** Website „18G ≈ 1,3 mm, 16G ≈ 1,7 mm“, Kursbuch S. 64 „18G – 1,2 mm, 16G – 1,6 mm, 14G – 2,1 mm“. Die Nennmaße nach Gauge-Norm sind etwa 1,27 / 1,65 / 2,11 mm; Hersteller von Venenverweilkanülen geben meist gerundet 1,3 / 1,7 / 2,2 mm an. Entscheiden, welche Angabe gilt, und Website und Buch einheitlich machen. Die Website ist bisher unverändert.
+1. **Kanülenstärken:** recherchiert (siehe [KURS-RECHERCHE.md](KURS-RECHERCHE.md), Abschnitt 2). Die Website-Angaben (18G ≈ 1,3 mm, 16G ≈ 1,7 mm) entsprechen der Herstellerangabe von B. Braun und bleiben. Im Buch S. 64 bei der nächsten Auflage auf 1,3 / 1,7 / 2,2 mm korrigieren.
 
 ---
 
@@ -171,14 +172,16 @@ Quelle: „Die Piercing Akademie – Dein Weg zum Bodypiercer“ by 740 Piercing
 Die Markierung „neu“ auf der Website passt damit genau zu den Modulen, die über das Buch hinausgehen.
 
 **Hinweise für die Überarbeitung des Buchs bzw. den Online-Kurs** (nicht auf der Website verwendet, nur zur Prüfung):
-- **Schreibweisen:** S. 55 „Chirurgiestahl“ (üblich: Chirurgenstahl), S. 48 „Octinesept“ (Octenisept), S. 56 „Nionium“ (vermutlich Niob), S. 44 „Bacterius stearothermophilus“ (heute Geobacillus stearothermophilus).
+- **Schreibweisen:** S. 55 „Chirurgiestahl“ → „Chirurgenstahl“ (auf der Website bereits korrekt), S. 48 „Octinesept“ → „Octenisept“, S. 56 „Nionium“ → vermutlich „Niob“, S. 44 „Bacterius stearothermophilus“ → „Geobacillus stearothermophilus“.
 - **Kanülenmaße S. 64:** siehe oben unter „Noch offen“.
 - **Einverständniserklärung S. 115:** Die Einwilligung zur Veröffentlichung von Fotos nennt Art. 6 Abs. 1 (f) DSGVO; für eine Einwilligung passt Art. 6 Abs. 1 (a). Außerdem sind 10 Jahre Aufbewahrung für Gesundheitsdaten zu begründen. Vor der Nutzung im Kurs rechtlich prüfen lassen.
-- **Bildrechte für die Website:** Die Einverständniserklärung im Buch enthält bereits eine Foto-Einwilligung für Website und Social Media. Wenn die Kundinnen und Kunden auf den Galerie-Fotos diese Erklärung unterschrieben haben, ist der Punkt „Bildrechte“ (Abschnitt 6) weitgehend geklärt.
-- **Impressum des Buchs:** nennt „740 Piercing, Alessandro Noto“ als Autor und die E-Mail-Adresse 740-tattoo@gmx.net. Für die Website gilt weiterhin diepiercingakademie@gmail.com. Bitte bestätigen, dass das so gewollt ist.
+- **Bildrechte für die Website:** geklärt, Einwilligungen liegen vor.
+- **Impressum des Buchs:** nennt „740 Piercing, Alessandro Noto“ und die E-Mail-Adresse 740-tattoo@gmx.net. Maßgeblich sind die Angaben der Website (Inhaber Alessandro Noto, diepiercingakademie@gmail.com), bestätigt am 21.10.2026. Bei einer Neuauflage das Buch-Impressum angleichen.
 - **Bildquellen im Buch:** „Canva, Wikipedia“. Für den Online-Kurs die Lizenzbedingungen der Bilder prüfen, besonders bei Wikipedia-Bildern (Namensnennung).
 
 ## 8. Offene Entscheidungen
+
+0. **FernUSG/ZFU (vorrangig):** Online-Kurs zulassen lassen oder so gestalten, dass er nicht unter das FernUSG fällt (siehe Abschnitt 6, Punkt 8). Davon hängen AGB, Kursplattform und der Buchungsstart ab.
 
 1. **Kursplattform:** Welche Plattform, welche URL? Danach den Buchungsbutton aktivieren und die Rechtstexte ergänzen.
 2. **Formular-Backend:** Den heutigen E-Mail-Entwurf beibehalten oder auf FormSubmit umstellen? FormSubmit wäre bequemer, weil das Formular dann direkt sendet. Es leitet aber alle Daten über einen US-Dienst; das muss in die Datenschutzerklärung, und die Zieladresse muss einmalig per Bestätigungs-Mail freigeschaltet werden. Umstellung nur nach Freigabe.
