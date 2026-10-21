@@ -121,7 +121,7 @@ Beim Testen gefunden und behoben: Fehlermeldungen erschienen schon beim Verlasse
 
 Auf den Rechtsseiten sind die offenen Punkte sichtbar als „Zur Prüfung“ markiert (CSS-Klasse `.pruefen`). Vor dem Livegang klären und die Markierungen entfernen.
 
-1. **Vertragspartner:** Auf der Seite steht „740 Piercing, Inhaber: Alessandro Noto“. Im Tattoo-Protokoll gehört „740 Piercing“ zu den Partnermarken der 740 Art & Event GmbH & Co. KG. Wer verkauft die Kurse: Alessandro Noto als Einzelunternehmer oder die Gesellschaft? Davon hängen Impressum, Datenschutz und AGB ab. Die Daten der GmbH & Co. KG (HRB, Steuernummer, USt-IdNr., Geschäftsführer) wurden bewusst nicht übernommen.
+1. **Vertragspartner:** Auf der Seite steht „740 Piercing, Inhaber: Alessandro Noto“. Im Tattoo-Protokoll gehört „740 Piercing“ zu den Partnermarken der 740 Art & Event GmbH & Co. KG. Wer verkauft die Kurse: Alessandro Noto als Einzelunternehmer oder die Gesellschaft? Davon hängen Impressum, Datenschutz und AGB ab. Die Daten der GmbH & Co. KG (HRB, Steuernummer, USt-IdNr., Geschäftsführer) wurden bewusst nicht übernommen. Das Impressum des Kursbuchs nennt ebenfalls „740 Piercing, Alessandro Noto, Burgstraße 12“ als Autor; das spricht für die Angaben auf der Website, ersetzt aber keine Bestätigung der Rechtsform.
 2. **Umsatzsteuer:** USt-IdNr. vorhanden oder Kleinunternehmer nach § 19 UStG? Das gehört ins Impressum (die bestehende Seite kündigt „Steuernummer oder Umsatzsteuer-ID“ an). Außerdem müssen Preise für Verbraucher nach der Preisangabenverordnung Gesamtpreise sein. Bisher steht nur „Alle Preise in Euro“. Je nach Status sollte dort „inkl. MwSt.“ oder „gemäß § 19 UStG wird keine Umsatzsteuer berechnet“ stehen. Diesen Hinweis habe ich nicht selbst ergänzt, weil der Status unbekannt ist.
 3. **AGB und Widerrufsbelehrung** fehlen vollständig. Nötig sind unter anderem: Vertragsschluss, Zahlung, Termine, Verschiebung und Stornierung der Praxistage, Widerrufsrecht für digitale Inhalte (Online-Kurs) und Dienstleistungen (Praxistage), Laufzeit des Kurszugangs sowie Umfang der „12 Monate Support“.
 4. **Hosting-Anbieter** für die Datenschutzerklärung.
@@ -141,10 +141,42 @@ Am 21.10.2026 geklärt und eingearbeitet:
 - **Komplett-Paket:** „Zunächst begrenzt auf 10 Plätze“ (vorher „Begrenzte Plätze“).
 - **Modelle:** Das Studio findet in der Regel genug Modelle, garantiert ist das aber nicht. Paketkarte, Praxistag-Text und FAQ sagen das jetzt so und versprechen nichts mehr.
 
+- **Modul 01, Algerien:** im Kursbuch belegt (S. 3: „vor über 7000 Jahren in Algerien Gehänge in ihren Ohrläppchen“).
+
 Noch offen:
-1. **Modul 01:** „ältesten Funden in Algerien“. Bitte mit der Quelle im Fachbuch abgleichen.
+1. **Kanülenstärken in der Grafik im Startbereich:** Website „18G ≈ 1,3 mm, 16G ≈ 1,7 mm“, Kursbuch S. 64 „18G – 1,2 mm, 16G – 1,6 mm, 14G – 2,1 mm“. Die Nennmaße nach Gauge-Norm sind etwa 1,27 / 1,65 / 2,11 mm; Hersteller von Venenverweilkanülen geben meist gerundet 1,3 / 1,7 / 2,2 mm an. Entscheiden, welche Angabe gilt, und Website und Buch einheitlich machen. Die Website ist bisher unverändert.
 
 ---
+
+## 7a. Abgleich mit dem Kursbuch
+
+Quelle: „Die Piercing Akademie – Dein Weg zum Bodypiercer“ by 740 Piercing (Autor: Alessandro Noto, Herstellung: epubli), 116 Seiten plus Inhaltsverzeichnis, als Scan in drei PDF-Teilen geliefert am 21.10.2026. Gelesen wurden S. 1–97 und S. 110–116; die übrigen Seiten zum Intimbereich (S. 98–109) waren für die Website-Texte nicht relevant.
+
+**Kapitel des Buchs und Module der Website:**
+
+| Website-Modul | Kursbuch | Stand |
+|---|---|---|
+| 01 Berufsbild und Geschichte | Kap. 2 Piercing – Damals wie Heute (S. 3–6) | belegt (Algerien, Ohrlochpistole, Venenverweilkanüle) |
+| 02 Recht, Haftung, Einverständnis | Kap. 1 Rechtliches (S. 1–2), Kap. 12 Einverständniserklärung (S. 114–115) | belegt |
+| 03 Anatomie, Haut und Wundheilung *(neu)* | kein eigenes Kapitel; Wundheilung teilweise in Kap. 6.2 | Inhalt muss für den Online-Kurs neu erstellt werden |
+| 04 Schmerz und Betäubung | Kap. 3 Schmerz, Kap. 4 Lokalanästhesie (S. 7–15) | belegt (Eisspray, „Lidocainsalbe (Xylocain) rezeptfrei aus der Apotheke“, Nebenwirkungen, Wechselwirkungen) |
+| 05 Hygiene und steriles Arbeiten | Kap. 5 (S. 16–47) | belegt (OP-Raum-Vergleich, Händehygiene, Rahmenhygieneplan, Autoklav) |
+| 06 Material und Schmuck | Kap. 7 Materiallehre, Kap. 8 Schmucklehre (S. 52–63) | belegt |
+| 07 Werkzeuge und Instrumente | Kap. 9 (S. 64–73) | belegt |
+| 08 Piercing-Arten | Kap. 10 (S. 74–110) | belegt; Datenblatt Nostril im Startbereich stimmt exakt mit S. 85 überein; Beispielliste auf der Website jetzt vollständig nach Buch |
+| 09 Ablauf, Kundengespräch, Notfälle | Kap. 11 Piercen Ablauf (S. 111–113) | belegt (26 Schritte, Kreislauf-Abfall); Notfallteil im Buch nur kurz (Erste-Hilfe-Kasten S. 26, Nachbluten S. 50) |
+| 10 Pflege und Wundheilstörungen | Kap. 6 Piercingpflege (S. 48–51) | belegt (Prontolind/Octenisept nicht bei Knorpel) |
+| 11 Studio starten *(neu)* | kein Kapitel | Inhalt (Gewerbe, Gesundheitsamt, Versicherung, Preise, Einkauf) muss für den Online-Kurs neu erstellt werden |
+
+Die Markierung „neu“ auf der Website passt damit genau zu den Modulen, die über das Buch hinausgehen.
+
+**Hinweise für die Überarbeitung des Buchs bzw. den Online-Kurs** (nicht auf der Website verwendet, nur zur Prüfung):
+- **Schreibweisen:** S. 55 „Chirurgiestahl“ (üblich: Chirurgenstahl), S. 48 „Octinesept“ (Octenisept), S. 56 „Nionium“ (vermutlich Niob), S. 44 „Bacterius stearothermophilus“ (heute Geobacillus stearothermophilus).
+- **Kanülenmaße S. 64:** siehe oben unter „Noch offen“.
+- **Einverständniserklärung S. 115:** Die Einwilligung zur Veröffentlichung von Fotos nennt Art. 6 Abs. 1 (f) DSGVO; für eine Einwilligung passt Art. 6 Abs. 1 (a). Außerdem sind 10 Jahre Aufbewahrung für Gesundheitsdaten zu begründen. Vor der Nutzung im Kurs rechtlich prüfen lassen.
+- **Bildrechte für die Website:** Die Einverständniserklärung im Buch enthält bereits eine Foto-Einwilligung für Website und Social Media. Wenn die Kundinnen und Kunden auf den Galerie-Fotos diese Erklärung unterschrieben haben, ist der Punkt „Bildrechte“ (Abschnitt 6) weitgehend geklärt.
+- **Impressum des Buchs:** nennt „740 Piercing, Alessandro Noto“ als Autor und die E-Mail-Adresse 740-tattoo@gmx.net. Für die Website gilt weiterhin diepiercingakademie@gmail.com. Bitte bestätigen, dass das so gewollt ist.
+- **Bildquellen im Buch:** „Canva, Wikipedia“. Für den Online-Kurs die Lizenzbedingungen der Bilder prüfen, besonders bei Wikipedia-Bildern (Namensnennung).
 
 ## 8. Offene Entscheidungen
 
