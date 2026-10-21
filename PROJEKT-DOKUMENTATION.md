@@ -138,11 +138,11 @@ Am 21.10.2026 geklärt und eingearbeitet:
 - **Modul 04:** Lidocain-Salbe darf angewendet werden, wird aber nicht empfohlen. Das steht jetzt so in der Modulbeschreibung.
 - **„Snaptile“** im Datenblatt ist korrekt.
 - **Kurs-Buch:** gibt es in allen Paketen. Es steht jetzt in der Basis-Karte (Praxis und Komplett enthalten „Alles aus Basis“) und im Nachweis-Bereich. Bitte noch einmal bestätigen, die Antwort war „würde ich sagen“.
+- **Komplett-Paket:** „Zunächst begrenzt auf 10 Plätze“ (vorher „Begrenzte Plätze“).
 - **Modelle:** Das Studio findet in der Regel genug Modelle, garantiert ist das aber nicht. Paketkarte, Praxistag-Text und FAQ sagen das jetzt so und versprechen nichts mehr.
 
 Noch offen:
 1. **Modul 01:** „ältesten Funden in Algerien“. Bitte mit der Quelle im Fachbuch abgleichen.
-2. **„Begrenzte Plätze“ (Komplett-Paket):** Gibt es eine konkrete Zahl?
 
 ---
 
