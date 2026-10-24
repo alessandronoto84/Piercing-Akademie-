@@ -170,3 +170,24 @@ Alle 103 Lektionen wurden gelesen und zweifelhafte Aussagen per Websuche geprüf
 **Offen (nicht abschließend klärbar):** Ob Lidocainsalbe rezeptfrei ist, hängt vom Präparat ab (Quellen widersprüchlich). Der Kurs sagt jetzt nur „in der Apotheke“. Die Wechselwirkung „Mutterkornalkaloide oder Epinephrin → Blutdruckabfall“ steht so im Kursbuch; ich habe sie nicht unabhängig bestätigen können.
 
 **Bilder aus dem Internet:** Die Netzwerkregeln dieser Arbeitsumgebung sperren Wikimedia Commons, Unsplash, Pixabay, Pexels und Openverse. Statt lizenzfreier Fotos sind deshalb eigene, schattierte 3D-Grafiken entstanden. Wenn die Domains freigegeben werden, können lizenzfreie Fotos (CC0 oder CC BY mit Namensnennung) ergänzt werden.
+
+## 11. Lizenzfreie Bilder (24.10.2026)
+
+Gefunden über Openverse und Wikimedia Commons, heruntergeladen als verkleinerte Vorschaubilder (max. 640 px) und Base64-eingebettet in `kurs-prototyp/inhalte/bilder-frei.js`. Unter jedem Bild steht im Kurs der Nachweis (Urheber, Lizenz mit Link, Quelle). Bei CC BY-SA ist die Verkleinerung vermerkt; die Bilder bleiben unter derselben Lizenz. Bewusst nicht verwendet: Fotos mit erkennbaren Gesichtern, Intimbereich, und ein Sterilisatorfoto, bei dem unklar ist, ob es ein Dampfautoklav ist.
+
+| ID | Lektion | Urheber | Lizenz | Quelle |
+|---|---|---|---|---|
+| frei-haut-3d | Modul 3, Aufbau der Haut | https://www.scientificanimations.com/ | CC BY-SA 4.0 | https://commons.wikimedia.org/w/index.php?curid=85919471 |
+| frei-haut-rezeptoren | Modul 4, Schmerzrezeptoren | Guido4 | CC BY-SA 4.0 | https://commons.wikimedia.org/w/index.php?curid=63765352 |
+| frei-haende | Modul 5, Hygienische Händedesinfektion | Raimundo Pastor | CC BY-SA 4.0 | https://commons.wikimedia.org/w/index.php?curid=88078866 |
+| frei-abwurf | Modul 5, Nadelabwurf | Joe Mabel | CC BY-SA 3.0 | https://commons.wikimedia.org/w/index.php?curid=2135426 |
+| frei-ultraschall | Modul 5, Besteck aufbereiten | Hannes Grobe | CC BY 3.0 | https://commons.wikimedia.org/w/index.php?curid=29515961 |
+| frei-pseudomonas | Modul 10, Perichondritis | HansN. | CC BY-SA 4.0 | https://commons.wikimedia.org/w/index.php?curid=86321941 |
+| frei-staph | Modul 10, Entzündungen | NIAID | CC BY 2.0 | https://commons.wikimedia.org/w/index.php?curid=158430136 |
+| frei-kanuele | Modul 7, Kanülen | Fifo | CC BY-SA 2.5 | https://commons.wikimedia.org/w/index.php?curid=700192 |
+| frei-anodisiert | Modul 6, Titan G23 | Mauro Cateb | CC BY-SA 3.0 | https://commons.wikimedia.org/w/index.php?curid=16890294 |
+| frei-metalle | Modul 6, Nickelallergie | Franziska Riedel, Katherina Siewert | CC BY 4.0 | https://commons.wikimedia.org/w/index.php?curid=112338125 |
+| frei-gesichtsnerv | Modul 3, Nerven im Gesicht | Henry Vandyke Carter (Gray's Anatomy, 1918) | Public Domain | https://commons.wikimedia.org/wiki/File:Gray788.png |
+| frei-parotis | Modul 3, Nerven im Gesicht | Henry Vandyke Carter (Gray's Anatomy, 1918) | Public Domain | https://commons.wikimedia.org/wiki/File:Gray1022.png |
+
+Wikimedia begrenzt automatische Abrufe stark (Fehler 429). Weitere Bilder (z. B. Gray 904, Ohrmuschel) ließen sich deshalb nicht laden und können später ergänzt werden.

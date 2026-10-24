@@ -22,6 +22,7 @@ KURS.module.push({
           ["Starker Oxidmantel", "Korrosionsresistent und dauerhaft farbbeständig"]
         ] },
         { typ: "grafik", id: "anodisieren" },
+        { typ: "foto", id: "frei-anodisiert", text: "Anodisierte Titanbleche und ein Anhänger: Die Farben entstehen allein durch die Oxidschicht." },
         { typ: "ergaenzung", text: "Implant-Titan Ti6Al4V ELI wird international nach der Norm ASTM F136 spezifiziert. Achte beim Einkauf auf einen entsprechenden Materialnachweis." }
       ],
       fragen: [
@@ -87,6 +88,7 @@ KURS.module.push({
       inhalt: [
         { typ: "text", text: "Kommt die Haut einer allergischen Person mit Nickel in Berührung, rötet sie sich, schwillt an, wird rau und trocken und juckt. Manchmal schuppen oder nässen diese sogenannten Kontaktekzeme oder schwellen schmerzhaft an. Der Ausschlag kann auf kleine Flächen begrenzt bleiben oder sich über breite Hautareale bis über den ganzen Körper ausbreiten." },
         { typ: "text", text: "Ekzeme können an allen Körperstellen auftreten, die mit Nickel in Berührung gekommen sind, etwa an Händen, Gesicht, Armen, Beinen, in der Mundschleimhaut oder an den Genitalien." },
+        { typ: "foto", id: "frei-metalle", text: "Metalle, die Kontaktallergien auslösen können, im Periodensystem markiert, darunter Nickel (Ni), Kobalt (Co) und Chrom (Cr)." },
         { typ: "merke", text: "Die Symptome zeigen sich erst rund 48 bis 72 Stunden nach dem Kontakt. Mediziner sprechen von einer Spättyp-Allergie. Das macht sie schwer zu erkennen." }
       ],
       fragen: [

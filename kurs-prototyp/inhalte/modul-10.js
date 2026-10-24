@@ -79,6 +79,7 @@ KURS.module.push({
       seite: "S. 50",
       inhalt: [
         { typ: "text", text: "Entzündet sich ein Piercing und eitert, muss gehandelt werden. Meist sind Keime oder Fremdstoffe, zum Beispiel von den Haaren, in die Wunde gelangt." },
+        { typ: "foto", id: "frei-staph", text: "Staphylococcus aureus (hier der resistente Stamm MRSA) im Rasterelektronenmikroskop, ein häufiger Erreger von Haut- und Wundinfektionen." },
         { typ: "liste", punkte: [
           "Eiter muss abfließen können, sonst besteht die Gefahr einer Blutvergiftung.",
           "Täglich reinigen.",
@@ -103,6 +104,7 @@ KURS.module.push({
       inhalt: [
         { typ: "text", text: "Eine Perichondritis ist eine Entzündung der Knorpelhaut, meist an der Ohrmuschel. Sie ist die gefährlichste Komplikation von Knorpelpiercings: Knorpel hat keine eigenen Blutgefäße, wehrt Keime schlecht ab und kann dauerhaft zerstört werden." },
         { typ: "grafik", id: "perichondritis" },
+        { typ: "foto", id: "frei-pseudomonas", text: "Kolonien von Pseudomonas aeruginosa auf Blutagar im Labor." },
         { typ: "liste", titel: "Daran erkennst du sie", punkte: [
           "Die Ohrmuschel ist großflächig gerötet, geschwollen, heiß und sehr schmerzhaft, oft einige Tage bis Wochen nach dem Stich.",
           "Das Ohrläppchen bleibt meist ausgespart, weil es keinen Knorpel enthält. Das unterscheidet die Perichondritis von einer einfachen Hautentzündung.",

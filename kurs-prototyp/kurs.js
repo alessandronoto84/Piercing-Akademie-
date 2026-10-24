@@ -98,18 +98,24 @@
       case "foto":
         var f = BILDER[b.id];
         if (!f) return "";
-        return '<figure class="k-foto"><img src="' + f.src + '" width="' + f.w + '" height="' + f.h + '" alt="' + esc(b.text) + '" loading="lazy"><figcaption>' + esc(b.text) + "</figcaption></figure>";
+        return '<figure class="k-foto"><img src="' + f.src + '" width="' + f.w + '" height="' + f.h + '" alt="' + esc(b.text) + '" loading="lazy"><figcaption>' + esc(b.text) + nachweis(f) + "</figcaption></figure>";
       case "galerie":
         return '<figure class="k-galerie">' + (b.titel ? '<p class="k-grafik-titel">' + esc(b.titel) + "</p>" : "") + "<ul>" +
           b.bilder.filter(function (x) { return BILDER[x[0]]; }).map(function (x) {
             var g = BILDER[x[0]];
             return '<li><img src="' + g.src + '" width="' + g.w + '" height="' + g.h + '" alt="' + esc(x[1]) + '" loading="lazy"><span>' + esc(x[1]) + "</span></li>";
-          }).join("") + "</ul>" + (b.text ? "<figcaption>" + esc(b.text) + "</figcaption>" : "") + "</figure>";
+          }).join("") + "</ul>" + (b.text || b.bilder.some(function (x) { return BILDER[x[0]] && BILDER[x[0]].lizenz; }) ? "<figcaption>" + esc(b.text || "") + b.bilder.map(function (x) { return BILDER[x[0]] ? nachweis(BILDER[x[0]]) : ""; }).join("") + "</figcaption>" : "") + "</figure>";
       default: return "";
     }
   }
 
   var BILDER = KURS.bilder || {};
+  // Bildnachweis für lizenzfreie Bilder (bilder-frei.js); Kursbuch-Bilder haben keinen
+  function nachweis(f) {
+    if (!f.lizenz) return "";
+    return '<span class="k-nachweis">Bild: ' + esc(f.urheber) + ", " + (f.lizenz_url ? '<a href="' + esc(f.lizenz_url) + '" target="_blank" rel="noopener">' + esc(f.lizenz) + "</a>" : esc(f.lizenz)) +
+      ', <a href="' + esc(f.url) + '" target="_blank" rel="noopener">' + esc(f.quelle) + "</a>" + (/SA/.test(f.lizenz) ? ", verkleinert" : "") + "</span>";
+  }
   // "Lippenbändchen (Smiley)" -> "lippenbaendchen-smiley"
   function kurzname(n) {
     return n.toLowerCase().replace(/ä/g, "ae").replace(/ö/g, "oe").replace(/ü/g, "ue").replace(/ß/g, "ss").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");

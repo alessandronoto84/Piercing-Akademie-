@@ -16,6 +16,7 @@ KURS.module.push({
         { typ: "grafik", id: "kanuele" },
         { typ: "tabelle", kopf: ["Stärke", "Außendurchmesser", "Farbe"], zeilen: [["18G", "1,3 mm", "Grün"], ["16G", "1,7 mm", "Grau"], ["14G", "2,2 mm", "Orange"]] },
         { typ: "foto", id: "kanuelen", text: "Venenverweilkanülen in den Kennfarben. Kursbuch S. 64." },
+        { typ: "foto", id: "frei-kanuele", text: "Venenverweilkanüle mit Zuspritzport und Schutzkappe; der rosa Ansatz steht für 20G, das ist beim Piercen unüblich." },
         { typ: "ergaenzung", text: "Die Durchmesser entsprechen der Herstellerangabe für Venenverweilkanülen. Im Kursbuch stehen 1,2 / 1,6 / 2,1 mm; 1,2 und 1,6 mm sind die Schmuckstärken, die die Akademie mit 18G bzw. 16G sticht (nächste Lektion)." }
       ],
       fragen: [

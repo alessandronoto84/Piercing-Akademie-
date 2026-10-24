@@ -21,6 +21,7 @@ KURS.module.push({
         ] },
         { typ: "grafik", id: "haut" },
         { typ: "grafik", id: "haut3d" },
+        { typ: "foto", id: "frei-haut-3d", text: "Dreidimensionale Darstellung der Hautschichten: Oberhaut (Epidermis), Lederhaut (Dermis) und Unterhaut (Hypodermis) mit Haaren, Drüsen und Gefäßen (englisch beschriftet)." },
         { typ: "merke", text: "Je mehr Schichten und Gewebe der Stichkanal durchquert, desto länger braucht er zum Heilen." }
       ],
       fragen: [
@@ -92,6 +93,8 @@ KURS.module.push({
           "Im äußeren Drittel liegen keine größeren Austrittspunkte. Das ist der Grund für die Regel des Kursbuchs."
         ] },
         { typ: "grafik", id: "wange" },
+        { typ: "foto", id: "frei-gesichtsnerv", text: "Verlauf und Verbindungen des Gesichtsnervs (N. facialis) als Schema aus Gray's Anatomy, 1918 (englisch beschriftet)." },
+        { typ: "foto", id: "frei-parotis", text: "Die Ohrspeicheldrüse mit ihrem Ausführungsgang (Parotid duct = Ductus parotideus), Gray's Anatomy, 1918." },
         { typ: "liste", titel: "Wange", punkte: [
           "Der Gesichtsnerv (N. facialis) tritt unterhalb des Ohrs aus dem Schädel, läuft durch die Ohrspeicheldrüse und fächert sich in Äste zu Stirn, Auge, Wange, Mund und Kinn auf. Er steuert die Mimik; eine Verletzung kann Teile des Gesichts lähmen.",
           "Der Speichelgang der Ohrspeicheldrüse (Ductus parotideus) verläuft etwa zwei Zentimeter unterhalb des Jochbogens quer über den Kaumuskel und mündet gegenüber dem zweiten oberen Backenzahn in den Mund.",

@@ -256,3 +256,6 @@
 .k-grafik .polster{fill:var(--accent-soft)}
 .k-grafik .autoklav{fill:color-mix(in srgb,var(--surface) 60%,#fff)}
 .k-grafik .schrank{fill:color-mix(in srgb,var(--g-ok) 25%,var(--surface))}
+.k-nachweis{display:block;margin-top:.35rem;font-size:.75rem;line-height:1.4;color:var(--muted)}
+.k-nachweis a{color:inherit}
+.k-foto img[src*="image/jpeg"]{background:#fff}
