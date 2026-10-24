@@ -140,8 +140,8 @@
     b.zeilen.forEach(function (z, i) {
       var y = oben + i * zh + 7, bis = z[2] == null ? z[1] : z[2];
       svg += '<text x="' + (links - 10) + '" y="' + (y + 12) + '" class="tb" text-anchor="end">' + esc(z[0]) + "</text>" +
-        '<rect x="' + links + '" y="' + y + '" width="' + (x(z[1]) - links) + '" height="16" rx="4" class="fa"/>' +
-        (bis > z[1] ? '<rect x="' + x(z[1]) + '" y="' + y + '" width="' + (x(bis) - x(z[1])) + '" height="16" rx="4" class="fa o45"/>' : "") +
+        '<rect x="' + links + '" y="' + y + '" width="' + (x(z[1]) - links) + '" height="16" rx="4" class="fa anim-wachsen" style="animation-delay:' + i * 120 + 'ms"/>' +
+        (bis > z[1] ? '<rect x="' + x(z[1]) + '" y="' + y + '" width="' + (x(bis) - x(z[1])) + '" height="16" rx="4" class="fa o45 anim-wachsen" style="animation-delay:' + (i * 120 + 250) + 'ms"/>' : "") +
         (z[3] ? '<polygon points="' + (x(bis) + 2) + "," + y + " " + (x(bis) + 12) + "," + (y + 8) + " " + (x(bis) + 2) + "," + (y + 16) + '" class="fa o45"/>' : "") +
         '<text x="' + (x(bis) + (z[3] ? 18 : 8)) + '" y="' + (y + 12) + '" class="tm">' + esc(z[4] || "") + "</text>";
     });

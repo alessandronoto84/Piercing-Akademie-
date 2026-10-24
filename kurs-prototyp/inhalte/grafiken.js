@@ -383,9 +383,9 @@ window.KURS = window.KURS || { module: [] };
       text: "Der Stich in vier Bildern (Schritte 11 bis 16 im Ablauf). Der Kunststoffüberzug ist die Brücke: Er hält den Kanal offen, bis der Schmuck sitzt. Drücken, nicht ziehen.",
       svg: [
         feld(0, "1", "Klemme", ["Fenster über der", "Markierung"], klemme + c(80, 112, 3, "fa")),
-        feld(160, "2", "Stechen", ["zügig, in die", "sichtbare Seite"], klemme + r(76, 50, 8, 120, "fplast s1", 2) + '<polygon points="76,170 84,170 80,186" class="fmet s1"/>' + l(80, 52, 80, 170, "met b2") + pfeil(110, 60, 110, 96, "a b2")),
-        feld(320, "3", "Nadel heraus", ["Kunststoffüberzug", "bleibt im Kanal"], r(76, 96, 8, 70, "fplast s1", 2) + l(80, 36, 80, 84, "met b2 dash") + pfeil(110, 92, 110, 50, "a b2")),
-        feld(480, "4", "Schmuck rein", ["drücken, nicht ziehen;", "Kunde atmet aus"], r(76, 120, 8, 64, "fplast s1", 2) + l(80, 54, 80, 128, "met b4") + kugel(80, 50, 7) + pfeil(110, 70, 110, 110, "a b2"))
+        feld(160, "2", "Stechen", ["zügig, in die", "sichtbare Seite"], klemme + '<g class="anim-stechen">' + r(76, 50, 8, 120, "fplast s1", 2) + '<polygon points="76,170 84,170 80,186" class="fmet s1"/>' + l(80, 52, 80, 170, "met b2") + "</g>" + pfeil(110, 60, 110, 96, "a b2")),
+        feld(320, "3", "Nadel heraus", ["Kunststoffüberzug", "bleibt im Kanal"], r(76, 96, 8, 70, "fplast s1", 2) + '<g class="anim-raus">' + l(80, 36, 80, 84, "met b2 dash") + "</g>" + pfeil(110, 92, 110, 50, "a b2")),
+        feld(480, "4", "Schmuck rein", ["drücken, nicht ziehen;", "Kunde atmet aus"], r(76, 120, 8, 64, "fplast s1", 2) + '<g class="anim-schieben">' + l(80, 54, 80, 128, "met b4") + kugel(80, 50, 7) + "</g>" + pfeil(110, 70, 110, 110, "a b2"))
       ].join("") };
   })();
 
@@ -578,5 +578,19 @@ window.KURS = window.KURS || { module: [] };
       svg: svg };
   })();
 
+
+  // ---------- Bewegung: Klassen und SMIL-Animationen ergänzen (gestartet von bewegung.js, sobald sichtbar) ----------
+  (function () {
+    function verzoegert(svg, muster, klasse, schritt) {
+      var n = 0;
+      return svg.replace(muster, function (m) { return m.replace('class="', 'style="animation-delay:' + (n++ * schritt) + 'ms" class="' + klasse + " "); });
+    }
+    G.autoklav.svg = G.autoklav.svg.replace('class="a b25"/>', 'class="a b25 anim-zeichnen" pathLength="1"/>');
+    G.wundheilung.svg = verzoegert(G.wundheilung.svg, /<rect [^>]*class="fa[^"]*"[^>]*\/>/g, "anim-wachsen", 350);
+    G.keimreduktion.svg = verzoegert(G.keimreduktion.svg, /<rect [^>]*class="fa"[^>]*\/>/g, "anim-stufe", 160);
+    function punkt(pfad, dauer, k, r) { return '<circle r="' + (r || 4) + '" class="' + k + '"><animateMotion begin="indefinite" dur="' + dauer + '" repeatCount="indefinite" path="' + pfad + '"/></circle>'; }
+    G.schmerzleitung.svg += punkt("M132 128 L236 128", "0.9s", "fa signal") + punkt("M132 156 L236 156", "4.5s", "fa signal o7") + punkt("M364 142 L438 142 L540 84", "1.6s", "fa signal");
+    G.kreislauf.svg += punkt("M90 69 H230 V185 H555 V69 H410 V112 C410 130 300 130 90 130 Z", "10s", "fa signal", 6);
+  })();
   KURS.grafiken = G;
 })();
