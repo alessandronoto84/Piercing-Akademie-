@@ -123,3 +123,19 @@ Diese beiden Module haben im Kursbuch kein eigenes Kapitel. Die folgenden Themen
 | 64 | 18G 1,2 mm / 16G 1,6 mm / 14G 2,1 mm | 18G 1,3 mm / 16G 1,7 mm / 14G 2,2 mm (Herstellerangabe) |
 | 115 | Foto-Einwilligung „gemäß Art. 6 Absatz 1(f) EU-DSGVO“ | Für eine Einwilligung Art. 6 Abs. 1 lit. a DSGVO; Aufbewahrungsdauer (10 Jahre) begründen; rechtlich prüfen lassen |
 | Impressum | 740-tattoo@gmx.net | an die Website-Angaben angleichen (diepiercingakademie@gmail.com), bestätigt am 21.10.2026 |
+
+## 9. Recherche über das Kursbuch hinaus (Grafiken und neue Lektionen, 24.10.2026)
+
+Recherchiert per Websuche; die Seiten selbst konnten in dieser Umgebung nicht geöffnet werden. Alle Punkte stehen im Kurs als „Ergänzung“ und müssen fachlich geprüft werden.
+
+| Thema | Kernaussage im Kurs | Quellen |
+|---|---|---|
+| Nerven an der Augenbraue (Modul 3, 8) | N. supraorbitalis tritt am Foramen bzw. an der Incisura supraorbitalis über dem inneren Drittel aus, weiter innen N. supratrochlearis; beides Gefühlsnerven (Verletzung: Taubheit, Missempfindungen). Die Stirnbewegung steuert ein seitlicher Ast des N. facialis. | DocCheck Flexikon „Nervus supraorbitalis“; WikEM „Supraorbital nerve block“ |
+| Wange (Modul 3, 8) | N. facialis läuft durch die Ohrspeicheldrüse und fächert sich zu Stirn, Wange, Mund, Kinn auf. Ductus parotideus ca. 2 cm unter dem Jochbogen über dem M. masseter, mündet gegenüber dem 2. oberen Molaren. A. facialis vom Unterkieferrand zum Mundwinkel. Ein dokumentierter Fall einer Gangverletzung durch Piercing wurde nicht gefunden; das Risiko ist anatomisch begründet. | DocCheck Flexikon „Ductus parotideus“, „Nervus facialis“ |
+| Korrektur zum Buch (S. 89) | Das Buch nennt bei der Augenbraue „Lähmungsgefahr“. Innen treten vor allem Gefühlsnerven aus; eine Lähmung betrifft den N. facialis. Die Regel „äußeres Drittel“ bleibt richtig, die Begründung sollte in der nächsten Auflage präzisiert werden. | wie oben |
+| Wundheilungsphasen (Modul 3) | Exsudation ca. 1–4 Tage, Proliferation bis ca. Tag 20, Reparation über Wochen; größte Reißfestigkeit nach ca. 3 Monaten; die Phasen überlappen. | DocCheck Flexikon „Wundheilung“; Poster Wundheilung TU Dresden; medi-karriere „Wundheilungsphasen“ |
+| Schmerzleitung (Modul 4) | Umschaltung im Thalamus vor Großhirnrinde und limbischem System. | Lehrbuchwissen Neuroanatomie |
+| Hepatitis B, Nadelstich (Modul 5) | Hepatitis-B-Impfung für Piercer empfohlen, Titer kontrollieren; nach Stichverletzung Blutung durch Druck auf das umliegende Gewebe fördern, alkoholisch desinfizieren, sofort zum (Durchgangs-)Arzt, dokumentieren; Recapping vermeiden. | S1-Leitlinie „Hygieneanforderungen beim Tätowieren und Piercen“ (DGKH, 2010, krankenhaushygiene.de); Merkblatt Gesundheitsamt Wetteraukreis; STIKO-Indikationsimpfung (beruflich); TRBA 250 |
+| Normen für Ersteinsatz (Modul 6) | ASTM F136 / ISO 5832-3 (Ti6Al4V ELI), ASTM F67 / ISO 5832-2 (Reintitan), ASTM F138 / ISO 5832-1 (Implantatstahl), Gold massiv ab 14 Karat, nickel- und cadmiumfrei; Innengewinde oder gewindelos, spiegelpoliert, Materialzertifikat. Die Akademie bleibt strenger (nur G23-Titan oder PTFE). | APP „Initial Jewelry Standards“ (über piercingbible und Wikipedia „Body piercing materials“); Oregon OAR 331-900-0105 |
+| Gauge Schmuck und Kanüle (Modul 7) | Schmuck: 20G 0,8 / 18G 1,0 / 16G 1,2 / 14G 1,6 / 12G 2,0 mm. Kanülen (Außendurchmesser): 18G 1,3 / 16G 1,7 / 14G 2,2 mm. Die Kombinationen, die die Akademie standardmäßig nutzt, bitte ergänzen. | Gauge-Tabellen von Schmuckhändlern (bluebanana, tribu, wildcat); Herstellerangabe B. Braun |
+| Perichondritis (Modul 10) | Entzündung der Knorpelhaut; Ohrläppchen ausgespart; häufigster Erreger Pseudomonas aeruginosa, mehr Fälle in warmen Monaten; Häufung in Großbritannien auf verunreinigtes Wasser zurückgeführt; Gefahr Blumenkohlohr; sofort zum Arzt, Antibiotikum mit Pseudomonas-Wirkung. | PMC9443570; PMC11729480; Übersicht solen.sk |

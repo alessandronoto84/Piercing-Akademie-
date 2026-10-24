@@ -30,6 +30,7 @@ window.KURS = window.KURS || { module: [] };
         titel: "Lobe und Upper Lobe",
         seite: "S. 74–75",
         inhalt: [
+          { typ: "grafik", id: "ohr" },
           db("Lobe", "Ohrläppchen. Kann zu einem Tunnel gepuncht oder gedehnt werden: mit Gleitgel und Dehnstab bzw. Dehnschnecke den abgeheilten Stichkanal um 1 bis 2 mm pro Monat dehnen.", "Labret", "18G, 16G, 14G, Punch", "Snaptile, Gazeklemme", "", "S. 74"),
           db("Upper Lobe", "Durch das obere Ohrläppchen. Neben dem herkömmlichen Ohrloch werden oft mehrere Upper Lobes in einer Reihe getragen.", "Labret", "18G, 16G", "Snaptile, Gazeklemme", "", "S. 75")
         ],
@@ -105,6 +106,7 @@ window.KURS = window.KURS || { module: [] };
         titel: "Augenbraue und Bridge",
         seite: "S. 89, 91",
         inhalt: [
+          { typ: "grafik", id: "augenbraue" },
           db("Augenbraue", "Meist vertikal durch die Augenbraue, etwa 8 mm Stichkanal.", "Banane, Hufeisen", "18G", "Snaptile, Gazeklemme", "Nur im äußeren Drittel der Augenbraue stechen: Lähmungsgefahr.", "S. 89"),
           db("Bridge", "Auch Erl. Am oberen Ende des Nasenrückens, waagerecht auf dem Nasenbein zwischen den Augen. Zu tief kann es auf Nervenbahnen drücken, zu oberflächlich wächst es heraus.", "Barbell, Banane", "18G", "Snaptile, Gazeklemme", "Als Piercing-Anfänger ablehnen.", "S. 91")
         ],
@@ -145,6 +147,7 @@ window.KURS = window.KURS || { module: [] };
         titel: "Cheek",
         seite: "S. 92",
         inhalt: [
+          { typ: "grafik", id: "wange" },
           db("Cheek", "Wangenpiercing, oft an der Stelle eines Grübchens. Hier verlaufen wichtige Arterien und Nerven; es droht eine Verunstaltung, durchs Piercen entstandene Grübchen können dauerhaft bleiben.", "Barbell, Labret", "18G", "Snaptile, Gazeklemme", "Nur durch professionelle Piercer. Als Anfänger ablehnen.", "S. 92")
         ],
         fragen: [

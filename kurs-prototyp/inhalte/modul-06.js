@@ -112,6 +112,38 @@ KURS.module.push({
       ]
     },
     {
+      titel: "Woran du guten Ersteinsatz-Schmuck erkennst",
+      seite: "Ergänzung",
+      entwurf: true,
+      inhalt: [
+        { typ: "text", text: "„Titan“ oder „Chirurgenstahl“ auf dem Etikett sagt wenig. Entscheidend ist, ob das Material einer Norm für Implantate entspricht und ob der Hersteller das mit einem Zertifikat belegt." },
+        { typ: "tabelle", kopf: ["Material", "Norm", "Einordnung in diesem Kurs"], zeilen: [
+          ["Titan Ti6Al4V ELI (G23)", "ASTM F136, ISO 5832-3", "Standard für den Ersteinsatz"],
+          ["Reintitan (unlegiert)", "ASTM F67, ISO 5832-2", "ebenfalls implantattauglich und nickelfrei"],
+          ["Implantatstahl 316LVM", "ASTM F138, ISO 5832-1", "enthält Nickel; in der Akademie kein Ersteinsatz"],
+          ["Gold", "massiv, mindestens 14 Karat, nickel- und cadmiumfrei", "laut APP möglich; in der Akademie kein Ersteinsatz"],
+          ["PTFE", "medizinische Qualität", "Ersteinsatz, nicht bei der Zunge"]
+        ] },
+        { typ: "grafik", id: "gewinde" },
+        { typ: "liste", titel: "Prüfe beim Einkauf", punkte: [
+          "Materialzertifikat (Werkstoffnachweis) des Herstellers zur jeweiligen Charge.",
+          "Innengewinde oder gewindelos (Push-Pin): Der Stab ist glatt und reibt nicht durch den frischen Stichkanal.",
+          "Spiegelglatt polierte Oberfläche ohne Kratzer, Grate oder Gussnähte; Kanten gerundet.",
+          "Autoklavierbar; steril verpackt oder vor dem Einsatz sterilisiert.",
+          "Nickelabgabe nach EU-Recht: höchstens 0,2 µg pro cm² und Woche für Schmuck in frischen Piercings (Modul 11)."
+        ] },
+        { typ: "ergaenzung", text: "Die Normen stammen aus den Mindeststandards der Association of Professional Piercers (APP) und aus Herstellerangaben (siehe KURS-RECHERCHE.md, Abschnitt 9). Die APP lässt auch Implantatstahl und Gold als Ersteinsatz zu; die Akademie bleibt bei ihrer strengeren Regel: G23-Titan oder PTFE." }
+      ],
+      fragen: [
+        ["Welche Norm gehört zu Titan G23 (Ti6Al4V ELI)?", ["ASTM F136", "ASTM F138", "DIN A4"], "Auch ISO 5832-3.", "Ergänzung"],
+        ["Welche Norm gehört zu Implantatstahl 316LVM?", ["ASTM F138", "ASTM F136", "ASTM F67"], "Er enthält Nickel; in der Akademie kein Ersteinsatz.", "Ergänzung"],
+        ["Warum ist ein Innengewinde beim Ersteinsatz besser?", ["Der Stab ist glatt und reibt nicht durch den Stichkanal", "Es ist billiger", "Die Kugel sitzt lockerer"], "Ein Außengewinde schrammt beim Einsetzen.", "Ergänzung"],
+        ["Was verlangst du beim Einkauf vom Hersteller?", ["Ein Materialzertifikat", "Ein Werbefoto", "Nichts"], "Nur so ist das Material belegt.", "Ergänzung"],
+        ["Welches Gold entspricht dem APP-Mindeststandard?", ["Massiv, mindestens 14 Karat, nickel- und cadmiumfrei", "Vergoldetes Messing", "Jedes Gold"], "Eine Vergoldung kann sich abreiben.", "Ergänzung"],
+        ["Wie muss die Oberfläche eines Ersteinsatzes sein?", ["Spiegelglatt poliert, ohne Kratzer und Grate", "Rau, damit er besser hält", "Lackiert"], "Raue Stellen reizen den Stichkanal.", "Ergänzung"]
+      ]
+    },
+    {
       titel: "Schmuckformen: Stäbe und Stecker",
       seite: "S. 61–62",
       inhalt: [
@@ -120,7 +152,8 @@ KURS.module.push({
           ["Curved Barbell (Banane)", "Leicht gebogener Stab mit Kugeln", "Bauchnabel, Augenbraue, Rook"],
           ["Barbell", "Metallstift mit Gewinde und verschraubbaren Kugeln (engl. Hantel)", "Zunge, Industrial, Brustwarze"],
           ["Labret Stud (Stecker)", "Stift mit Platte auf einer Seite und Gewinde für eine Kugel oder einen Schmuckaufsatz", "Labret, Tragus, Conch, Lobe, Nostril"]
-        ] }
+        ] },
+        { typ: "grafik", id: "staebe" }
       ],
       fragen: [
         ["Wie heißt der leicht gebogene Stab mit Kugeln?", ["Curved Barbell (Banane)", "Labret", "Segmentring"], "Meist für Bauchnabel, Augenbraue, Rook.", "S. 61"],
@@ -139,6 +172,7 @@ KURS.module.push({
           ["Ball Closure Ring (BCR)", "Auch Klemmkugelring oder Captive Ring. Die Kugel hat zwei kleine Einbuchtungen und rastet in die Ringöffnung ein. Zum Einsetzen wird der Ring vorsichtig mit einer Spreizzange gedehnt."],
           ["Threaded Ring (Hufeisen)", "Offener Ring mit Gewinde an beiden Enden für Kugeln, Spitzen und andere Verschlüsse."]
         ] },
+        { typ: "grafik", id: "ringe" },
         { typ: "text", text: "Weitere Formen sind zum Beispiel Bars, Dermal Anchor und Nose Studs." }
       ],
       fragen: [
@@ -154,6 +188,7 @@ KURS.module.push({
       seite: "S. 74",
       inhalt: [
         { typ: "achtung", text: "Der Ersteinsatz muss stets eine Überlänge von etwa 4 mm haben. Der frische Stichkanal kann anschwellen und darf während der Heilungsphase niemals durch Kugeln oder Plättchen verschlossen bzw. eingeengt werden." },
+        { typ: "grafik", id: "ueberlaenge" },
         { typ: "praxis", text: "Miss die Stelle mit dem Messschieber und plane die Überlänge ein, bevor du den Ersteinsatz aus der Sterilverpackung nimmst. Nach der Abheilung kann ein kürzerer Zweiteinsatz folgen." }
       ],
       fragen: [

@@ -45,11 +45,16 @@ KURS.module.push({
         { typ: "tabelle", kopf: ["Piercing", "Abheilzeit"], zeilen: [
           ["Knorpelpiercings", "mindestens 3 Monate"], ["Lobe", "ca. 2 Monate"], ["Bauchnabel", "ca. 4 bis 6 Monate"], ["Labret", "ca. 1 bis 2 Monate"], ["Lippenbändchen", "ca. 1 Monat"], ["Zunge", "ca. 1 Monat"], ["Brustwarze", "3 bis 12 Monate"], ["Augenbraue", "ca. 1 Monat"], ["Intim", "2 bis 3 Monate"]
         ] },
+        { typ: "diagramm", titel: "Abheilzeiten im Vergleich", einheit: "Monate, Richtwerte bei komplikationsfreier Heilung", max: 12, schritt: 1,
+          alt: "Balkendiagramm der Abheilzeiten in Monaten: Zunge, Lippenbändchen und Augenbraue etwa 1, Labret 1 bis 2, Lobe etwa 2, Intim 2 bis 3, Knorpel mindestens 3, Bauchnabel 4 bis 6, Brustwarze 3 bis 12 Monate.",
+          text: "Dunkel: sichere Mindestzeit, hell: Spanne. Schleimhaut heilt am schnellsten, Knorpel, Bauchnabel und Brustwarze brauchen am längsten.",
+          zeilen: [["Zunge", 1, null, false, "ca. 1"], ["Lippenbändchen", 1, null, false, "ca. 1"], ["Augenbraue", 1, null, false, "ca. 1"], ["Labret", 1, 2, false, "1–2"], ["Lobe", 2, null, false, "ca. 2"], ["Intim", 2, 3, false, "2–3"], ["Knorpel", 3, null, true, "mindestens 3"], ["Bauchnabel", 4, 6, false, "4–6"], ["Brustwarze", 3, 12, false, "3–12"]] },
         { typ: "achtung", text: "Erst nach vollständiger Ausheilung darf der Schmuck gewechselt werden, sonst besteht die Gefahr von Komplikationen wie einer Infektion." }
       ],
       fragen: [
         ["Sind die Abheilzeiten feste Garantien?", ["Nein, es sind Richtwerte bei optimaler Heilung", "Ja, auf den Tag genau", "Ja, für jeden gleich"], "Jeder Mensch heilt anders.", "S. 49"],
         ["Wann darf der Schmuck gewechselt werden?", ["Erst nach vollständiger Ausheilung", "Nach einer Woche", "Jederzeit"], "Sonst droht eine Infektion.", "S. 49"],
+        ["Welches Piercing hat die größte Spanne bei der Abheilzeit?", ["Brustwarze, 3 bis 12 Monate", "Zunge, ca. 1 Monat", "Lobe, ca. 2 Monate"], "Siehe Diagramm.", "S. 49"],
         ["Fall: Eine Kundin will ihr 4 Wochen altes Helix-Piercing gegen einen Ring tauschen. Was rätst du?", ["Warten: Knorpel braucht mindestens 3 Monate", "Sofort wechseln", "Den Schmuck ganz herausnehmen"], "Erst nach vollständiger Ausheilung wechseln.", "S. 49"]
       ]
     },
@@ -88,6 +93,36 @@ KURS.module.push({
         ["Welche Salbe aus der Apotheke nennt das Kursbuch?", ["Tyrosur", "Bepanthen", "Voltaren"], "Lege dem Kunden nahe, sie zu kaufen.", "S. 50"],
         ["Was kann bei einer Entzündung helfen?", ["Kamille, Teebaumöl oder Manukahonig und tägliches Reinigen", "Den Schmuck verkleben", "Nichts tun"], "Siehe Kursbuch.", "S. 50"],
         ["Fall: Ein Kunde ruft an, das Piercing ist stark gerötet, und er hat Fieber. Was tust du?", ["Ich schicke ihn sofort zum Arzt", "Ich empfehle Teebaumöl und abwarten", "Ich rate, den Schmuck festzukleben"], "Ergänzung der Akademie.", "Ergänzung"]
+      ]
+    },
+    {
+      titel: "Perichondritis: Notfall am Ohrknorpel",
+      seite: "Ergänzung",
+      entwurf: true,
+      inhalt: [
+        { typ: "text", text: "Eine Perichondritis ist eine Entzündung der Knorpelhaut, meist an der Ohrmuschel. Sie ist die gefährlichste Komplikation von Knorpelpiercings: Knorpel hat keine eigenen Blutgefäße, wehrt Keime schlecht ab und kann dauerhaft zerstört werden." },
+        { typ: "grafik", id: "perichondritis" },
+        { typ: "liste", titel: "Daran erkennst du sie", punkte: [
+          "Die Ohrmuschel ist großflächig gerötet, geschwollen, heiß und sehr schmerzhaft, oft einige Tage bis Wochen nach dem Stich.",
+          "Das Ohrläppchen bleibt meist ausgespart, weil es keinen Knorpel enthält. Das unterscheidet die Perichondritis von einer einfachen Hautentzündung.",
+          "Später können Fieber, Eiter oder eine Eiteransammlung unter der Knorpelhaut dazukommen."
+        ] },
+        { typ: "achtung", text: "Bei Verdacht schickst du den Kunden sofort zum Arzt, am besten zum HNO-Arzt. Eine Perichondritis braucht in der Regel ein Antibiotikum, das auch gegen Pseudomonas wirkt. Ob der Schmuck entfernt wird, entscheidet der Arzt. Unbehandelt droht eine bleibende Verformung, das sogenannte Blumenkohlohr." },
+        { typ: "liste", titel: "Hintergrund", punkte: [
+          "Häufigster Erreger ist das Bakterium Pseudomonas aeruginosa. Es lebt in feuchter Umgebung, zum Beispiel in Wasserleitungen, Waschbecken und Duschen.",
+          "Fälle treten in den warmen Monaten häufiger auf.",
+          "In Großbritannien wurde eine Häufung nach Ohrpiercings auf verunreinigtes Wasser in einem Studio zurückgeführt.",
+          "Vorbeugen: steril arbeiten, zur Pflege sterile Kochsalzlösung statt Leitungswasser empfehlen, kein Octenidin auf Knorpel, Druck und Reibung auf das frische Piercing vermeiden (zum Beispiel nicht darauf schlafen)."
+        ] },
+        { typ: "ergaenzung", text: "Ergänzung der Akademie nach medizinischer Fachliteratur (siehe KURS-RECHERCHE.md, Abschnitt 9). Fachlich prüfen." }
+      ],
+      fragen: [
+        ["Was ist eine Perichondritis?", ["Eine Entzündung der Knorpelhaut, meist an der Ohrmuschel", "Eine Nickelallergie", "Wildes Fleisch am Bauchnabel"], "Gefährlichste Komplikation von Knorpelpiercings.", "Ergänzung"],
+        ["Welcher Teil des Ohrs bleibt bei einer Perichondritis meist ausgespart?", ["Das Ohrläppchen, weil es keinen Knorpel enthält", "Der Helix", "Keiner, die ganze Ohrmuschel ist gleich betroffen"], "Typisches Erkennungszeichen.", "Ergänzung"],
+        ["Welcher Erreger verursacht eine Perichondritis nach Ohrpiercing am häufigsten?", ["Pseudomonas aeruginosa", "Das Grippevirus", "Hefepilze"], "Er lebt in feuchter Umgebung.", "Ergänzung"],
+        ["Was tust du bei Verdacht auf eine Perichondritis?", ["Den Kunden sofort zum Arzt schicken", "Teebaumöl empfehlen und abwarten", "Den Schmuck selbst wechseln"], "Am besten zum HNO-Arzt.", "Ergänzung"],
+        ["Was droht, wenn eine Perichondritis nicht behandelt wird?", ["Eine bleibende Verformung (Blumenkohlohr)", "Nichts, sie heilt immer von selbst", "Eine schnellere Abheilung"], "Der Knorpel kann zerstört werden.", "Ergänzung"],
+        ["Warum empfiehlst du zur Pflege sterile Kochsalzlösung statt Leitungswasser?", ["Weil Pseudomonas in feuchter Umgebung wie Wasserleitungen lebt", "Weil Leitungswasser zu kalt ist", "Weil Kochsalzlösung besser riecht"], "Vorbeugung gegen Perichondritis.", "Ergänzung"]
       ]
     },
     {

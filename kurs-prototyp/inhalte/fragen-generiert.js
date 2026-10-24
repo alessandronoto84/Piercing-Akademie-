@@ -986,7 +986,7 @@ KURS.lektionsfragen = {
    "S. 64"
   ]
  ],
- "7-3": [
+ "7-4": [
   [
    "Wofür nutzt du: Einführhilfe?",
    [

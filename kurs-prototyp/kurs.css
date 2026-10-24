@@ -144,3 +144,63 @@
 .k-glossar dd a{margin-left:6px}
 @media (max-width:560px){.k-glossar>div{grid-template-columns:minmax(0,1fr)}}
 .k-nav-link.k-nav-haupt{grid-template-columns:minmax(0,1fr)}
+
+/* ---------- Grafiken und Diagramme ---------- */
+:root{
+  --g-epi:#EBD6C6;--g-derm:#F1CDBE;--g-sub:#F5E6B9;--g-kn:#DCE6EE;--g-gland:#E7DCF0;--g-entz:#E9A398;
+  --g-blut:#B3261E;--g-nerv:#B77900;--g-gang:#0F7C86;--g-met:#8C979B;--g-plast:#E8EEF0;--g-ok:#2E7D5B;
+  --g-18:#3E9B4F;--g-16:#9AA3A6;--g-14:#E8892B;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --g-epi:#5C473A;--g-derm:#5F3A31;--g-sub:#4F4527;--g-kn:#2B4150;--g-gland:#41344F;--g-entz:#8A3A32;
+    --g-blut:#FF8A80;--g-nerv:#F2C14E;--g-gang:#5FD0DA;--g-met:#B7C2C6;--g-plast:#2D4448;--g-ok:#6FD3A4;
+  }
+}
+:root[data-theme="dark"]{
+  --g-epi:#5C473A;--g-derm:#5F3A31;--g-sub:#4F4527;--g-kn:#2B4150;--g-gland:#41344F;--g-entz:#8A3A32;
+  --g-blut:#FF8A80;--g-nerv:#F2C14E;--g-gang:#5FD0DA;--g-met:#B7C2C6;--g-plast:#2D4448;--g-ok:#6FD3A4;
+}
+.k-grafik{min-width:0;max-width:100%;margin:1.75rem 0;padding:1.25rem 1.25rem 1rem;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+.k-grafik-titel{margin:0 0 .75rem;font-family:var(--f-mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.k-grafik-flaeche{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.k-grafik svg{display:block;width:100%;height:auto;max-width:44rem;margin:0 auto;color:var(--ink)}
+.k-grafik figcaption{margin-top:.9rem;padding-top:.8rem;border-top:1px solid var(--line);font-size:.92rem;line-height:1.5;color:var(--muted)}
+.k-grafik text{font-family:var(--f-body);font-size:12px;fill:var(--ink)}
+.k-grafik .tb{font-size:13px;font-weight:600}
+.k-grafik .tm{font-size:11.5px;fill:var(--muted)}
+.k-grafik .tk{font-size:11px;fill:var(--ink)}
+.k-grafik .tw{font-size:11px;font-weight:600;fill:var(--accent-ink)}
+.k-grafik .tnr{font-size:12px;font-weight:700;fill:var(--accent-ink)}
+.k-grafik .terr{font-size:11.5px;font-weight:600;fill:var(--g-blut)}
+.k-grafik .tok{font-size:11.5px;font-weight:600;fill:var(--g-ok)}
+.k-grafik .s{fill:none;stroke:var(--ink);stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round}
+.k-grafik .sd{fill:none;stroke:var(--muted);stroke-width:1}
+.k-grafik .sl{fill:none;stroke:var(--muted);stroke-width:.8}
+.k-grafik .s1{stroke:var(--ink);stroke-width:1}
+.k-grafik .dash{stroke-dasharray:4 3}
+.k-grafik .a{fill:none;stroke:var(--accent);stroke-linecap:round}
+.k-grafik .err{fill:none;stroke:var(--g-blut);stroke-width:1.2}
+.k-grafik .blut{fill:none;stroke:var(--g-blut);stroke-linecap:round}
+.k-grafik .nerv{fill:none;stroke:var(--g-nerv);stroke-linecap:round}
+.k-grafik .gang{fill:none;stroke:var(--g-gang);stroke-linecap:round}
+.k-grafik .met{fill:none;stroke:var(--g-met);stroke-linecap:round}
+.k-grafik .b1{stroke-width:1}.k-grafik .b15{stroke-width:1.5}.k-grafik .b2{stroke-width:2}.k-grafik .b25{stroke-width:2.5}
+.k-grafik .b3{stroke-width:3}.k-grafik .b4{stroke-width:4}.k-grafik .b5{stroke-width:5}.k-grafik .b6{stroke-width:6}
+.k-grafik .fa{fill:var(--accent)}.k-grafik .fs{fill:var(--accent-soft)}.k-grafik .fink{fill:var(--ink)}
+.k-grafik .fsurf{fill:var(--surface)}.k-grafik .fbg{fill:var(--bg)}.k-grafik .fmuted{fill:var(--muted)}
+.k-grafik .fmet{fill:var(--g-met)}.k-grafik .fplast{fill:var(--g-plast)}.k-grafik .fnerv{fill:var(--g-nerv)}
+.k-grafik .fbraue{fill:var(--muted);opacity:.55}
+.k-grafik .f-epi{fill:var(--g-epi)}.k-grafik .f-derm{fill:var(--g-derm)}.k-grafik .f-sub{fill:var(--g-sub)}
+.k-grafik .f-kn{fill:var(--g-kn)}.k-grafik .f-gland{fill:var(--g-gland)}.k-grafik .f-entz{fill:var(--g-entz)}
+.k-grafik .f-ok{fill:var(--g-ok);fill-opacity:.14;stroke:var(--g-ok);stroke-width:1;stroke-dasharray:4 3}
+.k-grafik .f-risk{fill:var(--g-blut);fill-opacity:.16;stroke:var(--g-blut);stroke-width:1;stroke-dasharray:3 3}
+.k-grafik .f-unrein{fill:var(--g-blut);fill-opacity:.06;stroke:var(--line)}
+.k-grafik .f-rein{fill:var(--g-ok);fill-opacity:.08;stroke:var(--line)}
+.k-grafik .f-ph1{fill:var(--accent-soft);opacity:.55}.k-grafik .f-ph2{fill:var(--accent-soft);opacity:.25}
+.k-grafik .f-18g{fill:var(--g-18)}.k-grafik .f-16g{fill:var(--g-16)}.k-grafik .f-14g{fill:var(--g-14)}
+.k-grafik .o7{opacity:.7}.k-grafik .o45{opacity:.45}
+.k-grafik .punkt{stroke:var(--surface);stroke-width:2}
+@media (max-width:480px){.k-grafik{padding:1rem .75rem .85rem;margin-inline:-.25rem}}
+.k-grafik-hinweis{display:none;margin:.5rem 0 0;font-size:.8rem;color:var(--muted)}
+@media (max-width:600px){.k-grafik-hinweis{display:block}}

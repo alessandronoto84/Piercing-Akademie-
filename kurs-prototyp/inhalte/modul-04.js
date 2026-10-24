@@ -69,6 +69,7 @@ KURS.module.push({
           ["A-Delta-Fasern", "etwa 20 m/s", "schnell, gut lokalisierbar"],
           ["C-Fasern", "bis 2,5 m/s", "entwicklungsgeschichtlich älter, langsam, ungenau lokalisiert („irgendwo am Oberschenkel“)"]
         ] },
+        { typ: "grafik", id: "schmerzleitung" },
         { typ: "text", text: "Im Rückenmark lösen Reflexe eine Fluchtbewegung aus, bevor der Schmerz bewusst wahrgenommen wird, zum Beispiel das Zurückziehen der Hand, bevor die Herdplatte als heiß erkannt wird." },
         { typ: "text", text: "Über den Vorderseitenstrang (Tractus spinothalamicus) gelangt die Information ins Gehirn. In der Großhirnrinde (Kortex) wird der Schmerz bewusst, im limbischen System emotional bewertet. Für jedes Hautareal gibt es im sensiblen Cortex ein zuständiges Areal (sensibler Homunculus). Die genaue Lokalisation ist ein Lernprozess." },
         { typ: "praxis", text: "Zuckt ein Kunde beim Stich, ist das oft der Rückenmarksreflex, der schneller ist als jede Absicht. Deshalb hält die Klemme die Stelle fest, und du stichst zügig." }
@@ -79,7 +80,8 @@ KURS.module.push({
         ["Was löst der Reflex im Rückenmark aus?", ["Eine Fluchtbewegung, bevor der Schmerz bewusst wird", "Eine Betäubung", "Einen Schlaf"], "Wie bei der heißen Herdplatte.", "S. 10"],
         ["Über welchen Weg gelangt die Schmerzinformation ins Gehirn?", ["Über den Vorderseitenstrang (Tractus spinothalamicus)", "Über das Blut", "Über die Haut"], "Siehe Kap. 3.2.", "S. 10"],
         ["Wo wird Schmerz emotional bewertet?", ["Im limbischen System", "Im Rückenmark", "In der Haut"], "Bewusst wird er in der Großhirnrinde.", "S. 10"],
-        ["Was ist der sensible Homunculus?", ["Die Abbildung jedes Hautareals im sensiblen Cortex", "Ein Schmerzmittel", "Ein Werkzeug"], "Lokalisation ist ein Lernprozess.", "S. 10"]
+        ["Was ist der sensible Homunculus?", ["Die Abbildung jedes Hautareals im sensiblen Cortex", "Ein Schmerzmittel", "Ein Werkzeug"], "Lokalisation ist ein Lernprozess.", "S. 10"],
+        ["Wo wird die Schmerzinformation auf dem Weg zur Großhirnrinde umgeschaltet?", ["Im Thalamus", "In der Leber", "Im Nozizeptor"], "Ergänzung zum Kursbuch, siehe Grafik.", "Ergänzung"]
       ]
     },
     {

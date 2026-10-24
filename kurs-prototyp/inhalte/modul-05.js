@@ -191,6 +191,36 @@ KURS.module.push({
       ]
     },
     {
+      titel: "Schutz vor Blutkontakt: Impfung und Nadelstich",
+      seite: "Ergänzung",
+      entwurf: true,
+      inhalt: [
+        { typ: "text", text: "Beim Piercen hast du Kontakt mit Blut. Über Blut können Hepatitis B, Hepatitis C und HIV übertragen werden, am häufigsten durch eine Stichverletzung mit einer benutzten Kanüle. Deshalb schützt du dich doppelt: durch sicheres Arbeiten und durch Impfung." },
+        { typ: "liste", titel: "Vorbeugen", punkte: [
+          "Gegen Hepatitis B impfen lassen und den Impferfolg (Antikörper-Titer) beim Arzt kontrollieren lassen. Die Hygiene-Leitlinie für Tätowieren und Piercen empfiehlt die Impfung für alle, die stechen.",
+          "Gegen Hepatitis C und HIV gibt es keine Impfung. Hier schützen nur Handschuhe, sicheres Arbeiten und der sofortige Nadelabwurf.",
+          "Benutzte Kanülen nie in die Schutzkappe zurückstecken, sondern sofort in den Abwurfbehälter in Griffweite.",
+          "Nie mit einer offenen Kanüle in der Hand über den Arbeitsplatz greifen oder sie an jemanden weiterreichen."
+        ] },
+        { typ: "schritte", titel: "Wenn du dich an einer benutzten Kanüle gestochen hast", punkte: [
+          "Arbeit sofort unterbrechen, Handschuh ausziehen.",
+          "Blutung fördern: auf das Gewebe rund um die Wunde drücken, mindestens eine Minute; nicht direkt an der Einstichstelle quetschen.",
+          "Die Wunde mit einem Hautantiseptikum auf Alkoholbasis desinfizieren.",
+          "Sofort einen Arzt aufsuchen, bei einem Arbeitsunfall einen Durchgangsarzt (D-Arzt). Eine vorbeugende Behandlung gegen HIV wirkt am besten, wenn sie innerhalb weniger Stunden beginnt.",
+          "Den Vorfall dokumentieren: wann, womit, bei welchem Kunden. Ob der Kunde zu einem Bluttest bereit ist, klärt der Arzt."
+        ] },
+        { typ: "ergaenzung", text: "Ergänzung der Akademie nach der S1-Leitlinie zu Hygieneanforderungen beim Tätowieren und Piercen und den Empfehlungen der Unfallversicherungsträger (siehe KURS-RECHERCHE.md, Abschnitt 9). Kläre in Modul 11, bei welcher Berufsgenossenschaft du versichert bist. Fachlich prüfen." }
+      ],
+      fragen: [
+        ["Gegen welche durch Blut übertragbare Krankheit gibt es eine Impfung?", ["Hepatitis B", "Hepatitis C", "HIV"], "Impferfolg beim Arzt kontrollieren lassen.", "Ergänzung"],
+        ["Was tust du mit einer benutzten Kanüle?", ["Sofort in den Abwurfbehälter, nie zurück in die Schutzkappe", "Zurück in die Schutzkappe stecken", "Auf die Arbeitsfläche legen"], "Zurückstecken ist die häufigste Ursache für Stichverletzungen.", "S. 27"],
+        ["Was tust du nach einem Nadelstich, nachdem du die Arbeit unterbrochen hast?", ["Blutung fördern durch Druck auf das Gewebe um die Wunde", "Die Wunde sofort abbinden", "Weiterarbeiten und später schauen"], "Danach desinfizieren.", "Ergänzung"],
+        ["Womit desinfizierst du eine Stichwunde?", ["Mit einem Hautantiseptikum auf Alkoholbasis", "Mit Spülmittel", "Gar nicht"], "Dann sofort zum Arzt.", "Ergänzung"],
+        ["Zu wem gehst du nach einer Stichverletzung bei der Arbeit?", ["Sofort zum Arzt, bei einem Arbeitsunfall zum Durchgangsarzt", "Erst nach einer Woche zum Hausarzt", "Zu niemandem"], "Eine HIV-Vorbeugung wirkt am besten innerhalb weniger Stunden.", "Ergänzung"],
+        ["Warum lässt du den Erfolg der Hepatitis-B-Impfung kontrollieren?", ["Weil nicht jede Impfung genug Antikörper bildet", "Weil die Impfung sonst verfällt", "Das ist nicht nötig"], "Kontrolle über den Antikörper-Titer.", "Ergänzung"]
+      ]
+    },
+    {
       titel: "Desinfektion, Sterilisation und Antisepsis",
       seite: "S. 28–29",
       inhalt: [
@@ -200,6 +230,7 @@ KURS.module.push({
           ["Desinfektion", "Faktor 10⁵ (1 : 100.000)", "Von 100.000 vermehrungsfähigen Keimen überlebt höchstens einer."],
           ["Sterilisation", "Faktor 10⁶ (1 : 1.000.000)", "Tötet auch Bakteriensporen ab."]
         ] },
+        { typ: "grafik", id: "keimreduktion" },
         { typ: "text", text: "Antisepsis (griechisch, wörtlich „gegen Fäulnis“) bezeichnet alle Maßnahmen zur Verminderung infektiöser Keime und damit zur Verhinderung einer Infektion: die Desinfektion von Oberflächen, Materialien, Gegenständen und Wunden." },
         { typ: "merke", text: "Eine vollkommene Keimfreiheit ist auf Körperoberflächen nie zu erreichen, da Haut und Schleimhaut nicht sterilisiert werden können." }
       ],
@@ -328,6 +359,7 @@ KURS.module.push({
           "In sachgerechten Einheiten in dampfdurchlässige Folienschläuche bzw. Sterilisationsbeutel verpacken. Ein seitlicher Indikationsstreifen zeigt den Zustand der Verpackung an.",
           "Umgehend im Autoklav sterilisieren."
         ] },
+        { typ: "grafik", id: "kreislauf" },
         { typ: "merke", text: "Sterilisation ist keine garantierte Abtötung aller Keime, sondern die Wahrscheinlichkeit, dass die Keimzahl um sechs Zehnerpotenzen reduziert wurde: Von einer Million Keimen überlebt theoretisch einer. Sie tötet sogar Bakteriensporen ab, etwa von Clostridium botulinum." }
       ],
       fragen: [
@@ -335,7 +367,8 @@ KURS.module.push({
         ["Wie lange und bei welcher Temperatur wird im Ultraschallbad gereinigt?", ["Mindestens 30 Minuten bei 80 °C", "5 Minuten bei 20 °C", "2 Stunden bei 150 °C"], "Je nach Mittel auch niedriger.", "S. 42"],
         ["Warum wird das Besteck nach der Vorreinigung getrocknet?", ["Um Flecken und Rost zu vermeiden", "Damit es leichter wird", "Das ist nicht nötig"], "Danach wird verpackt.", "S. 43"],
         ["Was zeigt der Indikationsstreifen am Sterilisationsbeutel?", ["Den Zustand der Verpackung", "Den Preis", "Das Gewicht"], "Zum Beispiel bei MELAG-Folien.", "S. 43"],
-        ["Was bedeutet Sterilisation genau?", ["Die Wahrscheinlichkeit, dass die Keimzahl um 6 Zehnerpotenzen reduziert wurde", "Die garantierte Abtötung aller Keime", "Das Abwaschen mit Wasser"], "Von 1 Million Keimen überlebt theoretisch einer.", "S. 43"]
+        ["Was bedeutet Sterilisation genau?", ["Die Wahrscheinlichkeit, dass die Keimzahl um 6 Zehnerpotenzen reduziert wurde", "Die garantierte Abtötung aller Keime", "Das Abwaschen mit Wasser"], "Von 1 Million Keimen überlebt theoretisch einer.", "S. 43"],
+        ["Werden benutzte Kanülen aufbereitet?", ["Nein, sie kommen sofort in den Abwurfbehälter", "Ja, im Ultraschallbad", "Ja, nach dem Abwischen"], "Aufbereitet werden nur wiederverwendbare Instrumente wie Klemmen.", "S. 27"]
       ]
     },
     {
@@ -349,6 +382,7 @@ KURS.module.push({
           "Sterilisationsphase: Die Dauer hängt von Temperatur, Gerätetyp und Mikroorganismen ab. Die gesamte Innenluft muss durch Dampf von mindestens etwa 2 bar ersetzt sein.",
           "Trockenphase: Nach Druckabfall auf 0 bar und kontrolliertem Ablassen des Dampfes wird getrocknet, beim Typ B mit gepulster Vakuumtrocknung."
         ] },
+        { typ: "grafik", id: "autoklav" },
         { typ: "achtung", text: "Nur vollständig trockenes Sterilgut gilt nach der Entnahme als steril." },
         { typ: "text", text: "Prionen (Krankheitserreger ohne eigene DNA), etwa die Erreger der Creutzfeldt-Jakob-Krankheit, werden nur bei 134 °C und 18 Minuten zerstört." }
       ],

@@ -2,20 +2,23 @@
 window.KURS = window.KURS || { module: [] };
 
 KURS.glossar = [
+  ["A-Delta-Fasern", "Schnelle Schmerzfasern (etwa 20 m/s), gut lokalisiert.", 4],
   ["Algesie", "Fachbegriff für Schmerz.", 4],
   ["Anodisieren", "Elektrochemisches Verfahren, das auf Metallen wie Titan stabile, farbige Oxidschichten erzeugt.", 6],
   ["Antisepsis", "Griechisch „gegen Fäulnis“: alle Maßnahmen zur Verminderung infektiöser Keime auf Oberflächen, Materialien und Wunden.", 5],
+  ["ASTM F136", "Norm für Implantat-Titan Ti6Al4V ELI (G23); entspricht ISO 5832-3.", 6],
   ["Autoklav", "Gas- und luftdicht verschließbarer Druckbehälter, der mit Wasserdampf und Überdruck sterilisiert.", 5],
   ["Ball Closure Ring (BCR)", "Klemmkugelring; die Kugel rastet in die Ringöffnung ein.", 6],
   ["Barbell", "Gerader Metallstift mit Gewinde und verschraubbaren Kugeln (engl. Hantel).", 6],
   ["Biopsiestanze (Punch)", "Werkzeug zur einmaligen Stanzung der Haut, z. B. für Dermal Anchor, Tunnel und Conch.", 7],
   ["Bowie-Dick-Test", "Täglicher Test der Vakuumfunktion bei Autoklaven mit fraktioniertem Vorvakuum (Helixtest).", 5],
   ["Braunüle", "Venenverweilkanüle: Nadel im Kunststoffüberzug, mit der heute gestochen wird.", 1],
+  ["C-Fasern", "Langsame Schmerzfasern (bis 2,5 m/s), ungenau lokalisiert.", 4],
   ["Chirurgenstahl 316L", "Stahl mit 10–14 % Nickel; als Ersteinsatz ungeeignet, als Zweiteinsatz meist unbedenklich.", 6],
   ["Curved Barbell (Banane)", "Leicht gebogener Stab mit Kugeln, z. B. für Bauchnabel, Augenbraue, Rook.", 6],
-  ["C-Fasern", "Langsame Schmerzfasern (bis 2,5 m/s), ungenau lokalisiert.", 4],
-  ["A-Delta-Fasern", "Schnelle Schmerzfasern (etwa 20 m/s), gut lokalisiert.", 4],
   ["Desinfektion", "Keimreduktion um den Faktor 10⁵.", 5],
+  ["Ductus parotideus", "Speichelgang der Ohrspeicheldrüse; verläuft etwa 2 cm unter dem Jochbogen quer über die Wange.", 3],
+  ["Durchgangsarzt (D-Arzt)", "Von den Unfallversicherungsträgern zugelassener Arzt für Arbeitsunfälle, zum Beispiel nach einem Nadelstich.", 5],
   ["Einführhilfe", "Spitz zulaufender Stab, um abgeheilte Stichkanäle vorsichtig zu dehnen oder freizuschieben.", 7],
   ["Einverständniserklärung", "Schriftliche Einwilligung des Kunden vor jedem Piercing; macht die Körperverletzung rechtmäßig.", 2],
   ["Epithelisierung", "Heilungsphase, in der Zellen vom Wundrand einwandern und die Wunde schließen.", 3],
@@ -28,16 +31,20 @@ KURS.glossar = [
   ["Heilversprechen", "Zusage einer heilenden Wirkung; für Piercer verboten, auch in der Werbung.", 2],
   ["Hufeisen (Threaded Ring)", "Offener Ring mit Gewinde an beiden Enden.", 6],
   ["Indikatorstreifen", "Streifen an Sterilisationsbeuteln oder Klebebändern, der durch Farbumschlag die Sterilisation anzeigt.", 5],
+  ["Innengewinde", "Das Gewinde sitzt im Stab, der Stab selbst ist glatt; schont den frischen Stichkanal.", 6],
   ["Klemmzange", "Hält den eingesetzten Schmuck, während die Kugel aufgedreht wird.", 7],
   ["Kodan", "Hautantiseptikum, mit dem nach dem Einsetzen nochmals eingesprüht wird.", 9],
   ["Körperverletzung", "Rechtlich ist jedes Piercing eine gewollte Körperverletzung (§ 223 StGB), erlaubt nur mit Einwilligung.", 2],
   ["Labret Stud", "Stecker mit Platte auf einer Seite und Gewinde für eine Kugel auf der anderen.", 6],
   ["Lidocainsalbe (Xylocain)", "Rezeptfreies Betäubungsmittel aus der Apotheke; laut Akademie erlaubt, aber nicht empfohlen.", 4],
+  ["N. facialis", "Gesichtsnerv; steuert die Mimik und fächert sich vor dem Ohr in Äste zu Stirn, Wange, Mund und Kinn auf.", 3],
+  ["N. supraorbitalis", "Gefühlsnerv der Stirn; tritt über dem inneren Drittel der Augenbraue aus dem Knochen.", 3],
   ["Nadelabwurfbehälter", "Verschließbarer Behälter, in den benutzte Nadeln sofort kommen.", 5],
   ["Nadelauffangrohr (Receiving Tube)", "Rohr, das die Kanüle auffängt, wo keine Zange passt, z. B. bei Rook und Daith.", 7],
   ["Nickelallergie", "Spättyp-Allergie: Symptome 48–72 Stunden nach Kontakt mit Nickel.", 6],
   ["Nozizeptoren", "Schmerzrezeptoren, meist freie Nervenenden.", 4],
   ["Octenidin", "Wirkstoff in Prontolind und Octenisept; knorpeltoxisch, deshalb nie bei Knorpelpiercings.", 10],
+  ["Perichondritis", "Entzündung der Knorpelhaut, meist an der Ohrmuschel; ärztlicher Notfall, häufigster Erreger Pseudomonas aeruginosa.", 10],
   ["PTFE", "Polytetrafluorethylen (Teflon); idealer Ersteinsatz, autoklavierbar; nicht bei der Zunge.", 6],
   ["Rahmenhygieneplan", "Schriftliche Festlegung aller Hygienemaßnahmen nach dem Infektionsschutzgesetz, mit Reinigungs- und Desinfektionsplan.", 5],
   ["Residente Hautflora", "Körpereigene Schutzflora der Haut; wird nur reduziert, nicht zerstört.", 5],
@@ -45,6 +52,7 @@ KURS.glossar = [
   ["Snaptile", "Piercingklemme zum Halten der Stelle, z. B. bei Lobe, Helix, Labret.", 7],
   ["Sterilisation", "Keimreduktion um den Faktor 10⁶; tötet auch Bakteriensporen.", 5],
   ["Surface", "Oberflächenpiercing mit Ein- und Austritt auf einer Ebene; heilt länger, wächst leichter heraus.", 8],
+  ["Thalamus", "Umschaltstation im Gehirn, über die Schmerzsignale zur Großhirnrinde gelangen.", 4],
   ["Transiente Hautflora", "Vorübergehende, hautfremde Keime auf der Haut; werden durch Desinfektion abgetötet.", 5],
   ["Überlänge", "Etwa 4 mm zusätzliche Länge beim Ersteinsatz, weil der Stichkanal anschwillt.", 6],
   ["VAH-Liste", "Liste der Desinfektionsmittel mit Zertifikat des Verbunds für Angewandte Hygiene.", 5],
@@ -56,6 +64,13 @@ KURS.glossar = [
 ];
 
 KURS.checklisten = [
+  { titel: "Nach einer Nadelstichverletzung", modul: 5, punkte: [
+    "Arbeit unterbrechen, Handschuh ausziehen",
+    "Blutung fördern: Druck auf das Gewebe um die Wunde, mindestens eine Minute",
+    "Mit alkoholischem Hautantiseptikum desinfizieren",
+    "Sofort zum Arzt bzw. Durchgangsarzt; nicht bis zum Feierabend warten",
+    "Vorfall dokumentieren: Zeit, Kanüle, Kunde"
+  ] },
   { titel: "Vor dem ersten Kunden des Tages", modul: 5, punkte: [
     "Hände waschen (Pflicht vor Dienstbeginn) und vollständig trocknen",
     "Kein Schmuck an Händen und Unterarmen, Nägel kurz, kein Nagellack",

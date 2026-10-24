@@ -58,7 +58,8 @@ KURS.module.push({
           "Kunststoffüberzug mit der Schere leicht kürzen, damit der Schmuck besser hineingeht.",
           "Ersteinsatz in den Kunststoffüberzug stecken.",
           "Durch den Stichkanal drücken, nicht ziehen, sonst kann der Schmuck abrutschen. Das ist schmerzhaft: den Kunden dabei ausatmen lassen."
-        ] }
+        ] },
+        { typ: "grafik", id: "stich" }
       ],
       fragen: [
         ["Wohin stichst du im Idealfall?", ["In die sichtbare Seite, beim Labret dort, wo die Kugel sitzt", "Immer von hinten", "Egal"], "Schritt 12.", "S. 112"],

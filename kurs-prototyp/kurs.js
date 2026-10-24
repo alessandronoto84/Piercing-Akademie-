@@ -12,7 +12,7 @@
   var BESTEHEN_AB = 0.8;            // Anteil richtiger Antworten für Modulprüfung und Simulation
   var FRAGEN_JE_PRUEFUNG = 20;      // zufällige Fragen pro Modulprüfung
   var SIMULATION_JE_MODUL = 4;      // Fragen pro Modul in der Prüfungssimulation
-  var SPEICHER = "pa-kurs-v2";
+  var SPEICHER = "pa-kurs-v3";
 
   var app = document.getElementById("kurs");
   var nav = document.getElementById("kurs-nav");
@@ -89,8 +89,41 @@
         return '<article class="k-datenblatt' + (nicht ? " k-nicht" : "") + '"><header><h4>' + esc(b.name) + '</h4><span class="label">' + esc(b.seite) + "</span></header><p>" + esc(b.beschreibung) + "</p>" +
           (nicht ? "" : "<dl><div><dt>Ersteinsatz</dt><dd>" + esc(b.ersteinsatz) + "</dd></div><div><dt>Kanüle</dt><dd>" + esc(b.kanuele) + "</dd></div><div><dt>Klemme</dt><dd>" + esc(b.klemme) + "</dd></div></dl>") +
           (b.hinweis ? '<p class="k-hinweis">' + esc(b.hinweis) + "</p>" : "") + "</article>";
+      case "grafik":
+        var g = (KURS.grafiken || {})[b.id];
+        if (!g) return "";
+        return figur(g.w, g.h, b.alt || g.alt, g.svg, b.text || g.text, b.titel);
+      case "diagramm": return diagramm(b);
       default: return "";
     }
+  }
+
+  // Grafik als <figure>; auf schmalen Bildschirmen scrollt nur die Grafik, damit die Schrift lesbar bleibt
+  function figur(w, h, alt, svg, text, titel) {
+    return '<figure class="k-grafik">' + (titel ? '<p class="k-grafik-titel">' + esc(titel) + "</p>" : "") +
+      '<div class="k-grafik-flaeche"><svg viewBox="0 0 ' + w + " " + h + '" role="img" aria-label="' + esc(alt) + '" style="min-width:' + Math.round(w * 0.72) + 'px">' + svg + "</svg></div>" +
+      '<p class="k-grafik-hinweis">Grafik seitlich wischen, um alles zu sehen.</p>' + "<figcaption>" + esc(text) + "</figcaption></figure>";
+  }
+
+  // Balkendiagramm für Spannen: zeilen = [Bezeichnung, von, bis, "mindestens"?]
+  function diagramm(b) {
+    var links = 150, breite = 400, max = b.max, zh = 30, oben = 10;
+    var x = function (v) { return links + v / max * breite; };
+    var svg = "";
+    for (var v = 0; v <= max; v += b.schritt) {
+      svg += '<line x1="' + x(v) + '" y1="' + oben + '" x2="' + x(v) + '" y2="' + (oben + b.zeilen.length * zh) + '" class="sd"/>' +
+        '<text x="' + x(v) + '" y="' + (oben + b.zeilen.length * zh + 18) + '" class="tm" text-anchor="middle">' + v + "</text>";
+    }
+    b.zeilen.forEach(function (z, i) {
+      var y = oben + i * zh + 7, bis = z[2] == null ? z[1] : z[2];
+      svg += '<text x="' + (links - 10) + '" y="' + (y + 12) + '" class="tb" text-anchor="end">' + esc(z[0]) + "</text>" +
+        '<rect x="' + links + '" y="' + y + '" width="' + (x(z[1]) - links) + '" height="16" rx="4" class="fa"/>' +
+        (bis > z[1] ? '<rect x="' + x(z[1]) + '" y="' + y + '" width="' + (x(bis) - x(z[1])) + '" height="16" rx="4" class="fa o45"/>' : "") +
+        (z[3] ? '<polygon points="' + (x(bis) + 2) + "," + y + " " + (x(bis) + 12) + "," + (y + 8) + " " + (x(bis) + 2) + "," + (y + 16) + '" class="fa o45"/>' : "") +
+        '<text x="' + (x(bis) + (z[3] ? 18 : 8)) + '" y="' + (y + 12) + '" class="tm">' + esc(z[4] || "") + "</text>";
+    });
+    svg += '<text x="' + (links + breite / 2) + '" y="' + (oben + b.zeilen.length * zh + 36) + '" class="tm" text-anchor="middle">' + esc(b.einheit) + "</text>";
+    return figur(640, oben + b.zeilen.length * zh + 44, b.alt, svg, b.text, b.titel);
   }
 
   // ---------- Seitenleiste ----------
