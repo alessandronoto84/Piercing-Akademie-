@@ -31,7 +31,7 @@ window.KURS = window.KURS || { module: [] };
         seite: "S. 74–75",
         inhalt: [
           { typ: "grafik", id: "ohr" },
-          db("Lobe", "Ohrläppchen. Kann zu einem Tunnel gepuncht oder gedehnt werden: mit Gleitgel und Dehnstab bzw. Dehnschnecke den abgeheilten Stichkanal um 1 bis 2 mm pro Monat dehnen.", "Labret", "18G, 16G, 14G, Punch", "Snaptile, Gazeklemme", "", "S. 74"),
+          db("Lobe", "Ohrläppchen. Kann zu einem Tunnel gepuncht oder gedehnt werden: mit Gleitgel und Dehnstab bzw. Dehnschnecke den abgeheilten Stichkanal um 1 bis 2 mm pro Monat dehnen.", "Labret", "18G", "Snaptile, Gazeklemme", "Standard der Akademie: 18G. Nur wenn ein Tunnel gewünscht ist: 14G oder Punch (im Kursbuch 18G, 16G, 14G, Punch).", "S. 74"),
           db("Upper Lobe", "Durch das obere Ohrläppchen. Neben dem herkömmlichen Ohrloch werden oft mehrere Upper Lobes in einer Reihe getragen.", "Labret", "18G, 16G", "Snaptile, Gazeklemme", "", "S. 75")
         ],
         fragen: [

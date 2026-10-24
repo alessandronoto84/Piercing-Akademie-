@@ -37,10 +37,11 @@ KURS.module.push({
         { typ: "tabelle", kopf: ["Schmuckstärke", "Kanüle der Akademie", "Außendurchmesser der Kanüle"], zeilen: [
           ["1,2 mm (im Handel 16G)", "18G (grün)", "1,3 mm"],
           ["1,6 mm (im Handel 14G)", "16G (grau)", "1,7 mm"],
-          ["Prinz Albert (BCR)", "14G (orange)", "2,2 mm"]
+          ["Prinz Albert (BCR)", "14G (orange)", "2,2 mm"],
+          ["Lobe, nur wenn ein Tunnel gewünscht ist", "14G (orange)", "2,2 mm"]
         ] },
         { typ: "grafik", id: "gauge" },
-        { typ: "merke", text: "Standard der Akademie: 18G-Kanüle für 1,2-mm-Schmuck, 16G-Kanüle für 1,6-mm-Schmuck. Das Prinz Albert wird mit der 14G-Kanüle gestochen (Datenblatt S. 98). Die Kanüle ist also eine Gauge-Stufe dünner benannt als der Schmuck, aber im Durchmesser etwas dicker." },
+        { typ: "merke", text: "Standard der Akademie: 18G-Kanüle für 1,2-mm-Schmuck, 16G-Kanüle für 1,6-mm-Schmuck. Die 14G-Kanüle nimmt die Akademie nur für das Prinz Albert (Datenblatt S. 98) und beim Lobe, wenn ein Tunnel gewünscht ist; sonst wird das Lobe mit 18G gestochen. Die Kanüle ist also eine Gauge-Stufe dünner benannt als der Schmuck, aber im Durchmesser etwas dicker." },
         { typ: "liste", punkte: [
           "Je größer die Gauge-Zahl, desto dünner: Das gilt für Kanülen und Schmuck gleichermaßen.",
           "Der Schmuck wird in den Kunststoffüberzug der Kanüle gesteckt. Die Kanüle ist deshalb etwas dicker als der Schmuck, der durch sie hindurchgeht.",
@@ -55,6 +56,8 @@ KURS.module.push({
         ["Welche Kanüle nimmt die Akademie für Schmuck mit 1,2 mm?", ["18G", "16G", "14G"], "18G-Kanüle mit 1,3 mm Außendurchmesser.", "Akademie"],
         ["Welche Kanüle nimmt die Akademie für Schmuck mit 1,6 mm?", ["16G", "18G", "14G"], "16G-Kanüle mit 1,7 mm Außendurchmesser.", "Akademie"],
         ["Fall: Du bestellst Ersteinsätze in 16G. Mit welcher Kanüle stichst du sie?", ["Mit der 18G-Kanüle, denn 16G-Schmuck hat 1,2 mm", "Mit der 16G-Kanüle, gleiche Zahl", "Mit der 14G-Kanüle"], "Schmuck-Gauge und Kanülen-Gauge sind nicht dieselben Millimeter.", "Akademie"],
+        ["Mit welcher Kanüle sticht die Akademie ein normales Lobe?", ["18G", "14G", "12G"], "14G nur, wenn ein Tunnel gewünscht ist.", "S. 74"],
+        ["Wann nimmst du beim Lobe die 14G-Kanüle?", ["Nur wenn ein Tunnel gewünscht ist", "Immer", "Nie"], "Sonst sticht die Akademie das Lobe mit 18G.", "S. 74"],
         ["Mit welcher Kanüle sticht die Akademie das Prinz Albert?", ["14G", "18G", "20G"], "Laut Datenblatt; der Ersteinsatz ist ein BCR.", "S. 98"],
         ["Bedeutet 16G bei Kanüle und Schmuck dieselben Millimeter?", ["Nein, die 16G-Kanüle ist mit 1,7 mm dicker als 16G-Schmuck mit 1,2 mm", "Ja, genau gleich", "Gauge gibt es nur bei Schmuck"], "Kanülen und Schmuck werden unterschiedlich gemessen.", "Ergänzung"],
         ["Warum ist die Kanüle dicker als der Schmuck?", ["Weil der Schmuck in den Kunststoffüberzug gesteckt wird", "Damit es weniger blutet", "Das ist sie nicht"], "Siehe Modul 9, Der Stich.", "Ergänzung"],

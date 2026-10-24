@@ -10,25 +10,35 @@ KURS.lektionsfragen = {
     "Hufeisen, Banane, BCR",
     "Banane, Barbell, BCR"
    ],
-   "Datenblatt Lobe: Kanüle 18G, 16G, 14G, Punch, Klemme Snaptile, Gazeklemme.",
+   "Datenblatt Lobe: Kanüle 18G, Klemme Snaptile, Gazeklemme.",
+   "S. 74"
+  ],
+  [
+   "Welche Kanüle(n) nennt das Datenblatt für „Lobe“?",
+   [
+    "18G",
+    "16G",
+    "18G (evtl. biegen)"
+   ],
+   "Datenblatt Lobe: Ersteinsatz Labret.",
    "S. 74"
   ],
   [
    "Womit wird beim Piercing „Lobe“ laut Datenblatt gehalten bzw. geführt?",
    [
     "Snaptile, Gazeklemme",
-    "Nadelauffangrohr",
-    "Septum-Zange, Freihand"
+    "Septum-Zange, Freihand",
+    "Freihand, Nadelauffangrohr"
    ],
-   "Datenblatt Lobe: Ersteinsatz Labret, Kanüle 18G, 16G, 14G, Punch.",
+   "Datenblatt Lobe: Ersteinsatz Labret, Kanüle 18G.",
    "S. 74"
   ],
   [
    "Welchen Ersteinsatz nennt das Datenblatt für „Upper Lobe“?",
    [
     "Labret",
-    "Barbell, BCR",
-    "Banane, Hufeisen"
+    "Banane, Hufeisen",
+    "BCR, Barbell, Bar, Banane"
    ],
    "Datenblatt Upper Lobe: Kanüle 18G, 16G, Klemme Snaptile, Gazeklemme.",
    "S. 75"
@@ -47,8 +57,8 @@ KURS.lektionsfragen = {
    "Womit wird beim Piercing „Upper Lobe“ laut Datenblatt gehalten bzw. geführt?",
    [
     "Snaptile, Gazeklemme",
-    "Septum-Zange",
-    "Septum-Zange, Freihand"
+    "Septum-Zange, Freihand",
+    "Septum-Zange"
    ],
    "Datenblatt Upper Lobe: Ersteinsatz Labret, Kanüle 18G, 16G.",
    "S. 75"
@@ -59,8 +69,8 @@ KURS.lektionsfragen = {
    "Welchen Ersteinsatz nennt das Datenblatt für „Tragus“?",
    [
     "Labret, BCR, Barbell",
-    "20 mm Barbell (nach 10 Tagen ggf. kürzer)",
-    "Bar, Banane, Dermal Anchor"
+    "Bar, Banane, Dermal Anchor",
+    "Barbell 38 mm"
    ],
    "Datenblatt Tragus: Kanüle Punch, 18G, 16G, Klemme Traguszange, Nadelauffangrohr.",
    "S. 76"
@@ -79,8 +89,8 @@ KURS.lektionsfragen = {
    "Womit wird beim Piercing „Tragus“ laut Datenblatt gehalten bzw. geführt?",
    [
     "Traguszange, Nadelauffangrohr",
-    "Freihand, Snaptile, Gazeklemme",
-    "Snaptile, Freihand"
+    "Snaptile, Freihand",
+    "Snaptile, Gazeklemme"
    ],
    "Datenblatt Tragus: Ersteinsatz Labret, BCR, Barbell, Kanüle Punch, 18G, 16G.",
    "S. 76"
@@ -89,8 +99,8 @@ KURS.lektionsfragen = {
    "Welchen Ersteinsatz nennt das Datenblatt für „Anti-Tragus“?",
    [
     "Hufeisen, Banane, BCR",
-    "Labret",
-    "Barbell, Labret"
+    "20 mm Barbell (nach 10 Tagen ggf. kürzer)",
+    "Barbell 38 mm"
    ],
    "Datenblatt Anti-Tragus: Kanüle 18G, Klemme Nadelauffangrohr.",
    "S. 77"
@@ -99,8 +109,8 @@ KURS.lektionsfragen = {
    "Welche Kanüle(n) nennt das Datenblatt für „Anti-Tragus“?",
    [
     "18G",
-    "18G (evtl. biegen)",
-    "14G"
+    "14G",
+    "18G (evtl. biegen)"
    ],
    "Datenblatt Anti-Tragus: Ersteinsatz Hufeisen, Banane, BCR.",
    "S. 77"
@@ -109,8 +119,8 @@ KURS.lektionsfragen = {
    "Womit wird beim Piercing „Anti-Tragus“ laut Datenblatt gehalten bzw. geführt?",
    [
     "Nadelauffangrohr",
-    "Freihand",
-    "Snaptile, Gazeklemme, Freihand"
+    "Snaptile, Gazeklemme, Freihand",
+    "Snaptile, Gazeklemme, Zungenklemme"
    ],
    "Datenblatt Anti-Tragus: Ersteinsatz Hufeisen, Banane, BCR, Kanüle 18G.",
    "S. 77"
@@ -121,8 +131,8 @@ KURS.lektionsfragen = {
    "Welchen Ersteinsatz nennt das Datenblatt für „Helix“?",
    [
     "Labret, BCR, Hufeisen",
-    "20 mm Barbell (nach 10 Tagen ggf. kürzer)",
-    "Banane, Barbell"
+    "Banane, Barbell",
+    "20 mm Barbell (nach 10 Tagen ggf. kürzer)"
    ],
    "Datenblatt Helix: Kanüle 18G, Klemme Snaptile, Gazeklemme, Freihand.",
    "S. 78"
@@ -131,8 +141,8 @@ KURS.lektionsfragen = {
    "Welche Kanüle(n) nennt das Datenblatt für „Helix“?",
    [
     "18G",
-    "14G",
-    "18G (evtl. biegen)"
+    "18G (evtl. biegen)",
+    "14G"
    ],
    "Datenblatt Helix: Ersteinsatz Labret, BCR, Hufeisen.",
    "S. 78"
@@ -141,8 +151,8 @@ KURS.lektionsfragen = {
    "Womit wird beim Piercing „Helix“ laut Datenblatt gehalten bzw. geführt?",
    [
     "Snaptile, Gazeklemme, Freihand",
-    "Nadelauffangrohr",
-    "Septum-Zange"
+    "Septum-Zange",
+    "Nadelauffangrohr"
    ],
    "Datenblatt Helix: Ersteinsatz Labret, BCR, Hufeisen, Kanüle 18G.",
    "S. 78"
@@ -151,8 +161,8 @@ KURS.lektionsfragen = {
    "Welchen Ersteinsatz nennt das Datenblatt für „Industrial“?",
    [
     "Barbell 38 mm",
-    "BCR, Barbell",
-    "Banane, Hufeisen"
+    "Banane, Hufeisen",
+    "Hufeisen"
    ],
    "Datenblatt Industrial: Kanüle 16G, Klemme Freihand, Nadelauffangrohr.",
    "S. 84"
@@ -161,8 +171,8 @@ KURS.lektionsfragen = {
    "Welche Kanüle(n) nennt das Datenblatt für „Industrial“?",
    [
     "16G",
-    "18G (evtl. biegen)",
-    "14G"
+    "14G",
+    "18G"
    ],
    "Datenblatt Industrial: Ersteinsatz Barbell 38 mm.",
    "S. 84"
@@ -171,8 +181,8 @@ KURS.lektionsfragen = {
    "Womit wird beim Piercing „Industrial“ laut Datenblatt gehalten bzw. geführt?",
    [
     "Freihand, Nadelauffangrohr",
-    "Gazeklemme, Snaptile",
-    "Snaptile, Gazeklemme"
+    "Snaptile, Gazeklemme",
+    "Gazeklemme, Snaptile"
    ],
    "Datenblatt Industrial: Ersteinsatz Barbell 38 mm, Kanüle 16G.",
    "S. 84"
@@ -182,7 +192,7 @@ KURS.lektionsfragen = {
    [
     "Hufeisen, Banane, BCR",
     "Barbell 38 mm",
-    "20 mm Barbell (nach 10 Tagen ggf. kürzer)"
+    "Labret"
    ],
    "Datenblatt Allergiepiercing: Kanüle 18G, Klemme Freihand, Nadelauffangrohr.",
    "S. 83"
@@ -191,8 +201,8 @@ KURS.lektionsfragen = {
    "Welche Kanüle(n) nennt das Datenblatt für „Allergiepiercing“?",
    [
     "18G",
-    "16G",
-    "14G"
+    "14G",
+    "18G (evtl. biegen)"
    ],
    "Datenblatt Allergiepiercing: Ersteinsatz Hufeisen, Banane, BCR.",
    "S. 83"
@@ -213,8 +223,8 @@ KURS.lektionsfragen = {
    "Welchen Ersteinsatz nennt das Datenblatt für „Conch“?",
    [
     "Labret, Barbell, BCR",
-    "Bar, Banane, Dermal Anchor",
-    "Barbell 38 mm"
+    "Barbell 38 mm",
+    "Banane, Hufeisen"
    ],
    "Datenblatt Conch: Kanüle 18G, 16G, Punch, Klemme Snaptile, Gazeklemme.",
    "S. 79"
@@ -223,8 +233,8 @@ KURS.lektionsfragen = {
    "Welche Kanüle(n) nennt das Datenblatt für „Conch“?",
    [
     "18G, 16G, Punch",
-    "18G (evtl. biegen)",
-    "14G"
+    "14G",
+    "18G (evtl. biegen)"
    ],
    "Datenblatt Conch: Ersteinsatz Labret, Barbell, BCR.",
    "S. 79"
@@ -233,8 +243,8 @@ KURS.lektionsfragen = {
    "Womit wird beim Piercing „Conch“ laut Datenblatt gehalten bzw. geführt?",
    [
     "Snaptile, Gazeklemme",
-    "Septum-Zange",
-    "Freihand, Nadelauffangrohr"
+    "Freihand, Nadelauffangrohr",
+    "Traguszange, Nadelauffangrohr"
    ],
    "Datenblatt Conch: Ersteinsatz Labret, Barbell, BCR, Kanüle 18G, 16G, Punch.",
    "S. 79"
@@ -243,8 +253,8 @@ KURS.lektionsfragen = {
    "Welchen Ersteinsatz nennt das Datenblatt für „Snug“?",
    [
     "Banane, Barbell, BCR, Hufeisen",
-    "Labret",
-    "20 mm Barbell (nach 10 Tagen ggf. kürzer)"
+    "20 mm Barbell (nach 10 Tagen ggf. kürzer)",
+    "Labret"
    ],
    "Datenblatt Snug: Kanüle 18G, Klemme Freihand, Nadelauffangrohr.",
    "S. 82"
@@ -253,8 +263,8 @@ KURS.lektionsfragen = {
    "Welche Kanüle(n) nennt das Datenblatt für „Snug“?",
    [
     "18G",
-    "16G",
-    "18G (evtl. biegen)"
+    "18G (evtl. biegen)",
+    "16G"
    ],
    "Datenblatt Snug: Ersteinsatz Banane, Barbell, BCR, Hufeisen.",
    "S. 82"
@@ -263,8 +273,8 @@ KURS.lektionsfragen = {
    "Womit wird beim Piercing „Snug“ laut Datenblatt gehalten bzw. geführt?",
    [
     "Freihand, Nadelauffangrohr",
-    "Gazeklemme, Snaptile",
-    "Septum-Zange"
+    "Septum-Zange",
+    "Snaptile, Gazeklemme, Zungenklemme"
    ],
    "Datenblatt Snug: Ersteinsatz Banane, Barbell, BCR, Hufeisen, Kanüle 18G.",
    "S. 82"
@@ -275,8 +285,8 @@ KURS.lektionsfragen = {
    "Welchen Ersteinsatz nennt das Datenblatt für „Rook“?",
    [
     "Hufeisen, Banane, BCR",
-    "Barbell, Labret",
-    "Barbell 38 mm"
+    "20 mm Barbell (nach 10 Tagen ggf. kürzer)",
+    "Labret"
    ],
    "Datenblatt Rook: Kanüle 18G, Klemme Nadelauffangrohr.",
    "S. 80"
@@ -285,8 +295,8 @@ KURS.lektionsfragen = {
    "Welche Kanüle(n) nennt das Datenblatt für „Rook“?",
    [
     "18G",
-    "16G",
-    "18G (evtl. biegen)"
+    "18G (evtl. biegen)",
+    "16G"
    ],
    "Datenblatt Rook: Ersteinsatz Hufeisen, Banane, BCR.",
    "S. 80"
@@ -295,7 +305,7 @@ KURS.lektionsfragen = {
    "Womit wird beim Piercing „Rook“ laut Datenblatt gehalten bzw. geführt?",
    [
     "Nadelauffangrohr",
-    "Gazeklemme, Snaptile",
+    "Septum-Zange",
     "Septum-Zange, Freihand"
    ],
    "Datenblatt Rook: Ersteinsatz Hufeisen, Banane, BCR, Kanüle 18G.",
@@ -305,8 +315,8 @@ KURS.lektionsfragen = {
    "Welchen Ersteinsatz nennt das Datenblatt für „Daith“?",
    [
     "Banane, BCR",
-    "Hufeisen",
-    "Barbell 38 mm"
+    "Barbell 38 mm",
+    "Labret, Hufeisen"
    ],
    "Datenblatt Daith: Kanüle 18G (evtl. biegen), Klemme Nadelauffangrohr.",
    "S. 81"
@@ -315,8 +325,8 @@ KURS.lektionsfragen = {
    "Welche Kanüle(n) nennt das Datenblatt für „Daith“?",
    [
     "18G (evtl. biegen)",
-    "16G",
-    "18G, 16G, Punch"
+    "18G, 16G, Punch",
+    "18G, 16G"
    ],
    "Datenblatt Daith: Ersteinsatz Banane, BCR.",
    "S. 81"
@@ -325,8 +335,8 @@ KURS.lektionsfragen = {
    "Womit wird beim Piercing „Daith“ laut Datenblatt gehalten bzw. geführt?",
    [
     "Nadelauffangrohr",
-    "Gazeklemme, Snaptile",
-    "Freihand, Gazeklemme"
+    "Freihand, Gazeklemme",
+    "Septum-Zange, Freihand"
    ],
    "Datenblatt Daith: Ersteinsatz Banane, BCR, Kanüle 18G (evtl. biegen).",
    "S. 81"
@@ -337,8 +347,8 @@ KURS.lektionsfragen = {
    "Welchen Ersteinsatz nennt das Datenblatt für „Nase (Nostril)“?",
    [
     "Labret",
-    "20 mm Barbell (nach 10 Tagen ggf. kürzer)",
-    "BCR, Barbell"
+    "BCR, Barbell",
+    "Bar, Banane, Dermal Anchor"
    ],
    "Datenblatt Nase (Nostril): Kanüle 18G, Klemme Gazeklemme, Snaptile.",
    "S. 85"
@@ -358,7 +368,7 @@ KURS.lektionsfragen = {
    [
     "Gazeklemme, Snaptile",
     "Septum-Zange",
-    "Freihand, Nadelauffangrohr"
+    "Septum-Zange, Freihand"
    ],
    "Datenblatt Nase (Nostril): Ersteinsatz Labret, Kanüle 18G.",
    "S. 85"
@@ -367,8 +377,8 @@ KURS.lektionsfragen = {
    "Welchen Ersteinsatz nennt das Datenblatt für „Septum“?",
    [
     "Hufeisen",
-    "BCR",
-    "BCR, Banane, Barbell"
+    "Banane, Barbell, BCR",
+    "20 mm Barbell (nach 10 Tagen ggf. kürzer)"
    ],
    "Datenblatt Septum: Kanüle 18G, 16G, Klemme Septum-Zange.",
    "S. 88"
@@ -377,8 +387,8 @@ KURS.lektionsfragen = {
    "Welche Kanüle(n) nennt das Datenblatt für „Septum“?",
    [
     "18G, 16G",
-    "18G (evtl. biegen)",
-    "14G"
+    "14G",
+    "18G (evtl. biegen)"
    ],
    "Datenblatt Septum: Ersteinsatz Hufeisen.",
    "S. 88"
@@ -387,8 +397,8 @@ KURS.lektionsfragen = {
    "Womit wird beim Piercing „Septum“ laut Datenblatt gehalten bzw. geführt?",
    [
     "Septum-Zange",
-    "Snaptile, Gazeklemme, Freihand",
-    "Snaptile, Freihand"
+    "Snaptile, Freihand",
+    "Snaptile, Gazeklemme, Freihand"
    ],
    "Datenblatt Septum: Ersteinsatz Hufeisen, Kanüle 18G, 16G.",
    "S. 88"
@@ -399,8 +409,8 @@ KURS.lektionsfragen = {
    "Welchen Ersteinsatz nennt das Datenblatt für „Augenbraue“?",
    [
     "Banane, Hufeisen",
-    "Labret, Barbell, BCR",
-    "Barbell 38 mm"
+    "Barbell 38 mm",
+    "20 mm Barbell (nach 10 Tagen ggf. kürzer)"
    ],
    "Datenblatt Augenbraue: Kanüle 18G, Klemme Snaptile, Gazeklemme.",
    "S. 89"
@@ -409,8 +419,8 @@ KURS.lektionsfragen = {
    "Welche Kanüle(n) nennt das Datenblatt für „Augenbraue“?",
    [
     "18G",
-    "18G (evtl. biegen)",
-    "14G"
+    "14G",
+    "18G (evtl. biegen)"
    ],
    "Datenblatt Augenbraue: Ersteinsatz Banane, Hufeisen.",
    "S. 89"
@@ -419,8 +429,8 @@ KURS.lektionsfragen = {
    "Womit wird beim Piercing „Augenbraue“ laut Datenblatt gehalten bzw. geführt?",
    [
     "Snaptile, Gazeklemme",
-    "Freihand",
-    "Traguszange, Nadelauffangrohr"
+    "Traguszange, Nadelauffangrohr",
+    "Freihand"
    ],
    "Datenblatt Augenbraue: Ersteinsatz Banane, Hufeisen, Kanüle 18G.",
    "S. 89"
@@ -429,8 +439,8 @@ KURS.lektionsfragen = {
    "Welchen Ersteinsatz nennt das Datenblatt für „Bridge“?",
    [
     "Barbell, Banane",
-    "20 mm Barbell (nach 10 Tagen ggf. kürzer)",
-    "Labret"
+    "Labret",
+    "Hufeisen"
    ],
    "Datenblatt Bridge: Kanüle 18G, Klemme Snaptile, Gazeklemme.",
    "S. 91"
@@ -439,8 +449,8 @@ KURS.lektionsfragen = {
    "Welche Kanüle(n) nennt das Datenblatt für „Bridge“?",
    [
     "18G",
-    "18G (evtl. biegen)",
-    "16G"
+    "16G",
+    "18G (evtl. biegen)"
    ],
    "Datenblatt Bridge: Ersteinsatz Barbell, Banane.",
    "S. 91"
@@ -449,8 +459,8 @@ KURS.lektionsfragen = {
    "Womit wird beim Piercing „Bridge“ laut Datenblatt gehalten bzw. geführt?",
    [
     "Snaptile, Gazeklemme",
-    "Traguszange, Nadelauffangrohr",
-    "Freihand"
+    "Freihand",
+    "Nadelauffangrohr"
    ],
    "Datenblatt Bridge: Ersteinsatz Barbell, Banane, Kanüle 18G.",
    "S. 91"
@@ -461,8 +471,8 @@ KURS.lektionsfragen = {
    "Welchen Ersteinsatz nennt das Datenblatt für „Labret“?",
    [
     "Labret, Hufeisen",
-    "Barbell, Banane",
-    "BCR, Barbell, Bar, Banane"
+    "BCR, Barbell, Bar, Banane",
+    "Banane, BCR"
    ],
    "Datenblatt Labret: Kanüle 18G, Klemme Snaptile, Gazeklemme.",
    "S. 86"
@@ -471,8 +481,8 @@ KURS.lektionsfragen = {
    "Welche Kanüle(n) nennt das Datenblatt für „Labret“?",
    [
     "18G",
-    "16G",
-    "18G (evtl. biegen)"
+    "18G (evtl. biegen)",
+    "14G"
    ],
    "Datenblatt Labret: Ersteinsatz Labret, Hufeisen.",
    "S. 86"
@@ -481,8 +491,8 @@ KURS.lektionsfragen = {
    "Womit wird beim Piercing „Labret“ laut Datenblatt gehalten bzw. geführt?",
    [
     "Snaptile, Gazeklemme",
-    "Septum-Zange",
-    "Traguszange, Nadelauffangrohr"
+    "Traguszange, Nadelauffangrohr",
+    "Freihand"
    ],
    "Datenblatt Labret: Ersteinsatz Labret, Hufeisen, Kanüle 18G.",
    "S. 86"
@@ -512,7 +522,7 @@ KURS.lektionsfragen = {
    [
     "Snaptile, Gazeklemme, Freihand",
     "Septum-Zange",
-    "Nadelauffangrohr"
+    "Traguszange, Nadelauffangrohr"
    ],
    "Datenblatt Eskimo: Ersteinsatz Barbell, Banane, Kanüle 18G.",
    "S. 93"
@@ -523,8 +533,8 @@ KURS.lektionsfragen = {
    "Welchen Ersteinsatz nennt das Datenblatt für „Lippenbändchen (Smiley)“?",
    [
     "Hufeisen, BCR",
-    "Barbell 38 mm",
-    "Labret"
+    "Labret",
+    "Barbell, Banane"
    ],
    "Datenblatt Lippenbändchen (Smiley): Kanüle 18G, Klemme Septum-Zange, Freihand.",
    "S. 87"
@@ -543,8 +553,8 @@ KURS.lektionsfragen = {
    "Womit wird beim Piercing „Lippenbändchen (Smiley)“ laut Datenblatt gehalten bzw. geführt?",
    [
     "Septum-Zange, Freihand",
-    "Snaptile, Gazeklemme",
-    "Gazeklemme, Snaptile"
+    "Gazeklemme, Snaptile",
+    "Snaptile, Gazeklemme"
    ],
    "Datenblatt Lippenbändchen (Smiley): Ersteinsatz Hufeisen, BCR, Kanüle 18G.",
    "S. 87"
@@ -553,8 +563,8 @@ KURS.lektionsfragen = {
    "Welchen Ersteinsatz nennt das Datenblatt für „Zunge“?",
    [
     "20 mm Barbell (nach 10 Tagen ggf. kürzer)",
-    "Labret, Barbell, BCR",
-    "BCR"
+    "BCR",
+    "Barbell, Banane"
    ],
    "Datenblatt Zunge: Kanüle 16G, Klemme Snaptile, Gazeklemme, Zungenklemme.",
    "S. 90"
@@ -563,8 +573,8 @@ KURS.lektionsfragen = {
    "Welche Kanüle(n) nennt das Datenblatt für „Zunge“?",
    [
     "16G",
-    "18G (evtl. biegen)",
-    "14G"
+    "14G",
+    "18G"
    ],
    "Datenblatt Zunge: Ersteinsatz 20 mm Barbell (nach 10 Tagen ggf. kürzer).",
    "S. 90"
@@ -573,8 +583,8 @@ KURS.lektionsfragen = {
    "Womit wird beim Piercing „Zunge“ laut Datenblatt gehalten bzw. geführt?",
    [
     "Snaptile, Gazeklemme, Zungenklemme",
-    "Nadelauffangrohr",
-    "Freihand"
+    "Freihand",
+    "Nadelauffangrohr"
    ],
    "Datenblatt Zunge: Ersteinsatz 20 mm Barbell (nach 10 Tagen ggf. kürzer), Kanüle 16G.",
    "S. 90"
@@ -585,8 +595,8 @@ KURS.lektionsfragen = {
    "Welchen Ersteinsatz nennt das Datenblatt für „Cheek“?",
    [
     "Barbell, Labret",
-    "Banane, BCR",
-    "Banane, Hufeisen"
+    "Hufeisen",
+    "BCR, Banane"
    ],
    "Datenblatt Cheek: Kanüle 18G, Klemme Snaptile, Gazeklemme.",
    "S. 92"
@@ -595,8 +605,8 @@ KURS.lektionsfragen = {
    "Welche Kanüle(n) nennt das Datenblatt für „Cheek“?",
    [
     "18G",
-    "14G",
-    "16G"
+    "16G",
+    "18G (evtl. biegen)"
    ],
    "Datenblatt Cheek: Ersteinsatz Barbell, Labret.",
    "S. 92"
@@ -605,8 +615,8 @@ KURS.lektionsfragen = {
    "Womit wird beim Piercing „Cheek“ laut Datenblatt gehalten bzw. geführt?",
    [
     "Snaptile, Gazeklemme",
-    "Freihand, Nadelauffangrohr",
-    "Traguszange, Nadelauffangrohr"
+    "Traguszange, Nadelauffangrohr",
+    "Freihand"
    ],
    "Datenblatt Cheek: Ersteinsatz Barbell, Labret, Kanüle 18G.",
    "S. 92"
@@ -617,8 +627,8 @@ KURS.lektionsfragen = {
    "Welchen Ersteinsatz nennt das Datenblatt für „Bauchnabel“?",
    [
     "Banane, BCR",
-    "Barbell, Labret",
-    "Labret, Hufeisen"
+    "Labret, Hufeisen",
+    "Barbell, Labret"
    ],
    "Datenblatt Bauchnabel: Kanüle 16G, Klemme Snaptile, Freihand.",
    "S. 94"
@@ -627,8 +637,8 @@ KURS.lektionsfragen = {
    "Welche Kanüle(n) nennt das Datenblatt für „Bauchnabel“?",
    [
     "16G",
-    "14G",
-    "18G"
+    "18G",
+    "14G"
    ],
    "Datenblatt Bauchnabel: Ersteinsatz Banane, BCR.",
    "S. 94"
@@ -637,8 +647,8 @@ KURS.lektionsfragen = {
    "Womit wird beim Piercing „Bauchnabel“ laut Datenblatt gehalten bzw. geführt?",
    [
     "Snaptile, Freihand",
-    "Septum-Zange",
-    "Traguszange, Nadelauffangrohr"
+    "Traguszange, Nadelauffangrohr",
+    "Septum-Zange"
    ],
    "Datenblatt Bauchnabel: Ersteinsatz Banane, BCR, Kanüle 16G.",
    "S. 94"
@@ -649,8 +659,8 @@ KURS.lektionsfragen = {
    "Welchen Ersteinsatz nennt das Datenblatt für „Brustwarze“?",
    [
     "Barbell, BCR",
-    "Bar, Banane, Dermal Anchor",
-    "Banane, Hufeisen"
+    "Banane, Hufeisen",
+    "20 mm Barbell (nach 10 Tagen ggf. kürzer)"
    ],
    "Datenblatt Brustwarze: Kanüle 16G, Klemme Snaptile, Gazeklemme.",
    "S. 95"
@@ -659,8 +669,8 @@ KURS.lektionsfragen = {
    "Welche Kanüle(n) nennt das Datenblatt für „Brustwarze“?",
    [
     "16G",
-    "14G",
-    "18G"
+    "18G",
+    "18G (evtl. biegen)"
    ],
    "Datenblatt Brustwarze: Ersteinsatz Barbell, BCR.",
    "S. 95"
@@ -670,7 +680,7 @@ KURS.lektionsfragen = {
    [
     "Snaptile, Gazeklemme",
     "Nadelauffangrohr",
-    "Freihand, Nadelauffangrohr"
+    "Septum-Zange"
    ],
    "Datenblatt Brustwarze: Ersteinsatz Barbell, BCR, Kanüle 16G.",
    "S. 95"
@@ -681,8 +691,8 @@ KURS.lektionsfragen = {
    "Welchen Ersteinsatz nennt das Datenblatt für „Surface“?",
    [
     "Bar, Banane, Dermal Anchor",
-    "Hufeisen, BCR",
-    "Labret"
+    "Labret",
+    "Barbell, BCR"
    ],
    "Datenblatt Surface: Kanüle 16G, 18G, Punch, Klemme Freihand, Snaptile, Gazeklemme.",
    "S. 96"
@@ -701,7 +711,7 @@ KURS.lektionsfragen = {
    "Womit wird beim Piercing „Surface“ laut Datenblatt gehalten bzw. geführt?",
    [
     "Freihand, Snaptile, Gazeklemme",
-    "Septum-Zange",
+    "Nadelauffangrohr",
     "Traguszange, Nadelauffangrohr"
    ],
    "Datenblatt Surface: Ersteinsatz Bar, Banane, Dermal Anchor, Kanüle 16G, 18G, Punch.",
@@ -714,7 +724,7 @@ KURS.lektionsfragen = {
    [
     "Banane, Barbell",
     "Labret",
-    "Labret, BCR, Hufeisen"
+    "BCR"
    ],
    "Datenblatt Frenulum: Kanüle 16G, 18G, Klemme Nadelauffangrohr, Freihand, Gazeklemme.",
    "S. 97"
@@ -723,8 +733,8 @@ KURS.lektionsfragen = {
    "Welche Kanüle(n) nennt das Datenblatt für „Frenulum“?",
    [
     "16G, 18G",
-    "14G",
-    "18G (evtl. biegen)"
+    "18G (evtl. biegen)",
+    "14G"
    ],
    "Datenblatt Frenulum: Ersteinsatz Banane, Barbell.",
    "S. 97"
@@ -733,8 +743,8 @@ KURS.lektionsfragen = {
    "Welchen Ersteinsatz nennt das Datenblatt für „Prinz Albert“?",
    [
     "BCR",
-    "Bar, Banane, Dermal Anchor",
-    "Labret"
+    "Labret",
+    "Bar, Banane, Dermal Anchor"
    ],
    "Datenblatt Prinz Albert: Kanüle 14G, Klemme Freihand.",
    "S. 98"
@@ -743,8 +753,8 @@ KURS.lektionsfragen = {
    "Welche Kanüle(n) nennt das Datenblatt für „Prinz Albert“?",
    [
     "14G",
-    "16G, 18G",
-    "16G, 18G, Punch"
+    "16G, 18G, Punch",
+    "16G, 18G"
    ],
    "Datenblatt Prinz Albert: Ersteinsatz BCR.",
    "S. 98"
@@ -754,7 +764,7 @@ KURS.lektionsfragen = {
    [
     "Freihand",
     "Snaptile, Gazeklemme, Zungenklemme",
-    "Septum-Zange"
+    "Gazeklemme, Snaptile"
    ],
    "Datenblatt Prinz Albert: Ersteinsatz BCR, Kanüle 14G.",
    "S. 98"
@@ -763,8 +773,8 @@ KURS.lektionsfragen = {
    "Welchen Ersteinsatz nennt das Datenblatt für „Dydoe“?",
    [
     "Banane, Barbell",
-    "20 mm Barbell (nach 10 Tagen ggf. kürzer)",
-    "Barbell 38 mm"
+    "Hufeisen",
+    "Labret, BCR, Hufeisen"
    ],
    "Datenblatt Dydoe: Kanüle 16G, 18G, Klemme Freihand.",
    "S. 99"
@@ -773,8 +783,8 @@ KURS.lektionsfragen = {
    "Welche Kanüle(n) nennt das Datenblatt für „Dydoe“?",
    [
     "16G, 18G",
-    "18G (evtl. biegen)",
-    "14G"
+    "14G",
+    "18G (evtl. biegen)"
    ],
    "Datenblatt Dydoe: Ersteinsatz Banane, Barbell.",
    "S. 99"
@@ -783,7 +793,7 @@ KURS.lektionsfragen = {
    "Womit wird beim Piercing „Dydoe“ laut Datenblatt gehalten bzw. geführt?",
    [
     "Freihand",
-    "Snaptile, Gazeklemme, Zungenklemme",
+    "Nadelauffangrohr",
     "Traguszange, Nadelauffangrohr"
    ],
    "Datenblatt Dydoe: Ersteinsatz Banane, Barbell, Kanüle 16G, 18G.",
@@ -793,8 +803,8 @@ KURS.lektionsfragen = {
    "Welchen Ersteinsatz nennt das Datenblatt für „Pubic“?",
    [
     "BCR, Barbell, Bar, Banane",
-    "Barbell 38 mm",
-    "Hufeisen"
+    "Hufeisen",
+    "20 mm Barbell (nach 10 Tagen ggf. kürzer)"
    ],
    "Datenblatt Pubic: Kanüle 16G, 18G, Klemme Freihand, Gazeklemme.",
    "S. 100"
@@ -823,8 +833,8 @@ KURS.lektionsfragen = {
    "Welchen Ersteinsatz nennt das Datenblatt für „Hafada“?",
    [
     "BCR, Banane",
-    "20 mm Barbell (nach 10 Tagen ggf. kürzer)",
-    "Barbell 38 mm"
+    "Hufeisen",
+    "20 mm Barbell (nach 10 Tagen ggf. kürzer)"
    ],
    "Datenblatt Hafada: Kanüle 16G, 18G, Klemme Freihand, Snaptile, Gazeklemme.",
    "S. 101"
@@ -833,8 +843,8 @@ KURS.lektionsfragen = {
    "Welche Kanüle(n) nennt das Datenblatt für „Hafada“?",
    [
     "16G, 18G",
-    "14G",
-    "18G (evtl. biegen)"
+    "18G (evtl. biegen)",
+    "14G"
    ],
    "Datenblatt Hafada: Ersteinsatz BCR, Banane.",
    "S. 101"
@@ -844,7 +854,7 @@ KURS.lektionsfragen = {
    [
     "Freihand, Snaptile, Gazeklemme",
     "Traguszange, Nadelauffangrohr",
-    "Nadelauffangrohr"
+    "Septum-Zange"
    ],
    "Datenblatt Hafada: Ersteinsatz BCR, Banane, Kanüle 16G, 18G.",
    "S. 101"
@@ -854,7 +864,7 @@ KURS.lektionsfragen = {
    [
     "BCR, Barbell",
     "Bar, Banane, Dermal Anchor",
-    "20 mm Barbell (nach 10 Tagen ggf. kürzer)"
+    "Banane, Hufeisen"
    ],
    "Datenblatt Guiche: Kanüle 16G, 18G, Klemme Freihand.",
    "S. 102"
@@ -873,8 +883,8 @@ KURS.lektionsfragen = {
    "Womit wird beim Piercing „Guiche“ laut Datenblatt gehalten bzw. geführt?",
    [
     "Freihand",
-    "Snaptile, Gazeklemme, Zungenklemme",
-    "Snaptile, Gazeklemme"
+    "Traguszange, Nadelauffangrohr",
+    "Septum-Zange"
    ],
    "Datenblatt Guiche: Ersteinsatz BCR, Barbell, Kanüle 16G, 18G.",
    "S. 102"
@@ -885,8 +895,8 @@ KURS.lektionsfragen = {
    "Welchen Ersteinsatz nennt das Datenblatt für „Christina“?",
    [
     "Banane, Barbell, BCR",
-    "Labret, Hufeisen",
-    "Labret"
+    "Labret",
+    "Hufeisen"
    ],
    "Datenblatt Christina: Kanüle 16G, 18G, Klemme Freihand, Snaptile, Gazeklemme.",
    "S. 105"
@@ -895,8 +905,8 @@ KURS.lektionsfragen = {
    "Welche Kanüle(n) nennt das Datenblatt für „Christina“?",
    [
     "16G, 18G",
-    "18G (evtl. biegen)",
-    "14G"
+    "14G",
+    "18G (evtl. biegen)"
    ],
    "Datenblatt Christina: Ersteinsatz Banane, Barbell, BCR.",
    "S. 105"
@@ -906,7 +916,7 @@ KURS.lektionsfragen = {
    [
     "Freihand, Snaptile, Gazeklemme",
     "Septum-Zange",
-    "Nadelauffangrohr"
+    "Traguszange, Nadelauffangrohr"
    ],
    "Datenblatt Christina: Ersteinsatz Banane, Barbell, BCR, Kanüle 16G, 18G.",
    "S. 105"
@@ -915,8 +925,8 @@ KURS.lektionsfragen = {
    "Welchen Ersteinsatz nennt das Datenblatt für „Klitorisvorhaut“?",
    [
     "BCR, Banane, Barbell",
-    "Hufeisen",
-    "Labret"
+    "Labret",
+    "Hufeisen"
    ],
    "Datenblatt Klitorisvorhaut: Kanüle 16G, 18G, Klemme Freihand.",
    "S. 106"
@@ -946,7 +956,7 @@ KURS.lektionsfragen = {
    [
     "BCR",
     "Labret, Hufeisen",
-    "Barbell, Banane"
+    "Barbell, Labret"
    ],
    "Datenblatt Schamlippe: Kanüle 16G, 18G, Klemme Freihand, Snaptile, Gazeklemme.",
    "S. 107"
@@ -955,8 +965,8 @@ KURS.lektionsfragen = {
    "Welche Kanüle(n) nennt das Datenblatt für „Schamlippe“?",
    [
     "16G, 18G",
-    "14G",
-    "18G (evtl. biegen)"
+    "18G (evtl. biegen)",
+    "14G"
    ],
    "Datenblatt Schamlippe: Ersteinsatz BCR.",
    "S. 107"
@@ -965,8 +975,8 @@ KURS.lektionsfragen = {
    "Womit wird beim Piercing „Schamlippe“ laut Datenblatt gehalten bzw. geführt?",
    [
     "Freihand, Snaptile, Gazeklemme",
-    "Septum-Zange",
-    "Traguszange, Nadelauffangrohr"
+    "Traguszange, Nadelauffangrohr",
+    "Nadelauffangrohr"
    ],
    "Datenblatt Schamlippe: Ersteinsatz BCR, Kanüle 16G, 18G.",
    "S. 107"
@@ -1121,8 +1131,8 @@ KURS.lektionsfragen = {
    "Wofür nutzt du: Einführhilfe?",
    [
     "Spitzer, langsam breiter werdender Stab; abgeheilte Stichkanäle vorsichtig dehnen oder verklebte Kanäle freischieben",
-    "Hält Piercingkugeln und erleichtert das Aufschrauben",
-    "Spreizt oder schließt Klemmkugelringe (BCR) zum Entfernen oder Einsetzen der Kugel"
+    "Misst Schmuck und justiert die Position des Piercings",
+    "Kürzt das Kunststoffröhrchen der Kanüle nach dem Stich, damit der Schmuck leichter hineingeht"
    ],
    "Werkzeuge und Instrumente, Kap. 9.",
    "S. 66–73"
@@ -1131,8 +1141,8 @@ KURS.lektionsfragen = {
    "Wofür nutzt du: Klemmzange?",
    [
     "Hält den eingesetzten Schmuck, während die Kugel aufgedreht wird",
-    "Kürzt das Kunststoffröhrchen der Kanüle nach dem Stich, damit der Schmuck leichter hineingeht",
-    "Durchleuchtet zum Beispiel das Ohr, um Blutgefäße zu erkennen"
+    "Durchleuchtet zum Beispiel das Ohr, um Blutgefäße zu erkennen",
+    "Kürzt das Kunststoffröhrchen der Kanüle nach dem Stich, damit der Schmuck leichter hineingeht"
    ],
    "Werkzeuge und Instrumente, Kap. 9.",
    "S. 66–73"
@@ -1141,8 +1151,8 @@ KURS.lektionsfragen = {
    "Wofür nutzt du: Schere?",
    [
     "Kürzt das Kunststoffröhrchen der Kanüle nach dem Stich, damit der Schmuck leichter hineingeht",
-    "Hält Piercingkugeln und erleichtert das Aufschrauben",
-    "Hält den eingesetzten Schmuck, während die Kugel aufgedreht wird"
+    "Hält den eingesetzten Schmuck, während die Kugel aufgedreht wird",
+    "Spreizt oder schließt Klemmkugelringe (BCR) zum Entfernen oder Einsetzen der Kugel"
    ],
    "Werkzeuge und Instrumente, Kap. 9.",
    "S. 66–73"
@@ -1151,8 +1161,8 @@ KURS.lektionsfragen = {
    "Wofür nutzt du: Kugelgreifer?",
    [
     "Hält Piercingkugeln und erleichtert das Aufschrauben",
-    "Spreizt oder schließt Klemmkugelringe (BCR) zum Entfernen oder Einsetzen der Kugel",
-    "Kürzt das Kunststoffröhrchen der Kanüle nach dem Stich, damit der Schmuck leichter hineingeht"
+    "Misst Schmuck und justiert die Position des Piercings",
+    "Spitzer, langsam breiter werdender Stab; abgeheilte Stichkanäle vorsichtig dehnen oder verklebte Kanäle freischieben"
    ],
    "Werkzeuge und Instrumente, Kap. 9.",
    "S. 66–73"
@@ -1161,8 +1171,8 @@ KURS.lektionsfragen = {
    "Wofür nutzt du: Messschieber?",
    [
     "Misst Schmuck und justiert die Position des Piercings",
-    "Spitzer, langsam breiter werdender Stab; abgeheilte Stichkanäle vorsichtig dehnen oder verklebte Kanäle freischieben",
-    "Durchleuchtet zum Beispiel das Ohr, um Blutgefäße zu erkennen"
+    "Durchleuchtet zum Beispiel das Ohr, um Blutgefäße zu erkennen",
+    "Spreizt oder schließt Klemmkugelringe (BCR) zum Entfernen oder Einsetzen der Kugel"
    ],
    "Werkzeuge und Instrumente, Kap. 9.",
    "S. 66–73"
@@ -1171,8 +1181,8 @@ KURS.lektionsfragen = {
    "Wofür nutzt du: Ringöffnungs- und Ringschließzange?",
    [
     "Spreizt oder schließt Klemmkugelringe (BCR) zum Entfernen oder Einsetzen der Kugel",
-    "Durchleuchtet zum Beispiel das Ohr, um Blutgefäße zu erkennen",
-    "Trennt Schmuck auf, wenn sich eine Kugel nicht mehr lösen lässt"
+    "Trennt Schmuck auf, wenn sich eine Kugel nicht mehr lösen lässt",
+    "Durchleuchtet zum Beispiel das Ohr, um Blutgefäße zu erkennen"
    ],
    "Werkzeuge und Instrumente, Kap. 9.",
    "S. 66–73"
@@ -1181,8 +1191,8 @@ KURS.lektionsfragen = {
    "Wofür nutzt du: Taschenlampe (grünes Licht)?",
    [
     "Durchleuchtet zum Beispiel das Ohr, um Blutgefäße zu erkennen",
-    "Trennt Schmuck auf, wenn sich eine Kugel nicht mehr lösen lässt",
-    "Misst Schmuck und justiert die Position des Piercings"
+    "Misst Schmuck und justiert die Position des Piercings",
+    "Trennt Schmuck auf, wenn sich eine Kugel nicht mehr lösen lässt"
    ],
    "Werkzeuge und Instrumente, Kap. 9.",
    "S. 66–73"
@@ -1191,8 +1201,8 @@ KURS.lektionsfragen = {
    "Wofür nutzt du: Mini-Seitenschneider?",
    [
     "Trennt Schmuck auf, wenn sich eine Kugel nicht mehr lösen lässt",
-    "Durchleuchtet zum Beispiel das Ohr, um Blutgefäße zu erkennen",
-    "Spitzer, langsam breiter werdender Stab; abgeheilte Stichkanäle vorsichtig dehnen oder verklebte Kanäle freischieben"
+    "Spitzer, langsam breiter werdender Stab; abgeheilte Stichkanäle vorsichtig dehnen oder verklebte Kanäle freischieben",
+    "Spreizt oder schließt Klemmkugelringe (BCR) zum Entfernen oder Einsetzen der Kugel"
    ],
    "Werkzeuge und Instrumente, Kap. 9.",
    "S. 66–73"
@@ -1203,8 +1213,8 @@ KURS.lektionsfragen = {
    "Welcher Schritt folgt auf: „Der Kunde betritt das Piercingstudio.“?",
    [
     "Begrüßung, Small Talk.",
-    "Dem Kunden das Piercing im Spiegel zeigen.",
-    "Röhrchen vorsichtig vom Schmuck abziehen."
+    "Röhrchen vorsichtig vom Schmuck abziehen.",
+    "Nochmals mit Kodan einsprühen."
    ],
    "Schritt 1 → Schritt 2.",
    "S. 111"
@@ -1213,8 +1223,8 @@ KURS.lektionsfragen = {
    "Welcher Schritt folgt auf: „Begrüßung, Small Talk.“?",
    [
     "Fragen, welche Piercings gewünscht sind, eventuell Angst nehmen.",
-    "Nochmals mit Kodan einsprühen.",
-    "Pflegemittel mitgeben und Pflegehinweise mündlich erklären."
+    "Pflegemittel mitgeben und Pflegehinweise mündlich erklären.",
+    "Der Kunde betritt das Piercingstudio."
    ],
    "Schritt 2 → Schritt 3.",
    "S. 111"
@@ -1223,8 +1233,8 @@ KURS.lektionsfragen = {
    "Welcher Schritt folgt auf: „Fragen, welche Piercings gewünscht sind, eventuell Angst nehmen.“?",
    [
     "Einverständniserklärung ausfüllen lassen.",
-    "Der Kunde betritt das Piercingstudio.",
-    "Die Stelle begutachten und den passenden Ersteinsatz wählen (Überlänge!)."
+    "Die Stelle begutachten und den passenden Ersteinsatz wählen (Überlänge!).",
+    "Begrüßung, Small Talk."
    ],
    "Schritt 3 → Schritt 4.",
    "S. 111"
@@ -1235,8 +1245,8 @@ KURS.lektionsfragen = {
    "Welcher Schritt folgt auf: „Einverständniserklärung ausfüllen lassen.“?",
    [
     "Währenddessen den Arbeitsplatz vorbereiten und alle Instrumente parat legen.",
-    "Begrüßung, Small Talk.",
-    "Die Stelle begutachten und den passenden Ersteinsatz wählen (Überlänge!)."
+    "Fragen, welche Piercings gewünscht sind, eventuell Angst nehmen.",
+    "Begrüßung, Small Talk."
    ],
    "Schritt 4 → Schritt 5.",
    "S. 111"
@@ -1245,8 +1255,8 @@ KURS.lektionsfragen = {
    "Welcher Schritt folgt auf: „Währenddessen den Arbeitsplatz vorbereiten und alle Instrumente parat legen.“?",
    [
     "Der Kunde betritt den Piercingraum: für eine angenehme Atmosphäre sorgen, dem Kunden die Angst nehmen.",
-    "Begrüßung, Small Talk.",
-    "Der Kunde betritt das Piercingstudio."
+    "Der Kunde betritt das Piercingstudio.",
+    "Kugel greifen."
    ],
    "Schritt 5 → Schritt 6.",
    "S. 111"
@@ -1255,8 +1265,8 @@ KURS.lektionsfragen = {
    "Welcher Schritt folgt auf: „Der Kunde betritt den Piercingraum: für eine angenehme Atmosphäre sorgen, dem Kunden die Angst nehmen.“?",
    [
     "Die Stelle begutachten und den passenden Ersteinsatz wählen (Überlänge!).",
-    "Röhrchen vorsichtig vom Schmuck abziehen.",
-    "Pflegehinweise am besten auch schriftlich aushändigen."
+    "Pflegehinweise am besten auch schriftlich aushändigen.",
+    "Währenddessen den Arbeitsplatz vorbereiten und alle Instrumente parat legen."
    ],
    "Schritt 6 → Schritt 7.",
    "S. 111"
@@ -1265,8 +1275,8 @@ KURS.lektionsfragen = {
    "Welcher Schritt folgt auf: „Die Stelle begutachten und den passenden Ersteinsatz wählen (Überlänge!).“?",
    [
     "Die Stelle desinfizieren (Alkoholtupfer).",
-    "Währenddessen den Arbeitsplatz vorbereiten und alle Instrumente parat legen.",
-    "Fragen, welche Piercings gewünscht sind, eventuell Angst nehmen."
+    "Einverständniserklärung ausfüllen lassen.",
+    "Der Kunde betritt den Piercingraum: für eine angenehme Atmosphäre sorgen, dem Kunden die Angst nehmen."
    ],
    "Schritt 7 → Schritt 8.",
    "S. 111"
@@ -1275,8 +1285,8 @@ KURS.lektionsfragen = {
    "Welcher Schritt folgt auf: „Die Stelle desinfizieren (Alkoholtupfer).“?",
    [
     "Ein- und Austrittsstelle der Kanüle mit dem Einmalstift markieren.",
-    "Währenddessen den Arbeitsplatz vorbereiten und alle Instrumente parat legen.",
-    "Schmuck mit der Klemmzange festhalten und die Kugel fest aufdrehen."
+    "Schmuck mit der Klemmzange festhalten und die Kugel fest aufdrehen.",
+    "Der Kunde betritt den Piercingraum: für eine angenehme Atmosphäre sorgen, dem Kunden die Angst nehmen."
    ],
    "Schritt 8 → Schritt 9.",
    "S. 111"
@@ -1285,8 +1295,8 @@ KURS.lektionsfragen = {
    "Welcher Schritt folgt auf: „Ein- und Austrittsstelle der Kanüle mit dem Einmalstift markieren.“?",
    [
     "Den Kunden schauen lassen, ob es so passt.",
-    "Der Kunde betritt den Piercingraum: für eine angenehme Atmosphäre sorgen, dem Kunden die Angst nehmen.",
-    "Ersteinsatz in den Kunststoffüberzug stecken."
+    "Kunststoffüberzug mit der Schere leicht kürzen, damit der Schmuck besser hineingeht.",
+    "Bei Wundheilstörungen soll der Kunde zur Beratung wiederkommen (siehe Modul 10)."
    ],
    "Schritt 9 → Schritt 10.",
    "S. 111"
@@ -1297,8 +1307,8 @@ KURS.lektionsfragen = {
    "Welcher Schritt folgt auf: „Den Kunden schauen lassen, ob es so passt.“?",
    [
     "Klemme bzw. Nadelauffangrohr anlegen.",
-    "Bei Wundheilstörungen soll der Kunde zur Beratung wiederkommen (siehe Modul 10).",
-    "Kanüle herausziehen; der Kunststoffüberzug bleibt im Stichkanal."
+    "Kanüle herausziehen; der Kunststoffüberzug bleibt im Stichkanal.",
+    "Schmuck mit der Klemmzange festhalten und die Kugel fest aufdrehen."
    ],
    "Schritt 10 → Schritt 11.",
    "S. 112"
@@ -1307,8 +1317,8 @@ KURS.lektionsfragen = {
    "Welcher Schritt folgt auf: „Klemme bzw. Nadelauffangrohr anlegen.“?",
    [
     "Stechen, im Idealfall immer in die sichtbare Seite, beim Labret zum Beispiel dort, wo die Kugel sitzt. Je schneller gestochen wird, desto weniger Schmerzen.",
-    "Schmuck mit der Klemmzange festhalten und die Kugel fest aufdrehen.",
-    "Eventuell mit Pflaster abkleben (Brustwarze, Bauchnabel)."
+    "Dem Kunden das Piercing im Spiegel zeigen.",
+    "Ein- und Austrittsstelle der Kanüle mit dem Einmalstift markieren."
    ],
    "Schritt 11 → Schritt 12.",
    "S. 112"
@@ -1318,7 +1328,7 @@ KURS.lektionsfragen = {
    [
     "Kanüle herausziehen; der Kunststoffüberzug bleibt im Stichkanal.",
     "Den Kunden schauen lassen, ob es so passt.",
-    "Klemme bzw. Nadelauffangrohr anlegen."
+    "Begrüßung, Small Talk."
    ],
    "Schritt 12 → Schritt 13.",
    "S. 112"
@@ -1327,8 +1337,8 @@ KURS.lektionsfragen = {
    "Welcher Schritt folgt auf: „Kanüle herausziehen; der Kunststoffüberzug bleibt im Stichkanal.“?",
    [
     "Kunststoffüberzug mit der Schere leicht kürzen, damit der Schmuck besser hineingeht.",
-    "Begrüßung, Small Talk.",
-    "Die Stelle begutachten und den passenden Ersteinsatz wählen (Überlänge!)."
+    "Der Kunde betritt den Piercingraum: für eine angenehme Atmosphäre sorgen, dem Kunden die Angst nehmen.",
+    "Eventuell mit Pflaster abkleben (Brustwarze, Bauchnabel)."
    ],
    "Schritt 13 → Schritt 14.",
    "S. 112"
@@ -1337,8 +1347,8 @@ KURS.lektionsfragen = {
    "Welcher Schritt folgt auf: „Kunststoffüberzug mit der Schere leicht kürzen, damit der Schmuck besser hineingeht.“?",
    [
     "Ersteinsatz in den Kunststoffüberzug stecken.",
-    "Eventuell mit Pflaster abkleben (Brustwarze, Bauchnabel).",
-    "Bei Wundheilstörungen soll der Kunde zur Beratung wiederkommen (siehe Modul 10)."
+    "Bei Wundheilstörungen soll der Kunde zur Beratung wiederkommen (siehe Modul 10).",
+    "Einverständniserklärung ausfüllen lassen."
    ],
    "Schritt 14 → Schritt 15.",
    "S. 112"
@@ -1347,8 +1357,8 @@ KURS.lektionsfragen = {
    "Welcher Schritt folgt auf: „Ersteinsatz in den Kunststoffüberzug stecken.“?",
    [
     "Durch den Stichkanal drücken, nicht ziehen, sonst kann der Schmuck abrutschen. Das ist schmerzhaft: den Kunden dabei ausatmen lassen.",
-    "Einverständniserklärung ausfüllen lassen.",
-    "Pflegehinweise am besten auch schriftlich aushändigen."
+    "Pflegehinweise am besten auch schriftlich aushändigen.",
+    "Stechen, im Idealfall immer in die sichtbare Seite, beim Labret zum Beispiel dort, wo die Kugel sitzt. Je schneller gestochen wird, desto weniger Schmerzen."
    ],
    "Schritt 15 → Schritt 16.",
    "S. 112"
@@ -1359,8 +1369,8 @@ KURS.lektionsfragen = {
    "Welcher Schritt folgt auf: „Durch den Stichkanal drücken, nicht ziehen, sonst kann der Schmuck abrutschen. Das ist schmerzhaft: den Kunden dabei ausatmen lassen.“?",
    [
     "Röhrchen vorsichtig vom Schmuck abziehen.",
-    "Stechen, im Idealfall immer in die sichtbare Seite, beim Labret zum Beispiel dort, wo die Kugel sitzt. Je schneller gestochen wird, desto weniger Schmerzen.",
-    "Fragen, welche Piercings gewünscht sind, eventuell Angst nehmen."
+    "Fragen, welche Piercings gewünscht sind, eventuell Angst nehmen.",
+    "Der Kunde betritt den Piercingraum: für eine angenehme Atmosphäre sorgen, dem Kunden die Angst nehmen."
    ],
    "Schritt 16 → Schritt 17.",
    "S. 112"
@@ -1369,8 +1379,8 @@ KURS.lektionsfragen = {
    "Welcher Schritt folgt auf: „Röhrchen vorsichtig vom Schmuck abziehen.“?",
    [
     "Kugel greifen.",
-    "Währenddessen den Arbeitsplatz vorbereiten und alle Instrumente parat legen.",
-    "Ersteinsatz in den Kunststoffüberzug stecken."
+    "Kunststoffüberzug mit der Schere leicht kürzen, damit der Schmuck besser hineingeht.",
+    "Einverständniserklärung ausfüllen lassen."
    ],
    "Schritt 17 → Schritt 18.",
    "S. 112"
@@ -1379,8 +1389,8 @@ KURS.lektionsfragen = {
    "Welcher Schritt folgt auf: „Kugel greifen.“?",
    [
     "Schmuck mit der Klemmzange festhalten und die Kugel fest aufdrehen.",
-    "Einverständniserklärung ausfüllen lassen.",
-    "Begrüßung, Small Talk."
+    "Begrüßung, Small Talk.",
+    "Die Stelle begutachten und den passenden Ersteinsatz wählen (Überlänge!)."
    ],
    "Schritt 18 → Schritt 19.",
    "S. 112"
@@ -1389,8 +1399,8 @@ KURS.lektionsfragen = {
    "Welcher Schritt folgt auf: „Schmuck mit der Klemmzange festhalten und die Kugel fest aufdrehen.“?",
    [
     "Nochmals mit Kodan einsprühen.",
-    "Die Stelle begutachten und den passenden Ersteinsatz wählen (Überlänge!).",
-    "Durch den Stichkanal drücken, nicht ziehen, sonst kann der Schmuck abrutschen. Das ist schmerzhaft: den Kunden dabei ausatmen lassen."
+    "Ersteinsatz in den Kunststoffüberzug stecken.",
+    "Kanüle herausziehen; der Kunststoffüberzug bleibt im Stichkanal."
    ],
    "Schritt 19 → Schritt 20.",
    "S. 112"
@@ -1399,8 +1409,8 @@ KURS.lektionsfragen = {
    "Welcher Schritt folgt auf: „Nochmals mit Kodan einsprühen.“?",
    [
     "Dem Kunden das Piercing im Spiegel zeigen.",
-    "Kanüle herausziehen; der Kunststoffüberzug bleibt im Stichkanal.",
-    "Klemme bzw. Nadelauffangrohr anlegen."
+    "Stechen, im Idealfall immer in die sichtbare Seite, beim Labret zum Beispiel dort, wo die Kugel sitzt. Je schneller gestochen wird, desto weniger Schmerzen.",
+    "Bei Wundheilstörungen soll der Kunde zur Beratung wiederkommen (siehe Modul 10)."
    ],
    "Schritt 20 → Schritt 21.",
    "S. 112"
@@ -1411,8 +1421,8 @@ KURS.lektionsfragen = {
    "Welcher Schritt folgt auf: „Dem Kunden das Piercing im Spiegel zeigen.“?",
    [
     "Eventuell mit Pflaster abkleben (Brustwarze, Bauchnabel).",
-    "Bei Wundheilstörungen soll der Kunde zur Beratung wiederkommen (siehe Modul 10).",
-    "Begrüßung, Small Talk."
+    "Begrüßung, Small Talk.",
+    "Klemme bzw. Nadelauffangrohr anlegen."
    ],
    "Schritt 21 → Schritt 22.",
    "S. 113"
@@ -1421,8 +1431,8 @@ KURS.lektionsfragen = {
    "Welcher Schritt folgt auf: „Eventuell mit Pflaster abkleben (Brustwarze, Bauchnabel).“?",
    [
     "Bei Zungenpiercings einen Eiswürfel geben.",
-    "Den Kunden schauen lassen, ob es so passt.",
-    "Die Stelle begutachten und den passenden Ersteinsatz wählen (Überlänge!)."
+    "Die Stelle desinfizieren (Alkoholtupfer).",
+    "Der Kunde betritt das Piercingstudio."
    ],
    "Schritt 22 → Schritt 23.",
    "S. 113"
@@ -1432,7 +1442,7 @@ KURS.lektionsfragen = {
    [
     "Pflegemittel mitgeben und Pflegehinweise mündlich erklären.",
     "Der Kunde betritt das Piercingstudio.",
-    "Begrüßung, Small Talk."
+    "Klemme bzw. Nadelauffangrohr anlegen."
    ],
    "Schritt 23 → Schritt 24.",
    "S. 113"
@@ -1441,8 +1451,8 @@ KURS.lektionsfragen = {
    "Welcher Schritt folgt auf: „Pflegemittel mitgeben und Pflegehinweise mündlich erklären.“?",
    [
     "Pflegehinweise am besten auch schriftlich aushändigen.",
-    "Den Kunden schauen lassen, ob es so passt.",
-    "Fragen, welche Piercings gewünscht sind, eventuell Angst nehmen."
+    "Fragen, welche Piercings gewünscht sind, eventuell Angst nehmen.",
+    "Die Stelle begutachten und den passenden Ersteinsatz wählen (Überlänge!)."
    ],
    "Schritt 24 → Schritt 25.",
    "S. 113"
@@ -1451,8 +1461,8 @@ KURS.lektionsfragen = {
    "Welcher Schritt folgt auf: „Pflegehinweise am besten auch schriftlich aushändigen.“?",
    [
     "Bei Wundheilstörungen soll der Kunde zur Beratung wiederkommen (siehe Modul 10).",
-    "Der Kunde betritt den Piercingraum: für eine angenehme Atmosphäre sorgen, dem Kunden die Angst nehmen.",
-    "Bei Zungenpiercings einen Eiswürfel geben."
+    "Bei Zungenpiercings einen Eiswürfel geben.",
+    "Kugel greifen."
    ],
    "Schritt 25 → Schritt 26.",
    "S. 113"
@@ -1464,7 +1474,7 @@ KURS.lektionsfragen = {
    [
     "mindestens 3 Monate",
     "ca. 1 Monat",
-    "ca. 1 bis 2 Monate"
+    "ca. 2 Monate"
    ],
    "Richtwerte bei komplikationsfreier Heilung.",
    "S. 49"
@@ -1473,8 +1483,8 @@ KURS.lektionsfragen = {
    "Welche Abheilzeit nennt das Kursbuch für: Lobe?",
    [
     "ca. 2 Monate",
-    "ca. 4 bis 6 Monate",
-    "3 bis 12 Monate"
+    "3 bis 12 Monate",
+    "ca. 1 Monat"
    ],
    "Richtwerte bei komplikationsfreier Heilung.",
    "S. 49"
@@ -1484,7 +1494,7 @@ KURS.lektionsfragen = {
    [
     "ca. 4 bis 6 Monate",
     "2 bis 3 Monate",
-    "ca. 1 Monat"
+    "ca. 1 bis 2 Monate"
    ],
    "Richtwerte bei komplikationsfreier Heilung.",
    "S. 49"
@@ -1494,23 +1504,13 @@ KURS.lektionsfragen = {
    [
     "ca. 1 bis 2 Monate",
     "ca. 4 bis 6 Monate",
-    "3 bis 12 Monate"
+    "mindestens 3 Monate"
    ],
    "Richtwerte bei komplikationsfreier Heilung.",
    "S. 49"
   ],
   [
    "Welche Abheilzeit nennt das Kursbuch für: Lippenbändchen?",
-   [
-    "ca. 1 Monat",
-    "ca. 2 Monate",
-    "ca. 4 bis 6 Monate"
-   ],
-   "Richtwerte bei komplikationsfreier Heilung.",
-   "S. 49"
-  ],
-  [
-   "Welche Abheilzeit nennt das Kursbuch für: Zunge?",
    [
     "ca. 1 Monat",
     "ca. 4 bis 6 Monate",
@@ -1520,11 +1520,21 @@ KURS.lektionsfragen = {
    "S. 49"
   ],
   [
+   "Welche Abheilzeit nennt das Kursbuch für: Zunge?",
+   [
+    "ca. 1 Monat",
+    "ca. 4 bis 6 Monate",
+    "3 bis 12 Monate"
+   ],
+   "Richtwerte bei komplikationsfreier Heilung.",
+   "S. 49"
+  ],
+  [
    "Welche Abheilzeit nennt das Kursbuch für: Brustwarze?",
    [
     "3 bis 12 Monate",
-    "ca. 1 bis 2 Monate",
-    "ca. 1 Monat"
+    "ca. 1 Monat",
+    "ca. 1 bis 2 Monate"
    ],
    "Richtwerte bei komplikationsfreier Heilung.",
    "S. 49"
