@@ -119,7 +119,7 @@
   // KI-Titelbild eines Moduls: klein auf der Modulkarte, groß im Modulkopf; immer als KI-generiert gekennzeichnet
   function titelbild(m, klein) {
     var b = (KURS.titelbilder || {})[m.nr];
-    if (!b) return "";
+    if (!b) return klein ? '<span class="k-titelbild k-klein k-leer" aria-hidden="true"><span>' + zwei(m.nr) + "</span></span>" : "";
     var img = '<img src="' + b.src + '" width="' + b.w + '" height="' + b.h + '" alt="' + (klein ? "" : esc(b.alt)) + '" loading="lazy" decoding="async">';
     if (klein) return '<span class="k-titelbild k-klein">' + img + '<span class="k-ki">KI</span></span>';
     return '<figure class="k-titelbild">' + img + '<figcaption class="k-nachweis">KI-generiertes Symbolbild (' + esc(b.ki) + "), keine fachliche Abbildung.</figcaption></figure>";
