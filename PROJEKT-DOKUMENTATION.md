@@ -155,17 +155,18 @@ Stand 24.10.2026. Entscheidung: Kurs-Prototyp und Verkaufsseite bauen; Kursplatt
 
 **Verkaufsseite `online-kurs.html`:** Lernprinzip, alle Module mit Lektionstiteln (aus den Kursdaten erzeugt), Ablauf, Preis (Paket Basis 249 €) und Anfrage über das bestehende Formular (`index.html?paket=basis#kontakt`). In der Navigation aller Seiten verlinkt, in der Sitemap eingetragen.
 
-**Kurs-Prototyp `kurs-prototyp/`:**
-- **Umfang:** 11 Module, 46 Lektionen, 34 Übungsaufgaben und ein Fragenpool mit 524 Testfragen (Stand 24.10.2026, auf Wunsch „eher 460 Fragen“).
-- **Tests:** Jeder Modultest zieht 15 Fragen zufällig aus dem Pool des Moduls; bestanden ab 12 richtigen. Der Abschlusstest zieht 4 Fragen pro Modul (44 Fragen), bestanden ab 36. Die Antwortreihenfolge wird jedes Mal gemischt. Die Zahlen stehen oben in `kurs.js` (`FRAGEN_JE_TEST`, `ABSCHLUSS_JE_MODUL`, `BESTEHEN_AB`).
-- **Fragen pro Modul:** 01: 32 · 02: 35 · 03: 32 · 04: 47 · 05: 83 · 06: 42 · 07: 37 · 08: 115 · 09: 48 · 10: 33 · 11: 20.
-- **Woher die Fragen kommen:** Von Hand geschrieben in `inhalte/fragen-01-03.js`, `fragen-04-06.js` und `fragen-07-11.js` (jede Frage mit Erklärung und Seitenangabe). 138 weitere erzeugt `werkzeuge/fragen-erzeugen.js` direkt aus den Datenblättern, der Werkzeug- und Kanülentabelle, der Reihenfolge der 26 Ablaufschritte und den Abheilzeiten; falsche Antworten wählt das Skript nur aus Werten, die sich mit der richtigen nicht überschneiden. Nach Änderungen an den Moduldaten neu erzeugen: `node werkzeuge/fragen-erzeugen.js` im Ordner `kurs-prototyp`.
-- **Prüfmodus-Link:** `kurs-prototyp/index.html#alles` schaltet alle Module sofort frei.
-- **Lernprinzip:** Lernen → Verstehen (Zusammenfassung aller Merksätze und Warnhinweise) → Üben → Testen → Bestehen (ab 80 %) → nächstes Modul. Der Test öffnet sich erst, wenn alle Lektionen als durchgearbeitet markiert sind. Das nächste Modul öffnet sich erst nach bestandenem Test.
-- **Kein Backend:** Der Fortschritt wird nur im `localStorage` des Browsers gespeichert. Es gibt keinen Login, keine Bezahlung und keine Teilnahmebescheinigung; die Seite sagt das offen.
-- **Zum Durchsehen:** Ein Prüfmodus schaltet alle Module frei, „Fortschritt zurücksetzen“ löscht den Stand.
-- **Nicht öffentlich:** Der Ordner ist per `robots.txt` und `noindex` von Suchmaschinen ausgeschlossen. Trotzdem nicht auf die öffentliche Website hochladen, weil die Inhalte sonst frei abrufbar sind.
-- **Inhalte für die Kursplattform:** Pro Modul eine Datei `inhalte/modul-XX.js` mit Lektionen, Inhaltsblöcken (Text, Liste, Merke, Achtung, Ergänzung, Schritte, Tabelle, Datenblatt), Übungen und Testfragen samt Erklärung und Seitenangabe. Die Struktur lässt sich in jede Plattform übertragen.
+**Kurs-Prototyp `kurs-prototyp/`** (umgebaut am 24.10.2026 auf Wunsch: „erst wird erklärt, dann muss man Fragen beantworten“, „viel umfangreicher“):
+- **Umfang:** 11 Module, 98 Lektionen, 543 Fragen (alle mit Erklärung und Seitenangabe im Kursbuch), 34 Übungsaufgaben, Glossar mit 51 Fachbegriffen, 5 Checklisten für den Studioalltag.
+- **Ablauf jeder Lektion:** Erst die Erklärung (Text, Merksätze, Warnhinweise, „Aus der Praxis“, Tabellen, Datenblätter), dann die Pflichtfragen der Lektion. Sie kommen einzeln mit sofortiger Rückmeldung. Falsch beantwortete Fragen kommen am Ende der Runde erneut, bis alle richtig sind. Erst dann ist die Lektion geschafft und die nächste öffnet sich.
+- **Modulprüfung:** Sie öffnet sich nach allen Lektionen eines Moduls und zieht 20 zufällige Fragen aus dem Modul; bestanden ab 16. Danach öffnet sich das nächste Modul.
+- **Fehler-Training:** Es sammelt jede falsch beantwortete Frage aus Lektionen und Prüfungen. Eine richtig beantwortete Frage verschwindet daraus.
+- **Prüfungssimulation:** 44 Fragen, 4 pro Modul, bestanden ab 36; sie öffnet sich nach allen Modulprüfungen.
+- **Weiterlernen:** Die Übersicht zeigt immer den nächsten offenen Schritt.
+- **Einstellungen:** Die Zahlen stehen oben in `kurs.js` (`FRAGEN_JE_PRUEFUNG`, `SIMULATION_JE_MODUL`, `BESTEHEN_AB`).
+- **Daten:** Pro Modul eine Datei `inhalte/modul-XX.js`, in der jede Lektion ihre Erklärung (`inhalt`) und ihre Fragen (`fragen`) enthält. 137 weitere Fragen erzeugt `werkzeuge/fragen-erzeugen.js` aus den Datenblättern (Ersteinsatz, Kanüle, Klemme), der Kanülen- und Werkzeugtabelle, der Reihenfolge der 26 Ablaufschritte und den Abheilzeiten; sie werden der passenden Lektion zugeordnet (`inhalte/fragen-generiert.js`). Nach Änderungen an den Moduldaten neu erzeugen: `node werkzeuge/fragen-erzeugen.js` im Ordner `kurs-prototyp`. Glossar und Checklisten stehen in `inhalte/glossar-checklisten.js`.
+- **Kein Backend:** Der Fortschritt liegt nur im `localStorage` des Browsers. Es gibt keinen Login, keine Bezahlung und keine Teilnahmebescheinigung; die Seite sagt das offen.
+- **Prüfmodus:** `kurs-prototyp/index.html#alles` schaltet alle Module und Lektionen frei; „Fortschritt zurücksetzen“ in der Übersicht.
+- **Nicht öffentlich:** Der Ordner ist per `robots.txt` und `noindex` ausgeschlossen. Trotzdem nicht auf die öffentliche Website hochladen.
 
 **Quellen und Kennzeichnung:**
 - **Grundlage ist das Kursbuch:** Seitenangaben stehen bei jeder Testfrage und im Kopf jedes Moduls.

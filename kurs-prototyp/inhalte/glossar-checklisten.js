@@ -1,0 +1,105 @@
+/* Glossar und Checklisten. Quelle: Kursbuch; Modulangabe zeigt, wo der Begriff erklärt wird. */
+window.KURS = window.KURS || { module: [] };
+
+KURS.glossar = [
+  ["Algesie", "Fachbegriff für Schmerz.", 4],
+  ["Anodisieren", "Elektrochemisches Verfahren, das auf Metallen wie Titan stabile, farbige Oxidschichten erzeugt.", 6],
+  ["Antisepsis", "Griechisch „gegen Fäulnis“: alle Maßnahmen zur Verminderung infektiöser Keime auf Oberflächen, Materialien und Wunden.", 5],
+  ["Autoklav", "Gas- und luftdicht verschließbarer Druckbehälter, der mit Wasserdampf und Überdruck sterilisiert.", 5],
+  ["Ball Closure Ring (BCR)", "Klemmkugelring; die Kugel rastet in die Ringöffnung ein.", 6],
+  ["Barbell", "Gerader Metallstift mit Gewinde und verschraubbaren Kugeln (engl. Hantel).", 6],
+  ["Biopsiestanze (Punch)", "Werkzeug zur einmaligen Stanzung der Haut, z. B. für Dermal Anchor, Tunnel und Conch.", 7],
+  ["Bowie-Dick-Test", "Täglicher Test der Vakuumfunktion bei Autoklaven mit fraktioniertem Vorvakuum (Helixtest).", 5],
+  ["Braunüle", "Venenverweilkanüle: Nadel im Kunststoffüberzug, mit der heute gestochen wird.", 1],
+  ["Chirurgenstahl 316L", "Stahl mit 10–14 % Nickel; als Ersteinsatz ungeeignet, als Zweiteinsatz meist unbedenklich.", 6],
+  ["Curved Barbell (Banane)", "Leicht gebogener Stab mit Kugeln, z. B. für Bauchnabel, Augenbraue, Rook.", 6],
+  ["C-Fasern", "Langsame Schmerzfasern (bis 2,5 m/s), ungenau lokalisiert.", 4],
+  ["A-Delta-Fasern", "Schnelle Schmerzfasern (etwa 20 m/s), gut lokalisiert.", 4],
+  ["Desinfektion", "Keimreduktion um den Faktor 10⁵.", 5],
+  ["Einführhilfe", "Spitz zulaufender Stab, um abgeheilte Stichkanäle vorsichtig zu dehnen oder freizuschieben.", 7],
+  ["Einverständniserklärung", "Schriftliche Einwilligung des Kunden vor jedem Piercing; macht die Körperverletzung rechtmäßig.", 2],
+  ["Epithelisierung", "Heilungsphase, in der Zellen vom Wundrand einwandern und die Wunde schließen.", 3],
+  ["Ersteinsatz", "Der erste Schmuck im frischen Stichkanal; immer G23-Titan oder PTFE, mit etwa 4 mm Überlänge.", 6],
+  ["Freihand", "Stechen ohne Klemme oder Nadelauffangrohr.", 8],
+  ["G23-Titan", "Ti6Al4V ELI, Titan der Güteklasse 23; nickelfrei, für Implantate zugelassen.", 6],
+  ["Gauge (G)", "Maß der Kanülenstärke: Je größer die Zahl, desto dünner die Kanüle (18G 1,3 mm, 16G 1,7 mm, 14G 2,2 mm).", 7],
+  ["Gazeklemme", "Piercingklemme zum Halten der Stelle, z. B. bei Lobe, Helix, Nostril.", 7],
+  ["Granulationsgewebe", "Zartes, feuchtes Gewebe, das in der Heilung den Stichkanal füllt.", 3],
+  ["Heilversprechen", "Zusage einer heilenden Wirkung; für Piercer verboten, auch in der Werbung.", 2],
+  ["Hufeisen (Threaded Ring)", "Offener Ring mit Gewinde an beiden Enden.", 6],
+  ["Indikatorstreifen", "Streifen an Sterilisationsbeuteln oder Klebebändern, der durch Farbumschlag die Sterilisation anzeigt.", 5],
+  ["Klemmzange", "Hält den eingesetzten Schmuck, während die Kugel aufgedreht wird.", 7],
+  ["Kodan", "Hautantiseptikum, mit dem nach dem Einsetzen nochmals eingesprüht wird.", 9],
+  ["Körperverletzung", "Rechtlich ist jedes Piercing eine gewollte Körperverletzung (§ 223 StGB), erlaubt nur mit Einwilligung.", 2],
+  ["Labret Stud", "Stecker mit Platte auf einer Seite und Gewinde für eine Kugel auf der anderen.", 6],
+  ["Lidocainsalbe (Xylocain)", "Rezeptfreies Betäubungsmittel aus der Apotheke; laut Akademie erlaubt, aber nicht empfohlen.", 4],
+  ["Nadelabwurfbehälter", "Verschließbarer Behälter, in den benutzte Nadeln sofort kommen.", 5],
+  ["Nadelauffangrohr (Receiving Tube)", "Rohr, das die Kanüle auffängt, wo keine Zange passt, z. B. bei Rook und Daith.", 7],
+  ["Nickelallergie", "Spättyp-Allergie: Symptome 48–72 Stunden nach Kontakt mit Nickel.", 6],
+  ["Nozizeptoren", "Schmerzrezeptoren, meist freie Nervenenden.", 4],
+  ["Octenidin", "Wirkstoff in Prontolind und Octenisept; knorpeltoxisch, deshalb nie bei Knorpelpiercings.", 10],
+  ["PTFE", "Polytetrafluorethylen (Teflon); idealer Ersteinsatz, autoklavierbar; nicht bei der Zunge.", 6],
+  ["Rahmenhygieneplan", "Schriftliche Festlegung aller Hygienemaßnahmen nach dem Infektionsschutzgesetz, mit Reinigungs- und Desinfektionsplan.", 5],
+  ["Residente Hautflora", "Körpereigene Schutzflora der Haut; wird nur reduziert, nicht zerstört.", 5],
+  ["Segmentring", "Zweiteiliger Ring, dessen Segment mit einer Zange eingesetzt wird.", 6],
+  ["Snaptile", "Piercingklemme zum Halten der Stelle, z. B. bei Lobe, Helix, Labret.", 7],
+  ["Sterilisation", "Keimreduktion um den Faktor 10⁶; tötet auch Bakteriensporen.", 5],
+  ["Surface", "Oberflächenpiercing mit Ein- und Austritt auf einer Ebene; heilt länger, wächst leichter heraus.", 8],
+  ["Transiente Hautflora", "Vorübergehende, hautfremde Keime auf der Haut; werden durch Desinfektion abgetötet.", 5],
+  ["Überlänge", "Etwa 4 mm zusätzliche Länge beim Ersteinsatz, weil der Stichkanal anschwillt.", 6],
+  ["VAH-Liste", "Liste der Desinfektionsmittel mit Zertifikat des Verbunds für Angewandte Hygiene.", 5],
+  ["Venenverweilkanüle", "Siehe Braunüle.", 1],
+  ["Viruzid", "Wirksam gegen Viren.", 5],
+  ["Wildes Fleisch", "Rote, fleischähnliche Wucherung aus der Unterhaut zwischen den Wundrändern.", 10],
+  ["Wildfleischdisk", "Kunststoffscheibe, die auf den Schmuck gestülpt wird, um wildes Fleisch zurückzudrängen.", 10],
+  ["Zweiteinsatz", "Schmuck nach vollständiger Abheilung, z. B. aus Chirurgenstahl 316L.", 6]
+];
+
+KURS.checklisten = [
+  { titel: "Vor dem ersten Kunden des Tages", modul: 5, punkte: [
+    "Hände waschen (Pflicht vor Dienstbeginn) und vollständig trocknen",
+    "Kein Schmuck an Händen und Unterarmen, Nägel kurz, kein Nagellack",
+    "Desinfektionsmittel-, Waschlotion- und Handtuchspender gefüllt",
+    "Bowie-Dick-Test am Autoklav (bei Vorvakuum täglich)",
+    "Arbeitsbereich feucht gereinigt",
+    "Erste-Hilfe-Kasten vollständig, Notfallnummern ausgehängt",
+    "Traubenzucker und Getränk bereit"
+  ] },
+  { titel: "Arbeitsplatz vor jedem Kunden", modul: 5, punkte: [
+    "Arbeitsflächen mit feuchtigkeitsundurchlässiger Folie bzw. Einmalunterlage abgedeckt",
+    "Liege abgewischt bzw. Einweg-Liegenbezug",
+    "Sterilgut geprüft: Verpackung unbeschädigt, Indikator umgeschlagen, Lagerfrist eingehalten",
+    "Kanüle, Klemme oder Nadelauffangrohr, Ersteinsatz mit Überlänge bereitgelegt",
+    "Alkoholtupfer, Einmal-Hautmarker, Einmalrasierer, Handschuhe, Mundschutz",
+    "Nadelabwurfbehälter in Reichweite",
+    "Pflegemittel und schriftliche Pflegehinweise zum Mitgeben"
+  ] },
+  { titel: "Einverständniserklärung vollständig?", modul: 2, punkte: [
+    "Personalien mit Geburtsdatum und Ausweisnummer",
+    "Volljährigkeit bestätigt (bei unter 18: Unterschrift der Erziehungsberechtigten)",
+    "Krankheiten, Allergien, Medikamente angegeben",
+    "Gegessen und getrunken, kein Alkohol und keine Drogen",
+    "Art und Körperstelle des Piercings, Datum",
+    "Rasur erwähnt, falls nötig",
+    "Aufklärung über Gefahren und Aushändigung der Pflegehinweise angekreuzt",
+    "Unterschrift des Kunden; Foto-Einwilligung separat, falls gewünscht"
+  ] },
+  { titel: "Instrumente aufbereiten", modul: 5, punkte: [
+    "Selbstschutz: Schutzbrille, Handschuhe, Mundschutz",
+    "Ultraschallbad mit Reinigungsmittel, mindestens 30 Minuten bei 80 °C (Herstellerangabe beachten)",
+    "Gründlich trocknen",
+    "In Sterilisationsbeutel mit Indikatorstreifen verpacken",
+    "Im Autoklav sterilisieren (Steigzeit, Ausgleichszeit, Sterilisationsphase, Trockenphase)",
+    "Nur vollständig trocken entnehmen",
+    "Mit Datum und Chargennummer beschriften, geschützt lagern"
+  ] },
+  { titel: "Pflegehinweise für den Kunden", modul: 10, punkte: [
+    "Etwa 2 Wochen lang 2- bis 3-mal täglich reinigen",
+    "Kochsalzlösung für alle Piercings; Chlorhexamed für den Mundbereich",
+    "Prontolind oder Octenisept nie bei Knorpelpiercings",
+    "Schmuck erst nach vollständiger Abheilung wechseln (Abheilzeit nennen)",
+    "Bei Zungenpiercing: Eiswürfel aus Kamillentee",
+    "Bei Bauchnabel und Brustwarze: Pflaster für 3 Tage",
+    "Bei Problemen wiederkommen; bei Fieber oder sich ausbreitender Rötung zum Arzt"
+  ] }
+];

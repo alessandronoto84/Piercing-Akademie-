@@ -10,4 +10,4 @@ Statische Website der Piercing Akademie (740 Piercing, Lingen). Ohne Build-Syste
 
 **Recherche und Kursbuch:** [KURS-RECHERCHE.md](KURS-RECHERCHE.md) enthält Quellen zu FernUSG, Hygiene in Niedersachsen, Nickel-Grenzwerten und Kanülenmaßen, eine Gliederung für die neuen Module 03 und 11 sowie die Korrekturliste fürs Kursbuch.
 
-**Online-Kurs („Fahrschule“):** `online-kurs.html` ist die Verkaufsseite. `kurs-prototyp/` ist ein lauffähiger Prototyp des Kurses (11 Module, Lektionen, Übungen, Tests, Abschlusstest) zum Testen und als Vorlage für die spätere Kursplattform. Die Inhalte liegen in `kurs-prototyp/inhalte/modul-01.js` bis `modul-11.js`, ein Modul pro Datei. Zum Ansehen `kurs-prototyp/index.html` im Browser öffnen.
+**Online-Kurs („Fahrschule“):** `online-kurs.html` ist die Verkaufsseite. `kurs-prototyp/` ist ein lauffähiger Prototyp des Kurses (11 Module, 98 Lektionen mit Erklärung und Pflichtfragen, Modulprüfungen, Fehler-Training, Prüfungssimulation, Glossar, Checklisten) zum Testen und als Vorlage für die spätere Kursplattform. Die Inhalte liegen in `kurs-prototyp/inhalte/`, ein Modul pro Datei. Zum Ansehen `kurs-prototyp/index.html` im Browser öffnen.

@@ -108,3 +108,39 @@
   .k-navbox>summary::after{content:"+";font-family:var(--f-mono);color:var(--accent)}
   .k-navbox[open]>summary::after{content:"–"}
 }
+
+/* Ablauf v2: Lektion mit Erklärung und Pflichtfragen */
+.k-h2{font-size:1.3rem;margin:32px 0 12px}
+.k-praxis{border-left:4px solid var(--accent);background:var(--surface)}
+.k-phasen{list-style:none;margin:0 0 20px;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.k-phasen li{display:flex;gap:8px;align-items:center;padding:8px 12px;border:1px solid var(--line);border-radius:3px;background:var(--surface);font-weight:600;font-size:.95rem;color:var(--muted)}
+.k-phasen li.aktiv{color:var(--ink);border-color:var(--accent);box-shadow:inset 0 -3px 0 var(--accent)}
+.k-phasen .n{font-family:var(--f-mono);font-size:.8rem}
+.k-quiz{margin-top:8px}
+.k-quizkopf{display:flex;justify-content:space-between;gap:12px;align-items:baseline;flex-wrap:wrap}
+.k-einzelfrage{display:grid;gap:12px}
+.k-einzelfrage .k-frage legend{font-size:1.05rem}
+.k-einzelfrage .k-rueckmeldung{border:1px solid var(--line);border-radius:4px;padding:12px 14px;background:var(--bg)}
+.k-geschafft{border-color:var(--accent)}
+.k-weiterlernen{display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap;border:2px solid var(--accent);border-radius:4px;padding:14px 18px;background:var(--surface);margin-bottom:8px}
+.k-lektionsliste{list-style:none;margin:0 0 20px;padding:0;border-top:1px solid var(--line)}
+.k-lektionsliste a{display:grid;grid-template-columns:2.2rem minmax(0,1fr) auto;gap:10px;align-items:baseline;padding:12px 6px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.k-lektionsliste a:hover{background:var(--surface)}
+.k-lektionsliste .n{font-family:var(--f-mono);color:var(--muted)}
+.k-lektionsliste strong{display:block}
+.k-lektionsliste .k-meta{font-size:.85rem;color:var(--muted)}
+.k-lektionsliste .k-status{font-family:var(--f-mono);font-size:.8rem;color:var(--muted)}
+.k-lektionsliste .k-erledigt .k-status{color:var(--accent);font-weight:700}
+.k-lektionsliste .k-gesperrt a{color:var(--muted)}
+.k-nav-extras{display:grid;gap:2px;margin-top:6px}
+.k-nav-link .k-status{font-family:var(--f-mono);font-size:.75rem;color:var(--muted);white-space:nowrap}
+.k-nav-link{grid-template-columns:2rem minmax(0,1fr) auto}
+.k-modulkarte .k-balken{height:6px}
+.k-suche{max-width:28rem;margin-bottom:16px}
+.k-glossar{margin:0;display:grid;gap:0;border-top:1px solid var(--line)}
+.k-glossar>div{display:grid;grid-template-columns:minmax(0,14rem) minmax(0,1fr);gap:4px 16px;padding:10px 0;border-bottom:1px solid var(--line)}
+.k-glossar dt{font-weight:600}
+.k-glossar dd{margin:0;color:var(--muted)}
+.k-glossar dd a{margin-left:6px}
+@media (max-width:560px){.k-glossar>div{grid-template-columns:minmax(0,1fr)}}
+.k-nav-link.k-nav-haupt{grid-template-columns:minmax(0,1fr)}
