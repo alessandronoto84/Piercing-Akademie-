@@ -116,6 +116,14 @@
     return '<span class="k-nachweis">Bild: ' + esc(f.urheber) + ", " + (f.lizenz_url ? '<a href="' + esc(f.lizenz_url) + '" target="_blank" rel="noopener">' + esc(f.lizenz) + "</a>" : esc(f.lizenz)) +
       ', <a href="' + esc(f.url) + '" target="_blank" rel="noopener">' + esc(f.quelle) + "</a>" + (/SA/.test(f.lizenz) ? ", verkleinert" : "") + "</span>";
   }
+  // KI-Titelbild eines Moduls: klein auf der Modulkarte, groß im Modulkopf; immer als KI-generiert gekennzeichnet
+  function titelbild(m, klein) {
+    var b = (KURS.titelbilder || {})[m.nr];
+    if (!b) return "";
+    var img = '<img src="' + b.src + '" width="' + b.w + '" height="' + b.h + '" alt="' + (klein ? "" : esc(b.alt)) + '" loading="lazy" decoding="async">';
+    if (klein) return '<span class="k-titelbild k-klein">' + img + '<span class="k-ki">KI</span></span>';
+    return '<figure class="k-titelbild">' + img + '<figcaption class="k-nachweis">KI-generiertes Symbolbild (' + esc(b.ki) + "), keine fachliche Abbildung.</figcaption></figure>";
+  }
   // "Lippenbändchen (Smiley)" -> "lippenbaendchen-smiley"
   function kurzname(n) {
     return n.toLowerCase().replace(/ä/g, "ae").replace(/ö/g, "oe").replace(/ü/g, "ue").replace(/ß/g, "ss").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
@@ -180,7 +188,7 @@
       weiterLernen() + '<h2 class="k-h2">Module</h2><div class="k-modulraster">';
     MODULE.forEach(function (m) {
       var status = stand.bestanden[m.nr] ? "bestanden" : modulOffen(m) ? "offen" : "gesperrt";
-      html += '<a class="k-modulkarte k-' + status + '" href="#modul-' + m.nr + '"><span class="label">Modul ' + zwei(m.nr) + (m.entwurf ? " · Entwurf" : "") + "</span><strong>" + esc(m.titel) + "</strong>" +
+      html += '<a class="k-modulkarte k-' + status + '" href="#modul-' + m.nr + '">' + titelbild(m, true) + '<span class="label">Modul ' + zwei(m.nr) + (m.entwurf ? " · Entwurf" : "") + "</span><strong>" + esc(m.titel) + "</strong>" +
         balken(erledigteLektionen(m), m.lektionen.length, "Lektionen in Modul " + m.nr) +
         '<span class="k-meta">' + erledigteLektionen(m) + " von " + m.lektionen.length + " Lektionen · " + m.pool.length + " Fragen · " + (status === "bestanden" ? "Prüfung bestanden" : status === "offen" ? "offen" : "gesperrt") + "</span></a>";
     });
@@ -219,7 +227,7 @@
       app.innerHTML = '<section class="k-kopf"><p class="label">Modul ' + zwei(m.nr) + "</p><h1>" + esc(m.titel) + '</h1><p class="lead">Dieses Modul öffnet sich, sobald du die Modulprüfung ' + zwei(m.nr - 1) + ' bestanden hast.</p><p><a class="btn" href="#modul-' + (m.nr - 1) + '">Zu Modul ' + zwei(m.nr - 1) + "</a></p></section>";
       return;
     }
-    var html = '<section class="k-kopf"><p class="label">Modul ' + zwei(m.nr) + " von " + MODULE.length + (m.entwurf ? " · Entwurf, fachlich prüfen" : "") + "</p><h1>" + esc(m.titel) + '</h1><p class="lead">' + esc(m.ziel) + '</p><p class="fine">Quelle: ' + esc(m.quelle) + "</p></section>" +
+    var html = '<section class="k-kopf"><p class="label">Modul ' + zwei(m.nr) + " von " + MODULE.length + (m.entwurf ? " · Entwurf, fachlich prüfen" : "") + "</p><h1>" + esc(m.titel) + '</h1><p class="lead">' + esc(m.ziel) + '</p><p class="fine">Quelle: ' + esc(m.quelle) + "</p></section>" + titelbild(m, false) +
       '<div class="k-fortschritt">' + balken(erledigteLektionen(m), m.lektionen.length, "Lektionen") + "<p><strong>" + erledigteLektionen(m) + " von " + m.lektionen.length + "</strong> Lektionen erledigt</p></div>" +
       '<ol class="k-lektionsliste">';
     m.lektionen.forEach(function (l, i) {

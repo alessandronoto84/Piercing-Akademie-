@@ -7,7 +7,7 @@
   var app = document.getElementById("kurs");
   if (!app || ruhig || !("IntersectionObserver" in window)) return;
   document.documentElement.classList.add("k-bewegung");
-  var AUSWAHL = ".k-grafik, .k-foto, .k-galerie, .k-box, .k-datenblatt, .k-tabelle, .k-modulkarte, .k-schritte > li";
+  var AUSWAHL = "figure.k-titelbild, .k-grafik, .k-foto, .k-galerie, .k-box, .k-datenblatt, .k-tabelle, .k-modulkarte, .k-schritte > li";
   var beobachter = new IntersectionObserver(function (eintraege) {
     eintraege.forEach(function (e) {
       if (!e.isIntersecting) return;

@@ -191,3 +191,25 @@ Gefunden über Openverse und Wikimedia Commons, heruntergeladen als verkleinerte
 | frei-parotis | Modul 3, Nerven im Gesicht | Henry Vandyke Carter (Gray's Anatomy, 1918) | Public Domain | https://commons.wikimedia.org/wiki/File:Gray1022.png |
 
 Wikimedia begrenzt automatische Abrufe stark (Fehler 429). Weitere Bilder (z. B. Gray 904, Ohrmuschel) ließen sich deshalb nicht laden und können später ergänzt werden.
+
+## 12. KI-generierte Titelbilder (24.10.2026)
+
+Jedes Modul hat ein Titelbild, erzeugt mit FLUX.1 [schnell] (black-forest-labs, Lizenz Apache-2.0). Die Bilder sind reine Symbolbilder: Sie stehen nur auf den Modulkarten und im Modulkopf, tragen den Hinweis „KI-generiert“ und zeigen keine Anatomie oder Technik, auf die sich eine Lektion stützt. Fachliche Abbildungen bleiben die Zeichnungen, die Fotos aus dem Kursbuch und die Bilder aus Abschnitt 11.
+
+Alle Bilder wurden vor dem Einbau angesehen. Verworfen und neu erzeugt wurden: M1 (unförmige Ohrskulptur), M4 (Hand und Handschuh verschmolzen), M8 (Ohr anatomisch falsch) und M11 (Instrumententablett lag auf der Liege). Die quadratischen Cloudflare-Bilder wurden auf 16:9 zugeschnitten; alle sind auf 960 × 540 Pixel verkleinert und in `inhalte/bilder-ki.js` eingebettet.
+
+Stil-Zusatz zu jeder Beschreibung: „Editorial photography for a premium professional training course, calm and clinical, muted teal, white and warm neutral tones, soft natural light, high detail, photorealistic, no text, no letters, no logos, no watermarks.“
+
+| Modul | Dienst | Bildbeschreibung (englisch) |
+| --- | --- | --- |
+| 01 | Cloudflare Workers AI | Museum display: a row of antique gold hoop earrings and a simple carved bone ear plug lying on rough natural linen, small archaeological artifacts, warm side light, shallow depth of field. |
+| 02 | Hugging Face (Space) | Top-down view of a tidy wooden desk with a clipboard holding a blank form with empty lines and checkboxes, a black pen and a face-down ID card. |
+| 03 | Hugging Face (Space) | Close-up of a healthy human ear seen from the side, natural skin texture, no jewelry, neutral light grey background, only the ear and some hair visible, no face. |
+| 04 | Cloudflare Workers AI | A friendly consultation at a small round table in a bright studio: two cups of tea, a clipboard and a pen, seen from above, people only visible as forearms in casual sleeves, hands resting naturally and separately. |
+| 05 | Hugging Face (Space) | Hands rubbing in alcohol hand disinfectant below a wall-mounted touch-free dispenser above a white sink, no rings or watches, short natural nails, no faces. |
+| 06 | Hugging Face (Space) | Flat lay of polished implant-grade titanium body jewelry on dark slate: straight barbells with balls, a curved barbell, labret studs with flat discs, small rings, some anodized gold, blue and purple. |
+| 07 | Hugging Face (Space) | Top-down view of a stainless steel instrument tray on a sterile blue drape: forceps with round windows, a receiving tube, small scissors, sealed sterilization pouches and individually packaged IV cannulas with green and grey hubs. |
+| 08 | Cloudflare Workers AI | Side profile close-up of a natural human ear with one small round titanium ball stud in the earlobe and one thin titanium hoop in the upper outer rim, realistic anatomy, soft studio light, plain warm grey background. |
+| 09 | Cloudflare Workers AI | Close-up of hands in black nitrile gloves marking a small dot on an earlobe with a fine surgical skin marker, only ear and gloved hands visible, no face. |
+| 10 | Cloudflare Workers AI | Still life on a white bathroom shelf: a plain unlabeled saline spray bottle, sterile gauze pads and a blank card, fresh morning light. |
+| 11 | Cloudflare Workers AI | Wide shot of an empty clean piercing studio room: a padded treatment couch covered with white paper roll in the middle, next to it a separate stainless steel side table with a covered instrument tray, a white hand basin with wall dispensers on the back wall, a green plant, daylight, nobody present. |
