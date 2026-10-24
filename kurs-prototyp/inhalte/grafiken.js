@@ -354,14 +354,20 @@ window.KURS = window.KURS || { module: [] };
 
   // ---------- Modul 7: Gauge im Größenvergleich (maßstäblich zueinander) ----------
   (function () {
-    var k = [["18G", 1.3, "f-18g"], ["16G", 1.7, "f-16g"], ["14G", 2.2, "f-14g"]];
-    var s = [["18G", 1.0], ["16G", 1.2], ["14G", 1.6]];
-    var m = 22, svg = [t(10, 26, "Kanüle", "tb"), t(10, 42, "Außendurchmesser", "tm"), t(10, 136, "Schmuck", "tb"), t(10, 152, "Stabstärke", "tm")];
-    k.forEach(function (z, i) { var x = 230 + i * 130; svg.push(c(x, 46, z[1] * m, z[2] + " s1"), t(x, 108, z[0] + " · " + String(z[1]).replace(".", ",") + " mm", "tb", "middle")); });
-    s.forEach(function (z, i) { var x = 230 + i * 130; svg.push(c(x, 156, z[1] * m, "fmet s1"), t(x, 204, z[0] + " · " + z[1].toFixed(1).replace(".", ",") + " mm", "tb", "middle")); });
+    // Standard der Akademie: 18G-Kanüle für 1,2-mm-Schmuck, 16G-Kanüle für 1,6-mm-Schmuck
+    var paare = [[150, "18G", 1.3, "f-18g", "1,2 mm", "16G"], [450, "16G", 1.7, "f-16g", "1,6 mm", "14G"]];
+    var m = 30, svg = [];
+    paare.forEach(function (z) {
+      var mm = Number(z[4].replace(",", ".").replace(" mm", ""));
+      svg.push(c(z[0] - 60, 80, z[2] * m, z[3] + " s1"), c(z[0] + 60, 80, mm * m, "fmet s1"),
+        t(z[0], 84, "→", "tb", "middle"),
+        t(z[0] - 60, 160, "Kanüle " + z[1], "tb", "middle"), t(z[0] - 60, 176, String(z[2]).replace(".", ",") + " mm außen", "tm", "middle"),
+        t(z[0] + 60, 160, "Schmuck " + z[4], "tb", "middle"), t(z[0] + 60, 176, "heißt beim Schmuck " + z[5], "tm", "middle"));
+    });
+    svg.push(l(310, 20, 310, 180, "sl dash"), t(310, 208, "Standard der Piercing Akademie", "tm", "middle"));
     G.gauge = { w: 620, h: 220,
-      alt: "Maßstäblicher Vergleich: Kanülen 18G 1,3 mm grün, 16G 1,7 mm grau, 14G 2,2 mm orange; Schmuck 18G 1,0 mm, 16G 1,2 mm, 14G 1,6 mm.",
-      text: "Gleiche Gauge-Zahl, verschiedene Millimeter: Kanülen und Schmuck werden unterschiedlich gemessen. Die Kreise sind untereinander maßstäblich.",
+      alt: "Maßstäblicher Vergleich der Standardkombinationen der Akademie: 18G-Kanüle mit 1,3 mm für Schmuck mit 1,2 mm, 16G-Kanüle mit 1,7 mm für Schmuck mit 1,6 mm.",
+      text: "Die Standardkombinationen der Akademie, untereinander maßstäblich. Die Kanüle ist jeweils nur knapp dicker als der Schmuck. Achtung: 1,2-mm-Schmuck heißt im Handel 16G, wird aber mit einer 18G-Kanüle gestochen.",
       svg: svg.join("") };
   })();
 

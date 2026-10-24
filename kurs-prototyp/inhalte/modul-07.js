@@ -1,5 +1,6 @@
 /* Modul 07 – Werkzeuge und Instrumente. Quelle: Kursbuch Kap. 9 (S. 64–73), steril/sauber S. 35.
-   Kanülenmaße nach Herstellerangabe B. Braun (1,3 / 1,7 / 2,2 mm); das Buch nennt 1,2 / 1,6 / 2,1 mm (siehe KURS-RECHERCHE.md). */
+   Kanülenmaße nach Herstellerangabe B. Braun (1,3 / 1,7 / 2,2 mm); das Buch nennt 1,2 / 1,6 / 2,1 mm (siehe KURS-RECHERCHE.md).
+   Standard der Akademie (bestätigt 24.10.2026): 18G-Kanüle für 1,2-mm-Schmuck, 16G-Kanüle für 1,6-mm-Schmuck. */
 window.KURS = window.KURS || { module: [] };
 KURS.module.push({
   nr: 7,
@@ -14,7 +15,7 @@ KURS.module.push({
         { typ: "text", text: "Gestochen wird mit Venenverweilkanülen (Braunülen), hauptsächlich in drei Nadelstärken. Die Farbe des Ansatzes zeigt die Stärke. Je größer die Gauge-Zahl (G), desto dünner die Kanüle." },
         { typ: "grafik", id: "kanuele" },
         { typ: "tabelle", kopf: ["Stärke", "Außendurchmesser", "Farbe"], zeilen: [["18G", "1,3 mm", "Grün"], ["16G", "1,7 mm", "Grau"], ["14G", "2,2 mm", "Orange"]] },
-        { typ: "ergaenzung", text: "Die Durchmesser entsprechen der Herstellerangabe für Venenverweilkanülen. Im Kursbuch stehen gerundet 1,2 / 1,6 / 2,1 mm." }
+        { typ: "ergaenzung", text: "Die Durchmesser entsprechen der Herstellerangabe für Venenverweilkanülen. Im Kursbuch stehen 1,2 / 1,6 / 2,1 mm; 1,2 und 1,6 mm sind die Schmuckstärken, die die Akademie mit 18G bzw. 16G sticht (nächste Lektion)." }
       ],
       fragen: [
         ["In wie vielen Stärken arbeitet man beim Piercen hauptsächlich?", ["In drei", "In einer", "In zehn"], "18G, 16G und 14G.", "S. 64"],
@@ -32,18 +33,26 @@ KURS.module.push({
         { typ: "tabelle", kopf: ["Gauge", "Kanüle (Außendurchmesser)", "Schmuck (Stabstärke)"], zeilen: [
           ["20G", "–", "0,8 mm"], ["18G", "1,3 mm", "1,0 mm"], ["16G", "1,7 mm", "1,2 mm"], ["14G", "2,2 mm", "1,6 mm"], ["12G", "–", "2,0 mm"]
         ] },
+        { typ: "tabelle", kopf: ["Schmuckstärke", "Kanüle der Akademie", "Außendurchmesser der Kanüle"], zeilen: [
+          ["1,2 mm (im Handel 16G)", "18G (grün)", "1,3 mm"],
+          ["1,6 mm (im Handel 14G)", "16G (grau)", "1,7 mm"]
+        ] },
         { typ: "grafik", id: "gauge" },
+        { typ: "merke", text: "Standard der Akademie: 18G-Kanüle für 1,2-mm-Schmuck, 16G-Kanüle für 1,6-mm-Schmuck. Die Kanüle ist also eine Gauge-Stufe dünner benannt als der Schmuck, aber im Durchmesser etwas dicker." },
         { typ: "liste", punkte: [
           "Je größer die Gauge-Zahl, desto dünner: Das gilt für Kanülen und Schmuck gleichermaßen.",
-          "Der Schmuck wird in den Kunststoffüberzug der Kanüle gesteckt. Die Kanüle ist deshalb immer dicker als der Schmuck, der durch sie hindurchgeht.",
-          "Verwechslungsgefahr: Ein 16G-Schmuck (1,2 mm) ist deutlich dünner als eine 16G-Kanüle (1,7 mm)."
+          "Der Schmuck wird in den Kunststoffüberzug der Kanüle gesteckt. Die Kanüle ist deshalb etwas dicker als der Schmuck, der durch sie hindurchgeht.",
+          "Verwechslungsgefahr beim Bestellen: Schmuck mit 1,2 mm heißt im Handel 16G, gestochen wird er aber mit der 18G-Kanüle."
         ] },
         { typ: "praxis", text: "Probiere jede Kombination aus Kanüle und Ersteinsatz vorher am Übungsmodell aus, nicht erst am Kunden." },
-        { typ: "ergaenzung", text: "Schmuckstärken nach gängigen Händlertabellen, Kanülenmaße nach Herstellerangabe (siehe KURS-RECHERCHE.md, Abschnitt 9). Welche Kombinationen die Akademie standardmäßig verwendet, ergänzt die Akademie hier. Fachlich prüfen." }
+        { typ: "ergaenzung", text: "Schmuckstärken nach gängigen Händlertabellen, Kanülenmaße nach Herstellerangabe (siehe KURS-RECHERCHE.md, Abschnitt 9). Die Kombinationen sind der Standard der Piercing Akademie." }
       ],
       fragen: [
         ["Welche Stabstärke hat Schmuck in 16G?", ["1,2 mm", "1,7 mm", "2,2 mm"], "Eine 16G-Kanüle hat dagegen 1,7 mm.", "Ergänzung"],
         ["Welche Stabstärke hat Schmuck in 14G?", ["1,6 mm", "2,2 mm", "1,0 mm"], "Eine 14G-Kanüle hat 2,2 mm.", "Ergänzung"],
+        ["Welche Kanüle nimmt die Akademie für Schmuck mit 1,2 mm?", ["18G", "16G", "14G"], "18G-Kanüle mit 1,3 mm Außendurchmesser.", "Akademie"],
+        ["Welche Kanüle nimmt die Akademie für Schmuck mit 1,6 mm?", ["16G", "18G", "14G"], "16G-Kanüle mit 1,7 mm Außendurchmesser.", "Akademie"],
+        ["Fall: Du bestellst Ersteinsätze in 16G. Mit welcher Kanüle stichst du sie?", ["Mit der 18G-Kanüle, denn 16G-Schmuck hat 1,2 mm", "Mit der 16G-Kanüle, gleiche Zahl", "Mit der 14G-Kanüle"], "Schmuck-Gauge und Kanülen-Gauge sind nicht dieselben Millimeter.", "Akademie"],
         ["Bedeutet 16G bei Kanüle und Schmuck dieselben Millimeter?", ["Nein, die 16G-Kanüle ist mit 1,7 mm dicker als 16G-Schmuck mit 1,2 mm", "Ja, genau gleich", "Gauge gibt es nur bei Schmuck"], "Kanülen und Schmuck werden unterschiedlich gemessen.", "Ergänzung"],
         ["Warum ist die Kanüle dicker als der Schmuck?", ["Weil der Schmuck in den Kunststoffüberzug gesteckt wird", "Damit es weniger blutet", "Das ist sie nicht"], "Siehe Modul 9, Der Stich.", "Ergänzung"],
         ["Was gilt für Schmuck: Je größer die Gauge-Zahl …", ["… desto dünner der Stab", "… desto dicker der Stab", "… desto länger der Stab"], "Wie bei Kanülen.", "Ergänzung"],
