@@ -156,7 +156,11 @@ Stand 24.10.2026. Entscheidung: Kurs-Prototyp und Verkaufsseite bauen; Kursplatt
 **Verkaufsseite `online-kurs.html`:** Lernprinzip, alle Module mit Lektionstiteln (aus den Kursdaten erzeugt), Ablauf, Preis (Paket Basis 249 €) und Anfrage über das bestehende Formular (`index.html?paket=basis#kontakt`). In der Navigation aller Seiten verlinkt, in der Sitemap eingetragen.
 
 **Kurs-Prototyp `kurs-prototyp/`:**
-- **Umfang:** 11 Module, 46 Lektionen, 34 Übungsaufgaben und 68 Testfragen; dazu ein Abschlusstest mit 22 Fragen, 2 pro Modul, bei jedem Versuch neu zusammengestellt.
+- **Umfang:** 11 Module, 46 Lektionen, 34 Übungsaufgaben und ein Fragenpool mit 524 Testfragen (Stand 24.10.2026, auf Wunsch „eher 460 Fragen“).
+- **Tests:** Jeder Modultest zieht 15 Fragen zufällig aus dem Pool des Moduls; bestanden ab 12 richtigen. Der Abschlusstest zieht 4 Fragen pro Modul (44 Fragen), bestanden ab 36. Die Antwortreihenfolge wird jedes Mal gemischt. Die Zahlen stehen oben in `kurs.js` (`FRAGEN_JE_TEST`, `ABSCHLUSS_JE_MODUL`, `BESTEHEN_AB`).
+- **Fragen pro Modul:** 01: 32 · 02: 35 · 03: 32 · 04: 47 · 05: 83 · 06: 42 · 07: 37 · 08: 115 · 09: 48 · 10: 33 · 11: 20.
+- **Woher die Fragen kommen:** Von Hand geschrieben in `inhalte/fragen-01-03.js`, `fragen-04-06.js` und `fragen-07-11.js` (jede Frage mit Erklärung und Seitenangabe). 138 weitere erzeugt `werkzeuge/fragen-erzeugen.js` direkt aus den Datenblättern, der Werkzeug- und Kanülentabelle, der Reihenfolge der 26 Ablaufschritte und den Abheilzeiten; falsche Antworten wählt das Skript nur aus Werten, die sich mit der richtigen nicht überschneiden. Nach Änderungen an den Moduldaten neu erzeugen: `node werkzeuge/fragen-erzeugen.js` im Ordner `kurs-prototyp`.
+- **Prüfmodus-Link:** `kurs-prototyp/index.html#alles` schaltet alle Module sofort frei.
 - **Lernprinzip:** Lernen → Verstehen (Zusammenfassung aller Merksätze und Warnhinweise) → Üben → Testen → Bestehen (ab 80 %) → nächstes Modul. Der Test öffnet sich erst, wenn alle Lektionen als durchgearbeitet markiert sind. Das nächste Modul öffnet sich erst nach bestandenem Test.
 - **Kein Backend:** Der Fortschritt wird nur im `localStorage` des Browsers gespeichert. Es gibt keinen Login, keine Bezahlung und keine Teilnahmebescheinigung; die Seite sagt das offen.
 - **Zum Durchsehen:** Ein Prüfmodus schaltet alle Module frei, „Fortschritt zurücksetzen“ löscht den Stand.

@@ -6,7 +6,8 @@
 
   var MODULE = (window.KURS && window.KURS.module ? window.KURS.module : []).slice().sort(function (a, b) { return a.nr - b.nr; });
   var BESTEHEN_AB = 0.8;           // 80 % richtige Antworten
-  var ABSCHLUSS_JE_MODUL = 2;      // Fragen pro Modul im Abschlusstest
+  var FRAGEN_JE_TEST = 15;         // zufällig gezogene Fragen pro Modultest
+  var ABSCHLUSS_JE_MODUL = 4;      // Fragen pro Modul im Abschlusstest
   var SPEICHER = "pa-kurs-v1";
   var SCHRITTE = [
     { id: "lernen", name: "Lernen" },
@@ -14,6 +15,22 @@
     { id: "ueben", name: "Üben" },
     { id: "testen", name: "Testen" }
   ];
+
+  // Fragenpool je Modul: Fragen aus der Moduldatei plus KURS.fragen[nr] aus fragen-*.js
+  // (Format dort: [Frage, [richtig, falsch, falsch], Erklärung, Seite]; die richtige Antwort steht zuerst)
+  var ZUSATZ = (window.KURS && window.KURS.fragen) || {};
+  MODULE.forEach(function (m) {
+    m.pool = m.quiz.concat((ZUSATZ[m.nr] || []).map(function (f) {
+      return { frage: f[0], antworten: f[1], richtig: 0, erklaerung: f[2], seite: f[3] };
+    }));
+  });
+  // Zieht n Fragen und mischt jeweils die Antworten; „richtig“ zeigt danach auf die neue Position
+  function ziehe(pool, n, nr) {
+    return mischen(pool).slice(0, n).map(function (f) {
+      var reihenfolge = mischen(f.antworten.map(function (_, i) { return i; }));
+      return { modul: nr, frage: f.frage, antworten: reihenfolge.map(function (i) { return f.antworten[i]; }), richtig: reihenfolge.indexOf(f.richtig), erklaerung: f.erklaerung, seite: f.seite };
+    });
+  }
 
   var app = document.getElementById("kurs");
   var nav = document.getElementById("kurs-nav");
@@ -103,7 +120,7 @@
     MODULE.forEach(function (m) {
       var status = stand.bestanden[m.nr] ? "bestanden" : offen(m) ? "offen" : "gesperrt";
       html += '<a class="k-modulkarte k-' + status + '" href="#modul-' + m.nr + '"><span class="label">Modul ' + zwei(m.nr) + (m.entwurf ? " · Entwurf" : "") + "</span><strong>" + esc(m.titel) + "</strong>" +
-        "<span class=\"k-meta\">" + m.lektionen.length + " Lektionen · " + m.quiz.length + " Testfragen · " + (status === "bestanden" ? "bestanden" : status === "offen" ? "offen" : "gesperrt") + "</span></a>";
+        "<span class=\"k-meta\">" + m.lektionen.length + " Lektionen · " + m.pool.length + " Fragen im Pool · " + (status === "bestanden" ? "bestanden" : status === "offen" ? "offen" : "gesperrt") + "</span></a>";
     });
     html += "</div>" +
       '<section class="k-einstellungen"><h2>Prototyp-Einstellungen</h2>' +
@@ -123,6 +140,7 @@
       '<p><a class="btn" href="#modul-' + (m.nr - 1) + '">Zu Modul ' + zwei(m.nr - 1) + "</a></p></section>";
   }
 
+  var testFragen = [];
   function modulAnsicht(m, schritt) {
     if (!offen(m)) { gesperrt(m); return; }
     schritt = schritt || "lernen";
@@ -163,8 +181,9 @@
       if (!testBereit) {
         html += '<section class="k-lektion"><h2>Noch nicht bereit</h2><p>Markiere zuerst alle Lektionen als durchgearbeitet.</p><p><a class="btn" href="#modul-' + m.nr + '-lernen">Zu den Lektionen</a></p></section>';
       } else {
-        html += testFormular("modul-" + m.nr, m.quiz.map(function (f) { return Object.assign({ modul: m.nr }, f); }),
-          "Test zu Modul " + zwei(m.nr), "Bestanden ist der Test ab " + benoetigt(m.quiz.length) + " von " + m.quiz.length + " richtigen Antworten.");
+        testFragen = ziehe(m.pool, FRAGEN_JE_TEST, m.nr);
+        html += testFormular("modul-" + m.nr, testFragen, "Test zu Modul " + zwei(m.nr),
+          testFragen.length + " Fragen, zufällig aus " + m.pool.length + " Fragen gezogen. Bestanden ab " + benoetigt(testFragen.length) + " richtigen Antworten. Bei jedem Versuch kommen neue Fragen.");
       }
     }
     app.innerHTML = html;
@@ -172,7 +191,7 @@
     app.querySelectorAll("[data-gelesen]").forEach(function (c) { c.addEventListener("change", function () { stand.gelesen[c.dataset.gelesen] = c.checked; speichern(); zeichneNav(m.nr); }); });
     app.querySelectorAll("[data-uebung]").forEach(function (c) { c.addEventListener("change", function () { stand.uebung[c.dataset.uebung] = c.checked; speichern(); }); });
     var form = app.querySelector("form.k-test");
-    if (form) bindeTest(form, m.quiz, function (richtig, gesamt) {
+    if (form) bindeTest(form, testFragen, function (richtig, gesamt) {
       var ok = richtig >= benoetigt(gesamt);
       if (ok) { stand.bestanden[m.nr] = { richtig: richtig, gesamt: gesamt }; speichern(); zeichneNav(m.nr); }
       var naechstes = modul(m.nr + 1);
@@ -234,9 +253,7 @@
       return;
     }
     abschlussFragen = [];
-    MODULE.forEach(function (m) {
-      mischen(m.quiz).slice(0, ABSCHLUSS_JE_MODUL).forEach(function (f) { abschlussFragen.push(Object.assign({ modul: m.nr }, f)); });
-    });
+    MODULE.forEach(function (m) { abschlussFragen = abschlussFragen.concat(ziehe(m.pool, ABSCHLUSS_JE_MODUL, m.nr)); });
     var gesamt = abschlussFragen.length;
     app.innerHTML = '<section class="k-kopf"><p class="label">Abschluss</p><h1>Abschlusstest</h1><p class="lead">' + gesamt + " Fragen aus allen Modulen, bei jedem Versuch neu zusammengestellt. Bestanden ab " + benoetigt(gesamt) + " richtigen Antworten.</p>" +
       (stand.abschluss ? '<p class="fine">Letzter Versuch: ' + stand.abschluss.richtig + " von " + stand.abschluss.gesamt + (stand.abschluss.bestanden ? ", bestanden." : ", nicht bestanden.") + "</p>" : "") + "</section>" +
@@ -254,6 +271,8 @@
   // ---------- Router ----------
   function zeige() {
     var h = (window.location.hash || "#uebersicht").slice(1);
+    // Direktlink für den Prüfmodus: …#alles schaltet alle Module frei
+    if (h === "alles") { stand.vorschau = true; speichern(); h = "uebersicht"; }
     var treffer = /^modul-(\d+)(?:-(lernen|verstehen|ueben|testen))?$/.exec(h);
     if (treffer && modul(Number(treffer[1]))) {
       var m = modul(Number(treffer[1]));
