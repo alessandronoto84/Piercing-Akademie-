@@ -204,3 +204,19 @@
 @media (max-width:480px){.k-grafik{padding:1rem .75rem .85rem;margin-inline:-.25rem}}
 .k-grafik-hinweis{display:none;margin:.5rem 0 0;font-size:.8rem;color:var(--muted)}
 @media (max-width:600px){.k-grafik-hinweis{display:block}}
+
+/* ---------- Fotos aus dem Kursbuch ---------- */
+.k-db-bild{display:block;width:100%;max-width:220px;height:auto;border-radius:10px;border:1px solid var(--line);background:#fff}
+@media (min-width:640px){
+  .k-datenblatt.k-mit-bild{grid-template-columns:minmax(0,1fr) 180px;column-gap:20px}
+  .k-datenblatt.k-mit-bild>*{grid-column:1}
+  .k-datenblatt.k-mit-bild>.k-db-bild{grid-column:2;grid-row:1 / span 5;align-self:start}
+}
+.k-foto{margin:1.75rem 0;max-width:30rem}
+.k-foto img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line);background:#fff}
+.k-foto figcaption,.k-galerie figcaption{margin-top:.6rem;font-size:.9rem;color:var(--muted)}
+.k-galerie{margin:1.75rem 0;padding:1.25rem;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+.k-galerie ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(8.5rem,1fr));gap:12px}
+.k-galerie li{display:grid;gap:6px;margin:0}
+.k-galerie img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain;background:#fff;border-radius:10px;border:1px solid var(--line);padding:6px}
+.k-galerie span{font-size:.85rem;line-height:1.35;color:var(--ink)}

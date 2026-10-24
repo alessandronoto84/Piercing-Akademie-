@@ -13,6 +13,7 @@ KURS.module.push({
       inhalt: [
         { typ: "text", text: "Titan ist ein Hightech-Metall mit vielen besonderen Eigenschaften. Es wird für medizinische Geräte, Herzbypässe und Herzschrittmacher eingesetzt. Um eine Tonne Titan herzustellen, braucht man 16-mal mehr Energie als für eine Tonne Stahl." },
         { typ: "text", text: "Nicht jede Titanlegierung eignet sich für Bodypiercing. Für Piercing-Produkte wird ausschließlich das Hightech-Titan „Ti6Al4V ELI, Titan der Güteklasse 23“ verwendet, kurz G23-Titan. Es ist weltweit für den unbegrenzten chirurgischen Einsatz zugelassen, auch für Implantate wie Herzschrittmacher oder künstliche Gelenke, und wurde als biokompatibel eingestuft." },
+        { typ: "foto", id: "titan-schmuck", text: "Schmuck aus G23-Titan. Kursbuch S. 55." },
         { typ: "tabelle", kopf: ["Eigenschaft", "Bedeutung"], zeilen: [
           ["Wiegt nur die Hälfte von Stahl", "Angenehm zu tragen, auch bei langen Stäben"],
           ["Anodisierend färbbar", "Farbiger Schmuck ohne Beschichtung, durch stabile Oxidschichten"],

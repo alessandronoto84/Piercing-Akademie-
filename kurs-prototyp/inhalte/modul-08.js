@@ -195,7 +195,7 @@ window.KURS = window.KURS || { module: [] };
         inhalt: [
           { typ: "text", text: "Diese Lektion behandelt die Intimpiercings beim Mann aus dem Kursbuch ohne Abbildungen." },
           db("Frenulum", "Etwas unterhalb des Vorhautbändchens, damit das Bändchen nicht ausreißt. Heilt meist in vier bis acht Wochen; bei beschnittenen Männern nur möglich, wenn genug Bändchen vorhanden ist.", "Banane, Barbell", "16G, 18G", "Nadelauffangrohr, Freihand, Gazeklemme", "", "S. 97"),
-          db("Prinz Albert", "Von der Harnröhre bis zur Unterseite des Penis. Die Nadel zuerst etwas in die Kanüle zurückziehen, richtig platzieren, dann durch Vorschieben der Nadel stechen. Die Kunststoffkanüle darf nicht abknicken.", "BCR", "14G, 16G", "Freihand", "", "S. 98"),
+          db("Prinz Albert", "Von der Harnröhre bis zur Unterseite des Penis. Die Nadel zuerst etwas in die Kanüle zurückziehen, richtig platzieren, dann durch Vorschieben der Nadel stechen. Die Kunststoffkanüle darf nicht abknicken.", "BCR", "14G", "Freihand", "Standard der Akademie: 14G-Kanüle (im Kursbuch 14G oder 16G).", "S. 98"),
           db("Dydoe", "Durch den Rand der Eichel, überwiegend bei beschnittenen Männern.", "Banane, Barbell", "16G, 18G", "Freihand", "", "S. 99"),
           db("Pubic", "Am Penisansatz, meist waagerecht genau an der Übergangsstelle. Oberflächenpiercing, neigt zum Herauswachsen; Schambehaarung vorher entfernen.", "BCR, Barbell, Bar, Banane", "16G, 18G", "Freihand, Gazeklemme", "", "S. 100"),
           db("Hafada", "Auch Scrotal. In der Haut des Hodensacks, nicht sehr tief; geringe Gefahr des Herauswachsens.", "BCR, Banane", "16G, 18G", "Freihand, Snaptile, Gazeklemme", "", "S. 101"),

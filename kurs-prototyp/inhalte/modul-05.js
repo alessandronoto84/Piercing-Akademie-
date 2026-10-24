@@ -63,7 +63,8 @@ KURS.module.push({
       inhalt: [
         { typ: "text", text: "Mit der hygienischen Händedesinfektion soll in erster Linie die transiente Hautflora beseitigt werden. Sie verhindert, dass Mikroorganismen von einem Kunden zum nächsten übertragen werden." },
         { typ: "liste", titel: "Wann", punkte: ["vor und nach dem Kontakt mit dem Kunden", "vor Tätigkeiten in einem sterilen Umfeld", "nach dem Kontakt mit potenziell infektiösen Materialien", "nach dem Kontakt mit der unmittelbaren Umgebung des Kunden"] },
-        { typ: "text", text: "Das Desinfektionsmittel wird in alle Bereiche der Hand eingerieben. Achte besonders darauf, dass Handgelenke, Daumen, Fingerspitzen und Fingerzwischenräume dauerhaft benetzt sind. Der Vorgang dauert so lange wie die vom Hersteller empfohlene Einwirkzeit. Das Einreibe-Schema in acht Schritten findest du im Kursbuch auf S. 20." }
+        { typ: "text", text: "Das Desinfektionsmittel wird in alle Bereiche der Hand eingerieben. Achte besonders darauf, dass Handgelenke, Daumen, Fingerspitzen und Fingerzwischenräume dauerhaft benetzt sind. Der Vorgang dauert so lange wie die vom Hersteller empfohlene Einwirkzeit. Das Einreibe-Schema in acht Schritten zeigen die Bilder aus dem Kursbuch." },
+        { typ: "galerie", titel: "Einreibe-Schema in acht Schritten", bilder: [["haende-1", "Schritt 1"], ["haende-2", "Schritt 2"], ["haende-3", "Schritt 3"], ["haende-4", "Schritt 4"], ["haende-5", "Schritt 5"], ["haende-6", "Schritt 6"], ["haende-7", "Schritt 7"], ["haende-8", "Schritt 8"]], text: "Jeder Schritt wird mehrmals wiederholt, bis die Einwirkzeit erreicht ist. Kursbuch S. 20." }
       ],
       fragen: [
         ["Was soll die hygienische Händedesinfektion vor allem beseitigen?", ["Die transiente Hautflora", "Die gesamte Haut", "Nur Schmutz"], "Sie verhindert Übertragung zwischen Kunden.", "S. 19"],
@@ -181,6 +182,7 @@ KURS.module.push({
       seite: "S. 27",
       inhalt: [
         { typ: "text", text: "Nach dem Stechen muss die benutzte Nadel direkt und unmittelbar in einem Nadelabwurfbehälter entsorgt werden. Der volle Behälter wird verschlossen und kann dann im Restmüll entsorgt werden, aber nur komplett verschlossen." },
+        { typ: "foto", id: "nadelabwurf", text: "Nadelabwurfbehälter: verschließbar, durchstichsicher, in Griffweite. Kursbuch S. 27." },
         { typ: "text", text: "Der Mund-Nasen-Schutz ist ein Hilfsmittel aus der Medizin. Er verhindert, dass Keime durch Sekrettröpfchen beim Atmen übertragen werden oder auf rein zu haltende Oberflächen gelangen. Er reduziert die Ausbreitung von Keimen deutlich, ist aber keine perfekte Lösung: Er filtert den Atemstrom nicht zu 100 Prozent, Luft strömt an den Seiten vorbei, und frei schwebende Keime werden wegen der Größe der Filterporen nicht vollständig erfasst." }
       ],
       fragen: [
@@ -335,6 +337,7 @@ KURS.module.push({
       seite: "S. 40–41",
       inhalt: [
         { typ: "text", text: "Ein Autoklav (griechisch/lateinisch „selbstverschließend“) ist ein gas- und luftdicht verschließbarer Druckbehälter. In der Medizin ist es ein Gerät, in dem mittels Wasserdampf und Überdruck Instrumente und Schmuck sterilisiert werden. Das Grundprinzip ähnelt einem Dampfkochtopf." },
+        { typ: "foto", id: "autoklav", text: "Autoklav im Studio. Kursbuch S. 40." },
         { typ: "text", text: "Dampfautoklaven gibt es in Größen von einigen bis einigen hundert Litern. Sie haben eine Tür oder Klappe mit Schraub- oder Bajonettverschluss und mindestens ein Thermometer und ein Manometer (Druckmessgerät); moderne Geräte zeigen digital an." },
         { typ: "tabelle", kopf: ["Verfahren", "Wie die Luft entfernt wird"], zeilen: [["Vakuumverfahren (fraktioniertes Vorvakuum)", "Mehrmaliges Leerpumpen im Wechsel mit Dampfeinströmungen"], ["Strömungs- oder Gravitationsverfahren", "Sattdampf verdrängt die Luft (Dampfkochtopf-Prinzip)"]] },
         { typ: "merke", text: "Kommen keine Einweginstrumente zum Einsatz, sind Autoklaven mit Vorvakuum (Typ S oder besser Typ B) und automatischem Schreiber in der EU Pflicht. Beachte immer die lokale Gesetzeslage. Für den Betrieb wird immer häufiger ein Sachkundenachweis verlangt." }
@@ -359,6 +362,7 @@ KURS.module.push({
           "In sachgerechten Einheiten in dampfdurchlässige Folienschläuche bzw. Sterilisationsbeutel verpacken. Ein seitlicher Indikationsstreifen zeigt den Zustand der Verpackung an.",
           "Umgehend im Autoklav sterilisieren."
         ] },
+        { typ: "foto", id: "sterilgut", text: "Instrumente im Sterilisationsbeutel mit Indikatorstreifen. Kursbuch S. 43." },
         { typ: "grafik", id: "kreislauf" },
         { typ: "merke", text: "Sterilisation ist keine garantierte Abtötung aller Keime, sondern die Wahrscheinlichkeit, dass die Keimzahl um sechs Zehnerpotenzen reduziert wurde: Von einer Million Keimen überlebt theoretisch einer. Sie tötet sogar Bakteriensporen ab, etwa von Clostridium botulinum." }
       ],

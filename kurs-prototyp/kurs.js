@@ -85,8 +85,9 @@
         return '<div class="k-tabelle"><table><thead><tr>' + b.kopf.map(function (k) { return '<th scope="col">' + esc(k) + "</th>"; }).join("") + "</tr></thead><tbody>" +
           b.zeilen.map(function (z) { return "<tr>" + z.map(function (c, i) { return i === 0 ? '<th scope="row">' + esc(c) + "</th>" : "<td>" + esc(c) + "</td>"; }).join("") + "</tr>"; }).join("") + "</tbody></table></div>";
       case "datenblatt":
-        var nicht = /NICHT DURCHFÜHREN/.test(b.hinweis);
-        return '<article class="k-datenblatt' + (nicht ? " k-nicht" : "") + '"><header><h4>' + esc(b.name) + '</h4><span class="label">' + esc(b.seite) + "</span></header><p>" + esc(b.beschreibung) + "</p>" +
+        var nicht = /NICHT DURCHFÜHREN/.test(b.hinweis), bild = BILDER[kurzname(b.name)];
+        return '<article class="k-datenblatt' + (nicht ? " k-nicht" : "") + (bild ? " k-mit-bild" : "") + '"><header><h4>' + esc(b.name) + '</h4><span class="label">' + esc(b.seite) + "</span></header>" +
+          (bild ? '<img class="k-db-bild" src="' + bild.src + '" width="' + bild.w + '" height="' + bild.h + '" alt="' + esc(b.name) + '-Piercing, Foto aus dem Kursbuch" loading="lazy">' : "") + "<p>" + esc(b.beschreibung) + "</p>" +
           (nicht ? "" : "<dl><div><dt>Ersteinsatz</dt><dd>" + esc(b.ersteinsatz) + "</dd></div><div><dt>Kanüle</dt><dd>" + esc(b.kanuele) + "</dd></div><div><dt>Klemme</dt><dd>" + esc(b.klemme) + "</dd></div></dl>") +
           (b.hinweis ? '<p class="k-hinweis">' + esc(b.hinweis) + "</p>" : "") + "</article>";
       case "grafik":
@@ -94,8 +95,24 @@
         if (!g) return "";
         return figur(g.w, g.h, b.alt || g.alt, g.svg, b.text || g.text, b.titel);
       case "diagramm": return diagramm(b);
+      case "foto":
+        var f = BILDER[b.id];
+        if (!f) return "";
+        return '<figure class="k-foto"><img src="' + f.src + '" width="' + f.w + '" height="' + f.h + '" alt="' + esc(b.text) + '" loading="lazy"><figcaption>' + esc(b.text) + "</figcaption></figure>";
+      case "galerie":
+        return '<figure class="k-galerie">' + (b.titel ? '<p class="k-grafik-titel">' + esc(b.titel) + "</p>" : "") + "<ul>" +
+          b.bilder.filter(function (x) { return BILDER[x[0]]; }).map(function (x) {
+            var g = BILDER[x[0]];
+            return '<li><img src="' + g.src + '" width="' + g.w + '" height="' + g.h + '" alt="' + esc(x[1]) + '" loading="lazy"><span>' + esc(x[1]) + "</span></li>";
+          }).join("") + "</ul>" + (b.text ? "<figcaption>" + esc(b.text) + "</figcaption>" : "") + "</figure>";
       default: return "";
     }
+  }
+
+  var BILDER = KURS.bilder || {};
+  // "Lippenbändchen (Smiley)" -> "lippenbaendchen-smiley"
+  function kurzname(n) {
+    return n.toLowerCase().replace(/ä/g, "ae").replace(/ö/g, "oe").replace(/ü/g, "ue").replace(/ß/g, "ss").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
   }
 
   // Grafik als <figure>; auf schmalen Bildschirmen scrollt nur die Grafik, damit die Schrift lesbar bleibt

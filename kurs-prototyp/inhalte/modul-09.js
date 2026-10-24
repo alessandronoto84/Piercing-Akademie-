@@ -51,6 +51,7 @@ KURS.module.push({
       titel: "Der Stich",
       seite: "S. 112",
       inhalt: [
+        { typ: "foto", id: "stechen", text: "Stechen am Ohr mit Handschuhen und Kanüle. Kursbuch S. 111." },
         { typ: "schritte", start: 11, punkte: [
           "Klemme bzw. Nadelauffangrohr anlegen.",
           "Stechen, im Idealfall immer in die sichtbare Seite, beim Labret zum Beispiel dort, wo die Kugel sitzt. Je schneller gestochen wird, desto weniger Schmerzen.",
