@@ -242,3 +242,13 @@ footer a{color:var(--muted)}
 .legal .legal-h3{font-size:1.1rem;margin-top:24px}
 .legal .formular{list-style:none;padding:0}
 .legal .formular li{border-bottom:1px solid var(--line);padding:10px 0 22px}
+
+/* Online-Kurs-Seite */
+.steps.prinzip li{grid-template-columns:7rem minmax(0,1fr)}
+.steps.prinzip{margin-top:32px}
+#ablauf .note{margin-top:32px}
+.contact.contact-schmal{grid-template-columns:minmax(0,1fr)}
+.contact .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.contact .cta .btn{margin-top:0}
+.contact .btn.ghost-hell{background:transparent;color:var(--bg);border-color:var(--bg)}
+nav a[aria-current="page"]{color:var(--ink);font-weight:600}

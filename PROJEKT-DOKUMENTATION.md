@@ -149,6 +149,35 @@ Noch offen:
 
 ---
 
+## 7b. Online-Kurs („Fahrschule“)
+
+Stand 24.10.2026. Entscheidung: Kurs-Prototyp und Verkaufsseite bauen; Kursplattform noch offen.
+
+**Verkaufsseite `online-kurs.html`:** Lernprinzip, alle Module mit Lektionstiteln (aus den Kursdaten erzeugt), Ablauf, Preis (Paket Basis 249 €) und Anfrage über das bestehende Formular (`index.html?paket=basis#kontakt`). In der Navigation aller Seiten verlinkt, in der Sitemap eingetragen.
+
+**Kurs-Prototyp `kurs-prototyp/`:**
+- **Umfang:** 11 Module, 46 Lektionen, 34 Übungsaufgaben und 68 Testfragen; dazu ein Abschlusstest mit 22 Fragen, 2 pro Modul, bei jedem Versuch neu zusammengestellt.
+- **Lernprinzip:** Lernen → Verstehen (Zusammenfassung aller Merksätze und Warnhinweise) → Üben → Testen → Bestehen (ab 80 %) → nächstes Modul. Der Test öffnet sich erst, wenn alle Lektionen als durchgearbeitet markiert sind. Das nächste Modul öffnet sich erst nach bestandenem Test.
+- **Kein Backend:** Der Fortschritt wird nur im `localStorage` des Browsers gespeichert. Es gibt keinen Login, keine Bezahlung und keine Teilnahmebescheinigung; die Seite sagt das offen.
+- **Zum Durchsehen:** Ein Prüfmodus schaltet alle Module frei, „Fortschritt zurücksetzen“ löscht den Stand.
+- **Nicht öffentlich:** Der Ordner ist per `robots.txt` und `noindex` von Suchmaschinen ausgeschlossen. Trotzdem nicht auf die öffentliche Website hochladen, weil die Inhalte sonst frei abrufbar sind.
+- **Inhalte für die Kursplattform:** Pro Modul eine Datei `inhalte/modul-XX.js` mit Lektionen, Inhaltsblöcken (Text, Liste, Merke, Achtung, Ergänzung, Schritte, Tabelle, Datenblatt), Übungen und Testfragen samt Erklärung und Seitenangabe. Die Struktur lässt sich in jede Plattform übertragen.
+
+**Quellen und Kennzeichnung:**
+- **Grundlage ist das Kursbuch:** Seitenangaben stehen bei jeder Testfrage und im Kopf jedes Moduls.
+- **Korrigiert gegenüber dem Buch:** Kanülenmaße 1,3 / 1,7 / 2,2 mm, Octenisept, Chirurgenstahl, Niob.
+- **„Ergänzung der Akademie, fachlich prüfen“:** So markiert sind alle Stellen, die nicht aus dem Buch stammen, zum Beispiel Blutverdünner nicht eigenmächtig absetzen, Foto-Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO, ASTM F136, REACH-Grenzwert, Notruf 112 und „bei Fieber zum Arzt“.
+- **Module 03 und 11:** Sie sind neu und als Entwurf gekennzeichnet. Teile davon stammen aus dem Buch (Risikozonen, Abheilzeiten, Epithelisierung, Rahmenhygieneplan), die Grundlagen (Hautschichten, Wundheilungsphasen, Studio-Gründung) sind allgemeines Fachwissen und müssen fachlich geprüft werden.
+- **Bewusst abgeschwächt:** Bei Entzündungen steht im Buch „Eiter muss immer abfließen (rausdrücken)“. Im Kurs heißt es „Eiter muss abfließen können“, ergänzt um den Hinweis, bei Fieber oder sich ausbreitender Rötung zum Arzt zu gehen. Bitte bestätigen.
+- **Intimpiercings:** Datenblätter ohne Bilder, in einer eigenen Lektion „nur für Volljährige“.
+
+**Offen:**
+1. **Kursplattform:** Wahl der Plattform und Übernahme der Inhalte.
+2. **FernUSG:** Klärung, ob eine ZFU-Zulassung nötig ist (siehe Abschnitt 6, Punkt 8). Das betrifft genau diesen asynchronen Kurs mit Tests.
+3. **Fachliche Durchsicht:** Module 03 und 11 sowie alle „Ergänzungen“ fachlich prüfen.
+4. **Händlerliste:** Die bewährten Händler fehlen noch in Modul 11.
+5. **Zugangsdauer:** 12 Monate stehen auf der Verkaufsseite (aus dem AGB-Vorschlag); bitte bestätigen.
+
 ## 7a. Abgleich mit dem Kursbuch
 
 Quelle: „Die Piercing Akademie – Dein Weg zum Bodypiercer“ by 740 Piercing (Autor: Alessandro Noto, Herstellung: epubli), 116 Seiten plus Inhaltsverzeichnis, als Scan in drei PDF-Teilen geliefert am 21.10.2026. Gelesen wurden S. 1–97 und S. 110–116; die übrigen Seiten zum Intimbereich (S. 98–109) waren für die Website-Texte nicht relevant.

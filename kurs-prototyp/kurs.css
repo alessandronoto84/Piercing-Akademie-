@@ -1,0 +1,109 @@
+/* Kurs-Prototyp: baut auf ../assets/styles.css auf (Farben, Schriften, Buttons). Layout: Modulliste links, Inhalt rechts; auf dem Handy untereinander. */
+.k-banner{max-width:1120px;margin:0 auto;font-family:var(--f-mono);font-size:.8rem;background:var(--accent-soft);border-radius:0 0 4px 4px;padding:8px 14px}
+.k-layout{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:260px minmax(0,1fr);gap:clamp(24px,4vw,48px);align-items:start;padding-block:24px 64px}
+#kurs{min-width:0;outline:none}
+
+/* Modulliste */
+#kurs-nav{position:sticky;top:16px;display:grid;gap:6px;font-size:.95rem}
+.k-nav-liste{list-style:none;margin:0;padding:0;display:grid;gap:2px;border-block:1px solid var(--line);padding-block:6px}
+.k-nav-link{display:grid;grid-template-columns:2rem minmax(0,1fr) 1.2rem;gap:6px;align-items:baseline;padding:7px 8px;border-radius:3px;text-decoration:none;color:var(--ink)}
+.k-nav-haupt{grid-template-columns:minmax(0,1fr);font-weight:600}
+.k-nav-link .n{font-family:var(--f-mono);font-size:.8rem;color:var(--muted)}
+.k-nav-link:hover{background:var(--surface)}
+.k-nav-link.aktiv{background:var(--surface);box-shadow:inset 3px 0 0 var(--accent)}
+.k-nav-link.k-gesperrt{color:var(--muted)}
+.k-nav-link.k-bestanden .k-status{color:var(--accent);font-weight:700}
+
+/* Kopf und Übersicht */
+.k-kopf{padding-bottom:20px}
+.k-kopf h1{font-size:clamp(1.9rem,4.5vw,3rem)}
+.k-kopf .label{margin-bottom:12px}
+.k-kopf .lead{font-size:1.1rem;color:var(--muted);margin-top:14px;max-width:40em}
+.k-kopf .btn{margin-top:20px}
+.k-prinzip{list-style:none;margin:8px 0 24px;padding:0;display:flex;flex-wrap:wrap;gap:8px;counter-reset:p}
+.k-prinzip li{counter-increment:p;font-family:var(--f-mono);font-size:.82rem;border:1px solid var(--line);background:var(--surface);border-radius:3px;padding:6px 10px}
+.k-prinzip li::before{content:counter(p) " ";color:var(--accent)}
+.k-fortschritt{display:grid;gap:8px;margin-bottom:28px}
+.k-balken{height:10px;border-radius:5px;background:var(--line);overflow:hidden}
+.k-balken span{display:block;height:100%;background:var(--accent)}
+.k-modulraster{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.k-modulkarte{display:grid;gap:6px;align-content:start;padding:16px;border:1px solid var(--line);border-radius:4px;background:var(--surface);text-decoration:none;color:var(--ink)}
+.k-modulkarte strong{font-family:var(--f-display);font-size:1.1rem;line-height:1.2}
+.k-modulkarte .k-meta{font-size:.85rem;color:var(--muted)}
+.k-modulkarte.k-bestanden{border-color:var(--accent)}
+.k-modulkarte.k-gesperrt{opacity:.6}
+.k-einstellungen{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);display:grid;gap:12px}
+.k-einstellungen h2{font-size:1.2rem}
+.k-schalter{display:flex;gap:10px;align-items:center}
+.k-schalter input{width:1.1rem;height:1.1rem;accent-color:var(--accent)}
+.k-zuruecksetzen{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+
+/* Schritte im Modul */
+.k-stepper ol{list-style:none;margin:0 0 28px;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.k-stepper a,.k-stepper li>span{display:flex;gap:8px;align-items:center;padding:8px 12px;border:1px solid var(--line);border-radius:3px;text-decoration:none;color:var(--ink);font-weight:600;font-size:.95rem;background:var(--surface)}
+.k-stepper .n{font-family:var(--f-mono);font-size:.8rem;color:var(--muted)}
+.k-stepper a.aktiv{border-color:var(--accent);box-shadow:inset 0 -3px 0 var(--accent)}
+.k-stepper a.k-gesperrt{color:var(--muted)}
+.k-stepper .k-ok{border-color:var(--accent);color:var(--accent)}
+
+/* Lektionen */
+.k-lektion{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:clamp(18px,3vw,32px);margin-bottom:16px;display:grid;gap:14px}
+.k-lektion header,.k-datenblatt header{padding:0}
+.k-lektion header{display:grid;gap:6px}
+.k-lektion h2{font-size:clamp(1.35rem,3vw,1.75rem)}
+.k-lektion h4{font-family:var(--f-display);font-size:1.05rem;margin:0}
+.k-lektion p,.k-lektion li{max-width:42em}
+.k-lektion ul,.k-lektion ol{margin:0;padding-left:1.2em;display:grid;gap:6px}
+.k-schritte li::marker{font-family:var(--f-mono);color:var(--accent)}
+.k-box{border-radius:4px;padding:12px 16px;display:grid;gap:4px}
+.k-box strong{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;font-weight:500}
+.k-merke{background:var(--accent-soft)}
+.k-achtung{border:2px solid var(--error)}
+.k-achtung strong{color:var(--error)}
+.k-ergaenzung{border:1px dashed var(--muted)}
+.k-tabelle{overflow-x:auto}
+.k-tabelle table{border-collapse:collapse;width:100%;font-size:.95rem}
+.k-tabelle th,.k-tabelle td{text-align:left;vertical-align:top;padding:8px 10px;border-bottom:1px solid var(--line)}
+.k-tabelle thead th{font-family:var(--f-mono);font-size:.78rem;font-weight:500;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.k-tabelle tbody th{font-weight:600}
+.k-datenblatt{border:1px solid var(--line);border-radius:4px;padding:14px 16px;background:var(--bg);display:grid;gap:8px}
+.k-datenblatt header{display:flex;justify-content:space-between;gap:12px;align-items:baseline;flex-wrap:wrap}
+.k-datenblatt dl{margin:0;font-family:var(--f-mono);font-size:.9rem}
+.k-datenblatt dl div{display:grid;grid-template-columns:7.5rem minmax(0,1fr);gap:12px;padding:6px 0;border-top:1px solid var(--line)}
+.k-datenblatt dt{color:var(--muted)}
+.k-datenblatt dd{margin:0}
+.k-hinweis{font-weight:600}
+.k-nicht{border:2px solid var(--error)}
+.k-nicht .k-hinweis{color:var(--error)}
+.k-gelesen,.k-aufgaben label{display:flex;gap:10px;align-items:flex-start;font-weight:600}
+.k-gelesen{border-top:1px solid var(--line);padding-top:12px}
+.k-gelesen input,.k-aufgaben input,.k-frage input{width:1.15rem;height:1.15rem;margin:.2em 0 0;accent-color:var(--accent);flex:none}
+.k-aufgaben{list-style:none;padding:0 !important}
+.k-aufgaben label{font-weight:400}
+.k-weiter{margin:8px 0 0}
+
+/* Test */
+.k-test{display:grid;gap:14px}
+.k-test h2{font-size:clamp(1.35rem,3vw,1.75rem)}
+.k-frage{border:1px solid var(--line);border-radius:4px;padding:14px 16px;margin:0;background:var(--surface);display:grid;gap:8px;min-width:0}
+.k-frage legend{font-weight:600;padding:0 4px;display:flex;gap:8px}
+.k-frage legend .n{font-family:var(--f-mono);color:var(--accent)}
+.k-frage label{display:flex;gap:10px;align-items:flex-start}
+.k-frage.k-richtig{border-color:var(--accent)}
+.k-frage.k-falsch{border-color:var(--error)}
+.k-rueckmeldung{font-size:.95rem;border-top:1px solid var(--line);padding-top:8px}
+.k-falsch .k-rueckmeldung strong{color:var(--error)}
+.k-test-aktionen{display:flex;gap:10px;flex-wrap:wrap}
+.k-ergebnis .btn{margin-left:6px}
+
+.k-navbox{display:grid;gap:6px}
+.k-navbox>summary{display:none}
+.k-navbox>div{display:grid;gap:6px}
+@media (max-width:860px){
+  .k-layout{grid-template-columns:minmax(0,1fr);padding-top:12px}
+  #kurs-nav{position:static;border:1px solid var(--line);border-radius:4px;padding:8px;background:var(--surface)}
+  .k-navbox>summary{display:flex;justify-content:space-between;gap:12px;cursor:pointer;list-style:none;padding:6px 8px;font-weight:600}
+  .k-navbox>summary::-webkit-details-marker{display:none}
+  .k-navbox>summary::after{content:"+";font-family:var(--f-mono);color:var(--accent)}
+  .k-navbox[open]>summary::after{content:"–"}
+}
