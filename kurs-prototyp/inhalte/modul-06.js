@@ -11,7 +11,7 @@ KURS.module.push({
       titel: "Titan G23",
       seite: "S. 52–53",
       inhalt: [
-        { typ: "text", text: "Titan ist ein Hightech-Metall mit vielen besonderen Eigenschaften. Es wird für medizinische Geräte, Herzbypässe und Herzschrittmacher eingesetzt. Um eine Tonne Titan herzustellen, braucht man 16-mal mehr Energie als für eine Tonne Stahl." },
+        { typ: "text", text: "Titan ist ein Hightech-Metall mit vielen besonderen Eigenschaften. Es wird für medizinische Implantate wie Knochenschrauben, künstliche Gelenke und Herzschrittmachergehäuse eingesetzt. Um eine Tonne Titan herzustellen, braucht man 16-mal mehr Energie als für eine Tonne Stahl." },
         { typ: "text", text: "Nicht jede Titanlegierung eignet sich für Bodypiercing. Für Piercing-Produkte wird ausschließlich das Hightech-Titan „Ti6Al4V ELI, Titan der Güteklasse 23“ verwendet, kurz G23-Titan. Es ist weltweit für den unbegrenzten chirurgischen Einsatz zugelassen, auch für Implantate wie Herzschrittmacher oder künstliche Gelenke, und wurde als biokompatibel eingestuft." },
         { typ: "foto", id: "titan-schmuck", text: "Schmuck aus G23-Titan. Kursbuch S. 55." },
         { typ: "tabelle", kopf: ["Eigenschaft", "Bedeutung"], zeilen: [
@@ -21,15 +21,17 @@ KURS.module.push({
           ["Leitet kaum Wärme oder Kälte", "Angenehm auf der Haut"],
           ["Starker Oxidmantel", "Korrosionsresistent und dauerhaft farbbeständig"]
         ] },
+        { typ: "grafik", id: "anodisieren" },
         { typ: "ergaenzung", text: "Implant-Titan Ti6Al4V ELI wird international nach der Norm ASTM F136 spezifiziert. Achte beim Einkauf auf einen entsprechenden Materialnachweis." }
       ],
       fragen: [
-        ["Wie lautet die genaue Bezeichnung des G23-Titans?", ["Ti6Al4V ELI, Titan der Güteklasse 23", "Ti99 Rein", "Stahl 316L"], "Kurz G23-Titan.", "S. 53"],
-        ["Wie viel wiegt G23-Titan im Vergleich zu Stahl?", ["Etwa die Hälfte", "Doppelt so viel", "Genauso viel"], "Eine der Eigenschaften.", "S. 52"],
-        ["Wie lässt sich G23-Titan färben?", ["Durch Anodisieren", "Durch Lackieren", "Gar nicht"], "Elektrochemisches Verfahren.", "S. 52"],
-        ["Warum ist G23-Titan antiallergen?", ["Es ist nickelfrei", "Es ist vergoldet", "Es ist beschichtet"], "Deshalb ideal als Ersteinsatz.", "S. 52"],
-        ["Warum ist G23-Titan dauerhaft farbbeständig?", ["Wegen seines starken Oxidmantels", "Weil es lackiert ist", "Weil es aus Gold ist"], "Korrosionsresistent.", "S. 53"],
-        ["Wofür ist G23-Titan ebenfalls zugelassen?", ["Für Implantate wie Herzschrittmacher und künstliche Gelenke", "Nur für Modeschmuck", "Nur für Werkzeuge"], "Unbegrenzter chirurgischer Einsatz.", "S. 53"]
+        ["Wie lautet die genaue Bezeichnung des G23-Titans?", ["Ti6Al4V ELI, Titan der Güteklasse 23", "Ti6Al4V, Titan der Güteklasse 5", "Reintitan der Güteklasse 2", "Ti6Al7Nb, Titan der Güteklasse 23"], "Kurz G23-Titan.", "S. 53"],
+        ["Wie viel wiegt G23-Titan im Vergleich zu Stahl?", ["Etwa die Hälfte", "Etwa ein Viertel", "Etwa gleich viel", "Etwa doppelt so viel"], "Eine der Eigenschaften.", "S. 52"],
+        ["Wie lässt sich G23-Titan färben?", ["Durch Anodisieren", "Durch Galvanisieren mit Farbpigmenten", "Durch Pulverbeschichtung", "Durch Einbrennlack"], "Elektrochemisches Verfahren.", "S. 52"],
+        ["Warum ist G23-Titan antiallergen?", ["Es ist nickelfrei", "Es ist mit PTFE beschichtet", "Es enthält Vanadium, das Allergien hemmt", "Es ist vergoldet"], "Deshalb ideal als Ersteinsatz.", "S. 52"],
+        ["Warum ist G23-Titan dauerhaft farbbeständig?", ["Wegen seines starken Oxidmantels", "Weil die Farbe eingebrannt ist", "Weil es mit PVD beschichtet ist", "Weil es kaum Wärme leitet"], "Korrosionsresistent.", "S. 53"],
+        ["Wofür ist G23-Titan ebenfalls zugelassen?", ["Für Implantate wie künstliche Gelenke", "Nur für Schmuck und Uhren", "Nur für chirurgische Instrumente", "Für Lebensmittelverpackungen"], "Unbegrenzter chirurgischer Einsatz.", "S. 53"],
+        ["Wodurch entsteht beim Anodisieren die Farbe?", ["Durch eine Oxidschicht, deren Dicke von der Spannung abhängt", "Durch einen eingebrannten Farbstoff", "Durch eine PVD-Beschichtung", "Durch Beimischen anderer Metalle"], "Höhere Spannung, dickere Schicht, andere Farbe.", "S. 53"]
       ]
     },
     {
@@ -37,12 +39,13 @@ KURS.module.push({
       seite: "S. 54",
       inhalt: [
         { typ: "text", text: "Blackline-Titan G23 wird mit dem Verfahren PVD (Physical Vapor Deposition) beschichtet, das seit den 80er Jahren in der Medizin verbreitet ist. In einer Gasumgebung (Plasma) entsteht eine hauchdünne, abriebfeste Schicht, ohne das Material selbst zu verändern. Blackline-Piercings sind nahezu dauerhaft kratzbeständig, farbsicher und biochemisch verträglich." },
-        { typ: "text", text: "Zirkon-Gold-Titan G23 wurde als Alternative zu Goldschmuck entwickelt. Es ist hautverträglicher als Gold, verfärbt sich nur selten, hat eine glattere Oberfläche, wiegt weniger, ist preiswerter und dennoch widerstandsfähiger." }
+        { typ: "text", text: "Zirkon-Gold-Titan G23 wurde als Alternative zu Goldschmuck entwickelt. Es ist hautverträglicher als Gold, verfärbt sich nur selten, hat eine glattere Oberfläche, wiegt weniger, ist preiswerter und dennoch widerstandsfähiger." },
+        { typ: "ergaenzung", text: "Zirkon-Gold ist kein Gold, sondern eine goldfarbene Beschichtung, meist Zirkoniumnitrid im PVD-Verfahren. Die Vorteile oben sind Herstellerangaben. Beschichtungen können sich mit der Zeit abreiben; für den Ersteinsatz empfehlen Fachverbände wie die APP unbeschichtetes Material." }
       ],
       fragen: [
-        ["Mit welchem Verfahren wird Blackline-Titan beschichtet?", ["PVD (Physical Vapor Deposition)", "Galvanisieren", "Lackieren"], "Hauchdünn und abriebfest.", "S. 54"],
-        ["Welche Eigenschaften haben Blackline-Piercings?", ["Nahezu dauerhaft kratzbeständig, farbsicher und verträglich", "Sie verfärben sich nach wenigen Tagen", "Sie enthalten Nickel"], "Siehe Kursbuch.", "S. 54"],
-        ["Was ist Zirkon-Gold-Titan?", ["Eine hautverträglichere Alternative zu Goldschmuck", "Echtes Gold", "Chirurgenstahl"], "Glatter, leichter, preiswerter.", "S. 54"]
+        ["Mit welchem Verfahren wird Blackline-Titan beschichtet?", ["PVD (Physical Vapor Deposition)", "Galvanisieren", "Anodisieren", "Pulverbeschichtung"], "Hauchdünn und abriebfest.", "S. 54"],
+        ["Welche Eigenschaften haben Blackline-Piercings?", ["Nahezu dauerhaft kratzbeständig, farbsicher und verträglich", "Sie werden durch Anodisieren schwarz", "Sie enthalten schwarzes Nickel", "Sie sind besonders für den Ersteinsatz empfohlen"], "Siehe Kursbuch.", "S. 54"],
+        ["Was ist Zirkon-Gold-Titan?", ["Titan mit goldfarbener Beschichtung als Alternative zu Goldschmuck", "Massives 14-Karat-Gold", "Vergoldeter Chirurgenstahl", "Eine Gold-Titan-Legierung"], "Glatter, leichter, preiswerter.", "S. 54"]
       ]
     },
     {
@@ -54,10 +57,10 @@ KURS.module.push({
         { typ: "achtung", text: "Chirurgenstahl 316L enthält 10 bis 14 Prozent Nickel und ist als Ersteinsatz ungeeignet. Als Zweiteinsatz ist er meistens bedenkenlos." }
       ],
       fragen: [
-        ["Wie viel Nickel enthält Chirurgenstahl 316L?", ["10 bis 14 Prozent", "0 Prozent", "50 Prozent"], "Deshalb kein Ersteinsatz.", "S. 55"],
-        ["Welche drei Stähle verwenden Piercer als Schmuck?", ["Komposition D Implantatstahl, 316 LVM und 316L", "303er, 304er und 316L", "Nur 303er Stahl"], "Am häufigsten 316L.", "S. 55"],
-        ["Wofür ist Chirurgenstahl 316L geeignet?", ["Als Zweiteinsatz nach vollständiger Abheilung", "Als Ersteinsatz", "Gar nicht"], "Als Zweiteinsatz meist bedenkenlos.", "S. 55"],
-        ["Wofür wird 316L in der Medizin eingesetzt?", ["Zum Beispiel für Knochenschrauben und Herzschrittmacherelektroden", "Nur für Besteck", "Gar nicht"], "Dazu Nadeln, Platten, Nähte, Klammern.", "S. 55"]
+        ["Wie viel Nickel enthält Chirurgenstahl 316L?", ["10 bis 14 Prozent", "0 Prozent", "2 bis 4 Prozent", "18 bis 20 Prozent"], "Deshalb kein Ersteinsatz.", "S. 55"],
+        ["Welche drei Stähle verwenden Piercer als Schmuck?", ["Komposition D Implantatstahl, 316 LVM und 316L", "303er, 304er und 316L", "316L, 316 LVM und 303er", "Nur 316L"], "Am häufigsten 316L.", "S. 55"],
+        ["Wofür ist Chirurgenstahl 316L geeignet?", ["Als Zweiteinsatz nach vollständiger Abheilung", "Als Ersteinsatz bei Nickelallergikern", "Als Ersteinsatz bei Knorpelpiercings", "Nur für Werkzeuge, nicht für Schmuck"], "Als Zweiteinsatz meist bedenkenlos.", "S. 55"],
+        ["Wofür wird 316L in der Medizin eingesetzt?", ["Zum Beispiel für Knochenschrauben und Herzschrittmacherelektroden", "Nur für Einwegskalpelle", "Für Kontaktlinsen", "Für künstliche Herzklappen aus Titan"], "Dazu Nadeln, Platten, Nähte, Klammern.", "S. 55"]
       ]
     },
     {
@@ -71,11 +74,11 @@ KURS.module.push({
         { typ: "ergaenzung", text: "Nach EU-Recht (REACH, Anhang XVII, Eintrag 27) dürfen Metallteile, die in durchstochene Körperstellen eingesetzt werden, höchstens 0,2 µg Nickel pro cm² und Woche abgeben (Prüfung nach EN 1811). Die Regel der Akademie geht darüber hinaus." }
       ],
       fragen: [
-        ["Welche Materialien verwendest du als Ersteinsatz?", ["G23-Titan oder PTFE", "Chirurgenstahl 316L", "303er Stahl"], "Viele Menschen haben unbemerkt eine Nickelallergie.", "S. 56"],
-        ["Was gilt für 303er Stahl?", ["Er ruft bei Nickelsensitiven erhebliche Reaktionen hervor und ist zu meiden", "Er ist der beste Ersteinsatz", "Er ist nickelfrei"], "Hochschwefelhaltig.", "S. 56"],
-        ["Welche Materialien wären möglich, sind aber wirtschaftlich nicht sinnvoll?", ["Implantanium, Niob oder hochreines Gold", "Plastik und Holz", "303er Stahl"], "Im Buch „Nionium“, gemeint ist vermutlich Niob.", "S. 56"],
-        ["Wie viel Nickel darf Schmuck für frische Piercings nach EU-Recht höchstens abgeben?", ["0,2 µg pro cm² und Woche", "2 g pro Tag", "Beliebig viel"], "REACH, Eintrag 27 (Ergänzung).", "Ergänzung"],
-        ["Fall: Ein Kunde bringt eigenen Schmuck aus Chirurgenstahl für sein frisches Piercing mit. Was tust du?", ["Ich setze als Ersteinsatz G23-Titan oder PTFE ein", "Ich setze seinen Schmuck ein", "Ich steche ohne Schmuck"], "316L ist als Ersteinsatz ungeeignet.", "S. 55–56"]
+        ["Welche Materialien verwendest du als Ersteinsatz?", ["G23-Titan oder PTFE", "G23-Titan oder 316L", "PTFE oder Zirkon-Gold", "316 LVM oder Blackline-Titan"], "Viele Menschen haben unbemerkt eine Nickelallergie.", "S. 56"],
+        ["Was gilt für 303er Stahl?", ["Er ruft bei Nickelsensitiven erhebliche Reaktionen hervor und ist zu meiden", "Er ist als Zweiteinsatz unbedenklich", "Er ist nickelfrei, aber schwer zu verarbeiten", "Er ist identisch mit 316L"], "Hochschwefelhaltig.", "S. 56"],
+        ["Welche Materialien wären möglich, sind aber wirtschaftlich nicht sinnvoll?", ["Implantanium, Niob oder hochreines Gold", "PTFE und G23-Titan", "316L und 303er Stahl", "Blackline- und Zirkon-Gold-Titan"], "Im Buch „Nionium“, gemeint ist vermutlich Niob.", "S. 56"],
+        ["Wie viel Nickel darf Schmuck für frische Piercings nach EU-Recht höchstens abgeben?", ["0,2 µg pro cm² und Woche", "0,5 µg pro cm² und Woche", "2 µg pro cm² und Woche", "0,02 µg pro cm² und Tag"], "REACH, Eintrag 27 (Ergänzung).", "Ergänzung"],
+        ["Fall: Ein Kunde bringt eigenen Schmuck aus Chirurgenstahl für sein frisches Piercing mit. Was tust du?", ["Ich setze als Ersteinsatz G23-Titan oder PTFE ein", "Ich setze seinen Schmuck nach dem Autoklavieren ein", "Ich setze ihn ein, wenn er 4 mm Überlänge hat", "Ich setze ihn ein, wenn der Kunde unterschreibt"], "316L ist als Ersteinsatz ungeeignet.", "S. 55–56"]
       ]
     },
     {
@@ -87,11 +90,11 @@ KURS.module.push({
         { typ: "merke", text: "Die Symptome zeigen sich erst rund 48 bis 72 Stunden nach dem Kontakt. Mediziner sprechen von einer Spättyp-Allergie. Das macht sie schwer zu erkennen." }
       ],
       fragen: [
-        ["Woran erkennt man eine Nickelallergie auf der Haut?", ["Rötung, Schwellung, raue, trockene und juckende Haut", "Blaue Flecken", "Haarausfall"], "Manchmal nässende Kontaktekzeme.", "S. 57"],
-        ["Wann treten die Symptome einer Nickelallergie auf?", ["Etwa 48 bis 72 Stunden nach dem Kontakt", "Sofort", "Erst nach Wochen"], "Spättyp-Allergie.", "S. 57"],
-        ["Wie nennt man eine Allergie, die erst Tage nach dem Kontakt auftritt?", ["Spättyp-Allergie", "Soforttyp-Allergie", "Kontaktlinsenallergie"], "Typisch für Nickel.", "S. 57"],
-        ["Kann sich der Ausschlag über den ganzen Körper ausbreiten?", ["Ja, bei einigen Betroffenen", "Nein, nie", "Nur an den Händen"], "So steht es im Kursbuch.", "S. 57"],
-        ["Fall: Drei Tage nach einem Schmuckwechsel auf Stahl juckt und nässt die Stelle. Woran denkst du?", ["An eine Nickelallergie (Spättyp)", "An eine normale Heilung", "An zu wenig Pflege"], "Symptome nach 48 bis 72 Stunden.", "S. 57"]
+        ["Woran erkennt man eine Nickelallergie auf der Haut?", ["Rötung, Schwellung, raue, trockene und juckende Haut", "Blaue Verfärbung um den Stichkanal", "Wildes Fleisch am Stichkanal", "Sofortige Schwellung innerhalb von Minuten"], "Manchmal nässende Kontaktekzeme.", "S. 57"],
+        ["Wann treten die Symptome einer Nickelallergie auf?", ["Etwa 48 bis 72 Stunden nach dem Kontakt", "Innerhalb von Minuten", "Nach 2 bis 6 Stunden", "Erst nach 2 bis 3 Wochen"], "Spättyp-Allergie.", "S. 57"],
+        ["Wie nennt man eine Allergie, die erst Tage nach dem Kontakt auftritt?", ["Spättyp-Allergie", "Soforttyp-Allergie", "Kreuzallergie", "Pseudoallergie"], "Typisch für Nickel.", "S. 57"],
+        ["Kann sich der Ausschlag über den ganzen Körper ausbreiten?", ["Ja, bei einigen Betroffenen", "Nein, er bleibt immer am Schmuck", "Nur bei Knorpelpiercings", "Nur bei Kindern"], "So steht es im Kursbuch.", "S. 57"],
+        ["Fall: Drei Tage nach einem Schmuckwechsel auf Stahl juckt und nässt die Stelle. Woran denkst du?", ["An eine Nickelallergie (Spättyp)", "An wildes Fleisch", "An eine normale Entzündungsphase", "An eine Perichondritis"], "Symptome nach 48 bis 72 Stunden.", "S. 57"]
       ]
     },
     {
@@ -100,16 +103,16 @@ KURS.module.push({
       inhalt: [
         { typ: "text", text: "PTFE (Polytetrafluorethylen) ist ein vollfluoriertes Polymer, umgangssprachlich oft mit dem Handelsnamen Teflon bezeichnet. Weitere Handelsnamen sind Dyneon PTFE (ehemals Hostaflon) und Gore-Tex für PTFE-Membranen. PTFE zählt zu den Thermoplasten, zeigt aber auch Eigenschaften von Duroplasten." },
         { typ: "text", text: "Entgegen einer verbreiteten Meinung ist PTFE kein Nebenprodukt der Raumfahrt, die erst 1957 begann. Dr. Roy Plunkett entdeckte es 1938 bei DuPont durch Zufall, als er nach einem Kältemittel für Kühlschränke suchte. 1943 diente es erstmals als Korrosionsschutz, 1954 kam Colette Grégoire auf die Idee, Pfannen damit zu beschichten." },
-        { typ: "liste", titel: "Besonderheiten", punkte: ["sehr reaktionsträge: selbst Königswasser greift es nicht an, weil die Bindung zwischen Kohlenstoff und Fluor sehr stark ist", "sehr geringer Reibungskoeffizient", "an PTFE haftet so gut wie nichts, das macht es zum idealen Ersteinsatz", "mit PTFE als Ersteinsatz sind deutlich kürzere Abheilzeiten möglich als mit Titan", "wegen der hohen Wärmebeständigkeit problemlos autoklavierbar"] },
+        { typ: "liste", titel: "Besonderheiten", punkte: ["sehr reaktionsträge: selbst Königswasser greift es nicht an, weil die Bindung zwischen Kohlenstoff und Fluor sehr stark ist", "sehr geringer Reibungskoeffizient", "an PTFE haftet so gut wie nichts, das macht es zum idealen Ersteinsatz", "mit PTFE als Ersteinsatz sind laut Kursbuch deutlich kürzere Abheilzeiten möglich als mit Titan (Erfahrungswert, nicht durch Studien belegt)", "wegen der hohen Wärmebeständigkeit problemlos autoklavierbar"] },
         { typ: "achtung", text: "Ausnahme: Beim Zungenpiercing kein PTFE verwenden (S. 90)." }
       ],
       fragen: [
-        ["Wofür steht die Abkürzung PTFE?", ["Polytetrafluorethylen", "Polyethylen-Titan", "Plastik-Teflon-Feinstahl"], "Handelsname Teflon.", "S. 58"],
-        ["Wer entdeckte PTFE?", ["Dr. Roy Plunkett bei DuPont, 1938", "Die NASA, 1957", "Marie Curie"], "Zufällig, bei der Suche nach einem Kältemittel.", "S. 59"],
-        ["Ist PTFE ein Nebenprodukt der Raumfahrt?", ["Nein, es wurde schon 1938 entdeckt", "Ja", "Ja, 1969"], "Die Raumfahrt begann erst 1957.", "S. 59"],
-        ["Warum ist PTFE ein idealer Ersteinsatz?", ["An PTFE haftet so gut wie nichts", "Es ist besonders schwer", "Es ist magnetisch"], "Kürzere Abheilzeiten möglich.", "S. 60"],
-        ["Lässt sich PTFE autoklavieren?", ["Ja, problemlos", "Nein", "Nur einmal"], "Hohe Wärmebeständigkeit.", "S. 60"],
-        ["Bei welchem Piercing verwendest du kein PTFE?", ["Beim Zungenpiercing", "Beim Lobe", "Beim Helix"], "Hinweis im Datenblatt Zunge.", "S. 90"]
+        ["Wofür steht die Abkürzung PTFE?", ["Polytetrafluorethylen", "Polytetrafluorethan", "Polyethylenterephthalat", "Polytitanfluorelement"], "Handelsname Teflon.", "S. 58"],
+        ["Wer entdeckte PTFE?", ["Dr. Roy Plunkett bei DuPont, 1938", "Colette Grégoire, 1954", "Die NASA, 1957", "Wilbert Gore, 1969"], "Zufällig, bei der Suche nach einem Kältemittel.", "S. 59"],
+        ["Ist PTFE ein Nebenprodukt der Raumfahrt?", ["Nein, es wurde schon 1938 entdeckt", "Ja, es wurde 1957 für Raketen entwickelt", "Ja, es kam mit der Mondlandung 1969", "Nein, es wurde 1954 für Pfannen erfunden"], "Die Raumfahrt begann erst 1957.", "S. 59"],
+        ["Warum ist PTFE ein idealer Ersteinsatz?", ["An PTFE haftet so gut wie nichts", "Es ist besonders starr und formstabil", "Es gibt Silberionen ab, die Keime töten", "Es ist schwerer als Titan und sitzt stabiler"], "Kürzere Abheilzeiten möglich.", "S. 60"],
+        ["Lässt sich PTFE autoklavieren?", ["Ja, problemlos", "Nein, es schmilzt bei 134 °C", "Nur bei 121 °C", "Nur im Heißluftsterilisator"], "Hohe Wärmebeständigkeit.", "S. 60"],
+        ["Bei welchem Piercing verwendest du kein PTFE?", ["Beim Zungenpiercing", "Beim Lobe", "Beim Helix", "Beim Bauchnabel"], "Hinweis im Datenblatt Zunge.", "S. 90"]
       ]
     },
     {
@@ -136,12 +139,12 @@ KURS.module.push({
         { typ: "ergaenzung", text: "Die Normen stammen aus den Mindeststandards der Association of Professional Piercers (APP) und aus Herstellerangaben (siehe KURS-RECHERCHE.md, Abschnitt 9). Die APP lässt auch Implantatstahl und Gold als Ersteinsatz zu; die Akademie bleibt bei ihrer strengeren Regel: G23-Titan oder PTFE." }
       ],
       fragen: [
-        ["Welche Norm gehört zu Titan G23 (Ti6Al4V ELI)?", ["ASTM F136", "ASTM F138", "DIN A4"], "Auch ISO 5832-3.", "Ergänzung"],
-        ["Welche Norm gehört zu Implantatstahl 316LVM?", ["ASTM F138", "ASTM F136", "ASTM F67"], "Er enthält Nickel; in der Akademie kein Ersteinsatz.", "Ergänzung"],
-        ["Warum ist ein Innengewinde beim Ersteinsatz besser?", ["Der Stab ist glatt und reibt nicht durch den Stichkanal", "Es ist billiger", "Die Kugel sitzt lockerer"], "Ein Außengewinde schrammt beim Einsetzen.", "Ergänzung"],
-        ["Was verlangst du beim Einkauf vom Hersteller?", ["Ein Materialzertifikat", "Ein Werbefoto", "Nichts"], "Nur so ist das Material belegt.", "Ergänzung"],
-        ["Welches Gold entspricht dem APP-Mindeststandard?", ["Massiv, mindestens 14 Karat, nickel- und cadmiumfrei", "Vergoldetes Messing", "Jedes Gold"], "Eine Vergoldung kann sich abreiben.", "Ergänzung"],
-        ["Wie muss die Oberfläche eines Ersteinsatzes sein?", ["Spiegelglatt poliert, ohne Kratzer und Grate", "Rau, damit er besser hält", "Lackiert"], "Raue Stellen reizen den Stichkanal.", "Ergänzung"]
+        ["Welche Norm gehört zu Titan G23 (Ti6Al4V ELI)?", ["ASTM F136", "ASTM F138", "ASTM F67", "EN 1811"], "Auch ISO 5832-3.", "Ergänzung"],
+        ["Welche Norm gehört zu Implantatstahl 316LVM?", ["ASTM F138", "ASTM F136", "ASTM F67", "ISO 5832-3"], "Er enthält Nickel; in der Akademie kein Ersteinsatz.", "Ergänzung"],
+        ["Warum ist ein Innengewinde beim Ersteinsatz besser?", ["Der Stab ist glatt und reibt nicht durch den Stichkanal", "Die Kugel lässt sich leichter verlieren", "Es ist günstiger herzustellen", "Es erlaubt dickere Kugeln"], "Ein Außengewinde schrammt beim Einsetzen.", "Ergänzung"],
+        ["Was verlangst du beim Einkauf vom Hersteller?", ["Ein Materialzertifikat", "Eine CE-Kennzeichnung für Modeschmuck", "Ein Foto des Schmucks am Modell", "Eine Rücknahmegarantie"], "Nur so ist das Material belegt.", "Ergänzung"],
+        ["Welches Gold entspricht dem APP-Mindeststandard?", ["Massiv, mindestens 14 Karat, nickel- und cadmiumfrei", "Vergoldet, mindestens 18 Karat Auflage", "Massiv, mindestens 8 Karat", "Weißgold mit Nickelanteil"], "Eine Vergoldung kann sich abreiben.", "Ergänzung"],
+        ["Wie muss die Oberfläche eines Ersteinsatzes sein?", ["Spiegelglatt poliert, ohne Kratzer und Grate", "Matt gebürstet, damit er nicht rutscht", "Leicht angeraut für besseren Halt im Gewebe", "Mit Gussnaht, das ist bei Titan normal"], "Raue Stellen reizen den Stichkanal.", "Ergänzung"]
       ]
     },
     {
@@ -157,10 +160,10 @@ KURS.module.push({
         { typ: "grafik", id: "staebe" }
       ],
       fragen: [
-        ["Wie heißt der leicht gebogene Stab mit Kugeln?", ["Curved Barbell (Banane)", "Labret", "Segmentring"], "Meist für Bauchnabel, Augenbraue, Rook.", "S. 61"],
-        ["Was ist ein Barbell?", ["Ein Metallstift mit Gewinde und verschraubbaren Kugeln", "Ein offener Ring", "Ein Stecker mit Platte"], "Engl. Hantel.", "S. 61"],
-        ["Was hat ein Labret Stud an einem Ende?", ["Eine Platte", "Einen Haken", "Ein Scharnier"], "Am anderen Ende ein Gewinde.", "S. 62"],
-        ["Bei welchen Piercings wird ein Labret-Stecker auch getragen?", ["Zum Beispiel Tragus und Conch", "Nur beim Bauchnabel", "Nur im Intimbereich"], "Nicht nur beim Labret.", "S. 62"]
+        ["Wie heißt der leicht gebogene Stab mit Kugeln?", ["Curved Barbell (Banane)", "Circular Barbell", "Labret Stud", "Threaded Ring"], "Meist für Bauchnabel, Augenbraue, Rook.", "S. 61"],
+        ["Was ist ein Barbell?", ["Ein gerader Metallstift mit Gewinde und verschraubbaren Kugeln", "Ein gebogener Stab mit Kugeln", "Ein Stecker mit Platte", "Ein offener Ring mit Gewinde"], "Engl. Hantel.", "S. 61"],
+        ["Was hat ein Labret Stud an einem Ende?", ["Eine Platte", "Eine Kugel mit Einbuchtungen", "Ein Scharnier", "Ein Segment"], "Am anderen Ende ein Gewinde.", "S. 62"],
+        ["Bei welchen Piercings wird ein Labret-Stecker auch getragen?", ["Zum Beispiel Tragus und Conch", "Vor allem beim Industrial", "Vor allem beim Bauchnabel", "Vor allem beim Septum"], "Nicht nur beim Labret.", "S. 62"]
       ]
     },
     {
@@ -177,11 +180,11 @@ KURS.module.push({
         { typ: "text", text: "Weitere Formen sind zum Beispiel Bars, Dermal Anchor und Nose Studs." }
       ],
       fragen: [
-        ["Wie wird ein Segmentring geschlossen?", ["Das Segment wird mit einer Zange in die Vertiefungen eingesetzt", "Mit einem Klick", "Mit Kleber"], "Er besteht aus zwei Teilen.", "S. 62"],
-        ["Wie öffnet und schließt ein Clicker-Ring?", ["Mit Scharnier und „Klick“, ohne Werkzeug", "Nur mit Zange", "Gar nicht"], "Zwei fest verbundene Teile.", "S. 62"],
-        ["Wie nennt man den Ring, dessen Kugel in die Ringöffnung einrastet?", ["Ball Closure Ring (BCR)", "Clicker", "Segmentring"], "Auch Klemmkugelring.", "S. 63"],
-        ["Womit wird ein BCR zum Einsetzen der Kugel geöffnet?", ["Mit einer Spreizzange", "Mit einer Schere", "Mit den Zähnen"], "Vorsichtig dehnen.", "S. 63"],
-        ["Wie nennt man den Threaded Ring auch?", ["Hufeisen", "Banane", "Clicker"], "Offener Ring mit Gewinde an beiden Enden.", "S. 63"]
+        ["Wie wird ein Segmentring geschlossen?", ["Das Segment wird mit einer Zange in die Vertiefungen eingesetzt", "Mit einem Scharnier und Klick", "Eine Kugel rastet in die Öffnung ein", "Mit Gewindekugeln an beiden Enden"], "Er besteht aus zwei Teilen.", "S. 62"],
+        ["Wie öffnet und schließt ein Clicker-Ring?", ["Mit Scharnier und „Klick“, ohne Werkzeug", "Mit der Ringöffnungszange", "Durch Herausdrehen einer Kugel", "Durch Einsetzen eines Segments"], "Zwei fest verbundene Teile.", "S. 62"],
+        ["Wie nennt man den Ring, dessen Kugel in die Ringöffnung einrastet?", ["Ball Closure Ring (BCR)", "Clicker", "Segmentring", "Threaded Ring"], "Auch Klemmkugelring.", "S. 63"],
+        ["Womit wird ein BCR zum Einsetzen der Kugel geöffnet?", ["Mit einer Spreizzange (Ringöffnungszange)", "Mit dem Kugelgreifer", "Mit der Klemmzange", "Mit dem Seitenschneider"], "Vorsichtig dehnen.", "S. 63"],
+        ["Wie nennt man den Threaded Ring auch?", ["Hufeisen", "Banane", "Clicker", "Captive Ring"], "Offener Ring mit Gewinde an beiden Enden.", "S. 63"]
       ]
     },
     {
@@ -190,12 +193,13 @@ KURS.module.push({
       inhalt: [
         { typ: "achtung", text: "Der Ersteinsatz muss stets eine Überlänge von etwa 4 mm haben. Der frische Stichkanal kann anschwellen und darf während der Heilungsphase niemals durch Kugeln oder Plättchen verschlossen bzw. eingeengt werden." },
         { typ: "grafik", id: "ueberlaenge" },
+        { typ: "grafik", id: "lobe3d" },
         { typ: "praxis", text: "Miss die Stelle mit dem Messschieber und plane die Überlänge ein, bevor du den Ersteinsatz aus der Sterilverpackung nimmst. Nach der Abheilung kann ein kürzerer Zweiteinsatz folgen." }
       ],
       fragen: [
-        ["Wie viel Überlänge braucht ein Ersteinsatz?", ["Etwa 4 mm", "Keine", "Etwa 2 cm"], "Der frische Stichkanal kann anschwellen.", "S. 74"],
-        ["Warum darf der Ersteinsatz nicht zu kurz sein?", ["Weil Kugeln oder Plättchen sonst bei Schwellung einengen", "Weil er sonst zu leicht ist", "Weil er sonst nicht glänzt"], "Grundregel aus Kap. 10.", "S. 74"],
-        ["Womit misst du die Stelle für den Schmuck?", ["Mit dem Messschieber", "Mit dem Augenmaß", "Mit der Schere"], "Siehe Werkzeuge in Modul 7.", "S. 68"]
+        ["Wie viel Überlänge braucht ein Ersteinsatz?", ["Etwa 4 mm", "Etwa 1 mm", "Etwa 8 mm", "Etwa 1 cm"], "Der frische Stichkanal kann anschwellen.", "S. 74"],
+        ["Warum darf der Ersteinsatz nicht zu kurz sein?", ["Weil Kugeln oder Plättchen sonst bei Schwellung einengen", "Weil er sonst leichter herausfällt", "Weil kurze Stäbe mehr Nickel abgeben", "Weil er sich sonst schlechter reinigen lässt"], "Grundregel aus Kap. 10.", "S. 74"],
+        ["Womit misst du die Stelle für den Schmuck?", ["Mit dem Messschieber", "Mit dem Lineal auf der Haut", "Mit dem Nadelauffangrohr", "Mit dem Augenmaß und dem Hautmarker"], "Siehe Werkzeuge in Modul 7.", "S. 68"]
       ]
     }
   ],

@@ -19,10 +19,10 @@ KURS.module.push({
         { typ: "ergaenzung", text: "Die Durchmesser entsprechen der Herstellerangabe für Venenverweilkanülen. Im Kursbuch stehen 1,2 / 1,6 / 2,1 mm; 1,2 und 1,6 mm sind die Schmuckstärken, die die Akademie mit 18G bzw. 16G sticht (nächste Lektion)." }
       ],
       fragen: [
-        ["In wie vielen Stärken arbeitet man beim Piercen hauptsächlich?", ["In drei", "In einer", "In zehn"], "18G, 16G und 14G.", "S. 64"],
-        ["Was bedeutet eine größere Gauge-Zahl?", ["Eine dünnere Kanüle", "Eine dickere Kanüle", "Eine längere Kanüle"], "18G 1,3 mm, 14G 2,2 mm.", "S. 64"],
-        ["Woran erkennst du die Stärke schnell?", ["An der Farbe des Ansatzes", "Am Geruch", "Am Gewicht"], "Grün, grau, orange.", "S. 64"],
-        ["Welcher Teil der Venenverweilkanüle bleibt nach dem Stich im Stichkanal?", ["Der Kunststoffüberzug", "Die Stahlnadel", "Der Griff"], "Er führt den Schmuck.", "S. 112"]
+        ["In wie vielen Stärken arbeitet man beim Piercen hauptsächlich?", ["In drei", "In zwei", "In fünf", "In einer"], "18G, 16G und 14G.", "S. 64"],
+        ["Was bedeutet eine größere Gauge-Zahl?", ["Eine dünnere Kanüle", "Eine dickere Kanüle", "Eine längere Kanüle", "Eine kürzere Kanüle"], "18G 1,3 mm, 14G 2,2 mm.", "S. 64"],
+        ["Woran erkennst du die Stärke schnell?", ["An der Farbe des Ansatzes", "An der Länge der Nadel", "An der Farbe der Verpackung", "Am Schliff der Nadelspitze"], "Grün, grau, orange.", "S. 64"],
+        ["Welcher Teil der Venenverweilkanüle bleibt nach dem Stich im Stichkanal?", ["Der Kunststoffüberzug", "Die Stahlnadel", "Der Griff mit dem Ansatz", "Nadel und Überzug zusammen"], "Er führt den Schmuck.", "S. 112"]
       ]
     },
     {
@@ -51,18 +51,18 @@ KURS.module.push({
         { typ: "ergaenzung", text: "Schmuckstärken nach gängigen Händlertabellen, Kanülenmaße nach Herstellerangabe (siehe KURS-RECHERCHE.md, Abschnitt 9). Die Kombinationen sind der Standard der Piercing Akademie." }
       ],
       fragen: [
-        ["Welche Stabstärke hat Schmuck in 16G?", ["1,2 mm", "1,7 mm", "2,2 mm"], "Eine 16G-Kanüle hat dagegen 1,7 mm.", "Ergänzung"],
-        ["Welche Stabstärke hat Schmuck in 14G?", ["1,6 mm", "2,2 mm", "1,0 mm"], "Eine 14G-Kanüle hat 2,2 mm.", "Ergänzung"],
-        ["Welche Kanüle nimmt die Akademie für Schmuck mit 1,2 mm?", ["18G", "16G", "14G"], "18G-Kanüle mit 1,3 mm Außendurchmesser.", "Akademie"],
-        ["Welche Kanüle nimmt die Akademie für Schmuck mit 1,6 mm?", ["16G", "18G", "14G"], "16G-Kanüle mit 1,7 mm Außendurchmesser.", "Akademie"],
-        ["Fall: Du bestellst Ersteinsätze in 16G. Mit welcher Kanüle stichst du sie?", ["Mit der 18G-Kanüle, denn 16G-Schmuck hat 1,2 mm", "Mit der 16G-Kanüle, gleiche Zahl", "Mit der 14G-Kanüle"], "Schmuck-Gauge und Kanülen-Gauge sind nicht dieselben Millimeter.", "Akademie"],
-        ["Mit welcher Kanüle sticht die Akademie ein normales Lobe?", ["18G", "14G", "12G"], "14G nur, wenn ein Tunnel gewünscht ist.", "S. 74"],
-        ["Wann nimmst du beim Lobe die 14G-Kanüle?", ["Nur wenn ein Tunnel gewünscht ist", "Immer", "Nie"], "Sonst sticht die Akademie das Lobe mit 18G.", "S. 74"],
-        ["Mit welcher Kanüle sticht die Akademie das Prinz Albert?", ["14G", "18G", "20G"], "Laut Datenblatt; der Ersteinsatz ist ein BCR.", "S. 98"],
-        ["Bedeutet 16G bei Kanüle und Schmuck dieselben Millimeter?", ["Nein, die 16G-Kanüle ist mit 1,7 mm dicker als 16G-Schmuck mit 1,2 mm", "Ja, genau gleich", "Gauge gibt es nur bei Schmuck"], "Kanülen und Schmuck werden unterschiedlich gemessen.", "Ergänzung"],
-        ["Warum ist die Kanüle dicker als der Schmuck?", ["Weil der Schmuck in den Kunststoffüberzug gesteckt wird", "Damit es weniger blutet", "Das ist sie nicht"], "Siehe Modul 9, Der Stich.", "Ergänzung"],
-        ["Was gilt für Schmuck: Je größer die Gauge-Zahl …", ["… desto dünner der Stab", "… desto dicker der Stab", "… desto länger der Stab"], "Wie bei Kanülen.", "Ergänzung"],
-        ["Wo probierst du eine neue Kombination aus Kanüle und Schmuck aus?", ["Vorher am Übungsmodell", "Direkt am Kunden", "Gar nicht"], "Nicht erst am Kunden.", "Ergänzung"]
+        ["Welche Stabstärke hat Schmuck in 16G?", ["1,2 mm", "1,7 mm", "1,6 mm", "1,0 mm"], "Eine 16G-Kanüle hat dagegen 1,7 mm.", "Ergänzung"],
+        ["Welche Stabstärke hat Schmuck in 14G?", ["1,6 mm", "2,2 mm", "1,2 mm", "2,0 mm"], "Eine 14G-Kanüle hat 2,2 mm.", "Ergänzung"],
+        ["Welche Kanüle nimmt die Akademie für Schmuck mit 1,2 mm?", ["18G", "16G", "14G", "20G"], "18G-Kanüle mit 1,3 mm Außendurchmesser.", "Akademie"],
+        ["Welche Kanüle nimmt die Akademie für Schmuck mit 1,6 mm?", ["16G", "18G", "14G", "12G"], "16G-Kanüle mit 1,7 mm Außendurchmesser.", "Akademie"],
+        ["Fall: Du bestellst Ersteinsätze in 16G. Mit welcher Kanüle stichst du sie?", ["Mit der 18G-Kanüle, denn 16G-Schmuck hat 1,2 mm", "Mit der 16G-Kanüle, gleiche Zahl", "Mit der 14G-Kanüle, eine Stufe dicker", "Mit der 20G-Kanüle"], "Schmuck-Gauge und Kanülen-Gauge sind nicht dieselben Millimeter.", "Akademie"],
+        ["Mit welcher Kanüle sticht die Akademie ein normales Lobe?", ["18G", "16G", "14G", "Punch"], "14G nur, wenn ein Tunnel gewünscht ist.", "S. 74"],
+        ["Wann nimmst du beim Lobe die 14G-Kanüle?", ["Nur wenn ein Tunnel gewünscht ist", "Bei jedem Lobe", "Bei Kunden mit dickem Ohrläppchen", "Bei einem Upper Lobe"], "Sonst sticht die Akademie das Lobe mit 18G.", "S. 74"],
+        ["Mit welcher Kanüle sticht die Akademie das Prinz Albert?", ["14G", "16G", "18G", "12G"], "Laut Datenblatt; der Ersteinsatz ist ein BCR.", "S. 98"],
+        ["Bedeutet 16G bei Kanüle und Schmuck dieselben Millimeter?", ["Nein, die 16G-Kanüle ist mit 1,7 mm dicker als 16G-Schmuck mit 1,2 mm", "Ja, beide haben 1,6 mm", "Nein, die 16G-Kanüle ist dünner als 16G-Schmuck", "Ja, Gauge ist eine einheitliche Norm"], "Kanülen und Schmuck werden unterschiedlich gemessen.", "Ergänzung"],
+        ["Warum ist die Kanüle dicker als der Schmuck?", ["Weil der Schmuck in den Kunststoffüberzug gesteckt wird", "Damit der Stichkanal größer ist als der Schmuck und schneller heilt", "Damit weniger Blut austritt", "Weil dickere Kanülen weniger schmerzen"], "Siehe Modul 9, Der Stich.", "Ergänzung"],
+        ["Was gilt für Schmuck: Je größer die Gauge-Zahl …", ["… desto dünner der Stab", "… desto dicker der Stab", "… desto länger der Stab", "… desto größer die Kugel"], "Wie bei Kanülen.", "Ergänzung"],
+        ["Wo probierst du eine neue Kombination aus Kanüle und Schmuck aus?", ["Vorher am Übungsmodell", "Direkt am ersten Kunden", "Am eigenen Ohr", "Gar nicht, Händlertabellen genügen"], "Nicht erst am Kunden.", "Ergänzung"]
       ]
     },
     {
@@ -74,9 +74,9 @@ KURS.module.push({
         { typ: "foto", id: "biopsiestanze", text: "Biopsiestanze (Biopsy Punch). Kursbuch S. 65." }
       ],
       fragen: [
-        ["Wofür sind Biopsiestanzen konzipiert?", ["Für die einmalige Stanzung der Haut", "Für die mehrfache Verwendung", "Zum Desinfizieren"], "In verschiedenen Durchmessern erhältlich.", "S. 65"],
-        ["Wofür werden Biopsiestanzen vor allem eingesetzt?", ["Dermal Anchor, Tunnel und Conch", "Lobe", "Zunge"], "Sie stanzen die Haut einmalig.", "S. 65"],
-        ["Wie stark wird das Gewebe bei einer Stanzung traumatisiert?", ["Nur geringfügig", "Sehr stark", "Gar nicht, sie schneidet nicht"], "So ist schnelle Heilung möglich.", "S. 65"]
+        ["Wofür sind Biopsiestanzen konzipiert?", ["Für die einmalige Stanzung der Haut", "Für mehrfache Verwendung nach Autoklavieren", "Zum Dehnen abgeheilter Stichkanäle", "Zum Kürzen des Kunststoffüberzugs"], "In verschiedenen Durchmessern erhältlich.", "S. 65"],
+        ["Wofür werden Biopsiestanzen vor allem eingesetzt?", ["Dermal Anchor, Tunnel und Conch", "Lobe, Helix und Tragus", "Zunge und Lippenbändchen", "Bauchnabel und Brustwarze"], "Sie stanzen die Haut einmalig.", "S. 65"],
+        ["Wie stark wird das Gewebe bei einer Stanzung traumatisiert?", ["Nur geringfügig", "Stärker als bei einer Kanüle", "Gar nicht, weil kein Gewebe entfernt wird", "So stark, dass immer genäht werden muss"], "So ist schnelle Heilung möglich.", "S. 65"]
       ]
     },
     {
@@ -89,9 +89,9 @@ KURS.module.push({
         { typ: "praxis", text: "Manche Piercings, etwa Helix oder Bauchnabel, können auch freihand gestochen werden. Das setzt eine sichere Hand voraus; als Anfänger arbeitest du besser mit Klemme." }
       ],
       fragen: [
-        ["Wozu dient eine Piercing-Zange bzw. Klemme?", ["Sie hält die Stelle, damit die Haut beim Stechen in Position bleibt", "Sie schneidet den Schmuck", "Sie desinfiziert"], "Es gibt viele Zangen für verschiedene Piercings.", "S. 65"],
-        ["Wofür nutzt du ein Nadelauffangrohr?", ["Für Stellen wie Rook und Daith, an denen keine Zange passt", "Zum Kürzen der Kanüle", "Zum Desinfizieren"], "Es schützt das umliegende Gewebe.", "S. 68"],
-        ["Wo steht, welche Klemme zu einem Piercing passt?", ["Im Datenblatt des Piercings", "Auf der Kanüle", "Nirgends"], "Siehe Modul 8.", "S. 74–110"]
+        ["Wozu dient eine Piercing-Zange bzw. Klemme?", ["Sie hält die Stelle, damit die Haut beim Stechen in Position bleibt", "Sie hält den Schmuck beim Aufdrehen der Kugel", "Sie fängt die Kanüle bei Rook und Daith auf", "Sie spreizt Klemmkugelringe"], "Es gibt viele Zangen für verschiedene Piercings.", "S. 65"],
+        ["Wofür nutzt du ein Nadelauffangrohr?", ["Für Stellen wie Rook und Daith, an denen keine Zange passt", "Zum Kürzen der Kanüle", "Zum Dehnen des Stichkanals", "Zum Aufbewahren benutzter Nadeln"], "Es schützt das umliegende Gewebe.", "S. 68"],
+        ["Wo steht, welche Klemme zu einem Piercing passt?", ["Im Datenblatt des Piercings", "Auf der Verpackung der Kanüle", "Im Rahmenhygieneplan", "In der Einverständniserklärung"], "Siehe Modul 8.", "S. 74–110"]
       ]
     },
     {
@@ -112,10 +112,10 @@ KURS.module.push({
         { typ: "galerie", titel: "Die Hilfswerkzeuge", bilder: [["einfuehrhilfe", "Einführhilfe"], ["klemmzange", "Klemmzange"], ["schere", "Schere"], ["kugelgreifer", "Kugelgreifer"], ["messschieber", "Messschieber"], ["ringoeffnungszange", "Ringöffnungszange"], ["ringschliesszange", "Ringschließzange"], ["taschenlampe", "Taschenlampe (grünes Licht)"], ["seitenschneider", "Mini-Seitenschneider"]], text: "Kursbuch S. 66–69 und 73." }
       ],
       fragen: [
-        ["Wofür ist die Schere beim Piercen da?", ["Zum Kürzen des Kunststoffröhrchens nach dem Stich", "Zum Haareschneiden", "Zum Öffnen der Verpackung"], "So lässt sich der Schmuck leichter einführen.", "S. 67"],
-        ["Worauf achtest du bei der Einführhilfe?", ["Sehr vorsichtig vorgehen, um Verletzungen zu vermeiden", "Möglichst schnell drücken", "Nichts"], "Abgeheilte Kanäle vorsichtig dehnen.", "S. 66"],
-        ["Womit trennst du Schmuck auf, dessen Kugel sich nicht löst?", ["Mit dem Mini-Seitenschneider", "Mit der Kanüle", "Mit dem Kugelgreifer"], "Der Schmuck wird dabei zerstört.", "S. 73"],
-        ["Womit hältst du den Schmuck fest, während du die Kugel aufdrehst?", ["Mit der Klemmzange", "Mit der Schere", "Mit dem Messschieber"], "Siehe Werkzeugtabelle.", "S. 66"]
+        ["Wofür ist die Schere beim Piercen da?", ["Zum Kürzen des Kunststoffröhrchens nach dem Stich", "Zum Kürzen des Ersteinsatzes", "Zum Abschneiden von Haaren an der Stichstelle", "Zum Öffnen der Sterilverpackung"], "So lässt sich der Schmuck leichter einführen.", "S. 67"],
+        ["Worauf achtest du bei der Einführhilfe?", ["Sehr vorsichtig vorgehen, um Verletzungen zu vermeiden", "Sie nur bei frischen Stichkanälen verwenden", "Sie mit Druck drehen, bis sie durchgeht", "Sie ohne Gleitmittel verwenden"], "Abgeheilte Kanäle vorsichtig dehnen.", "S. 66"],
+        ["Womit trennst du Schmuck auf, dessen Kugel sich nicht löst?", ["Mit dem Mini-Seitenschneider", "Mit der Ringöffnungszange", "Mit dem Kugelgreifer", "Mit der Schere"], "Der Schmuck wird dabei zerstört.", "S. 73"],
+        ["Womit hältst du den Schmuck fest, während du die Kugel aufdrehst?", ["Mit der Klemmzange", "Mit dem Kugelgreifer", "Mit der Piercing-Zange mit Fenster", "Mit dem Messschieber"], "Siehe Werkzeugtabelle.", "S. 66"]
       ]
     },
     {
@@ -135,10 +135,10 @@ KURS.module.push({
         { typ: "text", text: "Es gibt unzählige Werkzeuge, Hilfsmittel und Ausführungen; das Kursbuch zeigt einen Auszug der wichtigsten." }
       ],
       fragen: [
-        ["Warum werden Haare an der Stichstelle entfernt?", ["Haare enthalten Keime und können die Heilung stören", "Aus optischen Gründen", "Damit der Marker besser hält"], "Dafür gibt es Einmalrasierer.", "S. 70"],
-        ["Womit markierst du Ein- und Ausstichpunkt?", ["Mit einem Einmal-Hautmarker", "Mit einem Kugelschreiber", "Gar nicht"], "Chirurgenstift.", "S. 69"],
-        ["Womit desinfizierst du die zu piercende Stelle?", ["Mit einem Alkoholtupfer", "Mit Kochsalzlösung", "Mit Wasser"], "Siehe Einmalmaterial.", "S. 70"],
-        ["Wie arbeitest du am Kunden?", ["Stets mit desinfizierten Händen und (sterilen) Einmalhandschuhen", "Mit bloßen Händen", "Mit Gartenhandschuhen"], "Siehe Kursbuch.", "S. 71"]
+        ["Warum werden Haare an der Stichstelle entfernt?", ["Haare enthalten Keime und können die Heilung stören", "Damit der Hautmarker besser hält", "Damit der Kunde weniger Schmerz spürt", "Weil die Klemme sonst abrutscht"], "Dafür gibt es Einmalrasierer.", "S. 70"],
+        ["Womit markierst du Ein- und Ausstichpunkt?", ["Mit einem Einmal-Hautmarker", "Mit einem desinfizierten Kugelschreiber", "Mit einem Kajalstift", "Mit Jodlösung"], "Chirurgenstift.", "S. 69"],
+        ["Womit desinfizierst du die zu piercende Stelle?", ["Mit einem Alkoholtupfer", "Mit Kochsalzlösung", "Mit Octenisept bei jedem Piercing", "Mit Flächendesinfektionsmittel"], "Siehe Einmalmaterial.", "S. 70"],
+        ["Wie arbeitest du am Kunden?", ["Stets mit desinfizierten Händen und (sterilen) Einmalhandschuhen", "Mit Einmalhandschuhen, die Hände müssen nicht desinfiziert sein", "Mit desinfizierten Händen ohne Handschuhe", "Mit wiederverwendbaren, desinfizierten Handschuhen"], "Siehe Kursbuch.", "S. 71"]
       ]
     },
     {
@@ -149,9 +149,9 @@ KURS.module.push({
         { typ: "text", text: "Werkzeuge ohne direkten Hautkontakt, etwa Kugelgreifer oder Schere, werden im Ultraschallbad gereinigt und im Desinfektionsbad desinfiziert. Benutzte Kanülennadeln kommen sofort in den Nadelabwurfbehälter." }
       ],
       fragen: [
-        ["Was muss steril sein?", ["Alles mit Hautverletzung oder Blutkontakt, z. B. Nadeln und Klemmen", "Der Kugelgreifer", "Die Instrumentenschale"], "Werkzeuge ohne Hautkontakt werden desinfiziert.", "S. 35"],
-        ["Wie wird ein Kugelgreifer aufbereitet?", ["Im Ultraschallbad gereinigt und desinfiziert", "Er wird weggeworfen", "Gar nicht"], "Kein direkter Hautkontakt.", "S. 35"],
-        ["Wohin kommt eine benutzte Kanülennadel?", ["In den Nadelabwurfbehälter", "In die Instrumentenschale", "In den Papierkorb"], "Direkt nach dem Stich.", "S. 27"]
+        ["Was muss steril sein?", ["Alles mit Hautverletzung oder Blutkontakt, z. B. Nadeln und Klemmen", "Nur die Kanülen", "Auch Kugelgreifer und Schere", "Nur die Ersteinsätze"], "Werkzeuge ohne Hautkontakt werden desinfiziert.", "S. 35"],
+        ["Wie wird ein Kugelgreifer aufbereitet?", ["Im Ultraschallbad gereinigt und desinfiziert", "Er ist Einwegmaterial", "Er wird nur mit Alkohol abgewischt", "Er muss nicht aufbereitet werden"], "Kein direkter Hautkontakt.", "S. 35"],
+        ["Wohin kommt eine benutzte Kanülennadel?", ["In den Nadelabwurfbehälter", "In die Instrumentenschale zur Aufbereitung", "In den Trittmülleimer", "In die Schutzkappe und dann in den Müll"], "Direkt nach dem Stich.", "S. 27"]
       ]
     }
   ],

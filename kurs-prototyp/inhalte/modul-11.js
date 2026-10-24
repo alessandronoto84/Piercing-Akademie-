@@ -20,10 +20,10 @@ KURS.module.push({
         ] }
       ],
       fragen: [
-        ["Wo meldest du dein Gewerbe an?", ["Beim zuständigen Gewerbeamt", "Beim Gesundheitsamt", "Bei der Krankenkasse"], "Erster Schritt vor dem Start.", "Entwurf"],
-        ["Wen fragst du nach dem Rahmenhygieneplan für dein Studio?", ["Das örtliche Gesundheitsamt", "Das Gewerbeamt", "Die Krankenkasse"], "Empfehlung des Kursbuchs.", "S. 36"],
-        ["Gibt es in Deutschland eine staatlich geregelte Piercer-Ausbildung?", ["Nein", "Ja", "Nur in Niedersachsen"], "Das Zertifikat der Akademie ist ein Teilnahme- und Trainingsnachweis.", "Entwurf"],
-        ["Wer überwacht Piercingstudios in Niedersachsen auf Grundlage der Hygieneverordnung?", ["Das Gesundheitsamt", "Die Polizei", "Die Handwerkskammer"], "Siehe KURS-RECHERCHE.md.", "Entwurf"]
+        ["Wo meldest du dein Gewerbe an?", ["Beim zuständigen Gewerbeamt", "Beim Gesundheitsamt", "Bei der Handwerkskammer", "Beim Finanzamt"], "Erster Schritt vor dem Start.", "Entwurf"],
+        ["Wen fragst du nach dem Rahmenhygieneplan für dein Studio?", ["Das örtliche Gesundheitsamt", "Das Gewerbeamt", "Die Berufsgenossenschaft", "Die IHK"], "Empfehlung des Kursbuchs.", "S. 36"],
+        ["Gibt es in Deutschland eine staatlich geregelte Piercer-Ausbildung?", ["Nein", "Ja, als dreijährige Ausbildung", "Ja, über die Handwerkskammer", "Nur in Niedersachsen"], "Das Zertifikat der Akademie ist ein Teilnahme- und Trainingsnachweis.", "Entwurf"],
+        ["Wer überwacht Piercingstudios in Niedersachsen auf Grundlage der Hygieneverordnung?", ["Das Gesundheitsamt", "Das Gewerbeamt", "Die Berufsgenossenschaft", "Die Handwerkskammer"], "Siehe KURS-RECHERCHE.md.", "Entwurf"]
       ]
     },
     {
@@ -37,12 +37,13 @@ KURS.module.push({
           "Separate Toilette mit Handwaschbecken, Spendern, Abwurfbehälter und Hygieneeimer.",
           "Erste-Hilfe-Kasten und Notfallnummern gut sichtbar."
         ] },
+        { typ: "grafik", id: "studio3d" },
         { typ: "praxis", text: "Plane Wege: Vom Aufbereitungsplatz (unrein) zum Sterilgutlager (rein) sollen sich saubere und benutzte Instrumente nicht kreuzen." }
       ],
       fragen: [
-        ["Wie wird der Arbeitsplatz vom Wartebereich getrennt?", ["Baulich oder mindestens durch eine Trennwand", "Gar nicht", "Durch eine Pflanze"], "Laut Merkblättern und Kursbuch.", "S. 26"],
-        ["Welche Oberfläche brauchen Liege und Möbel?", ["Glatt und abwaschbar", "Aus Stoff", "Aus unbehandeltem Holz"], "Siehe Modul 5.", "S. 26"],
-        ["Was gehört an den Handwaschplatz?", ["Spender für Desinfektion, Waschlotion und Einmalhandtücher", "Ein Stück Seife und ein Stoffhandtuch", "Nichts"], "Ohne Handkontakt bedienbar.", "S. 25"]
+        ["Wie wird der Arbeitsplatz vom Wartebereich getrennt?", ["Baulich oder mindestens durch eine Trennwand", "Durch einen Vorhang", "Durch eine Markierung am Boden", "Durch einen Paravent mit Stoffbespannung"], "Laut Merkblättern und Kursbuch.", "S. 26"],
+        ["Welche Oberfläche brauchen Liege und Möbel?", ["Glatt und abwaschbar", "Mit Stoffbezug, täglich gewaschen", "Aus offenporigem Holz", "Mit Ziernähten für besseren Halt"], "Siehe Modul 5.", "S. 26"],
+        ["Was gehört an den Handwaschplatz?", ["Spender für Desinfektion, Waschlotion und Einmalhandtücher", "Ein Stück Seife und ein Stoffhandtuch", "Nur ein Desinfektionsspender", "Eine Nagelbürste und ein Handtuch"], "Ohne Handkontakt bedienbar.", "S. 25"]
       ]
     },
     {
@@ -59,9 +60,9 @@ KURS.module.push({
         ] }
       ],
       fragen: [
-        ["Was dokumentierst du für jede Sterilgut-Charge?", ["Sterilisierdatum und Chargennummer", "Den Preis", "Nichts"], "So lässt sich jede Charge nachverfolgen.", "S. 46"],
-        ["Was gehört in die Dokumentation deines Studios?", ["Hygieneplan, Sterilgut-Chargen, Autoklav-Prüfungen und Einverständniserklärungen", "Nur die Kasse", "Nichts"], "Siehe Lektion.", "Entwurf"],
-        ["Wem legst du die Prüfungen des Autoklavs auf Verlangen vor?", ["Den örtlichen Behörden", "Den Kunden", "Niemandem"], "Siehe Modul 5.", "S. 47"]
+        ["Was dokumentierst du für jede Sterilgut-Charge?", ["Sterilisierdatum und Chargennummer", "Nur das Sterilisierdatum", "Den Namen des Kunden", "Die Temperatur des Ultraschallbads"], "So lässt sich jede Charge nachverfolgen.", "S. 46"],
+        ["Was gehört in die Dokumentation deines Studios?", ["Hygieneplan, Sterilgut-Chargen, Autoklav-Prüfungen und Einverständniserklärungen", "Nur die Einverständniserklärungen", "Nur Rechnungen und Kassenbuch", "Nur die Autoklav-Prüfungen"], "Siehe Lektion.", "Entwurf"],
+        ["Wem legst du die Prüfungen des Autoklavs auf Verlangen vor?", ["Den örtlichen Behörden", "Den Kunden", "Dem Hersteller", "Der Krankenkasse"], "Siehe Modul 5.", "S. 47"]
       ]
     },
     {
@@ -77,8 +78,8 @@ KURS.module.push({
         ] }
       ],
       fragen: [
-        ["Was solltest du vor dem ersten Kunden klären?", ["Eine Betriebs- bzw. Berufshaftpflicht", "Eine Kfz-Versicherung", "Nichts"], "Lass dich beraten.", "Entwurf"],
-        ["Was gehört in die Preiskalkulation?", ["Material, Arbeitszeit inklusive Beratung und Aufbereitung, laufende Kosten", "Nur der Schmuck", "Nur die Miete"], "Siehe Lektion.", "Entwurf"]
+        ["Was solltest du vor dem ersten Kunden klären?", ["Eine Betriebs- bzw. Berufshaftpflicht", "Eine Rechtsschutzversicherung genügt", "Eine Hausratversicherung", "Nichts, die Einverständniserklärung reicht"], "Lass dich beraten.", "Entwurf"],
+        ["Was gehört in die Preiskalkulation?", ["Material, Arbeitszeit inklusive Beratung und Aufbereitung, laufende Kosten", "Nur Schmuck und Kanüle", "Nur die Arbeitszeit am Kunden", "Nur Miete und Versicherung"], "Siehe Lektion.", "Entwurf"]
       ]
     },
     {
@@ -93,8 +94,8 @@ KURS.module.push({
         { typ: "ergaenzung", text: "Welche Händler sich bewährt haben, ergänzt die Piercing Akademie an dieser Stelle aus eigener Erfahrung." }
       ],
       fragen: [
-        ["Welche Ersteinsätze kaufst du ein?", ["G23-Titan oder PTFE mit Materialnachweis", "303er Stahl", "Modeschmuck"], "Siehe Modul 6.", "S. 56"],
-        ["Welche Desinfektionsmittel kaufst du?", ["Produkte aus der VAH-Liste mit nachgewiesener Wirksamkeit", "Beliebige Reiniger", "Haushaltsessig"], "Siehe Modul 5.", "S. 34"]
+        ["Welche Ersteinsätze kaufst du ein?", ["G23-Titan oder PTFE mit Materialnachweis", "316L, weil er günstiger ist", "Zirkon-Gold-Titan", "303er Stahl"], "Siehe Modul 6.", "S. 56"],
+        ["Welche Desinfektionsmittel kaufst du?", ["Produkte aus der VAH-Liste mit nachgewiesener Wirksamkeit", "Produkte mit möglichst hohem Alkoholgehalt", "Haushaltsreiniger mit Chlor", "Beliebige Mittel aus dem Drogeriemarkt"], "Siehe Modul 5.", "S. 34"]
       ]
     },
     {
@@ -110,10 +111,10 @@ KURS.module.push({
         ] }
       ],
       fragen: [
-        ["Was tust du mit einem Piercing, das du nicht sicher beherrschst?", ["Ich lehne es ab", "Ich probiere es trotzdem", "Ich steche es freihand"], "Sicherheit des Kunden geht vor.", "S. 91–93"],
-        ["Was machst du mit Piercings, die mit „Nicht durchführen“ markiert sind?", ["Ich steche sie nie", "Ich steche sie nur bei Stammkunden", "Ich steche sie mit Betäubung"], "Gefahr einer ernsthaften Schädigung.", "S. 103–110"],
-        ["Ersetzt das Zertifikat der Akademie eine behördliche Erlaubnis?", ["Nein, es ist ein Teilnahme- und Trainingsnachweis", "Ja", "Ja, in ganz Europa"], "Gewerbeamt und Gesundheitsamt entscheiden.", "Akademie"],
-        ["Wann veröffentlichst du Fotos von Kundenpiercings?", ["Erst nach schriftlicher Einwilligung", "Sofort", "Nie"], "Siehe Modul 2.", "S. 1"]
+        ["Was tust du mit einem Piercing, das du nicht sicher beherrschst?", ["Ich lehne es ab", "Ich steche es mit Nadelauffangrohr", "Ich steche es nach einem Video", "Ich steche es freihand"], "Sicherheit des Kunden geht vor.", "S. 91–93"],
+        ["Was machst du mit Piercings, die mit „Nicht durchführen“ markiert sind?", ["Ich steche sie nie", "Ich steche sie nur bei Stammkunden", "Ich steche sie mit Betäubung", "Ich steche sie nach schriftlicher Einwilligung"], "Gefahr einer ernsthaften Schädigung.", "S. 103–110"],
+        ["Ersetzt das Zertifikat der Akademie eine behördliche Erlaubnis?", ["Nein, es ist ein Teilnahme- und Trainingsnachweis", "Ja, in Niedersachsen", "Ja, zusammen mit der Gewerbeanmeldung", "Ja, es ist staatlich anerkannt"], "Gewerbeamt und Gesundheitsamt entscheiden.", "Akademie"],
+        ["Wann veröffentlichst du Fotos von Kundenpiercings?", ["Erst nach schriftlicher Einwilligung", "Sofort, wenn das Gesicht nicht zu sehen ist", "Nach mündlicher Zustimmung", "Nach Ablauf der Widerrufsfrist"], "Siehe Modul 2.", "S. 1"]
       ]
     }
   ],

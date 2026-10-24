@@ -220,3 +220,39 @@
 .k-galerie li{display:grid;gap:6px;margin:0}
 .k-galerie img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain;background:#fff;border-radius:10px;border:1px solid var(--line);padding:6px}
 .k-galerie span{font-size:.85rem;line-height:1.35;color:var(--ink)}
+
+/* ---------- 3D-Grafiken ---------- */
+:root{--g-vene:#4a6fd0}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--g-vene:#8fa8f2}}
+:root[data-theme="dark"]{--g-vene:#8fa8f2}
+.k-grafik .schatten{fill:#000;opacity:.13}
+.k-grafik .r3-kante{fill:none;stroke:#56626a;stroke-linecap:round}
+.k-grafik .r3-grund{fill:none;stroke:#a7b1b5;stroke-linecap:round}
+.k-grafik .r3-glanz{fill:none;stroke:#f6f8f9;stroke-linecap:round;opacity:.9}
+.k-grafik .r3-glanz-l{stroke:#fff;stroke-width:1.5;opacity:.7;stroke-linecap:round}
+.k-grafik .a-ring{fill:none;stroke:var(--accent);stroke-width:1.5;stroke-dasharray:3 3}
+.k-grafik .fnone{fill:none}
+.k-grafik .dunkel{fill:#000;opacity:.16}
+.k-grafik .dunkel2{fill:#000;opacity:.07}
+.k-grafik .f-sub-l{fill:var(--g-sub);filter:brightness(1.06)}
+.k-grafik .f-blut{fill:var(--g-blut)}
+.k-grafik .f-blut-d{fill:#000;opacity:.35}
+.k-grafik .f-vene{fill:var(--g-vene)}
+.k-grafik .epi-linie{stroke:var(--g-epi);stroke-width:3}
+.k-grafik .st-epi{stop-color:var(--g-epi)}
+.k-grafik .st-epi-h{stop-color:color-mix(in srgb,var(--g-epi) 70%,#fff)}
+.k-grafik .st-derm{stop-color:color-mix(in srgb,var(--g-derm) 85%,#000)}
+.k-grafik .st-derm-h{stop-color:var(--g-derm)}
+.k-grafik .st-sub{stop-color:color-mix(in srgb,var(--g-sub) 85%,#000)}
+.k-grafik .st-sub-h{stop-color:var(--g-sub)}
+.k-grafik .boden{fill:color-mix(in srgb,var(--surface) 80%,var(--line))}
+.k-grafik .wand{fill:var(--surface)}
+.k-grafik .moebel{fill:color-mix(in srgb,var(--surface) 70%,var(--bg))}
+.k-grafik .metallbox{fill:var(--g-met)}
+.k-grafik .rot{fill:var(--g-blut)}
+.k-grafik .becken{fill:var(--accent-soft);stroke:var(--line)}
+.k-grafik .spender{fill:var(--accent)}
+.k-grafik .liege{fill:var(--g-met)}
+.k-grafik .polster{fill:var(--accent-soft)}
+.k-grafik .autoklav{fill:color-mix(in srgb,var(--surface) 60%,#fff)}
+.k-grafik .schrank{fill:color-mix(in srgb,var(--g-ok) 25%,var(--surface))}

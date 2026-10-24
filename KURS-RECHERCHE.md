@@ -141,3 +141,32 @@ Recherchiert per Websuche; die Seiten selbst konnten in dieser Umgebung nicht ge
 | Normen für Ersteinsatz (Modul 6) | ASTM F136 / ISO 5832-3 (Ti6Al4V ELI), ASTM F67 / ISO 5832-2 (Reintitan), ASTM F138 / ISO 5832-1 (Implantatstahl), Gold massiv ab 14 Karat, nickel- und cadmiumfrei; Innengewinde oder gewindelos, spiegelpoliert, Materialzertifikat. Die Akademie bleibt strenger (nur G23-Titan oder PTFE). | APP „Initial Jewelry Standards“ (über piercingbible und Wikipedia „Body piercing materials“); Oregon OAR 331-900-0105 |
 | Gauge Schmuck und Kanüle (Modul 7) | Schmuck: 20G 0,8 / 18G 1,0 / 16G 1,2 / 14G 1,6 / 12G 2,0 mm. Kanülen (Außendurchmesser): 18G 1,3 / 16G 1,7 / 14G 2,2 mm. Standard der Akademie (bestätigt 24.10.2026): 18G-Kanüle für 1,2-mm-Schmuck, 16G-Kanüle für 1,6-mm-Schmuck, Prinz Albert mit 14G (Kursbuch S. 98 nennt 14G oder 16G); Lobe normalerweise 18G, 14G nur, wenn ein Tunnel gewünscht ist (Kursbuch S. 74 nennt 18G, 16G, 14G, Punch). | Gauge-Tabellen von Schmuckhändlern (bluebanana, tribu, wildcat); Herstellerangabe B. Braun |
 | Perichondritis (Modul 10) | Entzündung der Knorpelhaut; Ohrläppchen ausgespart; häufigster Erreger Pseudomonas aeruginosa, mehr Fälle in warmen Monaten; Häufung in Großbritannien auf verunreinigtes Wasser zurückgeführt; Gefahr Blumenkohlohr; sofort zum Arzt, Antibiotikum mit Pseudomonas-Wirkung. | PMC9443570; PMC11729480; Übersicht solen.sk |
+
+## 10. Faktenprüfung des gesamten Kurses (24.10.2026)
+
+Alle 103 Lektionen wurden gelesen und zweifelhafte Aussagen per Websuche geprüft. Korrigiert bzw. als „Ergänzung“ präzisiert:
+
+| Stelle | Vorher | Jetzt | Quelle |
+|---|---|---|---|
+| Modul 1, 3, 10, Glossar | „Octenidin in Prontolind und Octenisept“ | Octenisept enthält Octenidin, Prontolind einen Polihexanid-Betain-Komplex. Die Akademie-Regel (beide nicht am Knorpel) bleibt. Octenidin schädigt Knorpelzellen in Laborstudien. | DocMorris-Produktseite Prontolind Piercing Spray; Clin Oral Investig 2023, doi:10.1007/s00784-023-05118-8 |
+| Modul 2 | Körperverletzung in §§ 223–233 StGB | 17. Abschnitt, §§ 223–231 StGB | dejure.org; Uni Potsdam, Rechtskunde online |
+| Modul 1 | 24 h ohne ASS | Ergänzung: Die ASS-Wirkung auf Blutplättchen hält 7–10 Tage an. | medikamio.com, rd-factsheets.de, AMBOSS |
+| Modul 5 | Prionen werden bei 134 °C/18 min zerstört | Empfohlen ist eine alkalische Reinigung und Dampfsterilisation bei 134 °C, ohne alkalische Reinigung 18 Minuten; eine sichere Inaktivierung ist auch dann nicht garantiert. | AWMF-S1-Leitlinie 029-025 (2012); Bundesgesundheitsblatt 2004; RKI |
+| Modul 5 | „mindestens etwa 2 bar“ | Etwa 2 bar Überdruck gelten bei 134 °C, bei 121 °C etwa 1 bar. | Physik des Sattdampfs; AWMF 029-025 |
+| Modul 5 | Typ S/B „in der EU Pflicht“ | Typen N/S/B stammen aus DIN EN 13060. Eine EU-weite Pflicht speziell für Piercingstudios gibt es nicht; was verbindlich ist, regeln Landesverordnung und Gesundheitsamt. | medizinio.de (Herstellerratgeber), keine Rechtsquelle für eine EU-Pflicht gefunden |
+| Modul 5 | Medizinproduktegesetz | Gilt seit 2021 nicht mehr; heute MPDG und MPBetreibV | allgemein bekannt (MDR seit 26.05.2021) |
+| Modul 5 | Antisepsis auch für Flächen | Ergänzung: Im heutigen Sprachgebrauch meint Antisepsis meist lebendes Gewebe. | Fachsprache Hygiene |
+| Modul 4 | „Phantomschmerz“ bei Schmerz vor dem Stich | Erwartungsschmerz; Phantomschmerz meint amputierte Körperteile. | Medizinische Terminologie |
+| Modul 6 | Titan für „Herzbypässe“ | Implantate wie Knochenschrauben, künstliche Gelenke, Herzschrittmachergehäuse | – |
+| Modul 6 | Zirkon-Gold | Ergänzung: goldfarbene Beschichtung (meist Zirkoniumnitrid, PVD), Vorteile sind Herstellerangaben | APP-Empfehlung zu unbeschichtetem Erstschmuck |
+| Modul 6 | PTFE heilt deutlich schneller | als Erfahrungswert des Kursbuchs gekennzeichnet, nicht durch Studien belegt | – |
+| Modul 8 | Medusa = Madonna | Medusa sitzt mittig im Philtrum, Madonna/Monroe seitlich | Wikipedia „Philtrum piercing“, „Monroe piercing“; piercingstudio-wien.at |
+| Modul 8, 3 | Augenbraue „Lähmungsgefahr“ | Begründung präzisiert (Austritt von Gefühlsnerven und Gefäßen), siehe Abschnitt 9 | DocCheck Flexikon |
+| Modul 9 | Kreislaufabfall: Traubenzucker | Ergänzung: flach hinlegen, Beine hoch; Zucker erst, wenn sicher geschluckt werden kann | Erste-Hilfe-Standard |
+| Modul 10 | Abheilzeiten | Ergänzung: andere Quellen nennen teils längere Zeiten (Knorpel 3–12 Monate, Bauchnabel 6–12 Monate, Augenbraue 6–8 Wochen) | Healthwise/Kaiser Permanente, Sutter Health, Studio-Angaben |
+| Modul 10 | Chlorhexamed | Ergänzung: nur wenige Tage bis etwa 2 Wochen, längere Anwendung verfärbt Zähne | Fachinformation Chlorhexidin |
+| Modul 10 | Teebaumöl, Wasserstoffperoxid, wildes Fleisch | Hinweise ergänzt: Teebaumöl kann allergisieren; H₂O₂ schädigt Gewebe; Fachbegriff Hypergranulation | – |
+
+**Offen (nicht abschließend klärbar):** Ob Lidocainsalbe rezeptfrei ist, hängt vom Präparat ab (Quellen widersprüchlich). Der Kurs sagt jetzt nur „in der Apotheke“. Die Wechselwirkung „Mutterkornalkaloide oder Epinephrin → Blutdruckabfall“ steht so im Kursbuch; ich habe sie nicht unabhängig bestätigen können.
+
+**Bilder aus dem Internet:** Die Netzwerkregeln dieser Arbeitsumgebung sperren Wikimedia Commons, Unsplash, Pixabay, Pexels und Openverse. Statt lizenzfreier Fotos sind deshalb eigene, schattierte 3D-Grafiken entstanden. Wenn die Domains freigegeben werden, können lizenzfreie Fotos (CC0 oder CC BY mit Namensnennung) ergänzt werden.

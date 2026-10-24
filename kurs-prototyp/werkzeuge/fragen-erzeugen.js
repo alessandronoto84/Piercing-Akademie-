@@ -15,11 +15,11 @@ let seed = 7;
 const zufall = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
 const teile = s => s.split(",").map(x => x.trim().toLowerCase());
 const disjunkt = (a, b) => !teile(a).some(x => teile(b).includes(x));
-function falsche(richtig, kandidaten, pruefe = disjunkt, n = 2) {
+function falsche(richtig, kandidaten, pruefe = disjunkt, n = 3) {
   const pool = [...new Set(kandidaten)].filter(k => k !== richtig && k !== "–" && pruefe(richtig, k));
   const out = [];
   while (pool.length && out.length < n) out.push(pool.splice(Math.floor(zufall() * pool.length), 1)[0]);
-  return out.length === n ? out : null;
+  return out.length >= 2 ? out : null; // drei Ablenker, wenn genug passende Werte da sind
 }
 const fragen = {};
 function neu(nr, li, f, richtig, falsch, erkl, seite) {
@@ -33,11 +33,11 @@ const alle = modul(8).lektionen.flatMap(l => l.inhalt.filter(b => b.typ === "dat
 const aktiv = alle.filter(d => !/NICHT DURCHFÜHREN/.test(d.hinweis));
 jedeLektion(8, "datenblatt", (d, li) => {
   if (/NICHT DURCHFÜHREN/.test(d.hinweis)) {
-    neu(8, li, `Was gilt laut Kursbuch für das Piercing „${d.name}“?`, "Nicht durchführen", ["Mit 16G und BCR stechen", "Nur mit Betäubung stechen"], d.hinweis, d.seite);
+    neu(8, li, `Was gilt laut Kursbuch für das Piercing „${d.name}“?`, "Nicht durchführen", ["Mit 16G und BCR stechen", "Nur mit Betäubung stechen", "Nur durch erfahrene Piercer"], d.hinweis, d.seite);
     return;
   }
   neu(8, li, `Welchen Ersteinsatz nennt das Datenblatt für „${d.name}“?`, d.ersteinsatz, falsche(d.ersteinsatz, aktiv.map(x => x.ersteinsatz)), `Datenblatt ${d.name}: Kanüle ${d.kanuele}, Klemme ${d.klemme}.`, d.seite);
-  neu(8, li, `Welche Kanüle(n) nennt das Datenblatt für „${d.name}“?`, d.kanuele, falsche(d.kanuele, aktiv.map(x => x.kanuele)), `Datenblatt ${d.name}: Ersteinsatz ${d.ersteinsatz}.`, d.seite);
+  neu(8, li, `Welche Kanüle(n) nennt das Datenblatt für „${d.name}“?`, d.kanuele, falsche(d.kanuele, aktiv.map(x => x.kanuele).concat("12G")), `Datenblatt ${d.name}: Ersteinsatz ${d.ersteinsatz}.`, d.seite);
   neu(8, li, `Womit wird beim Piercing „${d.name}“ laut Datenblatt gehalten bzw. geführt?`, d.klemme, falsche(d.klemme, aktiv.map(x => x.klemme)), `Datenblatt ${d.name}: Ersteinsatz ${d.ersteinsatz}, Kanüle ${d.kanuele}.`, d.seite);
 });
 
@@ -46,9 +46,9 @@ jedeLektion(7, "tabelle", (t, li) => {
   if (t.kopf[0] === "Stärke") {
     for (const [g, mm, farbe] of t.zeilen) {
       const sonst = t.zeilen.filter(z => z[0] !== g);
-      neu(7, li, `Welchen Außendurchmesser hat eine ${g}-Kanüle?`, mm, sonst.map(z => z[1]), `${g} ist ${farbe.toLowerCase()}. Herstellerangabe; im Buch gerundet.`, "S. 64");
-      neu(7, li, `Welche Farbe hat eine ${g}-Kanüle?`, farbe, sonst.map(z => z[2]), `${g} entspricht ${mm}.`, "S. 64");
-      neu(7, li, `Welche Stärke hat eine Kanüle mit der Farbe ${farbe}?`, g, sonst.map(z => z[0]), `${g}, ${mm}.`, "S. 64");
+      neu(7, li, `Welchen Außendurchmesser hat eine ${g}-Kanüle?`, mm, sonst.map(z => z[1]).concat("1,1 mm"), `${g} ist ${farbe.toLowerCase()}. Herstellerangabe; im Buch gerundet.`, "S. 64");
+      neu(7, li, `Welche Farbe hat eine ${g}-Kanüle?`, farbe, sonst.map(z => z[2]).concat("Rosa"), `${g} entspricht ${mm}.`, "S. 64");
+      neu(7, li, `Welche Stärke hat eine Kanüle mit der Farbe ${farbe}?`, g, sonst.map(z => z[0]).concat("20G"), `${g}, ${mm}.`, "S. 64");
     }
   }
   if (t.kopf[0] === "Werkzeug") {

@@ -389,5 +389,194 @@ window.KURS = window.KURS || { module: [] };
       ].join("") };
   })();
 
+
+  // =====================================================================
+  // 3D-Darstellungen: Schattierung über Verläufe (IDs je Grafik eindeutig),
+  // Metall mit Glanzlicht, Gewebe als aufgeschnittener Block.
+  // =====================================================================
+  function metallDefs(v) {
+    return '<radialGradient id="' + v + 'k" cx="35%" cy="30%" r="70%"><stop offset="0" stop-color="#ffffff"/><stop offset=".25" stop-color="#dfe4e6"/><stop offset=".65" stop-color="#9aa5a9"/><stop offset="1" stop-color="#56626a"/></radialGradient>' +
+      '<linearGradient id="' + v + 's" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6f7a7f"/><stop offset=".35" stop-color="#f3f5f6"/><stop offset=".6" stop-color="#a7b1b5"/><stop offset="1" stop-color="#56626a"/></linearGradient>' +
+      '<linearGradient id="' + v + 'p" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#56626a"/><stop offset=".4" stop-color="#eef1f2"/><stop offset="1" stop-color="#7c878c"/></linearGradient>';
+  }
+  function kugel3d(v, x, y, rad) { return e(x, y + rad + 6, rad * 1.1, rad * 0.28, "schatten") + '<circle cx="' + x + '" cy="' + y + '" r="' + rad + '" fill="url(#' + v + 'k)"/>'; }
+  function stab3d(v, x1, x2, y, d) { return '<rect x="' + x1 + '" y="' + (y - d / 2) + '" width="' + (x2 - x1) + '" height="' + d + '" rx="' + d / 2 + '" fill="url(#' + v + 's)"/>'; }
+  // Röhre entlang eines Pfads: dunkle Kante, Grundton, Glanzlinie
+  function roehre(d, b) {
+    return '<path d="' + d + '" class="r3-kante" stroke-width="' + (b + 2) + '"/><path d="' + d + '" class="r3-grund" stroke-width="' + b + '"/><path d="' + d + '" class="r3-glanz" stroke-width="' + Math.max(1.5, b / 3.5) + '" transform="translate(-1 -1.5)"/>';
+  }
+
+  // ---------- Schmuck in 3D (ersetzt die flachen Zeichnungen) ----------
+  G.staebe = { w: 600, h: 200,
+    alt: G.staebe.alt, text: "Stäbe und Stecker (schattierte Darstellung). Barbell und Banane haben zwei Kugeln, der Labret Stud eine flache Platte, die innen anliegt – ideal für Lippe und Ohr.",
+    svg: "<defs>" + metallDefs("st") + "</defs>" +
+      e(100, 104, 70, 6, "schatten") + stab3d("st", 46, 154, 80, 8) + kugel3d("st", 40, 80, 13) + kugel3d("st", 160, 80, 13) +
+      t(100, 146, "Barbell", "tb", "middle") + t(100, 162, "Zunge, Industrial,", "tm", "middle") + t(100, 176, "Brustwarze", "tm", "middle") +
+      e(300, 108, 70, 6, "schatten") + roehre("M244 62 C272 104 328 104 356 62", 8) + kugel3d("st", 240, 58, 13) + kugel3d("st", 360, 58, 13) +
+      t(300, 146, "Curved Barbell (Banane)", "tb", "middle") + t(300, 162, "Bauchnabel, Augenbraue,", "tm", "middle") + t(300, 176, "Rook", "tm", "middle") +
+      e(500, 104, 62, 6, "schatten") + stab3d("st", 450, 548, 80, 7) + '<ellipse cx="447" cy="80" rx="7" ry="22" fill="url(#stp)"/>' + kugel3d("st", 552, 80, 12) +
+      t(500, 146, "Labret Stud", "tb", "middle") + t(500, 162, "Labret, Tragus, Conch,", "tm", "middle") + t(500, 176, "Lobe, Nostril", "tm", "middle") };
+
+  G.ringe = { w: 640, h: 200,
+    alt: G.ringe.alt, text: "Ringe unterscheiden sich vor allem darin, wie sie schließen (schattierte Darstellung). Die blaue Markierung zeigt jeweils den Verschluss.",
+    svg: "<defs>" + metallDefs("ri") + "</defs>" +
+      e(80, 132, 48, 6, "schatten") + roehre("M80 34 A42 42 0 1 0 116 54 A42 42 0 0 0 80 34", 7) + p("M80 34 A42 42 0 0 1 116 54", "a b2 dash") +
+      t(80, 156, "Segmentring", "tb", "middle") + t(80, 172, "Segment mit Zange", "tm", "middle") +
+      e(240, 132, 48, 6, "schatten") + roehre("M240 34 A42 42 0 1 0 282 76", 7) + roehre("M282 76 A42 42 0 0 0 240 34", 7) + c(282, 76, 6, "fa") +
+      t(240, 156, "Clicker", "tb", "middle") + t(240, 172, "Scharnier mit Klick", "tm", "middle") +
+      e(400, 132, 48, 6, "schatten") + roehre("M392 37 A42 42 0 1 0 408 37", 7) + '<circle cx="400" cy="34" r="11" fill="url(#rik)"/>' + c(400, 34, 13, "a-ring") +
+      t(400, 156, "Ball Closure Ring", "tb", "middle") + t(400, 172, "Kugel rastet ein", "tm", "middle") +
+      e(560, 132, 48, 6, "schatten") + roehre("M536 42 A42 42 0 1 0 584 42", 7) + '<circle cx="534" cy="38" r="9" fill="url(#rik)"/><circle cx="586" cy="38" r="9" fill="url(#rik)"/>' + c(534, 38, 11, "a-ring") + c(586, 38, 11, "a-ring") +
+      t(560, 156, "Threaded Ring", "tb", "middle") + t(560, 172, "(Hufeisen), Gewinde", "tm", "middle") };
+
+  // ---------- Venenverweilkanüle in 3D ----------
+  G.kanuele = { w: 640, h: 180,
+    alt: G.kanuele.alt, text: G.kanuele.text,
+    svg: "<defs>" + metallDefs("ka") +
+      '<linearGradient id="kaplast" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".95"/><stop offset=".5" stop-color="#dfe7ea" stop-opacity=".7"/><stop offset="1" stop-color="#b9c6cb" stop-opacity=".9"/></linearGradient>' +
+      '<linearGradient id="kagruen" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7fd08c"/><stop offset=".45" stop-color="#3e9b4f"/><stop offset="1" stop-color="#1f5e2b"/></linearGradient>' +
+      '<linearGradient id="kagriff" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#e4eaec"/><stop offset="1" stop-color="#aab6bb"/></linearGradient></defs>' +
+      e(330, 118, 300, 7, "schatten") +
+      '<polygon points="30,86 58,81 58,91" fill="url(#kas)"/>' + stab3d("ka", 56, 402, 86, 4) +
+      '<rect x="70" y="79" width="280" height="14" rx="5" fill="url(#kaplast)" class="s1"/>' + l(74, 82, 346, 82, "r3-glanz-l") +
+      '<rect x="350" y="69" width="54" height="34" rx="6" fill="url(#kagruen)"/>' + l(356, 74, 398, 74, "r3-glanz-l") +
+      '<rect x="404" y="73" width="170" height="26" rx="7" fill="url(#kagriff)" class="s1"/>' + '<rect x="420" y="79" width="70" height="12" rx="4" class="fs"/>' +
+      '<rect x="574" y="77" width="42" height="18" rx="5" fill="url(#kagriff)" class="s1"/>' +
+      l(40, 86, 40, 40, "sl") + t(40, 32, "Nadelspitze (Stahl)", "tb") +
+      l(210, 93, 210, 132, "sl") + t(210, 150, "Kunststoffüberzug: bleibt im Stichkanal", "tb", "middle") +
+      l(377, 69, 377, 40, "sl") + t(377, 32, "Ansatz in Kennfarbe (hier 18G grün)", "tb", "middle") +
+      l(490, 99, 490, 132, "sl") + t(490, 150, "Griff: Nadel wird herausgezogen", "tb", "middle") };
+
+  // ---------- Hautblock in 3D ----------
+  (function () {
+    var dx = 100, dy = -56, x0 = 150, x1 = 450, yE = 110, yD = 128, yS = 220, yU = 320;
+    function seite(ya, yb, k) { return '<polygon points="' + [x1, ya, x1 + dx, ya + dy, x1 + dx, yb + dy, x1, yb].join(",") + '" class="' + k + '"/>'; }
+    var fett = "";
+    [[190, 250], [240, 270], [290, 248], [340, 275], [390, 252], [425, 285], [210, 295], [320, 300]].forEach(function (q) { fett += e(q[0], q[1], 22, 15, "sd f-sub-l"); });
+    G.haut3d = { w: 720, h: 350,
+      alt: "Dreidimensionaler, aufgeschnittener Hautblock mit Oberhaut, Lederhaut und Unterhaut. Eine Kanüle sticht von oben durch alle Schichten; in der Lederhaut liegen Arterie, Vene, Nerv und Haarwurzeln.",
+      text: "Haut als aufgeschnittener Block (schematisch). Die Kanüle durchquert Oberhaut, Lederhaut und Unterhaut. Arterie, Vene und Nerv laufen in der Lederhaut gemeinsam – im Querschnitt siehst du sie als Bündel.",
+      svg: "<defs>" + metallDefs("hb") +
+        '<linearGradient id="hbtop" x1="0" y1="1" x2="1" y2="0"><stop offset="0" class="st-epi"/><stop offset="1" class="st-epi-h"/></linearGradient>' +
+        '<linearGradient id="hbder" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="st-derm-h"/><stop offset="1" class="st-derm"/></linearGradient>' +
+        '<linearGradient id="hbsub" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="st-sub-h"/><stop offset="1" class="st-sub"/></linearGradient>' +
+        '<linearGradient id="hbgr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7fd08c"/><stop offset=".5" stop-color="#3e9b4f"/><stop offset="1" stop-color="#1f5e2b"/></linearGradient></defs>' +
+        e(330, 334, 230, 10, "schatten") +
+        // Oberseite
+        '<polygon points="' + [x0, yE, x1, yE, x1 + dx, yE + dy, x0 + dx, yE + dy].join(",") + '" fill="url(#hbtop)" class="s1"/>' +
+        // Seitenfläche mit Schichten, abgedunkelt
+        seite(yE, yD, "f-epi") + seite(yD, yS, "f-derm") + seite(yS, yU, "f-sub") + '<polygon points="' + [x1, yE, x1 + dx, yE + dy, x1 + dx, yU + dy, x1, yU].join(",") + '" class="dunkel s1"/>' +
+        // Schnittfläche vorn
+        r(x0, yD, x1 - x0, yS - yD, "", 0).replace('class=""', 'fill="url(#hbder)"') + r(x0, yS, x1 - x0, yU - yS, "", 0).replace('class=""', 'fill="url(#hbsub)"') + fett +
+        p("M" + x0 + " " + yE + " H" + x1 + " V" + yD + " " + (function () { var s = ""; for (var x = x1; x > x0; x -= 20) s += "Q" + (x - 10) + " " + (yD + 10) + " " + (x - 20) + " " + yD + " "; return s; })() + "Z", "f-epi s1") +
+        r(x0, yE, x1 - x0, yU - yE, "s1 fnone", 0) +
+        // Haare mit Wurzel
+        p("M205 96 C200 70 206 48 198 30", "s b15") + l(205, 96, 212, 180, "s") + e(213, 186, 6, 9, "f-epi s1") +
+        p("M405 92 C410 66 402 44 412 26", "s b15") + l(400, 112, 392, 176, "s") + e(391, 182, 6, 9, "f-epi s1") +
+        // Gefäß-Nerven-Bündel im Querschnitt
+        c(262, 192, 10, "f-blut s1") + c(262, 192, 4, "f-blut-d") + c(286, 196, 9, "f-vene s1") + c(274, 176, 5, "fnerv s1") +
+        // Kanüle von oben, im Gewebe gestrichelt
+        '<rect x="331" y="14" width="18" height="22" rx="4" fill="url(#hbgr)"/>' +
+        '<rect x="336" y="36" width="8" height="74" rx="3" fill="url(#hbp)"/>' + r(337, 110, 6, 150, "fbg dash s1", 2) + '<polygon points="337,260 343,260 340,276" fill="url(#hbp)"/>' +
+        // Beschriftung rechts an der Seitenfläche
+        l(x1 + dx + 4, yE + dy + 9, 570, yE + dy + 9, "sl") + t(576, yE + dy + 13, "Oberhaut", "tb") +
+        l(x1 + dx + 4, (yD + yS) / 2 + dy, 570, (yD + yS) / 2 + dy, "sl") + t(576, (yD + yS) / 2 + dy + 4, "Lederhaut", "tb") + t(576, (yD + yS) / 2 + dy + 20, "Gefäße, Nerven, Haare", "tm") +
+        l(x1 + dx + 4, (yS + yU) / 2 + dy, 570, (yS + yU) / 2 + dy, "sl") + t(576, (yS + yU) / 2 + dy + 4, "Unterhaut", "tb") + t(576, (yS + yU) / 2 + dy + 20, "Fettgewebe", "tm") +
+        // Beschriftung links
+        l(252, 192, 138, 168, "sl") + t(132, 172, "Arterie", "tb", "end") +
+        l(295, 200, 138, 206, "sl") + t(132, 210, "Vene", "tb", "end") +
+        l(270, 172, 138, 136, "sl") + t(132, 140, "Nerv", "tb", "end") +
+        l(212, 186, 138, 102, "sl") + t(132, 106, "Haarwurzel", "tb", "end") +
+        l(349, 26, 400, 14, "sl") + t(404, 18, "Kanüle", "tb") +
+        l(343, 240, 138, 250, "sl") + t(132, 254, "Stichkanal", "tb", "end") };
+  })();
+
+  // ---------- Stichkanal im Ohrläppchen in 3D ----------
+  (function () {
+    var x0 = 250, x1 = 360, y0 = 70, y1 = 290, dx = 120, dy = -46, ym = 178;
+    function streifen(a, b, k) { return '<polygon points="' + [a, y0, b, y0, b + dx, y0 + dy, a + dx, y0 + dy].join(",") + '" class="' + k + '"/>'; }
+    G.lobe3d = { w: 680, h: 330,
+      alt: "Dreidimensionaler Ausschnitt aus einem Ohrläppchen mit Labret-Stecker: Kugel vorn, Platte hinten, dazwischen der Stichkanal durch Oberhaut, Lederhaut und Fettgewebe. Zwischen Gewebe und Schmuck bleibt Spielraum für die Schwellung.",
+      text: "Ausschnitt aus dem Ohrläppchen mit Labret (schematisch). Vom Rand wächst die Oberhaut in den Stichkanal hinein (Epithelisierung), bis er innen ausgekleidet ist. Die Überlänge lässt Platz für die Schwellung.",
+      svg: "<defs>" + metallDefs("lo") +
+        '<linearGradient id="lohaut" x1="0" y1="0" x2="1" y2="1"><stop offset="0" class="st-epi-h"/><stop offset="1" class="st-epi"/></linearGradient></defs>' +
+        e(360, 312, 180, 9, "schatten") +
+        // Oberseite (Schnitt) mit Schichten
+        streifen(x0, x0 + 8, "f-epi") + streifen(x0 + 8, x0 + 30, "f-derm") + streifen(x0 + 30, x1 - 30, "f-sub") + streifen(x1 - 30, x1 - 8, "f-derm") + streifen(x1 - 8, x1, "f-epi") +
+        '<polygon points="' + [x0, y0, x1, y0, x1 + dx, y0 + dy, x0 + dx, y0 + dy].join(",") + '" class="s1 fnone"/>' +
+        // Rückseite (Haut)
+        '<polygon points="' + [x1, y0, x1 + dx, y0 + dy, x1 + dx, y1 + dy - 30, x1, y1].join(",") + '" fill="url(#lohaut)" class="s1"/>' + '<polygon points="' + [x1, y0, x1 + dx, y0 + dy, x1 + dx, y1 + dy - 30, x1, y1].join(",") + '" class="dunkel"/>' +
+        // Schnittfläche vorn
+        r(x0, y0, 8, y1 - y0, "f-epi") + r(x0 + 8, y0, 22, y1 - y0, "f-derm") + r(x0 + 30, y0, x1 - x0 - 60, y1 - y0, "f-sub") + r(x1 - 30, y0, 22, y1 - y0, "f-derm") + r(x1 - 8, y0, 8, y1 - y0, "f-epi") +
+        e(x0 + 55, 120, 14, 10, "sd") + e(x0 + 55, 240, 14, 10, "sd") + e(x0 + 50, 268, 12, 9, "sd") + e(x0 + 60, 98, 12, 8, "sd") +
+        r(x0, y0, x1 - x0, y1 - y0, "s1 fnone") +
+        // Stichkanal, mit Oberhaut ausgekleidet
+        r(x0, ym - 11, x1 - x0, 22, "fbg") + l(x0, ym - 11, x1, ym - 11, "epi-linie") + l(x0, ym + 11, x1, ym + 11, "epi-linie") +
+        // Schmuck
+        stab3d("lo", 214, 372, ym, 9) + kugel3d("lo", 206, ym, 17) + '<ellipse cx="376" cy="' + ym + '" rx="7" ry="24" fill="url(#lop)"/>' +
+        // Spielraum
+        p("M224 " + (ym + 32) + " v6 h26 v-6", "sd") + t(237, ym + 54, "Spielraum", "tk", "middle") +
+        // Beschriftung
+        l(198, ym - 14, 144, ym - 50, "sl") + t(140, ym - 54, "Kugel (Vorderseite)", "tb", "end") +
+        l(380, ym + 20, 520, ym + 70, "sl") + t(526, ym + 74, "Platte (Rückseite)", "tb") +
+        l(x0 + 4, ym - 11, 144, ym + 40, "sl") + t(140, ym + 36, "Oberhaut kleidet", "tb", "end") + t(140, ym + 52, "den Kanal aus", "tm", "end") +
+        l(x0 + 19, 100, 144, 92, "sl") + t(140, 96, "Lederhaut", "tb", "end") +
+        l(x0 + 55, 250, 144, 270, "sl") + t(140, 274, "Fettgewebe", "tb", "end") +
+        l(x1 + 60, y0 + dy / 2 + 60, 520, 96, "sl") + t(526, 100, "Haut der Rückseite", "tb") };
+  })();
+
+  // ---------- Anodisierfarben von Titan ----------
+  (function () {
+    var farben = [["Bronze", "≈ 15 V", "#9c6b30"], ["Violett", "≈ 20 V", "#6a3fa0"], ["Dunkelblau", "≈ 25 V", "#24418f"], ["Blau", "≈ 30 V", "#2f6fd0"], ["Hellblau", "≈ 40 V", "#7fb8e8"], ["Gold", "≈ 55 V", "#d9b44a"], ["Rosa", "≈ 75 V", "#d76a9a"], ["Türkis", "≈ 85 V", "#3cb7ae"], ["Grün", "≈ 95 V", "#5daa5a"]];
+    var defs = "", svg = "";
+    farben.forEach(function (f, i) {
+      defs += '<radialGradient id="an' + i + '" cx="35%" cy="30%" r="70%"><stop offset="0" stop-color="#ffffff"/><stop offset=".3" stop-color="' + f[2] + '" stop-opacity=".85"/><stop offset="1" stop-color="' + f[2] + '"/></radialGradient>';
+      var x = 40 + i * 70;
+      svg += e(x, 92, 24, 5, "schatten") + '<circle cx="' + x + '" cy="62" r="22" fill="url(#an' + i + ')"/>' + t(x, 120, f[0], "tb", "middle") + t(x, 136, f[1], "tm", "middle");
+    });
+    G.anodisieren = { w: 640, h: 170,
+      alt: "Farben von anodisiertem Titan mit ungefähren Spannungen: Bronze etwa 15 Volt, Violett 20, Dunkelblau 25, Blau 30, Hellblau 40, Gold 55, Rosa 75, Türkis 85 und Grün 95 Volt.",
+      text: "Anodisieren färbt Titan ohne Farbstoff: Je höher die Spannung, desto dicker die Oxidschicht, und das Licht wird anders gebrochen. Die Spannungen sind Richtwerte und hängen vom Verfahren ab.",
+      svg: "<defs>" + defs + "</defs>" + svg + l(20, 156, 620, 156, "sd") + pfeil(560, 156, 620, 156, "s") + t(20, 166, "niedrige Spannung, dünne Oxidschicht", "tk") + t(620, 166, "hohe Spannung", "tk", "end") };
+  })();
+
+  // ---------- Studio in isometrischer Ansicht ----------
+  (function () {
+    function ip(x, y, z) { return [Math.round(300 + (x - y) * 0.866), Math.round(170 + (x + y) * 0.5 - z)]; }
+    function poly(pts, k) { return '<polygon points="' + pts.map(function (q) { return ip(q[0], q[1], q[2]).join(","); }).join(" ") + '" class="' + k + '"/>'; }
+    function box(x, y, z, w, d, h, k) {
+      var top = [[x, y, z + h], [x + w, y, z + h], [x + w, y + d, z + h], [x, y + d, z + h]];
+      var re = [[x + w, y, z], [x + w, y + d, z], [x + w, y + d, z + h], [x + w, y, z + h]];
+      var li = [[x, y + d, z], [x + w, y + d, z], [x + w, y + d, z + h], [x, y + d, z + h]];
+      kisten.push({ tiefe: x + w / 2 + y + d / 2 + z * 1.5, svg: poly(li, k + " s1") + poly(li, "dunkel2") + poly(re, k + " s1") + poly(re, "dunkel") + poly(top, k + " s1") });
+      return "";
+    }
+    var kisten = [];
+    function kistenZeichnen() { return kisten.sort(function (a, b) { return a.tiefe - b.tiefe; }).map(function (k) { return k.svg; }).join(""); }
+    function marke(x, y, z, n) { var q = ip(x, y, z); return l(q[0], q[1], q[0], q[1] - 26, "sl") + nr(q[0], q[1] - 34, n); }
+    var svg =
+      poly([[0, 0, 0], [400, 0, 0], [400, 300, 0], [0, 300, 0]], "boden s1") +
+      poly([[0, 0, 0], [400, 0, 0], [400, 0, 150], [0, 0, 150]], "wand s1") +
+      poly([[0, 0, 0], [0, 300, 0], [0, 300, 150], [0, 0, 150]], "wand s1") + poly([[0, 0, 0], [0, 300, 0], [0, 300, 150], [0, 0, 150]], "dunkel") +
+      // Trennwand mit Tür, niedrig geschnitten, damit beide Räume sichtbar bleiben
+      box(220, 0, 0, 8, 210, 34, "wand") + box(220, 270, 0, 8, 30, 34, "wand") +
+      // Behandlungsraum
+      box(20, 0, 0, 110, 40, 70, "moebel") + box(36, 8, 70, 46, 24, 6, "metallbox") + box(104, 10, 70, 16, 16, 18, "rot") +
+      box(150, 0, 0, 50, 36, 64, "moebel") + poly([[160, 6, 64.5], [190, 6, 64.5], [190, 30, 64.5], [160, 30, 64.5]], "becken") + box(168, 0, 92, 14, 4, 22, "spender") +
+      box(186, 60, 0, 22, 22, 34, "metallbox") +
+      box(40, 120, 0, 140, 50, 40, "liege") + box(40, 120, 40, 140, 50, 10, "polster") +
+      // Aufbereitung
+      box(240, 0, 0, 150, 40, 70, "moebel") + box(252, 6, 70, 40, 26, 22, "metallbox") + box(306, 6, 70, 50, 30, 36, "autoklav") +
+      box(350, 110, 0, 46, 70, 110, "schrank") + kistenZeichnen() +
+      marke(76, 20, 76, "1") + marke(112, 18, 88, "2") + marke(175, 18, 64, "3") + marke(197, 71, 34, "4") + marke(110, 145, 50, "5") +
+      marke(272, 19, 92, "6") + marke(331, 21, 106, "7") + marke(373, 145, 110, "8");
+    var legende = [["1", "Arbeitsfläche mit Folie und Instrumentenschale"], ["2", "Nadelabwurf in Griffweite"], ["3", "Waschbecken, Spender ohne Handkontakt"], ["4", "Trittmülleimer"], ["5", "Liege, glatt und abwaschbar"], ["6", "Ultraschallbad (unrein)"], ["7", "Autoklav"], ["8", "Sterilgut, geschlossen gelagert (rein)"]];
+    legende.forEach(function (z, i) { var y = 560 + (i % 4) * 26, x = i < 4 ? 28 : 360; svg += nr(x, y - 4, z[0]) + t(x + 18, y, z[1], "tk"); });
+    G.studio3d = { w: 680, h: 650,
+      alt: "Isometrische Ansicht eines Piercingstudios: Behandlungsraum mit Arbeitsfläche, Instrumentenschale, Nadelabwurf, Waschbecken, Trittmülleimer und Liege; durch eine Wand getrennt der Aufbereitungsraum mit Ultraschallbad, Autoklav und Sterilgutschrank.",
+      text: "So kann ein Studio aufgebaut sein (schematisch). Behandlung und Aufbereitung sind räumlich getrennt; benutzte Instrumente wandern von unrein (Ultraschallbad) über den Autoklav nach rein (Schrank) und kreuzen sich nicht mit Sterilgut.",
+      svg: svg };
+  })();
+
   KURS.grafiken = G;
 })();
