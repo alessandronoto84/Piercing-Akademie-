@@ -53,7 +53,7 @@ window.KURS = window.KURS || { module: [] };
       // Schweißdrüse
       p("M340 60 C338 90 344 120 340 150 C336 180 350 196 340 204 C330 212 326 196 336 194 C348 192 352 206 342 212 C334 216 330 206 338 204", "sd b15"),
       // Stichkanal und Kanüle
-      r(186, 58, 10, 186, "fbg dash s1"),
+      r(186, 58, 10, 186, "fkanal dash s1"),
       '<polygon points="186,0 196,0 196,44 191,58 186,44" class="fmet s1"/>',
       // Beschriftung im Bild
       t(82, 34, "Haar", "tk"), t(140, 122, "Kapillaren", "tk"), t(208, 236, "Stichkanal", "tk"),
@@ -130,7 +130,13 @@ window.KURS = window.KURS || { module: [] };
       p("M104 108 C170 86 250 76 306 80 C344 84 368 96 378 110 C360 104 330 98 300 98 C240 96 170 104 106 122 Z", "fbraue"),
       l(196, 64, 196, 148, "sl dash"), l(282, 56, 282, 148, "sl dash"),
       t(150, 168, "inneres Drittel", "tm", "middle"), t(240, 168, "mittleres Drittel", "tm", "middle"), t(332, 168, "äußeres Drittel", "tm", "middle"),
-      p("M150 196 C180 176 230 174 262 186 C240 214 190 216 150 196 Z", "s"), c(206, 194, 12, "fmuted"),
+      // Auge: Lidspalte als Mandelform, Iris mit Pupille und Lichtpunkt, Lidfalte und Wimpern
+      '<clipPath id="ab-lid"><path d="M148 196 C172 172 236 168 264 188 C238 214 176 216 148 196 Z"/></clipPath>',
+      p("M148 196 C172 172 236 168 264 188 C238 214 176 216 148 196 Z", "fweiss"),
+      '<g clip-path="url(#ab-lid)">' + c(208, 192, 17, "f-iris") + c(208, 192, 7, "fink") + c(203, 187, 3, "fweiss") + "</g>",
+      p("M148 196 C172 172 236 168 264 188", "s b2"), p("M150 197 C178 214 236 212 262 190", "sd b15"),
+      p("M158 182 C184 164 236 160 258 174", "sd"),
+      [[166, 184, 162, 176], [180, 178, 177, 169], [196, 175, 195, 166], [212, 174, 213, 165], [228, 175, 231, 166], [244, 179, 249, 171], [256, 184, 263, 178]].map(function (w) { return l(w[0], w[1], w[2], w[3], "s b1"); }).join(""),
       // Nerven
       c(150, 128, 4, "fnerv"), p("M150 128 C146 100 136 70 128 20 M150 128 C154 96 160 60 170 14 M150 128 C162 104 182 80 206 34", "nerv b2"),
       c(118, 132, 3, "fnerv"), p("M118 132 C114 108 106 70 100 24", "nerv b15"),
@@ -149,9 +155,15 @@ window.KURS = window.KURS || { module: [] };
     alt: "Gesicht von der Seite. Der Gesichtsnerv tritt vor dem Ohr aus und fächert sich zu Stirn, Wange, Mund und Kinn auf; der Speichelgang der Ohrspeicheldrüse verläuft quer über die Wange; die Gesichtsarterie zieht vom Unterkiefer zum Mundwinkel. Das Cheek-Piercing liegt mitten in diesem Bereich.",
     text: "Gesicht von der Seite (schematisch, Lage individuell verschieden). Durch die Wange laufen Äste des Gesichtsnervs, der Speichelgang der Ohrspeicheldrüse und die Gesichtsarterie. Deshalb gehört das Cheek in erfahrene Hände.",
     svg: [
-      p("M170 20 C140 40 126 80 124 110 C118 130 96 150 70 176 C84 184 96 190 104 194 C100 206 96 214 100 222 C106 228 110 230 104 236 C100 244 104 252 112 258 C110 276 112 290 126 300 C170 316 250 318 300 302 C320 296 334 290 340 276", "s"),
-      e(150, 122, 18, 8, "s"), c(146, 122, 4, "fink"),
-      p("M100 222 C112 224 120 226 126 226", "s"),
+      // Kopf im Profil, Blick nach links: Stirn, Nasenwurzel, Nase, Lippen, Kinn, Unterkiefer, Hals, Hinterkopf
+      p("M214 16 C172 18 142 40 134 74 C130 90 130 100 128 110 C136 118 137 126 133 136 C122 152 104 166 90 180 C85 186 90 192 100 194 C106 195 111 197 113 201 C109 205 106 209 108 214 C112 218 118 220 118 224 C112 229 108 234 112 240 C116 246 122 248 122 254 C116 262 112 272 116 284 C122 296 138 302 160 304 C212 308 272 300 312 284 C326 278 336 268 342 256", "s"),
+      p("M214 16 C292 10 360 38 390 96", "s"), p("M166 304 C170 336 172 366 168 398", "s"), p("M322 278 C334 318 346 358 356 398", "s"),
+      // Auge seitlich, Augenbraue, Nasenloch, Mundwinkel
+      '<clipPath id="wg-lid"><path d="M140 126 C150 118 164 117 174 122 C166 132 150 134 140 126 Z"/></clipPath>',
+      p("M140 126 C150 118 164 117 174 122 C166 132 150 134 140 126 Z", "fweiss"),
+      '<g clip-path="url(#wg-lid)">' + c(151, 125, 6, "f-iris") + c(150, 125, 2.6, "fink") + "</g>",
+      p("M140 126 C150 118 164 117 174 122", "s b15"), p("M138 108 C152 101 168 101 184 108", "sd b3"),
+      p("M100 186 C104 181 111 183 113 190", "sd b15"), p("M118 224 C122 225 126 225 130 223", "s b1"),
       // Ohr
       p("M372 130 C350 140 348 200 362 232 C372 252 392 254 398 238 C410 210 412 160 400 138 C392 124 380 124 372 130 Z", "f-kn s"),
       // Ohrspeicheldrüse
@@ -477,7 +489,7 @@ window.KURS = window.KURS || { module: [] };
         c(262, 192, 10, "f-blut s1") + c(262, 192, 4, "f-blut-d") + c(286, 196, 9, "f-vene s1") + c(274, 176, 5, "fnerv s1") +
         // Kanüle von oben, im Gewebe gestrichelt
         '<rect x="331" y="14" width="18" height="22" rx="4" fill="url(#hbgr)"/>' +
-        '<rect x="336" y="36" width="8" height="74" rx="3" fill="url(#hbp)"/>' + r(337, 110, 6, 150, "fbg dash s1", 2) + '<polygon points="337,260 343,260 340,276" fill="url(#hbp)"/>' +
+        '<rect x="336" y="36" width="8" height="74" rx="3" fill="url(#hbp)"/>' + r(337, 110, 6, 150, "fkanal dash s1", 2) + '<polygon points="337,260 343,260 340,276" fill="url(#hbp)"/>' +
         // Beschriftung rechts an der Seitenfläche
         l(x1 + dx + 4, yE + dy + 9, 570, yE + dy + 9, "sl") + t(576, yE + dy + 13, "Oberhaut", "tb") +
         l(x1 + dx + 4, (yD + yS) / 2 + dy, 570, (yD + yS) / 2 + dy, "sl") + t(576, (yD + yS) / 2 + dy + 4, "Lederhaut", "tb") + t(576, (yD + yS) / 2 + dy + 20, "Gefäße, Nerven, Haare", "tm") +
