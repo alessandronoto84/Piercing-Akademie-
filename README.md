@@ -2,7 +2,7 @@
 
 Statische Website der Piercing Akademie (740 Piercing, Lingen). Ohne Build-System, ohne Server-Logik.
 
-**Veröffentlichen:** Die Dateien `*.html`, `robots.txt`, `sitemap.xml` und den Ordner `assets/` auf einen Webspace hochladen. `index.html` ist die Startseite. Den Ordner `kurs-prototyp/` **nicht** auf die öffentliche Website hochladen: Er enthält die vollständigen Kursinhalte ohne Login.
+**Veröffentlichen:** Die Dateien `*.html`, `robots.txt`, `sitemap.xml` und den Ordner `assets/` (mit `bilder/` und `video/`) auf einen Webspace hochladen. `index.html` ist die Startseite. Den Ordner `kurs-prototyp/` **nicht** auf die öffentliche Website hochladen: Er enthält die vollständigen Kursinhalte ohne Login.
 
 **Lokal ansehen:** `index.html` im Browser öffnen, oder `python3 -m http.server` im Ordner starten und `http://localhost:8000` aufrufen.
 

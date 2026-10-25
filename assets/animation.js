@@ -13,7 +13,7 @@
   if (ruhig) root.classList.add("ruhig");
 
   // ---------- Scroll-Nadel ----------
-  var KURZ = { lernprinzip: "Lernprinzip", module: "Module", ablauf: "Ablauf", zielgruppe: "Für wen", kurs: "Kursinhalt", pakete: "Pakete", praxistag: "Praxistag", ergebnis: "Studio", klartext: "Klartext", faq: "Fragen", kontakt: "Anmeldung" };
+  var KURZ = { ueber: "Über mich", lernprinzip: "Lernprinzip", module: "Module", ablauf: "Ablauf", zielgruppe: "Für wen", kurs: "Kursinhalt", pakete: "Pakete", praxistag: "Praxistag", ergebnis: "Studio", klartext: "Klartext", faq: "Fragen", kontakt: "Anmeldung" };
   var sektionen = [].slice.call(document.querySelectorAll("main section[id]"));
   var nadel = document.createElement("div");
   nadel.className = "nadel";
@@ -72,10 +72,17 @@
   if ("ResizeObserver" in window) new ResizeObserver(function () { vermessen(); anstossen(); }).observe(document.body);
   vermessen(); zeichnen();
 
+  // Videos: bei „Bewegung reduzieren“ angehalten (nur Standbild), sonst nur abspielen, solange sie sichtbar sind
+  var videos = [].slice.call(document.querySelectorAll("video[data-auto]"));
+  if (!ruhig && "IntersectionObserver" in window) {
+    var vb = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { var x = e.target.play(); if (x && x.catch) x.catch(function () {}); } else e.target.pause(); }); });
+    videos.forEach(function (v) { vb.observe(v); });
+  }
+
   if (ruhig || !("IntersectionObserver" in window)) return;
 
   // ---------- Einblenden beim Scrollen ----------
-  var auswahl = "main section .label, main section h2, main section .intro, .steps > li, .weg, .weg > li, .wer > *, .three > *, .prinzip > li, .two > *, .proof > *, .modulgitter > li, .mods > details, .day > *, .card, .note, .contact > *, .zahlen > div";
+  var auswahl = "main section .label, main section h2, main section .intro, .steps > li, .weg, .weg > li, .wer > *, .three > *, .prinzip > li, .two > *, .proof > *, .modulgitter > li, .mods > details, .day > *, .card, .note, .contact > *, .zahlen > div, .ueber > *, .fakten > div";
   var ziele = [].slice.call(document.querySelectorAll(auswahl)).filter(function (el, i, a) {
     if (el.classList.contains("weg")) return true; // die Linie zwischen den Schritten zeichnet sich selbst
     for (var p = el.parentElement; p; p = p.parentElement) if (a.indexOf(p) > -1 && !p.classList.contains("weg")) return false; // nicht doppelt animieren
