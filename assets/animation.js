@@ -2,7 +2,8 @@
    1. Scroll-Nadel: Eine Venenverweilkanüle sticht beim Scrollen am rechten Rand nach unten; hinter ihr bleibt der
       Stichkanal stehen, jede Sektion ist ein Markierungspunkt. Am Seitenende sitzt der Schmuck (Kugel).
       Auf schmalen Bildschirmen stattdessen eine dünne Fortschrittslinie oben.
-   2. Sanftes Einblenden der Inhalte beim Scrollen, hochzählende Zahlen.
+   2. Sanftes Einblenden der Inhalte beim Scrollen, hochzählende Zahlen, sich zeichnende Linie zwischen den Schritten.
+   3. Paketkarten kippen leicht zur Maus (nur mit Maus, nicht bei „Bewegung reduzieren“).
    Bei „Bewegung reduzieren“ (prefers-reduced-motion) bleibt alles ruhig; ohne JavaScript ist die Seite unverändert. */
 (function () {
   "use strict";
@@ -12,7 +13,7 @@
   if (ruhig) root.classList.add("ruhig");
 
   // ---------- Scroll-Nadel ----------
-  var KURZ = { ablauf: "Ablauf", zielgruppe: "Für wen", kurs: "Kursinhalt", pakete: "Pakete", praxistag: "Praxistag", ergebnis: "Ergebnis", klartext: "Klartext", faq: "Fragen", kontakt: "Anmeldung" };
+  var KURZ = { lernprinzip: "Lernprinzip", module: "Module", ablauf: "Ablauf", zielgruppe: "Für wen", kurs: "Kursinhalt", pakete: "Pakete", praxistag: "Praxistag", ergebnis: "Studio", klartext: "Klartext", faq: "Fragen", kontakt: "Anmeldung" };
   var sektionen = [].slice.call(document.querySelectorAll("main section[id]"));
   var nadel = document.createElement("div");
   nadel.className = "nadel";
@@ -74,36 +75,55 @@
   if (ruhig || !("IntersectionObserver" in window)) return;
 
   // ---------- Einblenden beim Scrollen ----------
-  var auswahl = "main section .label, main section h2, main section .intro, main section .lead, .steps > li, .three > *, .two > *, .proof > *, .pair > *, .mods > details, .gallery > *, .day > *, .card, .price, .note, .contact > *";
+  var auswahl = "main section .label, main section h2, main section .intro, .steps > li, .weg, .weg > li, .wer > *, .three > *, .prinzip > li, .two > *, .proof > *, .modulgitter > li, .mods > details, .day > *, .card, .note, .contact > *, .zahlen > div";
   var ziele = [].slice.call(document.querySelectorAll(auswahl)).filter(function (el, i, a) {
-    for (var p = el.parentElement; p; p = p.parentElement) if (a.indexOf(p) > -1) return false; // nicht doppelt animieren
+    if (el.classList.contains("weg")) return true; // die Linie zwischen den Schritten zeichnet sich selbst
+    for (var p = el.parentElement; p; p = p.parentElement) if (a.indexOf(p) > -1 && !p.classList.contains("weg")) return false; // nicht doppelt animieren
     return !el.closest(".hero");
   });
   ziele.forEach(function (el) {
     var geschwister = el.parentElement ? [].slice.call(el.parentElement.children).filter(function (k) { return ziele.indexOf(k) > -1; }) : [];
-    var n = Math.min(geschwister.indexOf(el), 6);
-    el.classList.add("einblenden");
+    var n = Math.min(geschwister.indexOf(el), 7);
+    if (!el.classList.contains("weg")) el.classList.add("einblenden");
     if (n > 0) el.style.transitionDelay = (n * 70) + "ms";
   });
   var beobachter = new IntersectionObserver(function (eintraege) {
     eintraege.forEach(function (e) {
-      if (e.isIntersecting) { e.target.classList.add("sichtbar"); beobachter.unobserve(e.target); }
+      if (!e.isIntersecting) return;
+      e.target.classList.add("sichtbar");
+      beobachter.unobserve(e.target);
+      if (e.target.hasAttribute("data-zahl")) hochzaehlen(e.target);
+      [].forEach.call(e.target.querySelectorAll("[data-zahl]"), hochzaehlen);
     });
   }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
   ziele.forEach(function (el) { beobachter.observe(el); });
 
-  // ---------- Zahlen hochzählen (z. B. 11 Module, 103 Lektionen) ----------
-  [].slice.call(document.querySelectorAll(".spec dd")).forEach(function (dd) {
-    var m = dd.textContent.match(/^(\d+)(.*)$/);
-    if (!m || /^\S/.test(m[2])) return; // „18G“ bleibt stehen
-    var ziel = Number(m[1]), rest = m[2], start = null, dauer = 1100;
-    dd.textContent = "0" + rest;
+  // ---------- Zahlen hochzählen (11 Module, 103 Lektionen, 605 Fragen) ----------
+  function hochzaehlen(dd) {
+    if (dd.dataset.gezaehlt) return;
+    dd.dataset.gezaehlt = "1";
+    var ziel = Number(dd.getAttribute("data-zahl")), start = null, dauer = 1400;
     function schritt(t) {
       if (start === null) start = t;
       var x = Math.min(1, (t - start) / dauer), weich = 1 - Math.pow(1 - x, 3);
-      dd.textContent = Math.round(ziel * weich) + rest;
+      dd.textContent = String(Math.round(ziel * weich));
       if (x < 1) window.requestAnimationFrame(schritt);
     }
-    window.setTimeout(function () { window.requestAnimationFrame(schritt); }, 500);
+    dd.textContent = "0";
+    window.requestAnimationFrame(schritt);
+  }
+  [].forEach.call(document.querySelectorAll(".hero [data-zahl], .zahlen [data-zahl]"), function (dd) {
+    if (!dd.closest(".einblenden")) window.setTimeout(function () { hochzaehlen(dd); }, 600);
   });
+
+  // ---------- Leichtes Kippen der Paketkarten zur Maus ----------
+  if (window.matchMedia("(hover: hover)").matches) {
+    [].forEach.call(document.querySelectorAll(".card"), function (k) {
+      k.addEventListener("pointermove", function (e) {
+        var r = k.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - 0.5, y = (e.clientY - r.top) / r.height - 0.5;
+        k.style.transform = "translateY(-6px) perspective(900px) rotateX(" + (-y * 4).toFixed(2) + "deg) rotateY(" + (x * 5).toFixed(2) + "deg)";
+      });
+      k.addEventListener("pointerleave", function () { k.style.transform = ""; });
+    });
+  }
 })();

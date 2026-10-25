@@ -237,7 +237,19 @@ Die Markierung „neu“ auf der Website passt damit genau zu den Modulen, die �
 ## 9. Bewegung auf der Website (24.10.2026)
 
 Auf Wunsch („schöner, seriöser, ein paar Animationen … eine Piercing-Nadel, die mit runterscrollt“) in `assets/animation.js` und am Ende von `assets/styles.css`:
-- **Scroll-Nadel:** Ab 1240 px Breite sticht am rechten Rand eine Venenverweilkanüle (grüner 18G-Ansatz) beim Scrollen nach unten; hinter ihr bleibt der Stichkanal in Akzentblau stehen. Jede Sektion ist ein Markierungspunkt (anklickbar, Name beim Überfahren). Am Seitenende verschwindet die Nadel, der Kanal wird zum Schmuckstab, eine Kugel sitzt: „Schmuck sitzt.“ Auf schmaleren Bildschirmen eine dünne Fortschrittslinie oben mit Nadelspitze.
+- **Scroll-Nadel:** Ab 1300 px Breite (seit 25.10.2026, vorher 1240 px) sticht am rechten Rand eine Venenverweilkanüle (grüner 18G-Ansatz) beim Scrollen nach unten; hinter ihr bleibt der Stichkanal stehen (seit 25.10.2026 in Gold). Jede Sektion ist ein Markierungspunkt (anklickbar, Name beim Überfahren). Am Seitenende verschwindet die Nadel, der Kanal wird zum Schmuckstab, eine Kugel sitzt: „Schmuck sitzt.“ Auf schmaleren Bildschirmen eine dünne Fortschrittslinie oben mit Nadelspitze.
 - **Auftakt und Einblenden:** Hero-Text taucht gestaffelt auf, die Kanülenbalken im Datenblatt „stechen“ hinein, Inhalte blenden beim Scrollen weich ein, die Zahlen im Online-Kurs zählen hoch.
 - **Feinschliff:** Datenblatt im Hero mit langsam umlaufendem Rahmen in Farben von eloxiertem Titan, Markierungsstrich vor den Rubriken, Karten heben sich beim Überfahren leicht an, Lichtreflex über Buttons.
 - **Barrierefreiheit:** Bei „Bewegung reduzieren“ im Betriebssystem laufen keine Animationen; ohne JavaScript bleibt die Seite unverändert sichtbar. Die Nadel ist für Screenreader ausgeblendet.
+
+## 10. Neugestaltung der Website (25.10.2026)
+
+Auf Wunsch („viel zu viel Text, unübersichtlich, Farbgebung gefällt mir nicht, wichtige Informationen rausstechen, Animationen“):
+
+- **Farben:** Schwarz, Elfenbein und Titan-Gold statt Blaugrün und Blau. Dunkle Bänder für Kopf und Einstieg, Pakete und Anmeldung, helle Flächen für Inhalte. Der Farbverlauf `--titan` (Gold, Rosé, Violett, Blau wie eloxiertes Titan) nur für Hervorhebungen. Gold als Text (`--accent` #8A672C) erreicht 4,7:1 auf Elfenbein; Knöpfe sind helles Gold (#C9A464) mit dunkler Schrift (7,7:1). Dunkelmodus mit eigenen Werten in `assets/styles.css`. Der Kurs-Prototyp übernimmt die Farben automatisch.
+- **Weniger Text:** Startseite etwa halb so lang. Kennzahlen-Leiste (11 Module, 103 Lektionen, 605 Prüfungsfragen, 1–2 Praxistage), drei Schritte mit Symbolen, Zielgruppen als kurze Karten, Kursinhalt als Kachelraster mit je einer Zeile statt Aufklapp-Liste, Paketkarten mit höchstens fünf Punkten, Klartext als ✓/✕-Listen, kürzere FAQ-Antworten. Alle Fakten (Preise, Leistungen, „kein staatlicher Abschluss“, Modelle ohne Garantie, ab 18) sind unverändert.
+- **Online-Kurs-Seite:** gleicher Einstieg im dunklen Band, Lernprinzip als sechs nummerierte Karten, kürzere Texte. Die Modulliste mit allen Lektionen bleibt aufklappbar; sie und die Fragenzahl auf beiden Seiten werden weiterhin aus den Kursdaten erzeugt.
+- **Rechtsseiten:** nur Kopfzeile im dunklen Band und ruhigere Abschnittstrenner, Inhalt unverändert.
+- **Bewegung:** Überschrift im Einstieg zeilenweise, schimmernder Titan-Verlauf, umlaufender Titan-Ring am Foto und um das empfohlene Paket, schwebendes Datenblatt, hochzählende Kennzahlen, sich zeichnende Linie zwischen den drei Schritten, Kacheln mit Titan-Unterstrich beim Überfahren, leicht kippende Paketkarten (nur mit Maus), Laufband mit Studiofotos (hält beim Überfahren an, Farbe beim Überfahren), weich aufklappende FAQ. Bei „Bewegung reduzieren“ steht alles still, das Laufband wird zur scrollbaren Reihe.
+- **Geprüft:** keine horizontale Scrollleiste von 320 bis 1440 px auf allen Seiten, Formular-Test (Pflichtfelder, Telefonprüfung, Paket per Karte und per `?paket=`), Kurs-Test, html-validate (nur der bekannte Hinweis zur DOCTYPE-Schreibweise).
+- **Die alte Fassung** liegt in der Git-Historie (Commit vor dieser Änderung).
