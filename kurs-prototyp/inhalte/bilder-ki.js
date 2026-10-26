@@ -14,7 +14,7 @@ KURS.titelbilder = {
 "src": "inhalte/bilder/2.webp",
 "w": 960,
 "h": 540,
-"alt": "Klemmbrett mit Einverständnisformular, Kugelschreiber, Ausweis und Notizblock",
+"alt": "Klemmbrett mit leerem Einverständnisformular und Unterschriftszeile, Kugelschreiber und Ausweisheft",
 "ki": "FLUX.2 [klein] 4B über Cloudflare Workers AI"
 },
 "3": {
@@ -49,14 +49,14 @@ KURS.titelbilder = {
 "src": "inhalte/bilder/7.webp",
 "w": 960,
 "h": 540,
-"alt": "Instrumententablett mit Piercingzangen auf steriler Abdeckung",
+"alt": "Piercingzange, Braunüle, Nadelauffangrohr und Kugelgreifer auf steriler Abdeckung",
 "ki": "FLUX.2 [klein] 4B über Cloudflare Workers AI"
 },
 "8": {
 "src": "inhalte/bilder/8.webp",
 "w": 960,
 "h": 540,
-"alt": "Übungsohr aus Kunststoff mit mehreren kleinen Kugelsteckern",
+"alt": "Ohr mit vier Kugelsteckern: Lobe, Upper Lobe, Tragus und Helix",
 "ki": "FLUX.2 [klein] 4B über Cloudflare Workers AI"
 },
 "9": {
