@@ -7,77 +7,77 @@ KURS.titelbilder = {
 "src": "inhalte/bilder/1.webp",
 "w": 960,
 "h": 540,
-"alt": "Piercingschmuck auf Schiefer: Titanringe, Stäbe, Labrets, sechs Tunnel aus Horn und eine Kanüle in steriler Verpackung",
+"alt": "Arbeitsplatz auf steriler Abdeckung: Hautmarker, Sterilbeutel, Schale mit Ringen, Barbell, Hufeisenringe und schwarze Handschuhe",
 "ki": "FLUX.2 [klein] 4B über Cloudflare Workers AI"
 },
 "2": {
 "src": "inhalte/bilder/2.webp",
 "w": 960,
 "h": 540,
-"alt": "Klemmbrett mit leerem Formular und Kugelschreiber auf einem Holztisch",
+"alt": "Klemmbrett mit Einverständnisformular, Kugelschreiber, Ausweis und Notizblock",
 "ki": "FLUX.2 [klein] 4B über Cloudflare Workers AI"
 },
 "3": {
 "src": "inhalte/bilder/3.webp",
 "w": 960,
 "h": 540,
-"alt": "Ohr ohne Schmuck von der Seite",
+"alt": "Anatomisches Ohrmodell und Modell der Hautschichten auf einem Tisch",
 "ki": "FLUX.2 [klein] 4B über Cloudflare Workers AI"
 },
 "4": {
 "src": "inhalte/bilder/4.webp",
 "w": 960,
 "h": 540,
-"alt": "Runder Tisch mit zwei Tassen Tee und einem Klemmbrett, daneben zwei Sessel",
+"alt": "Schale mit Eiswürfeln, Kältespray und Salbentube auf blauer Abdeckung",
 "ki": "FLUX.2 [klein] 4B über Cloudflare Workers AI"
 },
 "5": {
 "src": "inhalte/bilder/5.webp",
 "w": 960,
 "h": 540,
-"alt": "Berührungslose Spender über einem Handwaschbecken",
+"alt": "Autoklav mit geöffneter Tür, daneben verpacktes Sterilgut mit Indikatorstreifen",
 "ki": "FLUX.2 [klein] 4B über Cloudflare Workers AI"
 },
 "6": {
 "src": "inhalte/bilder/6.webp",
 "w": 960,
 "h": 540,
-"alt": "Titanschmuck auf Schiefer: Barbell, Hufeisen und Ring",
+"alt": "Titanschmuck auf Stein: Barbell, Curved Barbell, Labret und Ball Closure Ring",
 "ki": "FLUX.2 [klein] 4B über Cloudflare Workers AI"
 },
 "7": {
 "src": "inhalte/bilder/7.webp",
 "w": 960,
 "h": 540,
-"alt": "Instrumententablett mit Klemme, Schere und Pinzette auf steriler Abdeckung",
+"alt": "Instrumententablett mit Piercingzangen auf steriler Abdeckung",
 "ki": "FLUX.2 [klein] 4B über Cloudflare Workers AI"
 },
 "8": {
 "src": "inhalte/bilder/8.webp",
 "w": 960,
 "h": 540,
-"alt": "Ohr mit einem Kugelstecker im Ohrläppchen",
+"alt": "Übungsohr aus Kunststoff mit mehreren kleinen Kugelsteckern",
 "ki": "FLUX.2 [klein] 4B über Cloudflare Workers AI"
 },
 "9": {
 "src": "inhalte/bilder/9.webp",
 "w": 960,
 "h": 540,
-"alt": "Markierstift, Handschuhe, Kompressen und ein Spiegel auf steriler Abdeckung",
+"alt": "Erste-Hilfe-Set, Glas Wasser, Traubenzucker und Checkliste",
 "ki": "FLUX.2 [klein] 4B über Cloudflare Workers AI"
 },
 "10": {
 "src": "inhalte/bilder/10.webp",
 "w": 960,
 "h": 540,
-"alt": "Sprühflasche und Handtücher auf einem hellen Regal",
+"alt": "Pflegespray, sterile Kompressen, Kamillentee und Pflegehinweise",
 "ki": "FLUX.2 [klein] 4B über Cloudflare Workers AI"
 },
 "11": {
 "src": "inhalte/bilder/11.webp",
 "w": 960,
 "h": 540,
-"alt": "Leerer Behandlungsraum eines Piercingstudios mit Liege, Beistelltisch und Handwaschbecken",
-"ki": "FLUX.1 [schnell] über Cloudflare Workers AI"
+"alt": "Eingerichteter Behandlungsraum mit Liege, Handwaschbecken und Autoklav",
+"ki": "FLUX.2 [klein] 4B über Cloudflare Workers AI"
 }
 };
