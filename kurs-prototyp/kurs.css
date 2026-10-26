@@ -301,3 +301,12 @@
 @media (prefers-reduced-motion:reduce){.k-modulkarte:hover .k-titelbild.k-klein img{transform:none}}
 .k-titelbild.k-leer{aspect-ratio:16/7;display:grid;place-items:center;background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 14%,var(--surface)),var(--surface));border-bottom:1px solid var(--line)}
 .k-titelbild.k-leer span{font-family:var(--f-display);font-size:2.2rem;color:color-mix(in srgb,var(--accent) 45%,transparent)}
+
+/* Prüfmodus: Lösungen und Blättern */
+.k-loesungen{margin:2rem 0 0;border:1px dashed var(--accent);border-radius:14px;padding:0 1.25rem;background:var(--surface)}
+.k-loesungen summary{display:block;cursor:pointer;padding:1rem 0;font-weight:600;color:var(--accent);list-style:none}
+.k-loesungen>ol{margin:0 0 1.25rem;padding-left:1.25rem;display:grid;gap:1rem}
+.k-loesungen ul{list-style:none;margin:.4rem 0 0;padding:0;display:grid;gap:.2rem}
+.k-loesungen .k-richtig{color:var(--g-ok);font-weight:600}
+.k-loesungen .k-falsch-antw{color:var(--muted)}
+.k-blaettern{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:1.5rem}

@@ -246,6 +246,22 @@
   }
 
   // ---------- Lektion: erst Erklärung, dann Pflichtfragen ----------
+  // Prüfmodus: alle Fragen der Lektion mit Lösung zum Durchsehen, und Blättern zur vorigen und nächsten Lektion
+  function loesungen(l) {
+    return '<details class="k-loesungen"><summary>Prüfmodus: alle ' + l.alleFragen.length + " Fragen dieser Lektion mit Lösung ansehen</summary><ol>" +
+      l.alleFragen.map(function (f) {
+        return "<li><p><strong>" + esc(f.frage) + '</strong></p><ul><li class="k-richtig">✓ ' + esc(f.antworten[0]) + "</li>" +
+          f.antworten.slice(1).map(function (a) { return '<li class="k-falsch-antw">✕ ' + esc(a) + "</li>"; }).join("") + "</ul>" +
+          (f.erklaerung ? '<p class="fine">' + esc(f.erklaerung) + (f.seite ? " · " + esc(String(f.seite)) : "") + "</p>" : "") + "</li>";
+      }).join("") + "</ol></details>";
+  }
+  function blaettern(m, i) {
+    var mi = MODULE.indexOf(m), vor = i > 0 ? [m, i - 1] : mi > 0 ? [MODULE[mi - 1], MODULE[mi - 1].lektionen.length - 1] : null;
+    var nach = i < m.lektionen.length - 1 ? [m, i + 1] : mi < MODULE.length - 1 ? [MODULE[mi + 1], 0] : null;
+    function link(z, text) { return z ? '<a class="btn ghost" href="#lektion-' + z[0].nr + "-" + z[1] + '">' + text + "</a>" : "<span></span>"; }
+    return '<nav class="k-blaettern" aria-label="Lektionen blättern">' + link(vor, "← Vorige Lektion") + link(nach, "Nächste Lektion →") + "</nav>";
+  }
+
   function lektionSeite(m, i) {
     var l = m.lektionen[i];
     if (!lektionOffen(m, i)) {
@@ -257,7 +273,8 @@
       '<ol class="k-phasen" aria-label="Ablauf der Lektion"><li class="aktiv" id="phase-1"><span class="n">1</span>Erklärung</li><li id="phase-2"><span class="n">2</span>Fragen (' + l.alleFragen.length + ')</li><li id="phase-3"><span class="n">3</span>Geschafft</li></ol>' +
       '<article class="k-lektion" id="erklaerung">' + l.inhalt.map(block).join("") + "</article>" +
       '<div class="k-weiter" id="start-bereich"><button type="button" class="btn" id="fragen-start">Erklärung gelesen: Fragen starten</button>' + (lektionErledigt(m, i) ? ' <span class="fine">Diese Lektion hast du schon abgeschlossen. Du kannst die Fragen zur Wiederholung noch einmal beantworten.</span>' : "") + "</div>" +
-      '<section class="k-quiz" id="quiz" hidden aria-live="polite"></section>';
+      '<section class="k-quiz" id="quiz" hidden aria-live="polite"></section>' +
+      (stand.vorschau ? loesungen(l) + blaettern(m, i) : "");
     app.innerHTML = html;
     document.getElementById("fragen-start").addEventListener("click", function () {
       document.getElementById("start-bereich").hidden = true;
