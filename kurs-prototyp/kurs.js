@@ -33,6 +33,13 @@
   });
   var GESAMT_LEKTIONEN = MODULE.reduce(function (s, m) { return s + m.lektionen.length; }, 0);
   var GESAMT_FRAGEN = Object.keys(ALLE_FRAGEN).length;
+  // Druckvorlagen, erzeugt mit werkzeuge/vorlagen-erzeugen.mjs
+  var VORLAGEN = [
+    ["vorlagen/pflegehinweise.pdf", "Pflegehinweise für Kunden", "1 Seite, mit Abheilzeiten und Warnzeichen"],
+    ["vorlagen/einverstaendniserklaerung-muster.pdf", "Einverständniserklärung (Muster)", "2 Seiten, mit freiwilliger Foto-Einwilligung"],
+    ["vorlagen/hygieneplan-vorlage.pdf", "Reinigungs- und Desinfektionsplan", "Vorlage zum Ausfüllen, mit dem Gesundheitsamt abstimmen"],
+    ["vorlagen/checklisten.pdf", "Alle Checklisten", "Zum Ausdrucken und Abhaken"]
+  ];
 
   // ---------- Fortschritt ----------
   function leer() { return { erledigt: {}, bestanden: {}, fehler: {}, uebung: {}, check: {}, simulation: null, vorschau: false }; }
@@ -169,7 +176,7 @@
       '<a href="#fehler" class="k-nav-link k-nav-haupt' + (aktiv === "fehler" ? " aktiv" : "") + '">Fehler-Training (' + anzahlFehler() + ")</a>" +
       '<a href="#simulation" class="k-nav-link k-nav-haupt' + (aktiv === "simulation" ? " aktiv" : "") + (simulationOffen() ? "" : " k-gesperrt") + '">Prüfungssimulation' + (stand.simulation && stand.simulation.bestanden ? " ✓" : "") + "</a>" +
       '<a href="#glossar" class="k-nav-link k-nav-haupt' + (aktiv === "glossar" ? " aktiv" : "") + '">Glossar</a>' +
-      '<a href="#checklisten" class="k-nav-link k-nav-haupt' + (aktiv === "checklisten" ? " aktiv" : "") + '">Checklisten</a></div>';
+      '<a href="#checklisten" class="k-nav-link k-nav-haupt' + (aktiv === "checklisten" ? " aktiv" : "") + '">Checklisten und Vorlagen</a></div>';
     var war = nav.querySelector(".k-navbox");
     var auf = war ? war.open : window.matchMedia("(min-width: 861px)").matches;
     var erledigt = Object.keys(stand.erledigt).filter(function (k) { return stand.erledigt[k]; }).length;
@@ -196,7 +203,7 @@
       '<a class="k-modulkarte" href="#fehler"><span class="label">Training</span><strong>Fehler-Training</strong><span class="k-meta">' + anzahlFehler() + " Fragen, die du falsch beantwortet hast</span></a>" +
       '<a class="k-modulkarte' + (simulationOffen() ? "" : " k-gesperrt") + '" href="#simulation"><span class="label">Abschluss</span><strong>Prüfungssimulation</strong><span class="k-meta">' + (MODULE.length * SIMULATION_JE_MODUL) + " Fragen aus allen Modulen" + (simulationOffen() ? "" : " · öffnet nach allen Modulprüfungen") + "</span></a>" +
       '<a class="k-modulkarte" href="#glossar"><span class="label">Nachschlagen</span><strong>Glossar</strong><span class="k-meta">' + (KURS.glossar || []).length + " Fachbegriffe</span></a>" +
-      '<a class="k-modulkarte" href="#checklisten"><span class="label">Praxis</span><strong>Checklisten</strong><span class="k-meta">' + (KURS.checklisten || []).length + " Checklisten für den Studioalltag</span></a></div>" +
+      '<a class="k-modulkarte" href="#checklisten"><span class="label">Praxis</span><strong>Checklisten und Vorlagen</strong><span class="k-meta">' + (KURS.checklisten || []).length + " Checklisten, " + VORLAGEN.length + " Druckvorlagen als PDF</span></a></div>" +
       '<section class="k-einstellungen"><h2>Prototyp-Einstellungen</h2>' +
       '<label class="k-schalter"><input type="checkbox" id="k-vorschau"' + (stand.vorschau ? " checked" : "") + "> Alle Module und Lektionen zum Durchsehen freischalten (Prüfmodus)</label>" +
       '<div class="k-zuruecksetzen"><button type="button" class="btn ghost small" id="k-reset">Fortschritt zurücksetzen</button><span id="k-reset-frage" hidden> Wirklich alles löschen? <button type="button" class="btn small" id="k-reset-ja">Ja, löschen</button> <button type="button" class="btn ghost small" id="k-reset-nein">Abbrechen</button></span></div></section>';
@@ -400,14 +407,17 @@
     MODULE.forEach(function (m) { fragen = fragen.concat(mischen(m.pool).slice(0, SIMULATION_JE_MODUL).map(gemischt)); });
     fragen = mischen(fragen);
     app.innerHTML = '<section class="k-kopf"><p class="label">Abschluss</p><h1>Prüfungssimulation</h1><p class="lead">Wie die Abschlussprüfung: ' + fragen.length + " Fragen aus allen Modulen, bestanden ab " + benoetigt(fragen.length) + " richtigen Antworten.</p>" +
-      (stand.simulation ? '<p class="fine">Letzter Versuch: ' + stand.simulation.richtig + " von " + stand.simulation.gesamt + (stand.simulation.bestanden ? ", bestanden." : ".") + "</p>" : "") + "</section>" +
+      (stand.simulation ? '<p class="fine">' + (stand.simulation.bestanden ? "Bestes Ergebnis: " : "Letzter Versuch: ") + stand.simulation.richtig + " von " + stand.simulation.gesamt + (stand.simulation.bestanden ? ', bestanden. <a href="#bescheinigung">Zur Bescheinigung</a>' : ".") + "</p>" : "") + "</section>" +
       pruefungsFormular(fragen, "Alle Module", "Beantworte jede Frage. Die Auswertung zeigt dir zu jeder Frage die Erklärung und das Modul.");
     bindePruefung(app.querySelector("form.k-test"), fragen, function (richtig, gesamt) {
       var ok = richtig >= benoetigt(gesamt);
-      stand.simulation = { richtig: richtig, gesamt: gesamt, bestanden: ok || !!(stand.simulation && stand.simulation.bestanden) };
+      var vorher = stand.simulation && stand.simulation.bestanden ? stand.simulation : null;
+      stand.simulation = ok && (!vorher || richtig > vorher.richtig)
+        ? { richtig: richtig, gesamt: gesamt, bestanden: true, datum: new Date().toISOString().slice(0, 10) }
+        : vorher || { richtig: richtig, gesamt: gesamt, bestanden: false };
       speichern(); zeichneNav("simulation");
       return ok
-        ? "<strong>Bestanden: " + richtig + " von " + gesamt + " richtig.</strong> In der fertigen Kursversion stellt die Piercing Akademie danach deine Teilnahmebescheinigung aus. In diesem Prototyp wird keine Bescheinigung erzeugt."
+        ? "<strong>Bestanden: " + richtig + " von " + gesamt + ' richtig.</strong> Glückwunsch! Deine Bescheinigung über den Online-Teil kannst du jetzt erstellen.</p><p><a class="btn" href="#bescheinigung">Bescheinigung erstellen</a>'
         : "<strong>Noch nicht bestanden: " + richtig + " von " + gesamt + " richtig.</strong> Du brauchst " + benoetigt(gesamt) + '. Übe im <a href="#fehler">Fehler-Training</a> und versuch es noch einmal.';
     });
   }
@@ -429,6 +439,44 @@
     app.addEventListener("click", function h(e) { if (e.target && e.target.id === "noch-eine") { app.removeEventListener("click", h); fehlerSeite(); } });
   }
 
+  // ---------- Bescheinigung über den Online-Teil ----------
+  function pruefnummer(name, datum, richtig) {
+    var s = name.trim().toLowerCase() + "|" + datum + "|" + richtig, h = 2166136261;
+    for (var i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619) >>> 0; }
+    return "PA-" + datum.slice(0, 4) + "-" + ("00000000" + h.toString(36).toUpperCase()).slice(-6);
+  }
+  function bescheinigungSeite() {
+    var sim = stand.simulation;
+    if (!sim || !sim.bestanden) {
+      app.innerHTML = '<section class="k-kopf"><p class="label">Abschluss</p><h1>Bescheinigung</h1><p class="lead">Die Bescheinigung über den Online-Teil kannst du erstellen, sobald du die Prüfungssimulation bestanden hast.</p><p><a class="btn" href="#simulation">Zur Prüfungssimulation</a></p></section>';
+      return;
+    }
+    var datum = sim.datum || new Date().toISOString().slice(0, 10);
+    var name = stand.name || "";
+    app.innerHTML = '<section class="k-kopf k-nicht-drucken"><p class="label">Abschluss</p><h1>Bescheinigung über den Online-Teil</h1><p class="lead">Trag deinen Namen so ein, wie er auf der Bescheinigung stehen soll. Über „Drucken“ kannst du sie ausdrucken oder als PDF speichern.</p>' +
+      '<div class="field k-suche"><label for="b-name">Vor- und Nachname</label><input id="b-name" type="text" autocomplete="name" maxlength="60" value="' + esc(name) + '"></div>' +
+      '<p><button type="button" class="btn" id="b-drucken">Drucken oder als PDF speichern</button></p></section>' +
+      '<article class="k-urkunde" aria-label="Bescheinigung">' +
+        '<div class="k-urkunde-kopf"><img src="' + (document.querySelector(".brand img") || {}).src + '" alt="" width="44" height="44"><span>Piercing Akademie</span></div>' +
+        '<p class="label">Bescheinigung</p><h2>Online-Kurs erfolgreich abgeschlossen</h2>' +
+        '<p class="k-urkunde-name" id="b-ausgabe">' + (esc(name) || "Dein Name") + "</p>" +
+        "<p>hat alle " + MODULE.length + " Module des Online-Kurses der Piercing Akademie bearbeitet, jede Modulprüfung bestanden und die Prüfungssimulation mit <strong>" + sim.richtig + " von " + sim.gesamt + "</strong> richtigen Antworten abgeschlossen.</p>" +
+        '<ul class="k-urkunde-module">' + MODULE.map(function (m) { return "<li>" + zwei(m.nr) + " " + esc(m.titel) + "</li>"; }).join("") + "</ul>" +
+        '<div class="k-urkunde-fuss"><div><span>' + new Date(datum + "T12:00:00").toLocaleDateString("de-DE", { day: "numeric", month: "long", year: "numeric" }) + '</span>Datum</div><div><span id="b-nr">' + pruefnummer(name, datum, sim.richtig) + "</span>Nummer</div><div><span>Alessandro Noto</span>Piercing Akademie, Lingen (Ems)</div></div>" +
+        '<p class="fine">Die Bescheinigung bestätigt den theoretischen Online-Teil. Sie ist kein staatlich anerkannter Abschluss und keine behördliche Erlaubnis. Das Zertifikat der Piercing Akademie erhältst du nach den Praxistagen im Studio.</p>' +
+      "</article>";
+    var feld = document.getElementById("b-name");
+    feld.addEventListener("input", function () {
+      stand.name = feld.value.trim(); speichern();
+      document.getElementById("b-ausgabe").textContent = stand.name || "Dein Name";
+      document.getElementById("b-nr").textContent = pruefnummer(stand.name, datum, sim.richtig);
+    });
+    document.getElementById("b-drucken").addEventListener("click", function () {
+      if (!feld.value.trim()) { feld.focus(); feld.setAttribute("aria-invalid", "true"); return; }
+      feld.removeAttribute("aria-invalid"); window.print();
+    });
+  }
+
   // ---------- Glossar und Checklisten ----------
   function glossarSeite() {
     var g = (KURS.glossar || []).slice().sort(function (a, b) { return a[0].localeCompare(b[0], "de"); });
@@ -444,7 +492,9 @@
   }
   function checklistenSeite() {
     var cl = KURS.checklisten || [];
-    app.innerHTML = '<section class="k-kopf"><p class="label">Praxis</p><h1>Checklisten</h1><p class="lead">Für den Studioalltag. Abgehakt wird nur für dich und nur in diesem Browser.</p></section>' +
+    app.innerHTML = '<section class="k-kopf"><p class="label">Praxis</p><h1>Checklisten und Vorlagen</h1><p class="lead">Für den Studioalltag. Abgehakt wird nur für dich und nur in diesem Browser.</p></section>' +
+      '<section class="k-lektion"><h2>Vorlagen zum Ausdrucken</h2><p>Druckfertig als PDF. Pass sie an dein Studio an; Einverständniserklärung und Hygieneplan lässt du vor dem Einsatz prüfen (Anwalt bzw. Gesundheitsamt).</p><ul class="k-vorlagen">' +
+        VORLAGEN.map(function (v) { return '<li><a href="' + v[0] + '" download>' + esc(v[1]) + '</a><span class="fine">' + esc(v[2]) + "</span></li>"; }).join("") + "</ul></section>" +
       cl.map(function (c, ci) {
         return '<section class="k-lektion"><h2>' + esc(c.titel) + '</h2><p class="fine">Aus Modul ' + zwei(c.modul) + '</p><ul class="k-aufgaben">' +
           c.punkte.map(function (p, pi) { var key = ci + "-" + pi; return '<li><label><input type="checkbox" data-check="' + key + '"' + (stand.check[key] ? " checked" : "") + "> " + esc(p) + "</label></li>"; }).join("") +
@@ -462,6 +512,7 @@
     if ((t = /^lektion-(\d+)-(\d+)$/.exec(h)) && modul(+t[1]) && modul(+t[1]).lektionen[+t[2]]) { zeichneNav(+t[1]); lektionSeite(modul(+t[1]), +t[2]); }
     else if ((t = /^modul-(\d+)$/.exec(h)) && modul(+t[1])) { zeichneNav(+t[1]); modulSeite(modul(+t[1])); }
     else if ((t = /^pruefung-(\d+)$/.exec(h)) && modul(+t[1])) { zeichneNav(+t[1]); pruefungSeite(modul(+t[1])); }
+    else if (h === "bescheinigung") { zeichneNav("simulation"); bescheinigungSeite(); }
     else if (h === "simulation" || h === "fehler" || h === "glossar" || h === "checklisten") {
       zeichneNav(h); ({ simulation: simulationSeite, fehler: fehlerSeite, glossar: glossarSeite, checklisten: checklistenSeite })[h]();
     } else { zeichneNav("uebersicht"); uebersicht(); }
