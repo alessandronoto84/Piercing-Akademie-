@@ -118,78 +118,79 @@ window.KURS = window.KURS || { module: [] };
     ].join("");
   } });
 
-  // ---------- Modul 3: Augenbraue und Nervenaustritt ----------
-  G.augenbraue = { w: 640, h: 270,
-    alt: "Augenbraue von vorn, in Drittel geteilt. Im inneren Drittel treten Nervus supraorbitalis und supratrochlearis aus dem Knochen; gestochen wird im äußeren Drittel.",
-    text: "Rechte Augenbraue von vorn (schematisch). Über dem inneren Drittel treten Gefühlsnerven und Gefäße aus kleinen Öffnungen im Knochen. Deshalb sticht man nur im äußeren Drittel und oberflächlich.",
-    svg: '<g transform="translate(40 0)">' + [
-      p("M60 30 C64 110 70 160 84 230", "sd"), t(30, 250, "Nasenrücken", "tm"),
-      r(282, 52, 100, 92, "f-ok", 8), t(332, 44, "Stichzone", "tok", "middle"),
-      p("M96 128 C160 110 240 98 300 100 C340 102 368 112 380 124", "sd dash"),
-      p("M104 108 C170 86 250 76 306 80 C344 84 368 96 378 110 C360 104 330 98 300 98 C240 96 170 104 106 122 Z", "fbraue"),
-      l(196, 64, 196, 148, "sl dash"), l(282, 56, 282, 148, "sl dash"),
-      t(150, 168, "inneres Drittel", "tm", "middle"), t(240, 168, "mittleres Drittel", "tm", "middle"), t(332, 168, "äußeres Drittel", "tm", "middle"),
-      // Auge: Lidspalte als Mandelform, Iris mit Pupille und Lichtpunkt, Lidfalte und Wimpern
-      '<clipPath id="ab-lid"><path d="M148 196 C172 172 236 168 264 188 C238 214 176 216 148 196 Z"/></clipPath>',
-      p("M148 196 C172 172 236 168 264 188 C238 214 176 216 148 196 Z", "fweiss"),
-      '<g clip-path="url(#ab-lid)">' + c(208, 192, 17, "f-iris") + c(208, 192, 7, "fink") + c(203, 187, 3, "fweiss") + "</g>",
-      p("M148 196 C172 172 236 168 264 188", "s b2"), p("M150 197 C178 214 236 212 262 190", "sd b15"),
-      p("M158 182 C184 164 236 160 258 174", "sd"),
-      [[166, 184, 162, 176], [180, 178, 177, 169], [196, 175, 195, 166], [212, 174, 213, 165], [228, 175, 231, 166], [244, 179, 249, 171], [256, 184, 263, 178]].map(function (w) { return l(w[0], w[1], w[2], w[3], "s b1"); }).join(""),
-      // Nerven
-      c(150, 128, 4, "fnerv"), p("M150 128 C146 100 136 70 128 20 M150 128 C154 96 160 60 170 14 M150 128 C162 104 182 80 206 34", "nerv b2"),
-      c(118, 132, 3, "fnerv"), p("M118 132 C114 108 106 70 100 24", "nerv b15"),
-      // Piercing im äußeren Drittel
-      p("M322 72 C330 90 330 110 324 126", "a b3"), c(322, 72, 5, "fa"), c(324, 126, 5, "fa"),
-      // Beschriftung
-      l(206, 30, 420, 30, "sl"), t(426, 26, "N. supraorbitalis", "tb"), t(426, 42, "Gefühlsnerv der Stirn", "tm"),
-      l(104, 60, 90, 60, "sl"), t(84, 64, "N. supratrochlearis", "tm", "end"),
-      l(154, 132, 420, 210, "sl"), t(426, 206, "Austrittspunkt", "tb"), t(426, 222, "am inneren Augenhöhlenrand", "tm"),
-      l(330, 100, 420, 100, "sl"), t(426, 96, "Augenbrauen-", "tb"), t(426, 112, "piercing", "tb"),
-      t(252, 258, "Knochenrand der Augenhöhle gestrichelt", "tm", "middle")
-    ].join("") + "</g>" };
+  // ---------- Fotos aus dem Kursbuch mit eingezeichneter Anatomie (Augenbraue S. 89, Cheek S. 92) ----------
+  // Gemeinsame Bausteine: Foto-Ausschnitt mit runden Ecken, nummerierte Punkte, Legende mit Name und Erklärung darunter.
+  function fotoRahmen(id, bild, ox, oy, bw, bh, sx, sy) {
+    var b = (KURS.bilder || {})[bild], bb = b ? [b.w || bw, b.h || bh] : [bw, bh];
+    return '<clipPath id="' + id + '"><rect x="' + ox + '" y="' + oy + '" width="' + bw + '" height="' + bh + '" rx="14"/></clipPath>' +
+      (b ? '<image href="' + b.src + '" x="' + (ox - (sx || 0)) + '" y="' + (oy - (sy || 0)) + '" width="' + bb[0] + '" height="' + bb[1] + '" clip-path="url(#' + id + ')"/>' : "") +
+      r(ox, oy, bw, bh, "sd", 14);
+  }
+  function nrPunkt(x, y, n, k) { return c(x, y, 10, (k || "fa") + " punkt") + t(x, y + 4, String(n), "tnr", "middle"); }
+  function fotoLegende(eintraege, x0, y0) {
+    return eintraege.map(function (e, i) {
+      var y = y0 + i * 38;
+      return nrPunkt(x0 + 10, y, i + 1, e[2]) + t(x0 + 28, y + 1, e[0], "tb") + t(x0 + 28, y + 16, e[1], "tm");
+    }).join("");
+  }
 
-  // ---------- Modul 3: Gesicht seitlich mit N. facialis, Ductus parotideus, A. facialis ----------
-  G.wange = { w: 620, h: 400,
-    alt: "Gesicht von der Seite. Der Gesichtsnerv tritt vor dem Ohr aus und fächert sich zu Stirn, Wange, Mund und Kinn auf; der Speichelgang der Ohrspeicheldrüse verläuft quer über die Wange; die Gesichtsarterie zieht vom Unterkiefer zum Mundwinkel. Das Cheek-Piercing liegt mitten in diesem Bereich.",
-    text: "Gesicht von der Seite (schematisch, Lage individuell verschieden). Durch die Wange laufen Äste des Gesichtsnervs, der Speichelgang der Ohrspeicheldrüse und die Gesichtsarterie. Deshalb gehört das Cheek in erfahrene Hände.",
-    svg: [
-      // Kopf im Profil, Blick nach links: Stirn, Nasenwurzel, Nase, Lippen, Kinn, Unterkiefer, Hals, Hinterkopf
-      p("M214 16 C172 18 142 40 134 74 C130 90 130 100 128 110 C136 118 137 126 133 136 C122 152 104 166 90 180 C85 186 90 192 100 194 C106 195 111 197 113 201 C109 205 106 209 108 214 C112 218 118 220 118 224 C112 229 108 234 112 240 C116 246 122 248 122 254 C116 262 112 272 116 284 C122 296 138 302 160 304 C212 308 272 300 312 284 C326 278 336 268 342 256", "s"),
-      p("M214 16 C292 10 360 38 390 96", "s"), p("M166 304 C170 336 172 366 168 398", "s"), p("M322 278 C334 318 346 358 356 398", "s"),
-      // Auge seitlich, Augenbraue, Nasenloch, Mundwinkel
-      '<clipPath id="wg-lid"><path d="M140 126 C150 118 164 117 174 122 C166 132 150 134 140 126 Z"/></clipPath>',
-      p("M140 126 C150 118 164 117 174 122 C166 132 150 134 140 126 Z", "fweiss"),
-      '<g clip-path="url(#wg-lid)">' + c(151, 125, 6, "f-iris") + c(150, 125, 2.6, "fink") + "</g>",
-      p("M140 126 C150 118 164 117 174 122", "s b15"), p("M138 108 C152 101 168 101 184 108", "sd b3"),
-      p("M100 186 C104 181 111 183 113 190", "sd b15"), p("M118 224 C122 225 126 225 130 223", "s b1"),
-      // Ohr
-      p("M372 130 C350 140 348 200 362 232 C372 252 392 254 398 238 C410 210 412 160 400 138 C392 124 380 124 372 130 Z", "f-kn s"),
-      // Ohrspeicheldrüse
-      p("M336 156 C350 150 364 160 366 180 C368 210 364 246 350 262 C336 270 322 256 320 236 C318 210 322 170 336 156 Z", "f-gland s1"),
-      // Jochbogen
-      p("M196 168 C250 160 310 162 364 170", "sd dash b15"), t(286, 156, "Jochbogen", "tm"),
-      // Ductus parotideus
-      p("M326 200 C290 202 240 202 200 204 C190 206 184 212 182 222", "gang b3"),
-      // A. facialis
-      p("M236 312 C230 290 214 270 196 254 C170 236 140 230 124 226 M180 244 C168 214 148 186 120 160", "blut b25"),
-      // N. facialis mit Ästen
-      c(360, 240, 4, "fnerv"),
-      p("M360 240 C340 200 320 140 292 86", "nerv b2"),
-      p("M360 240 C320 200 260 170 196 146", "nerv b2"),
-      p("M360 240 C310 226 240 220 170 222", "nerv b2"),
-      p("M360 240 C320 244 260 248 176 244", "nerv b15"),
-      p("M360 240 C330 270 280 290 170 296", "nerv b2"),
-      p("M360 240 C350 290 340 330 330 380", "nerv b2"),
-      // Cheek-Zone
-      c(196, 236, 16, "f-risk"), c(196, 236, 4, "fa"),
-      // Beschriftung rechts
-      l(292, 86, 450, 70, "sl"), t(456, 66, "N. facialis (Gesichtsnerv)", "tb"), t(456, 82, "steuert die Mimik", "tm"),
-      l(352, 176, 450, 130, "sl"), t(456, 126, "Ohrspeicheldrüse", "tb"),
-      l(270, 202, 450, 186, "sl"), t(456, 182, "Ductus parotideus", "tb"), t(456, 198, "Speichelgang, ca. 2 cm unter", "tm"), t(456, 212, "dem Jochbogen", "tm"),
-      l(220, 284, 450, 262, "sl"), t(456, 258, "A. facialis", "tb"), t(456, 274, "Gesichtsarterie", "tm"),
-      l(212, 236, 450, 320, "sl"), t(456, 316, "Cheek-Piercing", "tb"), t(456, 332, "mitten in diesem Bereich", "tm")
-    ].join("") };
+  // Augenbraue: Foto 431 × 480, Ausschnitt bis y = 360. Außen links, Nase rechts außerhalb des Bildes.
+  G.augenbraue = { w: 463, h: 500,
+    alt: "Foto einer Augenbraue mit Augenbrauenpiercing im äußeren Drittel. Eingezeichnet sind die drei Drittel der Braue, die Stichzone außen und die Austrittspunkte der Gefühlsnerven der Stirn: N. supraorbitalis etwa über der Pupille und N. supratrochlearis weiter innen.",
+    text: "Die Augenbraue in Dritteln (Foto aus dem Kursbuch, Nerven eingezeichnet, Lage individuell verschieden). Über dem inneren und mittleren Drittel treten Gefühlsnerven und Gefäße aus kleinen Öffnungen im Knochen. Deshalb sticht man nur im äußeren Drittel und oberflächlich.",
+    svg: "" };
+  Object.defineProperty(G.augenbraue, "svg", { get: function () {
+    var X = 16, Y = 10, q = function (x, y) { return [x + X, y + Y]; };
+    function nerv(von, ziele) { var a = q(von[0], von[1]); return ziele.map(function (z) { var b = q(z[0], z[1]); return p("M" + a[0] + " " + a[1] + " C" + (a[0] + (b[0] - a[0]) * .2) + " " + (a[1] - 50) + " " + b[0] + " " + (b[1] + 60) + " " + b[0] + " " + b[1], "nerv b2"); }).join(""); }
+    var st = q(60, 40), so = q(286, 150), sth = q(402, 168);
+    return [
+      fotoRahmen("ab-foto", "augenbraue", X, Y, 431, 360, 0, 0),
+      '<g class="auf-foto">',
+      r(st[0], st[1], 114, 136, "f-ok", 10),
+      [174, 297].map(function (x) { var a = q(x, 18), b = q(x, 200); return l(a[0], a[1], b[0], b[1], "sfoto dash"); }).join(""),
+      t(q(117, 30)[0], q(117, 30)[1], "außen", "tfoto", "middle"), t(q(236, 30)[0], q(236, 30)[1], "Mitte", "tfoto", "middle"), t(q(360, 30)[0], q(360, 30)[1], "innen", "tfoto", "middle"),
+      nerv([286, 150], [[262, 2], [300, 2], [330, 6]]), nerv([402, 168], [[392, 2], [424, 4]]),
+      c(so[0], so[1], 4, "fnerv"), c(sth[0], sth[1], 4, "fnerv"),
+      "</g>",
+      nrPunkt(st[0] + 4, st[1] + 4, 1, "fok"), nrPunkt(so[0] + 16, so[1] + 12, 2), nrPunkt(sth[0] - 16, sth[1] + 14, 3),
+      fotoLegende([
+        ["Augenbrauenpiercing", "nur im äußeren Drittel und oberflächlich", "fok"],
+        ["N. supraorbitalis", "Gefühlsnerv der Stirn, tritt etwa über der Pupille aus"],
+        ["N. supratrochlearis", "weiter innen, über dem inneren Augenwinkel"]
+      ], X, Y + 360 + 26)
+    ].join("");
+  } });
+
+  // Gesicht von vorn (Cheek-Datenblatt): Foto 349 × 480. Eingezeichnet auf der Bildseite rechts, Lage schematisch.
+  G.wange = { w: 381, h: 700,
+    alt: "Foto eines Gesichts von vorn mit Cheek-Piercings. Auf einer Gesichtshälfte sind eingezeichnet: die Äste des Gesichtsnervs vor dem Ohr, die Ohrspeicheldrüse, der Speichelgang quer über die Wange und die Gesichtsarterie vom Unterkiefer zum Mundwinkel. Das Cheek-Piercing liegt mitten in diesem Bereich.",
+    text: "Gesicht von vorn (Foto aus dem Kursbuch, Strukturen schematisch eingezeichnet, Lage individuell verschieden). Durch die Wange laufen Äste des Gesichtsnervs, der Speichelgang der Ohrspeicheldrüse und die Gesichtsarterie. Deshalb gehört das Cheek in erfahrene Hände.",
+    svg: "" };
+  Object.defineProperty(G.wange, "svg", { get: function () {
+    var X = 16, Y = 10, q = function (x, y) { var a = [x + X, y + Y]; return a[0] + " " + a[1]; }, pt = function (x, y) { return [x + X, y + Y]; };
+    var stamm = pt(330, 300), cheek = pt(293, 347);
+    // Äste des N. facialis: temporal, zygomatisch, bukkal, Unterkieferrand, Hals (je Steuerpunkt und Ende)
+    var aeste = [[[326, 236], [302, 186]], [[304, 252], [258, 230]], [[290, 300], [236, 304]], [[316, 396], [230, 410]], [[324, 380], [306, 456]]];
+    return [
+      fotoRahmen("wg-foto", "cheek", X, Y, 349, 480, 0, 0),
+      '<g class="auf-foto">',
+      e(pt(324, 302)[0], pt(324, 302)[1], 15, 40, "f-druese-foto"),
+      aeste.map(function (a) { return p("M" + stamm[0] + " " + stamm[1] + " Q" + q(a[0][0], a[0][1]) + " " + q(a[1][0], a[1][1]), "nerv b2") + c(pt(a[1][0], a[1][1])[0], pt(a[1][0], a[1][1])[1], 2.5, "fnerv"); }).join(""),
+      p("M" + q(316, 292) + " C" + q(296, 296) + " " + q(274, 298) + " " + q(258, 312), "gang b3"),
+      p("M" + q(276, 446) + " C" + q(266, 404) + " " + q(254, 370) + " " + q(240, 352) + " C" + q(224, 330) + " " + q(212, 304) + " " + q(204, 266), "blut b25"),
+      c(cheek[0], cheek[1], 20, "f-risk"),
+      "</g>",
+      nrPunkt(pt(300, 214)[0], pt(300, 214)[1], 1), nrPunkt(pt(334, 340)[0], pt(334, 340)[1], 2), nrPunkt(pt(270, 282)[0], pt(270, 282)[1], 3),
+      nrPunkt(pt(244, 392)[0], pt(244, 392)[1], 4), nrPunkt(cheek[0] + 20, cheek[1] + 20, 5),
+      fotoLegende([
+        ["N. facialis (Gesichtsnerv)", "tritt vor dem Ohr aus und steuert die Mimik"],
+        ["Ohrspeicheldrüse", "liegt vor und unter dem Ohr"],
+        ["Ductus parotideus", "Speichelgang, ca. 2 cm unter dem Jochbogen"],
+        ["A. facialis (Gesichtsarterie)", "vom Unterkiefer zum Mundwinkel"],
+        ["Cheek-Piercing", "liegt mitten in diesem Bereich"]
+      ], X, Y + 480 + 26)
+    ].join("");
+  } });
 
   // ---------- Modul 3: Wundheilung als Zeitachse ----------
   (function () {

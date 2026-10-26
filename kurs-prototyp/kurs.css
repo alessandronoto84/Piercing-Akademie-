@@ -312,3 +312,9 @@
 .k-blaettern{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:1.5rem}
 .k-grafik .fok{fill:var(--g-ok)}.k-grafik .ok{fill:none;stroke:var(--g-ok);stroke-linecap:round}
 .k-grafik .f-entz-foto{fill:#E0402F;opacity:.42;mix-blend-mode:multiply}
+.k-grafik .auf-foto{filter:drop-shadow(0 0 1.2px rgba(255,255,255,.95)) drop-shadow(0 0 2px rgba(255,255,255,.6))}
+.k-grafik .tfoto{font-size:13px;font-weight:600;fill:#fff;stroke:rgba(0,0,0,.35);stroke-width:2.5px;paint-order:stroke;stroke-linejoin:round}
+.k-grafik .sfoto{fill:none;stroke:#fff;stroke-width:1.5;opacity:.9}
+.k-grafik .f-druese-foto{fill:#9D6BD0;opacity:.42}
+/* Auf Fotos immer kräftige Farben, auch im dunklen Design */
+.k-grafik .auf-foto{--g-nerv:#C98A00;--g-blut:#C62828;--g-gang:#0F8A95;--g-ok:#2E7D5B}
