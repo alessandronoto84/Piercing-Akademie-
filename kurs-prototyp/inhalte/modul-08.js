@@ -82,7 +82,7 @@ window.KURS = window.KURS || { module: [] };
         seite: "S. 80–81",
         inhalt: [
           db("Rook", "Senkrecht in der Antihelix, dem Knorpelsteg, der das Cavum conchae rückwärts umrandet.", "Hufeisen, Banane, BCR", "18G", "Nadelauffangrohr", "", "S. 80"),
-          db("Daith", "Durch die Auswölbung in der Ohrmuschel. Soll bei Migräne helfen.", "Banane, BCR", "18G (evtl. biegen)", "Nadelauffangrohr", "Keine Heilversprechen geben oder damit werben.", "S. 81")
+          db("Daith", "Durch die Helixwurzel (Crus helicis), die Knorpelfalte direkt über dem Gehörgang. Die Wirkung gegen Migräne ist wissenschaftlich nicht belegt.", "Banane, BCR", "18G (evtl. biegen)", "Nadelauffangrohr", "Keine Heilversprechen geben oder damit werben.", "S. 81")
         ],
         fragen: [
           ["Wo sitzt der Rook?", ["Senkrecht in der Antihelix", "Waagerecht in der Helixwurzel", "Im Tragus", "In der inneren Conch"], "Knorpelsteg um das Cavum conchae.", "S. 80"],
@@ -112,7 +112,7 @@ window.KURS = window.KURS || { module: [] };
         ],
         fragen: [
           ["Wie lang ist der Stichkanal beim Augenbrauenpiercing etwa?", ["8 mm", "4 mm", "12 mm", "2 cm"], "Datenblatt Augenbraue.", "S. 89"],
-          ["Wo darf das Augenbrauenpiercing gestochen werden?", ["Nur im äußeren Drittel", "Im inneren Drittel", "Im mittleren Drittel", "Überall bei oberflächlichem Stich"], "Lähmungsgefahr.", "S. 89"],
+          ["Wo darf das Augenbrauenpiercing gestochen werden?", ["Nur im äußeren Drittel", "Im inneren Drittel", "Im mittleren Drittel", "Überall bei oberflächlichem Stich"], "Innen treten Nerven und Gefäße aus (im Kursbuch: Lähmungsgefahr).", "S. 89"],
           ["Wie verhältst du dich als Anfänger beim Wunsch nach einem Bridge?", ["Ich lehne ab", "Ich steche es besonders oberflächlich", "Ich steche es besonders tief", "Ich steche es mit 14G"], "Als Anfänger ablehnen.", "S. 91"]
         ]
       },

@@ -116,7 +116,7 @@ KURS.module.push({
           "Ein aktueller Erste-Hilfe-Kasten hängt gut sichtbar und schnell erreichbar im Studio.",
           "Notfallnummern (Notarzt, Hausarzt, Feuerwehr) sind ausgehängt.",
           "Bauchnabelpiercings werden im Liegen gestochen, auch um Kreislaufproblemen vorzubeugen.",
-          "Bei ständigem Nachbluten soll ein Arzt aufgesucht werden; mögliche Ursachen sind Diabetes, Bindegewebsschwäche oder eine Bluterkrankheit."
+          "Bei ständigem Nachbluten soll ein Arzt aufgesucht werden. Als mögliche Ursachen nennt das Kursbuch Diabetes, Bindegewebsschwäche oder eine Bluterkrankheit; häufig stecken auch blutverdünnende Medikamente dahinter (siehe Modul 3)."
         ] },
         { typ: "ergaenzung", text: "Bei Bewusstlosigkeit, Atemnot oder einer starken allergischen Reaktion sofort den Notruf 112 wählen. Ein Erste-Hilfe-Kurs, regelmäßig aufgefrischt, gehört zur Grundausstattung jedes Piercers." }
       ],

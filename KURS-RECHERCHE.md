@@ -125,6 +125,18 @@ Diese beiden Module haben im Kursbuch kein eigenes Kapitel. Die folgenden Themen
 | 56 | Nionium | vermutlich Niob |
 | 64 | 18G 1,2 mm / 16G 1,6 mm / 14G 2,1 mm | Kanüle 18G 1,3 mm / 16G 1,7 mm / 14G 2,2 mm (Herstellerangabe); dazu getrennt die Schmuckstärke: 18G-Kanüle für 1,2 mm, 16G-Kanüle für 1,6 mm |
 | 115 | Foto-Einwilligung „gemäß Art. 6 Absatz 1(f) EU-DSGVO“ | Für eine Einwilligung Art. 6 Abs. 1 lit. a DSGVO; Aufbewahrungsdauer (10 Jahre) begründen; rechtlich prüfen lassen |
+| 42 | Ultraschallbad mindestens 30 Minuten bei 80 °C | Zeit und Temperatur nach Herstellerangabe, nicht über etwa 45 °C: Hitze vor der Reinigung fixiert Blut- und Eiweißreste (KRINKO/BfArM 2012; Eiweißfixierung ab etwa 55 °C) |
+| 3 | Piercing-Spuren in Algerien vor über 7.000 Jahren | Nicht belegbar gefunden; besser: älteste gesicherte Funde aus Boncuklu Tarla (Türkei), etwa 10.000–8.000 v. Chr. (Antiquity 2022) |
+| 4 | Hallstatt-Maske mit Ohrlöchern | Fundort präzisieren (Kleinklein, Steiermark) und Quelle angeben; Ohrlöcher unabhängig nicht bestätigt |
+| 2, 114 | Vormund | Bei Volljährigen: rechtlicher Betreuer; bei Minderjährigen: Eltern bzw. Vormund |
+| 7 | Schmerzdefinition | Aktuelle IASP-Definition von 2020 verwenden |
+| 14 | Lidocainsalbe rezeptfrei | Je nach Präparat rezeptfrei oder verschreibungspflichtig |
+| 30–31 | Wirkung über Oberflächenspannung (Phenole) | Oberflächenspannung senken vor allem Tenside und quartäre Ammoniumverbindungen |
+| 50 | Nachbluten: Diabetes, Bindegewebsschwäche, Bluterkrankheit | Blutverdünnende Medikamente ergänzen; Diabetes verzögert eher die Heilung |
+| 51 | Wildes Fleisch aus der Unterhaut | Überschießendes Granulationsgewebe durch Reizung der Wunde (Druck, Reibung) |
+| 52–53 | Ersteinsatz ausschließlich G23 | G23-Titan oder PTFE (Buch nennt PTFE selbst als Ersteinsatz) |
+| 81 | Daith: „Auswölbung“, soll bei Migräne helfen | Durch die Helixwurzel (Crus helicis); Migräne-Wirkung nicht belegt, Werbung damit nach § 3 HWG unzulässig |
+| 89 | Augenbraue: Lähmungsgefahr | Innen treten vor allem Gefühlsnerven (N. supraorbitalis, N. supratrochlearis) aus; Taubheit statt Lähmung |
 | Impressum | 740-tattoo@gmx.net | an die Website-Angaben angleichen (diepiercingakademie@gmail.com), bestätigt am 21.10.2026 |
 
 ## 9. Recherche über das Kursbuch hinaus (Grafiken und neue Lektionen, 24.10.2026)
@@ -168,7 +180,7 @@ Alle 103 Lektionen wurden gelesen und zweifelhafte Aussagen per Websuche geprüf
 | Modul 10 | Chlorhexamed | Ergänzung: nur wenige Tage bis etwa 2 Wochen, längere Anwendung verfärbt Zähne | Fachinformation Chlorhexidin |
 | Modul 10 | Teebaumöl, Wasserstoffperoxid, wildes Fleisch | Hinweise ergänzt: Teebaumöl kann allergisieren; H₂O₂ schädigt Gewebe; Fachbegriff Hypergranulation | – |
 
-**Offen (nicht abschließend klärbar):** Ob Lidocainsalbe rezeptfrei ist, hängt vom Präparat ab (Quellen widersprüchlich). Der Kurs sagt jetzt nur „in der Apotheke“. Die Wechselwirkung „Mutterkornalkaloide oder Epinephrin → Blutdruckabfall“ steht so im Kursbuch; ich habe sie nicht unabhängig bestätigen können.
+**Offen (nicht abschließend klärbar):** Ob Lidocainsalbe rezeptfrei ist, hängt vom Präparat ab (Quellen widersprüchlich). Der Kurs sagt jetzt nur „in der Apotheke“. Die Wechselwirkung „Mutterkornalkaloide oder Epinephrin → Blutdruckabfall“ ist inzwischen bestätigt (B. Braun, Gebrauchsinformation Lidocain; Runde 2, 26.10.2026).
 
 **Bilder aus dem Internet:** Die Netzwerkregeln dieser Arbeitsumgebung sperren Wikimedia Commons, Unsplash, Pixabay, Pexels und Openverse. Statt lizenzfreier Fotos sind deshalb eigene, schattierte 3D-Grafiken entstanden. Wenn die Domains freigegeben werden, können lizenzfreie Fotos (CC0 oder CC BY mit Namensnennung) ergänzt werden.
 
@@ -216,3 +228,33 @@ Stil-Zusatz zu jeder Beschreibung: „Editorial photography for a premium profes
 | 09 | eingebaut, FLUX.2 [klein] 4B über Cloudflare Workers AI | Still life on a sterile blue drape: a slim white surgical skin marker pen with cap, a folded black nitrile glove pair, a few sterile gauze pads and a small round mirror, no people, no labels. |
 | 10 | eingebaut, FLUX.2 [klein] 4B über Cloudflare Workers AI | Still life on a white bathroom shelf: a plain white unlabeled spray bottle, a few folded white sterile gauze pads, a small folded white towel, fresh morning light, no labels. |
 | 11 | eingebaut, FLUX.1 [schnell] über Cloudflare Workers AI | Wide shot of an empty clean piercing studio room: a padded treatment couch with white paper roll in the middle, beside it a separate stainless steel side table with a covered instrument tray, a white hand basin with wall dispensers on the back wall, a green plant, daylight, nobody present. |
+
+
+## 13. Faktenprüfung Runde 2 (26.10.2026)
+
+Alle 11 Module, das Glossar und die Checklisten wurden noch einmal Satz für Satz gegen das Kursbuch und unabhängige Quellen geprüft. Aussagen, die nur aus dem Kursbuch stammen und nicht unabhängig belegbar sind, sind im Kurs jetzt als „laut Kursbuch“ gekennzeichnet. Modul 7 brauchte keine Änderung.
+
+| Modul | Vorher | Jetzt | Quelle |
+|---|---|---|---|
+| 1 | Älteste Spuren in Algerien | „laut Kursbuch“; Ergänzung Boncuklu Tarla, 10.000–8.000 v. Chr.; Frage auf „Jungsteinzeit“ umgestellt | Antiquity 2022 (Baysal u. a., Boncuklu Tarla) |
+| 1 | Keltische Hallstatt-Maske | „nennt das Kursbuch“, Fundort Kleinklein; Ötzi-Distraktor ersetzt | Universalmuseum Joanneum (Kleinklein-Masken) |
+| 2 | Schriftform als Voraussetzung | Mündliche Einwilligung wirksam, Schriftform ist Nachweis; Haftung §§ 823, 253 BGB; „rechtlicher Betreuer“ | BGB; StGB § 228 |
+| 2 | Daith gegen Migräne | Ergänzung: nicht belegt, keine Werbung damit | § 3 Heilmittelwerbegesetz |
+| 3 | N. supraorbitalis „innen“ | Grenze inneres/mittleres Drittel, etwa über der Pupille | Anatomie-Lehrbücher (Abschnitt 9) |
+| 3 | Narbenfestigkeit, Epithelisierung, Nachbluten | ca. 20 % nach 3 Wochen, bis ca. 80 %, Umbau bis 1 Jahr; Ursachen „laut Kursbuch“ plus Blutverdünner | Lehrbuch Wundheilung |
+| 4 | Alte Schmerzdefinition | IASP-Definition 2020 | IASP 2020 (Raja u. a., Pain 2020) |
+| 4 | „Phantomschmerz“, Lidocain rezeptfrei | „Erwartungsschmerz“; je nach Präparat rezeptfrei oder verschreibungspflichtig | B. Braun Gebrauchsinformation Lidocain |
+| 5 | Ultraschallbad 30 min 80 °C | Nicht über etwa 45 °C, Herstellerangabe | KRINKO/BfArM 2012; KVB-Hygieneleitfaden |
+| 5 | IfSG-Pflicht zum Hygieneplan | § 36 gilt nicht für Studios; Pflicht über die Nds. Hygieneverordnung | IfSG § 36; NLGA |
+| 5 | Sterilität, Lagerfrist 5 Jahre | SAL 10⁻⁶; 5 Jahre nur mit Lagerverpackung | DIN EN 556; DIN 58953-8 |
+| 5 | Bowie-Dick = Helixtest | Bowie-Dick-Test, je nach Gerät als Helix-Test | DIN EN 867-5 / EN 285 |
+| 6 | „ausschließlich G23“ | „vor allem“; genormt als Implantatwerkstoff ASTM F136 | ASTM F136 |
+| 8 | Daith „Auswölbung“ | Helixwurzel (Crus helicis); Migräne nicht belegt | Anatomie |
+| 3, 8 | Augenbraue „Lähmungsgefahr“ | „Innen treten Nerven und Gefäße aus (im Kursbuch: Lähmungsgefahr)“ | Abschnitt 9 |
+| 9, 10 | Nachbluten-Ursachen | „laut Kursbuch“ plus blutverdünnende Medikamente | Lehrbuch |
+| 10 | Wildes Fleisch „aus der Unterhaut“ | Überschießendes Granulationsgewebe durch Reizung (Druck, Reibung) | Dermatologie-Lehrbücher |
+| 10 | Pseudomonas-Häufung „Großbritannien“ | England 2023 (Wasser im Studio) und 2016 (verunreinigtes Pflegespray) | Epidemiol Infect 2025, PMC11729480; Euro Surveill 2018, PMC6144469 |
+| Glossar | Lidocain, N. supraorbitalis, G23, Rahmenhygieneplan, Einverständniserklärung, Wildes Fleisch | an die Module angeglichen | siehe oben |
+| Checkliste | Ultraschallbad 80 °C | Herstellerangabe, nicht über etwa 45 °C | KRINKO/BfArM 2012 |
+
+Bestätigt und unverändert: Nickelgrenzwert 0,2 µg/cm²/Woche (REACH Anhang XVII Nr. 27), 316L mit 10–14 % Nickel, Octenidin schädigt Knorpelzellen in Laborstudien, Pseudomonas als häufigster Erreger der Perichondritis, Abheilzeiten als Kursbuch-Richtwerte mit Ergänzung.

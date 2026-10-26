@@ -65,8 +65,8 @@ KURS.module.push({
       seite: "S. 50",
       inhalt: [
         { typ: "tabelle", kopf: ["Störung", "Was tun"], zeilen: [
-          ["Fehlende Epithelisierung", "Nach 10 bis 14 Tagen einen Arzt aufsuchen. Bei der Epithelisierung wandern Epithelzellen vom Wundrand ein und machen aus feuchtem Granulationsgewebe festes Narbengewebe; die Wunde wird kleiner."],
-          ["Nachbluten", "Bei ständigem Nachbluten einen Arzt aufsuchen. Mögliche Ursachen: Diabetes, Bindegewebsschwäche, Bluterkrankheit."]
+          ["Fehlende Epithelisierung", "Nach 10 bis 14 Tagen einen Arzt aufsuchen. Bei der Epithelisierung wandern Epithelzellen vom Wundrand ein und decken die Wunde ab; darunter reift das Granulationsgewebe zu festem Narbengewebe. Die Wunde wird kleiner."],
+          ["Nachbluten", "Bei ständigem Nachbluten einen Arzt aufsuchen. Mögliche Ursachen laut Kursbuch: Diabetes, Bindegewebsschwäche, Bluterkrankheit; außerdem blutverdünnende Medikamente."]
         ] }
       ],
       fragen: [
@@ -115,7 +115,7 @@ KURS.module.push({
         { typ: "liste", titel: "Hintergrund", punkte: [
           "Häufigster Erreger ist das Bakterium Pseudomonas aeruginosa. Es lebt in feuchter Umgebung, zum Beispiel in Wasserleitungen, Waschbecken und Duschen.",
           "Fälle treten in den warmen Monaten häufiger auf.",
-          "In Großbritannien wurde eine Häufung nach Ohrpiercings auf verunreinigtes Wasser in einem Studio zurückgeführt.",
+          "In England wurde 2023 eine Häufung nach Ohrpiercings auf verunreinigtes Wasser (Waschbecken, Durchlauferhitzer) in einem Studio zurückgeführt; 2016 löste ein verunreinigtes Pflegespray landesweit über 100 Verdachtsfälle aus.",
           "Vorbeugen: steril arbeiten, zur Pflege sterile Kochsalzlösung statt Leitungswasser empfehlen, kein Octenidin auf Knorpel, Druck und Reibung auf das frische Piercing vermeiden (zum Beispiel nicht darauf schlafen)."
         ] },
         { typ: "ergaenzung", text: "Ergänzung der Akademie nach medizinischer Fachliteratur (siehe KURS-RECHERCHE.md, Abschnitt 9). Fachlich prüfen." }
@@ -133,7 +133,7 @@ KURS.module.push({
       titel: "Wildes Fleisch",
       seite: "S. 51",
       inhalt: [
-        { typ: "text", text: "Wildes Fleisch (Fachbegriff: Hypergranulation) entsteht durch dauerhafte Reizung der Unterhaut: Eine rote, fleischähnliche Masse wächst aus der Unterhaut zwischen den Wundrändern hervor, sodass die Wundränder nicht mehr zusammenfinden." },
+        { typ: "text", text: "Wildes Fleisch (Fachbegriff: Hypergranulation) entsteht durch dauerhafte Reizung der Wunde, zum Beispiel durch Druck, Reibung oder Bewegung des Schmucks: Das Granulationsgewebe wächst über den Wundrand hinaus und bildet eine rote, fleischähnliche Masse, sodass sich die Wunde nicht mehr mit Haut schließen kann. (Das Kursbuch spricht von einer Reizung der Unterhaut.)" },
         { typ: "schritte", titel: "So kannst du vorgehen", punkte: [
           "Nichts tun: Es kann von selbst verschwinden; meist stößt der Körper es ab.",
           "Dehydrieren: Kochsalzlösung, Kamillentee, Wasserstoffperoxid, Teebaumöl oder Eukalyptusöl helfen, es zurückzudrängen (laut Kursbuch; Wasserstoffperoxid schädigt auch gesundes Gewebe, heute wird es für Wunden kaum noch empfohlen).",
@@ -143,7 +143,7 @@ KURS.module.push({
         ] }
       ],
       fragen: [
-        ["Wodurch entsteht wildes Fleisch?", ["Durch dauerhafte Reizung der Unterhaut", "Durch eine Nickelallergie", "Durch Pseudomonas", "Durch zu viel Überlänge"], "Rote, fleischähnliche Masse.", "S. 51"],
+        ["Wodurch entsteht wildes Fleisch?", ["Durch dauerhafte Reizung der Wunde, etwa durch Druck oder Reibung", "Durch eine Nickelallergie", "Durch Pseudomonas", "Durch zu viel Überlänge"], "Rote, fleischähnliche Masse.", "S. 51"],
         ["Was ist der erste Weg bei wildem Fleisch?", ["Nichts tun, oft stößt der Körper es ab", "Sofort mit der Wildfleischdisk behandeln", "Zum Dermatologen schicken", "Den Schmuck entfernen"], "Weg 1 von 5.", "S. 51"],
         ["Was ist eine Wildfleischdisk?", ["Eine Kunststoffscheibe, die auf den Schmuck gestülpt wird", "Ein Pflaster mit Silberionen", "Eine Salbe", "Eine spezielle Kugel aus Titan"], "Weg 3 von 5.", "S. 51"],
         ["Welcher Schmuckwechsel kann helfen?", ["Zum Beispiel ein Titan-Labret gegen einen PTFE-Barbell tauschen", "Ein kürzerer Stab ohne Überlänge", "Ein schwererer Stahlring", "Ein dünnerer Schmuck mit Außengewinde"], "Weg 4 von 5.", "S. 51"],

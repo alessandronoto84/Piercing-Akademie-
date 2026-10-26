@@ -105,7 +105,7 @@ KURS.module.push({
           ["Transiente Hautflora", "Vorübergehende, hautfremde Besiedelung, unter anderem mit krankmachenden Keimen", "Durch Waschen weitgehend entfernen, durch Desinfektion abtöten"],
           ["Residente Hautflora", "Körpereigene Flora, schützt vor krankmachenden Keimen", "Nicht zerstören, nur reduzieren"]
         ] },
-        { typ: "achtung", text: "Hände zuerst gründlich waschen und vollständig trocknen. Desinfektionsmittel niemals auf feuchte Haut aufbringen." }
+        { typ: "achtung", text: "Wenn du die Hände gewaschen hast, trockne sie vollständig ab, bevor du desinfizierst. Desinfektionsmittel niemals auf feuchte Haut aufbringen, sonst wird es verdünnt und wirkt schlechter." }
       ],
       fragen: [
         ["Warum ist Händewaschen vor der Desinfektion im Routinefall nicht nötig?", ["Waschen reduziert die Wirkung alkoholischer Desinfektionsmittel", "Wasser enthält mehr Keime als die Hände", "Waschen trocknet die Haut nicht aus", "Desinfektionsmittel entfernt auch Schmutz vollständig"], "Bei optisch sauberen Händen.", "S. 22"],
@@ -122,14 +122,14 @@ KURS.module.push({
         { typ: "text", text: "Unter einer Händewaschung versteht man das Waschen der Hände mit Wasser und Waschlotion. Vor und nach der Arbeit reicht sie als Hygienemaßnahme aus; in den meisten Situationen ist aber eine hygienische Händedesinfektion mit einem alkoholischen Mittel vorzuziehen." },
         { typ: "liste", titel: "Wann waschen", punkte: ["vor Arbeitsbeginn und nach Arbeitsende", "wenn die Hände erkennbar verschmutzt sind", "wenn die Hände Sporenbildnern ausgesetzt waren", "nach dem Toilettengang", "bei verschwitzten oder klebrigen Händen"] },
         { typ: "schritte", titel: "In fünf Schritten", punkte: ["Hände mit lauwarmem Wasser befeuchten.", "Waschlotion aus Spender oder Dosierpumpe nehmen und mit Wasser aufschäumen.", "Falls erforderlich mit einer weichen Bürste unter den Fingernägeln reinigen.", "Hände sorgfältig abspülen, bis keine Waschlotion mehr dran ist.", "Mit einem Einmalhandtuch gründlich abtrocknen."] },
-        { typ: "liste", titel: "Vermeiden", punkte: ["zu heißes Wasser: entfernt den hauteigenen Fettfilm", "intensives Bürsten: schädigt die oberen Hautschichten", "Seife: zerstört den Säureschutzmantel der Haut", "übermäßig langes Waschen", "unzureichendes Abspülen", "zu harte Einmalhandtücher", "ungenügendes Abtrocknen"] }
+        { typ: "liste", titel: "Vermeiden", punkte: ["zu heißes Wasser: entfernt den hauteigenen Fettfilm", "intensives Bürsten: schädigt die oberen Hautschichten", "alkalische Seife (Seifenstück): stört den Säureschutzmantel der Haut", "übermäßig langes Waschen", "unzureichendes Abspülen", "zu harte Einmalhandtücher", "ungenügendes Abtrocknen"] }
       ],
       fragen: [
         ["Was versteht man unter einer Händewaschung?", ["Das Waschen der Hände mit Wasser und Waschlotion", "Das Einreiben mit alkoholischem Mittel", "Das Abspülen mit heißem Wasser", "Das Bürsten der Nägel"], "Definition Kap. 5.3.", "S. 23"],
         ["Wann wäschst du die Hände?", ["Nach dem Toilettengang und bei sichtbarer Verschmutzung", "Vor jedem Kunden statt zu desinfizieren", "Nur nach Kontakt mit Blut", "Nur vor Dienstbeginn"], "Dazu vor und nach der Arbeit.", "S. 23"],
         ["Mit welchem Wasser befeuchtest du die Hände?", ["Lauwarm", "Möglichst heiß", "Kalt", "Mit abgekochtem Wasser"], "Schritt 1.", "S. 24"],
         ["Warum soll das Wasser nicht zu heiß sein?", ["Es entfernt den hauteigenen Fettfilm", "Es löst die Waschlotion auf", "Es öffnet die Poren für Keime", "Es macht Desinfektionsmittel unwirksam"], "Siehe „Vermeiden“.", "S. 24"],
-        ["Warum benutzt du keine Seife?", ["Sie zerstört den Säureschutzmantel der Haut", "Sie wirkt nicht gegen Bakterien", "Sie ist nicht in Spendern erhältlich", "Sie verstopft die Waschbecken"], "Besser Waschlotion.", "S. 24"],
+        ["Warum benutzt du keine alkalische Stückseife?", ["Sie stört den Säureschutzmantel der Haut", "Sie wirkt nicht gegen Bakterien", "Sie ist nicht in Spendern erhältlich", "Sie verstopft die Waschbecken"], "Besser Waschlotion.", "S. 24"],
         ["Womit trocknest du ab?", ["Mit einem Handtuch zum einmaligen Gebrauch", "Mit einem Stoffhandtuch, täglich gewechselt", "Mit einem Warmluft-Händetrockner", "An der Arbeitskleidung"], "Schritt 5.", "S. 24"]
       ]
     },
@@ -219,7 +219,7 @@ KURS.module.push({
       ],
       fragen: [
         ["Gegen welche durch Blut übertragbare Krankheit gibt es eine Impfung?", ["Hepatitis B", "Hepatitis C", "HIV", "Gegen alle drei"], "Impferfolg beim Arzt kontrollieren lassen.", "Ergänzung"],
-        ["Was tust du mit einer benutzten Kanüle?", ["Sofort in den Abwurfbehälter, nie zurück in die Schutzkappe", "Zurück in die Schutzkappe, dann in den Abwurf", "Erst den Schmuck sichern, dann entsorgen", "In die Instrumentenschale legen"], "Zurückstecken ist die häufigste Ursache für Stichverletzungen.", "S. 27"],
+        ["Was tust du mit einer benutzten Kanüle?", ["Sofort in den Abwurfbehälter, nie zurück in die Schutzkappe", "Zurück in die Schutzkappe, dann in den Abwurf", "Erst den Schmuck sichern, dann entsorgen", "In die Instrumentenschale legen"], "Das Zurückstecken in die Schutzkappe ist eine häufige Ursache für Stichverletzungen.", "S. 27"],
         ["Was tust du nach einem Nadelstich, nachdem du die Arbeit unterbrochen hast?", ["Blutung fördern durch Druck auf das Gewebe um die Wunde", "Die Wunde sofort fest abbinden", "Direkt an der Einstichstelle kräftig quetschen", "Die Wunde aussaugen"], "Danach desinfizieren.", "Ergänzung"],
         ["Womit desinfizierst du eine Stichwunde?", ["Mit einem Hautantiseptikum auf Alkoholbasis", "Mit Flächendesinfektionsmittel", "Mit Kochsalzlösung", "Mit Wasserstoffperoxid"], "Dann sofort zum Arzt.", "Ergänzung"],
         ["Zu wem gehst du nach einer Stichverletzung bei der Arbeit?", ["Sofort zum Arzt, bei einem Arbeitsunfall zum Durchgangsarzt", "Am nächsten Werktag zum Hausarzt", "Zum Gesundheitsamt", "Nur bei Beschwerden zum Arzt"], "Eine HIV-Vorbeugung wirkt am besten innerhalb weniger Stunden.", "Ergänzung"],
@@ -258,7 +258,7 @@ KURS.module.push({
         { typ: "tabelle", kopf: ["Wirkungsweise", "Beispiel"], zeilen: [
           ["Proteindenaturierung", "Mittel mit Aldehyden oder Alkoholen"],
           ["Oxidation", "Wasserstoffperoxid"],
-          ["Senkung der Oberflächenspannung", "Beigemengte Phenole"],
+          ["Senkung der Oberflächenspannung", "Tenside, z. B. quartäre Ammoniumverbindungen (das Kursbuch nennt hier beigemengte Phenole)"],
           ["Enzymhemmung", "Früher Schwermetallverbindungen (zur Zeit der Syphilis)"],
           ["Veränderung der Nukleinsäuren", "Persäuren (Peroxydcarbonsäuren)"]
         ] }
@@ -267,7 +267,7 @@ KURS.module.push({
         ["Welche Anforderung muss ein Desinfektionsmittel erfüllen?", ["Es soll nur gering systemisch toxisch sein", "Es soll möglichst lange auf der Haut bleiben", "Es soll organisches Material versiegeln", "Es soll nicht biologisch abbaubar sein"], "Dazu schnelle, umfassende Keimreduktion.", "S. 30"],
         ["Wie wirken Desinfektionsmittel grundsätzlich?", ["Denaturierend: sie verändern eiweißhaltige Strukturen der Keime", "Sie spülen die Keime nur mechanisch ab", "Sie entziehen den Keimen Wärme", "Sie stärken die Hautflora gegen Keime"], "Manche schädigen auch Lipidmembranen.", "S. 31"],
         ["Welche Wirkungsweise gehört zu den Kategorien?", ["Proteindenaturierung", "Austrocknung durch Kälte", "Bestrahlung", "Filtration"], "Dazu Oxidation, Oberflächenspannung, Enzymhemmung, Nukleinsäuren.", "S. 31"],
-        ["Welcher Stoff wirkt durch Oxidation?", ["Wasserstoffperoxid", "Phenol", "Ethanol", "Aldehyd"], "Er spaltet die Elektronen der Keime ab.", "S. 31"],
+        ["Welcher Stoff wirkt durch Oxidation?", ["Wasserstoffperoxid", "Phenol", "Ethanol", "Aldehyd"], "Er entzieht den Bausteinen der Keime Elektronen und zerstört sie so.", "S. 31"],
         ["Wozu dienen Hilfsstoffe in Desinfektionsmitteln?", ["Damit der Wirkstoff an den Wirkungsort gelangt", "Damit das Mittel länger auf der Haut haftet", "Um die Einwirkzeit zu ersetzen", "Um die Viruswirksamkeit zu senken"], "So steht es im Kursbuch.", "S. 31"]
       ]
     },
@@ -318,6 +318,7 @@ KURS.module.push({
       seite: "S. 36–39",
       inhalt: [
         { typ: "text", text: "Das seit 2001 geltende Infektionsschutzgesetz (IfSG) verpflichtet Gemeinschaftseinrichtungen, ihre innerbetrieblichen Verfahren zur Infektionshygiene in einem Rahmenhygieneplan festzulegen. Ihm ist ein Reinigungs- und Desinfektionsplan beizufügen. Jeder Arbeitsschritt und alle Hygienemaßnahmen müssen darin ersichtlich sein." },
+        { typ: "ergaenzung", text: "Genauer: Piercingstudios sind keine Gemeinschaftseinrichtungen im Sinne des IfSG. Sie können aber nach § 36 Abs. 2 IfSG vom Gesundheitsamt überwacht werden, weil bei der Arbeit Erreger über Blut übertragen werden können. Den Hygieneplan verlangen die Landesvorschriften und die Gesundheitsämter, in Niedersachsen die Hygieneverordnung (Merkblatt des NLGA: „Hygieneplan erstellen“)." },
         { typ: "liste", titel: "Der Beispielplan im Kursbuch regelt", punkte: [
           "Räume: Handwaschplatz, Arbeitsbereich (arbeitstäglich feucht reinigen, bei Blut sofort desinfizieren), Toiletten",
           "Desinfektion: Hände, Hautdesinfektion beim Kunden (mit Alkoholtupfer, Einwirkzeit beachten, rasieren, erneut desinfizieren), Instrumente, Flächen (mit Folie abdecken, nach jedem Kunden wechseln)",
@@ -363,7 +364,7 @@ KURS.module.push({
         { typ: "text", text: "Die sterilen Bestecke des Piercers sind stets sorgfältig zu behandeln. Von der Präzision des Materials und seiner Sterilität hängt ein Großteil des Erfolgs eines Piercings ab." },
         { typ: "schritte", punkte: [
           "Selbstschutz: mindestens Schutzbrille, Handschuhe und Mundschutz, auch beim Reinigen bis hin zum Sterilisieren.",
-          "Das Besteck im beheizbaren Ultraschallbad mindestens 30 Minuten bei 80 °C mit einem passend dosierten Reinigungsmittel reinigen (zum Beispiel ELMACLEAN). So werden Öl, Fett, Späne, Blut und Sekrete entfernt. Je nach Mittel sind niedrigere Temperaturen möglich; genau informieren.",
+          "Das Besteck im Ultraschallbad mit einem passend dosierten Instrumenten-Reinigungsmittel reinigen (zum Beispiel ELMACLEAN), Zeit und Temperatur nach Herstellerangabe. So werden Öl, Fett, Späne, Blut und Sekrete entfernt. Wichtig: nicht zu heiß. Über etwa 45 °C brennen Blut- und Eiweißreste auf den Instrumenten ein. Das Kursbuch nennt hier 30 Minuten bei 80 °C; das ist für Instrumente mit Blutresten zu heiß.",
           "Gründlich trocknen, damit keine Flecken oder Rost entstehen.",
           "In sachgerechten Einheiten in dampfdurchlässige Folienschläuche bzw. Sterilisationsbeutel verpacken. Ein seitlicher Indikationsstreifen zeigt den Zustand der Verpackung an.",
           "Umgehend im Autoklav sterilisieren."
@@ -371,14 +372,14 @@ KURS.module.push({
         { typ: "foto", id: "sterilgut", text: "Instrumente im Sterilisationsbeutel mit Indikatorstreifen. Kursbuch S. 43." },
         { typ: "foto", id: "frei-ultraschall", text: "Beheizbares Ultraschallbad zur Vorreinigung von Instrumenten." },
         { typ: "grafik", id: "kreislauf" },
-        { typ: "merke", text: "Sterilisation ist keine garantierte Abtötung aller Keime, sondern die Wahrscheinlichkeit, dass die Keimzahl um sechs Zehnerpotenzen reduziert wurde: Von einer Million Keimen überlebt theoretisch einer. Sie tötet sogar Bakteriensporen ab, etwa von Clostridium botulinum." }
+        { typ: "merke", text: "Sterilisation ist keine garantierte Abtötung aller Keime, sondern eine Wahrscheinlichkeit: Die Chance, dass auf einem sterilisierten Gegenstand noch ein vermehrungsfähiger Keim überlebt hat, liegt höchstens bei 1 zu 1 Million (Fachbegriff: Sterility Assurance Level 10⁻⁶). Sie tötet sogar Bakteriensporen ab, etwa von Clostridium botulinum." }
       ],
       fragen: [
         ["Welchen Selbstschutz trägst du beim Aufbereiten?", ["Mindestens Schutzbrille, Handschuhe und Mundschutz", "Nur Handschuhe", "Handschuhe und Schürze", "Nur einen Mundschutz"], "Auch beim Reinigen.", "S. 42"],
-        ["Wie lange und bei welcher Temperatur wird im Ultraschallbad gereinigt?", ["Mindestens 30 Minuten bei 80 °C", "Mindestens 10 Minuten bei 40 °C", "Mindestens 60 Minuten bei 134 °C", "Mindestens 5 Minuten bei 121 °C"], "Je nach Mittel auch niedriger.", "S. 42"],
+        ["Worauf achtest du bei der Temperatur im Ultraschallbad?", ["Nicht über etwa 45 °C, sonst brennen Blutreste ein", "Möglichst 80 °C, damit alles keimfrei wird", "Wie im Autoklav auf 134 °C heizen", "Die Temperatur spielt keine Rolle"], "Hitze vor der Reinigung fixiert Eiweiß (KRINKO-BfArM-Empfehlung); Zeit und Temperatur nach Herstellerangabe.", "Ergänzung"],
         ["Warum wird das Besteck nach der Vorreinigung getrocknet?", ["Um Flecken und Rost zu vermeiden", "Weil nasse Instrumente nicht sterilisiert werden können", "Damit das Desinfektionsmittel einwirkt", "Damit der Indikatorstreifen umschlägt"], "Danach wird verpackt.", "S. 43"],
         ["Was zeigt der Indikationsstreifen am Sterilisationsbeutel?", ["Den Zustand der Verpackung", "Das Ablaufdatum", "Die Chargennummer", "Den Gerätetyp"], "Zum Beispiel bei MELAG-Folien.", "S. 43"],
-        ["Was bedeutet Sterilisation genau?", ["Die Wahrscheinlichkeit, dass die Keimzahl um 6 Zehnerpotenzen reduziert wurde", "Die garantierte Abtötung aller Keime und Prionen", "Eine Keimreduktion um 5 Zehnerpotenzen", "Das Entfernen von Schmutz und Fett"], "Von 1 Million Keimen überlebt theoretisch einer.", "S. 43"],
+        ["Was bedeutet „steril“ genau?", ["Höchstens 1 zu 1 Million Wahrscheinlichkeit, dass noch ein Keim überlebt hat", "Die garantierte Abtötung aller Keime und Prionen", "Eine Keimreduktion um 5 Zehnerpotenzen", "Das Entfernen von Schmutz und Fett"], "Sterility Assurance Level 10⁻⁶.", "S. 43"],
         ["Werden benutzte Kanülen aufbereitet?", ["Nein, sie kommen sofort in den Abwurfbehälter", "Ja, im Ultraschallbad und Autoklav", "Ja, wenn sie nur kurz benutzt wurden", "Nur der Kunststoffüberzug wird aufbereitet"], "Aufbereitet werden nur wiederverwendbare Instrumente wie Klemmen.", "S. 27"]
       ]
     },
@@ -412,12 +413,13 @@ KURS.module.push({
       inhalt: [
         { typ: "text", text: "Die Sterilisierverpackung wird mit dem Datum der Sterilisation und der Chargennummer versehen. Es empfiehlt sich, Sterilgut in geschlossenen Schubladen aufzubewahren." },
         { typ: "tabelle", kopf: ["Lagerung", "Offenes Regal", "Geschlossene Schublade"], zeilen: [["Einzeln verpackt", "max. 48 Stunden", "max. 6 Monate"], ["Doppelt verpackt", "max. 48 Stunden", "max. 5 Jahre"]] },
+        { typ: "ergaenzung", text: "Nach der Norm DIN 58953-8 gelten die 5 Jahre nur, wenn das Sterilgut zusätzlich in einer staubschützenden Lagerverpackung liegt. Im Zweifel gilt: geschützt im Schrank oder in der Schublade höchstens 6 Monate, offen nur zum alsbaldigen Gebrauch." },
         { typ: "liste", titel: "Funktionskontrolle (laut Kursbuch vorgeschrieben durch Medizinproduktegesetz und Berufsgenossenschaft; das MPG gilt seit 2021 nicht mehr, heute Medizinprodukterecht-Durchführungsgesetz und Medizinprodukte-Betreiberverordnung)", punkte: [
           "Elektrische und mechanische Gerätesicherheit jährlich durch einen Prüfingenieur (TÜV)",
           "Physikalische Indikatoren: Thermometer, Druckmessgeräte und Zeituhren in der Kammer",
           "Laufende Kontrolle mit chemischen Indikatoren auf Verpackungen oder Klebestreifen (Spontistreifen) mit Farbumschlag, meist braun",
           "Halbjährlich bzw. nach 400 Chargen: Erdsporenproben sterilisieren und im zertifizierten Labor auswerten lassen",
-          "Bei Geräten mit Vorvakuum täglich der Bowie-Dick-Test (Helixtest)"
+          "Bei Geräten mit Vorvakuum täglich der Bowie-Dick-Test (je nach Gerät als Helix-Test)"
         ] },
         { typ: "merke", text: "Diese Tests können beim zuständigen Gesundheitsamt angefordert werden und sind den örtlichen Behörden auf Verlangen vorzulegen." }
       ],

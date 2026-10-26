@@ -29,7 +29,8 @@ KURS.module.push({
       titel: "Die frühen Spuren: Afrika und Ägypten",
       seite: "S. 3",
       inhalt: [
-        { typ: "text", text: "Die frühesten Spuren des Piercings führen in die jüngere Steinzeit Afrikas. Neolithische Funde beweisen, dass Menschen in Algerien schon vor über 7000 Jahren Gehänge in ihren Ohrläppchen trugen. Diese Schmuckstücke waren aus Tierknochen und Zähnen gefertigt." },
+        { typ: "text", text: "Die frühesten Spuren des Piercings führen in die jüngere Steinzeit Afrikas. Das Kursbuch nennt neolithische Funde aus Algerien: Menschen sollen dort schon vor über 7000 Jahren Gehänge aus Tierknochen und Zähnen in den Ohrläppchen getragen haben." },
+        { typ: "ergaenzung", text: "Den ältesten direkten Nachweis beschreibt eine Studie von 2022 (Fachzeitschrift Antiquity): In Gräbern von Boncuklu Tarla in der Südosttürkei lag Schmuck aus Stein, Obsidian und Kupfer noch an Ohr und Kinn der Toten, etwa 10.000 bis 8.000 v. Chr. Für die Algerien-Angabe des Kursbuchs haben wir keine unabhängige Quelle gefunden." },
         { typ: "text", text: "Auch auf alten Pharaonendarstellungen aus Ägypten (etwa 1400 bis 1300 v. Chr.) findet man Hinweise auf Ohrenschmuck. Die berühmte Goldmaske des Tutanchamun zeigt Ohrlöcher. Dazu kommen prächtige Goldohrringe, die als Grabbeigabe gefunden wurden." },
         { typ: "tabelle", kopf: ["Fund", "Alter", "Was er zeigt"], zeilen: [
           ["Neolithische Funde in Algerien", "über 7000 Jahre", "Ohrgehänge aus Tierknochen und Zähnen"],
@@ -40,7 +41,7 @@ KURS.module.push({
       fragen: [
         ["Wie alt sind die ältesten im Kursbuch genannten Funde von Ohrschmuck?", ["Über 7000 Jahre (Algerien)", "Etwa 3300 Jahre (Tutanchamun)", "Etwa 2600 Jahre (Hallstattkultur)", "Etwa 4000 Jahre (Mittlerer Osten)"], "Neolithische Funde aus Algerien.", "S. 3"],
         ["Woraus bestanden die ältesten Ohrgehänge aus Algerien?", ["Aus Tierknochen und Zähnen", "Aus Gold", "Aus Bronze", "Aus Muscheln und Holz"], "So steht es im Kursbuch.", "S. 3"],
-        ["Aus welcher Zeit stammen die ältesten Piercing-Spuren?", ["Aus der jüngeren Steinzeit (Neolithikum) Afrikas", "Aus der Bronzezeit Europas", "Aus der Zeit der Pharaonen", "Aus der griechischen Antike"], "Neolithikum bedeutet jüngere Steinzeit.", "S. 3"],
+        ["Aus welcher Zeit stammen die ältesten bekannten Piercing-Spuren?", ["Aus der Jungsteinzeit (Neolithikum)", "Aus der Bronzezeit Europas", "Aus der Zeit der Pharaonen", "Aus der griechischen Antike"], "Neolithikum bedeutet jüngere Steinzeit.", "S. 3"],
         ["Welche berühmte Maske zeigt Ohrlöcher?", ["Die Goldmaske des Tutanchamun", "Die Goldmaske des Agamemnon", "Die Totenmaske Napoleons", "Die Maske des Pakal aus Palenque"], "Dazu kamen Goldohrringe als Grabbeigabe.", "S. 3"],
         ["Aus welcher Zeit stammen die ägyptischen Pharaonendarstellungen mit Ohrenschmuck?", ["Etwa 1400 bis 1300 v. Chr.", "Etwa 3000 bis 2900 v. Chr.", "Etwa 500 bis 400 v. Chr.", "Etwa 100 bis 200 n. Chr."], "So datiert sie das Kursbuch.", "S. 3"]
       ]
@@ -49,7 +50,7 @@ KURS.module.push({
       titel: "Europa, Antike und andere Kulturen",
       seite: "S. 4, 85, 88",
       inhalt: [
-        { typ: "text", text: "In Europa findet man nicht so viele Spuren des frühen Piercings. Einer der wenigen Beweise ist die etwa 2600 Jahre alte keltische Bronzemaske aus der Hallstattkultur. Sie zeigt sogar mehrere Ohrlöcher auf beiden Seiten. Im antiken Griechenland und in Rom dagegen war ein unversehrter Körper das Idealbild." },
+        { typ: "text", text: "In Europa findet man nicht so viele Spuren des frühen Piercings. Als einen der wenigen Belege nennt das Kursbuch die etwa 2600 Jahre alte Bronzemaske aus der Hallstattkultur (Kleinklein, Steiermark), die mehrere Ohrlöcher auf beiden Seiten zeigen soll. Im antiken Griechenland und in Rom dagegen war ein unversehrter Körper das Idealbild." },
         { typ: "liste", titel: "Geschichte einzelner Piercings", punkte: [
           "Nasenpiercing (Nostril): erstmals vor etwa 4000 Jahren im Mittleren Osten, im 16. Jahrhundert nach Indien übernommen. Dort wird es vorzugsweise am linken Nasenflügel getragen.",
           "Septum: eines der ältesten Piercings, weltweit in vielen Kulturen traditionell vertreten. Der Name kommt vom lateinischen „Septum nasi“."
@@ -57,8 +58,8 @@ KURS.module.push({
         { typ: "text", text: "Piercings sind ein universelles Phänomen und finden sich in fast allen Kulturen, als Initiationsritus oder als Schmuck. Von den frühesten Tagen an haben Menschen sich damit dekoriert: Sie wollten ihre Zugehörigkeit zu einer Gruppe zeigen und sich zugleich aus ihr hervorheben. Ob mit Tattoos, Piercings, Scarifications, Frisuren oder Kleidung, jeder Mensch hat seine eigene Art, sich auszudrücken." }
       ],
       fragen: [
-        ["Welcher europäische Fund zeigt mehrere Ohrlöcher?", ["Eine keltische Bronzemaske aus der Hallstattkultur", "Eine römische Marmorbüste", "Die Gletschermumie Ötzi", "Eine griechische Vasenmalerei"], "Die Maske ist etwa 2600 Jahre alt.", "S. 4"],
-        ["Wie alt ist die keltische Bronzemaske etwa?", ["Etwa 2600 Jahre", "Etwa 7000 Jahre", "Etwa 4000 Jahre", "Etwa 1200 Jahre"], "Sie zeigt mehrere Ohrlöcher auf beiden Seiten.", "S. 4"],
+        ["Welchen europäischen Fund mit Ohrlöchern nennt das Kursbuch?", ["Eine Bronzemaske aus der Hallstattkultur", "Eine römische Marmorbüste", "Ein römisches Grabrelief", "Eine griechische Vasenmalerei"], "Die Maske ist etwa 2600 Jahre alt.", "S. 4"],
+        ["Wie alt ist die Bronzemaske aus der Hallstattkultur etwa?", ["Etwa 2600 Jahre", "Etwa 7000 Jahre", "Etwa 4000 Jahre", "Etwa 1200 Jahre"], "Sie zeigt mehrere Ohrlöcher auf beiden Seiten.", "S. 4"],
         ["Welches Körperideal galt im antiken Griechenland und in Rom?", ["Der unversehrte Körper", "Ein möglichst reich geschmückter Körper", "Ein Körper mit Zeichen der Zugehörigkeit wie Ohrringen", "Ein tätowierter Körper als Zeichen von Mut"], "Deshalb gibt es dort kaum Piercing-Spuren.", "S. 4"],
         ["Wo wurde das Nasenpiercing erstmals praktiziert?", ["Im Mittleren Osten, vor etwa 4000 Jahren", "In Indien, vor etwa 4000 Jahren", "In Ägypten, vor etwa 7000 Jahren", "In Indien, im 16. Jahrhundert"], "Im 16. Jahrhundert kam es nach Indien.", "S. 85"],
         ["Was gilt für das Septum-Piercing?", ["Es ist eines der ältesten Piercings und in vielen Kulturen verbreitet", "Es kam erst im 16. Jahrhundert aus Indien", "Es wird durch den Nasenscheidewandknorpel gestochen", "Es ist nur in Europa traditionell"], "Der Name kommt von „Septum nasi“.", "S. 88"],

@@ -52,12 +52,13 @@ KURS.module.push({
       inhalt: [
         { typ: "text", text: "Auch das rechtswidrige Abschneiden von Haaren erfüllt den Tatbestand der Körperverletzung. Deshalb gehört in die Einwilligungserklärung der Hinweis, dass gegebenenfalls eine Rasur an der zu piercenden Körperstelle durchgeführt wird." },
         { typ: "text", text: "Fehlt die schriftliche Einverständniserklärung, können Kunden, deren Angehörige oder Dritte (zum Beispiel Anwälte) Schadensersatz vom Piercer fordern." },
+        { typ: "ergaenzung", text: "Rechtlich genau: Eine Einwilligung ist auch mündlich wirksam. Die Schriftform ist dein Beweis. Kannst du Einwilligung und Aufklärung im Streit nicht nachweisen, drohen Schadensersatz und Schmerzensgeld (§§ 823, 253 BGB). Geltend macht sie der Kunde selbst, meist über einen Anwalt, bei Minderjährigen die Eltern; auch die Krankenkasse kann sich Behandlungskosten zurückholen." },
         { typ: "praxis", text: "Bewahre die unterschriebenen Erklärungen geordnet auf. Im Streitfall ist das Papier dein wichtigster Nachweis." }
       ],
       fragen: [
         ["Warum gehört die Rasur in die Einverständniserklärung?", ["Weil auch das rechtswidrige Abschneiden von Haaren eine Körperverletzung ist", "Weil die Rasur gesondert abgerechnet wird", "Weil das Gesundheitsamt es so verlangt", "Weil Rasieren das Infektionsrisiko erhöht"], "Deshalb wird vermerkt, dass gegebenenfalls rasiert wird.", "S. 2"],
-        ["Was kann passieren, wenn die schriftliche Einverständniserklärung fehlt?", ["Kunden, Angehörige oder Dritte können Schadensersatz fordern", "Nur eine Verwarnung durch das Gesundheitsamt", "Das Piercing muss kostenlos wiederholt werden", "Nichts, wenn der Kunde mündlich zugestimmt hat"], "Deshalb immer schriftlich.", "S. 2"],
-        ["Wer kann bei fehlender Erklärung Schadensersatz fordern?", ["Kunden, deren Angehörige oder Dritte, z. B. Anwälte", "Nur der Kunde selbst", "Nur die Krankenkasse des Kunden", "Nur das Gesundheitsamt"], "So zählt es das Kursbuch auf.", "S. 2"],
+        ["Was kann passieren, wenn die schriftliche Einverständniserklärung fehlt?", ["Kunden, Angehörige oder Dritte können Schadensersatz fordern", "Nur eine Verwarnung durch das Gesundheitsamt", "Das Piercing muss kostenlos wiederholt werden", "Nichts, denn das Piercing gilt dann als genehmigt"], "Deshalb immer schriftlich: Nur so lässt sich die Einwilligung beweisen.", "S. 2"],
+        ["Wer macht Schadensersatz nach einem misslungenen Piercing in der Regel geltend?", ["Der Kunde, oft über einen Anwalt, bei Minderjährigen die Eltern", "Nur das Gesundheitsamt", "Die Industrie- und Handelskammer", "Niemand, wenn bar bezahlt wurde"], "Anwälte vertreten den Kunden; eigene Ansprüche haben sie nicht.", "S. 2"],
         ["Fall: Vor einem Bauchnabelpiercing musst du rasieren. Was muss vorher geklärt sein?", ["Die Rasur ist in der unterschriebenen Einverständniserklärung erwähnt", "Der Kunde muss die Rasur mündlich erlauben, das genügt", "Rasieren ist Teil des Piercings und braucht keine Erwähnung", "Die Rasur darf nur der Kunde selbst durchführen"], "Rechtswidriges Haareschneiden ist eine Körperverletzung.", "S. 2"]
       ]
     },
@@ -66,13 +67,13 @@ KURS.module.push({
       seite: "S. 2, 114",
       inhalt: [
         { typ: "text", text: "Achte dringend darauf, dass der Kunde das 18. Lebensjahr vollendet hat. Ist der Kunde unter 18, muss das Einverständnis der Eltern bzw. der Erziehungsberechtigten eingeholt werden." },
-        { typ: "text", text: "Die Beispiel-Einverständniserklärung im Kursbuch fragt deshalb Geburtsdatum und Ausweisnummer ab. Bei Minderjährigen und bei Volljährigen unter gesetzlicher Betreuung unterschreibt zusätzlich die erziehungsberechtigte Person bzw. der Vormund." },
+        { typ: "text", text: "Die Beispiel-Einverständniserklärung im Kursbuch fragt deshalb Geburtsdatum und Ausweisnummer ab. Bei Minderjährigen und bei Volljährigen unter gesetzlicher Betreuung unterschreibt zusätzlich die erziehungsberechtigte Person bzw. der rechtliche Betreuer." },
         { typ: "ergaenzung", text: "In der Piercing Akademie gilt: Teilnehmende sind mindestens 18 Jahre alt, und alle Modelle am Praxistag sind volljährig." }
       ],
       fragen: [
         ["Ab welchem Alter dürfen Kunden ohne Einverständnis der Eltern gepierct werden?", ["Ab vollendetem 18. Lebensjahr", "Ab 16 Jahren", "Ab 16 Jahren bei Ohrpiercings", "Ab 14 Jahren mit Ausweis"], "Darauf ist dringend zu achten.", "S. 2"],
         ["Was gilt laut Kursbuch bei Kunden unter 18?", ["Das Einverständnis der Eltern bzw. Erziehungsberechtigten muss eingeholt werden", "Ab 16 genügt die eigene Unterschrift", "Eine Kopie des Schülerausweises reicht", "Es gilt dasselbe wie bei Erwachsenen"], "Siehe Kap. 1.", "S. 2"],
-        ["Wer unterschreibt bei Volljährigen unter gesetzlicher Betreuung zusätzlich?", ["Der Vormund bzw. Betreuer", "Ein volljähriges Familienmitglied", "Der Hausarzt", "Niemand, Volljährige unterschreiben allein"], "So sieht es die Beispiel-Erklärung vor.", "S. 114"],
+        ["Wer unterschreibt bei Volljährigen unter gesetzlicher Betreuung zusätzlich?", ["Der rechtliche Betreuer", "Ein volljähriges Familienmitglied", "Der Hausarzt", "Niemand, Volljährige unterschreiben allein"], "So sieht es die Beispiel-Erklärung vor.", "S. 114"],
         ["Warum fragt die Erklärung die Ausweisnummer ab?", ["Zur Identifikation und zum Nachweis des Alters", "Für die Abrechnung mit der Krankenkasse", "Weil das Gewerbeamt sie verlangt", "Um den Kunden später anzuschreiben"], "Personalien mit Geburtsdatum und Ausweisnummer.", "S. 114"],
         ["Wie alt müssen Modelle am Praxistag der Akademie sein?", ["Volljährig", "Mindestens 16 mit Unterschrift der Eltern", "Mindestens 21", "Mindestens 14 bei Ohrläppchen"], "Regel der Akademie.", "Akademie"],
         ["Fall: Ein Kunde sagt, er sei 18, hat aber keinen Ausweis dabei. Was tust du?", ["Ich steche nicht, bis das Alter nachgewiesen ist", "Er kreuzt „mindestens 18“ an, das genügt", "Ich steche und lasse den Ausweis später nachreichen", "Ich steche nur ein Ohrläppchen"], "Das Alter muss feststehen.", "S. 114"]
@@ -145,6 +146,7 @@ KURS.module.push({
       inhalt: [
         { typ: "text", text: "Einigen Piercings wird eine heilende Wirkung nachgesagt: Das Daith soll bei Migräne helfen, das Allergiepiercing sitzt auf einem Akupunkturpunkt und soll Allergien mildern." },
         { typ: "achtung", text: "Es ist verboten, als Piercer Heilversprechen zu geben oder damit zu werben." },
+        { typ: "ergaenzung", text: "Rechtsgrundlage ist das Heilmittelwerbegesetz: Es gilt auch für Behandlungen und Verfahren, wenn die Werbung eine Wirkung gegen Krankheiten verspricht, und verbietet irreführende Versprechen (§ 3 HWG). Eine Wirkung des Daith gegen Migräne ist wissenschaftlich nicht belegt; es gibt nur Einzelberichte." },
         { typ: "praxis", text: "Fragt ein Kunde gezielt nach dem „Migräne-Piercing“, sagst du ehrlich: Manche berichten das, versprechen kannst du es nicht. Du stichst das Daith als Schmuckpiercing." }
       ],
       fragen: [

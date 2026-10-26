@@ -71,7 +71,7 @@ KURS.module.push({
         { typ: "praxis", text: "Ein Nein zu einem riskanten Wunsch ist professionell. Empfiehl einem Kunden lieber einen erfahrenen Kollegen, als ein Piercing zu stechen, das du nicht sicher beherrschst." }
       ],
       fragen: [
-        ["Wo darf ein Augenbrauenpiercing gestochen werden?", ["Nur im äußeren Drittel", "Im inneren Drittel nahe der Nase", "Im mittleren Drittel über der Pupille", "Überall, wenn oberflächlich gestochen wird"], "Sonst besteht Lähmungsgefahr.", "S. 89"],
+        ["Wo darf ein Augenbrauenpiercing gestochen werden?", ["Nur im äußeren Drittel", "Im inneren Drittel nahe der Nase", "Im mittleren Drittel über der Pupille", "Überall, wenn oberflächlich gestochen wird"], "Innen treten Nerven und Gefäße aus (im Kursbuch: Lähmungsgefahr).", "S. 89"],
         ["Warum lehnen Anfänger das Cheek-Piercing ab?", ["Dort verlaufen wichtige Arterien, Nerven und der Speichelgang", "Es lässt sich nur mit Biopsiestanze stechen", "Es heilt schneller als andere Piercings", "Es braucht immer eine Betäubung"], "Zudem droht eine Verunstaltung.", "S. 92"],
         ["Was kann ein zu tief gestochenes Bridge verursachen?", ["Druck auf Nervenbahnen", "Herauswachsen", "Eine Perichondritis", "Einen Einriss der Lippe"], "Zu oberflächlich wächst es heraus.", "S. 91"],
         ["Was passiert, wenn ein Bridge zu oberflächlich gestochen wird?", ["Es wächst heraus", "Es drückt auf Nervenbahnen", "Es durchsticht das Nasenbein", "Es heilt besonders schnell"], "Als Anfänger ablehnen.", "S. 91"],
@@ -87,7 +87,7 @@ KURS.module.push({
         { typ: "text", text: "Die Risikoregeln aus dem Kursbuch werden verständlich, wenn du weißt, was unter der Haut liegt. Zwei Bereiche sind für Piercer besonders wichtig: die Augenbraue und die Wange." },
         { typ: "grafik", id: "augenbraue" },
         { typ: "liste", titel: "Augenbraue", punkte: [
-          "Über dem inneren Drittel der Augenbraue tritt der Nervus supraorbitalis aus einer kleinen Öffnung am oberen Rand der Augenhöhle (Foramen bzw. Incisura supraorbitalis), noch weiter innen der Nervus supratrochlearis. Mit ihnen laufen kleine Arterien und Venen.",
+          "Etwa an der Grenze vom inneren zum mittleren Drittel, ungefähr über der Pupille, tritt der Nervus supraorbitalis aus einer kleinen Öffnung am oberen Rand der Augenhöhle (Foramen bzw. Incisura supraorbitalis), weiter innen über dem inneren Augenwinkel der Nervus supratrochlearis. Mit ihnen laufen kleine Arterien und Venen.",
           "Beide sind Gefühlsnerven für Stirn und Oberlid. Eine Verletzung kann Taubheit, Kribbeln oder dauerhafte Missempfindungen verursachen.",
           "Die Bewegung der Stirn steuert dagegen ein Ast des Gesichtsnervs (N. facialis), der seitlich über die Schläfe zieht. Auch deshalb stichst du oberflächlich und nicht zu tief.",
           "Im äußeren Drittel liegen keine größeren Austrittspunkte. Das ist der Grund für die Regel des Kursbuchs."
@@ -140,11 +140,11 @@ KURS.module.push({
         { typ: "schritte", punkte: [
           "Entzündungs- oder Reinigungsphase (erste Tage): Rötung, leichte Schwellung, Wärme und etwas klares Wundsekret sind normal. Deshalb braucht der Ersteinsatz Überlänge.",
           "Aufbau- oder Granulationsphase: Neues, zartes, feuchtes Gewebe (Granulationsgewebe) füllt den Stichkanal.",
-          "Epithelisierung (Regenerationsphase): Vom Wundrand wandern Epithelzellen ein und wandeln das Granulationsgewebe in trockenes, festes Narbengewebe um. Die Wunde wird immer kleiner."
+          "Epithelisierung (Regenerationsphase): Vom Wundrand wandern Epithelzellen ein und decken die Wunde ab; darunter reift das Granulationsgewebe zu trockenem, festem Narbengewebe. Die Wunde wird immer kleiner."
         ] },
         { typ: "grafik", id: "wundheilung" },
         { typ: "grafik", id: "lobe3d" },
-        { typ: "ergaenzung", text: "Richtwerte aus der Wundheilungslehre: Die Entzündungsphase dauert etwa 1 bis 4 Tage. Die Granulationsphase beginnt nach wenigen Tagen und reicht bis etwa zur dritten Woche. Epithelisierung und Umbau dauern Wochen bis Monate, und die Phasen gehen fließend ineinander über. Ihre größte Festigkeit erreicht eine Narbe erst nach etwa drei Monaten. Ein Stichkanal ist eine lange, schmale Wunde, die auf ganzer Länge ausheilen muss; daher die langen Abheilzeiten in Modul 10 (Quellen: KURS-RECHERCHE.md, Abschnitt 9)." },
+        { typ: "ergaenzung", text: "Richtwerte aus der Wundheilungslehre: Die Entzündungsphase dauert etwa 1 bis 4 Tage. Die Granulationsphase beginnt nach wenigen Tagen und reicht bis etwa zur dritten Woche. Epithelisierung und Umbau dauern Wochen bis Monate, und die Phasen gehen fließend ineinander über. Eine Narbe hat nach etwa drei Wochen rund 20 Prozent der Reißfestigkeit gesunder Haut, nach einigen Monaten bis zu etwa 80 Prozent; ganz so fest wie vorher wird sie nie, und der Umbau dauert bis zu einem Jahr. Ein Stichkanal ist eine lange, schmale Wunde, die auf ganzer Länge ausheilen muss; daher die langen Abheilzeiten in Modul 10 (Quellen: KURS-RECHERCHE.md, Abschnitt 9)." },
         { typ: "achtung", text: "Setzt die Epithelisierung nicht ein, soll der Kunde nach 10 bis 14 Tagen einen Arzt aufsuchen." }
       ],
       fragen: [
@@ -155,7 +155,7 @@ KURS.module.push({
         ["Wann soll der Kunde bei fehlender Epithelisierung zum Arzt?", ["Nach 10 bis 14 Tagen", "Nach 3 bis 4 Tagen", "Nach 4 bis 6 Wochen", "Erst nach 3 Monaten"], "So steht es im Kursbuch.", "S. 50"],
         ["Womit ist ein abgeheilter Stichkanal innen ausgekleidet?", ["Mit Oberhaut (Epithel)", "Mit Knorpel", "Mit Granulationsgewebe", "Mit Fettgewebe"], "Die Oberhaut wächst vom Rand in den Kanal ein.", "S. 50"],
         ["Wie lange dauert die Entzündungsphase ungefähr?", ["Etwa 1 bis 4 Tage", "Etwa 2 bis 3 Wochen", "Etwa 3 Monate", "Nur wenige Stunden"], "Danach überwiegt der Aufbau neuen Gewebes.", "Ergänzung"],
-        ["Wann erreicht Narbengewebe ungefähr seine größte Festigkeit?", ["Nach etwa 3 Monaten", "Nach etwa 2 Wochen", "Nach etwa 4 Tagen", "Nach etwa 1 Woche"], "Deshalb wird der Schmuck erst nach vollständiger Abheilung gewechselt.", "Ergänzung"],
+        ["Wie fest wird Narbengewebe im Vergleich zu gesunder Haut höchstens?", ["Etwa 80 Prozent der ursprünglichen Reißfestigkeit", "Doppelt so fest wie gesunde Haut", "Schon nach 2 Wochen genauso fest", "Etwa 20 Prozent, auch nach einem Jahr"], "Der Umbau dauert Monate; deshalb den Schmuck erst nach vollständiger Abheilung wechseln.", "Ergänzung"],
         ["Laufen die Phasen der Wundheilung streng nacheinander ab?", ["Nein, sie gehen fließend ineinander über", "Ja, jede beginnt erst, wenn die vorige endet", "Ja, mit einer Pause von etwa 2 Tagen", "Es gibt nur eine einzige Phase"], "Siehe Zeitachse.", "Ergänzung"]
       ]
     },
@@ -164,12 +164,13 @@ KURS.module.push({
       seite: "S. 50",
       inhalt: [
         { typ: "text", text: "Raucher, Alkoholiker und Diabetiker gehören zu den Risikogruppen: Bei ihnen treten Komplikationen im Heilungsprozess schneller auf." },
-        { typ: "text", text: "Mögliche Ursachen für ständiges Nachbluten sind Diabetes, Bindegewebsschwäche oder eine Bluterkrankheit. In diesem Fall sollte ein Arzt aufgesucht werden." },
+        { typ: "text", text: "Mögliche Ursachen für ständiges Nachbluten sind laut Kursbuch Diabetes, Bindegewebsschwäche oder eine Bluterkrankheit. In diesem Fall sollte ein Arzt aufgesucht werden." },
+        { typ: "ergaenzung", text: "Am häufigsten blutet es länger nach, wenn der Kunde blutverdünnende Medikamente nimmt (zum Beispiel ASS) oder eine Gerinnungsstörung hat. Diabetes verzögert vor allem die Wundheilung und erhöht das Infektionsrisiko." },
         { typ: "praxis", text: "Die Einverständniserklärung fragt Krankheiten und Medikamente ab. Lies diese Angaben vor dem Stich, nicht erst danach, und sprich Risikofaktoren offen an." }
       ],
       fragen: [
         ["Welche Gruppen haben ein höheres Risiko für Heilungskomplikationen?", ["Raucher, Alkoholiker und Diabetiker", "Sportler und Vegetarier", "Menschen mit Nickelallergie und Brillenträger", "Menschen unter 25 Jahren"], "Bei ihnen treten Komplikationen schneller auf.", "S. 50"],
-        ["Was kann ständiges Nachbluten verursachen?", ["Diabetes, Bindegewebsschwäche oder eine Bluterkrankheit", "Eine Nickelallergie", "Zu kurzer Schmuck", "Die Pflege mit Kochsalzlösung"], "Dann einen Arzt aufsuchen.", "S. 50"],
+        ["Welche Ursachen für ständiges Nachbluten nennt das Kursbuch?", ["Diabetes, Bindegewebsschwäche oder eine Bluterkrankheit", "Eine Nickelallergie", "Zu kurzer Schmuck", "Die Pflege mit Kochsalzlösung"], "Dann einen Arzt aufsuchen.", "S. 50"],
         ["Fall: Ein Kunde gibt Diabetes an. Was ist richtig?", ["Ich kläre ihn über das höhere Heilungsrisiko auf, bevor ich steche", "Ich steche nur mit PTFE, dann gibt es kein Risiko", "Diabetes spielt beim Piercen keine Rolle", "Ich verdopple die Überlänge"], "Diabetiker zählen zu den Risikogruppen.", "S. 50"]
       ]
     }

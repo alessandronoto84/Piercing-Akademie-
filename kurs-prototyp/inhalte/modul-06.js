@@ -12,7 +12,7 @@ KURS.module.push({
       seite: "S. 52–53",
       inhalt: [
         { typ: "text", text: "Titan ist ein Hightech-Metall mit vielen besonderen Eigenschaften. Es wird für medizinische Implantate wie Knochenschrauben, künstliche Gelenke und Herzschrittmachergehäuse eingesetzt. Um eine Tonne Titan herzustellen, braucht man 16-mal mehr Energie als für eine Tonne Stahl." },
-        { typ: "text", text: "Nicht jede Titanlegierung eignet sich für Bodypiercing. Für Piercing-Produkte wird ausschließlich das Hightech-Titan „Ti6Al4V ELI, Titan der Güteklasse 23“ verwendet, kurz G23-Titan. Es ist weltweit für den unbegrenzten chirurgischen Einsatz zugelassen, auch für Implantate wie Herzschrittmacher oder künstliche Gelenke, und wurde als biokompatibel eingestuft." },
+        { typ: "text", text: "Nicht jede Titanlegierung eignet sich für Bodypiercing. Für hochwertigen Piercingschmuck wird vor allem das Hightech-Titan „Ti6Al4V ELI, Titan der Güteklasse 23“ verwendet, kurz G23-Titan (das Kursbuch sagt „ausschließlich“; daneben gibt es auch implantattaugliches Reintitan, siehe Lektion „Woran du guten Ersteinsatz-Schmuck erkennst“). Es ist als Werkstoff für chirurgische Implantate genormt, wird weltweit für Implantate wie künstliche Gelenke verwendet und gilt als biokompatibel." },
         { typ: "foto", id: "titan-schmuck", text: "Schmuck aus G23-Titan. Kursbuch S. 55." },
         { typ: "tabelle", kopf: ["Eigenschaft", "Bedeutung"], zeilen: [
           ["Wiegt nur die Hälfte von Stahl", "Angenehm zu tragen, auch bei langen Stäben"],
@@ -31,7 +31,7 @@ KURS.module.push({
         ["Wie lässt sich G23-Titan färben?", ["Durch Anodisieren", "Durch Galvanisieren mit Farbpigmenten", "Durch Pulverbeschichtung", "Durch Einbrennlack"], "Elektrochemisches Verfahren.", "S. 52"],
         ["Warum ist G23-Titan antiallergen?", ["Es ist nickelfrei", "Es ist mit PTFE beschichtet", "Es enthält Vanadium, das Allergien hemmt", "Es ist vergoldet"], "Deshalb ideal als Ersteinsatz.", "S. 52"],
         ["Warum ist G23-Titan dauerhaft farbbeständig?", ["Wegen seines starken Oxidmantels", "Weil die Farbe eingebrannt ist", "Weil es mit PVD beschichtet ist", "Weil es kaum Wärme leitet"], "Korrosionsresistent.", "S. 53"],
-        ["Wofür ist G23-Titan ebenfalls zugelassen?", ["Für Implantate wie künstliche Gelenke", "Nur für Schmuck und Uhren", "Nur für chirurgische Instrumente", "Für Lebensmittelverpackungen"], "Unbegrenzter chirurgischer Einsatz.", "S. 53"],
+        ["Wofür ist G23-Titan ebenfalls zugelassen?", ["Für Implantate wie künstliche Gelenke", "Nur für Schmuck und Uhren", "Nur für chirurgische Instrumente", "Für Lebensmittelverpackungen"], "Genormt als Implantatwerkstoff (ASTM F136).", "S. 53"],
         ["Wodurch entsteht beim Anodisieren die Farbe?", ["Durch eine Oxidschicht, deren Dicke von der Spannung abhängt", "Durch einen eingebrannten Farbstoff", "Durch eine PVD-Beschichtung", "Durch Beimischen anderer Metalle"], "Höhere Spannung, dickere Schicht, andere Farbe.", "S. 53"]
       ]
     },

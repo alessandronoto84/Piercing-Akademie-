@@ -28,7 +28,7 @@ KURS.module.push({
         { typ: "text", text: "Voraussetzung für das Empfinden von Schmerz sind Schmerzrezeptoren (Nozizeptoren) und die ungestörte Weiterleitung an das Gehirn (zentrales Nervensystem). Die Schmerzrezeptoren sind meist freie Nervenenden." },
         { typ: "tabelle", kopf: ["Reiz", "Beispiele"], zeilen: [["Thermisch", "Hitze, Kälte"], ["Mechanisch", "Hiebe, Schnitte, Stiche, starker Druck"], ["Chemisch", "Säuren, Laugen"]] },
         { typ: "foto", id: "frei-haut-rezeptoren", text: "Rezeptoren und Anhangsgebilde der Haut, links unbehaarte Leistenhaut (Handfläche), rechts behaarte Haut (Achsel); englisch beschriftet." },
-        { typ: "merke", text: "Die International Association for the Study of Pain definiert Schmerz als „ein unangenehmes Sinnes- oder Gefühlserlebnis, das mit tatsächlicher oder drohender Gewebeschädigung einhergeht oder von betroffenen Personen so beschrieben wird, als wäre eine solche Gewebeschädigung die Ursache“." },
+        { typ: "merke", text: "Die International Association for the Study of Pain (IASP) definiert Schmerz seit 2020 als „ein unangenehmes Sinnes- und Gefühlserlebnis, das mit einer tatsächlichen oder drohenden Gewebeschädigung verknüpft ist oder einer solchen ähnelt“. Das Kursbuch zitiert die ältere Fassung, nach der auch Schmerz zählt, den Betroffene so beschreiben, als wäre eine Gewebeschädigung die Ursache." },
         { typ: "text", text: "In seltenen Fällen spüren Kunden schon vor dem eigentlichen Stich Schmerz, allein bei der Berührung der Haut. Schmerz kann also auch ohne körperliche Schädigung empfunden werden, etwa als Erwartungsschmerz aus Angst. (Im Kursbuch steht hier „Phantomschmerz“; fachlich meint Phantomschmerz Schmerzen in einem amputierten Körperteil.)" }
       ],
       fragen: [
@@ -36,7 +36,7 @@ KURS.module.push({
         ["Was ist die Voraussetzung für das Empfinden von Schmerz?", ["Schmerzrezeptoren und ungestörte Weiterleitung ans Gehirn", "Nur eine offene Wunde", "Eine Entzündung im Gewebe", "Ausgeschüttete Endorphine"], "Nozizeptoren und zentrales Nervensystem.", "S. 7"],
         ["Ein Stich ist welche Art von Reiz?", ["Mechanisch", "Thermisch", "Chemisch", "Elektrisch"], "Wie Hiebe, Schnitte und starker Druck.", "S. 8"],
         ["Welche Organisation liefert die zitierte Schmerzdefinition?", ["International Association for the Study of Pain (IASP)", "Weltgesundheitsorganisation (WHO)", "Robert Koch-Institut (RKI)", "Deutsche Schmerzgesellschaft"], "Die IASP-Definition.", "S. 7"],
-        ["Kann Schmerz auch ohne körperliche Schädigung empfunden werden?", ["Ja, manche Kunden spüren schon bei Berührung Schmerz", "Nein, Schmerz setzt immer eine Gewebeschädigung voraus", "Nur bei Kindern", "Nur nach einer Betäubung"], "Phantomschmerz.", "S. 7"]
+        ["Kann Schmerz auch ohne körperliche Schädigung empfunden werden?", ["Ja, manche Kunden spüren schon bei Berührung Schmerz", "Nein, Schmerz setzt immer eine Gewebeschädigung voraus", "Nur bei Kindern", "Nur nach einer Betäubung"], "Etwa als Erwartungsschmerz aus Angst.", "S. 7"]
       ]
     },
     {
@@ -115,14 +115,14 @@ KURS.module.push({
         { typ: "text", text: "In erster Linie versucht der erfahrene Piercer, dem Kunden die Angst zu nehmen und eine ruhige, harmonische Umgebung zu schaffen. Im Idealfall ist der Kunde dann angstfrei und kann ohne Betäubung gepierct werden." },
         { typ: "tabelle", kopf: ["Mittel", "Wirkung", "Hinweis"], zeilen: [
           ["Eisspray (z. B. Chlorethyl)", "Die starke, kurzfristige Kälte betäubt die Nervenenden für kurze Zeit", "Wirkt direkt"],
-          ["Lidocainsalbe (Xylocain)", "Rezeptfrei aus der Apotheke; über Schleimhaut (Mund, Intim) gut aufgenommen, auch als Spray erhältlich", "Laut Akademie erlaubt, aber nicht empfohlen"]
+          ["Lidocainsalbe (Xylocain)", "Aus der Apotheke, je nach Präparat rezeptfrei oder verschreibungspflichtig; über Schleimhaut (Mund, Intim) gut aufgenommen, auch als Spray erhältlich", "Laut Akademie erlaubt, aber nicht empfohlen"]
         ] },
         { typ: "achtung", text: "Beim Einsatz von Lidocain immer die Einwirkzeit beachten, auf Nebenwirkungen hinweisen und Wechselwirkungen mit anderen Mitteln (zum Beispiel Betablockern) ausschließen, besonders im Mund. Frag den Kunden zwingend vorher nach der Verträglichkeit: schriftlich und nochmals mündlich." }
       ],
       fragen: [
         ["Was ist laut Kursbuch der Idealfall?", ["Dem Kunden die Angst nehmen und ohne Betäubung piercen", "Jeden Kunden mit Eisspray kühlen", "Lidocainsalbe bei jedem Schleimhautpiercing", "Möglichst langsam stechen"], "Ruhige, harmonische Umgebung.", "S. 13"],
         ["Wie wirkt Eisspray?", ["Starke, kurzfristige Kälte betäubt die Nervenenden", "Es betäubt die Stelle für etwa eine Stunde", "Es desinfiziert und betäubt gleichzeitig", "Es verengt die Gefäße, sodass die Stelle nicht blutet"], "Wirkt direkt und kurz.", "S. 13"],
-        ["Welcher Wirkstoff steckt typischerweise in Eisspray?", ["Chlorethyl", "Lidocain", "Benzocain", "Menthol"], "So nennt es das Kursbuch.", "S. 13"],
+        ["Welches Kältespray nennt das Kursbuch als Beispiel?", ["Chlorethyl", "Lidocain", "Benzocain", "Menthol"], "Viele Sport-Kältesprays enthalten heute andere Treibgase; das Prinzip ist dieselbe starke Kälte.", "S. 13"],
         ["Wo bekommt man Lidocainsalbe (Xylocain)?", ["In der Apotheke", "Nur im Großhandel für Ärzte", "Im Drogeriemarkt", "Im Piercing-Fachhandel"], "So steht es im Kursbuch.", "S. 13"],
         ["Wie steht die Piercing Akademie zur Lidocainsalbe?", ["Erlaubt, aber nicht empfohlen", "Empfohlen bei allen Knorpelpiercings", "Verboten", "Pflicht bei Intimpiercings"], "Angabe der Akademie.", "Akademie"],
         ["Was musst du vor dem Einsatz von Lidocain tun?", ["Den Kunden schriftlich und mündlich nach der Verträglichkeit fragen", "Nur die Einwirkzeit abwarten", "Die Stelle vorher mit Eisspray kühlen", "Den Hausarzt des Kunden anrufen"], "Dazu Nebenwirkungen und Wechselwirkungen beachten.", "S. 13"]
