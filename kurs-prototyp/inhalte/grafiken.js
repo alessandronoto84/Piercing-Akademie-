@@ -64,60 +64,59 @@ window.KURS = window.KURS || { module: [] };
       l(384, 232, 404, 232, "sl"), t(410, 229, "Unterhaut (Subcutis)", "tb"), t(410, 245, "Fettgewebe als Polster", "tm")
     ].join("") };
 
-  // ---------- Ohr: Grundzeichnung (linkes Ohr, Gesicht links) ----------
-  function ohr(variante) {
-    var entz = variante === "perichondritis";
-    var aussen = "M228 128 C222 70 270 34 318 38 C372 42 404 92 400 150 C397 200 380 238 366 270 C354 296 352 312 350 322 Q306 328 262 318 C256 300 246 292 240 282 C228 264 222 242 230 226 C236 214 236 200 230 190 C226 170 230 150 228 128 Z";
-    var lappen = "M262 318 C268 336 268 356 280 372 C296 392 336 384 344 352 C347 340 349 330 350 322 Q306 328 262 318 Z";
-    return [
-      p(aussen, entz ? "f-entz s" : "f-kn s"),
-      p(lappen, "f-derm s"),
-      p("M246 136 C244 86 280 60 318 62 C360 64 382 102 378 150 C375 196 360 232 346 262", "sd b15"),
-      p("M306 290 C336 260 352 214 348 170 C344 132 322 104 296 92", "s"),
-      p("M346 178 C320 160 290 154 262 156", "s"),
-      p("M228 150 C246 152 262 160 270 172", "s"),
-      p("M270 172 C296 176 322 196 326 232 C328 262 312 284 290 290", "sd"),
-      p("M286 294 C296 282 310 284 316 298", "s"),
-      e(252, 236, 9, 13, "fmuted")
-    ].join("");
+  // ---------- Ohr: echtes Foto aus dem Kursbuch (Datenblatt Lobe, S. 74) mit markierten Positionen ----------
+  // Die Punkte stammen aus den Datenblatt-Fotos des Kursbuchs (S. 74–84), die alle dasselbe Ohr zeigen.
+  // Fotokoordinaten 379 × 480, das Foto steht in der Grafik bei x = OX. Das Bild wird erst beim Anzeigen eingesetzt,
+  // weil bilder.js nach grafiken.js geladen wird.
+  // Ausschnitt: Foto-x 90 bis 379 (die Wange links bleibt weg), damit die Grafik auch auf dem Handy ganz sichtbar ist.
+  var OX = 16, OY = 10, AX = 90, BW = 379 - AX;
+  function ohrfoto() {
+    var b = (KURS.bilder || {}).lobe;
+    return '<clipPath id="ohr-clip"><rect x="' + OX + '" y="' + OY + '" width="' + BW + '" height="480" rx="14"/></clipPath>' +
+      (b ? '<image href="' + b.src + '" x="' + (OX - AX) + '" y="' + OY + '" width="379" height="480" clip-path="url(#ohr-clip)"/>' : "") +
+      r(OX, OY, BW, 480, "sd", 14);
   }
-  G.ohr = { w: 560, h: 420,
-    alt: "Ohrmuschel mit den Positionen von Industrial, Rook, Daith, Tragus, Conch, Snug, Helix, Anti-Tragus, Lobe und Upper Lobe. Knorpel und Ohrläppchen sind farblich unterschieden.",
-    text: "Die Ohrpiercings auf einen Blick (linkes Ohr, schematisch). Alles außer dem Ohrläppchen ist Knorpel und braucht mindestens 3 Monate zum Abheilen; das Ohrläppchen ist Weichgewebe (ca. 2 Monate).",
-    svg: [
-      ohr(),
-      // Industrial als Stab durch zwei Stichkanäle
-      l(250, 104, 364, 66, "a b3"), c(250, 104, 5, "fa"), c(364, 66, 5, "fa"),
-      [[300, 146], [258, 166], [232, 212], [306, 226], [346, 206], [394, 178], [308, 290], [292, 352], [326, 330]].map(function (q) { return c(q[0], q[1], 5, "fa punkt"); }).join(""),
-      // links
-      l(196, 100, 245, 104, "sl"), t(190, 104, "Industrial", "tb", "end"),
-      l(196, 160, 253, 166, "sl"), t(190, 164, "Daith", "tb", "end"),
-      l(196, 212, 227, 212, "sl"), t(190, 216, "Tragus", "tb", "end"),
-      l(196, 352, 287, 352, "sl"), t(190, 356, "Lobe", "tb", "end"),
-      // rechts
-      l(305, 146, 424, 146, "sl"), t(430, 150, "Rook", "tb"),
-      l(399, 178, 424, 178, "sl"), t(430, 182, "Helix", "tb"),
-      l(351, 206, 424, 214, "sl"), t(430, 218, "Snug", "tb"),
-      l(311, 226, 424, 250, "sl"), t(430, 254, "Conch", "tb"),
-      l(313, 290, 424, 290, "sl"), t(430, 294, "Anti-Tragus", "tb"),
-      l(331, 330, 424, 330, "sl"), t(430, 334, "Upper Lobe", "tb"),
-      // Legende
-      r(40, 396, 14, 14, "f-kn s1", 3), t(60, 408, "Knorpel: mindestens 3 Monate", "tm"),
-      r(270, 396, 14, 14, "f-derm s1", 3), t(290, 408, "Weichgewebe (Ohrläppchen): ca. 2 Monate", "tm")
-    ].join("") };
+  function fp(x, y) { return [x - AX + OX, y + OY]; }
+  // Nummerierte Markierung: Knorpel gold, Ohrläppchen grün; bei zweiteiligen Piercings zweiter Punkt klein und gestrichelt verbunden
+  function marke(punkte, n, weich) {
+    var q = punkte.map(function (pt) { return fp(pt[0], pt[1]); });
+    return (q.length > 1 ? l(q[0][0], q[0][1], q[1][0], q[1][1], (weich ? "ok" : "a") + " b2 dash") + c(q[1][0], q[1][1], 4.5, (weich ? "fok" : "fa") + " punkt") : "") +
+      c(q[0][0], q[0][1], 10, (weich ? "fok" : "fa") + " punkt") + t(q[0][0], q[0][1] + 4, String(n), "tnr", "middle");
+  }
+  function legende(eintraege, y0, spalten) {
+    spalten = spalten || 2;
+    return eintraege.map(function (e, i) {
+      var x = OX + (i % spalten) * (BW / spalten + 6), y = y0 + Math.floor(i / spalten) * 26;
+      return c(x + 10, y, 10, (e[2] ? "fok" : "fa") + " punkt") + t(x + 10, y + 4, String(i + 1), "tnr", "middle") + t(x + 26, y + 4, e[0], "tb");
+    }).join("");
+  }
+  var POS = [
+    ["Industrial", [[180, 68], [354, 157]]], ["Helix", [[279, 87]]], ["Rook", [[204, 141], [196, 177]]], ["Daith", [[195, 209], [170, 248]]],
+    ["Tragus", [[137, 270]]], ["Conch", [[238, 258]]], ["Snug", [[260, 268], [287, 286]]], ["Anti-Tragus", [[204, 313], [221, 337]]],
+    ["Upper Lobe", [[236, 340], [213, 363]], true], ["Lobe", [[182, 378]], true]
+  ];
+  G.ohr = { w: BW + 2 * OX, h: 650,
+    alt: "Foto einer Ohrmuschel mit nummerierten Positionen: 1 Industrial, 2 Helix, 3 Rook, 4 Daith, 5 Tragus, 6 Conch, 7 Snug, 8 Anti-Tragus, 9 Upper Lobe, 10 Lobe. Knorpelpiercings sind gold markiert, Piercings im Ohrläppchen grün.",
+    text: "Die Ohrpiercings auf einen Blick, eingezeichnet auf dem Ohr aus den Datenblättern des Kursbuchs. Gold: Knorpel, mindestens 3 Monate Abheilzeit. Grün: Ohrläppchen (Weichgewebe), ca. 2 Monate. Gestrichelt: Ein- und Austritt bei zweiteiligen Piercings.",
+    svg: "" };
+  Object.defineProperty(G.ohr, "svg", { get: function () {
+    return ohrfoto() + POS.map(function (e, i) { return marke(e[1], i + 1, e[2]); }).join("") + legende(POS, OY + 480 + 26);
+  } });
 
-  G.perichondritis = { w: 560, h: 420,
-    alt: "Ohrmuschel mit entzündetem Knorpel nach einem Helix-Piercing. Das Ohrläppchen ist nicht betroffen, weil es keinen Knorpel enthält.",
-    text: "Typisches Bild einer Perichondritis (schematisch): Die Ohrmuschel ist gerötet, geschwollen und sehr schmerzhaft, das Ohrläppchen bleibt ausgespart – es enthält keinen Knorpel. Das ist ein Fall für den Arzt, und zwar sofort.",
-    svg: [
-      ohr("perichondritis"),
-      c(394, 178, 5, "fa punkt"),
-      l(399, 178, 424, 178, "sl"), t(430, 174, "Helix-Piercing", "tb"), t(430, 190, "als Eintrittspforte", "tm"),
-      l(300, 110, 424, 110, "sl"), t(430, 106, "Knorpel gerötet,", "tb"), t(430, 122, "geschwollen, heiß", "tm"),
-      l(306, 360, 424, 360, "sl"), t(430, 356, "Ohrläppchen", "tb"), t(430, 372, "nicht betroffen", "tm"),
-      r(40, 396, 14, 14, "f-entz s1", 3), t(60, 408, "entzündeter Knorpel", "tm"),
-      r(220, 396, 14, 14, "f-derm s1", 3), t(240, 408, "Ohrläppchen ohne Knorpel", "tm")
-    ].join("") };
+  G.perichondritis = { w: BW + 2 * OX, h: 590,
+    alt: "Foto einer Ohrmuschel, auf dem der Knorpel nach einem Helix-Piercing rot und geschwollen eingefärbt ist: 1 Helix-Piercing als Eintrittspforte, 2 Knorpel gerötet, geschwollen und heiß, 3 Ohrläppchen nicht betroffen, weil es keinen Knorpel enthält.",
+    text: "So sieht eine Perichondritis typischerweise aus (eingefärbt auf dem Ohr aus dem Kursbuch): 1 Helix-Piercing als Eintrittspforte, 2 Ohrmuschel gerötet, geschwollen und sehr schmerzhaft, 3 das Ohrläppchen bleibt ausgespart, es enthält keinen Knorpel. Das ist ein Fall für den Arzt, und zwar sofort.",
+    svg: "" };
+  Object.defineProperty(G.perichondritis, "svg", { get: function () {
+    var rot = "M" + [[250, 34], [300, 22], [340, 38], [360, 84], [368, 150], [362, 220], [348, 290], [328, 328], [296, 334], [262, 322], [228, 300], [214, 270], [226, 240], [250, 214], [246, 170], [232, 120], [236, 60]].map(function (pt) { var q = fp(pt[0], pt[1]); return q[0] + " " + q[1]; }).join(" L") + " Z";
+    return [
+      ohrfoto(),
+      '<filter id="ohr-weich" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="9"/></filter>',
+      '<path d="' + rot + '" class="f-entz-foto" filter="url(#ohr-weich)"/>',
+      marke([[279, 87]], 1), marke([[340, 210]], 2), marke([[200, 400]], 3, true),
+      legende([["Helix-Piercing als Eintrittspforte"], ["Knorpel gerötet, geschwollen, heiß"], ["Ohrläppchen nicht betroffen", 0, true]], OY + 480 + 26, 1)
+    ].join("");
+  } });
 
   // ---------- Modul 3: Augenbraue und Nervenaustritt ----------
   G.augenbraue = { w: 640, h: 270,

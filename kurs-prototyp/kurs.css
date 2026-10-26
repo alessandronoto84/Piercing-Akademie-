@@ -310,3 +310,5 @@
 .k-loesungen .k-richtig{color:var(--g-ok);font-weight:600}
 .k-loesungen .k-falsch-antw{color:var(--muted)}
 .k-blaettern{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:1.5rem}
+.k-grafik .fok{fill:var(--g-ok)}.k-grafik .ok{fill:none;stroke:var(--g-ok);stroke-linecap:round}
+.k-grafik .f-entz-foto{fill:#E0402F;opacity:.42;mix-blend-mode:multiply}
