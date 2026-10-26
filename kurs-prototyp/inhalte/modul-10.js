@@ -24,17 +24,18 @@ KURS.module.push({
       seite: "S. 48",
       inhalt: [
         { typ: "tabelle", kopf: ["Pflegemittel", "Einsatz"], zeilen: [
-          ["Prontolind (Polihexanid) oder Octenisept (Octenidin)", "Nicht auf Knorpel anwenden: Octenidin schädigt in Laborstudien Knorpelzellen; die Akademie meidet am Knorpel beide Mittel."],
+          ["Prontolind (Polihexanid)", "Für alle Piercings geeignet, auch für Knorpel"],
+          ["Octenisept (Octenidin)", "Nicht auf Knorpel anwenden: Octenidin schädigt in Laborstudien Knorpelzellen"],
           ["Einfache Kochsalzlösung", "Für alle Piercings geeignet"],
           ["Chlorhexamed (Chlorhexidin)", "Für den Mundbereich; nur wenige Tage bis etwa 2 Wochen, längere Anwendung kann Zähne und Zunge verfärben"]
         ] },
-        { typ: "praxis", text: "Frag vor der Empfehlung immer, wo das Piercing sitzt. Beim Knorpel bleibt Kochsalzlösung die sichere Wahl." }
+        { typ: "praxis", text: "Frag vor der Empfehlung immer, wo das Piercing sitzt. Beim Knorpel sind Kochsalzlösung und Prontolind die richtige Wahl, Octenisept nie." }
       ],
       fragen: [
         ["Welcher Wirkstoff in Octenisept schädigt in Laborstudien Knorpelzellen?", ["Octenidin", "Natriumchlorid", "Polihexanid", "Chlorhexidin"], "Nicht auf Knorpel anwenden.", "S. 48"],
         ["Welches Pflegemittel empfiehlst du für den Mundbereich?", ["Chlorhexamed", "Octenisept", "Teebaumöl pur", "Tyrosur-Gel"], "Laut Kursbuch.", "S. 48"],
-        ["Welches Mittel passt für alle Piercings?", ["Einfache Kochsalzlösung", "Prontolind", "Octenisept", "Chlorhexamed"], "Auch bei Knorpel.", "S. 48"],
-        ["Fall: Ein Kunde mit frischem Conch-Piercing fragt nach Prontolind. Was antwortest du?", ["Nicht beim Knorpel; ich empfehle Kochsalzlösung", "Ja, Prontolind enthält kein Octenidin, also passt es", "Ja, aber nur verdünnt", "Nein, nimm stattdessen Octenisept"], "Prontolind enthält Polihexanid; die Akademie meidet es trotzdem am Knorpel.", "S. 48"]
+        ["Welches Mittel passt nicht für alle Piercings?", ["Octenisept", "Einfache Kochsalzlösung", "Prontolind", "Sterile Kochsalzlösung"], "Octenisept nie bei Knorpel.", "S. 48"],
+        ["Fall: Ein Kunde mit frischem Conch-Piercing fragt nach Prontolind. Was antwortest du?", ["Ja, Prontolind darf er auch am Knorpel nehmen", "Nein, am Knorpel nur Octenisept", "Nein, am Knorpel gar kein Pflegemittel", "Nur verdünnt mit Leitungswasser"], "Prontolind (Polihexanid) ist am Knorpel erlaubt, Octenisept nicht.", "S. 48"]
       ]
     },
     {

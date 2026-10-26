@@ -95,16 +95,16 @@ KURS.module.push({
         { typ: "text", text: "Beim Piercen und in der Nachsorge muss auf ausreichende Hygiene geachtet werden, sonst kann sich das Piercing entzünden. Der Piercingraum ist wie ein OP-Raum im Krankenhaus sauber und steril zu halten, und die Instrumente müssen steril sein." },
         { typ: "ergaenzung", text: "Genau genommen lässt sich ein Raum nicht sterilisieren. Gemeint ist: Der Raum ist hygienisch einwandfrei gereinigt und desinfiziert, und alles, was den Stichkanal berührt, ist steril." },
         { typ: "text", text: "Auf die richtige Pflege und die Abheilzeiten musst du den Kunden zwingend hinweisen. Das frische Piercing sollte etwa zwei Wochen lang zwei- bis dreimal am Tag vom Kunden selbst mit einem geeigneten Mittel gereinigt werden, zum Beispiel mit Kochsalzlösung, Prontolind oder Octenisept." },
-        { typ: "achtung", text: "Prontolind und Octenisept niemals bei Knorpelpiercings empfehlen. Octenisept enthält Octenidin, das in Laborstudien Knorpelzellen schädigt; die Akademie rät auch von Prontolind (Polihexanid) am Knorpel ab." },
+        { typ: "achtung", text: "Octenisept niemals bei Knorpelpiercings empfehlen. Es enthält Octenidin, das in Laborstudien Knorpelzellen schädigt. Prontolind (Wirkstoff Polihexanid) darfst du dagegen auch bei Knorpelpiercings empfehlen." },
         { typ: "text", text: "Der Schmuck darf bis zu mehreren Monaten nach dem Piercen nicht gewechselt werden. Ein zu früher Wechsel kann die Heilung stören und Infektionen auslösen." }
       ],
       fragen: [
         ["Womit vergleicht das Kursbuch den Piercingraum?", ["Mit einem OP-Raum im Krankenhaus", "Mit einer Zahnarztpraxis", "Mit einem Labor", "Mit einem Kosmetikstudio"], "Er ist sauber und steril zu halten.", "S. 5"],
         ["Wie lange soll ein frisches Piercing etwa gereinigt werden?", ["Etwa 2 Wochen, 2- bis 3-mal täglich", "Etwa 2 Wochen, einmal täglich", "Bis zur vollständigen Abheilung, stündlich", "3 Tage lang, 5-mal täglich"], "Vom Kunden selbst, mit einem geeigneten Mittel.", "S. 6"],
-        ["Welche Pflegemittel dürfen bei Knorpelpiercings nie empfohlen werden?", ["Prontolind und Octenisept", "Kochsalzlösung", "Sterile Kochsalzlösung aus der Sprühflasche", "Chlorhexamed"], "Regel des Kursbuchs: am Knorpel nur Kochsalzlösung.", "S. 6"],
-        ["Welches Pflegemittel ist für alle Piercings geeignet?", ["Kochsalzlösung", "Prontolind", "Octenisept", "Chlorhexamed"], "Prontolind und Octenisept nie bei Knorpel.", "S. 6"],
+        ["Welches Pflegemittel darf bei Knorpelpiercings nie empfohlen werden?", ["Octenisept", "Prontolind", "Kochsalzlösung", "Sterile Kochsalzlösung aus der Sprühflasche"], "Octenisept enthält Octenidin, das Knorpelzellen schädigt. Prontolind ist am Knorpel erlaubt.", "S. 6"],
+        ["Welches Pflegemittel ist nicht für alle Piercings geeignet?", ["Octenisept", "Kochsalzlösung", "Prontolind", "Sterile Kochsalzlösung"], "Octenisept nie bei Knorpel; Kochsalzlösung und Prontolind gehen überall.", "S. 6"],
         ["Wie lange darf der Schmuck nach dem Piercen nicht gewechselt werden?", ["Bis zu mehreren Monaten, bis zur vollständigen Abheilung", "Etwa 2 Wochen, bis die Pflege endet", "Bis die Rötung verschwunden ist", "Nur in den ersten 3 Tagen"], "Ein früher Wechsel kann Infektionen auslösen.", "S. 6"],
-        ["Fall: Eine Kundin mit frischem Helix fragt, ob sie Octenisept zur Pflege nehmen kann. Was antwortest du?", ["Nein, beim Knorpel nicht; ich empfehle Kochsalzlösung", "Ja, verdünnt ist es für Knorpel geeignet", "Nein, aber Prontolind ist für Knorpel ideal", "Ja, aber nur in der ersten Woche"], "Der Helix ist Knorpel; Octenidin ist knorpeltoxisch.", "S. 6"]
+        ["Fall: Eine Kundin mit frischem Helix fragt, ob sie Octenisept zur Pflege nehmen kann. Was antwortest du?", ["Nein, beim Knorpel nicht; ich empfehle Kochsalzlösung oder Prontolind", "Ja, verdünnt ist es für Knorpel geeignet", "Ja, wenn sie es nur abends nimmt", "Ja, aber nur in der ersten Woche"], "Der Helix ist Knorpel; Octenidin ist knorpeltoxisch. Prontolind ist erlaubt.", "S. 6"]
       ]
     },
     {

@@ -120,6 +120,7 @@ Diese beiden Module haben im Kursbuch kein eigenes Kapitel. Die folgenden Themen
 |---|---|---|
 | 44 | Bacterius stearothermophilus | Geobacillus stearothermophilus |
 | 48 | Octinesept | Octenisept |
+| 6, 48 | Prontolind und Octenisept nicht bei Knorpel | Nur Octenisept nicht bei Knorpel; Prontolind (Polihexanid) ist auch am Knorpel erlaubt (Alessandro Noto, 26.10.2026) |
 | 55 | Chirurgiestahl | Chirurgenstahl |
 | 56 | Nionium | vermutlich Niob |
 | 64 | 18G 1,2 mm / 16G 1,6 mm / 14G 2,1 mm | Kanüle 18G 1,3 mm / 16G 1,7 mm / 14G 2,2 mm (Herstellerangabe); dazu getrennt die Schmuckstärke: 18G-Kanüle für 1,2 mm, 16G-Kanüle für 1,6 mm |
@@ -148,7 +149,7 @@ Alle 103 Lektionen wurden gelesen und zweifelhafte Aussagen per Websuche geprüf
 
 | Stelle | Vorher | Jetzt | Quelle |
 |---|---|---|---|
-| Modul 1, 3, 10, Glossar | „Octenidin in Prontolind und Octenisept“ | Octenisept enthält Octenidin, Prontolind einen Polihexanid-Betain-Komplex. Die Akademie-Regel (beide nicht am Knorpel) bleibt. Octenidin schädigt Knorpelzellen in Laborstudien. | DocMorris-Produktseite Prontolind Piercing Spray; Clin Oral Investig 2023, doi:10.1007/s00784-023-05118-8 |
+| Modul 1, 3, 10, Glossar | „Octenidin in Prontolind und Octenisept“ | Octenisept enthält Octenidin, Prontolind einen Polihexanid-Betain-Komplex. Am 26.10.2026 von Alessandro korrigiert: Nur Octenisept nicht am Knorpel, Prontolind ist am Knorpel erlaubt. Octenidin schädigt Knorpelzellen in Laborstudien. | DocMorris-Produktseite Prontolind Piercing Spray; Clin Oral Investig 2023, doi:10.1007/s00784-023-05118-8 |
 | Modul 2 | Körperverletzung in §§ 223–233 StGB | 17. Abschnitt, §§ 223–231 StGB | dejure.org; Uni Potsdam, Rechtskunde online |
 | Modul 1 | 24 h ohne ASS | Ergänzung: Die ASS-Wirkung auf Blutplättchen hält 7–10 Tage an. | medikamio.com, rd-factsheets.de, AMBOSS |
 | Modul 5 | Prionen werden bei 134 °C/18 min zerstört | Empfohlen ist eine alkalische Reinigung und Dampfsterilisation bei 134 °C, ohne alkalische Reinigung 18 Minuten; eine sichere Inaktivierung ist auch dann nicht garantiert. | AWMF-S1-Leitlinie 029-025 (2012); Bundesgesundheitsblatt 2004; RKI |

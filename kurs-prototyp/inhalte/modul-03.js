@@ -45,7 +45,7 @@ KURS.module.push({
         ] },
         { typ: "grafik", id: "ohr" },
         { typ: "ergaenzung", text: "Knorpel hat keine eigenen Blutgefäße und wird nur über die umgebende Knorpelhaut versorgt. Deshalb heilt er langsam und reagiert empfindlich auf Reizung." },
-        { typ: "achtung", text: "Octenidin, der Wirkstoff von Octenisept, schädigt in Laborstudien Knorpelzellen. Octenisept und Prontolind (Wirkstoff Polihexanid) empfiehlst du deshalb nie bei Knorpelpiercings." }
+        { typ: "achtung", text: "Octenidin, der Wirkstoff von Octenisept, schädigt in Laborstudien Knorpelzellen. Octenisept empfiehlst du deshalb nie bei Knorpelpiercings. Prontolind (Wirkstoff Polihexanid) ist am Knorpel erlaubt." }
       ],
       fragen: [
         ["Warum heilen Knorpelpiercings langsamer als ein Lobe?", ["Knorpel hat keine eigenen Blutgefäße", "Knorpel hat besonders viele Nerven", "Knorpel ist dünner als das Ohrläppchen", "Knorpel bildet kein Granulationsgewebe"], "Er wird über die Knorpelhaut versorgt.", "Entwurf"],
