@@ -1,6 +1,6 @@
 /* KI-generierte Titelbilder der Module (Symbolbilder, keine Fachabbildungen), erzeugt mit FLUX.1 [schnell] und FLUX.2 [klein] 4B (Apache-2.0).
    Jedes Bild wurde vor dem Einbau auf KI-Fehler geprüft. Bildbeschreibungen und verworfene Versuche: KURS-RECHERCHE.md, Abschnitt 12.
-   kurs.js zeigt die Bilder auf den Modulkarten und im Modulkopf, jeweils mit dem Hinweis „KI-generiert“. */
+   kurs.js zeigt die Bilder auf den Modulkarten und im Modulkopf, ohne sichtbaren KI-Hinweis (Entscheidung der Akademie, 26.10.2026). */
 window.KURS = window.KURS || { module: [] };
 KURS.titelbilder = {
 "1": {
