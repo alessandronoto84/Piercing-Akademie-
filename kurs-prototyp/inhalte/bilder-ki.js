@@ -7,7 +7,7 @@ KURS.titelbilder = {
 "src": "inhalte/bilder/1.webp",
 "w": 960,
 "h": 540,
-"alt": "Antike goldene Creolen und ein Ohrpflock aus Knochen auf Leinen",
+"alt": "Piercingschmuck auf Schiefer: Titanringe, Stäbe, Labrets, sechs Tunnel aus Horn und eine Kanüle in steriler Verpackung",
 "ki": "FLUX.2 [klein] 4B über Cloudflare Workers AI"
 },
 "2": {
