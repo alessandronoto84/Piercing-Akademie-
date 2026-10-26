@@ -258,3 +258,9 @@ Alle 11 Module, das Glossar und die Checklisten wurden noch einmal Satz für Sat
 | Checkliste | Ultraschallbad 80 °C | Herstellerangabe, nicht über etwa 45 °C | KRINKO/BfArM 2012 |
 
 Bestätigt und unverändert: Nickelgrenzwert 0,2 µg/cm²/Woche (REACH Anhang XVII Nr. 27), 316L mit 10–14 % Nickel, Octenidin schädigt Knorpelzellen in Laborstudien, Pseudomonas als häufigster Erreger der Perichondritis, Abheilzeiten als Kursbuch-Richtwerte mit Ergänzung.
+
+## 14. Grafik „Pistole oder Kanüle“ (Modul 1, 26.10.2026)
+
+Eigene schematische Zeichnung (`G.pistole` in `inhalte/grafiken.js`), weil Videos und Grafiken aus Instagram-Reels nicht lizenzfrei sind. Inhalt: Kursbuch S. 6 (Gewebe reißt ein, Knorpel kann splittern, Pistole nicht vollständig sterilisierbar, ungeeignete Ersteinsätze), ergänzt um die Position der Association of Professional Piercers (APP): federgetriebener Mechanismus, oft stumpfe Steckerspitzen, Gewebeschäden, ungeeignetes Schmuckdesign (kurzer Stecker, eng sitzender Verschluss), wiederverwendbare Pistolen nicht autoklavierbar.
+
+Quellen: [NEHA Annex to the Body Art Model Code, 3rd Edition (zitiert die APP-Position)](https://pubs.neha.org/annex-bamc-3rd-ed/55/), [Association of Professional Piercers (Wikipedia)](https://en.wikipedia.org/wiki/Association_of_Professional_Piercers), [The Point, Ausgabe 65](https://thepointjournal.org/2014/01/02/point-65-from-the-editor/).

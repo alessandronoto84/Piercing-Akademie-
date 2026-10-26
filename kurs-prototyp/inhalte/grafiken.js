@@ -331,6 +331,46 @@ window.KURS = window.KURS || { module: [] };
       t(532, 210, "abgeheilt", "tb", "middle"), t(532, 224, "kürzerer Zweiteinsatz", "tm", "middle")
     ].join("") };
 
+  // ---------- Modul 1: Ohrlochpistole und Kanüle im Gewebe ----------
+  // Ohrläppchen im Querschnitt: Haut auf beiden Seiten, dazwischen Binde- und Fettgewebe (schematisch)
+  function laeppchen(cx) {
+    var x = cx - 100, w = 200;
+    return r(x, 100, w, 100, "f-sub") + r(x, 106, w, 24, "f-derm") + r(x, 170, w, 24, "f-derm") +
+      r(x, 100, w, 6, "f-epi") + r(x, 194, w, 6, "f-epi") + r(x, 100, w, 100, "sl", 0);
+  }
+  G.pistole = { w: 690, h: 300,
+    alt: "Vergleich im Querschnitt durch das Ohrläppchen. Links die Ohrlochpistole: Ein stumpfer Stecker wird mit Federkraft durchgeschossen, das Gewebe rund um den Kanal wird gequetscht und reißt ein, der Verschluss sitzt eng an. Rechts die Kanüle: Die scharfe, angeschliffene Spitze schneidet einen glatten, schmalen Kanal, der Kunststoffüberzug bleibt im Kanal.",
+    text: "Was im Gewebe passiert (schematisch). Die Pistole schießt einen stumpfen Stecker durch: Das Gewebe wird verdrängt, gequetscht und kann einreißen, Knorpel sogar splittern. Der kurze Stecker mit eng sitzendem Verschluss lässt der Schwellung keinen Platz. Die Kanüle schneidet mit ihrem scharfen Schliff einen glatten Kanal; steril, einmal verwendet und mit einem Ersteinsatz mit Überlänge.",
+    svg: [
+      // Pistole: stumpfer Stecker, Quetschzone, Risse, enger Verschluss
+      '<g transform="translate(-20 0)">', laeppchen(130),
+      e(130, 150, 30, 62, "f-risk"),
+      '<polygon points="123,100 120,112 124,124 119,138 125,152 120,166 124,180 120,192 123,200 137,200 140,190 136,178 141,164 135,150 140,136 136,122 140,110 137,100" class="fkanal s1"/>',
+      p("M120 116 L106 110 M119 142 L100 146 M121 172 L107 180 M140 124 L156 116 M141 158 L160 162 M139 186 L152 194", "err"),
+      r(126, 28, 8, 196, "fmet s1", 2), p("M126 222 Q130 232 134 222", "fmet s1"),
+      kugel(130, 28, 11),
+      r(110, 200, 40, 7, "fmet s1", 2), p("M110 207 C102 216 110 226 120 216 M150 207 C158 216 150 226 140 216", "s b15"),
+      pfeil(84, 22, 84, 66, "s b2"), t(78, 34, "Federkraft", "tm", "end"),
+      hin(141, 28, 250, 32, "stumpfer Stecker", "start", "tb"),
+      hin(156, 116, 250, 112, "Gewebe reißt ein", "start", "terr"),
+      hin(160, 152, 250, 156, "Quetschzone", "start", "terr"),
+      hin(152, 210, 250, 212, "Verschluss drückt:", "start", "tm"), t(250, 226, "kein Platz für Schwellung", "tm"),
+      t(130, 270, "Ohrlochpistole", "tb", "middle"), t(130, 286, "stumpf, nicht sterilisierbar", "terr", "middle"), "</g>",
+      // Kanüle: scharfer Schliff, glatter Kanal, Kunststoffüberzug
+      '<g transform="translate(-60 0)">', laeppchen(500),
+      r(488, 100, 24, 100, "f-ok"),
+      r(493, 100, 14, 100, "fkanal"),
+      r(493, 22, 14, 186, "fplast s1", 3),
+      r(497, 10, 6, 196, "fmet s1", 1),
+      '<polygon points="497,206 503,206 503,212 497,230" class="fmet s1"/>',
+      r(487, 12, 26, 12, "fok s1", 3),
+      hin(513, 18, 620, 22, "Kanüle mit Griff", "start", "tb"),
+      hin(507, 70, 620, 74, "Kunststoffüberzug,", "start", "tm"), t(620, 88, "bleibt im Kanal", "tm"),
+      hin(512, 150, 620, 154, "glatter Kanal", "start", "tok"),
+      hin(503, 222, 620, 226, "scharfer Schliff", "start", "tb"), t(620, 240, "schneidet sauber", "tm"),
+      t(500, 270, "Kanüle", "tb", "middle"), t(500, 286, "steril, Einmalgebrauch, sauberer Schnitt", "tok", "middle"), "</g>"
+    ].join("") };
+
   // ---------- Modul 6: Gewinde ----------
   G.gewinde = { w: 620, h: 200,
     alt: "Vergleich: Beim Außengewinde sitzt das Gewinde am Stab und reibt beim Einsetzen durch den Stichkanal; beim Innengewinde ist der Stab glatt und das Gewinde sitzt am Stift der Kugel.",

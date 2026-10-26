@@ -119,6 +119,8 @@ KURS.module.push({
           "Beim Schießen fliegen Keime durch den Raum.",
           "Die verwendeten Ersteinsätze sind je nach Material ungeeignet bis gefährlich für den Kunden."
         ] },
+        { typ: "grafik", id: "pistole", titel: "Pistole oder Kanüle: was im Gewebe passiert" },
+        { typ: "ergaenzung", text: "Ergänzung der Akademie: Der Stecker der Pistole ist stumpf und wird mit Federkraft durch das Gewebe gedrückt. Das Gewebe wird dabei nicht geschnitten, sondern verdrängt und gequetscht; das bedeutet mehr Schwellung und eine langsamere Heilung. Dazu ist der Stecker kurz, und der Verschluss sitzt eng an, sodass für die Schwellung kein Platz bleibt. Die Kanüle schneidet mit ihrem scharfen Schliff einen glatten Kanal, ist steril verpackt und wird nur einmal verwendet." },
         { typ: "praxis", text: "Kommt ein Kunde mit einem geschossenen Ohrloch, das nicht heilt, erklärst du ihm sachlich, warum die Methode ungeeignet ist, und berätst ihn zur Pflege. Schlechtreden von Kollegen ist dabei nicht nötig, die Fakten reichen." }
       ],
       fragen: [
