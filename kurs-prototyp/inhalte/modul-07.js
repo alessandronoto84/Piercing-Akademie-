@@ -84,6 +84,7 @@ KURS.module.push({
       titel: "Zangen, Klemmen und Nadelauffangrohr",
       seite: "S. 65, 68",
       inhalt: [
+        { typ: "video", id: "instrumente", text: "Piercingzange, Braunüle, Nadelauffangrohr und Kugelgreifer auf steriler Abdeckung.", schleife: true },
         { typ: "text", text: "Piercing-Zangen bzw. Klemmen halten die zu piercende Stelle, damit die Haut beim Stechen in Position bleibt. Für verschiedene Piercings gibt es verschiedene Zangen, zum Beispiel Snaptile, Gazeklemme, Septum-Zange, Traguszange oder Zungenklemme. Welche passt, steht im jeweiligen Datenblatt (Modul 8)." },
         { typ: "text", text: "Einige Piercings lassen sich nicht mit einer Zange stechen. Bei Piercings im Innenohr, zum Beispiel Rook und Daith, nutzt man das Nadelauffangrohr (Receiving Tube). Es verhindert, dass die Kanüle das umliegende Gewebe verletzt." },
         { typ: "galerie", titel: "Aus dem Kursbuch", bilder: [["piercingzange", "Piercing-Zangen und Klemmen"], ["nadelauffangrohr", "Nadelauffangrohr"]], text: "Kursbuch S. 65 und 68." },

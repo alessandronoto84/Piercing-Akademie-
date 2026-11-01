@@ -13,6 +13,7 @@ KURS.module.push({
       seite: "Entwurf",
       entwurf: true,
       inhalt: [
+        { typ: "video", id: "anatomie-modelle", text: "Ohrmodell und Modell der Hautschichten: Oberhaut, Lederhaut und Unterhaut mit Fettgewebe.", schleife: true },
         { typ: "text", text: "Die Haut ist das größte Organ des Menschen. Sie besteht aus drei Schichten, und ein Stichkanal führt durch alle drei." },
         { typ: "tabelle", kopf: ["Schicht", "Aufbau", "Bedeutung beim Piercen"], zeilen: [
           ["Oberhaut (Epidermis)", "Äußerste, verhornte Schicht ohne eigene Blutgefäße", "Schutzbarriere gegen Keime. Sie wird vor dem Stich desinfiziert und wächst bei der Heilung vom Wundrand her nach."],

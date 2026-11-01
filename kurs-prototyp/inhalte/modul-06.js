@@ -153,6 +153,7 @@ KURS.module.push({
       titel: "Schmuckformen: Stäbe und Stecker",
       seite: "S. 61–62",
       inhalt: [
+        { typ: "video", id: "schmuck-titan", text: "Ersteinsätze aus Titan: gerader Barbell, Curved Barbell, Labret und Ball Closure Ring.", schleife: true },
         { typ: "text", text: "Für verschiedene Bereiche des Körpers werden verschiedene Schmuckarten verwendet, beim Ersteinsatz wie beim Zweiteinsatz." },
         { typ: "tabelle", kopf: ["Schmuck", "Beschreibung", "Typischer Einsatz"], zeilen: [
           ["Curved Barbell (Banane)", "Leicht gebogener Stab mit Kugeln", "Bauchnabel, Augenbraue, Rook"],

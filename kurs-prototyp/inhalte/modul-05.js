@@ -342,6 +342,7 @@ KURS.module.push({
       titel: "Der Autoklav",
       seite: "S. 40–41",
       inhalt: [
+        { typ: "video", id: "autoklav", text: "Tischautoklav im Studio, daneben verpacktes Sterilgut mit Indikatorstreifen.", schleife: true },
         { typ: "text", text: "Ein Autoklav (griechisch/lateinisch „selbstverschließend“) ist ein gas- und luftdicht verschließbarer Druckbehälter. In der Medizin ist es ein Gerät, in dem mittels Wasserdampf und Überdruck Instrumente und Schmuck sterilisiert werden. Das Grundprinzip ähnelt einem Dampfkochtopf." },
         { typ: "foto", id: "autoklav", text: "Autoklav im Studio. Kursbuch S. 40." },
         { typ: "text", text: "Dampfautoklaven gibt es in Größen von einigen bis einigen hundert Litern. Sie haben eine Tür oder Klappe mit Schraub- oder Bajonettverschluss und mindestens ein Thermometer und ein Manometer (Druckmessgerät); moderne Geräte zeigen digital an." },

@@ -30,6 +30,7 @@ KURS.module.push({
       titel: "Räume planen",
       seite: "S. 25–26, 38",
       inhalt: [
+        { typ: "video", id: "studio-raum", text: "Behandlungsraum mit abwaschbarer Liege, Handwaschbecken und Autoklav.", schleife: true },
         { typ: "liste", punkte: [
           "Arbeitsplatz baulich oder mindestens durch eine Trennwand vom Wartebereich getrennt, am besten ein eigener Raum.",
           "Handwaschbecken mit fließendem Wasser, Spendern für Desinfektion, Waschlotion und Einmalhandtücher, ohne Handkontakt bedienbar und ohne Spritzer am Arbeitsplatz.",
