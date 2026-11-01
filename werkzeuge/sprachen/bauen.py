@@ -67,7 +67,7 @@ def hreflang(seite):
 
 def mehrsprachig(s, sprache, seite):
     """Sprachauswahl in die Navigation und hreflang in den Kopf (ersetzt vorhandene)."""
-    s = re.sub(r'<span class="sprachwahl"[^>]*>.*?</span>(</span>)?', "", s, flags=re.S)
+    s = re.sub(r'<span class="sprachwahl"[^>]*>.*?</span>\n[ \t]*', "", s, flags=re.S)
     s = re.sub(r'<link rel="alternate" hreflang="[^"]+" href="[^"]+">\n', "", s)
     s = s.replace('<a class="btn small" href=', sprachwahl(sprache, seite) + '\n      <a class="btn small" href=', 1)
     assert 'class="sprachwahl"' in s, (sprache, seite, "Navigation ohne Anmeldeknopf")
@@ -98,7 +98,7 @@ def artikel(s, sprache, seite):
 
 
 VERDAECHTIG = re.compile(r"[äöüÄÖÜß]|\b(und|der|die|das|mit|für|nicht|ist|Kurs|Seite|Bitte|oder)\b")
-ERLAUBT = ["Burgstraße", "Die Piercing Akademie – Dein Weg zum Bodypiercer", "Landesbeauftragte für den Datenschutz Niedersachsen", "Prinzenstraße"]
+ERLAUBT = ["Burgstraße", "Antigüedad", "Die Piercing Akademie – Dein Weg zum Bodypiercer", "Landesbeauftragte für den Datenschutz Niedersachsen", "Prinzenstraße"]
 
 
 def pruefen(s, sprache, seite):

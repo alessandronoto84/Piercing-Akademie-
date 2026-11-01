@@ -42,16 +42,56 @@
   ];
 
   // ---------- Fortschritt ----------
+  // Auf dem Server (Cloudflare) setzt /kurs/konto.js window.PA_KONTO: Fortschritt kommt dann vom Server und wird dorthin gespeichert.
+  // Ohne Server (Prototyp, Ansichtsversion) bleibt alles im Browser.
+  var KONTO = window.PA_KONTO || null;
   function leer() { return { erledigt: {}, bestanden: {}, fehler: {}, uebung: {}, check: {}, simulation: null, vorschau: false }; }
   var stand = laden();
   function laden() {
+    if (KONTO) { var k = Object.assign(leer(), KONTO.fortschritt || {}); k.vorschau = !!KONTO.admin; return k; }
     try {
       var roh = window.localStorage.getItem(SPEICHER);
       if (roh) return Object.assign(leer(), JSON.parse(roh));
     } catch (e) { /* Speicher nicht verfügbar: Fortschritt gilt nur bis zum Neuladen */ }
     return leer();
   }
-  function speichern() { try { window.localStorage.setItem(SPEICHER, JSON.stringify(stand)); } catch (e) { /* siehe laden() */ } }
+  var serverTimer = null;
+  function serverSpeichern(sofort) {
+    clearTimeout(serverTimer);
+    var senden = function () {
+      if (KONTO.abgemeldet) return;
+      fetch("/api/fortschritt", { method: "PUT", headers: { "Content-Type": "application/json" }, body: JSON.stringify(stand), keepalive: true, credentials: "same-origin" })
+        .then(function (r) { if (r.status === 401) window.location.href = "/login.html?weiter=" + encodeURIComponent(location.pathname + location.hash); })
+        .catch(function () { /* offline: beim nächsten Speichern erneut */ });
+    };
+    if (sofort) senden(); else serverTimer = setTimeout(senden, 1500);
+  }
+  function speichern() {
+    if (KONTO) { serverSpeichern(false); return; }
+    try { window.localStorage.setItem(SPEICHER, JSON.stringify(stand)); } catch (e) { /* siehe laden() */ }
+  }
+  if (KONTO) {
+    document.addEventListener("visibilitychange", function () { if (document.visibilityState === "hidden" && serverTimer) serverSpeichern(true); });
+    // Wasserzeichen: Der Zugang ist persönlich, jede Seite trägt die E-Mail-Adresse der Käuferin bzw. des Käufers
+    var wz = document.createElement("div");
+    wz.className = "k-wasserzeichen"; wz.setAttribute("aria-hidden", "true");
+    wz.textContent = (KONTO.email + "   ").repeat(60);
+    document.body.appendChild(wz);
+    var kopf = document.querySelector(".wrap > header");
+    if (kopf) {
+      var ab = document.createElement("a");
+      ab.href = "#"; ab.textContent = "Abmelden"; ab.className = "btn ghost small k-abmelden";
+      ab.addEventListener("click", function (e) {
+        e.preventDefault();
+        if (serverTimer) serverSpeichern(true);
+        KONTO.abgemeldet = true;
+        fetch("/api/abmelden", { method: "POST", credentials: "same-origin" }).then(function () { window.location.href = "/"; });
+      });
+      kopf.appendChild(ab);
+    }
+    var banner = document.querySelector(".k-banner");
+    if (banner) banner.textContent = "Angemeldet als " + KONTO.email + ". Dein Zugang ist persönlich und gilt bis " + new Date(KONTO.gueltigBis || Date.now()).toLocaleDateString("de-DE") + ".";
+  }
 
   function modul(nr) { return MODULE.filter(function (m) { return m.nr === nr; })[0]; }
   function modulOffen(m) { return stand.vorschau || m.nr === MODULE[0].nr || !!stand.bestanden[m.nr - 1]; }
@@ -481,9 +521,12 @@
       return;
     }
     var datum = sim.datum || new Date().toISOString().slice(0, 10);
-    var name = stand.name || "";
+    var ausgestellt = KONTO && KONTO.bescheinigung;
+    var name = (ausgestellt && ausgestellt.name) || stand.name || (KONTO && KONTO.name) || "";
+    if (ausgestellt) datum = ausgestellt.datum;
     app.innerHTML = '<section class="k-kopf k-nicht-drucken"><p class="label">Abschluss</p><h1>Bescheinigung über den Online-Teil</h1><p class="lead">Trag deinen Namen so ein, wie er auf der Bescheinigung stehen soll. Über „Drucken“ kannst du sie ausdrucken oder als PDF speichern.</p>' +
-      '<div class="field k-suche"><label for="b-name">Vor- und Nachname</label><input id="b-name" type="text" autocomplete="name" maxlength="60" value="' + esc(name) + '"></div>' +
+      '<div class="field k-suche"><label for="b-name">Vor- und Nachname</label><input id="b-name" type="text" autocomplete="name" maxlength="60" value="' + esc(name) + '"' + (ausgestellt ? " readonly" : "") + "></div>" +
+      (KONTO && !ausgestellt ? '<p class="fine">Beim ersten Drucken wird die Bescheinigung mit diesem Namen ausgestellt und eine prüfbare Nummer vergeben. Danach lässt sich der Name nicht mehr ändern.</p>' : "") +
       '<p><button type="button" class="btn" id="b-drucken">Drucken oder als PDF speichern</button></p></section>' +
       '<article class="k-urkunde" aria-label="Bescheinigung">' +
         '<div class="k-urkunde-kopf"><img src="' + (document.querySelector(".brand img") || {}).src + '" alt="" width="44" height="44"><span>Piercing Akademie</span></div>' +
@@ -491,18 +534,31 @@
         '<p class="k-urkunde-name" id="b-ausgabe">' + (esc(name) || "Dein Name") + "</p>" +
         "<p>hat alle " + MODULE.length + " Module des Online-Kurses der Piercing Akademie bearbeitet, jede Modulprüfung bestanden und die Prüfungssimulation mit <strong>" + sim.richtig + " von " + sim.gesamt + "</strong> richtigen Antworten abgeschlossen.</p>" +
         '<ul class="k-urkunde-module">' + MODULE.map(function (m) { return "<li>" + zwei(m.nr) + " " + esc(m.titel) + "</li>"; }).join("") + "</ul>" +
-        '<div class="k-urkunde-fuss"><div><span>' + new Date(datum + "T12:00:00").toLocaleDateString("de-DE", { day: "numeric", month: "long", year: "numeric" }) + '</span>Datum</div><div><span id="b-nr">' + pruefnummer(name, datum, sim.richtig) + "</span>Nummer</div><div><span>Alessandro Noto</span>Piercing Akademie, Lingen (Ems)</div></div>" +
+        '<div class="k-urkunde-fuss"><div><span>' + new Date(datum + "T12:00:00").toLocaleDateString("de-DE", { day: "numeric", month: "long", year: "numeric" }) + '</span>Datum</div><div><span id="b-nr">' + (ausgestellt ? esc(ausgestellt.nr) : KONTO ? "wird vergeben" : pruefnummer(name, datum, sim.richtig)) + "</span>Nummer</div><div><span>Alessandro Noto</span>Piercing Akademie, Lingen (Ems)</div></div>" +
+        (KONTO ? '<p class="fine" id="b-pruefen">' + (ausgestellt ? "Prüfbar unter piercingakademie.de/pruefen?nr=" + esc(ausgestellt.nr) : "") + "</p>" : "") +
         '<p class="fine">Die Bescheinigung bestätigt den theoretischen Online-Teil. Sie ist kein staatlich anerkannter Abschluss und keine behördliche Erlaubnis. Das Zertifikat der Piercing Akademie erhältst du nach den Praxistagen im Studio.</p>' +
       "</article>";
     var feld = document.getElementById("b-name");
     feld.addEventListener("input", function () {
+      if (ausgestellt) return;
       stand.name = feld.value.trim(); speichern();
       document.getElementById("b-ausgabe").textContent = stand.name || "Dein Name";
-      document.getElementById("b-nr").textContent = pruefnummer(stand.name, datum, sim.richtig);
+      if (!KONTO) document.getElementById("b-nr").textContent = pruefnummer(stand.name, datum, sim.richtig);
     });
     document.getElementById("b-drucken").addEventListener("click", function () {
       if (!feld.value.trim()) { feld.focus(); feld.setAttribute("aria-invalid", "true"); return; }
-      feld.removeAttribute("aria-invalid"); window.print();
+      feld.removeAttribute("aria-invalid");
+      if (!KONTO || ausgestellt) { window.print(); return; }
+      // Auf dem Server: Bescheinigung einmalig ausstellen lassen (Nummer ist dann unter /pruefen nachprüfbar)
+      serverSpeichern(true);
+      setTimeout(function () {
+        fetch("/api/bescheinigung", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ name: feld.value.trim() }), credentials: "same-origin" })
+          .then(function (r) { return r.json(); })
+          .then(function (b) {
+            if (!b.nr) { alert("Die Bescheinigung konnte nicht ausgestellt werden. Bitte versuche es später noch einmal."); return; }
+            KONTO.bescheinigung = b; bescheinigungSeite(); window.print();
+          });
+      }, 600);
     });
   }
 
@@ -536,7 +592,7 @@
   // ---------- Router ----------
   function zeige() {
     var h = (window.location.hash || "#uebersicht").slice(1);
-    if (h === "alles") { stand.vorschau = true; speichern(); h = "uebersicht"; } // Direktlink für den Prüfmodus
+    if (h === "alles" && (!KONTO || KONTO.admin)) { stand.vorschau = true; speichern(); h = "uebersicht"; } // Prüfmodus: im Prototyp für alle, auf dem Server nur für die Akademie
     var t;
     if ((t = /^lektion-(\d+)-(\d+)$/.exec(h)) && modul(+t[1]) && modul(+t[1]).lektionen[+t[2]]) { zeichneNav(+t[1]); lektionSeite(modul(+t[1]), +t[2]); }
     else if ((t = /^modul-(\d+)$/.exec(h)) && modul(+t[1])) { zeichneNav(+t[1]); modulSeite(modul(+t[1])); }

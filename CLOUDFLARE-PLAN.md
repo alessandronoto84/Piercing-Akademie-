@@ -41,9 +41,24 @@ Außerdem:
 2. Unter **Network access → Allowed domains** ergänzen: `api.stripe.com`, `api.resend.com` (dazu bleiben `api.cloudflare.com` und die Paketmanager).
 3. Neuen Chat starten, damit die Einstellungen greifen.
 
+## Stand (01.11.2026)
+Gebaut und lokal getestet (Ordner `server/`, 8 automatische Tests plus Browsertest):
+- Website, Login-Seite (`/login.html`, Deutsch/Englisch/Spanisch) und Fahrschule unter `/kurs/` hinter der Bezahlschranke: ohne Anmeldung kein Zugriff auf Seiten, Texte, Bilder, Clips oder Vorlagen.
+- Login per 6-stelligem Code (10 Minuten gültig, höchstens 5 Versuche, höchstens 5 Codes pro Stunde, nur einmal verwendbar), Sitzungs-Cookie HttpOnly.
+- Höchstens 2 Geräte gleichzeitig; eine dritte Anmeldung beendet die älteste. Anmeldeprotokoll (Zeit, Gerätetyp, Land); bei 6 verschiedenen Geräten bzw. Ländern in 30 Tagen bekommst du eine Hinweis-E-Mail.
+- Wasserzeichen mit der E-Mail-Adresse auf jeder Kursseite und im Ausdruck.
+- Stripe-Webhook mit Signaturprüfung: legt den Zugang an (Paket aus den Link-Metadaten, Sprache aus der Website), keine Doppelanlage, SEPA erst nach Zahlungseingang; schickt Zugang und Vertragsbestätigung mit Zustimmungstext (§ 312f BGB) in der Sprache des Käufers.
+- Widerrufsrecht für den Online-Kurs erlischt mit der ersten Anmeldung (Zeitpunkt wird gespeichert).
+- Fortschritt auf dem Server; Bescheinigung wird einmalig ausgestellt, Name danach fest, Nummer unter `/pruefen?nr=…` prüfbar.
+- Prüfmodus mit Lösungen nur für Admin-Adressen (`ADMIN_EMAILS`).
+- Nächtliche Löschung nach den Fristen der Datenschutzerklärung.
+- Grenzen: Bildschirmfotos und Abfilmen lassen sich technisch nie ganz verhindern; das Wasserzeichen macht solche Kopien aber zurückverfolgbar.
+
+Lokal starten: `cd server && npm install && npm run db:lokal && npm run dev` (mit `.dev.vars`: `DEV=1`, `CODE_PFEFFER=…`, `STRIPE_WEBHOOK_SECRET=whsec_…`; im DEV-Modus steht der Code in der Antwort statt in einer E-Mail). Tests: `BASIS=http://127.0.0.1:8787 node --test test/server.test.mjs`.
+
 ## Reihenfolge
-1. Fahrschule auf Englisch und Spanisch übersetzen (läuft).
-2. Login, Datenbank und Webhook bauen und lokal testen (geht ohne deine Schlüssel).
+1. Fahrschule auf Englisch und Spanisch übersetzen.
+2. ~~Login, Datenbank und Webhook bauen und lokal testen~~ (erledigt).
 3. Mit Test-Schlüsseln auf Cloudflare veröffentlichen, Testkauf mit Testkarte.
-4. Datenschutzerklärung um Cloudflare und Resend ergänzen.
+4. ~~Datenschutzerklärung um Cloudflare und Resend ergänzen~~ (erledigt; Auftragsverarbeitungsverträge bei der Einrichtung abschließen).
 5. Umschalten auf Live.

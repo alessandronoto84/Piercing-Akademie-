@@ -1,0 +1,14 @@
+{
+  "name": "piercing-akademie-server",
+  "private": true,
+  "description": "Website, Login und Bezahlschranke der Piercing Akademie auf Cloudflare Workers",
+  "scripts": {
+    "oeffentlich": "node werkzeuge/oeffentlich.mjs",
+    "dev": "node werkzeuge/oeffentlich.mjs && wrangler dev --local",
+    "db:lokal": "wrangler d1 execute piercing-akademie --local --file=schema.sql",
+    "test": "node werkzeuge/oeffentlich.mjs && node --test test/"
+  },
+  "devDependencies": {
+    "wrangler": "4.156.0"
+  }
+}

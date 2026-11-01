@@ -26,7 +26,7 @@
     anfrage.setAttribute("data-paket", paket);
     anfrage.textContent = T[1];
     knopf.parentNode.insertBefore(anfrage, knopf.nextSibling);
-    knopf.href = url;
+    knopf.href = url + (url.indexOf("?") < 0 ? "?" : "&") + "client_reference_id=" + SPRACHE; // Sprache für die Bestätigungs-E-Mail
     knopf.removeAttribute("data-paket");
     knopf.textContent = T[0];
   });

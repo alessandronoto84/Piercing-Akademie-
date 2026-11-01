@@ -352,3 +352,7 @@
 .k-clip-hoch{max-width:20rem}
 .k-clip figcaption{margin-top:.6rem;font-size:.9rem;color:var(--muted)}
 .k-clip-dauer{font-family:var(--f-mono);font-size:.78rem;margin-left:.4em}
+
+/* Wasserzeichen auf dem Server: persönliche Kennzeichnung jeder Seite (nur sichtbar, nicht klickbar) */
+.k-wasserzeichen{position:fixed;inset:-50%;z-index:50;pointer-events:none;user-select:none;transform:rotate(-24deg);font:500 13px/42px var(--f-mono);letter-spacing:.08em;color:var(--ink);opacity:.045;overflow:hidden;word-spacing:30px;white-space:normal}
+@media print{.k-wasserzeichen{opacity:.06;-webkit-print-color-adjust:exact;print-color-adjust:exact}}

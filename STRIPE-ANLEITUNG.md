@@ -52,7 +52,8 @@ Dann beim Produkt **„Zahlungslink erstellen“** und dort einstellen:
 7. **Bezahlknopf:** Text „Bezahlen“ (macht die Zahlungspflicht klar).
 8. **Nach der Zahlung:** „Bestätigungsseite nicht anzeigen“ → weiterleiten an `https://piercingakademie.de/danke.html`
 9. **Rechnung:** „Rechnungs-PDF nach der Zahlung erstellen“ einschalten (Stripe berechnet dafür eine kleine Gebühr; alternativ Rechnungen selbst schreiben).
-10. Nur bei **Komplett:** „Anzahl der Zahlungen begrenzen“ auf **10** (die Website verspricht 10 Plätze).
+10. **Metadaten** (unter „Erweiterte Optionen“): Schlüssel `paket`, Wert `basis`, `praxis` bzw. `komplett`. Daran erkennt der Server, welches Paket gekauft wurde.
+11. Nur bei **Komplett:** „Anzahl der Zahlungen begrenzen“ auf **10** (die Website verspricht 10 Plätze).
 
 ## 4. Links eintragen
 
