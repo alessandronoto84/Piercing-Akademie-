@@ -205,10 +205,19 @@ test("Einzelprodukte: Praxiskit (Versand, Rabatt nach Kursabschluss) und Kursbuc
   assert.equal((await (await webhook(ev)).json()).doppelt, true);
   assert.equal((await (await post("/api/code", { email: kaeufer })).json()).dev_code, undefined);
 
-  // Buch: Kauf erzeugt Download, ungültige Links werden abgewiesen, Kursbuch nur mit Anmeldung
-  assert.equal((await webhook(kauf("buch-" + Date.now() + "@example.com", "cs_test_buch_" + Date.now(), { amount_total: 1990, metadata: { paket: "buch", sprache: "de", art: "digital" }, custom_fields: [] }))).status, 200);
-  assert.equal((await get("/download/abc")).status, 404);
-  assert.equal((await get("/download/" + "0".repeat(48))).status, 410);
-  assert.equal((await get("/kurs/kursbuch.pdf")).status, 302);
-  assert.ok([200, 503].includes((await get("/kurs/kursbuch.pdf", cookie)).status));
+  // Buch digital: Kauf legt einen reinen Lesezugang an (kein Kurs, keine Bescheinigung), Seiten und Suche nur angemeldet
+  const leser = "buch-" + Date.now() + "@example.com";
+  assert.equal((await webhook(kauf(leser, "cs_test_buch_" + Date.now(), { amount_total: 1990, metadata: { paket: "buch", sprache: "de", art: "digital" }, custom_fields: [] }))).status, 200);
+  const l = await anmelden(leser);
+  assert.equal((await get("/kurs/buch/seite-074.webp")).status, 302);
+  const bild = await get("/kurs/buch/seite-074.webp", l.cookie);
+  assert.equal(bild.status, 200);
+  assert.equal(bild.headers.get("content-type"), "image/webp");
+  assert.match(bild.headers.get("cache-control"), /no-store/);
+  assert.equal((await get("/kurs/buch/seite-999.webp", l.cookie)).status, 404);
+  const suche = await (await get("/api/buch/suche?q=Septum", l.cookie)).json();
+  assert.ok(suche.treffer.some((t) => t.seite === 88), "Septum steht auf S. 88");
+  assert.equal((await get("/api/buch/suche?q=Septum")).status, 401);
+  assert.equal((await post("/api/bescheinigung", { name: "Leser" }, l.cookie)).status, 400);
+  assert.equal((await get("/download/" + "0".repeat(48))).status, 404);
 });

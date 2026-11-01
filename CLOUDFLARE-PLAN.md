@@ -64,10 +64,9 @@ Lokal starten: `cd server && npm install && npm run db:lokal && npm run dev` (mi
 5. Umschalten auf Live.
 
 
-## Ergänzung: Kursbuch-PDF (privater Speicher R2)
-Das Kursbuch liegt nicht im öffentlichen Ordner, sondern in einem privaten R2-Bucket. Einrichtung beim Deploy:
-1. `npx wrangler r2 bucket create piercing-akademie-dateien`
-2. `npx wrangler r2 object put piercing-akademie-dateien/kursbuch.pdf --file=Kursbuch.pdf --remote`
-Kursteilnehmer laden es angemeldet unter `/kurs/kursbuch.pdf`, Käufer über einen persönlichen Link `/download/…` (2 Jahre, höchstens 10 Downloads). Der API-Token braucht zusätzlich das Recht „Workers R2 Storage: Bearbeiten“.
-
-**Wasserzeichen:** Jede Kopie wird beim ersten Download mit `pdf-lib` gekennzeichnet (Fußzeile mit Name/E-Mail und Bestellnummer, blasser Diagonaltext, Dateieigenschaften) und unter `personal/…` in R2 zwischengespeichert. Bei einem Buch mit über 100 Seiten braucht das mehr Rechenzeit, als der kostenlose Workers-Tarif erlaubt (10 ms): **Workers Paid (5 US-$ im Monat) einplanen.**
+## Ergänzung: Kursbuch online (privater Speicher R2)
+Das Kursbuch wird nur online in der Fahrschule gelesen, es gibt keine Download-Datei. Seitenbilder und Suchtext liegen in einem privaten R2-Bucket, nie im öffentlichen Ordner und nie im Git-Repository.
+1. Aus dem Buch-PDF Seiten und Suchtext erzeugen: `python3 werkzeuge/buch-seiten.py Kursbuch.pdf buchseiten/`
+2. `npx wrangler r2 bucket create piercing-akademie-dateien`
+3. Hochladen: `for f in buchseiten/*; do npx wrangler r2 object put piercing-akademie-dateien/buch/$(basename $f) --file=$f --remote; done`
+Angemeldete Leser (alle Kurspakete und Käufer von „Kursbuch digital“) bekommen jede Seite einzeln unter `/kurs/buch/seite-NNN.webp` (ohne Zwischenspeicherung, höchstens 300 Seiten pro Stunde) und suchen über `/api/buch/suche`. Das Wasserzeichen mit der E-Mail liegt in der Fahrschule über jeder Seite. Der API-Token braucht zusätzlich das Recht „Workers R2 Storage: Bearbeiten“. Der kostenlose Workers-Tarif reicht dafür.

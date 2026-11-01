@@ -43,7 +43,7 @@ export function mailWillkommen({ env, email, name, paket, sprache, betrag, waehr
       a: ["Vielen Dank für deine Buchung des Pakets " + p + " zum Preis von " + preis + " am " + datum + ". Diese E-Mail ist deine Vertragsbestätigung.",
         { html: '<p><a href="' + esc(login) + '" style="display:inline-block;background:#C9A464;color:#111114;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:bold">Zur Fahrschule anmelden</a></p>', text: "Zur Fahrschule anmelden: " + login },
         "So meldest du dich an: Gib deine E-Mail-Adresse ein, wir schicken dir einen Code. Dein Zugang ist persönlich, gilt 12 Monate und kann gleichzeitig auf höchstens zwei Geräten genutzt werden.",
-        buchLink ? "Das Kursbuch als PDF ist in deinem Paket enthalten: Nach der Anmeldung findest du es in der Fahrschule unter „Checklisten und Vorlagen“." : "",
+        buchLink ? "Das Kursbuch ist in deinem Paket enthalten: Du liest es online in der Fahrschule unter „Kursbuch“, mit Suche und eigenen Notizen." : "",
         "Deine Zustimmung im Bestellvorgang: Du hast ausdrücklich verlangt, dass wir vor Ablauf der Widerrufsfrist mit der Bereitstellung des Online-Kurses beginnen, und bestätigt, dass du dadurch dein Widerrufsrecht für den Online-Kurs verlierst. Es erlischt mit der Freischaltung deines Zugangs, also mit deiner ersten Anmeldung (§ 356 Abs. 5 BGB)." + (zustimmung ? " (Deine Angabe: „" + zustimmung + "“)" : ""),
         mitPraxis ? "Für Praxistage und Coaching gilt die Widerrufsbelehrung in unseren AGB. Wir melden uns, um den Termin deines Praxistags zu vereinbaren." : "",
         { html: '<p>Unsere AGB mit Widerrufsbelehrung: <a href="' + esc(agb) + '">' + esc(agb) + "</a></p>", text: "Unsere AGB mit Widerrufsbelehrung: " + agb }]
@@ -54,7 +54,7 @@ export function mailWillkommen({ env, email, name, paket, sprache, betrag, waehr
       a: ["Thank you for booking the " + p + " package for " + preis + " on " + datum + ". This email is your contract confirmation.",
         { html: '<p><a href="' + esc(login) + '" style="display:inline-block;background:#C9A464;color:#111114;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:bold">Log in to the course</a></p>', text: "Log in to the course: " + login },
         "How to log in: enter your email address and we will send you a code. Your access is personal, valid for 12 months and can be used on at most two devices at the same time.",
-        buchLink ? "The course book as a PDF (in German) is included in your package: after logging in you will find it under “Checklists and templates”." : "",
+        buchLink ? "The course book (in German) is included in your package: you read it online in the course under “Course book”, with search and your own notes." : "",
         "Your consent during checkout: you expressly requested that we begin providing the online course before the end of the withdrawal period and acknowledged that you thereby lose your right of withdrawal for the online course. It expires when your access is activated, i.e. with your first login (Section 356 (5) German Civil Code)." + (zustimmung ? " (Your selection: “" + zustimmung + "”)" : ""),
         mitPraxis ? "The cancellation policy in our terms applies to practice days and coaching. We will contact you to arrange the date of your practice day." : "",
         { html: '<p>Our terms and cancellation policy: <a href="' + esc(agb) + '">' + esc(agb) + "</a> (the German version is legally binding)</p>", text: "Our terms and cancellation policy: " + agb + " (the German version is legally binding)" }]
@@ -65,7 +65,7 @@ export function mailWillkommen({ env, email, name, paket, sprache, betrag, waehr
       a: ["Gracias por reservar el paquete " + p + " por " + preis + " el " + datum + ". Este correo es tu confirmación del contrato.",
         { html: '<p><a href="' + esc(login) + '" style="display:inline-block;background:#C9A464;color:#111114;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:bold">Entrar al curso</a></p>', text: "Entrar al curso: " + login },
         "Cómo entrar: escribe tu correo electrónico y te enviamos un código. Tu acceso es personal, vale 12 meses y puede usarse como máximo en dos dispositivos a la vez.",
-        buchLink ? "El libro del curso en PDF (en alemán) está incluido en tu paquete: después de entrar lo encontrarás en «Listas de control y plantillas»." : "",
+        buchLink ? "El libro del curso (en alemán) está incluido en tu paquete: lo lees online en el curso, en «Libro del curso», con búsqueda y notas propias." : "",
         "Tu consentimiento durante la compra: solicitaste expresamente que empezáramos a prestar el curso online antes de que finalice el plazo de desistimiento y reconociste que con ello pierdes tu derecho de desistimiento respecto del curso online. Se extingue al activarse tu acceso, es decir, con tu primer inicio de sesión (art. 356, apdo. 5, del Código Civil alemán)." + (zustimmung ? " (Tu selección: «" + zustimmung + "»)" : ""),
         mitPraxis ? "Para los días de práctica y la mentoría se aplica la información sobre el desistimiento de nuestras condiciones. Te contactaremos para acordar la fecha de tu día de práctica." : "",
         { html: '<p>Nuestras condiciones e información sobre el desistimiento: <a href="' + esc(agb) + '">' + esc(agb) + "</a> (la versión alemana es la vinculante)</p>", text: "Nuestras condiciones e información sobre el desistimiento: " + agb + " (la versión alemana es la vinculante)" }]
@@ -174,20 +174,21 @@ export function mailKitAkademie({ email, name, betrag, rabatt, adresse }) {
   return { betreff: "Versand: Praxiskit für " + (name || email), ...r };
 }
 
-// Kursbuch als PDF: Download-Link und Bestätigung (digitaler Inhalt, § 356 Abs. 5 BGB)
-export function mailBuch({ sprache, name, betrag, link, env }) {
+// Kursbuch digital: Lesezugang in der Fahrschule (24 Monate) und Bestätigung (digitaler Inhalt, § 356 Abs. 5 BGB)
+export function mailBuch({ sprache, name, betrag, email, env }) {
   const s = PAKETE[sprache] ? sprache : "de";
   const agb = agbLink(env, s);
-  const knopf = (t) => ({ html: '<p><a href="' + esc(link) + '" style="display:inline-block;background:#C9A464;color:#111114;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:bold">' + esc(t) + "</a></p>", text: t + ": " + link });
+  const login = env.DOMAIN + "/login.html?email=" + encodeURIComponent(email) + "&sprache=" + s;
+  const knopf = (t) => ({ html: '<p><a href="' + esc(login) + '" style="display:inline-block;background:#C9A464;color:#111114;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:bold">' + esc(t) + "</a></p>", text: t + ": " + login });
   const T = {
-    de: ["Dein Kursbuch als PDF", "Danke für deinen Kauf" + (name ? ", " + name : "") + "!", "Du hast das Kursbuch „Die Piercing Akademie – Dein Weg zum Bodypiercer“ als PDF zum Preis von " + euro(betrag, s) + " gekauft. Diese E-Mail ist deine Vertragsbestätigung.", "PDF herunterladen",
-      "Der Link ist persönlich, zwei Jahre gültig und funktioniert für bis zu zehn Downloads. Jede Seite trägt deine E-Mail-Adresse und eine Bestellnummer. Das Buch ist nur für deinen eigenen Gebrauch bestimmt; Weitergabe und Vervielfältigung sind nicht erlaubt.",
+    de: ["Dein Kursbuch digital", "Danke für deinen Kauf" + (name ? ", " + name : "") + "!", "Du hast das Kursbuch „Die Piercing Akademie – Dein Weg zum Bodypiercer“ digital zum Preis von " + euro(betrag, s) + " gekauft. Diese E-Mail ist deine Vertragsbestätigung.", "Kursbuch online lesen",
+      "So meldest du dich an: Gib deine E-Mail-Adresse ein, wir schicken dir einen Code. Du liest das Buch 24 Monate lang online, mit Suche und eigenen Notizen zu jeder Seite. Eine Download-Datei gibt es nicht; jede Seite trägt deine E-Mail-Adresse. Der Zugang ist persönlich und nicht übertragbar.",
       "Deine Zustimmung im Bestellvorgang: Du hast verlangt, dass wir vor Ablauf der Widerrufsfrist mit der Bereitstellung beginnen, und bestätigt, dass dein Widerrufsrecht damit erlischt (§ 356 Abs. 5 BGB).", "Unsere AGB: "],
-    en: ["Your course book as a PDF", "Thank you for your purchase" + (name ? ", " + name : "") + "!", "You bought the course book “Die Piercing Akademie – Dein Weg zum Bodypiercer” (German) as a PDF for " + euro(betrag, s) + ". This email is your contract confirmation.", "Download the PDF",
-      "The link is personal, valid for two years and works for up to ten downloads. Every page carries your email address and an order number. The book is for your own use only; passing it on or copying it is not permitted.",
+    en: ["Your digital course book", "Thank you for your purchase" + (name ? ", " + name : "") + "!", "You bought the course book “Die Piercing Akademie – Dein Weg zum Bodypiercer” (German) in digital form for " + euro(betrag, s) + ". This email is your contract confirmation.", "Read the course book online",
+      "How to log in: enter your email address and we will send you a code. You can read the book online for 24 months, with search and your own notes on every page. There is no download file; every page carries your email address. Your access is personal and not transferable.",
       "Your consent during checkout: you requested that we begin providing it before the end of the withdrawal period and acknowledged that your right of withdrawal thereby expires (Section 356 (5) German Civil Code).", "Our terms (the German version is legally binding): "],
-    es: ["Tu libro del curso en PDF", "¡Gracias por tu compra" + (name ? ", " + name : "") + "!", "Has comprado el libro del curso «Die Piercing Akademie – Dein Weg zum Bodypiercer» (en alemán) en PDF por " + euro(betrag, s) + ". Este correo es tu confirmación del contrato.", "Descargar el PDF",
-      "El enlace es personal, vale dos años y funciona para un máximo de diez descargas. Cada página lleva tu correo electrónico y un número de pedido. El libro es solo para tu uso personal; no está permitido compartirlo ni copiarlo.",
+    es: ["Tu libro del curso digital", "¡Gracias por tu compra" + (name ? ", " + name : "") + "!", "Has comprado el libro del curso «Die Piercing Akademie – Dein Weg zum Bodypiercer» (en alemán) en formato digital por " + euro(betrag, s) + ". Este correo es tu confirmación del contrato.", "Leer el libro online",
+      "Cómo entrar: escribe tu correo electrónico y te enviamos un código. Puedes leer el libro online durante 24 meses, con búsqueda y notas propias en cada página. No hay archivo para descargar; cada página lleva tu correo electrónico. El acceso es personal e intransferible.",
       "Tu consentimiento durante la compra: solicitaste que empezáramos a facilitarlo antes de que finalice el plazo de desistimiento y reconociste que con ello se extingue tu derecho de desistimiento (art. 356, apdo. 5, del Código Civil alemán).", "Nuestras condiciones (la versión alemana es la vinculante): "]
   }[s];
   const r = rahmen(T[1], [T[2], knopf(T[3]), T[4], T[5], { html: "<p>" + esc(T[6]) + '<a href="' + esc(agb) + '">' + esc(agb) + "</a></p>", text: T[6] + agb }]);

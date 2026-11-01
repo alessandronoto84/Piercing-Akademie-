@@ -58,7 +58,7 @@
   // Auf dem Server (Cloudflare) setzt /kurs/konto.js window.PA_KONTO: Fortschritt kommt dann vom Server und wird dorthin gespeichert.
   // Ohne Server (Prototyp, Ansichtsversion) bleibt alles im Browser.
   var KONTO = window.PA_KONTO || null;
-  function leer() { return { erledigt: {}, bestanden: {}, fehler: {}, fehlerRichtig: {}, uebung: {}, check: {}, labor: {}, simulation: null, vorschau: false }; }
+  function leer() { return { erledigt: {}, bestanden: {}, fehler: {}, fehlerRichtig: {}, uebung: {}, check: {}, labor: {}, notizen: {}, buchSeite: 1, simulation: null, vorschau: false }; }
   var stand = laden();
   function laden() {
     if (KONTO) { var k = Object.assign(leer(), KONTO.fortschritt || {}); k.vorschau = !!KONTO.admin; return k; }
@@ -122,6 +122,9 @@
   // ---------- Hilfsfunktionen ----------
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;" }[c]; }); }
   function seitenLabel(s) { return s === "Entwurf" ? "Ergänzung der Akademie" : s; }
+  // „S. 74“, „S. 11–12“, „S. 16, 39“ → Link in den Kursbuch-Leser (erste genannte Seite)
+  function buchNr(t) { var m = /S\.\s*(\d+)/.exec(t || ""); return m ? +m[1] : null; }
+  function buchLink(t) { var n = buchNr(t); return n == null ? esc(t) : '<a href="#buch-' + n + '" class="k-buchlink" title="Im Kursbuch nachlesen">' + esc(t) + "</a>"; }
   function zwei(n) { return (n < 10 ? "0" : "") + n; }
   function mischen(liste) { var a = liste.slice(); for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
   function simulationsUmfang() { return MODULE.reduce(function (s, m) { return s + Math.min(m.pool.length, STRENG[m.nr] ? STRENG[m.nr].simFragen : SIMULATION_JE_MODUL); }, 0); }
@@ -252,6 +255,12 @@
 
   // ---------- Seitenleiste ----------
   function zeichneNav(aktiv) {
+    if (NUR_BUCH) {
+      nav.innerHTML = '<details class="k-navbox" open><summary>Kursbuch</summary><div><div class="k-nav-extras">' +
+        '<a href="#buch" class="k-nav-link k-nav-haupt' + (aktiv === "buch" ? " aktiv" : "") + '">Kursbuch</a>' +
+        '<a href="#notizen" class="k-nav-link k-nav-haupt">Meine Notizen (' + anzahlNotizen() + ")</a></div></div></details>";
+      return;
+    }
     var html = '<a href="#uebersicht" class="k-nav-link k-nav-haupt' + (aktiv === "uebersicht" ? " aktiv" : "") + '">Übersicht</a><ol class="k-nav-liste">';
     MODULE.forEach(function (m) {
       var status = stand.bestanden[m.nr] ? "bestanden" : modulOffen(m) ? "offen" : "gesperrt";
@@ -262,6 +271,7 @@
       '<a href="#fehler" class="k-nav-link k-nav-haupt' + (aktiv === "fehler" ? " aktiv" : "") + '">Fehler-Training (' + anzahlFehler() + ")</a>" +
       '<a href="#simulation" class="k-nav-link k-nav-haupt' + (aktiv === "simulation" ? " aktiv" : "") + (simulationOffen() ? "" : " k-gesperrt") + '">Prüfungssimulation' + (stand.simulation && stand.simulation.bestanden ? " ✓" : "") + "</a>" +
       (LABOR ? '<a href="#labor" class="k-nav-link k-nav-haupt' + (aktiv === "labor" ? " aktiv" : "") + '">Praxislabor (' + laborAnzahl() + "/" + laborAlle().length + ")</a>" : "") +
+      '<a href="#buch" class="k-nav-link k-nav-haupt' + (aktiv === "buch" ? " aktiv" : "") + '">Kursbuch</a>' +
       '<a href="#glossar" class="k-nav-link k-nav-haupt' + (aktiv === "glossar" ? " aktiv" : "") + '">Glossar</a>' +
       '<a href="#checklisten" class="k-nav-link k-nav-haupt' + (aktiv === "checklisten" ? " aktiv" : "") + '">Checklisten und Vorlagen</a></div>';
     var war = nav.querySelector(".k-navbox");
@@ -291,6 +301,7 @@
       '<a class="k-modulkarte" href="#fehler"><span class="label">Training</span><strong>Fehler-Training</strong><span class="k-meta">' + anzahlFehler() + " Fragen, die du falsch beantwortet hast</span></a>" +
       '<a class="k-modulkarte' + (simulationOffen() ? "" : " k-gesperrt") + '" href="#simulation"><span class="label">Abschluss</span><strong>Prüfungssimulation</strong><span class="k-meta">' + simulationsUmfang() + " Fragen aus allen Modulen" + (simulationOffen() ? "" : " · öffnet nach allen Modulprüfungen") + "</span></a>" +
       (LABOR ? '<a class="k-modulkarte" href="#labor"><span class="label">Praxis</span><strong>Praxislabor</strong><span class="k-meta">' + laborAnzahl() + " von " + laborAlle().length + " Übungen und Clips, wie gestochen wird</span></a>" : "") +
+      '<a class="k-modulkarte" href="#buch"><span class="label">Nachschlagen</span><strong>Kursbuch</strong><span class="k-meta">Online lesen, durchsuchen, eigene Notizen (' + anzahlNotizen() + ")</span></a>" +
       '<a class="k-modulkarte" href="#glossar"><span class="label">Nachschlagen</span><strong>Glossar</strong><span class="k-meta">' + (KURS.glossar || []).length + " Fachbegriffe</span></a>" +
       '<a class="k-modulkarte" href="#checklisten"><span class="label">Praxis</span><strong>Checklisten und Vorlagen</strong><span class="k-meta">' + (KURS.checklisten || []).length + " Checklisten, " + VORLAGEN.length + " Druckvorlagen als PDF</span></a></div>" +
       '<section class="k-einstellungen"><h2>Prototyp-Einstellungen</h2>' +
@@ -373,7 +384,7 @@
       return;
     }
     var html = '<section class="k-kopf"><p class="label"><a href="#modul-' + m.nr + '">Modul ' + zwei(m.nr) + " · " + esc(m.titel) + "</a> · Lektion " + (i + 1) + " von " + m.lektionen.length + (l.entwurf && stand.vorschau ? " · Entwurf" : "") + "</p><h1>" + esc(l.titel) + "</h1>" +
-      (l.seite ? '<p class="fine">' + (l.seite === "Entwurf" ? "Ergänzung der Akademie" : "Kursbuch " + esc(l.seite)) + "</p>" : "") + "</section>" +
+      (l.seite ? '<p class="fine">' + (l.seite === "Entwurf" ? "Ergänzung der Akademie" : "Im Kursbuch nachlesen: " + buchLink(l.seite)) + "</p>" : "") + "</section>" +
       '<ol class="k-phasen" aria-label="Ablauf der Lektion"><li class="aktiv" id="phase-1"><span class="n">1</span>Erklärung</li><li id="phase-2"><span class="n">2</span>Fragen (' + l.alleFragen.length + ')</li><li id="phase-3"><span class="n">3</span>Geschafft</li></ol>' +
       '<article class="k-lektion" id="erklaerung">' + l.inhalt.map(block).join("") + "</article>" +
       '<div class="k-weiter" id="start-bereich"><button type="button" class="btn" id="fragen-start">Erklärung gelesen: Fragen starten</button>' + (lektionErledigt(m, i) ? ' <span class="fine">Diese Lektion hast du schon abgeschlossen. Du kannst die Fragen zur Wiederholung noch einmal beantworten.</span>' : "") + "</div>" +
@@ -433,7 +444,7 @@
         form.querySelectorAll("input").forEach(function (x) { x.disabled = true; });
         rm.hidden = false;
         rm.innerHTML = (ok ? "<strong>Richtig.</strong> " : "<strong>Nicht richtig.</strong> Richtig ist: „" + esc(f.antworten[f.richtig]) + "“. Die Frage kommt am Ende noch einmal. ") + esc(f.erklaerung) +
-          (f.seite ? ' <span class="label">' + esc(seitenLabel(f.seite)) + "</span>" : "") + (opt.hinweis ? "<br><em>" + esc(opt.hinweis(f, ok)) + "</em>" : "");
+          (f.seite ? ' <span class="label">' + buchLink(seitenLabel(f.seite)) + "</span>" : "") + (opt.hinweis ? "<br><em>" + esc(opt.hinweis(f, ok)) + "</em>" : "");
         pruefen.hidden = true; weiter.hidden = false; weiter.focus();
       });
       weiter.addEventListener("click", naechste);
@@ -466,7 +477,7 @@
         var feld = form.querySelector('.k-frage[data-index="' + i + '"]');
         feld.classList.add(ok ? "k-richtig" : "k-falsch");
         var r = feld.querySelector(".k-rueckmeldung"); r.hidden = false;
-        r.innerHTML = (ok ? "<strong>Richtig.</strong> " : "<strong>Nicht richtig.</strong> Richtig ist: „" + esc(f.antworten[f.richtig]) + "“. ") + esc(f.erklaerung) + ' <span class="label">' + esc(seitenLabel(f.seite || "")) + " · Modul " + zwei(f.modul) + "</span>";
+        r.innerHTML = (ok ? "<strong>Richtig.</strong> " : "<strong>Nicht richtig.</strong> Richtig ist: „" + esc(f.antworten[f.richtig]) + "“. ") + esc(f.erklaerung) + ' <span class="label">' + buchLink(seitenLabel(f.seite || "")) + " · Modul " + zwei(f.modul) + "</span>";
       });
       speichern();
       form.querySelectorAll("input").forEach(function (x) { x.disabled = true; });
@@ -627,7 +638,6 @@
     var cl = KURS.checklisten || [];
     app.innerHTML = '<section class="k-kopf"><p class="label">Praxis</p><h1>Checklisten und Vorlagen</h1><p class="lead">Für den Studioalltag. Abgehakt wird nur für dich und nur in diesem Browser.</p></section>' +
       '<section class="k-lektion"><h2>Vorlagen zum Ausdrucken</h2><p>Druckfertig als PDF. Pass sie an dein Studio an; Einverständniserklärung und Hygieneplan lässt du vor dem Einsatz prüfen (Anwalt bzw. Gesundheitsamt).</p><ul class="k-vorlagen">' +
-        (KONTO ? '<li><a href="kursbuch.pdf" download>Kursbuch „Die Piercing Akademie – Dein Weg zum Bodypiercer“</a><span class="fine">PDF, 120 Seiten, mit deiner E-Mail-Adresse gekennzeichnet, nur für deinen persönlichen Gebrauch</span></li>' : "") +
         VORLAGEN.map(function (v) { return '<li><a href="' + v[0] + '" download>' + esc(v[1]) + '</a><span class="fine">' + esc(v[2]) + "</span></li>"; }).join("") + "</ul></section>" +
       cl.map(function (c, ci) {
         return '<section class="k-lektion"><h2>' + esc(c.titel) + '</h2><p class="fine">Aus Modul ' + zwei(c.modul) + '</p><ul class="k-aufgaben">' +
@@ -682,11 +692,80 @@
     app.querySelectorAll("video[data-schleife]").forEach(function (v) { v.play && v.play().catch(function () {}); });
   }
 
+  // ---------- Kursbuch online: Nachschlagewerk mit Suche und eigenen Notizen ----------
+  // Seitenbilder kommen auf dem Server nur angemeldet aus dem privaten Speicher (/kurs/buch/seite-NNN.webp); keine Download-Datei.
+  var BUCH_LETZTE = 116, NUR_BUCH = !!(KONTO && KONTO.paket === "buch");
+  function anzahlNotizen() { return Object.keys(stand.notizen || {}).filter(function (k) { return stand.notizen[k]; }).length; }
+  function seitenName(n) { return n === 0 ? "Inhaltsverzeichnis" : "Seite " + n; }
+  function buchAnsicht(n) {
+    n = Math.max(0, Math.min(BUCH_LETZTE, isNaN(n) ? 1 : n));
+    stand.buchSeite = n; speichern();
+    var nummer = ("00" + n).slice(-3), wz = KONTO ? KONTO.email : "Vorschau · Piercing Akademie";
+    app.innerHTML = '<section class="k-kopf"><p class="label">Nachschlagen</p><h1>Kursbuch</h1><p class="lead">„Die Piercing Akademie – Dein Weg zum Bodypiercer“: blättern, suchen und eigene Notizen zu jeder Seite.</p>' +
+      '<form class="k-buch-suche" role="search"><label for="buch-q" class="k-unsichtbar">Im Kursbuch suchen</label><input id="buch-q" type="search" placeholder="Im Kursbuch suchen, z. B. Septum" autocomplete="off"><button type="submit" class="btn small">Suchen</button></form>' +
+      '<div id="buch-treffer" aria-live="polite"></div></section>' +
+      '<div class="k-buch">' +
+        '<div class="k-buch-leiste">' + (n > 0 ? '<a class="btn ghost small" href="#buch-' + (n - 1) + '">‹ Zurück</a>' : '<span class="btn ghost small k-aus">‹ Zurück</span>') +
+          '<label class="k-buch-nr">' + (n === 0 ? "Inhalt" : "Seite") + ' <input id="buch-nr" type="number" inputmode="numeric" min="0" max="' + BUCH_LETZTE + '" value="' + n + '"></label>' +
+          (n < BUCH_LETZTE ? '<a class="btn ghost small" href="#buch-' + (n + 1) + '">Weiter ›</a>' : '<span class="btn ghost small k-aus">Weiter ›</span>') + "</div>" +
+        '<figure class="k-buch-seite"><img src="buch/seite-' + nummer + '.webp" alt="Kursbuch, ' + seitenName(n) + '" draggable="false"><div class="k-buch-wz" aria-hidden="true">' + (esc(wz) + " · ").repeat(40) + '</div>' +
+          '<p class="k-buch-fehlt" hidden>Diese Seite ist gerade nicht verfügbar. Bitte lade die Seite später neu.</p></figure>' +
+        '<aside class="k-buch-notiz"><label for="buch-notiz"><strong>Meine Notiz zu ' + (n === 0 ? "Inhaltsverzeichnis" : "Seite " + n) + '</strong></label>' +
+          '<textarea id="buch-notiz" rows="7" maxlength="2000" placeholder="Was willst du dir zu dieser Seite merken?">' + esc((stand.notizen || {})[n] || "") + "</textarea>" +
+          '<p class="fine" id="buch-gespeichert" aria-live="polite">Wird automatisch gespeichert.</p><p><a href="#notizen">Alle meine Notizen (' + anzahlNotizen() + ")</a></p>" +
+          '<p class="fine">Das Kursbuch ist persönlich lizenziert; jede Seite trägt deine Kennung. Kopieren und Weitergeben ist nicht erlaubt.</p></aside>' +
+      "</div>";
+    var bild = app.querySelector(".k-buch-seite img"), fig = app.querySelector(".k-buch-seite");
+    bild.addEventListener("error", function () { bild.hidden = true; fig.querySelector(".k-buch-fehlt").hidden = false; });
+    fig.addEventListener("contextmenu", function (e) { e.preventDefault(); });
+    if (n < BUCH_LETZTE) { var vor = new Image(); vor.src = "buch/seite-" + ("00" + (n + 1)).slice(-3) + ".webp"; }
+    var feld = document.getElementById("buch-nr");
+    feld.addEventListener("change", function () { var z = parseInt(feld.value, 10); if (!isNaN(z)) location.hash = "#buch-" + Math.max(0, Math.min(BUCH_LETZTE, z)); });
+    var notiz = document.getElementById("buch-notiz"), merk = document.getElementById("buch-gespeichert"), t = null;
+    notiz.addEventListener("input", function () {
+      clearTimeout(t); merk.textContent = "…";
+      t = setTimeout(function () { var v = notiz.value.trim(); if (v) stand.notizen[n] = v; else delete stand.notizen[n]; speichern(); merk.textContent = "Gespeichert."; zeichneNav("buch"); }, 600);
+    });
+    app.querySelector(".k-buch-suche").addEventListener("submit", function (e) { e.preventDefault(); buchSuchen(document.getElementById("buch-q").value); });
+  }
+  function buchTreffer(liste, q) {
+    var ziel = document.getElementById("buch-treffer");
+    if (!liste.length) { ziel.innerHTML = '<p class="fine">Keine Treffer für „' + esc(q) + "“.</p>"; return; }
+    ziel.innerHTML = '<ol class="k-buch-treffer">' + liste.map(function (x) {
+      return '<li><a href="#buch-' + x.seite + '"><strong>' + seitenName(x.seite) + "</strong></a> " + esc(x.auszug) + "</li>";
+    }).join("") + "</ol>";
+  }
+  function buchSuchen(q) {
+    q = String(q || "").trim();
+    var ziel = document.getElementById("buch-treffer");
+    if (q.length < 3) { ziel.innerHTML = '<p class="fine">Bitte mindestens drei Buchstaben eingeben.</p>'; return; }
+    if (KONTO) {
+      ziel.innerHTML = '<p class="fine">Suche …</p>';
+      fetch("/api/buch/suche?q=" + encodeURIComponent(q), { credentials: "same-origin" }).then(function (r) { return r.json(); })
+        .then(function (d) { buchTreffer(d.treffer || [], q); }).catch(function () { ziel.innerHTML = '<p class="fine">Die Suche ist gerade nicht erreichbar.</p>'; });
+    } else if (KURS.buchText) {
+      var ql = q.toLowerCase(), liste = [];
+      KURS.buchText.forEach(function (z) { var i = z[1].toLowerCase().indexOf(ql); if (i > -1 && liste.length < 25) liste.push({ seite: z[0], auszug: (i > 50 ? "…" : "") + z[1].slice(Math.max(0, i - 50), i + q.length + 70) + "…" }); });
+      buchTreffer(liste, q);
+    } else ziel.innerHTML = '<p class="fine">Die Suche funktioniert in der angemeldeten Fahrschule.</p>';
+  }
+  function notizenSeite() {
+    var seiten = Object.keys(stand.notizen || {}).filter(function (k) { return stand.notizen[k]; }).map(Number).sort(function (a, b) { return a - b; });
+    app.innerHTML = '<section class="k-kopf"><p class="label">Nachschlagen</p><h1>Meine Notizen</h1><p class="lead">Deine Notizen zum Kursbuch, nach Seiten sortiert. Bearbeiten kannst du sie direkt auf der jeweiligen Buchseite.</p><p><a class="btn ghost small" href="#buch">Zum Kursbuch</a></p></section>' +
+      (seiten.length ? seiten.map(function (n) {
+        return '<section class="k-lektion k-notiz"><p class="label"><a href="#buch-' + n + '">' + seitenName(n) + "</a></p><p>" + esc(stand.notizen[n]).replace(/\n/g, "<br>") + "</p></section>";
+      }).join("") : '<div class="k-lektion"><p>Noch keine Notizen. Öffne eine Seite im Kursbuch und schreib rechts daneben, was du dir merken willst.</p></div>');
+  }
+
   // ---------- Router ----------
   function zeige() {
     var h = (window.location.hash || "#uebersicht").slice(1);
     if (h === "alles" && (!KONTO || KONTO.admin)) { stand.vorschau = true; speichern(); h = "uebersicht"; } // Prüfmodus: im Prototyp für alle, auf dem Server nur für die Akademie
     var t;
+    // Reine Buchkäufer sehen nur das Kursbuch und ihre Notizen
+    if (NUR_BUCH && !/^(buch(-\d+)?|notizen)$/.test(h)) h = "buch";
+    if ((t = /^buch(?:-(\d+))?$/.exec(h))) { zeichneNav("buch"); buchAnsicht(t[1] != null ? +t[1] : stand.buchSeite); return; }
+    if (h === "notizen") { zeichneNav("buch"); notizenSeite(); return; }
     if ((t = /^lektion-(\d+)-(\d+)$/.exec(h)) && modul(+t[1]) && modul(+t[1]).lektionen[+t[2]]) { zeichneNav(+t[1]); lektionSeite(modul(+t[1]), +t[2]); }
     else if ((t = /^modul-(\d+)$/.exec(h)) && modul(+t[1])) { zeichneNav(+t[1]); modulSeite(modul(+t[1])); }
     else if ((t = /^pruefung-(\d+)$/.exec(h)) && modul(+t[1])) { zeichneNav(+t[1]); pruefungSeite(modul(+t[1])); }

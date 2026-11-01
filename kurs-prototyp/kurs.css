@@ -363,3 +363,22 @@
 .k-labor-fertig{border-left-color:var(--accent)}
 .k-labor h4{margin-top:16px}
 .k-box ul{margin:6px 0 0;padding-left:1.2em}
+
+/* Kursbuch online */
+.k-unsichtbar{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.k-buch-suche{display:flex;gap:8px;margin-top:16px;max-width:560px}
+.k-buch-suche input{flex:1;min-width:0}
+.k-buch-treffer{margin:12px 0 0;padding-left:1.2em;display:grid;gap:8px;font-size:.92rem}
+.k-buch{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:20px;align-items:start;margin-top:16px}
+.k-buch-leiste{grid-column:1 / -1;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.k-buch-nr input{width:5.5em;margin-left:6px;padding:.4em .5em}
+.k-aus{opacity:.4;pointer-events:none}
+.k-buch-seite{position:relative;margin:0;background:#fff;border:1px solid var(--line);border-radius:6px;overflow:hidden;box-shadow:var(--schatten,0 6px 24px rgba(0,0,0,.08));-webkit-user-select:none;user-select:none}
+.k-buch-seite img{display:block;width:100%;height:auto;pointer-events:none;-webkit-user-drag:none}
+.k-buch-wz{position:absolute;inset:-20%;display:flex;flex-wrap:wrap;align-content:space-around;transform:rotate(-30deg);font:600 15px/2.6 var(--f-mono,monospace);color:rgba(80,80,80,.09);pointer-events:none;word-break:break-all;overflow:hidden}
+.k-buch-fehlt{padding:40px 20px;text-align:center;color:var(--muted)}
+.k-buch-notiz{position:sticky;top:16px;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px;display:grid;gap:8px}
+.k-buch-notiz textarea{width:100%;font:inherit;padding:.6em;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);resize:vertical}
+.k-buchlink{text-decoration:underline;text-underline-offset:2px}
+@media (max-width:860px){.k-buch{grid-template-columns:minmax(0,1fr)}.k-buch-notiz{position:static}}
+@media print{.k-buch-seite,.k-buch{display:none!important}}
