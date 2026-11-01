@@ -367,6 +367,9 @@ footer a{color:var(--muted)}
 .prinzip span{display:block;color:var(--muted);margin-top:6px;position:relative}
 .prinzip b{display:block;font-family:var(--f-mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:8px;position:relative}
 #ablauf .note{margin-top:32px}
+.note+.note{margin-top:12px}
+.labor-hinweis{margin-top:28px;display:grid;gap:12px;max-width:52em}
+.labor-hinweis p{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:0 var(--radius) var(--radius) 0;padding:14px 18px;margin:0}
 .contact.contact-schmal{grid-template-columns:minmax(0,1fr)}
 .contact .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
 .contact .cta .btn{margin-top:0}

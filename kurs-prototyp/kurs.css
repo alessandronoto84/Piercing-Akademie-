@@ -356,3 +356,9 @@
 /* Wasserzeichen auf dem Server: persönliche Kennzeichnung jeder Seite (nur sichtbar, nicht klickbar) */
 .k-wasserzeichen{position:fixed;inset:-50%;z-index:50;pointer-events:none;user-select:none;transform:rotate(-24deg);font:500 13px/42px var(--f-mono);letter-spacing:.08em;color:var(--ink);opacity:.045;overflow:hidden;word-spacing:30px;white-space:normal}
 @media print{.k-wasserzeichen{opacity:.06;-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+
+/* Praxislabor */
+.k-labor{border-left:3px solid var(--line)}
+.k-labor-fertig{border-left-color:var(--accent)}
+.k-labor h4{margin-top:16px}
+.k-box ul{margin:6px 0 0;padding-left:1.2em}

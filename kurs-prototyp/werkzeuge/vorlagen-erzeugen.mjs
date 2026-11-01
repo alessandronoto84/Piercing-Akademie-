@@ -14,7 +14,7 @@ const WURZEL = path.resolve(".");
 const ASSETS = path.resolve("../assets");
 const ctx = vm.createContext({});
 ctx.window = ctx;
-for (const f of ["modul-02.js", "modul-05.js", "modul-10.js", "glossar-checklisten.js"]) vm.runInContext(fs.readFileSync(path.join(WURZEL, "inhalte", f), "utf8"), ctx);
+for (const f of ["modul-02.js", "modul-05.js", "modul-10.js", "glossar-checklisten.js", "praxislabor.js"]) vm.runInContext(fs.readFileSync(path.join(WURZEL, "inhalte", f), "utf8"), ctx);
 const KURS = ctx.KURS;
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 const b64 = (p) => fs.readFileSync(p).toString("base64");
@@ -194,11 +194,60 @@ ${KURS.checklisten.map((c) => `<div class="block"><h2>${esc(c.titel)}</h2>${kaes
 `);
 }
 
+
+// ---------- 5. Übungsvorlage Praxislabor (Maße in Millimetern, Druck in Originalgröße) ----------
+function uebungsvorlage() {
+  const punkt = (x, y) => `<circle cx="${x}" cy="${y}" r="0.6" fill="#16161a"/>`;
+  // Kontrollstrecke 100 mm
+  let mass = `<line x1="4" y1="6" x2="104" y2="6" stroke="#16161a" stroke-width="0.4"/>`;
+  for (let i = 0; i <= 10; i++) mass += `<line x1="${4 + i * 10}" y1="${i % 5 ? 4.5 : 3.5}" x2="${4 + i * 10}" y2="7.5" stroke="#16161a" stroke-width="0.3"/>`;
+  mass += `<text x="110" y="7.2" font-size="3">← muss genau 100 mm messen</text>`;
+  // Übung A: Punktpaare
+  const abst = [6, 8, 10, 12, 14, 16];
+  let a = "";
+  abst.forEach((d, i) => {
+    const y = 8 + i * 11;
+    a += `<text x="0" y="${y + 1}" font-size="3">${d} mm</text>`;
+    a += `<line x1="16" y1="${y}" x2="46" y2="${y}" stroke="#CFC9BE" stroke-width="0.3"/>${punkt(20, y)}${punkt(20 + d, y)}`;
+    a += `<line x1="60" y1="${y}" x2="90" y2="${y}" stroke="#CFC9BE" stroke-width="0.3"/>${punkt(64, y)}`;
+    a += `<text x="100" y="${y + 1}" font-size="3">Abweichung: ______ mm</text>`;
+  });
+  // Übung B: Symmetrie
+  const pts = [[-8, 10], [-14, 22], [-5, 30], [-20, 38], [-11, 48]];
+  let b = `<rect x="0" y="0" width="90" height="58" fill="none" stroke="#CFC9BE" stroke-width="0.3"/><line x1="45" y1="2" x2="45" y2="56" stroke="#8A672C" stroke-width="0.4" stroke-dasharray="2 1.5"/>`;
+  pts.forEach(([dx, y], i) => { b += punkt(45 + dx, y) + `<text x="${45 + dx - 4}" y="${y + 1}" font-size="2.6">${i + 1}</text>`; });
+  const svg = (w, h, inhalt) => `<svg width="${w}mm" height="${h}mm" viewBox="0 0 ${w} ${h}" font-family="I, Arial, sans-serif" fill="#16161a">${inhalt}</svg>`;
+  const L = KURS.labor;
+  const zeilen = (von, bis) => { let r = ""; for (let i = von; i <= bis; i++) r += `<tr><td style="width:9mm">${i}</td><td></td></tr>`; return r; };
+  return seite("Praxislabor · Übungsvorlage", "Übungsvorlage Praxislabor", `
+<h1>Übungsvorlage Praxislabor</h1>
+<p class="lead">In Originalgröße drucken (100 %, nicht „an Seite anpassen“). Prüfe zuerst die Kontrollstrecke mit dem Lineal.</p>
+${svg(178, 10, mass)}
+<div class="hinweis warn">Im Praxislabor wird nie gestochen. Gestochen wird erst am Praxistag unter Anleitung.</div>
+<h2>Übung A: Abstände übertragen</h2>
+<p>Links ist das Punktpaar vorgegeben. Miss den Abstand und setze rechts den zweiten Punkt auf die Linie. Erst danach nachmessen und die Abweichung eintragen. Ziel: höchstens 1 mm.</p>
+${svg(178, 70, a)}
+<h2>Übung B: Symmetrisch spiegeln</h2>
+<p>Spiegle die Punkte 1 bis 5 an der gestrichelten Mittellinie auf die rechte Seite: gleicher Abstand zur Linie, gleiche Höhe. Danach nachmessen. Ziel: höchstens 1 mm daneben.</p>
+${svg(178, 60, b)}
+<div class="seite"></div>
+<h1>Übungsprotokoll</h1>
+<p class="lead">Trag ein, wann du welche Aufgabe geübt hast. Bring das Blatt zum Praxistag mit.</p>
+<table><tr><th style="width:58mm">Aufgabe</th><th style="width:20mm">Datum</th><th style="width:22mm">Durchgänge</th><th style="width:26mm">Selbstkontrolle erfüllt</th><th>Notizen</th></tr>
+${L.aufgaben.map((x, i) => `<tr><td>${i + 1}. ${esc(x.titel)}</td><td></td><td></td><td>☐</td><td></td></tr>`).join("")}
+</table>
+<h2>Aufgabe 6: Der Ablauf aus dem Gedächtnis</h2>
+<p>Schreib alle 26 Schritte auf, ohne nachzuschauen. Dann mit Modul 09 vergleichen und Fehlendes in Rot ergänzen.</p>
+<div class="zwei"><table>${zeilen(1, 13)}</table><table>${zeilen(14, 26)}</table></div>
+`);
+}
+
 const VORLAGEN = [
   ["pflegehinweise.pdf", pflegeblatt],
   ["einverstaendniserklaerung-muster.pdf", einverstaendnis],
   ["hygieneplan-vorlage.pdf", hygieneplan],
-  ["checklisten.pdf", checklisten]
+  ["checklisten.pdf", checklisten],
+  ["uebungsvorlage.pdf", uebungsvorlage]
 ];
 
 fs.mkdirSync("vorlagen", { recursive: true });

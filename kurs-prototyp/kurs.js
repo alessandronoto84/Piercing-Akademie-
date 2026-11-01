@@ -1,7 +1,7 @@
 /* Piercing Akademie – Online-Kurs (Prototyp).
    Ablauf wie in einer Fahrschul-App: Jede Lektion erklärt zuerst den Stoff, danach müssen alle Fragen der Lektion
    richtig beantwortet werden (falsche kommen erneut). Erst dann öffnet sich die nächste Lektion. Nach allen Lektionen
-   eines Moduls folgt die Modulprüfung; ab 80 % öffnet sich das nächste Modul. Dazu: Fehler-Training, Prüfungssimulation,
+   eines Moduls folgt die Modulprüfung; ab 80 % (Hygiene und Ablauf/Notfälle: 85 %) öffnet sich das nächste Modul. Dazu: Fehler-Training, Prüfungssimulation,
    Glossar und Checklisten.
    Kein Backend: Der Fortschritt liegt nur im localStorage dieses Browsers. Inhalte: inhalte/*.js (window.KURS). */
 (function () {
@@ -10,8 +10,14 @@
   var KURS = window.KURS || { module: [] };
   var MODULE = KURS.module.slice().sort(function (a, b) { return a.nr - b.nr; });
   var BESTEHEN_AB = 0.8;            // Anteil richtiger Antworten für Modulprüfung und Simulation
+  // Sicherheitsmodule: strengere Modulprüfung und in der Simulation eigener Block mit höchstens einem Fehler
+  var STRENG = {
+    5: { quote: 0.85, kurz: "Hygiene", simFragen: 8, simMaxFehler: 1 },
+    9: { quote: 0.85, kurz: "Ablauf und Notfälle", simFragen: 6, simMaxFehler: 1 }
+  };
   var FRAGEN_JE_PRUEFUNG = 20;      // zufällige Fragen pro Modulprüfung
-  var SIMULATION_JE_MODUL = 4;      // Fragen pro Modul in der Prüfungssimulation
+  var SIMULATION_JE_MODUL = 4;      // Fragen pro Modul in der Prüfungssimulation (Sicherheitsmodule: siehe STRENG)
+  var FEHLER_RICHTIG_NOETIG = 2;    // so oft muss eine Fehlerfrage richtig beantwortet werden, bis sie aus dem Training verschwindet
   var SPEICHER = "pa-kurs-v3";
 
   var app = document.getElementById("kurs");
@@ -38,14 +44,18 @@
     ["vorlagen/pflegehinweise.pdf", "Pflegehinweise für Kunden", "1 Seite, mit Abheilzeiten und Warnzeichen"],
     ["vorlagen/einverstaendniserklaerung-muster.pdf", "Einverständniserklärung (Muster)", "2 Seiten, mit freiwilliger Foto-Einwilligung"],
     ["vorlagen/hygieneplan-vorlage.pdf", "Reinigungs- und Desinfektionsplan", "Vorlage zum Ausfüllen, mit dem Gesundheitsamt abstimmen"],
-    ["vorlagen/checklisten.pdf", "Alle Checklisten", "Zum Ausdrucken und Abhaken"]
+    ["vorlagen/checklisten.pdf", "Alle Checklisten", "Zum Ausdrucken und Abhaken"],
+    ["vorlagen/uebungsvorlage.pdf", "Übungsvorlage Praxislabor", "2 Seiten: Anzeichnen, Symmetrie, Übungsprotokoll"]
   ];
+  var LABOR = KURS.labor || null;
+  function laborErledigt(a) { return a.kontrolle.every(function (_, i) { return stand.labor[a.id + "-" + i]; }); }
+  function laborAnzahl() { return LABOR ? LABOR.aufgaben.filter(laborErledigt).length : 0; }
 
   // ---------- Fortschritt ----------
   // Auf dem Server (Cloudflare) setzt /kurs/konto.js window.PA_KONTO: Fortschritt kommt dann vom Server und wird dorthin gespeichert.
   // Ohne Server (Prototyp, Ansichtsversion) bleibt alles im Browser.
   var KONTO = window.PA_KONTO || null;
-  function leer() { return { erledigt: {}, bestanden: {}, fehler: {}, uebung: {}, check: {}, simulation: null, vorschau: false }; }
+  function leer() { return { erledigt: {}, bestanden: {}, fehler: {}, fehlerRichtig: {}, uebung: {}, check: {}, labor: {}, simulation: null, vorschau: false }; }
   var stand = laden();
   function laden() {
     if (KONTO) { var k = Object.assign(leer(), KONTO.fortschritt || {}); k.vorschau = !!KONTO.admin; return k; }
@@ -102,13 +112,15 @@
   function anzahlBestanden() { return MODULE.filter(function (m) { return stand.bestanden[m.nr]; }).length; }
   function simulationOffen() { return stand.vorschau || anzahlBestanden() === MODULE.length; }
   function anzahlFehler() { return Object.keys(stand.fehler).filter(function (k) { return ALLE_FRAGEN[k]; }).length; }
-  function merkeFehler(f) { stand.fehler[f.frage] = (stand.fehler[f.frage] || 0) + 1; }
+  function merkeFehler(f) { stand.fehler[f.frage] = (stand.fehler[f.frage] || 0) + 1; delete stand.fehlerRichtig[f.frage]; }
+  function quote(nr) { return STRENG[nr] ? STRENG[nr].quote : BESTEHEN_AB; }
+  function prozent(q) { return Math.round(q * 100) + " %"; }
 
   // ---------- Hilfsfunktionen ----------
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;" }[c]; }); }
   function zwei(n) { return (n < 10 ? "0" : "") + n; }
   function mischen(liste) { var a = liste.slice(); for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
-  function benoetigt(n) { return Math.ceil(n * BESTEHEN_AB); }
+  function benoetigt(n, q) { return Math.ceil(n * (q || BESTEHEN_AB) - 1e-9); }
   // Antwortreihenfolge mischen; „richtig“ zeigt danach auf die neue Position
   function gemischt(f) {
     var r = mischen(f.antworten.map(function (_, i) { return i; }));
@@ -244,6 +256,7 @@
     html += '</ol><div class="k-nav-extras">' +
       '<a href="#fehler" class="k-nav-link k-nav-haupt' + (aktiv === "fehler" ? " aktiv" : "") + '">Fehler-Training (' + anzahlFehler() + ")</a>" +
       '<a href="#simulation" class="k-nav-link k-nav-haupt' + (aktiv === "simulation" ? " aktiv" : "") + (simulationOffen() ? "" : " k-gesperrt") + '">Prüfungssimulation' + (stand.simulation && stand.simulation.bestanden ? " ✓" : "") + "</a>" +
+      (LABOR ? '<a href="#labor" class="k-nav-link k-nav-haupt' + (aktiv === "labor" ? " aktiv" : "") + '">Praxislabor (' + laborAnzahl() + "/" + LABOR.aufgaben.length + ")</a>" : "") +
       '<a href="#glossar" class="k-nav-link k-nav-haupt' + (aktiv === "glossar" ? " aktiv" : "") + '">Glossar</a>' +
       '<a href="#checklisten" class="k-nav-link k-nav-haupt' + (aktiv === "checklisten" ? " aktiv" : "") + '">Checklisten und Vorlagen</a></div>';
     var war = nav.querySelector(".k-navbox");
@@ -259,6 +272,7 @@
     var html = '<section class="k-kopf"><p class="label">Online-Kurs</p><h1>Dein Weg zum Bodypiercer</h1>' +
       '<p class="lead">' + MODULE.length + " Module, " + GESAMT_LEKTIONEN + " Lektionen und " + GESAMT_FRAGEN + " Fragen auf Grundlage des Kursbuchs „Die Piercing Akademie – Dein Weg zum Bodypiercer“.</p></section>" +
       '<ol class="k-prinzip" aria-label="So funktioniert der Kurs"><li>Erklärung lesen</li><li>Fragen beantworten</li><li>Nächste Lektion</li><li>Modulprüfung</li><li>Nächstes Modul</li><li>Prüfungssimulation</li></ol>' +
+      '<div class="k-box k-praxis"><strong>Wissen ist nicht Können</strong><p>Der Online-Kurs ersetzt keine praktische Anleitung. Gestochen wird erst am Praxistag, unter Aufsicht. Steche nach dem Online-Kurs niemanden allein.' + (LABOR ? ' Die Handgriffe übst du vorher ohne zu stechen im <a href="#labor">Praxislabor</a>.' : "") + "</p></div>" +
       '<div class="k-fortschritt">' + balken(erledigt, GESAMT_LEKTIONEN, "Erledigte Lektionen") +
       "<p><strong>" + erledigt + " von " + GESAMT_LEKTIONEN + "</strong> Lektionen · <strong>" + anzahlBestanden() + " von " + MODULE.length + "</strong> Modulprüfungen bestanden" + (stand.simulation && stand.simulation.bestanden ? " · Prüfungssimulation bestanden" : "") + "</p></div>" +
       weiterLernen() + '<h2 class="k-h2">Module</h2><div class="k-modulraster">';
@@ -405,7 +419,7 @@
         form.querySelectorAll("input").forEach(function (x) { x.disabled = true; });
         rm.hidden = false;
         rm.innerHTML = (ok ? "<strong>Richtig.</strong> " : "<strong>Nicht richtig.</strong> Richtig ist: „" + esc(f.antworten[f.richtig]) + "“. Die Frage kommt am Ende noch einmal. ") + esc(f.erklaerung) +
-          (f.seite ? ' <span class="label">' + esc(f.seite) + "</span>" : "");
+          (f.seite ? ' <span class="label">' + esc(f.seite) + "</span>" : "") + (opt.hinweis ? "<br><em>" + esc(opt.hinweis(f, ok)) + "</em>" : "");
         pruefen.hidden = true; weiter.hidden = false; weiter.focus();
       });
       weiter.addEventListener("click", naechste);
@@ -443,7 +457,7 @@
       speichern();
       form.querySelectorAll("input").forEach(function (x) { x.disabled = true; });
       form.querySelector('[type="submit"]').hidden = true; form.querySelector("[data-neu]").hidden = false;
-      ergebnis.hidden = false; ergebnis.innerHTML = auswerten(richtig, fragen.length); ergebnis.focus();
+      ergebnis.hidden = false; ergebnis.innerHTML = auswerten(richtig, fragen.length, antworten); ergebnis.focus();
     });
     form.querySelector("[data-neu]").addEventListener("click", function () { zeige(); window.scrollTo(0, 0); });
   }
@@ -455,15 +469,15 @@
     }
     var fragen = mischen(m.pool).slice(0, FRAGEN_JE_PRUEFUNG).map(gemischt);
     app.innerHTML = '<section class="k-kopf"><p class="label"><a href="#modul-' + m.nr + '">Modul ' + zwei(m.nr) + " · " + esc(m.titel) + "</a></p><h1>Modulprüfung</h1></section>" +
-      pruefungsFormular(fragen, fragen.length + " Fragen", "Zufällig aus " + m.pool.length + " Fragen gezogen. Bestanden ab " + benoetigt(fragen.length) + " richtigen Antworten. Jede neue Prüfung stellt andere Fragen.");
+      pruefungsFormular(fragen, fragen.length + " Fragen", "Zufällig aus " + m.pool.length + " Fragen gezogen. Bestanden ab " + benoetigt(fragen.length, quote(m.nr)) + " richtigen Antworten" + (STRENG[m.nr] ? " (" + prozent(quote(m.nr)) + ": " + STRENG[m.nr].kurz + " ist sicherheitsrelevant, deshalb gilt hier eine höhere Hürde)" : "") + ". Jede neue Prüfung stellt andere Fragen.");
     bindePruefung(app.querySelector("form.k-test"), fragen, function (richtig, gesamt) {
-      var ok = richtig >= benoetigt(gesamt);
+      var ok = richtig >= benoetigt(gesamt, quote(m.nr));
       if (ok) { stand.bestanden[m.nr] = { richtig: richtig, gesamt: gesamt }; speichern(); }
       zeichneNav(m.nr);
       var n = modul(m.nr + 1);
       return ok
         ? "<strong>Bestanden: " + richtig + " von " + gesamt + " richtig.</strong> " + (n ? 'Modul ' + zwei(n.nr) + ' ist jetzt offen. <a class="btn small" href="#lektion-' + n.nr + '-0">Weiter mit Modul ' + zwei(n.nr) + "</a>" : 'Alle Module sind geschafft. <a class="btn small" href="#simulation">Zur Prüfungssimulation</a>')
-        : "<strong>Noch nicht bestanden: " + richtig + " von " + gesamt + " richtig.</strong> Du brauchst " + benoetigt(gesamt) + '. Übe die falschen Fragen im <a href="#fehler">Fehler-Training</a> und starte dann eine neue Prüfung.';
+        : "<strong>Noch nicht bestanden: " + richtig + " von " + gesamt + " richtig.</strong> Du brauchst " + benoetigt(gesamt, quote(m.nr)) + '. Übe die falschen Fragen im <a href="#fehler">Fehler-Training</a> und starte dann eine neue Prüfung.';
     });
   }
 
@@ -473,13 +487,22 @@
       return;
     }
     var fragen = [];
-    MODULE.forEach(function (m) { fragen = fragen.concat(mischen(m.pool).slice(0, SIMULATION_JE_MODUL).map(gemischt)); });
+    MODULE.forEach(function (m) { fragen = fragen.concat(mischen(m.pool).slice(0, STRENG[m.nr] ? STRENG[m.nr].simFragen : SIMULATION_JE_MODUL).map(gemischt)); });
     fragen = mischen(fragen);
-    app.innerHTML = '<section class="k-kopf"><p class="label">Abschluss</p><h1>Prüfungssimulation</h1><p class="lead">Wie die Abschlussprüfung: ' + fragen.length + " Fragen aus allen Modulen, bestanden ab " + benoetigt(fragen.length) + " richtigen Antworten.</p>" +
+    var bloecke = Object.keys(STRENG).filter(function (nr) { return modul(+nr); }).map(function (nr) {
+      return { nr: +nr, kurz: STRENG[nr].kurz, maxFehler: STRENG[nr].simMaxFehler, fragen: fragen.filter(function (f) { return f.modul === +nr; }) };
+    });
+    var bedingung = bloecke.map(function (b) { return b.kurz + " (" + b.fragen.length + " Fragen) höchstens " + (b.maxFehler === 1 ? "ein Fehler" : b.maxFehler + " Fehler"); }).join(", ");
+    app.innerHTML = '<section class="k-kopf"><p class="label">Abschluss</p><h1>Prüfungssimulation</h1><p class="lead">Wie die Abschlussprüfung: ' + fragen.length + " Fragen aus allen Modulen, bestanden ab " + benoetigt(fragen.length) + " richtigen Antworten. Zusätzlich gilt für die Sicherheitsthemen: " + esc(bedingung) + ".</p>" +
       (stand.simulation ? '<p class="fine">' + (stand.simulation.bestanden ? "Bestes Ergebnis: " : "Letzter Versuch: ") + stand.simulation.richtig + " von " + stand.simulation.gesamt + (stand.simulation.bestanden ? ', bestanden. <a href="#bescheinigung">Zur Bescheinigung</a>' : ".") + "</p>" : "") + "</section>" +
       pruefungsFormular(fragen, "Alle Module", "Beantworte jede Frage. Die Auswertung zeigt dir zu jeder Frage die Erklärung und das Modul.");
-    bindePruefung(app.querySelector("form.k-test"), fragen, function (richtig, gesamt) {
-      var ok = richtig >= benoetigt(gesamt);
+    bindePruefung(app.querySelector("form.k-test"), fragen, function (richtig, gesamt, antworten) {
+      var verfehlt = bloecke.filter(function (b) {
+        var falsch = b.fragen.filter(function (f) { return antworten[fragen.indexOf(f)] !== f.richtig; }).length;
+        b.falsch = falsch; return falsch > b.maxFehler;
+      });
+      var gesamtOk = richtig >= benoetigt(gesamt);
+      var ok = gesamtOk && !verfehlt.length;
       var vorher = stand.simulation && stand.simulation.bestanden ? stand.simulation : null;
       stand.simulation = ok && (!vorher || richtig > vorher.richtig)
         ? { richtig: richtig, gesamt: gesamt, bestanden: true, datum: new Date().toISOString().slice(0, 10) }
@@ -487,19 +510,30 @@
       speichern(); zeichneNav("simulation");
       return ok
         ? "<strong>Bestanden: " + richtig + " von " + gesamt + ' richtig.</strong> Glückwunsch! Deine Bescheinigung über den Online-Teil kannst du jetzt erstellen.</p><p><a class="btn" href="#bescheinigung">Bescheinigung erstellen</a>'
-        : "<strong>Noch nicht bestanden: " + richtig + " von " + gesamt + " richtig.</strong> Du brauchst " + benoetigt(gesamt) + '. Übe im <a href="#fehler">Fehler-Training</a> und versuch es noch einmal.';
+        : "<strong>Noch nicht bestanden: " + richtig + " von " + gesamt + " richtig.</strong> " +
+          (gesamtOk ? "" : "Du brauchst " + benoetigt(gesamt) + ". ") +
+          verfehlt.map(function (b) { return esc(b.kurz) + ": " + b.falsch + " Fehler, erlaubt " + (b.maxFehler === 1 ? "ist einer" : "sind " + b.maxFehler) + ". "; }).join("") +
+          'Übe im <a href="#fehler">Fehler-Training</a> und versuch es noch einmal.';
     });
   }
 
   // ---------- Fehler-Training ----------
   function fehlerSeite() {
     var liste = Object.keys(stand.fehler).filter(function (k) { return ALLE_FRAGEN[k]; }).map(function (k) { return ALLE_FRAGEN[k]; });
-    var kopf = '<section class="k-kopf"><p class="label">Training</p><h1>Fehler-Training</h1><p class="lead">Hier sammeln sich alle Fragen, die du in Lektionen oder Prüfungen falsch beantwortet hast. Beantwortest du eine richtig, verschwindet sie aus dem Training.</p></section>';
+    var kopf = '<section class="k-kopf"><p class="label">Training</p><h1>Fehler-Training</h1><p class="lead">Hier sammeln sich alle Fragen, die du in Lektionen oder Prüfungen falsch beantwortet hast. Eine Frage verschwindet erst, wenn du sie in zwei verschiedenen Runden richtig beantwortet hast. Ein neuer Fehler setzt das wieder auf null.</p></section>';
     if (!liste.length) { app.innerHTML = kopf + '<div class="k-lektion"><p><strong>Keine offenen Fehler.</strong> Sobald du eine Frage falsch beantwortest, kannst du sie hier wiederholen.</p></div>'; return; }
     app.innerHTML = kopf + '<section class="k-quiz" id="quiz"></section>';
     fragenRunde(document.getElementById("quiz"), liste.slice(0, 20), {
       titel: liste.length > 20 ? "20 von " + liste.length + " Fehlerfragen" : liste.length + " Fehlerfragen",
-      richtig: function (f) { delete stand.fehler[f.frage]; speichern(); zeichneNav("fehler"); },
+      richtig: function (f) {
+        var n = (stand.fehlerRichtig[f.frage] || 0) + 1;
+        if (n >= FEHLER_RICHTIG_NOETIG) { delete stand.fehler[f.frage]; delete stand.fehlerRichtig[f.frage]; } else stand.fehlerRichtig[f.frage] = n;
+        speichern(); zeichneNav("fehler");
+      },
+      hinweis: function (f, ok) {
+        if (!ok) return " Zurück auf null: Du musst sie noch " + FEHLER_RICHTIG_NOETIG + "-mal richtig beantworten.";
+        return stand.fehler[f.frage] ? " Noch einmal richtig in einer späteren Runde, dann ist sie erledigt." : " Zweimal richtig: erledigt.";
+      },
       fertig: function () {
         var rest = anzahlFehler();
         return "<h2>Runde geschafft</h2><p>" + (rest ? "Noch " + rest + " Fragen im Fehler-Training." : "Alle Fehlerfragen sind erledigt.") + '</p><p class="k-test-aktionen">' + (rest ? '<button type="button" class="btn" id="noch-eine">Nächste Runde</button> ' : "") + '<a class="btn ghost" href="#uebersicht">Zur Übersicht</a></p>';
@@ -532,7 +566,7 @@
         '<div class="k-urkunde-kopf"><img src="' + (document.querySelector(".brand img") || {}).src + '" alt="" width="44" height="44"><span>Piercing Akademie</span></div>' +
         '<p class="label">Bescheinigung</p><h2>Online-Kurs erfolgreich abgeschlossen</h2>' +
         '<p class="k-urkunde-name" id="b-ausgabe">' + (esc(name) || "Dein Name") + "</p>" +
-        "<p>hat alle " + MODULE.length + " Module des Online-Kurses der Piercing Akademie bearbeitet, jede Modulprüfung bestanden und die Prüfungssimulation mit <strong>" + sim.richtig + " von " + sim.gesamt + "</strong> richtigen Antworten abgeschlossen.</p>" +
+        "<p>hat alle " + MODULE.length + " Module des Online-Kurses der Piercing Akademie bearbeitet, jede Modulprüfung bestanden (Hygiene sowie Ablauf und Notfälle mit mindestens 85 %) und die Prüfungssimulation mit <strong>" + sim.richtig + " von " + sim.gesamt + "</strong> richtigen Antworten abgeschlossen.</p>" +
         '<ul class="k-urkunde-module">' + MODULE.map(function (m) { return "<li>" + zwei(m.nr) + " " + esc(m.titel) + "</li>"; }).join("") + "</ul>" +
         '<div class="k-urkunde-fuss"><div><span>' + new Date(datum + "T12:00:00").toLocaleDateString("de-DE", { day: "numeric", month: "long", year: "numeric" }) + '</span>Datum</div><div><span id="b-nr">' + (ausgestellt ? esc(ausgestellt.nr) : KONTO ? "wird vergeben" : pruefnummer(name, datum, sim.richtig)) + "</span>Nummer</div><div><span>Alessandro Noto</span>Piercing Akademie, Lingen (Ems)</div></div>" +
         (KONTO ? '<p class="fine" id="b-pruefen">' + (ausgestellt ? "Prüfbar unter piercingakademie.de/pruefen?nr=" + esc(ausgestellt.nr) : "") + "</p>" : "") +
@@ -589,6 +623,30 @@
     app.querySelectorAll("[data-leeren]").forEach(function (b) { b.addEventListener("click", function () { Object.keys(stand.check).forEach(function (k) { if (k.indexOf(b.dataset.leeren + "-") === 0) delete stand.check[k]; }); speichern(); checklistenSeite(); }); });
   }
 
+  // ---------- Praxislabor: Übungen am Silikon-Übungsmodell mit Selbstkontrolle ----------
+  function laborSeite() {
+    var L = LABOR;
+    app.innerHTML = '<section class="k-kopf"><p class="label">Praxis</p><h1>Praxislabor</h1><p class="lead">' + esc(L.einleitung) + "</p>" +
+      '<p class="fine">' + laborAnzahl() + " von " + L.aufgaben.length + " Aufgaben mit erfüllter Selbstkontrolle.</p></section>" +
+      '<div class="k-box k-achtung"><strong>Sicherheit</strong><ul>' + L.sicherheit.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul></div>" +
+      '<section class="k-lektion"><h2>Material</h2><p>' + esc(L.material) + '</p><p><a class="btn ghost small" href="vorlagen/uebungsvorlage.pdf" download>Übungsvorlage herunterladen (PDF)</a></p></section>' +
+      L.aufgaben.map(function (a, ai) {
+        var fertig = laborErledigt(a);
+        return '<section class="k-lektion k-labor' + (fertig ? " k-labor-fertig" : "") + '" id="labor-' + a.id + '"><p class="label">Aufgabe ' + (ai + 1) + ' · passt zu <a href="#modul-' + a.modul + '">Modul ' + zwei(a.modul) + "</a>" + (fertig ? " · erledigt ✓" : "") + "</p><h2>" + esc(a.titel) + "</h2>" +
+          "<h4>Du brauchst</h4><ul>" + a.material.map(function (m) { return "<li>" + esc(m) + "</li>"; }).join("") + "</ul>" +
+          '<h4>So gehst du vor</h4><ol class="k-schritte">' + a.schritte.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ol>" +
+          '<h4>Selbstkontrolle</h4><ul class="k-aufgaben">' + a.kontrolle.map(function (t, i) { var key = a.id + "-" + i; return '<li><label><input type="checkbox" data-labor="' + key + '"' + (stand.labor[key] ? " checked" : "") + "> " + esc(t) + "</label></li>"; }).join("") + "</ul></section>";
+      }).join("");
+    app.querySelectorAll("[data-labor]").forEach(function (c) {
+      c.addEventListener("change", function () {
+        if (c.checked) stand.labor[c.dataset.labor] = true; else delete stand.labor[c.dataset.labor];
+        speichern(); zeichneNav("labor");
+        var sek = c.closest(".k-labor"), a = L.aufgaben.filter(function (x) { return "labor-" + x.id === sek.id; })[0];
+        sek.classList.toggle("k-labor-fertig", laborErledigt(a));
+      });
+    });
+  }
+
   // ---------- Router ----------
   function zeige() {
     var h = (window.location.hash || "#uebersicht").slice(1);
@@ -598,6 +656,7 @@
     else if ((t = /^modul-(\d+)$/.exec(h)) && modul(+t[1])) { zeichneNav(+t[1]); modulSeite(modul(+t[1])); }
     else if ((t = /^pruefung-(\d+)$/.exec(h)) && modul(+t[1])) { zeichneNav(+t[1]); pruefungSeite(modul(+t[1])); }
     else if (h === "bescheinigung") { zeichneNav("simulation"); bescheinigungSeite(); }
+    else if (h === "labor" && LABOR) { zeichneNav("labor"); laborSeite(); }
     else if (h === "simulation" || h === "fehler" || h === "glossar" || h === "checklisten") {
       zeichneNav(h); ({ simulation: simulationSeite, fehler: fehlerSeite, glossar: glossarSeite, checklisten: checklistenSeite })[h]();
     } else { zeichneNav("uebersicht"); uebersicht(); }
