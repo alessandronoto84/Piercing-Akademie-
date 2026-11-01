@@ -232,11 +232,11 @@ ${svg(178, 70, a)}
 ${svg(178, 60, b)}
 <div class="seite"></div>
 <h1>Übungsprotokoll</h1>
-<p class="lead">Trag ein, wann du welche Aufgabe geübt hast. Bring das Blatt zum Praxistag mit.</p>
+<p class="lead">Trag ein, wann du welche Übung gemacht hast. Die Stichübungen gehören zu den Paketen Praxis und Komplett. Bring das Blatt und dein Silikonohr zum Praxistag mit.</p>
 <table><tr><th style="width:58mm">Aufgabe</th><th style="width:20mm">Datum</th><th style="width:22mm">Durchgänge</th><th style="width:26mm">Selbstkontrolle erfüllt</th><th>Notizen</th></tr>
-${L.aufgaben.map((x, i) => `<tr><td>${i + 1}. ${esc(x.titel)}</td><td></td><td></td><td>☐</td><td></td></tr>`).join("")}
+${L.aufgaben.map((x, i) => `<tr><td>Trocken ${i + 1}: ${esc(x.titel)}</td><td></td><td></td><td>☐</td><td></td></tr>`).join("")}${(L.stich ? L.stich.aufgaben : []).map((x, i) => `<tr><td>Stich ${i + 1}: ${esc(x.titel)}</td><td></td><td></td><td>☐</td><td></td></tr>`).join("")}
 </table>
-<h2>Aufgabe 6: Der Ablauf aus dem Gedächtnis</h2>
+<h2>Trockenübung 6: Der Ablauf aus dem Gedächtnis</h2>
 <p>Schreib alle 26 Schritte auf, ohne nachzuschauen. Dann mit Modul 09 vergleichen und Fehlendes in Rot ergänzen.</p>
 <div class="zwei"><table>${zeilen(1, 13)}</table><table>${zeilen(14, 26)}</table></div>
 `);

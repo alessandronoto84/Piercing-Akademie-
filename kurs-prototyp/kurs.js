@@ -45,11 +45,14 @@
     ["vorlagen/einverstaendniserklaerung-muster.pdf", "Einverständniserklärung (Muster)", "2 Seiten, mit freiwilliger Foto-Einwilligung"],
     ["vorlagen/hygieneplan-vorlage.pdf", "Reinigungs- und Desinfektionsplan", "Vorlage zum Ausfüllen, mit dem Gesundheitsamt abstimmen"],
     ["vorlagen/checklisten.pdf", "Alle Checklisten", "Zum Ausdrucken und Abhaken"],
-    ["vorlagen/uebungsvorlage.pdf", "Übungsvorlage Praxislabor", "2 Seiten: Anzeichnen, Symmetrie, Übungsprotokoll"]
+    ["vorlagen/uebungsvorlage.pdf", "Übungsvorlage Praxislabor", "3 Seiten: Anzeichnen, Symmetrie, Übungsprotokoll"]
   ];
   var LABOR = KURS.labor || null;
   function laborErledigt(a) { return a.kontrolle.every(function (_, i) { return stand.labor[a.id + "-" + i]; }); }
-  function laborAnzahl() { return LABOR ? LABOR.aufgaben.filter(laborErledigt).length : 0; }
+  // Stichübungen am Silikonohr: nur Pakete Praxis/Komplett (Übungsset). Im Prototyp ohne Server und für die Akademie offen.
+  function stichOffen() { return !!(LABOR && LABOR.stich) && (!KONTO || KONTO.admin || LABOR.stich.pakete.indexOf(KONTO.paket) > -1); }
+  function laborAlle() { return LABOR ? LABOR.aufgaben.concat(stichOffen() ? LABOR.stich.aufgaben : []) : []; }
+  function laborAnzahl() { return laborAlle().filter(laborErledigt).length; }
 
   // ---------- Fortschritt ----------
   // Auf dem Server (Cloudflare) setzt /kurs/konto.js window.PA_KONTO: Fortschritt kommt dann vom Server und wird dorthin gespeichert.
@@ -258,7 +261,7 @@
     html += '</ol><div class="k-nav-extras">' +
       '<a href="#fehler" class="k-nav-link k-nav-haupt' + (aktiv === "fehler" ? " aktiv" : "") + '">Fehler-Training (' + anzahlFehler() + ")</a>" +
       '<a href="#simulation" class="k-nav-link k-nav-haupt' + (aktiv === "simulation" ? " aktiv" : "") + (simulationOffen() ? "" : " k-gesperrt") + '">Prüfungssimulation' + (stand.simulation && stand.simulation.bestanden ? " ✓" : "") + "</a>" +
-      (LABOR ? '<a href="#labor" class="k-nav-link k-nav-haupt' + (aktiv === "labor" ? " aktiv" : "") + '">Praxislabor (' + laborAnzahl() + "/" + LABOR.aufgaben.length + ")</a>" : "") +
+      (LABOR ? '<a href="#labor" class="k-nav-link k-nav-haupt' + (aktiv === "labor" ? " aktiv" : "") + '">Praxislabor (' + laborAnzahl() + "/" + laborAlle().length + ")</a>" : "") +
       '<a href="#glossar" class="k-nav-link k-nav-haupt' + (aktiv === "glossar" ? " aktiv" : "") + '">Glossar</a>' +
       '<a href="#checklisten" class="k-nav-link k-nav-haupt' + (aktiv === "checklisten" ? " aktiv" : "") + '">Checklisten und Vorlagen</a></div>';
     var war = nav.querySelector(".k-navbox");
@@ -287,7 +290,7 @@
     html += '</div><h2 class="k-h2">Training und Nachschlagen</h2><div class="k-modulraster">' +
       '<a class="k-modulkarte" href="#fehler"><span class="label">Training</span><strong>Fehler-Training</strong><span class="k-meta">' + anzahlFehler() + " Fragen, die du falsch beantwortet hast</span></a>" +
       '<a class="k-modulkarte' + (simulationOffen() ? "" : " k-gesperrt") + '" href="#simulation"><span class="label">Abschluss</span><strong>Prüfungssimulation</strong><span class="k-meta">' + simulationsUmfang() + " Fragen aus allen Modulen" + (simulationOffen() ? "" : " · öffnet nach allen Modulprüfungen") + "</span></a>" +
-      (LABOR ? '<a class="k-modulkarte" href="#labor"><span class="label">Praxis</span><strong>Praxislabor</strong><span class="k-meta">' + laborAnzahl() + " von " + LABOR.aufgaben.length + " Übungen am Silikon-Übungsmodell</span></a>" : "") +
+      (LABOR ? '<a class="k-modulkarte" href="#labor"><span class="label">Praxis</span><strong>Praxislabor</strong><span class="k-meta">' + laborAnzahl() + " von " + laborAlle().length + " Übungen, ohne und mit Stechen am Silikonohr</span></a>" : "") +
       '<a class="k-modulkarte" href="#glossar"><span class="label">Nachschlagen</span><strong>Glossar</strong><span class="k-meta">' + (KURS.glossar || []).length + " Fachbegriffe</span></a>" +
       '<a class="k-modulkarte" href="#checklisten"><span class="label">Praxis</span><strong>Checklisten und Vorlagen</strong><span class="k-meta">' + (KURS.checklisten || []).length + " Checklisten, " + VORLAGEN.length + " Druckvorlagen als PDF</span></a></div>" +
       '<section class="k-einstellungen"><h2>Prototyp-Einstellungen</h2>' +
@@ -628,26 +631,39 @@
 
   // ---------- Praxislabor: Übungen am Silikon-Übungsmodell mit Selbstkontrolle ----------
   function laborSeite() {
-    var L = LABOR;
+    var L = LABOR, ST = stichOffen() ? L.stich : null;
+    function aufgabe(a, nr) {
+      var fertig = laborErledigt(a), film = "";
+      if (a.clip && CLIPS[a.clip]) film = clip({ id: a.clip, text: a.clipText || a.titel, titel: "Clip: " + a.titel });
+      else if (a.clip && stand.vorschau) film = '<p class="k-box k-ergaenzung"><strong>Clip fehlt noch</strong> „' + esc(a.clip) + '“: ' + esc(a.clipText || "") + " (siehe Drehliste CLIPS-PRAXISLABOR.md)</p>";
+      return '<section class="k-lektion k-labor' + (fertig ? " k-labor-fertig" : "") + '" id="labor-' + a.id + '"><p class="label">' + nr + ' · passt zu <a href="#modul-' + a.modul + '">Modul ' + zwei(a.modul) + "</a>" + (fertig ? " · erledigt ✓" : "") + "</p><h2>" + esc(a.titel) + "</h2>" + film +
+        "<h4>Du brauchst</h4><ul>" + a.material.map(function (m) { return "<li>" + esc(m) + "</li>"; }).join("") + "</ul>" +
+        '<h4>So gehst du vor</h4><ol class="k-schritte">' + a.schritte.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ol>" +
+        '<h4>Selbstkontrolle</h4><ul class="k-aufgaben">' + a.kontrolle.map(function (t, i) { var key = a.id + "-" + i; return '<li><label><input type="checkbox" data-labor="' + key + '"' + (stand.labor[key] ? " checked" : "") + "> " + esc(t) + "</label></li>"; }).join("") + "</ul></section>";
+    }
+    var liste = function (xs) { return "<ul>" + xs.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul>"; };
     app.innerHTML = '<section class="k-kopf"><p class="label">Praxis</p><h1>Praxislabor</h1><p class="lead">' + esc(L.einleitung) + "</p>" +
-      '<p class="fine">' + laborAnzahl() + " von " + L.aufgaben.length + " Aufgaben mit erfüllter Selbstkontrolle.</p></section>" +
-      '<div class="k-box k-achtung"><strong>Sicherheit</strong><ul>' + L.sicherheit.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul></div>" +
+      '<p class="fine">' + laborAnzahl() + " von " + laborAlle().length + " Aufgaben mit erfüllter Selbstkontrolle.</p>" +
+      '<nav class="k-labor-sprung" aria-label="Teile des Praxislabors"><a href="#labor-teil-trocken">Teil 1: Trockenübungen</a>' + (L.stich ? ' · <a href="#labor-teil-stich">Teil 2: Stichübungen am Silikonohr</a>' : "") + "</nav></section>" +
+      '<h2 class="k-h2" id="labor-teil-trocken">Teil 1: Trockenübungen</h2>' +
+      '<div class="k-box k-achtung"><strong>Sicherheit</strong>' + liste(L.sicherheit) + "</div>" +
       '<section class="k-lektion"><h2>Material</h2><p>' + esc(L.material) + '</p><p><a class="btn ghost small" href="vorlagen/uebungsvorlage.pdf" download>Übungsvorlage herunterladen (PDF)</a></p></section>' +
-      L.aufgaben.map(function (a, ai) {
-        var fertig = laborErledigt(a);
-        return '<section class="k-lektion k-labor' + (fertig ? " k-labor-fertig" : "") + '" id="labor-' + a.id + '"><p class="label">Aufgabe ' + (ai + 1) + ' · passt zu <a href="#modul-' + a.modul + '">Modul ' + zwei(a.modul) + "</a>" + (fertig ? " · erledigt ✓" : "") + "</p><h2>" + esc(a.titel) + "</h2>" +
-          "<h4>Du brauchst</h4><ul>" + a.material.map(function (m) { return "<li>" + esc(m) + "</li>"; }).join("") + "</ul>" +
-          '<h4>So gehst du vor</h4><ol class="k-schritte">' + a.schritte.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ol>" +
-          '<h4>Selbstkontrolle</h4><ul class="k-aufgaben">' + a.kontrolle.map(function (t, i) { var key = a.id + "-" + i; return '<li><label><input type="checkbox" data-labor="' + key + '"' + (stand.labor[key] ? " checked" : "") + "> " + esc(t) + "</label></li>"; }).join("") + "</ul></section>";
-      }).join("");
+      L.aufgaben.map(function (a, i) { return aufgabe(a, "Trockenübung " + (i + 1)); }).join("") +
+      (L.stich ? '<h2 class="k-h2" id="labor-teil-stich">Teil 2: Stichübungen am Silikonohr</h2>' +
+        (ST ? '<section class="k-lektion"><p>' + esc(ST.einleitung) + '</p><h4>In deinem Übungsset</h4>' + liste(ST.set) + "</section>" +
+          '<div class="k-box k-achtung"><strong>Sicherheit bei den Stichübungen</strong>' + liste(ST.sicherheit) + "</div>" +
+          ST.aufgaben.map(function (a, i) { return aufgabe(a, "Stichübung " + (i + 1)); }).join("")
+        : '<section class="k-lektion"><p>' + esc(L.stich.gesperrt) + '</p><p><a class="btn ghost small" href="/#pakete">Pakete ansehen</a></p></section>') : "");
     app.querySelectorAll("[data-labor]").forEach(function (c) {
       c.addEventListener("change", function () {
         if (c.checked) stand.labor[c.dataset.labor] = true; else delete stand.labor[c.dataset.labor];
         speichern(); zeichneNav("labor");
-        var sek = c.closest(".k-labor"), a = L.aufgaben.filter(function (x) { return "labor-" + x.id === sek.id; })[0];
+        var sek = c.closest(".k-labor"), a = laborAlle().filter(function (x) { return "labor-" + x.id === sek.id; })[0];
         sek.classList.toggle("k-labor-fertig", laborErledigt(a));
       });
     });
+    app.querySelectorAll(".k-labor-sprung a").forEach(function (l) { l.addEventListener("click", function (e) { e.preventDefault(); var z = document.getElementById(l.getAttribute("href").slice(1)); if (z) z.scrollIntoView({ behavior: "smooth" }); }); });
+    app.querySelectorAll("video[data-schleife]").forEach(function (v) { v.play && v.play().catch(function () {}); });
   }
 
   // ---------- Router ----------

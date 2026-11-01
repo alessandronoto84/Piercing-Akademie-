@@ -5,9 +5,9 @@
    Format: { id, titel, modul (Bezug), material: [...], schritte: [...], kontrolle: [...] } */
 window.KURS = window.KURS || { module: [] };
 window.KURS.labor = {
-  einleitung: "Hier übst du die Handgriffe, die du am Praxistag brauchst, ohne zu stechen: am Silikon-Übungsmodell, auf Papier und als Trockenübung. Jede Aufgabe hat eine Selbstkontrolle. Hake nur ab, was du wirklich geschafft hast. Bring die ausgefüllte Übungsvorlage zum Praxistag mit.",
+  einleitung: "Hier übst du die Handgriffe, die du am Praxistag brauchst. Teil 1 sind Trockenübungen ohne Stechen: am Silikon-Übungsmodell, auf Papier und am Arbeitsplatz. In Teil 2 stichst du mit dem Übungsset ins Silikonohr (Pakete Praxis und Komplett). Jede Aufgabe hat eine Selbstkontrolle. Hake nur ab, was du wirklich geschafft hast. Bring die ausgefüllte Übungsvorlage zum Praxistag mit.",
   sicherheit: [
-    "Du stichst im Praxislabor nie: nicht ins Übungsmodell, nicht in dich, nicht in andere Menschen und nicht in Tiere. Gestochen wird erst am Praxistag unter Anleitung.",
+    "Bei den Trockenübungen wird nicht gestochen. Ins Silikonohr stichst du erst in Teil 2, mit dem Übungsset der Pakete Praxis und Komplett. In Menschen oder Tiere stichst du nie; das lernst du am Praxistag unter Anleitung.",
     "Benutze Kanülen nur als Trockenübung mit aufgesetzter Schutzkappe. Gebrauchte oder offene Kanülen gehören sofort in den Nadelabwurfbehälter.",
     "Der Online-Kurs und das Praxislabor ersetzen keine praktische Anleitung."
   ],
@@ -137,6 +137,162 @@ window.KURS.labor = {
         "Ich habe richtig reagiert, ohne nachzuschauen.",
         "Ich weiß, wo in meinem Übungsraum Erste-Hilfe-Kasten und Telefon sind, und kenne die Notrufnummer 112.",
         "Ich konnte die Checkliste nach einer Nadelstichverletzung vollständig aufsagen."
+      ]
+    }
+  ]
+};
+
+/* Stichübungen am Silikonohr: nur für die Pakete Praxis und Komplett (mit Übungsset der Akademie).
+   Gestochen wird ausschließlich ins Silikon. Ablauf nach Kursbuch S. 111–112 (Schritte 9–19), Werte aus den Datenblättern (Modul 08).
+   clip: Id eines Clips in inhalte/clips.js. Fehlt der Clip noch, sehen Teilnehmer nichts; im Prüfmodus erscheint ein Hinweis.
+   Drehliste für die Clips: CLIPS-PRAXISLABOR.md im Hauptordner. */
+window.KURS.labor.stich = {
+  pakete: ["praxis", "komplett"],
+  einleitung: "Mit deinem Übungsset stichst du jetzt selbst: ins Silikonohr, nach dem Ablauf aus Modul 09 und den Datenblättern aus Modul 08. Schau dir zuerst den Clip an, dann übst du. Bring dein gestochenes Silikonohr und das Übungsprotokoll zum Praxistag mit: Dort schauen wir uns deine Stichkanäle gemeinsam an.",
+  gesperrt: "Die Stichübungen am Silikonohr gehören zu den Paketen Praxis und Komplett, denn dafür bekommst du von uns das Übungsset mit Silikonohr, Kanülen und Abwurfbehälter. Die Trockenübungen oben kannst du trotzdem alle machen.",
+  sicherheit: [
+    "Gestochen wird nur ins Silikonohr. Nie in dich, in andere Menschen oder in Tiere, auch nicht „nur zum Ausprobieren“.",
+    "Kanülen nie zurück in die Schutzkappe stecken. Die Stahlnadel kommt direkt nach dem Herausziehen in den Nadelabwurfbehälter; der volle Behälter wird fest verschlossen im Restmüll entsorgt.",
+    "Arbeite mit Handschuhen auf einer Einmalunterlage, ohne Ablenkung und außer Reichweite von Kindern. Kanülen und Abwurfbehälter bewahrst du verschlossen auf.",
+    "Stichst du dich doch einmal, gilt die Checkliste „Nach einer Nadelstichverletzung“ aus Modul 05."
+  ],
+  set: ["Silikonohr", "Venenverweilkanülen 18G und 16G", "kleiner Nadelabwurfbehälter", "Klemme (Snaptile oder Gazeklemme)", "Einmal-Hautmarker", "Einmalhandschuhe und Einmalunterlage", "Übungsschmuck: Labret, Klemmkugelring (BCR), Barbell 38 mm", "Schere für den Kunststoffüberzug"],
+  aufgaben: [
+    {
+      id: "stich-kanuele",
+      titel: "Die Kanüle sicher handhaben",
+      modul: 7,
+      clip: "labor-kanuele",
+      clipText: "Kanüle aus der Verpackung nehmen, Schutzkappe ab, Stahlnadel nach dem Stich direkt in den Abwurfbehälter.",
+      material: ["18G-Kanüle", "Nadelabwurfbehälter", "Handschuhe"],
+      schritte: [
+        "Abwurfbehälter so hinstellen, dass du ihn mit der Arbeitshand ohne Umgreifen erreichst.",
+        "Kanüle aus der Verpackung nehmen, ohne die Nadel zu berühren. Schutzkappe gerade abziehen und weglegen.",
+        "Kanüle am Griff halten und ins Silikon stechen (irgendwo, nur zum Üben der Bewegung).",
+        "Stahlnadel am Griff herausziehen, der Kunststoffüberzug bleibt im Silikon. Nadel sofort in den Abwurfbehälter.",
+        "Dreimal wiederholen, bis die Bewegung von der Verpackung bis zum Abwurf flüssig sitzt."
+      ],
+      kontrolle: [
+        "Ich habe die Schutzkappe kein einziges Mal zurückgesteckt.",
+        "Die Nadel war nach dem Herausziehen sofort im Abwurfbehälter, nie auf dem Tisch.",
+        "Der Kunststoffüberzug ist jedes Mal im Silikon geblieben."
+      ]
+    },
+    {
+      id: "stich-lobe",
+      titel: "Lobe stechen und Labret einsetzen",
+      modul: 9,
+      clip: "labor-lobe",
+      clipText: "Lobe am Silikonohr: anzeichnen, Klemme, 18G stechen, Nadel heraus, Überzug kürzen, Labret durchdrücken, Kugel aufdrehen.",
+      material: ["Silikonohr", "18G-Kanüle", "Klemme", "Hautmarker", "Schere", "Labret", "Klemmzange"],
+      schritte: [
+        "Ein- und Austrittsstelle am Ohrläppchen markieren (Schritt 9) und die Markierung prüfen (Schritt 10).",
+        "Klemme anlegen, die Markierung liegt im Fenster (Schritt 11).",
+        "Zügig in die sichtbare Seite stechen, also von vorn, wo später die Kugel sitzt (Schritt 12).",
+        "Stahlnadel herausziehen und entsorgen; der Kunststoffüberzug bleibt im Stichkanal (Schritt 13).",
+        "Überzug mit der Schere leicht kürzen und den Labret hineinstecken (Schritte 14 und 15).",
+        "Den Labret durch den Stichkanal drücken, nicht ziehen (Schritt 16). Röhrchen vorsichtig abziehen (Schritt 17).",
+        "Kugel greifen, Schmuck mit der Klemmzange halten und die Kugel fest aufdrehen (Schritte 18 und 19).",
+        "Dreimal an verschiedenen Stellen des Ohrläppchens wiederholen."
+      ],
+      kontrolle: [
+        "Der Austritt liegt höchstens 1 mm neben meiner hinteren Markierung.",
+        "Der Stab steht gerade durch das Ohrläppchen, nicht schräg.",
+        "Ich habe den Schmuck gedrückt, nicht gezogen.",
+        "Die Kugel sitzt fest, und die Platte liegt hinten flach an."
+      ]
+    },
+    {
+      id: "stich-upperlobe",
+      titel: "Upper Lobe: drei Stiche in einer Reihe",
+      modul: 8,
+      clip: "labor-upper-lobe",
+      clipText: "Drei Upper-Lobe-Punkte in gleichem Abstand anzeichnen, nachmessen und nacheinander stechen.",
+      material: ["Silikonohr", "drei 18G-Kanülen", "Klemme", "Hautmarker", "Messschieber oder Lineal", "drei Labrets"],
+      schritte: [
+        "Drei Punkte im oberen Ohrläppchen in gleichem Abstand anzeichnen und mit dem Messschieber nachmessen.",
+        "Erst wenn die Abstände stimmen: jeden Punkt nach dem Ablauf aus der vorigen Aufgabe stechen und mit einem Labret versehen.",
+        "Von vorn ein Foto machen und die Reihe beurteilen."
+      ],
+      kontrolle: [
+        "Die drei Abstände weichen höchstens 1 mm voneinander ab.",
+        "Die Reihe folgt einer gleichmäßigen Linie, keiner der Punkte springt heraus.",
+        "Jeder Austritt liegt höchstens 1 mm neben der hinteren Markierung."
+      ]
+    },
+    {
+      id: "stich-helix",
+      titel: "Helix mit Klemmkugelring (BCR)",
+      modul: 8,
+      clip: "labor-helix",
+      clipText: "Helix am Silikonohr stechen und einen Klemmkugelring einsetzen und schließen.",
+      material: ["Silikonohr", "18G-Kanüle", "Klemme", "Hautmarker", "Schere", "Klemmkugelring (BCR)", "Ringöffnungs- und Ringschließzange"],
+      schritte: [
+        "Stelle an der Ohrkante anzeichnen (Datenblatt Helix, Modul 08) und mit der Klemme fixieren.",
+        "Stechen, Nadel heraus und entsorgen, Überzug kürzen.",
+        "Ring mit der Ringöffnungszange vorsichtig öffnen, ein Ende in den Überzug stecken und durch den Stichkanal schieben.",
+        "Röhrchen abziehen, Kugel einsetzen und den Ring mit der Ringschließzange so schließen, dass die Kugel fest einrastet."
+      ],
+      kontrolle: [
+        "Der Ring sitzt rund und ohne Knick; ich habe ihn nicht überdehnt.",
+        "Die Kugel rastet fest ein und fällt beim Drehen des Rings nicht heraus.",
+        "Der Stichkanal verläuft gerade durch den Knorpel des Silikonohrs."
+      ]
+    },
+    {
+      id: "stich-industrial",
+      titel: "Industrial: zwei Stichkanäle auf einer Linie",
+      modul: 8,
+      clip: "labor-industrial",
+      clipText: "Industrial am Silikonohr: beide Punkte so anzeichnen, dass ein 38-mm-Barbell gerade hindurchpasst, dann mit 16G stechen.",
+      material: ["Silikonohr", "zwei 16G-Kanülen", "Hautmarker", "Barbell 38 mm"],
+      schritte: [
+        "Beide Punkte am oberen Ohrrand anzeichnen (Datenblatt Industrial): nahe dem Kopf und gegenüber am äußeren Rand.",
+        "Den Barbell probehalber über die Markierungen halten: Er muss beide Punkte gerade verbinden, ohne das Ohr zu verbiegen.",
+        "Beide Stellen mit der 16G-Kanüle stechen (Freihand, wie im Datenblatt). Nadeln jeweils sofort entsorgen.",
+        "Den Barbell durch beide Überzüge führen und die Kugeln aufdrehen."
+      ],
+      kontrolle: [
+        "Der Barbell liegt gerade und drückt die Ohrmuschel nicht zusammen.",
+        "Beide Stichkanäle zeigen in dieselbe Richtung; der Stab gleitet ohne Kraft hindurch.",
+        "Ich habe vorher geprüft, ob die Markierungen zur Schmucklänge passen."
+      ]
+    },
+    {
+      id: "stich-schmuck",
+      titel: "Schmuck sichern und wechseln",
+      modul: 7,
+      clip: "labor-schmuck",
+      clipText: "Kugel mit Kugelgreifer und Klemmzange aufdrehen, Klemmkugelring öffnen und schließen, Schmuck am Silikonohr wechseln.",
+      material: ["Silikonohr mit gestochenen Kanälen", "Kugelgreifer", "Klemmzange", "Ringöffnungs- und Ringschließzange", "Übungsschmuck"],
+      schritte: [
+        "Eine Kugel mit dem Kugelgreifer aufnehmen und auf den Stab drehen, den du mit der Klemmzange hältst.",
+        "Einen Klemmkugelring öffnen, die Kugel herausnehmen, wieder einsetzen und den Ring schließen.",
+        "In einem fertigen Stichkanal den Labret gegen einen BCR tauschen und zurück.",
+        "Merke dir: Beim echten Kunden wird der Ersteinsatz erst nach vollständiger Abheilung gewechselt (Modul 10)."
+      ],
+      kontrolle: [
+        "Keine Kugel ist mir heruntergefallen oder weggesprungen.",
+        "Der Ring ist nach dem Schließen wieder rund.",
+        "Ich kann erklären, warum der Ersteinsatz beim Kunden nicht früh gewechselt wird."
+      ]
+    },
+    {
+      id: "stich-ablauf",
+      titel: "Der ganze Ablauf in Echtzeit",
+      modul: 9,
+      clip: "labor-ablauf",
+      clipText: "Der komplette Ablauf am Silikonohr, vom Arbeitsplatz bis zu den Pflegehinweisen, in normaler Geschwindigkeit.",
+      material: ["Übungsset komplett", "eine zweite Person als „Kunde“", "Einverständniserklärung und Pflegehinweise (Vorlagen)"],
+      schritte: [
+        "Spiele den Ablauf aus Modul 09 von Schritt 4 bis 25 durch: Die zweite Person füllt die Einverständniserklärung aus, du bereitest den Arbeitsplatz vor.",
+        "Gestochen wird ins Silikonohr, das neben der Person liegt; alles andere (Gespräch, Markierung zeigen, Pflegehinweise) machst du mit ihr.",
+        "Lass die Person auf die Uhr schauen und am Ende sagen, was ihr aufgefallen ist."
+      ],
+      kontrolle: [
+        "Ich habe keinen Schritt ausgelassen und die Reihenfolge eingehalten.",
+        "Ich habe zwischendurch nach dem Befinden gefragt (Kreislauf).",
+        "Die Pflegehinweise habe ich mündlich erklärt und schriftlich mitgegeben."
       ]
     }
   ]
