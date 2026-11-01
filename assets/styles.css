@@ -507,3 +507,6 @@ footer nav[aria-label="Instagram"] a{color:var(--accent)}
 .sprachwahl a[aria-current="true"]{background:var(--gold);color:#111114;font-weight:500}
 .sprachwahl a:hover{color:var(--ink)}
 .sprachwahl a[aria-current="true"]:hover{color:#111114}
+
+/* Unsichtbares Feld gegen Spam-Programme (Anfrageformular) */
+.feld-falle{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}

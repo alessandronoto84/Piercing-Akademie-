@@ -4,7 +4,7 @@
    - Login ohne Passwort: 6-stelliger Code per E-Mail an die beim Kauf angegebene Adresse
    - Stripe-Webhook: legt nach der Zahlung den Zugang an und schickt Zugang + Vertragsbestätigung (§ 312f BGB)
    - speichert Fortschritt und vergibt prüfbare Bescheinigungsnummern */
-import { mailCode, mailWillkommen, mailVerdacht, sende } from "./mail.js";
+import { mailCode, mailWillkommen, mailVerdacht, mailAnfrage, sende } from "./mail.js";
 
 const COOKIE = "pa_sitzung";
 const SITZUNG_TAGE = 30;
@@ -39,6 +39,7 @@ export async function aufraeumen(env) {
   const alt = frist.toISOString();
   await env.DB.batch([
     env.DB.prepare("DELETE FROM anmeldungen WHERE zeit < ?").bind(t - 90 * 86400),
+    env.DB.prepare("DELETE FROM anfragen WHERE zeit < ?").bind(t - 86400),
     env.DB.prepare("DELETE FROM sitzungen WHERE zuletzt < ?").bind(t - SITZUNG_TAGE * 86400),
     env.DB.prepare("DELETE FROM codes WHERE ablauf < ?").bind(t - 3600), // letzte Anforderung über eine Stunde her
     env.DB.prepare("DELETE FROM fortschritt WHERE email IN (SELECT email FROM kunden WHERE gueltig_bis < ?)").bind(alt),
@@ -141,6 +142,7 @@ async function api(req, env, url, ctx) {
   const p = url.pathname;
   if (p === "/api/stripe" && req.method === "POST") return stripeWebhook(req, env, ctx);
   if (req.method === "POST" && !gleicheHerkunft(req, url)) return json({ fehler: "herkunft" }, 403);
+  if (p === "/api/anfrage" && req.method === "POST") return anfrage(req, env, ctx);
   if (p === "/api/code" && req.method === "POST") return codeAnfordern(req, env, ctx);
   if (p === "/api/anmelden" && req.method === "POST") return anmelden(req, env, ctx);
   if (p === "/api/abmelden" && req.method === "POST") {
@@ -232,6 +234,28 @@ async function anmelden(req, env) {
     if (admin) await sende(env, admin.trim(), mailVerdacht(email, r.n));
   }
   return json({ ok: true, beendet: weg.length }, 200, { "Set-Cookie": cookieSetzen(token, env) });
+}
+
+// ---------- Anfrageformular der Website ----------
+// Die Anfrage wird nicht gespeichert, sondern per E-Mail an die Akademie geschickt (Antworten gehen direkt an die Anfragende).
+async function anfrage(req, env, ctx) {
+  const d = await req.json().catch(() => null);
+  if (!d) return json({ fehler: "daten" }, 400);
+  if (d.website) return json({ ok: true }); // Falle für Spam-Programme: unsichtbares Feld ausgefüllt
+  const kurz = (v, n) => String(v || "").trim().slice(0, n);
+  const a = {
+    paket: kurz(d.paketText || d.paket, 80), name: kurz(d.name, 120), email: normal(d.email), telefon: kurz(d.telefon, 40),
+    erfahrung: kurz(d.erfahrung, 80), zeitraum: kurz(d.zeitraum, 120), modelle: kurz(d.modelle, 80), quelle: kurz(d.quelle, 80),
+    nachricht: kurz(d.nachricht, 1500), sprache: ["de", "en", "es"].includes(d.sprache) ? d.sprache : "de"
+  };
+  if (!a.paket || !a.name || !emailOk(a.email)) return json({ fehler: "pflichtfelder" }, 400);
+  const schluessel = await sha256((req.headers.get("CF-Connecting-IP") || "lokal") + ":" + (env.CODE_PFEFFER || ""));
+  const n = await env.DB.prepare("SELECT COUNT(*) AS n FROM anfragen WHERE schluessel = ? AND zeit > ?").bind(schluessel, jetzt() - 3600).first();
+  if (n.n >= 5) return json({ fehler: "zu_oft" }, 429);
+  await env.DB.prepare("INSERT INTO anfragen (zeit, schluessel) VALUES (?, ?)").bind(jetzt(), schluessel).run();
+  const admin = String(env.ADMIN_EMAILS || "").split(",")[0].trim();
+  ctx.waitUntil(sende(env, admin, mailAnfrage(a), a.email));
+  return json({ ok: true });
 }
 
 // ---------- Bescheinigung ----------

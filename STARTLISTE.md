@@ -11,7 +11,7 @@ Stand: 26.10.2026. Erledigtes steht unten. Details und Quellen: `KURS-RECHERCHE.
 | 3 | **Entscheidung Kursplattform** (z. B. elopage, Digistore24, Teachable oder eigene Lösung) | Login, Bezahlung, Freischaltung nach Kauf, Fortschritt auf dem Server, fälschungssichere Bescheinigung, gesperrter Prüfmodus. Ich übertrage die Inhalte dorthin. | du |
 | 4 | **Domain und Hosting** (z. B. piercingakademie.de; Hoster mit Sitz in der EU) | Seite online stellen; Datenschutzerklärung braucht Name, Sitz und Auftragsverarbeitungsvertrag des Hosters. | du |
 | 5 | **E-Mail-Adresse zur Domain** (z. B. info@piercingakademie.de) | Wirkt deutlich seriöser als Gmail; dann überall austauschen. | du |
-| 6 | **Anfrageformular**: Dienst für den Versand wählen (z. B. Formspree, Web3Forms oder über den Hoster) | Das jetzige Formular öffnet nur das E-Mail-Programm; auf vielen Handys geht das nicht. | du entscheidest, ich baue ein |
+| 6 | ~~Anfrageformular~~ | Erledigt (01.11.2026): ausführlicheres Formular, Versand über unseren Cloudflare-Server; aktiv mit dem Livegang. | – |
 | 7 | **Fachliche Freigabe** von Modul 11 („Studio starten“) und der Lektion Perichondritis | Beide sind noch als „Entwurf“ markiert. | du |
 | 8 | **Händlerliste für Modul 11** (Schmuck, Kanülen, Desinfektion) oder Streichung | Platzhalter „Welche Händler sich bewährt haben …“ | du |
 | 9 | **Echte Fotos und kurze Videos**: du im Studio, Arbeitsplatz, Autoklav, Praxistag | Echte Bilder wirken stärker als Symbolbilder. | du |

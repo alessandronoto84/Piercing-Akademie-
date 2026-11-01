@@ -437,7 +437,7 @@
       </div>
 
       <form class="form" id="anfrage" action="mailto:diepiercingakademie@gmail.com" method="post" enctype="text/plain" aria-labelledby="anfrage-titel">
-        <p class="form-title" id="anfrage-titel">Consulta por correo</p>
+        <p class="form-title" id="anfrage-titel">Tu consulta</p>
         <p class="fine">Los campos obligatorios llevan *.</p>
 
         <div class="field">
@@ -459,6 +459,12 @@
         </div>
 
         <div class="field">
+          <label for="f-email">Correo electrónico <span class="req">*</span></label>
+          <input id="f-email" name="email" type="email" autocomplete="email" required maxlength="200" aria-describedby="f-email-err">
+          <p class="err" id="f-email-err" hidden></p>
+        </div>
+
+        <div class="field">
           <label for="f-telefon">Teléfono <span class="req">(opcional)</span></label>
           <input id="f-telefon" name="telefon" type="tel" autocomplete="tel" maxlength="40" pattern="[0-9 +\/\(\)\-]{6,40}" aria-describedby="f-telefon-hint f-telefon-err">
           <p class="hint" id="f-telefon-hint">Si prefieres que te llamemos.</p>
@@ -466,9 +472,48 @@
         </div>
 
         <div class="field">
+          <label for="f-erfahrung">¿Ya trabajas en un estudio? <span class="req">(opcional)</span></label>
+          <select id="f-erfahrung" name="erfahrung">
+            <option value="">Elige una opción</option>
+            <option value="tattoo">Sí, en un estudio de tatuaje</option>
+            <option value="kosmetik">Sí, en un centro de estética</option>
+            <option value="piercing">Sí, en un estudio de piercing</option>
+            <option value="keins">No, todavía en ningún estudio</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="f-zeitraum">Fechas preferidas para el día de práctica <span class="req">(opcional)</span></label>
+          <input id="f-zeitraum" name="zeitraum" type="text" maxlength="120" aria-describedby="f-zeitraum-hint">
+          <p class="hint" id="f-zeitraum-hint">Por ejemplo, «a mediados de marzo, mejor un sábado».</p>
+        </div>
+
+        <div class="field">
+          <label for="f-modelle">¿Traerás tus propios modelos? <span class="req">(opcional)</span></label>
+          <select id="f-modelle" name="modelle">
+            <option value="">Elige una opción</option>
+            <option value="ja">Sí, traeré mis propios modelos</option>
+            <option value="nein">No, por favor buscad modelos para mí</option>
+            <option value="unklar">Aún no lo sé</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="f-quelle">¿Cómo nos conociste? <span class="req">(opcional)</span></label>
+          <select id="f-quelle" name="quelle">
+            <option value="">Elige una opción</option>
+            <option value="instagram">Instagram</option>
+            <option value="google">Google</option>
+            <option value="empfehlung">Recomendación</option>
+            <option value="studio">En el estudio de Lingen</option>
+            <option value="sonstiges">Otro</option>
+          </select>
+        </div>
+
+        <div class="field">
           <label for="f-nachricht">Mensaje <span class="req">(opcional)</span></label>
           <textarea id="f-nachricht" name="nachricht" rows="4" maxlength="1500" aria-describedby="f-nachricht-hint"></textarea>
-          <p class="hint" id="f-nachricht-hint">Por ejemplo, preguntas o las fechas que prefieres para el día de práctica.</p>
+          <p class="hint" id="f-nachricht-hint">Por ejemplo, tus preguntas.</p>
         </div>
 
         <div class="check">
@@ -477,9 +522,15 @@
           <p class="err" id="f-volljaehrig-err" hidden></p>
         </div>
 
-        <p class="fine">El formulario no envía nada por sí mismo. Abre tu programa de correo con un mensaje ya preparado para nosotros. La consulta solo se envía cuando la mandas desde allí. Más información en la <a href="datenschutz.html">política de privacidad</a>.</p>
+        <div class="feld-falle" aria-hidden="true"><label for="f-website">Website</label><input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
 
-        <button class="btn" type="submit">Crear consulta por correo</button>
+        <p class="fine">Tu consulta nos llega directamente; respondemos en un plazo de dos días laborables. Si alguna vez falla el envío, se abrirá tu programa de correo con el mensaje preparado. Más información en la <a href="datenschutz.html">política de privacidad</a>.</p>
+
+        <button class="btn" type="submit">Enviar consulta</button>
+
+        <div class="status" id="anfrage-ok" role="status" tabindex="-1" hidden>
+          <p><strong>Gracias, hemos recibido tu consulta.</strong> Te responderemos en un plazo de dos días laborables.</p>
+        </div>
 
         <div class="status" id="anfrage-status" role="status" tabindex="-1" hidden>
           <p><strong>Ahora debería haberse abierto tu programa de correo.</strong> Envía el mensaje desde allí. Solo entonces nos llegará tu consulta.</p>

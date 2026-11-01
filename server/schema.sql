@@ -40,6 +40,11 @@ CREATE TABLE IF NOT EXISTS fortschritt (
   daten TEXT,
   aktualisiert INTEGER
 );
+-- nur zur Begrenzung von Formular-Spam: Zeitpunkt und gehashte IP, wird nach einem Tag gelöscht
+CREATE TABLE IF NOT EXISTS anfragen (
+  zeit INTEGER,
+  schluessel TEXT
+);
 CREATE TABLE IF NOT EXISTS bescheinigungen (
   nr TEXT PRIMARY KEY,
   email TEXT UNIQUE,

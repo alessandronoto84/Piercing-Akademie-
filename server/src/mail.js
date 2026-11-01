@@ -80,15 +80,27 @@ export function mailVerdacht(email, anzahl) {
   return { betreff: "Piercing Akademie: Zugang " + email + " auffällig", ...r };
 }
 
-export async function sende(env, an, mail) {
+export function mailAnfrage(a) {
+  const zeilen = [["Paket", a.paket], ["Name", a.name], ["E-Mail", a.email], ["Telefon", a.telefon || "–"], ["Arbeitet in einem Studio", a.erfahrung || "–"],
+    ["Wunschzeitraum Praxistag", a.zeitraum || "–"], ["Eigene Modelle", a.modelle || "–"], ["Erfahren über", a.quelle || "–"], ["Sprache der Website", a.sprache], ["Volljährig", "ja (bestätigt)"]];
+  const tabelle = '<table style="border-collapse:collapse">' + zeilen.map((z) => '<tr><td style="padding:4px 12px 4px 0;color:#666">' + esc(z[0]) + "</td><td style=\"padding:4px 0\"><strong>" + esc(z[1]) + "</strong></td></tr>").join("") + "</table>";
+  const r = rahmen("Neue Anfrage: " + a.paket, [
+    { html: tabelle, text: zeilen.map((z) => z[0] + ": " + z[1]).join("\n") },
+    a.nachricht ? { html: "<p><strong>Nachricht:</strong><br>" + esc(a.nachricht).replace(/\n/g, "<br>") + "</p>", text: "Nachricht:\n" + a.nachricht } : "",
+    "Antworten an diese E-Mail gehen direkt an " + a.email + "."
+  ].filter(Boolean));
+  return { betreff: "Anfrage Piercing Akademie – " + a.paket + " – " + a.name, ...r };
+}
+
+export async function sende(env, an, mail, antwortAn) {
   if (env.DEV === "1" || !env.RESEND_API_KEY) {
-    console.log("[E-Mail an " + an + "] " + mail.betreff + "\n" + mail.text);
+    console.log("[E-Mail an " + an + (antwortAn ? ", Antwort an " + antwortAn : "") + "] " + mail.betreff + "\n" + mail.text);
     return;
   }
   const res = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: { Authorization: "Bearer " + env.RESEND_API_KEY, "Content-Type": "application/json" },
-    body: JSON.stringify({ from: env.MAIL_ABSENDER, to: [an], subject: mail.betreff, html: mail.html, text: mail.text })
+    body: JSON.stringify({ from: env.MAIL_ABSENDER, to: [an], subject: mail.betreff, html: mail.html, text: mail.text, ...(antwortAn ? { reply_to: antwortAn } : {}) })
   });
   if (!res.ok) console.error("E-Mail fehlgeschlagen", res.status, await res.text());
 }

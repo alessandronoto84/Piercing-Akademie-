@@ -125,3 +125,10 @@ test("Admin kommt ohne Kauf hinein und hat den Prüfmodus", async () => {
   const { cookie } = await anmelden("diepiercingakademie@gmail.com");
   assert.match(await (await get("/kurs/konto.js", cookie)).text(), /"admin":true/);
 });
+
+test("Anfrageformular: Pflichtfelder und Spam-Falle", async () => {
+  assert.equal((await post("/api/anfrage", { paket: "basis", name: "X" })).status, 400);
+  const falle = await post("/api/anfrage", { paket: "basis", name: "Bot", email: "bot@example.com", website: "http://spam" });
+  assert.equal(falle.status, 200);
+  assert.equal((await post("/api/anfrage", { paket: "basis", name: "X", email: "x@example.com" }, null, { Origin: "https://boese.example" })).status, 403);
+});

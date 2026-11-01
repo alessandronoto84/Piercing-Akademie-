@@ -437,7 +437,7 @@
       </div>
 
       <form class="form" id="anfrage" action="mailto:diepiercingakademie@gmail.com" method="post" enctype="text/plain" aria-labelledby="anfrage-titel">
-        <p class="form-title" id="anfrage-titel">Anfrage per E-Mail</p>
+        <p class="form-title" id="anfrage-titel">Deine Anfrage</p>
         <p class="fine">Pflichtfelder sind mit * markiert.</p>
 
         <div class="field">
@@ -459,6 +459,12 @@
         </div>
 
         <div class="field">
+          <label for="f-email">E-Mail <span class="req">*</span></label>
+          <input id="f-email" name="email" type="email" autocomplete="email" required maxlength="200" aria-describedby="f-email-err">
+          <p class="err" id="f-email-err" hidden></p>
+        </div>
+
+        <div class="field">
           <label for="f-telefon">Telefon <span class="req">(optional)</span></label>
           <input id="f-telefon" name="telefon" type="tel" autocomplete="tel" maxlength="40" pattern="[0-9 +\/\(\)\-]{6,40}" aria-describedby="f-telefon-hint f-telefon-err">
           <p class="hint" id="f-telefon-hint">Falls du lieber angerufen werden möchtest.</p>
@@ -466,9 +472,48 @@
         </div>
 
         <div class="field">
+          <label for="f-erfahrung">Arbeitest du schon in einem Studio? <span class="req">(optional)</span></label>
+          <select id="f-erfahrung" name="erfahrung">
+            <option value="">Bitte wählen</option>
+            <option value="tattoo">Ja, in einem Tattoostudio</option>
+            <option value="kosmetik">Ja, in einem Kosmetikstudio</option>
+            <option value="piercing">Ja, in einem Piercingstudio</option>
+            <option value="keins">Nein, noch in keinem Studio</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="f-zeitraum">Wunschzeitraum für den Praxistag <span class="req">(optional)</span></label>
+          <input id="f-zeitraum" name="zeitraum" type="text" maxlength="120" aria-describedby="f-zeitraum-hint">
+          <p class="hint" id="f-zeitraum-hint">Zum Beispiel „Mitte März, gern an einem Samstag“.</p>
+        </div>
+
+        <div class="field">
+          <label for="f-modelle">Bringst du eigene Modelle mit? <span class="req">(optional)</span></label>
+          <select id="f-modelle" name="modelle">
+            <option value="">Bitte wählen</option>
+            <option value="ja">Ja, ich bringe eigene Modelle mit</option>
+            <option value="nein">Nein, bitte Modelle für mich suchen</option>
+            <option value="unklar">Weiß ich noch nicht</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="f-quelle">Wie hast du von uns erfahren? <span class="req">(optional)</span></label>
+          <select id="f-quelle" name="quelle">
+            <option value="">Bitte wählen</option>
+            <option value="instagram">Instagram</option>
+            <option value="google">Google</option>
+            <option value="empfehlung">Empfehlung</option>
+            <option value="studio">Im Studio in Lingen</option>
+            <option value="sonstiges">Sonstiges</option>
+          </select>
+        </div>
+
+        <div class="field">
           <label for="f-nachricht">Nachricht <span class="req">(optional)</span></label>
           <textarea id="f-nachricht" name="nachricht" rows="4" maxlength="1500" aria-describedby="f-nachricht-hint"></textarea>
-          <p class="hint" id="f-nachricht-hint">Zum Beispiel Fragen oder dein Wunschzeitraum für den Praxistag.</p>
+          <p class="hint" id="f-nachricht-hint">Zum Beispiel deine Fragen.</p>
         </div>
 
         <div class="check">
@@ -477,9 +522,15 @@
           <p class="err" id="f-volljaehrig-err" hidden></p>
         </div>
 
-        <p class="fine">Das Formular verschickt nichts selbst. Es öffnet dein E-Mail-Programm mit einer fertigen Nachricht an uns. Verschickt ist die Anfrage erst, wenn du sie dort absendest. Mehr dazu in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+        <div class="feld-falle" aria-hidden="true"><label for="f-website">Website</label><input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
 
-        <button class="btn" type="submit">E-Mail-Anfrage erstellen</button>
+        <p class="fine">Deine Anfrage geht direkt an uns; wir melden uns innerhalb von zwei Werktagen. Klappt das Senden einmal nicht, öffnet sich stattdessen dein E-Mail-Programm mit der fertigen Nachricht. Mehr dazu in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+
+        <button class="btn" type="submit">Anfrage senden</button>
+
+        <div class="status" id="anfrage-ok" role="status" tabindex="-1" hidden>
+          <p><strong>Danke, deine Anfrage ist bei uns angekommen.</strong> Wir melden uns innerhalb von zwei Werktagen bei dir.</p>
+        </div>
 
         <div class="status" id="anfrage-status" role="status" tabindex="-1" hidden>
           <p><strong>Dein E-Mail-Programm sollte sich jetzt geöffnet haben.</strong> Bitte sende die Nachricht dort ab. Erst dann erreicht uns deine Anfrage.</p>
