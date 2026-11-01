@@ -18,6 +18,9 @@ Stand: 26.10.2026. Erledigtes steht unten. Details und Quellen: `KURS-RECHERCHE.
 | 10 | **Stimmen von Teilnehmern** (3–5, mit Einwilligung) | Vertrauen; bis dahin bewusst kein Bewertungsbereich. | du |
 | 11 | **Rechnungsangaben**: Kleinunternehmer oder Umsatzsteuer? | Preisangaben („inkl. MwSt.“ oder Hinweis § 19 UStG) und Rechnungen. | du / Steuerberater |
 | 12 | **Berufshaftpflicht** für Kurs und Praxistage bestätigen | Absicherung der Praxistage mit Modellen. | Versicherung |
+| 13 | **Stripe: drei Bezahl-Links anlegen** nach `STRIPE-ANLEITUNG.md` und mir die Links schicken | Kaufknopf auf der Website ist vorbereitet. | du |
+| 14 | **Zugang zum Online-Kurs:** eigene Lösung auf Cloudflare (Login per E-Mail-Code, Stripe meldet Zahlungen automatisch) oder fertige Kursplattform | Ohne Login kann der Online-Kurs nicht verkauft werden. | du entscheidest, ich baue |
+| 15 | **Fotos und Clips aus dem Studio** nach `FOTO-VIDEO-ANLEITUNG.md` | Echte Aufnahmen statt KI-Bilder; Clip-Player in der Fahrschule ist fertig. | du |
 
 ## 2. Was ich danach umsetze
 
@@ -38,3 +41,5 @@ Stand: 26.10.2026. Erledigtes steht unten. Details und Quellen: `KURS-RECHERCHE.
 - Bescheinigung über den Online-Teil nach bestandener Prüfungssimulation (drucken oder als PDF speichern).
 - Vorschaubild für WhatsApp, Instagram und Co. auf allen Seiten.
 - Kursbilder als einzelne WebP-Dateien: rund ein Drittel kleiner, lädt nur, was gebraucht wird.
+- Website für Stripe vorbereitet (01.11.2026): Kaufknopf je Paket, Danke-Seite, AGB und Datenschutz ergänzt; aktiv, sobald die Bezahl-Links eingetragen sind.
+- Clip-Player in der Fahrschule (01.11.2026): kurze Clips als stumme Schleife oder mit Ton, Umwandlung per `werkzeuge/clip-umwandeln.sh`.

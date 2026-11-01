@@ -345,3 +345,10 @@
   .k-urkunde-name{background:none;color:#16161a}
   .k-urkunde{border:none;margin:0;max-width:none;-webkit-print-color-adjust:exact;print-color-adjust:exact;break-inside:avoid}
 }
+
+/* Kurze Clips in den Lektionen */
+.k-clip{margin:1.75rem 0;max-width:40rem}
+.k-clip video{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line);background:#000}
+.k-clip-hoch{max-width:20rem}
+.k-clip figcaption{margin-top:.6rem;font-size:.9rem;color:var(--muted)}
+.k-clip-dauer{font-family:var(--f-mono);font-size:.78rem;margin-left:.4em}

@@ -106,6 +106,7 @@
         var f = BILDER[b.id];
         if (!f) return "";
         return '<figure class="k-foto"><img src="' + f.src + '" width="' + f.w + '" height="' + f.h + '" alt="' + esc(b.text) + '" loading="lazy"><figcaption>' + esc(b.text) + nachweis(f) + "</figcaption></figure>";
+      case "video": return clip(b);
       case "galerie":
         return '<figure class="k-galerie">' + (b.titel ? '<p class="k-grafik-titel">' + esc(b.titel) + "</p>" : "") + "<ul>" +
           b.bilder.filter(function (x) { return BILDER[x[0]]; }).map(function (x) {
@@ -123,6 +124,34 @@
     return '<span class="k-nachweis">Bild: ' + esc(f.urheber) + ", " + (f.lizenz_url ? '<a href="' + esc(f.lizenz_url) + '" target="_blank" rel="noopener">' + esc(f.lizenz) + "</a>" : esc(f.lizenz)) +
       ', <a href="' + esc(f.url) + '" target="_blank" rel="noopener">' + esc(f.quelle) + "</a>" + (/SA/.test(f.lizenz) ? ", verkleinert" : "") + "</span>";
   }
+  // Kurzer Clip: { typ: "video", id: "name", text: "…", titel?: "…", schleife?: true }
+  // Dateien: inhalte/clips/<id>.mp4 (Pflicht), <id>.webm und <id>.jpg (Standbild) optional, erzeugt mit werkzeuge/clip-umwandeln.sh.
+  // schleife: stumm in Endlosschleife, startet nur, wenn sichtbar; sonst normaler Player mit Steuerung und Ton.
+  var CLIPS = KURS.clips || {};
+  function clip(b) {
+    var c = CLIPS[b.id];
+    if (!c) return "";
+    var pfad = "inhalte/clips/" + b.id;
+    var attr = b.schleife ? ' muted loop playsinline preload="none" data-schleife' : ' controls playsinline preload="none"';
+    return '<figure class="k-clip' + (c.hoch ? " k-clip-hoch" : "") + '">' + (b.titel ? '<p class="k-grafik-titel">' + esc(b.titel) + "</p>" : "") +
+      '<video' + attr + (c.standbild ? ' poster="' + pfad + '.jpg"' : "") + ' width="' + c.w + '" height="' + c.h + '" aria-label="' + esc(b.text) + '">' +
+      (c.webm ? '<source src="' + pfad + '.webm" type="video/webm">' : "") + '<source src="' + pfad + '.mp4" type="video/mp4"></video>' +
+      "<figcaption>" + esc(b.text) + (c.dauer ? ' <span class="k-clip-dauer">' + esc(c.dauer) + "</span>" : "") + "</figcaption></figure>";
+  }
+  // Schleifen-Clips laufen nur, solange sie sichtbar sind; bei „Bewegung reduzieren“ gibt es stattdessen eine Steuerung
+  (function () {
+    var ruhig = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var sicht = "IntersectionObserver" in window && !ruhig ? new IntersectionObserver(function (es) {
+      es.forEach(function (e) { var v = e.target; if (e.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function () { v.controls = true; }); } else v.pause(); });
+    }, { threshold: 0.4 }) : null;
+    new MutationObserver(function () {
+      [].forEach.call(app.querySelectorAll("video[data-schleife]:not([data-bereit])"), function (v) {
+        v.setAttribute("data-bereit", "");
+        if (sicht) sicht.observe(v); else v.controls = true;
+      });
+    }).observe(app, { childList: true, subtree: true });
+  })();
+
   // Titelbild eines Moduls: klein auf der Modulkarte, groß im Modulkopf
   function titelbild(m, klein) {
     var b = (KURS.titelbilder || {})[m.nr];
