@@ -218,6 +218,17 @@ test("Einzelprodukte: Praxiskit (Versand, Rabatt nach Kursabschluss) und Kursbuc
   const suche = await (await get("/api/buch/suche?q=Septum", l.cookie)).json();
   assert.ok(suche.treffer.some((t) => t.seite === 88), "Septum steht auf S. 88");
   assert.equal((await get("/api/buch/suche?q=Septum")).status, 401);
+  // Übersetzter Seitentext für englische und spanische Leser, Suche in der jeweiligen Sprache
+  for (const sprache of ["en", "es"]) {
+    const t = await get("/api/buch/seite?nr=88&sprache=" + sprache, l.cookie);
+    assert.equal(t.status, 200);
+    assert.match((await t.json()).text, /septum/i);
+    const st = await (await get("/api/buch/suche?q=septum&sprache=" + sprache, l.cookie)).json();
+    assert.ok(st.treffer.some((x) => x.seite === 88));
+  }
+  assert.equal((await get("/api/buch/seite?nr=88&sprache=fr", l.cookie)).status, 400);
+  assert.equal((await get("/api/buch/seite?nr=999&sprache=en", l.cookie)).status, 404);
+  assert.equal((await get("/api/buch/seite?nr=88&sprache=en")).status, 401);
   assert.equal((await post("/api/bescheinigung", { name: "Leser" }, l.cookie)).status, 400);
   assert.equal((await get("/download/" + "0".repeat(48))).status, 404);
 });

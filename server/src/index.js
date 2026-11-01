@@ -176,6 +176,7 @@ async function api(req, env, url, ctx) {
   }
   if (p === "/api/bescheinigung" && req.method === "POST") return bescheinigung(req, env, s);
   if (p === "/api/buch/suche" && req.method === "GET") return buchSuche(env, url);
+  if (p === "/api/buch/seite" && req.method === "GET") return buchSeiteText(env, s, url);
   if (p === "/api/geraete" && req.method === "GET") {
     const r = await env.DB.prepare("SELECT geraet, erstellt, zuletzt, token_hash = ? AS dieses FROM sitzungen WHERE email = ? ORDER BY zuletzt DESC").bind(s.token_hash, s.email).all();
     return json({ geraete: r.results });
@@ -505,26 +506,59 @@ async function produktVerkauft(env, ctx, sess, meta, email) {
 // ---------- Kursbuch online: Seitenbilder und Volltextsuche aus dem privaten R2-Speicher (Ordner buch/) ----------
 // Keine Download-Datei: Seiten gibt es nur angemeldet, einzeln, ohne Zwischenspeicherung, mit Abrufbremse.
 async function buchSeite(env, s, nr) {
-  const schluessel = await sha256("buch:" + s.email + ":" + (env.CODE_PFEFFER || ""));
-  const n = await env.DB.prepare("SELECT COUNT(*) AS n FROM anfragen WHERE schluessel = ? AND zeit > ?").bind(schluessel, jetzt() - 3600).first();
-  if (n.n >= BUCH_SEITEN_PRO_STUNDE) return new Response("Zu viele Seitenaufrufe in kurzer Zeit. Bitte versuch es später noch einmal.", { status: 429, headers: { "Content-Type": "text/plain; charset=utf-8" } });
+  const schluessel = await buchBremse(env, s);
+  if (!schluessel) return new Response("Zu viele Seitenaufrufe in kurzer Zeit. Bitte versuch es später noch einmal.", { status: 429, headers: { "Content-Type": "text/plain; charset=utf-8" } });
   const obj = env.DATEIEN ? await env.DATEIEN.get("buch/seite-" + nr + ".webp") : null;
   if (!obj) return new Response("", { status: 404 });
   await env.DB.prepare("INSERT INTO anfragen (zeit, schluessel) VALUES (?, ?)").bind(jetzt(), schluessel).run();
   return new Response(obj.body, { headers: { "Content-Type": "image/webp", "Cache-Control": "private, no-store", "X-Robots-Tag": "noindex", "Content-Disposition": "inline" } });
 }
 
-let buchText = null; // Suchtext, je Worker-Instanz einmal geladen
+// Texte je Sprache: buch/text.json (deutscher Originaltext), buch/text.en.json, buch/text.es.json (übersetzt, Markdown).
+const BUCH_SPRACHEN = ["de", "en", "es"];
+const buchTexte = {}; // je Worker-Instanz einmal geladen
+async function buchTextLaden(env, sprache) {
+  if (!BUCH_SPRACHEN.includes(sprache)) sprache = "de";
+  if (!buchTexte[sprache]) {
+    const obj = env.DATEIEN ? await env.DATEIEN.get(sprache === "de" ? "buch/text.json" : "buch/text." + sprache + ".json") : null;
+    if (!obj) return null;
+    buchTexte[sprache] = new Map((await obj.json()).seiten.map(([n, t]) => [Number(n), String(t)]));
+  }
+  return buchTexte[sprache];
+}
+
+async function buchBremse(env, s) {
+  const schluessel = await sha256("buch:" + s.email + ":" + (env.CODE_PFEFFER || ""));
+  const n = await env.DB.prepare("SELECT COUNT(*) AS n FROM anfragen WHERE schluessel = ? AND zeit > ?").bind(schluessel, jetzt() - 3600).first();
+  if (n.n >= BUCH_SEITEN_PRO_STUNDE) return null;
+  return schluessel;
+}
+
+// Übersetzter Seitentext (Markdown) für englische und spanische Leser.
+async function buchSeiteText(env, s, url) {
+  const nr = parseInt(url.searchParams.get("nr"), 10);
+  const sprache = String(url.searchParams.get("sprache") || "");
+  if (!Number.isInteger(nr) || nr < 0 || nr > 999 || !["en", "es"].includes(sprache)) return json({ fehler: "eingabe" }, 400);
+  const schluessel = await buchBremse(env, s);
+  if (!schluessel) return json({ fehler: "zu_viele" }, 429);
+  const texte = await buchTextLaden(env, sprache);
+  if (!texte) return json({ fehler: "fehlt" }, 404);
+  if (!texte.has(nr)) return json({ fehler: "seite" }, 404);
+  await env.DB.prepare("INSERT INTO anfragen (zeit, schluessel) VALUES (?, ?)").bind(jetzt(), schluessel).run();
+  return json({ seite: nr, sprache, text: texte.get(nr) }, 200, { "Cache-Control": "private, no-store", "X-Robots-Tag": "noindex" });
+}
+
+const ohneMarkdown = t => t.replace(/\[(?:Abbildung|Figure|Figura):[^\]]*\]/g, " ").replace(/[#*_>|`]+/g, " ").replace(/\s+/g, " ").trim();
+
 async function buchSuche(env, url) {
   const q = String(url.searchParams.get("q") || "").trim().toLowerCase().slice(0, 60);
   if (q.length < 3) return json({ treffer: [] });
-  if (!buchText) {
-    const obj = env.DATEIEN ? await env.DATEIEN.get("buch/text.json") : null;
-    if (!obj) return json({ treffer: [], fehlt: true });
-    buchText = (await obj.json()).seiten;
-  }
+  const sprache = String(url.searchParams.get("sprache") || "de");
+  const texte = await buchTextLaden(env, sprache);
+  if (!texte) return json({ treffer: [], fehlt: true });
   const treffer = [];
-  for (const [seite, text] of buchText) {
+  for (const [seite, roh] of texte) {
+    const text = sprache === "de" ? roh : ohneMarkdown(roh);
     const i = text.toLowerCase().indexOf(q);
     if (i < 0) continue;
     treffer.push({ seite, auszug: (i > 50 ? "…" : "") + text.slice(Math.max(0, i - 50), i + q.length + 70) + "…" });
