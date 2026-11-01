@@ -44,12 +44,11 @@ Dann beim Produkt **„Zahlungslink erstellen“** und dort einstellen:
 3. **Telefonnummer erfassen:** ja (für die Terminabsprache).
 4. **Benutzerdefinierte Felder** (Pflichtfelder, Typ „Dropdown“):
    - Feld 1, Bezeichnung „Volljährig“, einzige Option: `Ja, ich bin mindestens 18 Jahre alt`
-   - Feld 2, Bezeichnung „Start Online-Kurs“, zwei Optionen:
-     - `Sofort (Widerrufsrecht für den Online-Kurs erlischt)`
-     - `Erst nach Ablauf der 14-tägigen Widerrufsfrist`
+   - Feld 2, Bezeichnung „Sofortiger Kursbeginn“, einzige Option: `Ja: sofort starten, mein Widerrufsrecht für den Online-Kurs erlischt`
+     Der Online-Kurs wird nur mit sofortigem Start verkauft. Weil das Feld Pflicht ist und nicht vorausgewählt wird, muss der Kunde aktiv zustimmen. Das ist die Voraussetzung dafür, dass sein Widerrufsrecht wirksam erlischt.
 5. **Kunden müssen die Nutzungsbedingungen akzeptieren:** einschalten. Stripe zeigt dann eine Checkbox mit Link zu den AGB.
 6. **Benutzerdefinierter Text beim Bezahlknopf** (Text in deutscher Sprache):
-   > Wählst du bei „Start Online-Kurs“ „Sofort“, verlangst du ausdrücklich, dass wir vor Ablauf der Widerrufsfrist mit der Bereitstellung des Online-Kurses beginnen, und bestätigst, dass du dadurch dein Widerrufsrecht für den Online-Kurs verlierst (§ 356 Abs. 5 BGB). Für Praxistage und Coaching bleibt dein Widerrufsrecht bestehen. Es gelten unsere AGB mit Widerrufsbelehrung.
+   > Mit „Ja: sofort starten“ verlangst du ausdrücklich, dass wir vor Ablauf der Widerrufsfrist mit der Bereitstellung des Online-Kurses beginnen, und bestätigst, dass du dadurch dein Widerrufsrecht für den Online-Kurs verlierst. Es erlischt mit der Freischaltung deines Zugangs (§ 356 Abs. 5 BGB). Für Praxistage, Coaching und das Kurs-Buch gilt die Widerrufsbelehrung in unseren AGB.
 7. **Bezahlknopf:** Text „Bezahlen“ (macht die Zahlungspflicht klar).
 8. **Nach der Zahlung:** „Bestätigungsseite nicht anzeigen“ → weiterleiten an `https://piercingakademie.de/danke.html`
 9. **Rechnung:** „Rechnungs-PDF nach der Zahlung erstellen“ einschalten (Stripe berechnet dafür eine kleine Gebühr; alternativ Rechnungen selbst schreiben).
@@ -73,10 +72,27 @@ Ein leerer Eintrag bedeutet: Diese Karte zeigt weiter „… wählen“ und füh
 
 ## 5. Nach jeder Zahlung (solange es noch keine automatische Freischaltung gibt)
 
-1. Stripe-E-Mail prüfen: Paket, Name, Telefon, „Start Online-Kurs“.
-2. Dem Kunden innerhalb von zwei Werktagen eine **Bestätigung mit AGB und Widerrufsbelehrung** per E-Mail schicken (Pflicht in Textform). Das verspricht auch die Danke-Seite.
-3. Zugang zum Online-Kurs freigeben, bei „Erst nach Ablauf der Widerrufsfrist“ erst nach 14 Tagen.
-4. Praxistag-Termin vereinbaren.
+1. Stripe-E-Mail prüfen: Paket, Name, Telefon und die Zustimmung „Sofortiger Kursbeginn“.
+2. **Sofort** den Zugang freischalten und dem Kunden eine E-Mail mit Zugang und Vertragsbestätigung schicken. Diese Bestätigung ist Pflicht (§ 312f BGB). Ohne sie erlischt das Widerrufsrecht nicht, der Kunde könnte dann trotz Zugang 14 Tage lang widerrufen. Die PDF-Datei der AGB (`agb.html` als PDF gespeichert) anhängen. Vorlage:
+
+   > Betreff: Deine Buchung bei der Piercing Akademie – Zugang zum Online-Kurs
+   >
+   > Hallo [Name],
+   >
+   > vielen Dank für deine Buchung des Pakets [Basis/Praxis/Komplett] zum Preis von [Betrag] € am [Datum].
+   >
+   > Dein Zugang zum Online-Kurs: [Link / Zugangsdaten]
+   >
+   > Du hast im Bestellvorgang ausdrücklich verlangt, dass wir vor Ablauf der Widerrufsfrist mit der Bereitstellung des Online-Kurses beginnen, und bestätigt, dass du dadurch dein Widerrufsrecht für den Online-Kurs verlierst. Mit der Freischaltung deines Zugangs ist dein Widerrufsrecht für den Online-Kurs erloschen (§ 356 Abs. 5 BGB).
+   > [Nur Praxis/Komplett:] Für Praxistage und Coaching gilt die Widerrufsbelehrung in unseren AGB. Wir melden uns zur Vereinbarung deines Praxistags.
+   >
+   > Unsere AGB mit Widerrufsbelehrung findest du im Anhang.
+   >
+   > Viele Grüße
+   > Alessandro Noto, Piercing Akademie
+3. Praxistag-Termin vereinbaren.
+
+Mit der Lösung „Login auf Cloudflare“ (siehe unten) passiert Schritt 2 automatisch direkt nach der Zahlung.
 
 ## Zugang zum Kurs: noch offen
 
