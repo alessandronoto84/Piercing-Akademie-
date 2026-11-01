@@ -4,6 +4,8 @@
       Auf schmalen Bildschirmen stattdessen eine dünne Fortschrittslinie oben.
    2. Sanftes Einblenden der Inhalte beim Scrollen, hochzählende Zahlen, sich zeichnende Linie zwischen den Schritten.
    3. Paketkarten kippen leicht zur Maus (nur mit Maus, nicht bei „Bewegung reduzieren“).
+   4. Überschriften steigen Wort für Wort auf, Fotos enthüllen sich, Karten kippen nach vorn, die Ablauf-Linie
+      wächst mit dem Scrollen, Preise zählen hoch, der Einstieg bekommt beim Wegscrollen Tiefe.
    Bei „Bewegung reduzieren“ (prefers-reduced-motion) bleibt alles ruhig; ohne JavaScript ist die Seite unverändert. */
 (function () {
   "use strict";
@@ -108,6 +110,91 @@
     });
   }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
   ziele.forEach(function (el) { beobachter.observe(el); });
+
+  // ---------- Überschriften steigen Wort für Wort auf ----------
+  [].forEach.call(document.querySelectorAll("main section h2.sec-title, main section h3.sec-title"), function (h) {
+    if (h.closest(".hero")) return;
+    var i = 0;
+    (function zerlegen(knoten) {
+      [].slice.call(knoten.childNodes).forEach(function (k) {
+        if (k.nodeType === 3) {
+          var frag = document.createDocumentFragment();
+          k.textContent.split(/(\s+)/).forEach(function (w) {
+            if (!w) return;
+            if (/^\s+$/.test(w)) { frag.appendChild(document.createTextNode(w)); return; }
+            var aussen = document.createElement("span"), innen = document.createElement("span");
+            aussen.className = "wort"; innen.textContent = w; innen.style.transitionDelay = (i++ * 70) + "ms";
+            aussen.appendChild(innen); frag.appendChild(aussen);
+          });
+          knoten.replaceChild(frag, k);
+        } else if (k.nodeType === 1) zerlegen(k);
+      });
+    })(h);
+    h.classList.remove("einblenden"); h.style.transitionDelay = ""; h.classList.add("woerter");
+    beobachter.observe(h);
+  });
+
+  // ---------- Fotos enthüllen sich mit einer Wischblende ----------
+  [].forEach.call(document.querySelectorAll("main section figure:not(.laufband):not(.filmband)"), function (f) {
+    if (f.closest(".hero") || !f.querySelector("img, video")) return;
+    f.classList.add("enthuellen"); beobachter.observe(f);
+  });
+
+  // ---------- Karten kippen aus der Tiefe nach vorn ----------
+  [].forEach.call(document.querySelectorAll(".card.einblenden, .wer > .einblenden, .prinzip > li.einblenden, .three > .einblenden, .modulgitter > li.einblenden"), function (k) { k.classList.add("kippen"); });
+
+  // ---------- Ablauf am Praxistag: Linie wächst mit dem Scrollen, Stationen leuchten auf ----------
+  var ablauf = document.querySelector(".steps");
+  if (ablauf) {
+    ablauf.classList.add("steps-scroll");
+    var stationen = [].slice.call(ablauf.children), ablaufGeplant = false;
+    var ablaufZeichnen = function () {
+      ablaufGeplant = false;
+      var r = ablauf.getBoundingClientRect(), marke = window.innerHeight * 0.72;
+      ablauf.style.setProperty("--fortschritt", Math.min(1, Math.max(0, (marke - r.top) / Math.max(1, r.height - 40))).toFixed(3));
+      stationen.forEach(function (li) { li.classList.toggle("erreicht", li.getBoundingClientRect().top + 18 < marke); });
+    };
+    window.addEventListener("scroll", function () { if (!ablaufGeplant) { ablaufGeplant = true; window.requestAnimationFrame(ablaufZeichnen); } }, { passive: true });
+    ablaufZeichnen();
+  }
+
+  // ---------- Einstieg: Bild zoomt beim Wegscrollen leicht, Text tritt zurück ----------
+  var heroBild = document.querySelector(".hero-bild .foto"), heroText = document.querySelector(".hero > div:first-child"), heroGeplant = false;
+  if (heroBild && heroText) {
+    window.addEventListener("scroll", function () {
+      if (heroGeplant) return; heroGeplant = true;
+      window.requestAnimationFrame(function () {
+        heroGeplant = false;
+        var p = Math.min(1, Math.max(0, window.scrollY / (window.innerHeight * 0.9)));
+        heroBild.style.transform = "translate3d(0," + (p * 40).toFixed(1) + "px,0) scale(" + (1 + p * 0.06).toFixed(3) + ")";
+        heroText.style.transform = "translate3d(0," + (p * -24).toFixed(1) + "px,0)";
+        heroText.style.opacity = (1 - p * 0.55).toFixed(3);
+      });
+    }, { passive: true });
+  }
+
+  // ---------- Preise zählen hoch, sobald die Karte erscheint ----------
+  [].forEach.call(document.querySelectorAll(".card .price"), function (pr) {
+    var knoten = pr.firstChild;
+    if (!knoten || knoten.nodeType !== 3) return;
+    var vorlage = knoten.textContent, m = vorlage.match(/\d[\d.,]*/);
+    if (!m) return;
+    var trenner = (m[0].match(/[.,]/) || [""])[0], ziel = Number(m[0].replace(/[.,]/g, "")), karte = pr.closest(".card"), gezaehlt = false;
+    var form = function (v) { var z = String(v); if (trenner && v >= 1000) z = z.slice(0, -3) + trenner + z.slice(-3); return vorlage.replace(m[0], z); };
+    new IntersectionObserver(function (es, ob) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting || gezaehlt) return;
+        gezaehlt = true; ob.disconnect();
+        var start = null;
+        (function schritt(t) {
+          if (start === null) start = t;
+          var x = Math.min(1, (t - start) / 1200), weich = 1 - Math.pow(1 - x, 3);
+          knoten.textContent = form(Math.round(ziel * weich));
+          if (x < 1) window.requestAnimationFrame(schritt);
+        })(performance.now());
+      });
+    }, { threshold: 0.3 }).observe(karte);
+  });
 
   // ---------- Zahlen hochzählen (11 Module, 103 Lektionen, 575 Fragen) ----------
   function hochzaehlen(dd) {
