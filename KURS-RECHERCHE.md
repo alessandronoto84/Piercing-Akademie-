@@ -266,3 +266,24 @@ Bestätigt und unverändert: Nickelgrenzwert 0,2 µg/cm²/Woche (REACH Anhang XV
 Eigene schematische Zeichnung (`G.pistole` in `inhalte/grafiken.js`), weil Videos und Grafiken aus Instagram-Reels nicht lizenzfrei sind. Inhalt: Kursbuch S. 6 (Gewebe reißt ein, Knorpel kann splittern, Pistole nicht vollständig sterilisierbar, ungeeignete Ersteinsätze), ergänzt um die Position der Association of Professional Piercers (APP): federgetriebener Mechanismus, oft stumpfe Steckerspitzen, Gewebeschäden, ungeeignetes Schmuckdesign (kurzer Stecker, eng sitzender Verschluss), wiederverwendbare Pistolen nicht autoklavierbar.
 
 Quellen: [NEHA Annex to the Body Art Model Code, 3rd Edition (zitiert die APP-Position)](https://pubs.neha.org/annex-bamc-3rd-ed/55/), [Association of Professional Piercers (Wikipedia)](https://en.wikipedia.org/wiki/Association_of_Professional_Piercers), [The Point, Ausgabe 65](https://thepointjournal.org/2014/01/02/point-65-from-the-editor/).
+
+## 15. Vollständiger Abgleich aller 575 Fragen mit dem Kursbuch (01.11.2026)
+
+Grundlage: Texterkennung (Tesseract, deutsch) aller 117 Buchseiten; Buchseite = PDF-Seite − 1.
+
+- Module 01, 02, 04, 05, 06, 07, 09, 10: jede Frage gegen die angegebene Buchseite geprüft.
+- Modul 08: alle 37 Datenblätter maschinell gegen das Buch verglichen (Ersteinsatz, Kanüle, Klemme) – vollständige Übereinstimmung; dazu alle Detailangaben (Stichkanallängen, Abstände, Pflaster, Dehnen, Abheilzeiten).
+- Module 03 und 11 (Ergänzungen der Akademie): gegen Fachliteratur bzw. NLGA-Merkblatt geprüft.
+
+Korrigiert: Ablenker „Dass er keine Medikamente nimmt“ (stand im Formular S. 115 als zutreffend), Frage zu Mundpiercing-Komplikationen präziser, Nervus supraorbitalis „etwa über der Pupille“ statt „über dem inneren Drittel“ (passend zur Grafik), Erklärung Ultraschallbad (45 °C statt 80 °C) begründet.
+
+Bewusste Abweichungen vom Buch (für die nächste Auflage des Buchs):
+| Buch | Fahrschule | Grund |
+|---|---|---|
+| S. 6 und 48: Prontolind und Octenisept nicht am Knorpel | Nur Octenisept nicht am Knorpel | Korrektur von Alessandro Noto (26.10.2026) |
+| S. 42: Ultraschallbad mind. 30 min bei 80 °C | höchstens etwa 45 °C | KRINKO/BfArM: Hitze fixiert Eiweiß vor der Reinigung |
+| S. 64: Kanülen 1,2 / 1,6 / 2,1 mm | 1,3 / 1,7 / 2,2 mm | Herstellerangaben (Farbcode nach Norm) |
+| S. 1: §§ 223–233 StGB | §§ 223–231 StGB | 17. Abschnitt des StGB |
+| S. 7: „Phantomschmerzen“ | Erwartungsschmerz | Phantomschmerz meint amputierte Körperteile |
+| S. 89: Lähmungsgefahr Augenbraue | vor allem Taubheit (Gefühlsnerven) | Anatomie; Regel „äußeres Drittel“ bleibt |
+| S. 115: Foto-Einwilligung „Art. 6 Abs. 1 (f)“ | Art. 6 Abs. 1 lit. a | Einwilligung ist die passende Rechtsgrundlage |

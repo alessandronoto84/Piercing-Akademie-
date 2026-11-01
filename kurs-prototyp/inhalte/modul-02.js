@@ -118,10 +118,10 @@ KURS.module.push({
       ],
       fragen: [
         ["Besteht auch bei sachgemäßer Ausführung ein Risiko für Komplikationen?", ["Ja", "Nein, nur bei Fehlern des Piercers", "Nur bei Intimpiercings", "Nur bei Kunden mit Vorerkrankungen"], "Deshalb wird darüber aufgeklärt.", "S. 115"],
-        ["Welche Komplikation nennt die Erklärung bei Mundpiercings?", ["Zahn- und Zahnfleischschäden, Zahnverschiebung, Sprachprobleme", "Geschmacksverlust auf Dauer", "Kieferbruch", "Mandelentzündung"], "Auch Parodontose und Zahnverschiebung.", "S. 115"],
+        ["Welche Komplikationen aus der Liste der Einverständniserklärung betreffen vor allem Mundpiercings?", ["Zahn- und Zahnfleischschäden, Zahnverschiebung, Sprachprobleme", "Geschmacksverlust auf Dauer", "Kieferbruch", "Mandelentzündung"], "Auch Parodontose und Zahnverschiebung.", "S. 115"],
         ["Was gehört zu den möglichen Komplikationen?", ["Wildfleischbildung, Keloidbildung und Herauswachsen", "Nur eine leichte Rötung in den ersten Tagen", "Nur Allergien gegen Titan", "Nur Komplikationen durch Pflegefehler des Kunden"], "Die Liste ist ausführlich.", "S. 115"],
         ["Wozu verpflichtet sich der Kunde mit seiner Unterschrift?", ["Die Pflegehinweise einzuhalten", "Das Studio bei Komplikationen nicht zu verklagen", "Zur Nachkontrolle nach 3 Tagen zu erscheinen", "Den Schmuck nur im Studio zu wechseln"], "So steht es im Text der Erklärung.", "S. 115"],
-        ["Was bestätigt der Kunde außerdem?", ["Dass er aufgeklärt wurde, genug Bedenkzeit hatte und nicht unter Alkohol- oder Drogeneinfluss steht", "Dass er auf jede Haftung des Studios verzichtet", "Dass er die Abheilzeit garantiert einhält", "Dass er keine Medikamente nimmt"], "Siehe Einverständniserklärung.", "S. 115"]
+        ["Was bestätigt der Kunde außerdem?", ["Dass er aufgeklärt wurde, genug Bedenkzeit hatte und nicht unter Alkohol-, Drogen- oder Medikamenteneinfluss steht", "Dass er auf jede Haftung des Studios verzichtet", "Dass er die Abheilzeit garantiert einhält", "Dass er nach einer Woche zur Kontrolle kommt"], "Siehe Einverständniserklärung.", "S. 115"]
       ]
     },
     {

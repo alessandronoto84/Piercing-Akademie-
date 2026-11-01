@@ -23,6 +23,7 @@ Stand: 26.10.2026. Erledigtes steht unten. Details und Quellen: `KURS-RECHERCHE.
 | 16 | **Umsatzsteuer bei Verkauf ins Ausland** mit dem Steuerberater klären | Online-Kurse an Privatkunden in anderen EU-Ländern: Umsatzsteuer des Kundenlandes, Meldung über das OSS-Verfahren (ab 10.000 € EU-Auslandsumsatz pro Jahr; Kleinunternehmer gesondert prüfen). | Steuerberater |
 | 15 | **Fotos und Clips aus dem Studio** nach `FOTO-VIDEO-ANLEITUNG.md` | Echte Aufnahmen statt KI-Bilder; Clip-Player in der Fahrschule ist fertig. | du |
 | 17 | **Praxislabor fachlich prüfen**: 7 Übungsaufgaben in `kurs-prototyp/inhalte/praxislabor.js` (Arbeitsplatz, Hände/Handschuhe, Anzeichnen, Klemme und Kanüle ohne Stechen, Ablauf, Notfall) und Silikon-Übungsmodell im Paket bestätigen | Die Aufgaben folgen Modul 05, 08 und 09, sind aber von der Akademie formuliert. | du |
+| 18 | **Kursbuch, nächste Auflage**: 7 Stellen angleichen, an denen die Fahrschule bewusst vom Buch abweicht (Liste in `KURS-RECHERCHE.md`, Abschnitt 15) | Teilnehmer, die Buch und Kurs nebeneinander lesen, sehen sonst Widersprüche. | du |
 
 ## 2. Was ich danach umsetze
 

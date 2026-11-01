@@ -104,7 +104,7 @@ KURS.module.push({
         { typ: "merke", text: "Die Lage von Nerven und Gefäßen ist von Mensch zu Mensch verschieden. Die Zeichnungen zeigen, wo Gefahr liegt, nicht, wo es garantiert sicher ist." }
       ],
       fragen: [
-        ["Welcher Nerv tritt über dem inneren Drittel der Augenbraue aus?", ["Der Nervus supraorbitalis", "Der Nervus facialis", "Der Nervus trigeminus als Ganzes am Jochbogen", "Der Nervus opticus"], "Er tritt am oberen Augenhöhlenrand aus dem Knochen.", "Ergänzung"],
+        ["Welcher Gefühlsnerv tritt am oberen Augenhöhlenrand etwa über der Pupille aus?", ["Der Nervus supraorbitalis", "Der Nervus facialis", "Der Nervus trigeminus als Ganzes am Jochbogen", "Der Nervus opticus"], "Er tritt durch eine kleine Öffnung im Knochen aus und versorgt Stirn und Oberlid. Noch weiter innen liegt der N. supratrochlearis. Deshalb stichst du nur im äußeren Drittel.", "Ergänzung"],
         ["Was kann eine Verletzung des Nervus supraorbitalis verursachen?", ["Taubheit oder Missempfindungen an Stirn und Oberlid", "Eine Lähmung der Gesichtsmuskeln", "Sehstörungen", "Einen Speichelfluss aus der Wunde"], "Er ist ein Gefühlsnerv.", "Ergänzung"],
         ["Was steuert der Gesichtsnerv (N. facialis)?", ["Die Mimik", "Das Gefühl der Gesichtshaut", "Die Kaumuskulatur", "Die Augenbewegung"], "Eine Verletzung kann Teile des Gesichts lähmen.", "Ergänzung"],
         ["Wo verläuft der Speichelgang der Ohrspeicheldrüse?", ["Etwa 2 cm unterhalb des Jochbogens quer über die Wange", "Direkt am Unterkieferrand", "Senkrecht vor dem Ohr zum Hals", "Unter dem Auge zur Nase"], "Er mündet gegenüber dem zweiten oberen Backenzahn.", "Ergänzung"],
