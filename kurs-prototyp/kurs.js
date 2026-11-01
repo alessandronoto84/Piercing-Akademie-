@@ -49,7 +49,7 @@
   ];
   var LABOR = KURS.labor || null;
   function laborErledigt(a) { return a.kontrolle.every(function (_, i) { return stand.labor[a.id + "-" + i]; }); }
-  // Stichübungen am Silikonohr: nur Pakete Praxis/Komplett (Übungsset). Im Prototyp ohne Server und für die Akademie offen.
+  // Selbst stechen am Silikonohr: nur Paket Komplett (Übungsset). Im Prototyp ohne Server und für die Akademie offen. Sonst: Zuschauen.
   function stichOffen() { return !!(LABOR && LABOR.stich) && (!KONTO || KONTO.admin || LABOR.stich.pakete.indexOf(KONTO.paket) > -1); }
   function laborAlle() { return LABOR ? LABOR.aufgaben.concat(stichOffen() ? LABOR.stich.aufgaben : []) : []; }
   function laborAnzahl() { return laborAlle().filter(laborErledigt).length; }
@@ -290,7 +290,7 @@
     html += '</div><h2 class="k-h2">Training und Nachschlagen</h2><div class="k-modulraster">' +
       '<a class="k-modulkarte" href="#fehler"><span class="label">Training</span><strong>Fehler-Training</strong><span class="k-meta">' + anzahlFehler() + " Fragen, die du falsch beantwortet hast</span></a>" +
       '<a class="k-modulkarte' + (simulationOffen() ? "" : " k-gesperrt") + '" href="#simulation"><span class="label">Abschluss</span><strong>Prüfungssimulation</strong><span class="k-meta">' + simulationsUmfang() + " Fragen aus allen Modulen" + (simulationOffen() ? "" : " · öffnet nach allen Modulprüfungen") + "</span></a>" +
-      (LABOR ? '<a class="k-modulkarte" href="#labor"><span class="label">Praxis</span><strong>Praxislabor</strong><span class="k-meta">' + laborAnzahl() + " von " + laborAlle().length + " Übungen, ohne und mit Stechen am Silikonohr</span></a>" : "") +
+      (LABOR ? '<a class="k-modulkarte" href="#labor"><span class="label">Praxis</span><strong>Praxislabor</strong><span class="k-meta">' + laborAnzahl() + " von " + laborAlle().length + " Übungen und Clips, wie gestochen wird</span></a>" : "") +
       '<a class="k-modulkarte" href="#glossar"><span class="label">Nachschlagen</span><strong>Glossar</strong><span class="k-meta">' + (KURS.glossar || []).length + " Fachbegriffe</span></a>" +
       '<a class="k-modulkarte" href="#checklisten"><span class="label">Praxis</span><strong>Checklisten und Vorlagen</strong><span class="k-meta">' + (KURS.checklisten || []).length + " Checklisten, " + VORLAGEN.length + " Druckvorlagen als PDF</span></a></div>" +
       '<section class="k-einstellungen"><h2>Prototyp-Einstellungen</h2>' +
@@ -641,19 +641,26 @@
         '<h4>So gehst du vor</h4><ol class="k-schritte">' + a.schritte.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ol>" +
         '<h4>Selbstkontrolle</h4><ul class="k-aufgaben">' + a.kontrolle.map(function (t, i) { var key = a.id + "-" + i; return '<li><label><input type="checkbox" data-labor="' + key + '"' + (stand.labor[key] ? " checked" : "") + "> " + esc(t) + "</label></li>"; }).join("") + "</ul></section>";
     }
+    function zuschauen(a, n) {
+      var film = a.clip && CLIPS[a.clip] ? clip({ id: a.clip, text: a.clipText || a.titel }) : (a.clip && stand.vorschau ? '<p class="k-box k-ergaenzung"><strong>Clip fehlt noch</strong> „' + esc(a.clip) + "“</p>" : "");
+      return '<section class="k-lektion k-zuschauen"><p class="label">Clip ' + n + ' · passt zu <a href="#modul-' + a.modul + '">Modul ' + zwei(a.modul) + "</a></p><h2>" + esc(a.titel) + "</h2>" + film +
+        '<h4>Darauf achtest du</h4><ol class="k-schritte">' + a.schritte.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ol></section>";
+    }
     var liste = function (xs) { return "<ul>" + xs.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul>"; };
     app.innerHTML = '<section class="k-kopf"><p class="label">Praxis</p><h1>Praxislabor</h1><p class="lead">' + esc(L.einleitung) + "</p>" +
       '<p class="fine">' + laborAnzahl() + " von " + laborAlle().length + " Aufgaben mit erfüllter Selbstkontrolle.</p>" +
-      '<nav class="k-labor-sprung" aria-label="Teile des Praxislabors"><a href="#labor-teil-trocken">Teil 1: Trockenübungen</a>' + (L.stich ? ' · <a href="#labor-teil-stich">Teil 2: Stichübungen am Silikonohr</a>' : "") + "</nav></section>" +
+      '<nav class="k-labor-sprung" aria-label="Teile des Praxislabors"><a href="#labor-teil-trocken">Teil 1: Trockenübungen</a>' + (L.stich ? ' · <a href="#labor-teil-stich">Teil 2: ' + (ST ? "Stichübungen am Silikonohr" : "Zuschauen – so wird gestochen") + "</a>" : "") + "</nav></section>" +
       '<h2 class="k-h2" id="labor-teil-trocken">Teil 1: Trockenübungen</h2>' +
       '<div class="k-box k-achtung"><strong>Sicherheit</strong>' + liste(L.sicherheit) + "</div>" +
       '<section class="k-lektion"><h2>Material</h2><p>' + esc(L.material) + '</p><p><a class="btn ghost small" href="vorlagen/uebungsvorlage.pdf" download>Übungsvorlage herunterladen (PDF)</a></p></section>' +
       L.aufgaben.map(function (a, i) { return aufgabe(a, "Trockenübung " + (i + 1)); }).join("") +
-      (L.stich ? '<h2 class="k-h2" id="labor-teil-stich">Teil 2: Stichübungen am Silikonohr</h2>' +
-        (ST ? '<section class="k-lektion"><p>' + esc(ST.einleitung) + '</p><h4>In deinem Übungsset</h4>' + liste(ST.set) + "</section>" +
+      (L.stich ? (ST ? '<h2 class="k-h2" id="labor-teil-stich">Teil 2: Stichübungen am Silikonohr</h2>' +
+          '<section class="k-lektion"><p>' + esc(ST.einleitung) + '</p><h4>In deinem Übungsset</h4>' + liste(ST.set) + "</section>" +
           '<div class="k-box k-achtung"><strong>Sicherheit bei den Stichübungen</strong>' + liste(ST.sicherheit) + "</div>" +
           ST.aufgaben.map(function (a, i) { return aufgabe(a, "Stichübung " + (i + 1)); }).join("")
-        : '<section class="k-lektion"><p>' + esc(L.stich.gesperrt) + '</p><p><a class="btn ghost small" href="/#pakete">Pakete ansehen</a></p></section>') : "");
+        : '<h2 class="k-h2" id="labor-teil-stich">Teil 2: Zuschauen – so wird gestochen</h2>' +
+          '<section class="k-lektion"><p>' + esc(L.stich.zuschauen) + "</p></section>" +
+          L.stich.aufgaben.map(function (a, i) { return zuschauen(a, i + 1); }).join("")) : "");
     app.querySelectorAll("[data-labor]").forEach(function (c) {
       c.addEventListener("change", function () {
         if (c.checked) stand.labor[c.dataset.labor] = true; else delete stand.labor[c.dataset.labor];

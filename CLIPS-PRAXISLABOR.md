@@ -1,6 +1,6 @@
 # Drehliste: Clips für das Praxislabor (Stichübungen am Silikonohr)
 
-Stand: 01.11.2026. Die Fahrschule hat für jede Stichübung einen festen Platz für einen Clip. Solange ein Clip fehlt, sehen Teilnehmer an dieser Stelle nichts; im Prüfmodus (`#alles`) steht ein Hinweis „Clip fehlt noch“.
+Stand: 01.11.2026. Die Clips zeigen allen Teilnehmern, wie gestochen wird (Praxislabor, Teil 2 „Zuschauen“). Im Paket Komplett gehören sie zu den Stichübungen mit dem Übungsset. Die Fahrschule hat für jeden Clip einen festen Platz. Solange ein Clip fehlt, sehen Teilnehmer an dieser Stelle nichts; im Prüfmodus (`#alles`) steht ein Hinweis „Clip fehlt noch“.
 
 Technik-Clips werden **nicht** per KI erzeugt, sondern von dir im Studio gefilmt. Allgemeine Tipps zu Licht und Kamera stehen in `FOTO-VIDEO-ANLEITUNG.md`.
 
@@ -31,6 +31,6 @@ Technik-Clips werden **nicht** per KI erzeugt, sondern von dir im Studio gefilmt
 1. Clips mit genau diesen Namen schicken (z. B. `labor-lobe.mp4`), am einfachsten über Google Drive.
 2. Ich wandle sie mit `kurs-prototyp/werkzeuge/clip-umwandeln.sh` um (MP4 + WebM + Standbild, Ton entfernt, klein für Handy) und trage sie in `kurs-prototyp/inhalte/clips.js` ein. Danach erscheinen sie automatisch in der passenden Übung.
 
-## Übungsset (Empfehlung, bitte bestätigen oder ändern)
+## Übungsset für das Paket Komplett (Empfehlung, bitte bestätigen oder ändern)
 
 Silikonohr · Venenverweilkanülen 18G und 16G · kleiner Nadelabwurfbehälter · Klemme (Snaptile oder Gazeklemme) · Einmal-Hautmarker · Einmalhandschuhe und Einmalunterlage · Übungsschmuck: Labret, Klemmkugelring (BCR), Barbell 38 mm · Schere. Die Liste steht in `kurs-prototyp/inhalte/praxislabor.js` (`KURS.labor.stich.set`) und lässt sich dort anpassen.

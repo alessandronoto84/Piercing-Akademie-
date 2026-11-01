@@ -232,7 +232,7 @@ ${svg(178, 70, a)}
 ${svg(178, 60, b)}
 <div class="seite"></div>
 <h1>Übungsprotokoll</h1>
-<p class="lead">Trag ein, wann du welche Übung gemacht hast. Die Stichübungen gehören zu den Paketen Praxis und Komplett. Bring das Blatt und dein Silikonohr zum Praxistag mit.</p>
+<p class="lead">Trag ein, wann du welche Übung gemacht hast. Die Stichübungen gehören zum Paket Komplett (Übungsset). Bring das Blatt zum Praxistag mit, im Paket Komplett auch dein Silikonohr.</p>
 <table><tr><th style="width:58mm">Aufgabe</th><th style="width:20mm">Datum</th><th style="width:22mm">Durchgänge</th><th style="width:26mm">Selbstkontrolle erfüllt</th><th>Notizen</th></tr>
 ${L.aufgaben.map((x, i) => `<tr><td>Trocken ${i + 1}: ${esc(x.titel)}</td><td></td><td></td><td>☐</td><td></td></tr>`).join("")}${(L.stich ? L.stich.aufgaben : []).map((x, i) => `<tr><td>Stich ${i + 1}: ${esc(x.titel)}</td><td></td><td></td><td>☐</td><td></td></tr>`).join("")}
 </table>

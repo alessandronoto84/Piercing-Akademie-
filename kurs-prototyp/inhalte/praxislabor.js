@@ -5,13 +5,13 @@
    Format: { id, titel, modul (Bezug), material: [...], schritte: [...], kontrolle: [...] } */
 window.KURS = window.KURS || { module: [] };
 window.KURS.labor = {
-  einleitung: "Hier übst du die Handgriffe, die du am Praxistag brauchst. Teil 1 sind Trockenübungen ohne Stechen: am Silikon-Übungsmodell, auf Papier und am Arbeitsplatz. In Teil 2 stichst du mit dem Übungsset ins Silikonohr (Pakete Praxis und Komplett). Jede Aufgabe hat eine Selbstkontrolle. Hake nur ab, was du wirklich geschafft hast. Bring die ausgefüllte Übungsvorlage zum Praxistag mit.",
+  einleitung: "Hier übst du die Handgriffe, die du am Praxistag brauchst. Teil 1 sind Trockenübungen ohne Stechen: am Silikon-Übungsmodell, auf Papier und am Arbeitsplatz. In Teil 2 zeigen dir Clips, wie gestochen wird; im Paket Komplett stichst du dort mit dem Übungsset selbst ins Silikonohr. Jede Aufgabe hat eine Selbstkontrolle. Hake nur ab, was du wirklich geschafft hast. Bring die ausgefüllte Übungsvorlage zum Praxistag mit.",
   sicherheit: [
-    "Bei den Trockenübungen wird nicht gestochen. Ins Silikonohr stichst du erst in Teil 2, mit dem Übungsset der Pakete Praxis und Komplett. In Menschen oder Tiere stichst du nie; das lernst du am Praxistag unter Anleitung.",
+    "Bei den Trockenübungen wird nicht gestochen. Ins Silikonohr stichst du nur mit dem Übungsset aus dem Paket Komplett. In Menschen oder Tiere stichst du nie; das lernst du am Praxistag unter Anleitung.",
     "Benutze Kanülen nur als Trockenübung mit aufgesetzter Schutzkappe. Gebrauchte oder offene Kanülen gehören sofort in den Nadelabwurfbehälter.",
     "Der Online-Kurs und das Praxislabor ersetzen keine praktische Anleitung."
   ],
-  material: "Silikon-Übungsmodell (z. B. Silikon-Ohr oder Übungshaut; in den Paketen Praxis und Komplett enthalten, sonst im Fachhandel für Piercing- und Tattoobedarf), Einmal-Hautmarker, Lineal mit Millimetereinteilung, Klemme, Kanüle mit Schutzkappe, Einmalunterlage, Handschuhe, die Übungsvorlage zum Ausdrucken.",
+  material: "Silikon-Übungsmodell (z. B. Silikon-Ohr oder Übungshaut aus dem Fachhandel für Piercing- und Tattoobedarf; im Paket Komplett ist ein Übungsset dabei), Einmal-Hautmarker, Lineal mit Millimetereinteilung, Klemme, Kanüle mit Schutzkappe, Einmalunterlage, Handschuhe, die Übungsvorlage zum Ausdrucken.",
   aufgaben: [
     {
       id: "arbeitsplatz",
@@ -142,14 +142,15 @@ window.KURS.labor = {
   ]
 };
 
-/* Stichübungen am Silikonohr: nur für die Pakete Praxis und Komplett (mit Übungsset der Akademie).
+/* Stichübungen am Silikonohr: selbst gestochen wird nur im Paket Komplett (Übungsset der Akademie).
+   Alle anderen sehen dieselben Übungen als „Zuschauen“: Clip und Ablauf, ohne Selbstkontrolle.
    Gestochen wird ausschließlich ins Silikon. Ablauf nach Kursbuch S. 111–112 (Schritte 9–19), Werte aus den Datenblättern (Modul 08).
    clip: Id eines Clips in inhalte/clips.js. Fehlt der Clip noch, sehen Teilnehmer nichts; im Prüfmodus erscheint ein Hinweis.
    Drehliste für die Clips: CLIPS-PRAXISLABOR.md im Hauptordner. */
 window.KURS.labor.stich = {
-  pakete: ["praxis", "komplett"],
+  pakete: ["komplett"],
   einleitung: "Mit deinem Übungsset stichst du jetzt selbst: ins Silikonohr, nach dem Ablauf aus Modul 09 und den Datenblättern aus Modul 08. Schau dir zuerst den Clip an, dann übst du. Bring dein gestochenes Silikonohr und das Übungsprotokoll zum Praxistag mit: Dort schauen wir uns deine Stichkanäle gemeinsam an.",
-  gesperrt: "Die Stichübungen am Silikonohr gehören zu den Paketen Praxis und Komplett, denn dafür bekommst du von uns das Übungsset mit Silikonohr, Kanülen und Abwurfbehälter. Die Trockenübungen oben kannst du trotzdem alle machen.",
+  zuschauen: "In diesen Clips siehst du, wie gestochen wird: am Silikonohr, Schritt für Schritt nach dem Ablauf aus Modul 09 und den Datenblättern aus Modul 08. Schau genau hin und sprich die Schritte mit. Selbst stechen lernst du am Praxistag unter Anleitung; im Paket Komplett übst du vorher zu Hause mit dem Übungsset.",
   sicherheit: [
     "Gestochen wird nur ins Silikonohr. Nie in dich, in andere Menschen oder in Tiere, auch nicht „nur zum Ausprobieren“.",
     "Kanülen nie zurück in die Schutzkappe stecken. Die Stahlnadel kommt direkt nach dem Herausziehen in den Nadelabwurfbehälter; der volle Behälter wird fest verschlossen im Restmüll entsorgt.",

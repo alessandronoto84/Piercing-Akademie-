@@ -24,8 +24,8 @@ Stand: 26.10.2026. Erledigtes steht unten. Details und Quellen: `KURS-RECHERCHE.
 | 15 | **Fotos und Clips aus dem Studio** nach `FOTO-VIDEO-ANLEITUNG.md` | Echte Aufnahmen statt KI-Bilder; Clip-Player in der Fahrschule ist fertig. | du |
 | 17 | **Praxislabor fachlich prüfen**: 7 Übungsaufgaben in `kurs-prototyp/inhalte/praxislabor.js` (Arbeitsplatz, Hände/Handschuhe, Anzeichnen, Klemme und Kanüle ohne Stechen, Ablauf, Notfall) und Silikon-Übungsmodell im Paket bestätigen | Die Aufgaben folgen Modul 05, 08 und 09, sind aber von der Akademie formuliert. | du |
 | 18 | **Kursbuch, nächste Auflage**: 7 Stellen angleichen, an denen die Fahrschule bewusst vom Buch abweicht (Liste in `KURS-RECHERCHE.md`, Abschnitt 15) | Teilnehmer, die Buch und Kurs nebeneinander lesen, sehen sonst Widersprüche. | du |
-| 19 | **Praxislabor-Clips filmen**: 7 kurze Clips am Silikonohr nach `CLIPS-PRAXISLABOR.md` (Querformat, 20–90 s, nur Hände und Ohr) | Ohne Clips bleiben die Stichübungen reine Textanleitungen. | du |
-| 20 | **Übungsset festlegen und Versand klären**: Inhalt bestätigen (Vorschlag in `CLIPS-PRAXISLABOR.md`); vom Anwalt bzw. Lieferanten bestätigen lassen, dass du Venenverweilkanülen an Privatpersonen verschicken darfst, und eine Gebrauchs-/Entsorgungsanleitung beilegen | Kanülen sind Medizinprodukte; Haftung beim Versand an Teilnehmer. | du / Anwalt |
+| 19 | **Praxislabor-Clips filmen**: 7 kurze Clips am Silikonohr nach `CLIPS-PRAXISLABOR.md` (Querformat, 20–90 s, nur Hände und Ohr) | Die Clips zeigen allen Teilnehmern, wie gestochen wird; im Paket Komplett begleiten sie die Stichübungen. | du |
+| 20 | **Übungsset für das Paket Komplett festlegen und Versand klären**: Inhalt bestätigen (Vorschlag in `CLIPS-PRAXISLABOR.md`); vom Anwalt bzw. Lieferanten bestätigen lassen, dass du Venenverweilkanülen an Privatpersonen verschicken darfst, und eine Gebrauchs-/Entsorgungsanleitung beilegen | Nur Komplett-Teilnehmer bekommen das Set; Kanülen sind Medizinprodukte. | du / Anwalt |
 
 ## 2. Was ich danach umsetze
 
