@@ -103,7 +103,7 @@ KURS.module.push({
         ["May piercers use opiate-based prescription anaesthetics?", ["No", "Yes, with written consent", "Only for intimate piercings", "Yes, if a doctor has prescribed them"], "Unusual and prohibited in Germany.", "S. 11"],
         ["Which anaesthesia may only be performed by a doctor?", ["Regional anaesthesia of nerves, nerve plexuses or spinal cord", "Cooling with ice spray", "Applying an over-the-counter ointment", "Cooling with ice cubes"], "See ch. 4.", "S. 11"],
         ["What is local anaesthesia based on?", ["On acting on the peripheral nervous system", "On acting on the brain", "On blocking the spinal cord", "On constricting the blood vessels"], "It blocks transmission at the nerve endings.", "S. 11–12"],
-        ["Why do you work in a separate, quiet room?", ["For hygiene and to protect against stress factors", "Because the trade office (Gewerbeamt) requires it", "So that you can work faster", "Only because of how loud the autoclave is"], "Telephone, doorbell and people coming and going are disruptive.", "S. 12"],
+        ["Why do you work in a separate, quiet room?", ["For hygiene and to protect against stress factors", "Because the trade office requires it", "So that you can work faster", "Only because of how loud the autoclave is"], "Telephone, doorbell and people coming and going are disruptive.", "S. 12"],
         ["Case: The studio phone rings during the piercing. What do you do?", ["I let it ring and stay with the client", "I answer briefly and disinfect my hands afterwards", "I ask the client to wait a moment", "I answer it with my gloves on"], "Nothing may disturb the calm at this moment.", "S. 12"]
       ]
     },

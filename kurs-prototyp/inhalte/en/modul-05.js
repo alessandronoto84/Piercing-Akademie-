@@ -172,7 +172,7 @@ KURS.module.push({
       ],
       fragen: [
         ["Who may be in the work area during piercing?", ["Only the piercer and the client", "A companion, if they keep their distance", "Trainees without gloves", "A companion, if the client is anxious"], "No onlookers.", "S. 26"],
-        ["What must hang in the studio clearly visible and quickly accessible?", ["An up-to-date first aid kit", "The framework hygiene plan", "The price list", "The trade licence (Gewerbeschein)"], "Plus the emergency numbers.", "S. 26"],
+        ["What must hang in the studio clearly visible and quickly accessible?", ["An up-to-date first aid kit", "The framework hygiene plan", "The price list", "The trade licence"], "Plus the emergency numbers.", "S. 26"],
         ["What surface do the couch and furniture need?", ["Smooth and washable", "Faux leather with decorative stitching", "Fabric with a protective cover", "Varnished wood with joints"], "Possibly disposable couch covers.", "S. 26"],
         ["Why are treatment and reprocessing kept spatially separate?", ["So that used instruments and sterile goods don't cross paths", "So that clients don't see the reprocessing", "So that you have shorter distances", "Because the autoclave gives off heat"], "The dirty and clean sides stay separate.", "Ergänzung"],
         ["Case: The client's friend wants to watch the piercing. What do you say?", ["She waits outside; only client and piercer are in the work area", "She may watch if she wears a face mask", "She may hold the client's hand", "She may film if the client agrees"], "No onlookers in the work area.", "S. 26"]
@@ -220,7 +220,7 @@ KURS.module.push({
         ["What do you do after a needlestick injury, once you have stopped working?", ["Encourage bleeding by pressing on the tissue around the wound", "Immediately tie off the wound tightly", "Squeeze hard directly at the puncture site", "Suck out the wound"], "Then disinfect.", "Ergänzung"],
         ["What do you disinfect a puncture wound with?", ["An alcohol-based skin antiseptic", "Surface disinfectant", "Saline solution", "Hydrogen peroxide"], "Then see a doctor immediately.", "Ergänzung"],
         ["Who do you go to after a needlestick injury at work?", ["A doctor immediately; for an occupational accident, a D-Arzt", "Your family doctor on the next working day", "The local public health office", "A doctor only if you have symptoms"], "HIV prevention works best within a few hours.", "Ergänzung"],
-        ["Why do you have the success of the hepatitis B vaccination checked?", ["Because not every vaccination produces enough antibodies", "Because the vaccination expires after one year", "Because the trade office (Gewerbeamt) requires proof", "Because it is also supposed to protect against hepatitis C"], "Checked via the antibody titre.", "Ergänzung"]
+        ["Why do you have the success of the hepatitis B vaccination checked?", ["Because not every vaccination produces enough antibodies", "Because the vaccination expires after one year", "Because the trade office requires proof", "Because it is also supposed to protect against hepatitis C"], "Checked via the antibody titre.", "Ergänzung"]
       ]
     },
     {
