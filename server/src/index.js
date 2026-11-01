@@ -4,6 +4,7 @@
    - Login ohne Passwort: 6-stelliger Code per E-Mail an die beim Kauf angegebene Adresse
    - Stripe-Webhook: legt nach der Zahlung den Zugang an und schickt Zugang + Vertragsbestätigung (§ 312f BGB)
    - speichert Fortschritt und vergibt prüfbare Bescheinigungsnummern */
+import { PDFDocument, StandardFonts, rgb, degrees } from "pdf-lib";
 import { mailCode, mailWillkommen, mailVerdacht, mailAnfrage, mailWiderrufEingang, mailWiderrufAkademie, mailKit, mailKitAkademie, mailBuch, sende } from "./mail.js";
 
 const COOKIE = "pa_sitzung";
@@ -36,6 +37,13 @@ export default {
 
 export async function aufraeumen(env) {
   const t = jetzt();
+  if (env.DATEIEN) {
+    const alt = await env.DB.prepare("SELECT token_hash FROM downloads WHERE ablauf < ?").bind(t).all();
+    for (const r of alt.results || []) await env.DATEIEN.delete("personal/" + (await sha256("kauf:" + r.token_hash)) + ".pdf");
+    const frist = new Date(); frist.setMonth(frist.getMonth() - 12);
+    const weg = await env.DB.prepare("SELECT email FROM kunden WHERE gueltig_bis < ? AND paket != 'admin'").bind(frist.toISOString()).all();
+    for (const r of weg.results || []) await env.DATEIEN.delete("personal/" + (await sha256("kurs:" + r.email)) + ".pdf");
+  }
   const frist = new Date(); frist.setMonth(frist.getMonth() - 12);
   const alt = frist.toISOString();
   await env.DB.batch([
@@ -141,7 +149,7 @@ async function kurs(req, env, url, p) {
       headers: { "Content-Type": "text/javascript; charset=utf-8", "Cache-Control": "private, no-store" }
     });
   }
-  if (p === "/kurs/kursbuch.pdf") return buchAusliefern(env);
+  if (p === "/kurs/kursbuch.pdf") return buchAusliefern(env, "kurs:" + s.email, "Kursteilnehmer/in " + (s.kunde.name ? s.kunde.name + " · " : "") + s.email);
   const res = await datei(req, env, url);
   const h = new Headers(res.headers);
   h.set("Cache-Control", "private, no-store");
@@ -497,11 +505,39 @@ async function produktVerkauft(env, ctx, sess, meta, email) {
   return json({ ok: true });
 }
 
-// PDF aus dem privaten Speicher (R2-Bucket DATEIEN); nie aus dem öffentlichen Ordner
-async function buchAusliefern(env) {
-  const obj = env.DATEIEN ? await env.DATEIEN.get(BUCH_DATEI) : null;
-  if (!obj) return new Response("Das Kursbuch als PDF wird gerade vorbereitet. Wir schicken dir den Download, sobald es bereitsteht.", { status: 503, headers: { "Content-Type": "text/plain; charset=utf-8", "Cache-Control": "no-store" } });
-  return new Response(obj.body, { headers: { "Content-Type": "application/pdf", "Content-Disposition": 'attachment; filename="Piercing-Akademie-Kursbuch.pdf"', "Cache-Control": "private, no-store", "X-Robots-Tag": "noindex" } });
+// PDF aus dem privaten Speicher (R2-Bucket DATEIEN), nie aus dem öffentlichen Ordner.
+// Jede Kopie bekommt ein persönliches Wasserzeichen (Fußzeile, blasser Diagonaltext, Dateieigenschaften).
+// Die gekennzeichnete Fassung wird je Käufer einmal erzeugt und in R2 unter personal/… zwischengespeichert.
+const winAnsi = (t) => String(t).replace(/[^\x20-\x7E\xA0-\xFF€–„“”‚‘’·]/g, "?");
+async function buchAusliefern(env, kennung, inhaber) {
+  const schlussel = "personal/" + (await sha256(kennung)) + ".pdf";
+  let daten = env.DATEIEN ? await env.DATEIEN.get(schlussel) : null;
+  let bytes = daten ? await daten.arrayBuffer() : null;
+  if (!bytes) {
+    const orig = env.DATEIEN ? await env.DATEIEN.get(BUCH_DATEI) : null;
+    if (!orig) return new Response("Das Kursbuch als PDF wird gerade vorbereitet. Wir schicken dir den Download, sobald es bereitsteht.", { status: 503, headers: { "Content-Type": "text/plain; charset=utf-8", "Cache-Control": "no-store" } });
+    bytes = await wasserzeichen(await orig.arrayBuffer(), inhaber, kennung);
+    await env.DATEIEN.put(schlussel, bytes, { httpMetadata: { contentType: "application/pdf" } });
+  }
+  return new Response(bytes, { headers: { "Content-Type": "application/pdf", "Content-Disposition": 'attachment; filename="Piercing-Akademie-Kursbuch.pdf"', "Cache-Control": "private, no-store", "X-Robots-Tag": "noindex" } });
+}
+
+export async function wasserzeichen(original, inhaber, kennung) {
+  const pdf = await PDFDocument.load(original, { updateMetadata: false });
+  const schrift = await pdf.embedFont(StandardFonts.Helvetica);
+  const nr = "PA-" + (await sha256(kennung)).slice(0, 8).toUpperCase();
+  const fuss = winAnsi("Lizenziert für " + inhaber + " · " + nr + " · Nur zum persönlichen Gebrauch, Weitergabe und Vervielfältigung untersagt");
+  const quer = winAnsi(inhaber);
+  for (const seite of pdf.getPages()) {
+    const { width, height } = seite.getSize();
+    const groesse = Math.max(5, Math.min(7, width / 90));
+    seite.drawText(fuss, { x: 18, y: 10, size: groesse, font: schrift, color: rgb(0.42, 0.42, 0.42), maxWidth: width - 36 });
+    seite.drawText(quer, { x: width * 0.12, y: height * 0.32, size: Math.min(26, width / 18), font: schrift, color: rgb(0.55, 0.55, 0.55), opacity: 0.1, rotate: degrees(35) });
+  }
+  pdf.setSubject(fuss);
+  pdf.setKeywords([nr, kennung]);
+  pdf.setProducer("Piercing Akademie");
+  return await pdf.save();
 }
 
 // Persönlicher Download-Link aus der Kauf-E-Mail: 2 Jahre gültig, höchstens 10 Downloads
@@ -511,7 +547,7 @@ async function download(env, token) {
   const d = await env.DB.prepare("SELECT * FROM downloads WHERE token_hash = ?").bind(h).first();
   if (!d || d.ablauf < jetzt()) return new Response("Dieser Download-Link ist abgelaufen. Schreib uns an diepiercingakademie@gmail.com.", { status: 410, headers: { "Content-Type": "text/plain; charset=utf-8" } });
   if (d.anzahl >= 10) return new Response("Dieser Link wurde schon zehnmal genutzt. Schreib uns, wenn du das Buch erneut brauchst: diepiercingakademie@gmail.com.", { status: 429, headers: { "Content-Type": "text/plain; charset=utf-8" } });
-  const res = await buchAusliefern(env);
+  const res = await buchAusliefern(env, "kauf:" + h, d.email);
   if (res.status === 200) await env.DB.prepare("UPDATE downloads SET anzahl = anzahl + 1 WHERE token_hash = ?").bind(h).run();
   return res;
 }

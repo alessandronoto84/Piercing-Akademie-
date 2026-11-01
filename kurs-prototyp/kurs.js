@@ -627,7 +627,7 @@
     var cl = KURS.checklisten || [];
     app.innerHTML = '<section class="k-kopf"><p class="label">Praxis</p><h1>Checklisten und Vorlagen</h1><p class="lead">Für den Studioalltag. Abgehakt wird nur für dich und nur in diesem Browser.</p></section>' +
       '<section class="k-lektion"><h2>Vorlagen zum Ausdrucken</h2><p>Druckfertig als PDF. Pass sie an dein Studio an; Einverständniserklärung und Hygieneplan lässt du vor dem Einsatz prüfen (Anwalt bzw. Gesundheitsamt).</p><ul class="k-vorlagen">' +
-        (KONTO ? '<li><a href="kursbuch.pdf" download>Kursbuch „Die Piercing Akademie – Dein Weg zum Bodypiercer“</a><span class="fine">PDF, 120 Seiten, nur für deinen persönlichen Gebrauch</span></li>' : "") +
+        (KONTO ? '<li><a href="kursbuch.pdf" download>Kursbuch „Die Piercing Akademie – Dein Weg zum Bodypiercer“</a><span class="fine">PDF, 120 Seiten, mit deiner E-Mail-Adresse gekennzeichnet, nur für deinen persönlichen Gebrauch</span></li>' : "") +
         VORLAGEN.map(function (v) { return '<li><a href="' + v[0] + '" download>' + esc(v[1]) + '</a><span class="fine">' + esc(v[2]) + "</span></li>"; }).join("") + "</ul></section>" +
       cl.map(function (c, ci) {
         return '<section class="k-lektion"><h2>' + esc(c.titel) + '</h2><p class="fine">Aus Modul ' + zwei(c.modul) + '</p><ul class="k-aufgaben">' +

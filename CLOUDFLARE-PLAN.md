@@ -69,3 +69,5 @@ Das Kursbuch liegt nicht im öffentlichen Ordner, sondern in einem privaten R2-B
 1. `npx wrangler r2 bucket create piercing-akademie-dateien`
 2. `npx wrangler r2 object put piercing-akademie-dateien/kursbuch.pdf --file=Kursbuch.pdf --remote`
 Kursteilnehmer laden es angemeldet unter `/kurs/kursbuch.pdf`, Käufer über einen persönlichen Link `/download/…` (2 Jahre, höchstens 10 Downloads). Der API-Token braucht zusätzlich das Recht „Workers R2 Storage: Bearbeiten“.
+
+**Wasserzeichen:** Jede Kopie wird beim ersten Download mit `pdf-lib` gekennzeichnet (Fußzeile mit Name/E-Mail und Bestellnummer, blasser Diagonaltext, Dateieigenschaften) und unter `personal/…` in R2 zwischengespeichert. Bei einem Buch mit über 100 Seiten braucht das mehr Rechenzeit, als der kostenlose Workers-Tarif erlaubt (10 ms): **Workers Paid (5 US-$ im Monat) einplanen.**
