@@ -19,7 +19,8 @@ Stand: 26.10.2026. Erledigtes steht unten. Details und Quellen: `KURS-RECHERCHE.
 | 11 | **Rechnungsangaben**: Kleinunternehmer oder Umsatzsteuer? | Preisangaben („inkl. MwSt.“ oder Hinweis § 19 UStG) und Rechnungen. | du / Steuerberater |
 | 12 | **Berufshaftpflicht** für Kurs und Praxistage bestätigen | Absicherung der Praxistage mit Modellen. | Versicherung |
 | 13 | **Stripe: drei Bezahl-Links anlegen** nach `STRIPE-ANLEITUNG.md` und mir die Links schicken | Kaufknopf auf der Website ist vorbereitet. | du |
-| 14 | **Zugang zum Online-Kurs:** eigene Lösung auf Cloudflare (Login per E-Mail-Code, Stripe meldet Zahlungen automatisch) oder fertige Kursplattform | Ohne Login kann der Online-Kurs nicht verkauft werden. | du entscheidest, ich baue |
+| 14 | **Cloudflare-Zugänge** nach `CLOUDFLARE-PLAN.md` in den Umgebungseinstellungen hinterlegen (entschieden: eigene Lösung auf Cloudflare) | Login, Bezahlschranke und automatische Freischaltung. | du, dann ich |
+| 16 | **Umsatzsteuer bei Verkauf ins Ausland** mit dem Steuerberater klären | Online-Kurse an Privatkunden in anderen EU-Ländern: Umsatzsteuer des Kundenlandes, Meldung über das OSS-Verfahren (ab 10.000 € EU-Auslandsumsatz pro Jahr; Kleinunternehmer gesondert prüfen). | Steuerberater |
 | 15 | **Fotos und Clips aus dem Studio** nach `FOTO-VIDEO-ANLEITUNG.md` | Echte Aufnahmen statt KI-Bilder; Clip-Player in der Fahrschule ist fertig. | du |
 
 ## 2. Was ich danach umsetze
@@ -42,4 +43,5 @@ Stand: 26.10.2026. Erledigtes steht unten. Details und Quellen: `KURS-RECHERCHE.
 - Vorschaubild für WhatsApp, Instagram und Co. auf allen Seiten.
 - Kursbilder als einzelne WebP-Dateien: rund ein Drittel kleiner, lädt nur, was gebraucht wird.
 - Website für Stripe vorbereitet (01.11.2026): Kaufknopf je Paket, Danke-Seite, AGB und Datenschutz ergänzt; aktiv, sobald die Bezahl-Links eingetragen sind.
+- Website auf Englisch und Spanisch (01.11.2026): Sprachauswahl oben, alle Seiten inklusive übersetzter Rechtstexte (deutsche Fassung verbindlich). Praxistage und Coaching auf Deutsch oder Englisch.
 - Clip-Player in der Fahrschule (01.11.2026): kurze Clips als stumme Schleife oder mit Ton, Umwandlung per `werkzeuge/clip-umwandeln.sh`.

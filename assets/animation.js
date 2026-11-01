@@ -13,7 +13,11 @@
   if (ruhig) root.classList.add("ruhig");
 
   // ---------- Scroll-Nadel ----------
-  var KURZ = { ueber: "Über mich", lernprinzip: "Lernprinzip", module: "Module", ablauf: "Ablauf", zielgruppe: "Für wen", kurs: "Kursinhalt", pakete: "Pakete", praxistag: "Praxistag", ergebnis: "Studio", klartext: "Klartext", faq: "Fragen", kontakt: "Anmeldung" };
+  var KURZ = {
+    de: { ueber: "Über mich", lernprinzip: "Lernprinzip", module: "Module", ablauf: "Ablauf", zielgruppe: "Für wen", kurs: "Kursinhalt", pakete: "Pakete", praxistag: "Praxistag", ergebnis: "Studio", klartext: "Klartext", faq: "Fragen", kontakt: "Anmeldung" },
+    en: { ueber: "About me", lernprinzip: "How you learn", module: "Modules", ablauf: "How it works", zielgruppe: "Who it is for", kurs: "Content", pakete: "Packages", praxistag: "Practice day", ergebnis: "Studio", klartext: "Plain words", faq: "FAQ", kontakt: "Sign up" },
+    es: { ueber: "Sobre mí", lernprinzip: "Cómo aprendes", module: "Módulos", ablauf: "Cómo funciona", zielgruppe: "Para quién", kurs: "Contenido", pakete: "Paquetes", praxistag: "Día de práctica", ergebnis: "Estudio", klartext: "Claro", faq: "Preguntas", kontakt: "Inscripción" }
+  }[(document.documentElement.lang || "de").slice(0, 2)] || {};
   var sektionen = [].slice.call(document.querySelectorAll("main section[id]"));
   var nadel = document.createElement("div");
   nadel.className = "nadel";

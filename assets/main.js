@@ -6,6 +6,23 @@
   "use strict";
 
   var EMAIL = "diepiercingakademie@gmail.com";
+  // Texte je Seitensprache (de, en, es); die Seiten selbst baut werkzeuge/sprachen/bauen.py
+  var SPRACHE = (document.documentElement.lang || "de").slice(0, 2);
+  var TEXTE = {
+    de: { paket: "Bitte wähle ein Paket oder „Noch unsicher“.", name: "Bitte gib deinen Namen an.", telefon: "Bitte gib eine gültige Telefonnummer an oder lass das Feld leer.",
+      volljaehrig: "Die Teilnahme ist erst ab 18 Jahren möglich. Bitte bestätige dein Alter.", pruefen: "Bitte prüfe deine Eingabe.", hallo: "Hallo Piercing Akademie,",
+      interesse: "ich interessiere mich für: ", nameZ: "Name: ", telZ: "Telefon: ", voll: "Volljährig: ja", nachricht: "Nachricht:", gruss: "Viele Grüße",
+      betreff: "Anfrage Piercing Akademie – ", kopiert: "Text kopiert" },
+    en: { paket: "Please choose a package or “Not sure yet”.", name: "Please enter your name.", telefon: "Please enter a valid phone number or leave the field empty.",
+      volljaehrig: "You must be 18 or older to take part. Please confirm your age.", pruefen: "Please check your entry.", hallo: "Hello Piercing Akademie,",
+      interesse: "I am interested in: ", nameZ: "Name: ", telZ: "Phone: ", voll: "Aged 18 or over: yes", nachricht: "Message:", gruss: "Best regards",
+      betreff: "Enquiry Piercing Akademie – ", kopiert: "Text copied" },
+    es: { paket: "Elige un paquete o «Aún no lo sé».", name: "Indica tu nombre.", telefon: "Indica un número de teléfono válido o deja el campo vacío.",
+      volljaehrig: "La participación solo es posible a partir de 18 años. Confirma tu edad.", pruefen: "Revisa lo que has escrito.", hallo: "Hola, Piercing Akademie:",
+      interesse: "Me interesa: ", nameZ: "Nombre: ", telZ: "Teléfono: ", voll: "Mayor de edad: sí", nachricht: "Mensaje:", gruss: "Un saludo",
+      betreff: "Consulta Piercing Akademie – ", kopiert: "Texto copiado" }
+  };
+  var T = TEXTE[SPRACHE] || TEXTE.de;
   var form = document.getElementById("anfrage");
   if (!form) return;
 
@@ -14,12 +31,7 @@
   var copyBtn = document.getElementById("anfrage-kopieren");
   var lastText = "";
 
-  var messages = {
-    paket: "Bitte wähle ein Paket oder „Noch unsicher“.",
-    name: "Bitte gib deinen Namen an.",
-    telefon: "Bitte gib eine gültige Telefonnummer an oder lass das Feld leer.",
-    volljaehrig: "Die Teilnahme ist erst ab 18 Jahren möglich. Bitte bestätige dein Alter."
-  };
+  var messages = { paket: T.paket, name: T.name, telefon: T.telefon, volljaehrig: T.volljaehrig };
 
   // Paket vorauswählen: per Klick auf eine Preiskarte oder per Link mit ?paket=basis|praxis|komplett
   function selectPaket(value) {
@@ -52,7 +64,7 @@
   }
   function check(field) {
     var ok = field.checkValidity();
-    setError(field, ok ? "" : messages[field.name] || "Bitte prüfe deine Eingabe.");
+    setError(field, ok ? "" : messages[field.name] || T.pruefen);
     return ok;
   }
 
@@ -69,16 +81,16 @@
   function buildText() {
     var f = form.elements;
     var lines = [
-      "Hallo Piercing Akademie,",
+      T.hallo,
       "",
-      "ich interessiere mich für: " + paket.options[paket.selectedIndex].text,
+      T.interesse + paket.options[paket.selectedIndex].text,
       "",
-      "Name: " + f.name.value.trim(),
-      "Telefon: " + (f.telefon.value.trim() || "–"),
-      "Volljährig: ja"
+      T.nameZ + f.name.value.trim(),
+      T.telZ + (f.telefon.value.trim() || "–"),
+      T.voll
     ];
-    if (f.nachricht.value.trim()) lines.push("", "Nachricht:", f.nachricht.value.trim());
-    lines.push("", "Viele Grüße", f.name.value.trim());
+    if (f.nachricht.value.trim()) lines.push("", T.nachricht, f.nachricht.value.trim());
+    lines.push("", T.gruss, f.name.value.trim());
     return lines.join("\n");
   }
 
@@ -95,7 +107,7 @@
     }
 
     lastText = buildText();
-    var subject = "Anfrage Piercing Akademie – " + paket.options[paket.selectedIndex].text;
+    var subject = T.betreff + paket.options[paket.selectedIndex].text;
     window.location.href = "mailto:" + EMAIL +
       "?subject=" + encodeURIComponent(subject) +
       "&body=" + encodeURIComponent(lastText);
@@ -107,7 +119,7 @@
 
   copyBtn.addEventListener("click", function () {
     var text = lastText || buildText();
-    function done() { copyBtn.textContent = "Text kopiert"; }
+    function done() { copyBtn.textContent = T.kopiert; }
     if (navigator.clipboard && window.isSecureContext) {
       navigator.clipboard.writeText(text).then(done, fallback);
     } else {

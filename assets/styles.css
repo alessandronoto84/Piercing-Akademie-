@@ -500,3 +500,10 @@ footer a{color:var(--muted)}
 .insta a{color:var(--accent);font-weight:600;text-decoration:none;white-space:nowrap}
 .insta a:hover{text-decoration:underline}
 footer nav[aria-label="Instagram"] a{color:var(--accent)}
+
+/* Sprachauswahl in der Kopfzeile (werkzeuge/sprachen/bauen.py) */
+.sprachwahl{display:inline-flex;gap:2px;border:1px solid var(--line);border-radius:999px;padding:2px}
+.sprachwahl a{font-family:var(--f-mono);font-size:.75rem;letter-spacing:.06em;padding:3px 8px;border-radius:999px;color:var(--muted)}
+.sprachwahl a[aria-current="true"]{background:var(--gold);color:#111114;font-weight:500}
+.sprachwahl a:hover{color:var(--ink)}
+.sprachwahl a[aria-current="true"]:hover{color:#111114}

@@ -11,6 +11,8 @@
     komplett: ""
   };
 
+  var SPRACHE = (document.documentElement.lang || "de").slice(0, 2);
+  var T = { de: ["Jetzt buchen", "Erst Fragen stellen"], en: ["Book now", "Ask a question first"], es: ["Reservar ahora", "Primero preguntar"] }[SPRACHE] || ["Jetzt buchen", "Erst Fragen stellen"];
   var aktiv = false;
   document.querySelectorAll(".card a[data-paket]").forEach(function (knopf) {
     var paket = knopf.getAttribute("data-paket");
@@ -22,11 +24,11 @@
     anfrage.className = "pk-frage";
     anfrage.href = "#kontakt";
     anfrage.setAttribute("data-paket", paket);
-    anfrage.textContent = "Erst Fragen stellen";
+    anfrage.textContent = T[1];
     knopf.parentNode.insertBefore(anfrage, knopf.nextSibling);
     knopf.href = url;
     knopf.removeAttribute("data-paket");
-    knopf.textContent = "Jetzt buchen";
+    knopf.textContent = T[0];
   });
   var hinweis = document.getElementById("pk-zahlung");
   if (aktiv && hinweis) hinweis.hidden = false;
