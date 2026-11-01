@@ -115,7 +115,7 @@ KURS.module.push({
           "In England in 2023, a cluster of cases after ear piercings was traced to contaminated water (sinks, instantaneous water heater) in a studio; in 2016, a contaminated aftercare spray triggered over 100 suspected cases nationwide.",
           "Prevention: work sterile, recommend sterile saline solution instead of tap water for aftercare, no octenidine on cartilage, avoid pressure and friction on the fresh piercing (for example, don’t sleep on it)."
         ] },
-        { typ: "ergaenzung", text: "Basis: medical literature on cartilage inflammation after ear piercings." }
+        { typ: "ergaenzung", text: "Based on: medical literature on cartilage inflammation after ear piercings." }
       ],
       fragen: [
         ["What is perichondritis?", ["An inflammation of the perichondrium, usually on the auricle", "A nickel allergy on cartilage", "Hypergranulation on a cartilage piercing", "An inflammation of the earlobe"], "The most dangerous complication of cartilage piercings.", "Ergänzung"],

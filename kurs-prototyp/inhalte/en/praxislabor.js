@@ -5,13 +5,13 @@
    Format: { id, titel, modul (reference), material: [...], schritte: [...], kontrolle: [...] } */
 window.KURS = window.KURS || { module: [] };
 window.KURS.labor = {
-  einleitung: "Here you practise the hand movements you will need on the practice day. Part 1 consists of dry exercises without piercing: on the silicone practice model, on paper and at the workstation. In part 2, clips show you how piercing is done; with the Komplett package, you pierce the silicone ear yourself there using the practice set. Every exercise has a self-check. Only tick off what you have really managed. Bring the completed practice template with you to the practice day.",
+  einleitung: "Here you practise the hand movements you will need on the practice day. Part 1 consists of dry exercises without piercing: on the silicone practice model, on paper and at the workstation. In part 2, clips show you how piercing is done; with the Complete package, you pierce the silicone ear yourself there using the practice set. Every exercise has a self-check. Only tick off what you have really managed. Bring the completed practice template with you to the practice day.",
   sicherheit: [
-    "No piercing is done in the dry exercises. You only pierce the silicone ear with the practice set from the Komplett package. You never pierce people or animals; you learn that on the practice day under supervision.",
+    "No piercing is done in the dry exercises. You only pierce the silicone ear with the practice set from the Complete package. You never pierce people or animals; you learn that on the practice day under supervision.",
     "Only use cannulas as a dry exercise with the protective cap on. Used or uncapped cannulas go straight into the sharps container.",
     "The online course and the practice lab do not replace hands-on supervision."
   ],
-  material: "Silicone practice model (e.g. a silicone ear or practice skin from a specialist supplier of piercing and tattoo supplies; a practice set is included in the Komplett package), single-use skin marker, ruler with millimetre markings, clamp, cannula with protective cap, disposable underpad, gloves, the practice template to print out.",
+  material: "Silicone practice model (e.g. a silicone ear or practice skin from a specialist supplier of piercing and tattoo supplies; a practice set is included in the Complete package), single-use skin marker, ruler with millimetre markings, clamp, cannula with protective cap, disposable underpad, gloves, the practice template to print out.",
   aufgaben: [
     {
       id: "arbeitsplatz",
@@ -142,7 +142,7 @@ window.KURS.labor = {
   ]
 };
 
-/* Piercing exercises on the silicone ear: you only pierce yourself with the Komplett package (the Academy’s practice set).
+/* Piercing exercises on the silicone ear: you only pierce yourself with the Complete package (the Academy’s practice set).
    Everyone else sees the same exercises as “watch only”: clip and procedure, without self-check.
    Piercing is done exclusively into silicone. Procedure according to course book pp. 111–112 (steps 9–19), values from the data sheets (module 08).
    clip: id of a clip in inhalte/clips.js. If the clip is still missing, participants see nothing; in review mode a notice appears.
@@ -150,7 +150,7 @@ window.KURS.labor = {
 window.KURS.labor.stich = {
   pakete: ["komplett"],
   einleitung: "With your practice set, you now pierce yourself: into the silicone ear, following the procedure from module 09 and the data sheets from module 08. Watch the clip first, then practise. Bring your pierced silicone ear and the practice log with you to the practice day: we’ll look at your piercing channels together there.",
-  zuschauen: "In these clips you see how piercing is done: on the silicone ear, step by step, following the procedure from module 09 and the data sheets from module 08. Watch closely and say the steps along with the clip. You learn to pierce yourself on the practice day under supervision; with the Komplett package, you practise at home beforehand with the practice set.",
+  zuschauen: "In these clips you see how piercing is done: on the silicone ear, step by step, following the procedure from module 09 and the data sheets from module 08. Watch closely and say the steps along with the clip. You learn to pierce yourself on the practice day under supervision; with the Complete package, you practise at home beforehand with the practice set.",
   sicherheit: [
     "Only pierce the silicone ear. Never yourself, other people or animals, not even “just to try it out”.",
     "Never put cannulas back into the protective cap. The steel needle goes straight into the sharps container after you pull it out; the full container is closed tightly and disposed of with general waste.",

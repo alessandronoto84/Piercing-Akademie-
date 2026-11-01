@@ -212,7 +212,7 @@ KURS.module.push({
           "See a doctor immediately; for an occupational accident, a doctor authorised by the accident insurance (Durchgangsarzt, D-Arzt). Preventive treatment against HIV works best if it starts within a few hours.",
           "Document the incident: when, with what, with which client. The doctor clarifies whether the client is willing to have a blood test."
         ] },
-        { typ: "ergaenzung", text: "Basis: the S1 guideline on hygiene requirements for tattooing and piercing and the recommendations of the accident insurance institutions. In module 11, find out which statutory accident insurance (Berufsgenossenschaft) you are insured with." }
+        { typ: "ergaenzung", text: "Based on: the S1 guideline on hygiene requirements for tattooing and piercing and the recommendations of the accident insurance institutions. In module 11, find out which statutory accident insurance (Berufsgenossenschaft) you are insured with." }
       ],
       fragen: [
         ["Against which blood-borne disease is there a vaccination?", ["Hepatitis B", "Hepatitis C", "HIV", "Against all three"], "Have a doctor check that the vaccination has worked.", "Ergänzung"],

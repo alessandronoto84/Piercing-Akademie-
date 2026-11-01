@@ -115,7 +115,7 @@ KURS.module.push({
           "En Inglaterra, en 2023 se atribuyó un brote tras piercings en la oreja a agua contaminada (lavabos, calentador de agua instantáneo) en un estudio; en 2016, un espray de cuidado contaminado provocó más de 100 casos sospechosos en todo el país.",
           "Prevención: trabajar de forma estéril, recomendar solución salina estéril en lugar de agua del grifo para el cuidado, nada de octenidina en el cartílago, evitar presión y roce sobre el piercing recién hecho (por ejemplo, no dormir sobre él)."
         ] },
-        { typ: "ergaenzung", text: "Base: literatura médica especializada sobre inflamaciones del cartílago tras piercings en la oreja." }
+        { typ: "ergaenzung", text: "Fuente: literatura médica especializada sobre inflamaciones del cartílago tras piercings en la oreja." }
       ],
       fragen: [
         ["¿Qué es la pericondritis?", ["Una inflamación del pericondrio, normalmente en el pabellón auricular", "Una alergia al níquel en el cartílago", "Hipergranulación en un piercing de cartílago", "Una inflamación del lóbulo de la oreja"], "La complicación más peligrosa de los piercings de cartílago.", "Ergänzung"],
