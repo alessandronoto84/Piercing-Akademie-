@@ -167,3 +167,48 @@ test("Bestellseite: beide Häkchen Pflicht, Preis nur vom Server, Zustimmung lan
   assert.equal((await get("/bestellen.html")).status, 200);
   assert.equal((await get("/es/bestellen.html")).status, 200);
 });
+
+test("Einzelprodukte: Praxiskit (Versand, Rabatt nach Kursabschluss) und Kursbuch-PDF", async () => {
+  // Kit: ohne Sofort-Häkchen erlaubt, Normalpreis, Lieferadresse wird abgefragt
+  const k = await post("/api/bestellen", { paket: "kit", sprache: "de", agb: true, sofort: false });
+  assert.equal(k.status, 200);
+  const kf = new URLSearchParams((await k.json()).dev_formular);
+  assert.equal(kf.get("line_items[0][price_data][unit_amount]"), "9900");
+  assert.equal(kf.get("shipping_address_collection[allowed_countries][0]"), "DE");
+  assert.equal(kf.get("metadata[art]"), "ware");
+  // Buch: digitaler Inhalt, Sofort-Häkchen Pflicht
+  assert.equal((await post("/api/bestellen", { paket: "buch", sprache: "de", agb: true, sofort: false })).status, 400);
+  const b = await post("/api/bestellen", { paket: "buch", sprache: "en", agb: true, sofort: true });
+  const bf = new URLSearchParams((await b.json()).dev_formular);
+  assert.equal(bf.get("line_items[0][price_data][unit_amount]"), "1990");
+  assert.equal(bf.get("shipping_address_collection[allowed_countries][0]"), null);
+
+  // Rabatt: Basis-Kunde ohne bestandene Simulation -> Normalpreis, danach 84,15 €
+  const email = "kit-" + Date.now() + "@example.com";
+  assert.equal((await webhook(kauf(email, "cs_test_kit_" + Date.now()))).status, 200);
+  const { cookie } = await anmelden(email);
+  assert.equal((await (await get("/api/bestellen", cookie)).json()).kitRabatt, false);
+  const ohne = await post("/api/bestellen", { paket: "kit", sprache: "de", agb: true }, cookie);
+  assert.equal(new URLSearchParams((await ohne.json()).dev_formular).get("line_items[0][price_data][unit_amount]"), "9900");
+  const fortschritt = await fetch(BASIS + "/api/fortschritt", { method: "PUT", headers: { "Content-Type": "application/json", Cookie: cookie }, body: JSON.stringify({ simulation: { bestanden: true, richtig: 45, gesamt: 50 } }) });
+  assert.equal(fortschritt.status, 200);
+  assert.equal((await (await get("/api/bestellen", cookie)).json()).kitRabatt, true);
+  const mit = await post("/api/bestellen", { paket: "kit", sprache: "de", agb: true }, cookie);
+  const mf = new URLSearchParams((await mit.json()).dev_formular);
+  assert.equal(mf.get("line_items[0][price_data][unit_amount]"), "8415");
+  assert.equal(mf.get("metadata[rabatt]"), "kursteilnehmer");
+
+  // Bezahltes Kit schaltet keinen Kurs frei; doppelte Webhooks werden erkannt
+  const kaeufer = "nurkit-" + Date.now() + "@example.com", sid = "cs_test_nurkit_" + Date.now();
+  const ev = kauf(kaeufer, sid, { amount_total: 9900, metadata: { paket: "kit", sprache: "de", art: "ware" }, custom_fields: [], shipping_details: { name: "Kit Käufer", address: { line1: "Teststraße 1", postal_code: "49808", city: "Lingen", country: "DE" } } });
+  assert.equal((await webhook(ev)).status, 200);
+  assert.equal((await (await webhook(ev)).json()).doppelt, true);
+  assert.equal((await (await post("/api/code", { email: kaeufer })).json()).dev_code, undefined);
+
+  // Buch: Kauf erzeugt Download, ungültige Links werden abgewiesen, Kursbuch nur mit Anmeldung
+  assert.equal((await webhook(kauf("buch-" + Date.now() + "@example.com", "cs_test_buch_" + Date.now(), { amount_total: 1990, metadata: { paket: "buch", sprache: "de", art: "digital" }, custom_fields: [] }))).status, 200);
+  assert.equal((await get("/download/abc")).status, 404);
+  assert.equal((await get("/download/" + "0".repeat(48))).status, 410);
+  assert.equal((await get("/kurs/kursbuch.pdf")).status, 302);
+  assert.ok([200, 503].includes((await get("/kurs/kursbuch.pdf", cookie)).status));
+});

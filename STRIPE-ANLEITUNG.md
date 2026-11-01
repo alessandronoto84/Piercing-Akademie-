@@ -11,6 +11,8 @@ Stand: 01.11.2026. Website und Server sind fertig vorbereitet: Preiskarten, eige
 4. Kunde gibt bei Stripe E-Mail, Rechnungsadresse und Zahlungsart an und zahlt.
 5. Stripe meldet die Zahlung an den Webhook: Zugang wird angelegt, die Willkommens-E-Mail mit Vertragsbestätigung und Zustimmung (§ 312f BGB) geht automatisch raus.
 
+**Einzelprodukte:** Praxiskit (99 €, für Kursteilnehmer Basis/Praxis nach bestandener Prüfungssimulation 84,15 €, versandkostenfrei, Stripe fragt die Lieferadresse ab) und Kursbuch als PDF (vorläufig 19,90 €). Sie laufen über dieselbe Bestellseite und denselben Webhook; in Stripe musst du dafür nichts extra anlegen. Kit-Bestellungen kommen als E-Mail „Versand: Praxiskit“ mit Lieferadresse zu dir.
+
 **Preise ändern:** in `server/src/index.js` (`PAKETE`, in Cent) **und** auf der Website (`index.html`, `bestellen.html`, danach `python3 werkzeuge/sprachen/bauen.py`).
 
 > **Vorher klären:** Verkauf des Online-Kurses erst nach der Prüfung zum Fernunterrichtsgesetz (STARTLISTE Punkt 1). Ob „inkl. MwSt.“ stimmt oder du Kleinunternehmer bist (dann Hinweis nach § 19 UStG statt „inkl. MwSt.“), klärt STARTLISTE Punkt 11.

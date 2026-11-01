@@ -62,3 +62,10 @@ Lokal starten: `cd server && npm install && npm run db:lokal && npm run dev` (mi
 3. Mit Test-Schlüsseln auf Cloudflare veröffentlichen, Testkauf mit Testkarte.
 4. ~~Datenschutzerklärung um Cloudflare und Resend ergänzen~~ (erledigt; Auftragsverarbeitungsverträge bei der Einrichtung abschließen).
 5. Umschalten auf Live.
+
+
+## Ergänzung: Kursbuch-PDF (privater Speicher R2)
+Das Kursbuch liegt nicht im öffentlichen Ordner, sondern in einem privaten R2-Bucket. Einrichtung beim Deploy:
+1. `npx wrangler r2 bucket create piercing-akademie-dateien`
+2. `npx wrangler r2 object put piercing-akademie-dateien/kursbuch.pdf --file=Kursbuch.pdf --remote`
+Kursteilnehmer laden es angemeldet unter `/kurs/kursbuch.pdf`, Käufer über einen persönlichen Link `/download/…` (2 Jahre, höchstens 10 Downloads). Der API-Token braucht zusätzlich das Recht „Workers R2 Storage: Bearbeiten“.

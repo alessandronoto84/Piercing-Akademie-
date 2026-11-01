@@ -4,7 +4,7 @@
    - Login ohne Passwort: 6-stelliger Code per E-Mail an die beim Kauf angegebene Adresse
    - Stripe-Webhook: legt nach der Zahlung den Zugang an und schickt Zugang + Vertragsbestätigung (§ 312f BGB)
    - speichert Fortschritt und vergibt prüfbare Bescheinigungsnummern */
-import { mailCode, mailWillkommen, mailVerdacht, mailAnfrage, mailWiderrufEingang, mailWiderrufAkademie, sende } from "./mail.js";
+import { mailCode, mailWillkommen, mailVerdacht, mailAnfrage, mailWiderrufEingang, mailWiderrufAkademie, mailKit, mailKitAkademie, mailBuch, sende } from "./mail.js";
 
 const COOKIE = "pa_sitzung";
 const SITZUNG_TAGE = 30;
@@ -20,6 +20,7 @@ export default {
     try {
       if (p.startsWith("/api/")) return await api(req, env, url, ctx);
       if (p === "/pruefen") return await pruefSeite(env, url);
+      if (p.startsWith("/download/")) return await download(env, p.slice(10));
       if (p === "/kurs" || p.startsWith("/kurs/")) return await kurs(req, env, url, p);
       return datei(req, env, url);
     } catch (e) {
@@ -40,6 +41,8 @@ export async function aufraeumen(env) {
   await env.DB.batch([
     env.DB.prepare("DELETE FROM anmeldungen WHERE zeit < ?").bind(t - 90 * 86400),
     env.DB.prepare("DELETE FROM anfragen WHERE zeit < ?").bind(t - 86400),
+    env.DB.prepare("DELETE FROM downloads WHERE ablauf < ?").bind(t),
+    env.DB.prepare("DELETE FROM verkaeufe WHERE zeit < ?").bind(new Date(Date.now() - 3 * 365 * 86400000).toISOString()),
     env.DB.prepare("DELETE FROM bestellungen WHERE bezahlt = 0 AND zeit < ?").bind(new Date(Date.now() - 30 * 86400000).toISOString()),
     env.DB.prepare("DELETE FROM bestellungen WHERE zeit < ?").bind(new Date(Date.now() - 3 * 365 * 86400000).toISOString()),
     env.DB.prepare("DELETE FROM widerrufe WHERE eingang < ?").bind(new Date(Date.now() - 3 * 365 * 86400000).toISOString()),
@@ -138,6 +141,7 @@ async function kurs(req, env, url, p) {
       headers: { "Content-Type": "text/javascript; charset=utf-8", "Cache-Control": "private, no-store" }
     });
   }
+  if (p === "/kurs/kursbuch.pdf") return buchAusliefern(env);
   const res = await datei(req, env, url);
   const h = new Headers(res.headers);
   h.set("Cache-Control", "private, no-store");
@@ -150,7 +154,7 @@ async function kurs(req, env, url, p) {
 async function api(req, env, url, ctx) {
   const p = url.pathname;
   if (p === "/api/stripe" && req.method === "POST") return stripeWebhook(req, env, ctx);
-  if (p === "/api/bestellen" && req.method === "GET") return json({ aktiv: !!env.STRIPE_SECRET_KEY }, 200, { "Cache-Control": "no-store" });
+  if (p === "/api/bestellen" && req.method === "GET") return json({ aktiv: !!env.STRIPE_SECRET_KEY, kitRabatt: await kitRabatt(req, env) }, 200, { "Cache-Control": "no-store" });
   if (req.method === "POST" && !gleicheHerkunft(req, url)) return json({ fehler: "herkunft" }, 403);
   if (p === "/api/anfrage" && req.method === "POST") return anfrage(req, env, ctx);
   if (p === "/api/widerruf" && req.method === "POST") return widerruf(req, env, ctx);
@@ -300,6 +304,25 @@ export const PAKETE = {
   praxis: { cent: 99900, name: { de: "Paket Praxis – Online-Kurs + 1 Praxistag", en: "Practice package – online course + 1 practice day", es: "Paquete Práctica – curso online + 1 día de práctica" } },
   komplett: { cent: 249000, name: { de: "Paket Komplett – Online-Kurs, 2 Praxistage, 1:1-Coaching", en: "Complete package – online course, 2 practice days, 1:1 coaching", es: "Paquete Completo – curso online, 2 días de práctica, mentoría 1:1" } }
 };
+// Einzelprodukte: Praxiskit (Ware, Versand frei) und Kursbuch als PDF (digitaler Inhalt).
+// BUCH-PREIS VORLÄUFIG: E-Book-Preise unterliegen der Buchpreisbindung – den endgültigen Preis legt Alessandro fest.
+export const PRODUKTE = {
+  kit: { cent: 9900, rabattCent: 8415, art: "ware", name: { de: "Praxiskit – Übungsset mit Silikonohr", en: "Practice kit – training set with silicone ear", es: "Kit de práctica – set con oreja de silicona" } },
+  buch: { cent: 1990, art: "digital", name: { de: "Kursbuch „Die Piercing Akademie – Dein Weg zum Bodypiercer“ (PDF)", en: "Course book “Die Piercing Akademie – Dein Weg zum Bodypiercer” (PDF, German)", es: "Libro del curso «Die Piercing Akademie – Dein Weg zum Bodypiercer» (PDF, en alemán)" } }
+};
+const KIT_RABATT_PAKETE = ["basis", "praxis"]; // 15 % nach bestandener Prüfungssimulation; Komplett hat das Kit schon
+const VERSAND_LAENDER = ["DE", "AT"];
+const BUCH_DATEI = "kursbuch.pdf";
+
+// Kursteilnehmer (Basis/Praxis) mit bestandener Prüfungssimulation bekommen das Kit günstiger
+async function kitRabatt(req, env) {
+  const s = await sitzung(req, env);
+  if (!s || !KIT_RABATT_PAKETE.includes(s.kunde.paket)) return false;
+  const f = await env.DB.prepare("SELECT daten FROM fortschritt WHERE email = ?").bind(s.email).first();
+  const st = f ? JSON.parse(f.daten) : null;
+  return !!(st && st.simulation && st.simulation.bestanden);
+}
+
 // Fassung der beiden Häkchen auf bestellen.html – bei jeder Textänderung dort hochzählen
 const ZUSTIMMUNG_FASSUNG = "2026-11-01";
 
@@ -307,10 +330,12 @@ async function bestellen(req, env, url) {
   if (!env.STRIPE_SECRET_KEY) return json({ fehler: "nicht_eingerichtet" }, 503);
   const d = await req.json().catch(() => null);
   if (!d) return json({ fehler: "daten" }, 400);
-  const paket = PAKETE[d.paket] ? d.paket : null;
+  const paket = PAKETE[d.paket] || PRODUKTE[d.paket] ? d.paket : null;
   const sprache = ["de", "en", "es"].includes(d.sprache) ? d.sprache : "de";
   if (!paket) return json({ fehler: "paket" }, 400);
-  if (d.agb !== true || d.sofort !== true) return json({ fehler: "zustimmung" }, 400);
+  const art = PAKETE[paket] ? "kurs" : PRODUKTE[paket].art;
+  // AGB immer; sofortiger Beginn nur bei digitalen Leistungen (Online-Kurs, PDF), nicht bei Ware
+  if (d.agb !== true || (art !== "ware" && d.sofort !== true)) return json({ fehler: "zustimmung" }, 400);
   const schluessel = await sha256("b:" + (req.headers.get("CF-Connecting-IP") || "lokal") + ":" + (env.CODE_PFEFFER || ""));
   const n = await env.DB.prepare("SELECT COUNT(*) AS n FROM anfragen WHERE schluessel = ? AND zeit > ?").bind(schluessel, jetzt() - 3600).first();
   if (n.n >= 10) return json({ fehler: "zu_oft" }, 429);
@@ -325,8 +350,13 @@ async function bestellen(req, env, url) {
   f.set("client_reference_id", sprache);
   f.set("line_items[0][quantity]", "1");
   f.set("line_items[0][price_data][currency]", "eur");
-  f.set("line_items[0][price_data][unit_amount]", String(PAKETE[paket].cent));
-  f.set("line_items[0][price_data][product_data][name]", PAKETE[paket].name[sprache]);
+  const rabatt = paket === "kit" && (await kitRabatt(req, env));
+  const cent = PAKETE[paket] ? PAKETE[paket].cent : rabatt ? PRODUKTE.kit.rabattCent : PRODUKTE[paket].cent;
+  f.set("line_items[0][price_data][unit_amount]", String(cent));
+  f.set("line_items[0][price_data][product_data][name]", (PAKETE[paket] || PRODUKTE[paket]).name[sprache] + (rabatt ? { de: " – Preis für Kursteilnehmer", en: " – course participant price", es: " – precio para alumnos" }[sprache] : ""));
+  if (art === "ware") VERSAND_LAENDER.forEach((l, i) => f.set("shipping_address_collection[allowed_countries][" + i + "]", l));
+  f.set("metadata[art]", art);
+  if (rabatt) f.set("metadata[rabatt]", "kursteilnehmer");
   f.set("billing_address_collection", "required"); // Rechnungsadresse (Rechnung, Land für die Umsatzsteuer)
   f.set("metadata[paket]", paket);
   f.set("metadata[sprache]", sprache);
@@ -348,8 +378,8 @@ async function bestellen(req, env, url) {
     if (!r.ok || !sess.url) { console.error("Stripe", r.status, sess.error && sess.error.message); return json({ fehler: "stripe" }, 502); }
   }
   // Nachweis der Zustimmung (§ 356 Abs. 5 BGB): wann, welches Paket, welche Fassung der Häkchen
-  await env.DB.prepare("INSERT INTO bestellungen (id, zeit, paket, sprache, agb, sofort, fassung, stripe_session, bezahlt) VALUES (?, ?, ?, ?, 1, 1, ?, ?, 0)")
-    .bind(id, zeit, paket, sprache, ZUSTIMMUNG_FASSUNG, sess.id).run();
+  await env.DB.prepare("INSERT INTO bestellungen (id, zeit, paket, sprache, agb, sofort, fassung, stripe_session, bezahlt) VALUES (?, ?, ?, ?, 1, ?, ?, ?, 0)")
+    .bind(id, zeit, paket, sprache, art === "ware" ? 0 : 1, ZUSTIMMUNG_FASSUNG, sess.id).run();
   const antwort = { url: sess.url };
   if (env.DEV === "1" && sess.dev_formular) antwort.dev_formular = sess.dev_formular;
   return json(antwort);
@@ -408,6 +438,7 @@ async function stripeWebhook(req, env, ctx) {
   const email = normal(sess.customer_details && sess.customer_details.email);
   if (!emailOk(email)) return json({ fehler: "email" }, 400);
   const meta = sess.metadata || {};
+  if (PRODUKTE[meta.paket]) return produktVerkauft(env, ctx, sess, meta, email);
   const paket = ["basis", "praxis", "komplett"].includes(meta.paket) ? meta.paket : "basis";
   // Sprache: aus den Link-Metadaten, sonst aus client_reference_id (setzt assets/zahlung.js je Website-Sprache), sonst Deutsch
   const sprache = [meta.sprache, sess.client_reference_id, (sess.locale || "").slice(0, 2)].find((x) => ["de", "en", "es"].includes(x)) || "de";
@@ -435,7 +466,52 @@ async function stripeWebhook(req, env, ctx) {
         gueltig_bis = excluded.gueltig_bis, stripe_session = excluded.stripe_session, betrag = excluded.betrag, zustimmung = excluded.zustimmung`)
     .bind(email, name, paket, sprache, gekauft, bis.toISOString(), sess.id, sess.amount_total || 0, zustimmungText).run();
 
-  const mail = mailWillkommen({ env, email, name, paket, sprache, betrag: sess.amount_total || 0, waehrung: sess.currency || "eur", gekauft, zustimmung: zustimmungText });
+  const mail = mailWillkommen({ env, email, name, paket, sprache, betrag: sess.amount_total || 0, waehrung: sess.currency || "eur", gekauft, zustimmung: zustimmungText, buchLink: env.DOMAIN + "/kurs/kursbuch.pdf" });
   ctx.waitUntil(sende(env, email, mail));
   return json({ ok: true });
+}
+
+// ---------- Einzelprodukte: Praxiskit (Versand) und Kursbuch (PDF-Download) ----------
+async function produktVerkauft(env, ctx, sess, meta, email) {
+  const schon = await env.DB.prepare("SELECT stripe_session FROM verkaeufe WHERE stripe_session = ?").bind(sess.id).first();
+  if (schon) return json({ ok: true, doppelt: true });
+  const sprache = [meta.sprache, sess.client_reference_id].find((x) => ["de", "en", "es"].includes(x)) || "de";
+  const name = (sess.customer_details && sess.customer_details.name) || "";
+  const betrag = sess.amount_total || 0;
+  await env.DB.batch([
+    env.DB.prepare("INSERT INTO verkaeufe (stripe_session, produkt, email, zeit, betrag) VALUES (?, ?, ?, ?, ?)").bind(sess.id, meta.paket, email, new Date().toISOString(), betrag),
+    env.DB.prepare("UPDATE bestellungen SET bezahlt = 1 WHERE id = ? AND stripe_session = ?").bind(meta.bestellung || "", sess.id)
+  ]);
+  const admin = String(env.ADMIN_EMAILS || "").split(",")[0].trim();
+  if (meta.paket === "kit") {
+    const v = sess.shipping_details || (sess.collected_information && sess.collected_information.shipping_details) || {};
+    const a = v.address || (sess.customer_details && sess.customer_details.address) || {};
+    const adresse = [v.name || name, a.line1, a.line2, [a.postal_code, a.city].filter(Boolean).join(" "), a.country].filter(Boolean);
+    ctx.waitUntil(Promise.all([sende(env, email, mailKit({ sprache, name, betrag, rabatt: meta.rabatt === "kursteilnehmer", adresse, env })),
+      sende(env, admin, mailKitAkademie({ email, name, betrag, rabatt: meta.rabatt === "kursteilnehmer", adresse }), email)]));
+  } else if (meta.paket === "buch") {
+    const token = zufall(24);
+    await env.DB.prepare("INSERT INTO downloads (token_hash, email, datei, ablauf, anzahl) VALUES (?, ?, ?, ?, 0)").bind(await sha256(token), email, BUCH_DATEI, jetzt() + 730 * 86400).run();
+    ctx.waitUntil(sende(env, email, mailBuch({ sprache, name, betrag, link: env.DOMAIN + "/download/" + token, env })));
+  }
+  return json({ ok: true });
+}
+
+// PDF aus dem privaten Speicher (R2-Bucket DATEIEN); nie aus dem öffentlichen Ordner
+async function buchAusliefern(env) {
+  const obj = env.DATEIEN ? await env.DATEIEN.get(BUCH_DATEI) : null;
+  if (!obj) return new Response("Das Kursbuch als PDF wird gerade vorbereitet. Wir schicken dir den Download, sobald es bereitsteht.", { status: 503, headers: { "Content-Type": "text/plain; charset=utf-8", "Cache-Control": "no-store" } });
+  return new Response(obj.body, { headers: { "Content-Type": "application/pdf", "Content-Disposition": 'attachment; filename="Piercing-Akademie-Kursbuch.pdf"', "Cache-Control": "private, no-store", "X-Robots-Tag": "noindex" } });
+}
+
+// Persönlicher Download-Link aus der Kauf-E-Mail: 2 Jahre gültig, höchstens 10 Downloads
+async function download(env, token) {
+  if (!/^[0-9a-f]{48}$/.test(token)) return new Response("Link ungültig.", { status: 404, headers: { "Content-Type": "text/plain; charset=utf-8" } });
+  const h = await sha256(token);
+  const d = await env.DB.prepare("SELECT * FROM downloads WHERE token_hash = ?").bind(h).first();
+  if (!d || d.ablauf < jetzt()) return new Response("Dieser Download-Link ist abgelaufen. Schreib uns an diepiercingakademie@gmail.com.", { status: 410, headers: { "Content-Type": "text/plain; charset=utf-8" } });
+  if (d.anzahl >= 10) return new Response("Dieser Link wurde schon zehnmal genutzt. Schreib uns, wenn du das Buch erneut brauchst: diepiercingakademie@gmail.com.", { status: 429, headers: { "Content-Type": "text/plain; charset=utf-8" } });
+  const res = await buchAusliefern(env);
+  if (res.status === 200) await env.DB.prepare("UPDATE downloads SET anzahl = anzahl + 1 WHERE token_hash = ?").bind(h).run();
+  return res;
 }

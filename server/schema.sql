@@ -76,3 +76,19 @@ CREATE TABLE IF NOT EXISTS bestellungen (
   stripe_session TEXT,
   bezahlt INTEGER
 );
+-- Verkäufe von Einzelprodukten (Praxiskit, Kursbuch-PDF): verhindert Doppelverarbeitung des Webhooks
+CREATE TABLE IF NOT EXISTS verkaeufe (
+  stripe_session TEXT PRIMARY KEY,
+  produkt TEXT,
+  email TEXT,
+  zeit TEXT,
+  betrag INTEGER
+);
+-- Persönliche Download-Links für das Kursbuch (nur Hash des Tokens gespeichert)
+CREATE TABLE IF NOT EXISTS downloads (
+  token_hash TEXT PRIMARY KEY,
+  email TEXT,
+  datei TEXT,
+  ablauf INTEGER,
+  anzahl INTEGER
+);

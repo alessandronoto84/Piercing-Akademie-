@@ -280,7 +280,7 @@
       '<div class="k-box k-praxis"><strong>Wissen ist nicht Können</strong><p>Der Online-Kurs ersetzt keine praktische Anleitung. Gestochen wird erst am Praxistag, unter Aufsicht. Steche nach dem Online-Kurs niemanden allein.' + (LABOR ? ' Die Handgriffe übst du vorher ohne zu stechen im <a href="#labor">Praxislabor</a>.' : "") + "</p></div>" +
       '<div class="k-fortschritt">' + balken(erledigt, GESAMT_LEKTIONEN, "Erledigte Lektionen") +
       "<p><strong>" + erledigt + " von " + GESAMT_LEKTIONEN + "</strong> Lektionen · <strong>" + anzahlBestanden() + " von " + MODULE.length + "</strong> Modulprüfungen bestanden" + (stand.simulation && stand.simulation.bestanden ? " · Prüfungssimulation bestanden" : "") + "</p></div>" +
-      weiterLernen() + '<h2 class="k-h2">Module</h2><div class="k-modulraster">';
+      weiterLernen() + kitAngebot() + '<h2 class="k-h2">Module</h2><div class="k-modulraster">';
     MODULE.forEach(function (m) {
       var status = stand.bestanden[m.nr] ? "bestanden" : modulOffen(m) ? "offen" : "gesperrt";
       html += '<a class="k-modulkarte k-' + status + '" href="#modul-' + m.nr + '">' + titelbild(m, true) + '<span class="label">Modul ' + zwei(m.nr) + (m.entwurf && stand.vorschau ? " · Entwurf" : "") + "</span><strong>" + esc(m.titel) + "</strong>" +
@@ -302,6 +302,14 @@
     document.getElementById("k-reset").addEventListener("click", function () { fr.hidden = false; });
     document.getElementById("k-reset-nein").addEventListener("click", function () { fr.hidden = true; });
     document.getElementById("k-reset-ja").addEventListener("click", function () { var v = stand.vorschau; stand = leer(); stand.vorschau = v; speichern(); zeige(); });
+  }
+
+  // Praxiskit nach Kursabschluss: Pakete Basis und Praxis mit bestandener Prüfungssimulation (Komplett hat das Kit schon).
+  // Den Rabatt rechnet der Server ab; die Bestellseite zeigt ihn nach der Anmeldung an.
+  function kitAngebot() {
+    var berechtigt = !KONTO || ["basis", "praxis"].indexOf(KONTO.paket) > -1;
+    if (!berechtigt || !(stand.simulation && stand.simulation.bestanden)) return "";
+    return '<div class="k-weiterlernen k-angebot k-nicht-drucken"><p><span class="label">Für Kursteilnehmer 15 % günstiger</span><br><strong>Praxiskit für zu Hause: 84,15 € statt 99 €</strong><br><span class="fine">Silikonohr, Kanülen, Abwurfbehälter, Klemme und Übungsschmuck. Damit machst du die Stichübungen im Praxislabor selbst. Versandkostenfrei.</span></p><a class="btn" href="/bestellen.html?paket=kit" target="_top">Praxiskit bestellen</a></div>';
   }
 
   // Nächster sinnvoller Schritt für „Weiterlernen“
@@ -567,7 +575,7 @@
     app.innerHTML = '<section class="k-kopf k-nicht-drucken"><p class="label">Abschluss</p><h1>Bescheinigung über den Online-Teil</h1><p class="lead">Trag deinen Namen so ein, wie er auf der Bescheinigung stehen soll. Über „Drucken“ kannst du sie ausdrucken oder als PDF speichern.</p>' +
       '<div class="field k-suche"><label for="b-name">Vor- und Nachname</label><input id="b-name" type="text" autocomplete="name" maxlength="60" value="' + esc(name) + '"' + (ausgestellt ? " readonly" : "") + "></div>" +
       (KONTO && !ausgestellt ? '<p class="fine">Beim ersten Drucken wird die Bescheinigung mit diesem Namen ausgestellt und eine prüfbare Nummer vergeben. Danach lässt sich der Name nicht mehr ändern.</p>' : "") +
-      '<p><button type="button" class="btn" id="b-drucken">Drucken oder als PDF speichern</button></p></section>' +
+      '<p><button type="button" class="btn" id="b-drucken">Drucken oder als PDF speichern</button></p></section>' + kitAngebot() +
       '<article class="k-urkunde" aria-label="Bescheinigung">' +
         '<div class="k-urkunde-kopf"><img src="' + (document.querySelector(".brand img") || {}).src + '" alt="" width="44" height="44"><span>Piercing Akademie</span></div>' +
         '<p class="label">Bescheinigung</p><h2>Online-Kurs erfolgreich abgeschlossen</h2>' +
@@ -619,6 +627,7 @@
     var cl = KURS.checklisten || [];
     app.innerHTML = '<section class="k-kopf"><p class="label">Praxis</p><h1>Checklisten und Vorlagen</h1><p class="lead">Für den Studioalltag. Abgehakt wird nur für dich und nur in diesem Browser.</p></section>' +
       '<section class="k-lektion"><h2>Vorlagen zum Ausdrucken</h2><p>Druckfertig als PDF. Pass sie an dein Studio an; Einverständniserklärung und Hygieneplan lässt du vor dem Einsatz prüfen (Anwalt bzw. Gesundheitsamt).</p><ul class="k-vorlagen">' +
+        (KONTO ? '<li><a href="kursbuch.pdf" download>Kursbuch „Die Piercing Akademie – Dein Weg zum Bodypiercer“</a><span class="fine">PDF, 120 Seiten, nur für deinen persönlichen Gebrauch</span></li>' : "") +
         VORLAGEN.map(function (v) { return '<li><a href="' + v[0] + '" download>' + esc(v[1]) + '</a><span class="fine">' + esc(v[2]) + "</span></li>"; }).join("") + "</ul></section>" +
       cl.map(function (c, ci) {
         return '<section class="k-lektion"><h2>' + esc(c.titel) + '</h2><p class="fine">Aus Modul ' + zwei(c.modul) + '</p><ul class="k-aufgaben">' +
@@ -659,7 +668,7 @@
           '<div class="k-box k-achtung"><strong>Sicherheit bei den Stichübungen</strong>' + liste(ST.sicherheit) + "</div>" +
           ST.aufgaben.map(function (a, i) { return aufgabe(a, "Stichübung " + (i + 1)); }).join("")
         : '<h2 class="k-h2" id="labor-teil-stich">Teil 2: Zuschauen – so wird gestochen</h2>' +
-          '<section class="k-lektion"><p>' + esc(L.stich.zuschauen) + "</p></section>" +
+          '<section class="k-lektion"><p>' + esc(L.stich.zuschauen) + '</p><p class="fine">Selbst üben? Das Praxiskit gibt es auch einzeln, nach bestandener Prüfungssimulation 15 % günstiger. <a href="/bestellen.html?paket=kit" target="_top">Praxiskit ansehen</a></p></section>' +
           L.stich.aufgaben.map(function (a, i) { return zuschauen(a, i + 1); }).join("")) : "");
     app.querySelectorAll("[data-labor]").forEach(function (c) {
       c.addEventListener("change", function () {

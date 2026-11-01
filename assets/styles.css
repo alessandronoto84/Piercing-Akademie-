@@ -227,6 +227,9 @@ details .body ul,details .body ol{margin:8px 0 0;padding-left:1.1em}
 .pk-frage:hover{color:var(--ink)}
 .card .for{color:var(--muted);font-size:.95rem}
 .pk-note{margin-top:22px;text-align:center}
+.einzeln-titel{margin-top:56px;text-align:center}
+.pk-einzeln{grid-template-columns:repeat(2,minmax(0,1fr));max-width:760px;margin:18px auto 0}
+@media (max-width:860px){.pk-einzeln{grid-template-columns:minmax(0,1fr)}}
 
 /* Praxistag */
 .day{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(28px,5vw,72px);align-items:start}
@@ -325,6 +328,8 @@ input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px soli
 .b-paket input{width:1.2rem;height:1.2rem;margin:.2em 0 0;padding:0;accent-color:var(--accent)}
 .b-preis{font-family:var(--f-mono);font-weight:500;color:var(--accent);margin-left:6px}
 .b-inhalt{font-size:.9rem;color:var(--muted)}
+.b-gruppe{font-family:var(--f-mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:10px 0 0}
+.b-rabatt{font-size:.9rem;color:var(--accent);font-weight:600}
 .b-summe{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0}
 .b-summe p:first-child{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-weight:600}
 .b-summe strong{font-family:var(--f-display);font-size:1.8rem;font-weight:800}

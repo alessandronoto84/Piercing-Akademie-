@@ -14,7 +14,7 @@ binding = "ASSETS"
 not_found_handling = "404-page"
 html_handling = "none"  # Seiten bleiben unter ihren .html-Adressen erreichbar (wie in Links, canonical und hreflang)
 # Diese Pfade laufen immer zuerst durch den Worker (Login-Prüfung, API)
-run_worker_first = ["/", "/en/", "/es/", "/kurs", "/kurs/*", "/api/*", "/pruefen"]
+run_worker_first = ["/", "/en/", "/es/", "/kurs", "/kurs/*", "/api/*", "/pruefen", "/download/*"]
 
 [triggers]
 crons = ["17 2 * * *"]   # nächtliche Löschung nach den Fristen der Datenschutzerklärung
@@ -30,3 +30,9 @@ ZUGANG_MONATE = "12"
 binding = "DB"
 database_name = "piercing-akademie"
 database_id = "WIRD-BEIM-EINRICHTEN-ERSETZT"
+
+# Privater Speicher für das Kursbuch-PDF (nicht öffentlich): Datei hochladen mit
+#   npx wrangler r2 object put piercing-akademie-dateien/kursbuch.pdf --file=Kursbuch.pdf
+[[r2_buckets]]
+binding = "DATEIEN"
+bucket_name = "piercing-akademie-dateien"

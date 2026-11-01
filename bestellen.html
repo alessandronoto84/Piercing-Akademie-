@@ -47,21 +47,27 @@
 
     <form class="form" id="bestell-formular" novalidate>
       <fieldset class="b-pakete">
-        <legend class="form-title">1. Paket</legend>
-        <label class="b-paket"><input type="radio" name="paket" value="basis"><span><strong>Basis</strong> <span class="b-preis">249 €</span><br><span class="b-inhalt">Online-Kurs mit allen 11 Modulen, Fragen, Checklisten, Abschlusstest, Kurs-Buch und Teilnahmebescheinigung</span></span></label>
-        <label class="b-paket"><input type="radio" name="paket" value="praxis" checked><span><strong>Praxis</strong> <span class="b-preis">999 €</span><br><span class="b-inhalt">Alles aus Basis, dazu 1 Praxistag in Lingen mit echten Modellen und Übungsmaterial aus Silikon</span></span></label>
-        <label class="b-paket"><input type="radio" name="paket" value="komplett"><span><strong>Komplett</strong> <span class="b-preis">2.490 €</span><br><span class="b-inhalt">Alles aus Praxis, dazu 1:1-Coaching, ein zweiter Praxistag, ein Übungsset mit Silikonohr für zu Hause und 12 Monate Support</span></span></label>
+        <legend class="form-title">1. Paket oder Produkt</legend>
+        <label class="b-paket" data-art="kurs"><input type="radio" name="paket" value="basis"><span><strong>Basis</strong> <span class="b-preis">249 €</span><br><span class="b-inhalt">Online-Kurs mit allen 11 Modulen, Fragen, Checklisten, Abschlusstest, Kurs-Buch und Teilnahmebescheinigung</span></span></label>
+        <label class="b-paket" data-art="kurs"><input type="radio" name="paket" value="praxis" checked><span><strong>Praxis</strong> <span class="b-preis">999 €</span><br><span class="b-inhalt">Alles aus Basis, dazu 1 Praxistag in Lingen mit echten Modellen und Übungsmaterial aus Silikon</span></span></label>
+        <label class="b-paket" data-art="kurs"><input type="radio" name="paket" value="komplett"><span><strong>Komplett</strong> <span class="b-preis">2.490 €</span><br><span class="b-inhalt">Alles aus Praxis, dazu 1:1-Coaching, ein zweiter Praxistag, ein Übungsset mit Silikonohr für zu Hause und 12 Monate Support</span></span></label>
+        <p class="b-gruppe">Einzeln erhältlich</p>
+        <label class="b-paket" data-art="ware"><input type="radio" name="paket" value="kit"><span><strong>Praxiskit</strong> <span class="b-preis" data-rabatt-preis="84,15 €">99 €</span><br><span class="b-inhalt">Übungsset mit Silikonohr, Kanülen 18G und 16G, Abwurfbehälter, Klemme, Hautmarker, Handschuhen und Übungsschmuck. Versandkostenfrei nach Deutschland und Österreich, Lieferzeit 3 bis 5 Werktage</span><span class="b-rabatt" hidden> · Preis für Kursteilnehmer statt 99 €</span></span></label>
+        <label class="b-paket" data-art="digital"><input type="radio" name="paket" value="buch"><span><strong>Kursbuch als PDF</strong> <span class="b-preis">19,90 €</span><br><span class="b-inhalt">„Die Piercing Akademie – Dein Weg zum Bodypiercer“, 120 Seiten, sofort als Download</span></span></label>
       </fieldset>
 
       <div class="b-summe">
         <p><span>Gesamtpreis</span> <strong id="b-summe">999 €</strong></p>
-        <p class="fine">Endpreis inkl. MwSt. Einmalzahlung, kein Abo. Zugang zum Online-Kurs 12 Monate ab Freischaltung. Den Termin für Praxistag und Coaching vereinbaren wir nach der Buchung mit dir.</p>
+        <p class="fine" data-fuer="kurs">Endpreis inkl. MwSt. Einmalzahlung, kein Abo. Zugang zum Online-Kurs 12 Monate ab Freischaltung. Den Termin für Praxistag und Coaching vereinbaren wir nach der Buchung mit dir.</p>
+        <p class="fine" data-fuer="ware" hidden>Endpreis inkl. MwSt., versandkostenfrei. Lieferadresse gibst du im nächsten Schritt bei Stripe an. Das Kit enthält Kanülen und ist nur für Volljährige.</p>
+        <p class="fine" data-fuer="digital" hidden>Endpreis inkl. MwSt. Den Download-Link bekommst du direkt nach der Zahlung per E-Mail.</p>
       </div>
 
       <fieldset class="b-zustimmung">
         <legend class="form-title">2. Bestätigen</legend>
         <label class="check"><input type="checkbox" name="agb" id="b-agb"><span>Ich bin mindestens 18 Jahre alt und akzeptiere die <a href="agb.html" target="_blank" rel="noopener">AGB</a>. Die <a href="agb.html#widerruf" target="_blank" rel="noopener">Widerrufsbelehrung</a> und die <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a> habe ich zur Kenntnis genommen. <span class="req">*</span></span></label>
-        <label class="check"><input type="checkbox" name="sofort" id="b-sofort"><span>Ich verlange ausdrücklich, dass ihr vor Ablauf der Widerrufsfrist mit der Bereitstellung des Online-Kurses beginnt. Mir ist bekannt, dass ich dadurch mein Widerrufsrecht für den Online-Kurs verliere: Es erlischt mit der Freischaltung meines Zugangs, also mit meiner ersten Anmeldung. <span class="req">*</span></span></label>
+        <label class="check" id="b-sofort-feld"><input type="checkbox" name="sofort" id="b-sofort"><span><span data-fuer="kurs">Ich verlange ausdrücklich, dass ihr vor Ablauf der Widerrufsfrist mit der Bereitstellung des Online-Kurses beginnt. Mir ist bekannt, dass ich dadurch mein Widerrufsrecht für den Online-Kurs verliere: Es erlischt mit der Freischaltung meines Zugangs, also mit meiner ersten Anmeldung.</span><span data-fuer="digital" hidden>Ich verlange ausdrücklich, dass ihr vor Ablauf der Widerrufsfrist mit der Bereitstellung des PDFs beginnt. Mir ist bekannt, dass ich dadurch mein Widerrufsrecht für das PDF verliere.</span> <span class="req">*</span></span></label>
+        <p class="fine" data-fuer="ware" hidden>Für das Praxiskit gilt dein Widerrufsrecht von 14 Tagen ab Erhalt; ausgenommen sind sterile Teile, deren Versiegelung du entfernt hast.</p>
         <p class="fine" id="b-praxis-hinweis">Für Praxistag und Coaching gilt die Widerrufsbelehrung unverändert.</p>
       </fieldset>
 
