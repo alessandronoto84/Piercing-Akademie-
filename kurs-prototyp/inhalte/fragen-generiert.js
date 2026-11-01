@@ -4,1076 +4,856 @@ window.KURS = window.KURS || { module: [] };
 KURS.lektionsfragen = {
  "8-1": [
   [
-   "Welchen Ersteinsatz nennt das Datenblatt für „Lobe“?",
+   "Welcher Schmuck ist laut Datenblatt ein passender Ersteinsatz für das Lobe?",
    [
     "Labret",
-    "Hufeisen, Banane, BCR",
-    "Banane, Barbell, BCR",
-    "Banane, Hufeisen"
+    "Hufeisen (Threaded Ring)",
+    "Surface Bar",
+    "BCR (Klemmkugelring)"
    ],
-   "Datenblatt Lobe: Kanüle 18G, Klemme Snaptile, Gazeklemme.",
+   "Datenblatt Lobe: Ersteinsatz Labret; Kanüle 18G; Snaptile, Gazeklemme.",
    "S. 74"
   ],
   [
-   "Welche Kanüle(n) nennt das Datenblatt für „Lobe“?",
+   "Womit wird das Lobe laut Datenblatt gestochen?",
    [
-    "18G",
-    "16G",
-    "12G",
-    "14G"
+    "18G-Kanüle",
+    "20G-Kanüle",
+    "14G-Kanüle",
+    "16G-Kanüle"
    ],
-   "Datenblatt Lobe: Ersteinsatz Labret.",
+   "Datenblatt Lobe: Ersteinsatz Labret; Kanüle 18G; Snaptile, Gazeklemme.",
    "S. 74"
   ],
   [
-   "Womit wird beim Piercing „Lobe“ laut Datenblatt gehalten bzw. geführt?",
-   [
-    "Snaptile, Gazeklemme",
-    "Nadelauffangrohr",
-    "Septum-Zange, Freihand",
-    "Freihand"
-   ],
-   "Datenblatt Lobe: Ersteinsatz Labret, Kanüle 18G.",
-   "S. 74"
-  ],
-  [
-   "Welchen Ersteinsatz nennt das Datenblatt für „Upper Lobe“?",
+   "Welcher Schmuck ist laut Datenblatt ein passender Ersteinsatz für das Upper Lobe?",
    [
     "Labret",
-    "Barbell, BCR",
-    "BCR",
-    "Banane, Barbell"
+    "Barbell",
+    "Hufeisen (Threaded Ring)",
+    "BCR (Klemmkugelring)"
    ],
-   "Datenblatt Upper Lobe: Kanüle 18G, 16G, Klemme Snaptile, Gazeklemme.",
+   "Datenblatt Upper Lobe: Ersteinsatz Labret; Kanüle 18G, 16G; Snaptile, Gazeklemme.",
    "S. 75"
   ],
   [
-   "Welche Kanüle(n) nennt das Datenblatt für „Upper Lobe“?",
+   "Womit wird das Upper Lobe laut Datenblatt gestochen?",
    [
-    "18G, 16G",
-    "12G",
-    "18G (evtl. biegen)",
-    "14G"
+    "18G-Kanüle",
+    "20G-Kanüle",
+    "Biopsiestanze (Punch)",
+    "14G-Kanüle"
    ],
-   "Datenblatt Upper Lobe: Ersteinsatz Labret.",
-   "S. 75"
-  ],
-  [
-   "Womit wird beim Piercing „Upper Lobe“ laut Datenblatt gehalten bzw. geführt?",
-   [
-    "Snaptile, Gazeklemme",
-    "Septum-Zange, Freihand",
-    "Septum-Zange",
-    "Traguszange, Nadelauffangrohr"
-   ],
-   "Datenblatt Upper Lobe: Ersteinsatz Labret, Kanüle 18G, 16G.",
+   "Datenblatt Upper Lobe: Ersteinsatz Labret; Kanüle 18G, 16G; Snaptile, Gazeklemme.",
    "S. 75"
   ]
  ],
  "8-2": [
   [
-   "Welchen Ersteinsatz nennt das Datenblatt für „Tragus“?",
+   "Welcher Schmuck ist laut Datenblatt ein passender Ersteinsatz für das Tragus?",
    [
-    "Labret, BCR, Barbell",
-    "20 mm Barbell (nach 10 Tagen ggf. kürzer)",
-    "Hufeisen",
-    "Bar, Banane, Dermal Anchor"
+    "Barbell",
+    "Dermal Anchor",
+    "Surface Bar",
+    "Hufeisen (Threaded Ring)"
    ],
-   "Datenblatt Tragus: Kanüle Punch, 18G, 16G, Klemme Traguszange, Nadelauffangrohr.",
+   "Datenblatt Tragus: Ersteinsatz Labret, BCR, Barbell; Kanüle Punch, 18G, 16G; Traguszange, Nadelauffangrohr.",
    "S. 76"
   ],
   [
-   "Welche Kanüle(n) nennt das Datenblatt für „Tragus“?",
+   "Womit wird das Tragus laut Datenblatt gestochen?",
    [
-    "Punch, 18G, 16G",
-    "12G",
-    "18G (evtl. biegen)",
-    "14G"
+    "16G-Kanüle",
+    "20G-Kanüle",
+    "12G-Kanüle",
+    "14G-Kanüle"
    ],
-   "Datenblatt Tragus: Ersteinsatz Labret, BCR, Barbell.",
+   "Datenblatt Tragus: Ersteinsatz Labret, BCR, Barbell; Kanüle Punch, 18G, 16G; Traguszange, Nadelauffangrohr.",
    "S. 76"
   ],
   [
-   "Womit wird beim Piercing „Tragus“ laut Datenblatt gehalten bzw. geführt?",
+   "Welches Instrument nennt das Datenblatt für das Tragus?",
    [
-    "Traguszange, Nadelauffangrohr",
-    "Freihand, Gazeklemme",
-    "Snaptile, Freihand",
-    "Snaptile, Gazeklemme, Zungenklemme"
+    "Traguszange",
+    "Snaptile",
+    "Septum-Zange",
+    "Zungenklemme"
    ],
-   "Datenblatt Tragus: Ersteinsatz Labret, BCR, Barbell, Kanüle Punch, 18G, 16G.",
+   "Datenblatt Tragus: Ersteinsatz Labret, BCR, Barbell; Kanüle Punch, 18G, 16G; Traguszange, Nadelauffangrohr.",
    "S. 76"
   ],
   [
-   "Welchen Ersteinsatz nennt das Datenblatt für „Anti-Tragus“?",
+   "Welcher Schmuck ist laut Datenblatt ein passender Ersteinsatz für das Anti-Tragus?",
    [
-    "Hufeisen, Banane, BCR",
-    "20 mm Barbell (nach 10 Tagen ggf. kürzer)",
-    "Barbell, Labret",
-    "Barbell 38 mm"
+    "BCR (Klemmkugelring)",
+    "Dermal Anchor",
+    "Surface Bar",
+    "Labret"
    ],
-   "Datenblatt Anti-Tragus: Kanüle 18G, Klemme Nadelauffangrohr.",
+   "Datenblatt Anti-Tragus: Ersteinsatz Hufeisen, Banane, BCR; Kanüle 18G; Nadelauffangrohr.",
    "S. 77"
   ],
   [
-   "Welche Kanüle(n) nennt das Datenblatt für „Anti-Tragus“?",
+   "Womit wird das Anti-Tragus laut Datenblatt gestochen?",
    [
-    "18G",
-    "18G (evtl. biegen)",
-    "14G",
-    "12G"
+    "18G-Kanüle",
+    "20G-Kanüle",
+    "14G-Kanüle",
+    "Biopsiestanze (Punch)"
    ],
-   "Datenblatt Anti-Tragus: Ersteinsatz Hufeisen, Banane, BCR.",
+   "Datenblatt Anti-Tragus: Ersteinsatz Hufeisen, Banane, BCR; Kanüle 18G; Nadelauffangrohr.",
    "S. 77"
   ],
   [
-   "Womit wird beim Piercing „Anti-Tragus“ laut Datenblatt gehalten bzw. geführt?",
+   "Welches Instrument nennt das Datenblatt für das Anti-Tragus?",
    [
     "Nadelauffangrohr",
-    "Septum-Zange",
-    "Snaptile, Gazeklemme, Freihand",
-    "Septum-Zange, Freihand"
+    "Gazeklemme",
+    "Zungenklemme",
+    "Snaptile"
    ],
-   "Datenblatt Anti-Tragus: Ersteinsatz Hufeisen, Banane, BCR, Kanüle 18G.",
+   "Datenblatt Anti-Tragus: Ersteinsatz Hufeisen, Banane, BCR; Kanüle 18G; Nadelauffangrohr.",
    "S. 77"
   ]
  ],
  "8-3": [
   [
-   "Welchen Ersteinsatz nennt das Datenblatt für „Helix“?",
+   "Welcher Schmuck ist laut Datenblatt ein passender Ersteinsatz für das Helix?",
    [
-    "Labret, BCR, Hufeisen",
-    "20 mm Barbell (nach 10 Tagen ggf. kürzer)",
-    "Barbell, Banane",
-    "Banane, Barbell"
+    "BCR (Klemmkugelring)",
+    "Banane (Curved Barbell)",
+    "Dermal Anchor",
+    "Surface Bar"
    ],
-   "Datenblatt Helix: Kanüle 18G, Klemme Snaptile, Gazeklemme, Freihand.",
+   "Datenblatt Helix: Ersteinsatz Labret, BCR, Hufeisen; Kanüle 18G; Snaptile, Gazeklemme, Freihand.",
    "S. 78"
   ],
   [
-   "Welche Kanüle(n) nennt das Datenblatt für „Helix“?",
+   "Womit wird das Helix laut Datenblatt gestochen?",
    [
-    "18G",
-    "14G",
-    "12G",
-    "18G (evtl. biegen)"
+    "18G-Kanüle",
+    "20G-Kanüle",
+    "Biopsiestanze (Punch)",
+    "12G-Kanüle"
    ],
-   "Datenblatt Helix: Ersteinsatz Labret, BCR, Hufeisen.",
+   "Datenblatt Helix: Ersteinsatz Labret, BCR, Hufeisen; Kanüle 18G; Snaptile, Gazeklemme, Freihand.",
    "S. 78"
   ],
   [
-   "Womit wird beim Piercing „Helix“ laut Datenblatt gehalten bzw. geführt?",
+   "Welcher Schmuck ist laut Datenblatt ein passender Ersteinsatz für das Industrial?",
    [
-    "Snaptile, Gazeklemme, Freihand",
-    "Traguszange, Nadelauffangrohr",
+    "Barbell",
+    "Dermal Anchor",
+    "Labret",
+    "Hufeisen (Threaded Ring)"
+   ],
+   "Datenblatt Industrial: Ersteinsatz Barbell 38 mm; Kanüle 16G; Freihand, Nadelauffangrohr.",
+   "S. 84"
+  ],
+  [
+   "Womit wird das Industrial laut Datenblatt gestochen?",
+   [
+    "16G-Kanüle",
+    "18G-Kanüle",
+    "Biopsiestanze (Punch)",
+    "14G-Kanüle"
+   ],
+   "Datenblatt Industrial: Ersteinsatz Barbell 38 mm; Kanüle 16G; Freihand, Nadelauffangrohr.",
+   "S. 84"
+  ],
+  [
+   "Welches Instrument nennt das Datenblatt für das Industrial?",
+   [
     "Nadelauffangrohr",
+    "Traguszange",
+    "Gazeklemme",
     "Septum-Zange"
    ],
-   "Datenblatt Helix: Ersteinsatz Labret, BCR, Hufeisen, Kanüle 18G.",
-   "S. 78"
-  ],
-  [
-   "Welchen Ersteinsatz nennt das Datenblatt für „Industrial“?",
-   [
-    "Barbell 38 mm",
-    "Hufeisen, BCR",
-    "Barbell, Banane",
-    "Labret, Barbell, BCR"
-   ],
-   "Datenblatt Industrial: Kanüle 16G, Klemme Freihand, Nadelauffangrohr.",
+   "Datenblatt Industrial: Ersteinsatz Barbell 38 mm; Kanüle 16G; Freihand, Nadelauffangrohr.",
    "S. 84"
   ],
   [
-   "Welche Kanüle(n) nennt das Datenblatt für „Industrial“?",
+   "Welcher Schmuck ist laut Datenblatt ein passender Ersteinsatz für das Allergiepiercing?",
    [
-    "16G",
-    "12G",
-    "18G",
-    "18G (evtl. biegen)"
-   ],
-   "Datenblatt Industrial: Ersteinsatz Barbell 38 mm.",
-   "S. 84"
-  ],
-  [
-   "Womit wird beim Piercing „Industrial“ laut Datenblatt gehalten bzw. geführt?",
-   [
-    "Freihand, Nadelauffangrohr",
-    "Gazeklemme, Snaptile",
-    "Septum-Zange",
-    "Snaptile, Gazeklemme, Zungenklemme"
-   ],
-   "Datenblatt Industrial: Ersteinsatz Barbell 38 mm, Kanüle 16G.",
-   "S. 84"
-  ],
-  [
-   "Welchen Ersteinsatz nennt das Datenblatt für „Allergiepiercing“?",
-   [
-    "Hufeisen, Banane, BCR",
-    "20 mm Barbell (nach 10 Tagen ggf. kürzer)",
+    "BCR (Klemmkugelring)",
     "Labret",
-    "Barbell 38 mm"
+    "Surface Bar",
+    "Barbell"
    ],
-   "Datenblatt Allergiepiercing: Kanüle 18G, Klemme Freihand, Nadelauffangrohr.",
+   "Datenblatt Allergiepiercing: Ersteinsatz Hufeisen, Banane, BCR; Kanüle 18G; Freihand, Nadelauffangrohr.",
    "S. 83"
   ],
   [
-   "Welche Kanüle(n) nennt das Datenblatt für „Allergiepiercing“?",
+   "Womit wird das Allergiepiercing laut Datenblatt gestochen?",
    [
-    "18G",
-    "18G (evtl. biegen)",
-    "14G",
-    "16G"
+    "18G-Kanüle",
+    "12G-Kanüle",
+    "Biopsiestanze (Punch)",
+    "20G-Kanüle"
    ],
-   "Datenblatt Allergiepiercing: Ersteinsatz Hufeisen, Banane, BCR.",
+   "Datenblatt Allergiepiercing: Ersteinsatz Hufeisen, Banane, BCR; Kanüle 18G; Freihand, Nadelauffangrohr.",
    "S. 83"
   ],
   [
-   "Womit wird beim Piercing „Allergiepiercing“ laut Datenblatt gehalten bzw. geführt?",
+   "Welches Instrument nennt das Datenblatt für das Allergiepiercing?",
    [
-    "Freihand, Nadelauffangrohr",
-    "Gazeklemme, Snaptile",
+    "Nadelauffangrohr",
     "Septum-Zange",
-    "Snaptile, Gazeklemme, Zungenklemme"
+    "Snaptile",
+    "Zungenklemme"
    ],
-   "Datenblatt Allergiepiercing: Ersteinsatz Hufeisen, Banane, BCR, Kanüle 18G.",
+   "Datenblatt Allergiepiercing: Ersteinsatz Hufeisen, Banane, BCR; Kanüle 18G; Freihand, Nadelauffangrohr.",
    "S. 83"
   ]
  ],
  "8-4": [
   [
-   "Welchen Ersteinsatz nennt das Datenblatt für „Conch“?",
+   "Welcher Schmuck ist laut Datenblatt ein passender Ersteinsatz für das Conch?",
    [
-    "Labret, Barbell, BCR",
-    "Hufeisen",
-    "Bar, Banane, Dermal Anchor",
-    "Banane, Hufeisen"
+    "Barbell",
+    "Surface Bar",
+    "Hufeisen (Threaded Ring)",
+    "Dermal Anchor"
    ],
-   "Datenblatt Conch: Kanüle 18G, 16G, Punch, Klemme Snaptile, Gazeklemme.",
+   "Datenblatt Conch: Ersteinsatz Labret, Barbell, BCR; Kanüle 18G, 16G, Punch; Snaptile, Gazeklemme.",
    "S. 79"
   ],
   [
-   "Welche Kanüle(n) nennt das Datenblatt für „Conch“?",
+   "Womit wird das Conch laut Datenblatt gestochen?",
    [
-    "18G, 16G, Punch",
-    "12G",
-    "14G",
-    "18G (evtl. biegen)"
+    "18G-Kanüle",
+    "12G-Kanüle",
+    "20G-Kanüle",
+    "14G-Kanüle"
    ],
-   "Datenblatt Conch: Ersteinsatz Labret, Barbell, BCR.",
+   "Datenblatt Conch: Ersteinsatz Labret, Barbell, BCR; Kanüle 18G, 16G, Punch; Snaptile, Gazeklemme.",
    "S. 79"
   ],
   [
-   "Womit wird beim Piercing „Conch“ laut Datenblatt gehalten bzw. geführt?",
+   "Welcher Schmuck ist laut Datenblatt ein passender Ersteinsatz für das Snug?",
    [
-    "Snaptile, Gazeklemme",
-    "Septum-Zange",
-    "Freihand, Nadelauffangrohr",
-    "Septum-Zange, Freihand"
-   ],
-   "Datenblatt Conch: Ersteinsatz Labret, Barbell, BCR, Kanüle 18G, 16G, Punch.",
-   "S. 79"
-  ],
-  [
-   "Welchen Ersteinsatz nennt das Datenblatt für „Snug“?",
-   [
-    "Banane, Barbell, BCR, Hufeisen",
-    "20 mm Barbell (nach 10 Tagen ggf. kürzer)",
+    "Barbell",
+    "Dermal Anchor",
     "Labret",
-    "Barbell 38 mm"
+    "Surface Bar"
    ],
-   "Datenblatt Snug: Kanüle 18G, Klemme Freihand, Nadelauffangrohr.",
+   "Datenblatt Snug: Ersteinsatz Banane, Barbell, BCR, Hufeisen; Kanüle 18G; Freihand, Nadelauffangrohr.",
    "S. 82"
   ],
   [
-   "Welche Kanüle(n) nennt das Datenblatt für „Snug“?",
+   "Womit wird das Snug laut Datenblatt gestochen?",
    [
-    "18G",
-    "18G (evtl. biegen)",
-    "14G",
-    "16G"
+    "18G-Kanüle",
+    "20G-Kanüle",
+    "16G-Kanüle",
+    "14G-Kanüle"
    ],
-   "Datenblatt Snug: Ersteinsatz Banane, Barbell, BCR, Hufeisen.",
+   "Datenblatt Snug: Ersteinsatz Banane, Barbell, BCR, Hufeisen; Kanüle 18G; Freihand, Nadelauffangrohr.",
    "S. 82"
   ],
   [
-   "Womit wird beim Piercing „Snug“ laut Datenblatt gehalten bzw. geführt?",
+   "Welches Instrument nennt das Datenblatt für das Snug?",
    [
-    "Freihand, Nadelauffangrohr",
-    "Gazeklemme, Snaptile",
-    "Septum-Zange",
-    "Snaptile, Gazeklemme, Zungenklemme"
+    "Nadelauffangrohr",
+    "Gazeklemme",
+    "Zungenklemme",
+    "Snaptile"
    ],
-   "Datenblatt Snug: Ersteinsatz Banane, Barbell, BCR, Hufeisen, Kanüle 18G.",
+   "Datenblatt Snug: Ersteinsatz Banane, Barbell, BCR, Hufeisen; Kanüle 18G; Freihand, Nadelauffangrohr.",
    "S. 82"
   ]
  ],
  "8-5": [
   [
-   "Welchen Ersteinsatz nennt das Datenblatt für „Rook“?",
+   "Welcher Schmuck ist laut Datenblatt ein passender Ersteinsatz für das Rook?",
    [
-    "Hufeisen, Banane, BCR",
-    "Barbell, Labret",
-    "Labret",
-    "20 mm Barbell (nach 10 Tagen ggf. kürzer)"
+    "Hufeisen (Threaded Ring)",
+    "Dermal Anchor",
+    "Barbell",
+    "Labret"
    ],
-   "Datenblatt Rook: Kanüle 18G, Klemme Nadelauffangrohr.",
+   "Datenblatt Rook: Ersteinsatz Hufeisen, Banane, BCR; Kanüle 18G; Nadelauffangrohr.",
    "S. 80"
   ],
   [
-   "Welche Kanüle(n) nennt das Datenblatt für „Rook“?",
+   "Womit wird das Rook laut Datenblatt gestochen?",
    [
-    "18G",
-    "16G",
-    "14G",
-    "18G (evtl. biegen)"
+    "18G-Kanüle",
+    "16G-Kanüle",
+    "Biopsiestanze (Punch)",
+    "14G-Kanüle"
    ],
-   "Datenblatt Rook: Ersteinsatz Hufeisen, Banane, BCR.",
+   "Datenblatt Rook: Ersteinsatz Hufeisen, Banane, BCR; Kanüle 18G; Nadelauffangrohr.",
    "S. 80"
   ],
   [
-   "Womit wird beim Piercing „Rook“ laut Datenblatt gehalten bzw. geführt?",
+   "Welches Instrument nennt das Datenblatt für das Rook?",
    [
     "Nadelauffangrohr",
-    "Snaptile, Gazeklemme",
-    "Freihand, Gazeklemme",
-    "Gazeklemme, Snaptile"
+    "Zungenklemme",
+    "Snaptile",
+    "Septum-Zange"
    ],
-   "Datenblatt Rook: Ersteinsatz Hufeisen, Banane, BCR, Kanüle 18G.",
+   "Datenblatt Rook: Ersteinsatz Hufeisen, Banane, BCR; Kanüle 18G; Nadelauffangrohr.",
    "S. 80"
   ],
   [
-   "Welchen Ersteinsatz nennt das Datenblatt für „Daith“?",
+   "Welcher Schmuck ist laut Datenblatt ein passender Ersteinsatz für das Daith?",
    [
-    "Banane, BCR",
-    "Labret, Hufeisen",
-    "Labret",
-    "Hufeisen"
+    "BCR (Klemmkugelring)",
+    "Hufeisen (Threaded Ring)",
+    "Barbell",
+    "Labret"
    ],
-   "Datenblatt Daith: Kanüle 18G (evtl. biegen), Klemme Nadelauffangrohr.",
+   "Datenblatt Daith: Ersteinsatz Banane, BCR; Kanüle 18G (evtl. biegen); Nadelauffangrohr.",
    "S. 81"
   ],
   [
-   "Welche Kanüle(n) nennt das Datenblatt für „Daith“?",
+   "Womit wird das Daith laut Datenblatt gestochen?",
    [
-    "18G (evtl. biegen)",
-    "16G, 18G, Punch",
-    "18G, 16G",
-    "12G"
+    "18G-Kanüle",
+    "16G-Kanüle",
+    "20G-Kanüle",
+    "12G-Kanüle"
    ],
-   "Datenblatt Daith: Ersteinsatz Banane, BCR.",
+   "Datenblatt Daith: Ersteinsatz Banane, BCR; Kanüle 18G (evtl. biegen); Nadelauffangrohr.",
    "S. 81"
   ],
   [
-   "Womit wird beim Piercing „Daith“ laut Datenblatt gehalten bzw. geführt?",
+   "Welches Instrument nennt das Datenblatt für das Daith?",
    [
     "Nadelauffangrohr",
-    "Freihand",
-    "Freihand, Gazeklemme",
-    "Freihand, Snaptile, Gazeklemme"
+    "Snaptile",
+    "Gazeklemme",
+    "Traguszange"
    ],
-   "Datenblatt Daith: Ersteinsatz Banane, BCR, Kanüle 18G (evtl. biegen).",
+   "Datenblatt Daith: Ersteinsatz Banane, BCR; Kanüle 18G (evtl. biegen); Nadelauffangrohr.",
    "S. 81"
   ]
  ],
  "8-6": [
   [
-   "Welchen Ersteinsatz nennt das Datenblatt für „Nase (Nostril)“?",
+   "Welcher Schmuck ist laut Datenblatt ein passender Ersteinsatz für das Nostril?",
    [
     "Labret",
-    "Banane, Barbell, BCR",
-    "BCR",
-    "Hufeisen"
+    "Dermal Anchor",
+    "Banane (Curved Barbell)",
+    "Hufeisen (Threaded Ring)"
    ],
-   "Datenblatt Nase (Nostril): Kanüle 18G, Klemme Gazeklemme, Snaptile.",
+   "Datenblatt Nase (Nostril): Ersteinsatz Labret; Kanüle 18G; Gazeklemme, Snaptile.",
    "S. 85"
   ],
   [
-   "Welche Kanüle(n) nennt das Datenblatt für „Nase (Nostril)“?",
+   "Womit wird das Nostril laut Datenblatt gestochen?",
    [
-    "18G",
-    "16G",
-    "18G (evtl. biegen)",
-    "14G"
+    "18G-Kanüle",
+    "14G-Kanüle",
+    "16G-Kanüle",
+    "20G-Kanüle"
    ],
-   "Datenblatt Nase (Nostril): Ersteinsatz Labret.",
+   "Datenblatt Nase (Nostril): Ersteinsatz Labret; Kanüle 18G; Gazeklemme, Snaptile.",
    "S. 85"
   ],
   [
-   "Womit wird beim Piercing „Nase (Nostril)“ laut Datenblatt gehalten bzw. geführt?",
+   "Welcher Schmuck ist laut Datenblatt ein passender Ersteinsatz für das Septum?",
    [
-    "Gazeklemme, Snaptile",
-    "Traguszange, Nadelauffangrohr",
-    "Septum-Zange, Freihand",
-    "Nadelauffangrohr"
+    "Hufeisen (Threaded Ring)",
+    "Banane (Curved Barbell)",
+    "Labret",
+    "Barbell"
    ],
-   "Datenblatt Nase (Nostril): Ersteinsatz Labret, Kanüle 18G.",
-   "S. 85"
-  ],
-  [
-   "Welchen Ersteinsatz nennt das Datenblatt für „Septum“?",
-   [
-    "Hufeisen",
-    "BCR, Barbell, Bar, Banane",
-    "Barbell, Labret",
-    "BCR"
-   ],
-   "Datenblatt Septum: Kanüle 18G, 16G, Klemme Septum-Zange.",
+   "Datenblatt Septum: Ersteinsatz Hufeisen; Kanüle 18G, 16G; Septum-Zange.",
    "S. 88"
   ],
   [
-   "Welche Kanüle(n) nennt das Datenblatt für „Septum“?",
+   "Womit wird das Septum laut Datenblatt gestochen?",
    [
-    "18G, 16G",
-    "18G (evtl. biegen)",
-    "12G",
-    "14G"
+    "16G-Kanüle",
+    "12G-Kanüle",
+    "20G-Kanüle",
+    "14G-Kanüle"
    ],
-   "Datenblatt Septum: Ersteinsatz Hufeisen.",
+   "Datenblatt Septum: Ersteinsatz Hufeisen; Kanüle 18G, 16G; Septum-Zange.",
    "S. 88"
   ],
   [
-   "Womit wird beim Piercing „Septum“ laut Datenblatt gehalten bzw. geführt?",
+   "Welches Instrument nennt das Datenblatt für das Septum?",
    [
     "Septum-Zange",
-    "Freihand, Nadelauffangrohr",
-    "Freihand",
-    "Traguszange, Nadelauffangrohr"
+    "Traguszange",
+    "Snaptile",
+    "Nadelauffangrohr"
    ],
-   "Datenblatt Septum: Ersteinsatz Hufeisen, Kanüle 18G, 16G.",
+   "Datenblatt Septum: Ersteinsatz Hufeisen; Kanüle 18G, 16G; Septum-Zange.",
    "S. 88"
   ]
  ],
  "8-7": [
   [
-   "Welchen Ersteinsatz nennt das Datenblatt für „Augenbraue“?",
+   "Welcher Schmuck ist laut Datenblatt ein passender Ersteinsatz für das Augenbrauenpiercing?",
    [
-    "Banane, Hufeisen",
-    "20 mm Barbell (nach 10 Tagen ggf. kürzer)",
+    "Hufeisen (Threaded Ring)",
+    "Surface Bar",
     "Labret",
-    "BCR, Barbell"
+    "Dermal Anchor"
    ],
-   "Datenblatt Augenbraue: Kanüle 18G, Klemme Snaptile, Gazeklemme.",
+   "Datenblatt Augenbraue: Ersteinsatz Banane, Hufeisen; Kanüle 18G; Snaptile, Gazeklemme.",
    "S. 89"
   ],
   [
-   "Welche Kanüle(n) nennt das Datenblatt für „Augenbraue“?",
+   "Womit wird das Augenbrauenpiercing laut Datenblatt gestochen?",
    [
-    "18G",
-    "14G",
-    "12G",
-    "16G"
+    "18G-Kanüle",
+    "20G-Kanüle",
+    "14G-Kanüle",
+    "16G-Kanüle"
    ],
-   "Datenblatt Augenbraue: Ersteinsatz Banane, Hufeisen.",
+   "Datenblatt Augenbraue: Ersteinsatz Banane, Hufeisen; Kanüle 18G; Snaptile, Gazeklemme.",
    "S. 89"
   ],
   [
-   "Womit wird beim Piercing „Augenbraue“ laut Datenblatt gehalten bzw. geführt?",
+   "Welcher Schmuck ist laut Datenblatt ein passender Ersteinsatz für das Bridge?",
    [
-    "Snaptile, Gazeklemme",
-    "Freihand",
-    "Traguszange, Nadelauffangrohr",
-    "Septum-Zange, Freihand"
+    "Banane (Curved Barbell)",
+    "BCR (Klemmkugelring)",
+    "Surface Bar",
+    "Dermal Anchor"
    ],
-   "Datenblatt Augenbraue: Ersteinsatz Banane, Hufeisen, Kanüle 18G.",
-   "S. 89"
-  ],
-  [
-   "Welchen Ersteinsatz nennt das Datenblatt für „Bridge“?",
-   [
-    "Barbell, Banane",
-    "Labret, Hufeisen",
-    "Hufeisen, BCR",
-    "Labret, BCR, Hufeisen"
-   ],
-   "Datenblatt Bridge: Kanüle 18G, Klemme Snaptile, Gazeklemme.",
+   "Datenblatt Bridge: Ersteinsatz Barbell, Banane; Kanüle 18G; Snaptile, Gazeklemme.",
    "S. 91"
   ],
   [
-   "Welche Kanüle(n) nennt das Datenblatt für „Bridge“?",
+   "Womit wird das Bridge laut Datenblatt gestochen?",
    [
-    "18G",
-    "16G",
-    "18G (evtl. biegen)",
-    "12G"
+    "18G-Kanüle",
+    "14G-Kanüle",
+    "20G-Kanüle",
+    "16G-Kanüle"
    ],
-   "Datenblatt Bridge: Ersteinsatz Barbell, Banane.",
-   "S. 91"
-  ],
-  [
-   "Womit wird beim Piercing „Bridge“ laut Datenblatt gehalten bzw. geführt?",
-   [
-    "Snaptile, Gazeklemme",
-    "Traguszange, Nadelauffangrohr",
-    "Septum-Zange, Freihand",
-    "Septum-Zange"
-   ],
-   "Datenblatt Bridge: Ersteinsatz Barbell, Banane, Kanüle 18G.",
+   "Datenblatt Bridge: Ersteinsatz Barbell, Banane; Kanüle 18G; Snaptile, Gazeklemme.",
    "S. 91"
   ]
  ],
  "8-8": [
   [
-   "Welchen Ersteinsatz nennt das Datenblatt für „Labret“?",
+   "Welcher Schmuck ist laut Datenblatt ein passender Ersteinsatz für das Labret?",
    [
-    "Labret, Hufeisen",
-    "BCR, Banane",
-    "Bar, Banane, Dermal Anchor",
-    "Barbell 38 mm"
+    "Labret",
+    "Dermal Anchor",
+    "Surface Bar",
+    "Banane (Curved Barbell)"
    ],
-   "Datenblatt Labret: Kanüle 18G, Klemme Snaptile, Gazeklemme.",
+   "Datenblatt Labret: Ersteinsatz Labret, Hufeisen; Kanüle 18G; Snaptile, Gazeklemme.",
    "S. 86"
   ],
   [
-   "Welche Kanüle(n) nennt das Datenblatt für „Labret“?",
+   "Womit wird das Labret laut Datenblatt gestochen?",
    [
-    "18G",
-    "16G",
-    "12G",
-    "18G (evtl. biegen)"
+    "18G-Kanüle",
+    "Biopsiestanze (Punch)",
+    "20G-Kanüle",
+    "14G-Kanüle"
    ],
-   "Datenblatt Labret: Ersteinsatz Labret, Hufeisen.",
+   "Datenblatt Labret: Ersteinsatz Labret, Hufeisen; Kanüle 18G; Snaptile, Gazeklemme.",
    "S. 86"
   ],
   [
-   "Womit wird beim Piercing „Labret“ laut Datenblatt gehalten bzw. geführt?",
+   "Welcher Schmuck ist laut Datenblatt ein passender Ersteinsatz für das Eskimo?",
    [
-    "Snaptile, Gazeklemme",
-    "Septum-Zange, Freihand",
-    "Freihand",
-    "Traguszange, Nadelauffangrohr"
+    "Barbell",
+    "BCR (Klemmkugelring)",
+    "Surface Bar",
+    "Dermal Anchor"
    ],
-   "Datenblatt Labret: Ersteinsatz Labret, Hufeisen, Kanüle 18G.",
-   "S. 86"
-  ],
-  [
-   "Welchen Ersteinsatz nennt das Datenblatt für „Eskimo“?",
-   [
-    "Barbell, Banane",
-    "BCR",
-    "20 mm Barbell (nach 10 Tagen ggf. kürzer)",
-    "Hufeisen, BCR"
-   ],
-   "Datenblatt Eskimo: Kanüle 18G, Klemme Snaptile, Gazeklemme, Freihand.",
+   "Datenblatt Eskimo: Ersteinsatz Barbell, Banane; Kanüle 18G; Snaptile, Gazeklemme, Freihand.",
    "S. 93"
   ],
   [
-   "Welche Kanüle(n) nennt das Datenblatt für „Eskimo“?",
+   "Womit wird das Eskimo laut Datenblatt gestochen?",
    [
-    "18G",
-    "12G",
-    "14G",
-    "16G"
+    "18G-Kanüle",
+    "14G-Kanüle",
+    "Biopsiestanze (Punch)",
+    "20G-Kanüle"
    ],
-   "Datenblatt Eskimo: Ersteinsatz Barbell, Banane.",
-   "S. 93"
-  ],
-  [
-   "Womit wird beim Piercing „Eskimo“ laut Datenblatt gehalten bzw. geführt?",
-   [
-    "Snaptile, Gazeklemme, Freihand",
-    "Traguszange, Nadelauffangrohr",
-    "Septum-Zange",
-    "Nadelauffangrohr"
-   ],
-   "Datenblatt Eskimo: Ersteinsatz Barbell, Banane, Kanüle 18G.",
+   "Datenblatt Eskimo: Ersteinsatz Barbell, Banane; Kanüle 18G; Snaptile, Gazeklemme, Freihand.",
    "S. 93"
   ]
  ],
  "8-9": [
   [
-   "Welchen Ersteinsatz nennt das Datenblatt für „Lippenbändchen (Smiley)“?",
+   "Welcher Schmuck ist laut Datenblatt ein passender Ersteinsatz für das Lippenbändchen (Smiley)?",
    [
-    "Hufeisen, BCR",
-    "Barbell, Banane",
-    "Barbell 38 mm",
-    "Barbell, Labret"
+    "BCR (Klemmkugelring)",
+    "Labret",
+    "Barbell",
+    "Banane (Curved Barbell)"
    ],
-   "Datenblatt Lippenbändchen (Smiley): Kanüle 18G, Klemme Septum-Zange, Freihand.",
+   "Datenblatt Lippenbändchen (Smiley): Ersteinsatz Hufeisen, BCR; Kanüle 18G; Septum-Zange, Freihand.",
    "S. 87"
   ],
   [
-   "Welche Kanüle(n) nennt das Datenblatt für „Lippenbändchen (Smiley)“?",
+   "Womit wird das Lippenbändchen (Smiley) laut Datenblatt gestochen?",
    [
-    "18G",
-    "12G",
-    "18G (evtl. biegen)",
-    "16G"
+    "18G-Kanüle",
+    "20G-Kanüle",
+    "16G-Kanüle",
+    "Biopsiestanze (Punch)"
    ],
-   "Datenblatt Lippenbändchen (Smiley): Ersteinsatz Hufeisen, BCR.",
+   "Datenblatt Lippenbändchen (Smiley): Ersteinsatz Hufeisen, BCR; Kanüle 18G; Septum-Zange, Freihand.",
    "S. 87"
   ],
   [
-   "Womit wird beim Piercing „Lippenbändchen (Smiley)“ laut Datenblatt gehalten bzw. geführt?",
+   "Welches Instrument nennt das Datenblatt für das Lippenbändchen (Smiley)?",
    [
-    "Septum-Zange, Freihand",
-    "Gazeklemme, Snaptile",
-    "Nadelauffangrohr",
-    "Traguszange, Nadelauffangrohr"
-   ],
-   "Datenblatt Lippenbändchen (Smiley): Ersteinsatz Hufeisen, BCR, Kanüle 18G.",
-   "S. 87"
-  ],
-  [
-   "Welchen Ersteinsatz nennt das Datenblatt für „Zunge“?",
-   [
-    "20 mm Barbell (nach 10 Tagen ggf. kürzer)",
-    "Banane, Barbell",
-    "Banane, Hufeisen",
-    "Barbell 38 mm"
-   ],
-   "Datenblatt Zunge: Kanüle 16G, Klemme Snaptile, Gazeklemme, Zungenklemme.",
-   "S. 90"
-  ],
-  [
-   "Welche Kanüle(n) nennt das Datenblatt für „Zunge“?",
-   [
-    "16G",
-    "18G (evtl. biegen)",
-    "12G",
-    "14G"
-   ],
-   "Datenblatt Zunge: Ersteinsatz 20 mm Barbell (nach 10 Tagen ggf. kürzer).",
-   "S. 90"
-  ],
-  [
-   "Womit wird beim Piercing „Zunge“ laut Datenblatt gehalten bzw. geführt?",
-   [
-    "Snaptile, Gazeklemme, Zungenklemme",
     "Septum-Zange",
-    "Freihand",
-    "Septum-Zange, Freihand"
+    "Nadelauffangrohr",
+    "Zungenklemme",
+    "Snaptile"
    ],
-   "Datenblatt Zunge: Ersteinsatz 20 mm Barbell (nach 10 Tagen ggf. kürzer), Kanüle 16G.",
+   "Datenblatt Lippenbändchen (Smiley): Ersteinsatz Hufeisen, BCR; Kanüle 18G; Septum-Zange, Freihand.",
+   "S. 87"
+  ],
+  [
+   "Welcher Schmuck ist laut Datenblatt ein passender Ersteinsatz für das Zungenpiercing?",
+   [
+    "Barbell",
+    "Banane (Curved Barbell)",
+    "BCR (Klemmkugelring)",
+    "Dermal Anchor"
+   ],
+   "Datenblatt Zunge: Ersteinsatz 20 mm Barbell (nach 10 Tagen ggf. kürzer); Kanüle 16G; Snaptile, Gazeklemme, Zungenklemme.",
+   "S. 90"
+  ],
+  [
+   "Womit wird das Zungenpiercing laut Datenblatt gestochen?",
+   [
+    "16G-Kanüle",
+    "12G-Kanüle",
+    "20G-Kanüle",
+    "14G-Kanüle"
+   ],
+   "Datenblatt Zunge: Ersteinsatz 20 mm Barbell (nach 10 Tagen ggf. kürzer); Kanüle 16G; Snaptile, Gazeklemme, Zungenklemme.",
+   "S. 90"
+  ],
+  [
+   "Welches Instrument nennt das Datenblatt für das Zungenpiercing?",
+   [
+    "Zungenklemme",
+    "Nadelauffangrohr",
+    "Traguszange",
+    "Septum-Zange"
+   ],
+   "Datenblatt Zunge: Ersteinsatz 20 mm Barbell (nach 10 Tagen ggf. kürzer); Kanüle 16G; Snaptile, Gazeklemme, Zungenklemme.",
    "S. 90"
   ]
  ],
  "8-10": [
   [
-   "Welchen Ersteinsatz nennt das Datenblatt für „Cheek“?",
+   "Welcher Schmuck ist laut Datenblatt ein passender Ersteinsatz für das Cheek?",
    [
-    "Barbell, Labret",
-    "Barbell 38 mm",
-    "20 mm Barbell (nach 10 Tagen ggf. kürzer)",
-    "Banane, BCR"
+    "Barbell",
+    "Surface Bar",
+    "BCR (Klemmkugelring)",
+    "Hufeisen (Threaded Ring)"
    ],
-   "Datenblatt Cheek: Kanüle 18G, Klemme Snaptile, Gazeklemme.",
+   "Datenblatt Cheek: Ersteinsatz Barbell, Labret; Kanüle 18G; Snaptile, Gazeklemme.",
    "S. 92"
   ],
   [
-   "Welche Kanüle(n) nennt das Datenblatt für „Cheek“?",
+   "Womit wird das Cheek laut Datenblatt gestochen?",
    [
-    "18G",
-    "18G (evtl. biegen)",
-    "14G",
-    "12G"
+    "18G-Kanüle",
+    "16G-Kanüle",
+    "12G-Kanüle",
+    "20G-Kanüle"
    ],
-   "Datenblatt Cheek: Ersteinsatz Barbell, Labret.",
-   "S. 92"
-  ],
-  [
-   "Womit wird beim Piercing „Cheek“ laut Datenblatt gehalten bzw. geführt?",
-   [
-    "Snaptile, Gazeklemme",
-    "Freihand",
-    "Freihand, Nadelauffangrohr",
-    "Traguszange, Nadelauffangrohr"
-   ],
-   "Datenblatt Cheek: Ersteinsatz Barbell, Labret, Kanüle 18G.",
+   "Datenblatt Cheek: Ersteinsatz Barbell, Labret; Kanüle 18G; Snaptile, Gazeklemme.",
    "S. 92"
   ]
  ],
  "8-11": [
   [
-   "Welchen Ersteinsatz nennt das Datenblatt für „Bauchnabel“?",
+   "Welcher Schmuck ist laut Datenblatt ein passender Ersteinsatz für das Bauchnabelpiercing?",
    [
-    "Banane, BCR",
-    "Hufeisen",
-    "Labret",
-    "20 mm Barbell (nach 10 Tagen ggf. kürzer)"
+    "BCR (Klemmkugelring)",
+    "Hufeisen (Threaded Ring)",
+    "Barbell",
+    "Surface Bar"
    ],
-   "Datenblatt Bauchnabel: Kanüle 16G, Klemme Snaptile, Freihand.",
+   "Datenblatt Bauchnabel: Ersteinsatz Banane, BCR; Kanüle 16G; Snaptile, Freihand.",
    "S. 94"
   ],
   [
-   "Welche Kanüle(n) nennt das Datenblatt für „Bauchnabel“?",
+   "Womit wird das Bauchnabelpiercing laut Datenblatt gestochen?",
    [
-    "16G",
-    "14G",
-    "18G (evtl. biegen)",
-    "12G"
+    "16G-Kanüle",
+    "18G-Kanüle",
+    "Biopsiestanze (Punch)",
+    "20G-Kanüle"
    ],
-   "Datenblatt Bauchnabel: Ersteinsatz Banane, BCR.",
-   "S. 94"
-  ],
-  [
-   "Womit wird beim Piercing „Bauchnabel“ laut Datenblatt gehalten bzw. geführt?",
-   [
-    "Snaptile, Freihand",
-    "Septum-Zange",
-    "Traguszange, Nadelauffangrohr",
-    "Nadelauffangrohr"
-   ],
-   "Datenblatt Bauchnabel: Ersteinsatz Banane, BCR, Kanüle 16G.",
+   "Datenblatt Bauchnabel: Ersteinsatz Banane, BCR; Kanüle 16G; Snaptile, Freihand.",
    "S. 94"
   ]
  ],
  "8-12": [
   [
-   "Welchen Ersteinsatz nennt das Datenblatt für „Brustwarze“?",
+   "Welcher Schmuck ist laut Datenblatt ein passender Ersteinsatz für das Brustwarzenpiercing?",
    [
-    "Barbell, BCR",
-    "Labret",
-    "Hufeisen",
-    "Labret, Hufeisen"
+    "Barbell",
+    "Hufeisen (Threaded Ring)",
+    "Surface Bar",
+    "Banane (Curved Barbell)"
    ],
-   "Datenblatt Brustwarze: Kanüle 16G, Klemme Snaptile, Gazeklemme.",
+   "Datenblatt Brustwarze: Ersteinsatz Barbell, BCR; Kanüle 16G; Snaptile, Gazeklemme.",
    "S. 95"
   ],
   [
-   "Welche Kanüle(n) nennt das Datenblatt für „Brustwarze“?",
+   "Womit wird das Brustwarzenpiercing laut Datenblatt gestochen?",
    [
-    "16G",
-    "18G",
-    "12G",
-    "18G (evtl. biegen)"
+    "16G-Kanüle",
+    "18G-Kanüle",
+    "20G-Kanüle",
+    "14G-Kanüle"
    ],
-   "Datenblatt Brustwarze: Ersteinsatz Barbell, BCR.",
-   "S. 95"
-  ],
-  [
-   "Womit wird beim Piercing „Brustwarze“ laut Datenblatt gehalten bzw. geführt?",
-   [
-    "Snaptile, Gazeklemme",
-    "Nadelauffangrohr",
-    "Septum-Zange, Freihand",
-    "Freihand, Nadelauffangrohr"
-   ],
-   "Datenblatt Brustwarze: Ersteinsatz Barbell, BCR, Kanüle 16G.",
+   "Datenblatt Brustwarze: Ersteinsatz Barbell, BCR; Kanüle 16G; Snaptile, Gazeklemme.",
    "S. 95"
   ]
  ],
  "8-13": [
   [
-   "Welchen Ersteinsatz nennt das Datenblatt für „Surface“?",
+   "Welcher Schmuck ist laut Datenblatt ein passender Ersteinsatz für das Surface?",
    [
-    "Bar, Banane, Dermal Anchor",
+    "Dermal Anchor",
     "Labret",
-    "Barbell, BCR",
-    "BCR"
+    "Barbell",
+    "BCR (Klemmkugelring)"
    ],
-   "Datenblatt Surface: Kanüle 16G, 18G, Punch, Klemme Freihand, Snaptile, Gazeklemme.",
+   "Datenblatt Surface: Ersteinsatz Bar, Banane, Dermal Anchor; Kanüle 16G, 18G, Punch; Freihand, Snaptile, Gazeklemme.",
    "S. 96"
   ],
   [
-   "Welche Kanüle(n) nennt das Datenblatt für „Surface“?",
+   "Womit wird das Surface laut Datenblatt gestochen?",
    [
-    "16G, 18G, Punch",
-    "12G",
-    "14G",
-    "18G (evtl. biegen)"
+    "18G-Kanüle",
+    "12G-Kanüle",
+    "20G-Kanüle",
+    "14G-Kanüle"
    ],
-   "Datenblatt Surface: Ersteinsatz Bar, Banane, Dermal Anchor.",
-   "S. 96"
-  ],
-  [
-   "Womit wird beim Piercing „Surface“ laut Datenblatt gehalten bzw. geführt?",
-   [
-    "Freihand, Snaptile, Gazeklemme",
-    "Septum-Zange",
-    "Traguszange, Nadelauffangrohr",
-    "Nadelauffangrohr"
-   ],
-   "Datenblatt Surface: Ersteinsatz Bar, Banane, Dermal Anchor, Kanüle 16G, 18G, Punch.",
+   "Datenblatt Surface: Ersteinsatz Bar, Banane, Dermal Anchor; Kanüle 16G, 18G, Punch; Freihand, Snaptile, Gazeklemme.",
    "S. 96"
   ]
  ],
  "8-14": [
   [
-   "Welchen Ersteinsatz nennt das Datenblatt für „Frenulum“?",
+   "Welcher Schmuck ist laut Datenblatt ein passender Ersteinsatz für das Frenulum?",
    [
-    "Banane, Barbell",
-    "Labret, Hufeisen",
-    "20 mm Barbell (nach 10 Tagen ggf. kürzer)",
-    "BCR"
+    "Banane (Curved Barbell)",
+    "Labret",
+    "BCR (Klemmkugelring)",
+    "Surface Bar"
    ],
-   "Datenblatt Frenulum: Kanüle 16G, 18G, Klemme Nadelauffangrohr, Freihand, Gazeklemme.",
+   "Datenblatt Frenulum: Ersteinsatz Banane, Barbell; Kanüle 16G, 18G; Nadelauffangrohr, Freihand, Gazeklemme.",
    "S. 97"
   ],
   [
-   "Welche Kanüle(n) nennt das Datenblatt für „Frenulum“?",
+   "Womit wird das Frenulum laut Datenblatt gestochen?",
    [
-    "16G, 18G",
-    "18G (evtl. biegen)",
-    "14G",
-    "12G"
+    "18G-Kanüle",
+    "20G-Kanüle",
+    "14G-Kanüle",
+    "Biopsiestanze (Punch)"
    ],
-   "Datenblatt Frenulum: Ersteinsatz Banane, Barbell.",
+   "Datenblatt Frenulum: Ersteinsatz Banane, Barbell; Kanüle 16G, 18G; Nadelauffangrohr, Freihand, Gazeklemme.",
    "S. 97"
   ],
   [
-   "Welchen Ersteinsatz nennt das Datenblatt für „Prinz Albert“?",
+   "Welches Instrument nennt das Datenblatt für das Frenulum?",
    [
-    "BCR",
-    "Labret",
-    "Barbell 38 mm",
-    "20 mm Barbell (nach 10 Tagen ggf. kürzer)"
-   ],
-   "Datenblatt Prinz Albert: Kanüle 14G, Klemme Freihand.",
-   "S. 98"
-  ],
-  [
-   "Welche Kanüle(n) nennt das Datenblatt für „Prinz Albert“?",
-   [
-    "14G",
-    "12G",
-    "18G, 16G",
-    "18G"
-   ],
-   "Datenblatt Prinz Albert: Ersteinsatz BCR.",
-   "S. 98"
-  ],
-  [
-   "Womit wird beim Piercing „Prinz Albert“ laut Datenblatt gehalten bzw. geführt?",
-   [
-    "Freihand",
-    "Traguszange, Nadelauffangrohr",
-    "Septum-Zange",
-    "Snaptile, Gazeklemme"
-   ],
-   "Datenblatt Prinz Albert: Ersteinsatz BCR, Kanüle 14G.",
-   "S. 98"
-  ],
-  [
-   "Welchen Ersteinsatz nennt das Datenblatt für „Dydoe“?",
-   [
-    "Banane, Barbell",
-    "Hufeisen",
-    "BCR",
-    "Barbell 38 mm"
-   ],
-   "Datenblatt Dydoe: Kanüle 16G, 18G, Klemme Freihand.",
-   "S. 99"
-  ],
-  [
-   "Welche Kanüle(n) nennt das Datenblatt für „Dydoe“?",
-   [
-    "16G, 18G",
-    "12G",
-    "14G",
-    "18G (evtl. biegen)"
-   ],
-   "Datenblatt Dydoe: Ersteinsatz Banane, Barbell.",
-   "S. 99"
-  ],
-  [
-   "Womit wird beim Piercing „Dydoe“ laut Datenblatt gehalten bzw. geführt?",
-   [
-    "Freihand",
     "Nadelauffangrohr",
-    "Snaptile, Gazeklemme",
-    "Traguszange, Nadelauffangrohr"
+    "Traguszange",
+    "Zungenklemme",
+    "Snaptile"
    ],
-   "Datenblatt Dydoe: Ersteinsatz Banane, Barbell, Kanüle 16G, 18G.",
+   "Datenblatt Frenulum: Ersteinsatz Banane, Barbell; Kanüle 16G, 18G; Nadelauffangrohr, Freihand, Gazeklemme.",
+   "S. 97"
+  ],
+  [
+   "Welcher Schmuck ist laut Datenblatt ein passender Ersteinsatz für das Prinz Albert?",
+   [
+    "BCR (Klemmkugelring)",
+    "Surface Bar",
+    "Hufeisen (Threaded Ring)",
+    "Dermal Anchor"
+   ],
+   "Datenblatt Prinz Albert: Ersteinsatz BCR; Kanüle 14G; Freihand.",
+   "S. 98"
+  ],
+  [
+   "Womit wird das Prinz Albert laut Datenblatt gestochen?",
+   [
+    "14G-Kanüle",
+    "18G-Kanüle",
+    "16G-Kanüle",
+    "20G-Kanüle"
+   ],
+   "Datenblatt Prinz Albert: Ersteinsatz BCR; Kanüle 14G; Freihand.",
+   "S. 98"
+  ],
+  [
+   "Welcher Schmuck ist laut Datenblatt ein passender Ersteinsatz für das Dydoe?",
+   [
+    "Barbell",
+    "Dermal Anchor",
+    "BCR (Klemmkugelring)",
+    "Hufeisen (Threaded Ring)"
+   ],
+   "Datenblatt Dydoe: Ersteinsatz Banane, Barbell; Kanüle 16G, 18G; Freihand.",
    "S. 99"
   ],
   [
-   "Welchen Ersteinsatz nennt das Datenblatt für „Pubic“?",
+   "Womit wird das Dydoe laut Datenblatt gestochen?",
    [
-    "BCR, Barbell, Bar, Banane",
-    "20 mm Barbell (nach 10 Tagen ggf. kürzer)",
-    "Labret, Hufeisen",
-    "Labret"
+    "18G-Kanüle",
+    "20G-Kanüle",
+    "Biopsiestanze (Punch)",
+    "14G-Kanüle"
    ],
-   "Datenblatt Pubic: Kanüle 16G, 18G, Klemme Freihand, Gazeklemme.",
-   "S. 100"
+   "Datenblatt Dydoe: Ersteinsatz Banane, Barbell; Kanüle 16G, 18G; Freihand.",
+   "S. 99"
   ],
   [
-   "Welche Kanüle(n) nennt das Datenblatt für „Pubic“?",
+   "Welcher Schmuck ist laut Datenblatt ein passender Ersteinsatz für das Pubic?",
    [
-    "16G, 18G",
-    "12G",
-    "14G",
-    "18G (evtl. biegen)"
-   ],
-   "Datenblatt Pubic: Ersteinsatz BCR, Barbell, Bar, Banane.",
-   "S. 100"
-  ],
-  [
-   "Womit wird beim Piercing „Pubic“ laut Datenblatt gehalten bzw. geführt?",
-   [
-    "Freihand, Gazeklemme",
-    "Traguszange, Nadelauffangrohr",
-    "Septum-Zange",
-    "Nadelauffangrohr"
-   ],
-   "Datenblatt Pubic: Ersteinsatz BCR, Barbell, Bar, Banane, Kanüle 16G, 18G.",
-   "S. 100"
-  ],
-  [
-   "Welchen Ersteinsatz nennt das Datenblatt für „Hafada“?",
-   [
-    "BCR, Banane",
+    "Surface Bar",
+    "Hufeisen (Threaded Ring)",
     "Labret",
-    "Hufeisen",
-    "20 mm Barbell (nach 10 Tagen ggf. kürzer)"
+    "Dermal Anchor"
    ],
-   "Datenblatt Hafada: Kanüle 16G, 18G, Klemme Freihand, Snaptile, Gazeklemme.",
-   "S. 101"
+   "Datenblatt Pubic: Ersteinsatz BCR, Barbell, Bar, Banane; Kanüle 16G, 18G; Freihand, Gazeklemme.",
+   "S. 100"
   ],
   [
-   "Welche Kanüle(n) nennt das Datenblatt für „Hafada“?",
+   "Womit wird das Pubic laut Datenblatt gestochen?",
    [
-    "16G, 18G",
-    "14G",
-    "18G (evtl. biegen)",
-    "12G"
+    "18G-Kanüle",
+    "12G-Kanüle",
+    "20G-Kanüle",
+    "Biopsiestanze (Punch)"
    ],
-   "Datenblatt Hafada: Ersteinsatz BCR, Banane.",
-   "S. 101"
+   "Datenblatt Pubic: Ersteinsatz BCR, Barbell, Bar, Banane; Kanüle 16G, 18G; Freihand, Gazeklemme.",
+   "S. 100"
   ],
   [
-   "Womit wird beim Piercing „Hafada“ laut Datenblatt gehalten bzw. geführt?",
+   "Welcher Schmuck ist laut Datenblatt ein passender Ersteinsatz für das Hafada?",
    [
-    "Freihand, Snaptile, Gazeklemme",
-    "Traguszange, Nadelauffangrohr",
-    "Nadelauffangrohr",
-    "Septum-Zange"
-   ],
-   "Datenblatt Hafada: Ersteinsatz BCR, Banane, Kanüle 16G, 18G.",
-   "S. 101"
-  ],
-  [
-   "Welchen Ersteinsatz nennt das Datenblatt für „Guiche“?",
-   [
-    "BCR, Barbell",
+    "Banane (Curved Barbell)",
+    "Dermal Anchor",
     "Labret",
-    "Barbell 38 mm",
-    "Labret, Hufeisen"
+    "Hufeisen (Threaded Ring)"
    ],
-   "Datenblatt Guiche: Kanüle 16G, 18G, Klemme Freihand.",
+   "Datenblatt Hafada: Ersteinsatz BCR, Banane; Kanüle 16G, 18G; Freihand, Snaptile, Gazeklemme.",
+   "S. 101"
+  ],
+  [
+   "Womit wird das Hafada laut Datenblatt gestochen?",
+   [
+    "18G-Kanüle",
+    "14G-Kanüle",
+    "12G-Kanüle",
+    "20G-Kanüle"
+   ],
+   "Datenblatt Hafada: Ersteinsatz BCR, Banane; Kanüle 16G, 18G; Freihand, Snaptile, Gazeklemme.",
+   "S. 101"
+  ],
+  [
+   "Welcher Schmuck ist laut Datenblatt ein passender Ersteinsatz für das Guiche?",
+   [
+    "Barbell",
+    "Hufeisen (Threaded Ring)",
+    "Surface Bar",
+    "Banane (Curved Barbell)"
+   ],
+   "Datenblatt Guiche: Ersteinsatz BCR, Barbell; Kanüle 16G, 18G; Freihand.",
    "S. 102"
   ],
   [
-   "Welche Kanüle(n) nennt das Datenblatt für „Guiche“?",
+   "Womit wird das Guiche laut Datenblatt gestochen?",
    [
-    "16G, 18G",
-    "18G (evtl. biegen)",
-    "14G",
-    "12G"
+    "18G-Kanüle",
+    "14G-Kanüle",
+    "12G-Kanüle",
+    "20G-Kanüle"
    ],
-   "Datenblatt Guiche: Ersteinsatz BCR, Barbell.",
-   "S. 102"
-  ],
-  [
-   "Womit wird beim Piercing „Guiche“ laut Datenblatt gehalten bzw. geführt?",
-   [
-    "Freihand",
-    "Septum-Zange",
-    "Gazeklemme, Snaptile",
-    "Traguszange, Nadelauffangrohr"
-   ],
-   "Datenblatt Guiche: Ersteinsatz BCR, Barbell, Kanüle 16G, 18G.",
+   "Datenblatt Guiche: Ersteinsatz BCR, Barbell; Kanüle 16G, 18G; Freihand.",
    "S. 102"
   ]
  ],
  "8-15": [
   [
-   "Welchen Ersteinsatz nennt das Datenblatt für „Christina“?",
+   "Welcher Schmuck ist laut Datenblatt ein passender Ersteinsatz für das Christina?",
    [
-    "Banane, Barbell, BCR",
-    "20 mm Barbell (nach 10 Tagen ggf. kürzer)",
-    "Labret, Hufeisen",
-    "Hufeisen"
+    "BCR (Klemmkugelring)",
+    "Hufeisen (Threaded Ring)",
+    "Dermal Anchor",
+    "Labret"
    ],
-   "Datenblatt Christina: Kanüle 16G, 18G, Klemme Freihand, Snaptile, Gazeklemme.",
+   "Datenblatt Christina: Ersteinsatz Banane, Barbell, BCR; Kanüle 16G, 18G; Freihand, Snaptile, Gazeklemme.",
    "S. 105"
   ],
   [
-   "Welche Kanüle(n) nennt das Datenblatt für „Christina“?",
+   "Womit wird das Christina laut Datenblatt gestochen?",
    [
-    "16G, 18G",
-    "14G",
-    "12G",
-    "18G (evtl. biegen)"
+    "18G-Kanüle",
+    "Biopsiestanze (Punch)",
+    "14G-Kanüle",
+    "12G-Kanüle"
    ],
-   "Datenblatt Christina: Ersteinsatz Banane, Barbell, BCR.",
+   "Datenblatt Christina: Ersteinsatz Banane, Barbell, BCR; Kanüle 16G, 18G; Freihand, Snaptile, Gazeklemme.",
    "S. 105"
   ],
   [
-   "Womit wird beim Piercing „Christina“ laut Datenblatt gehalten bzw. geführt?",
+   "Welcher Schmuck ist laut Datenblatt ein passender Ersteinsatz für das Klitorisvorhautpiercing?",
    [
-    "Freihand, Snaptile, Gazeklemme",
-    "Nadelauffangrohr",
-    "Traguszange, Nadelauffangrohr",
-    "Septum-Zange"
+    "Barbell",
+    "Surface Bar",
+    "Hufeisen (Threaded Ring)",
+    "Dermal Anchor"
    ],
-   "Datenblatt Christina: Ersteinsatz Banane, Barbell, BCR, Kanüle 16G, 18G.",
-   "S. 105"
-  ],
-  [
-   "Welchen Ersteinsatz nennt das Datenblatt für „Klitorisvorhaut“?",
-   [
-    "BCR, Banane, Barbell",
-    "Hufeisen",
-    "Labret, Hufeisen",
-    "Barbell 38 mm"
-   ],
-   "Datenblatt Klitorisvorhaut: Kanüle 16G, 18G, Klemme Freihand.",
+   "Datenblatt Klitorisvorhaut: Ersteinsatz BCR, Banane, Barbell; Kanüle 16G, 18G; Freihand.",
    "S. 106"
   ],
   [
-   "Welche Kanüle(n) nennt das Datenblatt für „Klitorisvorhaut“?",
+   "Womit wird das Klitorisvorhautpiercing laut Datenblatt gestochen?",
    [
-    "16G, 18G",
-    "14G",
-    "12G",
-    "18G (evtl. biegen)"
+    "18G-Kanüle",
+    "20G-Kanüle",
+    "Biopsiestanze (Punch)",
+    "14G-Kanüle"
    ],
-   "Datenblatt Klitorisvorhaut: Ersteinsatz BCR, Banane, Barbell.",
+   "Datenblatt Klitorisvorhaut: Ersteinsatz BCR, Banane, Barbell; Kanüle 16G, 18G; Freihand.",
    "S. 106"
   ],
   [
-   "Womit wird beim Piercing „Klitorisvorhaut“ laut Datenblatt gehalten bzw. geführt?",
+   "Welcher Schmuck ist laut Datenblatt ein passender Ersteinsatz für das Schamlippenpiercing?",
    [
-    "Freihand",
-    "Snaptile, Gazeklemme, Zungenklemme",
-    "Septum-Zange",
-    "Traguszange, Nadelauffangrohr"
+    "BCR (Klemmkugelring)",
+    "Dermal Anchor",
+    "Barbell",
+    "Hufeisen (Threaded Ring)"
    ],
-   "Datenblatt Klitorisvorhaut: Ersteinsatz BCR, Banane, Barbell, Kanüle 16G, 18G.",
-   "S. 106"
-  ],
-  [
-   "Welchen Ersteinsatz nennt das Datenblatt für „Schamlippe“?",
-   [
-    "BCR",
-    "Barbell, Banane",
-    "Banane, Barbell",
-    "Bar, Banane, Dermal Anchor"
-   ],
-   "Datenblatt Schamlippe: Kanüle 16G, 18G, Klemme Freihand, Snaptile, Gazeklemme.",
+   "Datenblatt Schamlippe: Ersteinsatz BCR; Kanüle 16G, 18G; Freihand, Snaptile, Gazeklemme.",
    "S. 107"
   ],
   [
-   "Welche Kanüle(n) nennt das Datenblatt für „Schamlippe“?",
+   "Womit wird das Schamlippenpiercing laut Datenblatt gestochen?",
    [
-    "16G, 18G",
-    "14G",
-    "18G (evtl. biegen)",
-    "12G"
+    "16G-Kanüle",
+    "14G-Kanüle",
+    "Biopsiestanze (Punch)",
+    "20G-Kanüle"
    ],
-   "Datenblatt Schamlippe: Ersteinsatz BCR.",
-   "S. 107"
-  ],
-  [
-   "Womit wird beim Piercing „Schamlippe“ laut Datenblatt gehalten bzw. geführt?",
-   [
-    "Freihand, Snaptile, Gazeklemme",
-    "Septum-Zange",
-    "Nadelauffangrohr",
-    "Traguszange, Nadelauffangrohr"
-   ],
-   "Datenblatt Schamlippe: Ersteinsatz BCR, Kanüle 16G, 18G.",
+   "Datenblatt Schamlippe: Ersteinsatz BCR; Kanüle 16G, 18G; Freihand, Snaptile, Gazeklemme.",
    "S. 107"
   ]
  ],
@@ -1136,577 +916,478 @@ KURS.lektionsfragen = {
  ],
  "7-0": [
   [
-   "Welchen Außendurchmesser hat eine 18G-Kanüle?",
+   "Eine Kanüle hat einen grünen Ansatz. Welche Stärke hat sie?",
    [
-    "1,3 mm",
-    "1,7 mm",
-    "2,2 mm",
-    "1,1 mm"
+    "18G, 1,3 mm",
+    "16G, 1,7 mm",
+    "14G, 2,2 mm",
+    "20G, 1,1 mm"
    ],
-   "18G ist grün. Herstellerangabe; im Buch gerundet.",
+   "Grün 18G (1,3 mm), grau 16G (1,7 mm), orange 14G (2,2 mm). Herstellerangaben; im Buch gerundet.",
    "S. 64"
   ],
   [
-   "Welche Farbe hat eine 18G-Kanüle?",
+   "Eine Kanüle hat einen grauen Ansatz. Welche Stärke hat sie?",
    [
-    "Grün",
-    "Grau",
-    "Orange",
-    "Rosa"
+    "16G, 1,7 mm",
+    "18G, 1,3 mm",
+    "14G, 2,2 mm",
+    "20G, 1,1 mm"
    ],
-   "18G entspricht 1,3 mm.",
+   "Grün 18G (1,3 mm), grau 16G (1,7 mm), orange 14G (2,2 mm). Herstellerangaben; im Buch gerundet.",
    "S. 64"
   ],
   [
-   "Welche Stärke hat eine Kanüle mit der Farbe Grün?",
+   "Eine Kanüle hat einen orangefarbenen Ansatz. Welche Stärke hat sie?",
    [
-    "18G",
-    "16G",
-    "14G",
-    "20G"
+    "14G, 2,2 mm",
+    "18G, 1,3 mm",
+    "16G, 1,7 mm",
+    "20G, 1,1 mm"
    ],
-   "18G, 1,3 mm.",
-   "S. 64"
-  ],
-  [
-   "Welchen Außendurchmesser hat eine 16G-Kanüle?",
-   [
-    "1,7 mm",
-    "1,3 mm",
-    "2,2 mm",
-    "1,1 mm"
-   ],
-   "16G ist grau. Herstellerangabe; im Buch gerundet.",
-   "S. 64"
-  ],
-  [
-   "Welche Farbe hat eine 16G-Kanüle?",
-   [
-    "Grau",
-    "Grün",
-    "Orange",
-    "Rosa"
-   ],
-   "16G entspricht 1,7 mm.",
-   "S. 64"
-  ],
-  [
-   "Welche Stärke hat eine Kanüle mit der Farbe Grau?",
-   [
-    "16G",
-    "18G",
-    "14G",
-    "20G"
-   ],
-   "16G, 1,7 mm.",
-   "S. 64"
-  ],
-  [
-   "Welchen Außendurchmesser hat eine 14G-Kanüle?",
-   [
-    "2,2 mm",
-    "1,3 mm",
-    "1,7 mm",
-    "1,1 mm"
-   ],
-   "14G ist orange. Herstellerangabe; im Buch gerundet.",
-   "S. 64"
-  ],
-  [
-   "Welche Farbe hat eine 14G-Kanüle?",
-   [
-    "Orange",
-    "Grün",
-    "Grau",
-    "Rosa"
-   ],
-   "14G entspricht 2,2 mm.",
-   "S. 64"
-  ],
-  [
-   "Welche Stärke hat eine Kanüle mit der Farbe Orange?",
-   [
-    "14G",
-    "18G",
-    "16G",
-    "20G"
-   ],
-   "14G, 2,2 mm.",
+   "Grün 18G (1,3 mm), grau 16G (1,7 mm), orange 14G (2,2 mm). Herstellerangaben; im Buch gerundet.",
    "S. 64"
   ]
  ],
  "7-4": [
   [
-   "Wofür nutzt du: Einführhilfe?",
+   "Wozu brauchst du beim Piercen die Schere?",
    [
-    "Spitzer, langsam breiter werdender Stab; abgeheilte Stichkanäle vorsichtig dehnen oder verklebte Kanäle freischieben",
-    "Trennt Schmuck auf, wenn sich eine Kugel nicht mehr lösen lässt",
-    "Spreizt oder schließt Klemmkugelringe (BCR) zum Entfernen oder Einsetzen der Kugel",
-    "Kürzt das Kunststoffröhrchen der Kanüle nach dem Stich, damit der Schmuck leichter hineingeht"
-   ],
-   "Werkzeuge und Instrumente, Kap. 9.",
-   "S. 66–73"
-  ],
-  [
-   "Wofür nutzt du: Klemmzange?",
-   [
-    "Hält den eingesetzten Schmuck, während die Kugel aufgedreht wird",
     "Kürzt das Kunststoffröhrchen der Kanüle nach dem Stich, damit der Schmuck leichter hineingeht",
     "Durchleuchtet zum Beispiel das Ohr, um Blutgefäße zu erkennen",
-    "Spitzer, langsam breiter werdender Stab; abgeheilte Stichkanäle vorsichtig dehnen oder verklebte Kanäle freischieben"
-   ],
-   "Werkzeuge und Instrumente, Kap. 9.",
-   "S. 66–73"
-  ],
-  [
-   "Wofür nutzt du: Schere?",
-   [
-    "Kürzt das Kunststoffröhrchen der Kanüle nach dem Stich, damit der Schmuck leichter hineingeht",
-    "Trennt Schmuck auf, wenn sich eine Kugel nicht mehr lösen lässt",
     "Spreizt oder schließt Klemmkugelringe (BCR) zum Entfernen oder Einsetzen der Kugel",
-    "Misst Schmuck und justiert die Position des Piercings"
+    "Trennt Schmuck auf, wenn sich eine Kugel nicht mehr lösen lässt"
    ],
-   "Werkzeuge und Instrumente, Kap. 9.",
+   "Werkzeugtabelle: Schere.",
    "S. 66–73"
   ],
   [
-   "Wofür nutzt du: Kugelgreifer?",
+   "Wozu dient der Kugelgreifer?",
    [
     "Hält Piercingkugeln und erleichtert das Aufschrauben",
-    "Spreizt oder schließt Klemmkugelringe (BCR) zum Entfernen oder Einsetzen der Kugel",
     "Misst Schmuck und justiert die Position des Piercings",
+    "Trennt Schmuck auf, wenn sich eine Kugel nicht mehr lösen lässt",
     "Kürzt das Kunststoffröhrchen der Kanüle nach dem Stich, damit der Schmuck leichter hineingeht"
    ],
-   "Werkzeuge und Instrumente, Kap. 9.",
+   "Werkzeugtabelle: Kugelgreifer.",
    "S. 66–73"
   ],
   [
-   "Wofür nutzt du: Messschieber?",
+   "Wozu dient der Messschieber?",
    [
     "Misst Schmuck und justiert die Position des Piercings",
-    "Trennt Schmuck auf, wenn sich eine Kugel nicht mehr lösen lässt",
+    "Durchleuchtet zum Beispiel das Ohr, um Blutgefäße zu erkennen",
     "Hält Piercingkugeln und erleichtert das Aufschrauben",
-    "Durchleuchtet zum Beispiel das Ohr, um Blutgefäße zu erkennen"
+    "Trennt Schmuck auf, wenn sich eine Kugel nicht mehr lösen lässt"
    ],
-   "Werkzeuge und Instrumente, Kap. 9.",
+   "Werkzeugtabelle: Messschieber.",
    "S. 66–73"
   ],
   [
-   "Wofür nutzt du: Ringöffnungs- und Ringschließzange?",
+   "Wozu dient die Ringöffnungs- und Ringschließzange?",
    [
     "Spreizt oder schließt Klemmkugelringe (BCR) zum Entfernen oder Einsetzen der Kugel",
-    "Hält den eingesetzten Schmuck, während die Kugel aufgedreht wird",
     "Durchleuchtet zum Beispiel das Ohr, um Blutgefäße zu erkennen",
-    "Hält Piercingkugeln und erleichtert das Aufschrauben"
+    "Trennt Schmuck auf, wenn sich eine Kugel nicht mehr lösen lässt",
+    "Kürzt das Kunststoffröhrchen der Kanüle nach dem Stich, damit der Schmuck leichter hineingeht"
    ],
-   "Werkzeuge und Instrumente, Kap. 9.",
+   "Werkzeugtabelle: Ringöffnungs- und Ringschließzange.",
    "S. 66–73"
   ],
   [
-   "Wofür nutzt du: Taschenlampe (grünes Licht)?",
+   "Wozu dient die Taschenlampe mit grünem Licht?",
    [
     "Durchleuchtet zum Beispiel das Ohr, um Blutgefäße zu erkennen",
-    "Kürzt das Kunststoffröhrchen der Kanüle nach dem Stich, damit der Schmuck leichter hineingeht",
-    "Hält den eingesetzten Schmuck, während die Kugel aufgedreht wird",
-    "Misst Schmuck und justiert die Position des Piercings"
+    "Trennt Schmuck auf, wenn sich eine Kugel nicht mehr lösen lässt",
+    "Misst Schmuck und justiert die Position des Piercings",
+    "Spreizt oder schließt Klemmkugelringe (BCR) zum Entfernen oder Einsetzen der Kugel"
    ],
-   "Werkzeuge und Instrumente, Kap. 9.",
+   "Werkzeugtabelle: Taschenlampe (grünes Licht).",
    "S. 66–73"
   ],
   [
-   "Wofür nutzt du: Mini-Seitenschneider?",
+   "Wozu dient der Mini-Seitenschneider?",
    [
     "Trennt Schmuck auf, wenn sich eine Kugel nicht mehr lösen lässt",
-    "Hält den eingesetzten Schmuck, während die Kugel aufgedreht wird",
+    "Misst Schmuck und justiert die Position des Piercings",
     "Durchleuchtet zum Beispiel das Ohr, um Blutgefäße zu erkennen",
     "Spreizt oder schließt Klemmkugelringe (BCR) zum Entfernen oder Einsetzen der Kugel"
    ],
-   "Werkzeuge und Instrumente, Kap. 9.",
+   "Werkzeugtabelle: Mini-Seitenschneider.",
    "S. 66–73"
   ]
  ],
  "9-0": [
   [
-   "Welcher Schritt folgt auf: „Der Kunde betritt das Piercingstudio.“?",
+   "Ablauf, Schritt 1: „Der Kunde betritt das Piercingstudio“. Was kommt als Nächstes?",
    [
-    "Begrüßung, Small Talk.",
-    "Klemme bzw. Nadelauffangrohr anlegen.",
-    "Nochmals mit Kodan einsprühen.",
-    "Pflegemittel mitgeben und Pflegehinweise mündlich erklären."
+    "Begrüßung, Small Talk",
+    "Einverständniserklärung ausfüllen lassen",
+    "Fragen, welche Piercings gewünscht sind, eventuell Angst nehmen",
+    "Währenddessen den Arbeitsplatz vorbereiten und alle Instrumente parat legen"
    ],
-   "Schritt 1 → Schritt 2.",
+   "Schritt 2: Begrüßung, Small Talk.",
    "S. 111"
   ],
   [
-   "Welcher Schritt folgt auf: „Begrüßung, Small Talk.“?",
+   "Ablauf, Schritt 2: „Begrüßung, Small Talk“. Was kommt als Nächstes?",
    [
-    "Fragen, welche Piercings gewünscht sind, eventuell Angst nehmen.",
-    "Der Kunde betritt den Piercingraum: für eine angenehme Atmosphäre sorgen, dem Kunden die Angst nehmen.",
-    "Klemme bzw. Nadelauffangrohr anlegen.",
-    "Pflegehinweise am besten auch schriftlich aushändigen."
+    "Fragen, welche Piercings gewünscht sind, eventuell Angst nehmen",
+    "Der Kunde betritt den Piercingraum: für eine angenehme Atmosphäre sorgen, dem Kunden die Angst nehmen",
+    "Einverständniserklärung ausfüllen lassen",
+    "Währenddessen den Arbeitsplatz vorbereiten und alle Instrumente parat legen"
    ],
-   "Schritt 2 → Schritt 3.",
+   "Schritt 3: Fragen, welche Piercings gewünscht sind, eventuell Angst nehmen.",
    "S. 111"
   ],
   [
-   "Welcher Schritt folgt auf: „Fragen, welche Piercings gewünscht sind, eventuell Angst nehmen.“?",
+   "Ablauf, Schritt 3: „Fragen, welche Piercings gewünscht sind, eventuell Angst nehmen“. Was kommt als Nächstes?",
    [
-    "Einverständniserklärung ausfüllen lassen.",
-    "Der Kunde betritt das Piercingstudio.",
-    "Die Stelle begutachten und den passenden Ersteinsatz wählen (Überlänge!).",
-    "Kunststoffüberzug mit der Schere leicht kürzen, damit der Schmuck besser hineingeht."
+    "Einverständniserklärung ausfüllen lassen",
+    "Die Stelle desinfizieren (Alkoholtupfer)",
+    "Die Stelle begutachten und den passenden Ersteinsatz wählen (Überlänge!)",
+    "Währenddessen den Arbeitsplatz vorbereiten und alle Instrumente parat legen"
    ],
-   "Schritt 3 → Schritt 4.",
+   "Schritt 4: Einverständniserklärung ausfüllen lassen.",
    "S. 111"
   ]
  ],
  "9-1": [
   [
-   "Welcher Schritt folgt auf: „Einverständniserklärung ausfüllen lassen.“?",
+   "Ablauf, Schritt 4: „Einverständniserklärung ausfüllen lassen“. Was kommt als Nächstes?",
    [
-    "Währenddessen den Arbeitsplatz vorbereiten und alle Instrumente parat legen.",
-    "Der Kunde betritt das Piercingstudio.",
-    "Nochmals mit Kodan einsprühen.",
-    "Pflegemittel mitgeben und Pflegehinweise mündlich erklären."
+    "Währenddessen den Arbeitsplatz vorbereiten und alle Instrumente parat legen",
+    "Ein- und Austrittsstelle der Kanüle mit dem Einmalstift markieren",
+    "Der Kunde betritt den Piercingraum: für eine angenehme Atmosphäre sorgen, dem Kunden die Angst nehmen",
+    "Die Stelle desinfizieren (Alkoholtupfer)"
    ],
-   "Schritt 4 → Schritt 5.",
+   "Schritt 5: Währenddessen den Arbeitsplatz vorbereiten und alle Instrumente parat legen.",
    "S. 111"
   ],
   [
-   "Welcher Schritt folgt auf: „Währenddessen den Arbeitsplatz vorbereiten und alle Instrumente parat legen.“?",
+   "Ablauf, Schritt 5: „Währenddessen den Arbeitsplatz vorbereiten und alle Instrumente parat legen“. Was kommt als Nächstes?",
    [
-    "Der Kunde betritt den Piercingraum: für eine angenehme Atmosphäre sorgen, dem Kunden die Angst nehmen.",
-    "Einverständniserklärung ausfüllen lassen.",
-    "Ein- und Austrittsstelle der Kanüle mit dem Einmalstift markieren.",
-    "Pflegehinweise am besten auch schriftlich aushändigen."
+    "Der Kunde betritt den Piercingraum: für eine angenehme Atmosphäre sorgen, dem Kunden die Angst nehmen",
+    "Klemme bzw. Nadelauffangrohr anlegen",
+    "Einverständniserklärung ausfüllen lassen",
+    "Den Kunden schauen lassen, ob es so passt"
    ],
-   "Schritt 5 → Schritt 6.",
+   "Schritt 6: Der Kunde betritt den Piercingraum: für eine angenehme Atmosphäre sorgen, dem Kunden die Angst nehmen.",
    "S. 111"
   ],
   [
-   "Welcher Schritt folgt auf: „Der Kunde betritt den Piercingraum: für eine angenehme Atmosphäre sorgen, dem Kunden die Angst nehmen.“?",
+   "Ablauf, Schritt 6: „Der Kunde betritt den Piercingraum: für eine angenehme Atmosphäre sorgen, dem Kunden die Angst nehmen“. Was kommt als Nächstes?",
    [
-    "Die Stelle begutachten und den passenden Ersteinsatz wählen (Überlänge!).",
-    "Nochmals mit Kodan einsprühen.",
-    "Einverständniserklärung ausfüllen lassen.",
-    "Fragen, welche Piercings gewünscht sind, eventuell Angst nehmen."
+    "Die Stelle begutachten und den passenden Ersteinsatz wählen (Überlänge!)",
+    "Begrüßung, Small Talk",
+    "Fragen, welche Piercings gewünscht sind, eventuell Angst nehmen",
+    "Ein- und Austrittsstelle der Kanüle mit dem Einmalstift markieren"
    ],
-   "Schritt 6 → Schritt 7.",
+   "Schritt 7: Die Stelle begutachten und den passenden Ersteinsatz wählen (Überlänge!).",
    "S. 111"
   ],
   [
-   "Welcher Schritt folgt auf: „Die Stelle begutachten und den passenden Ersteinsatz wählen (Überlänge!).“?",
+   "Ablauf, Schritt 7: „Die Stelle begutachten und den passenden Ersteinsatz wählen (Überlänge!)“. Was kommt als Nächstes?",
    [
-    "Die Stelle desinfizieren (Alkoholtupfer).",
-    "Kugel greifen.",
-    "Der Kunde betritt das Piercingstudio.",
-    "Bei Zungenpiercings einen Eiswürfel geben."
+    "Die Stelle desinfizieren (Alkoholtupfer)",
+    "Der Kunde betritt den Piercingraum: für eine angenehme Atmosphäre sorgen, dem Kunden die Angst nehmen",
+    "Stechen, im Idealfall immer in die sichtbare Seite, beim Labret zum Beispiel dort, wo die Kugel sitzt. Je schneller gestochen wird, desto weniger Schmerzen",
+    "Kanüle herausziehen; der Kunststoffüberzug bleibt im Stichkanal"
    ],
-   "Schritt 7 → Schritt 8.",
+   "Schritt 8: Die Stelle desinfizieren (Alkoholtupfer).",
    "S. 111"
   ],
   [
-   "Welcher Schritt folgt auf: „Die Stelle desinfizieren (Alkoholtupfer).“?",
+   "Ablauf, Schritt 8: „Die Stelle desinfizieren (Alkoholtupfer)“. Was kommt als Nächstes?",
    [
-    "Ein- und Austrittsstelle der Kanüle mit dem Einmalstift markieren.",
-    "Röhrchen vorsichtig vom Schmuck abziehen.",
-    "Dem Kunden das Piercing im Spiegel zeigen.",
-    "Fragen, welche Piercings gewünscht sind, eventuell Angst nehmen."
+    "Ein- und Austrittsstelle der Kanüle mit dem Einmalstift markieren",
+    "Der Kunde betritt den Piercingraum: für eine angenehme Atmosphäre sorgen, dem Kunden die Angst nehmen",
+    "Stechen, im Idealfall immer in die sichtbare Seite, beim Labret zum Beispiel dort, wo die Kugel sitzt. Je schneller gestochen wird, desto weniger Schmerzen",
+    "Währenddessen den Arbeitsplatz vorbereiten und alle Instrumente parat legen"
    ],
-   "Schritt 8 → Schritt 9.",
+   "Schritt 9: Ein- und Austrittsstelle der Kanüle mit dem Einmalstift markieren.",
    "S. 111"
   ],
   [
-   "Welcher Schritt folgt auf: „Ein- und Austrittsstelle der Kanüle mit dem Einmalstift markieren.“?",
+   "Ablauf, Schritt 9: „Ein- und Austrittsstelle der Kanüle mit dem Einmalstift markieren“. Was kommt als Nächstes?",
    [
-    "Den Kunden schauen lassen, ob es so passt.",
-    "Die Stelle desinfizieren (Alkoholtupfer).",
-    "Nochmals mit Kodan einsprühen.",
-    "Bei Wundheilstörungen soll der Kunde zur Beratung wiederkommen (siehe Modul 10)."
+    "Den Kunden schauen lassen, ob es so passt",
+    "Ersteinsatz in den Kunststoffüberzug stecken",
+    "Klemme bzw. Nadelauffangrohr anlegen",
+    "Die Stelle begutachten und den passenden Ersteinsatz wählen (Überlänge!)"
    ],
-   "Schritt 9 → Schritt 10.",
+   "Schritt 10: Den Kunden schauen lassen, ob es so passt.",
    "S. 111"
   ]
  ],
  "9-2": [
   [
-   "Welcher Schritt folgt auf: „Den Kunden schauen lassen, ob es so passt.“?",
+   "Ablauf, Schritt 10: „Den Kunden schauen lassen, ob es so passt“. Was kommt als Nächstes?",
    [
-    "Klemme bzw. Nadelauffangrohr anlegen.",
-    "Durch den Stichkanal drücken, nicht ziehen, sonst kann der Schmuck abrutschen. Das ist schmerzhaft: den Kunden dabei ausatmen lassen.",
-    "Röhrchen vorsichtig vom Schmuck abziehen.",
-    "Eventuell mit Pflaster abkleben (Brustwarze, Bauchnabel)."
+    "Klemme bzw. Nadelauffangrohr anlegen",
+    "Die Stelle begutachten und den passenden Ersteinsatz wählen (Überlänge!)",
+    "Stechen, im Idealfall immer in die sichtbare Seite, beim Labret zum Beispiel dort, wo die Kugel sitzt. Je schneller gestochen wird, desto weniger Schmerzen",
+    "Durch den Stichkanal drücken, nicht ziehen, sonst kann der Schmuck abrutschen. Das ist schmerzhaft: den Kunden dabei ausatmen lassen"
    ],
-   "Schritt 10 → Schritt 11.",
+   "Schritt 11: Klemme bzw. Nadelauffangrohr anlegen.",
    "S. 112"
   ],
   [
-   "Welcher Schritt folgt auf: „Klemme bzw. Nadelauffangrohr anlegen.“?",
+   "Ablauf, Schritt 11: „Klemme bzw. Nadelauffangrohr anlegen“. Was kommt als Nächstes?",
    [
-    "Stechen, im Idealfall immer in die sichtbare Seite, beim Labret zum Beispiel dort, wo die Kugel sitzt. Je schneller gestochen wird, desto weniger Schmerzen.",
-    "Nochmals mit Kodan einsprühen.",
-    "Dem Kunden das Piercing im Spiegel zeigen.",
-    "Durch den Stichkanal drücken, nicht ziehen, sonst kann der Schmuck abrutschen. Das ist schmerzhaft: den Kunden dabei ausatmen lassen."
+    "Stechen, im Idealfall immer in die sichtbare Seite, beim Labret zum Beispiel dort, wo die Kugel sitzt. Je schneller gestochen wird, desto weniger Schmerzen",
+    "Ein- und Austrittsstelle der Kanüle mit dem Einmalstift markieren",
+    "Röhrchen vorsichtig vom Schmuck abziehen",
+    "Ersteinsatz in den Kunststoffüberzug stecken"
    ],
-   "Schritt 11 → Schritt 12.",
+   "Schritt 12: Stechen, im Idealfall immer in die sichtbare Seite, beim Labret zum Beispiel dort, wo die Kugel sitzt. Je schneller gestochen wird, desto weniger Schmerzen.",
    "S. 112"
   ],
   [
-   "Welcher Schritt folgt auf: „Stechen, im Idealfall immer in die sichtbare Seite, beim Labret zum Beispiel dort, wo die Kugel sitzt. Je schneller gestochen wird, desto weniger Schmerzen.“?",
+   "Ablauf, Schritt 12: „Stechen, im Idealfall immer in die sichtbare Seite, beim Labret zum Beispiel dort, wo die Kugel sitzt. Je schneller gestochen wird, desto weniger Schmerzen“. Was kommt als Nächstes?",
    [
-    "Kanüle herausziehen; der Kunststoffüberzug bleibt im Stichkanal.",
-    "Fragen, welche Piercings gewünscht sind, eventuell Angst nehmen.",
-    "Der Kunde betritt das Piercingstudio.",
-    "Kugel greifen."
+    "Kanüle herausziehen; der Kunststoffüberzug bleibt im Stichkanal",
+    "Die Stelle desinfizieren (Alkoholtupfer)",
+    "Kunststoffüberzug mit der Schere leicht kürzen, damit der Schmuck besser hineingeht",
+    "Kugel greifen"
    ],
-   "Schritt 12 → Schritt 13.",
+   "Schritt 13: Kanüle herausziehen; der Kunststoffüberzug bleibt im Stichkanal.",
    "S. 112"
   ],
   [
-   "Welcher Schritt folgt auf: „Kanüle herausziehen; der Kunststoffüberzug bleibt im Stichkanal.“?",
+   "Ablauf, Schritt 13: „Kanüle herausziehen; der Kunststoffüberzug bleibt im Stichkanal“. Was kommt als Nächstes?",
    [
-    "Kunststoffüberzug mit der Schere leicht kürzen, damit der Schmuck besser hineingeht.",
-    "Der Kunde betritt den Piercingraum: für eine angenehme Atmosphäre sorgen, dem Kunden die Angst nehmen.",
-    "Röhrchen vorsichtig vom Schmuck abziehen.",
-    "Die Stelle begutachten und den passenden Ersteinsatz wählen (Überlänge!)."
+    "Kunststoffüberzug mit der Schere leicht kürzen, damit der Schmuck besser hineingeht",
+    "Den Kunden schauen lassen, ob es so passt",
+    "Ein- und Austrittsstelle der Kanüle mit dem Einmalstift markieren",
+    "Klemme bzw. Nadelauffangrohr anlegen"
    ],
-   "Schritt 13 → Schritt 14.",
+   "Schritt 14: Kunststoffüberzug mit der Schere leicht kürzen, damit der Schmuck besser hineingeht.",
    "S. 112"
   ],
   [
-   "Welcher Schritt folgt auf: „Kunststoffüberzug mit der Schere leicht kürzen, damit der Schmuck besser hineingeht.“?",
+   "Ablauf, Schritt 14: „Kunststoffüberzug mit der Schere leicht kürzen, damit der Schmuck besser hineingeht“. Was kommt als Nächstes?",
    [
-    "Ersteinsatz in den Kunststoffüberzug stecken.",
-    "Der Kunde betritt den Piercingraum: für eine angenehme Atmosphäre sorgen, dem Kunden die Angst nehmen.",
-    "Kugel greifen.",
-    "Schmuck mit der Klemmzange festhalten und die Kugel fest aufdrehen."
+    "Ersteinsatz in den Kunststoffüberzug stecken",
+    "Klemme bzw. Nadelauffangrohr anlegen",
+    "Röhrchen vorsichtig vom Schmuck abziehen",
+    "Kanüle herausziehen; der Kunststoffüberzug bleibt im Stichkanal"
    ],
-   "Schritt 14 → Schritt 15.",
+   "Schritt 15: Ersteinsatz in den Kunststoffüberzug stecken.",
    "S. 112"
   ],
   [
-   "Welcher Schritt folgt auf: „Ersteinsatz in den Kunststoffüberzug stecken.“?",
+   "Ablauf, Schritt 15: „Ersteinsatz in den Kunststoffüberzug stecken“. Was kommt als Nächstes?",
    [
-    "Durch den Stichkanal drücken, nicht ziehen, sonst kann der Schmuck abrutschen. Das ist schmerzhaft: den Kunden dabei ausatmen lassen.",
-    "Eventuell mit Pflaster abkleben (Brustwarze, Bauchnabel).",
-    "Der Kunde betritt den Piercingraum: für eine angenehme Atmosphäre sorgen, dem Kunden die Angst nehmen.",
-    "Pflegehinweise am besten auch schriftlich aushändigen."
+    "Durch den Stichkanal drücken, nicht ziehen, sonst kann der Schmuck abrutschen. Das ist schmerzhaft: den Kunden dabei ausatmen lassen",
+    "Kunststoffüberzug mit der Schere leicht kürzen, damit der Schmuck besser hineingeht",
+    "Kanüle herausziehen; der Kunststoffüberzug bleibt im Stichkanal",
+    "Kugel greifen"
    ],
-   "Schritt 15 → Schritt 16.",
+   "Schritt 16: Durch den Stichkanal drücken, nicht ziehen, sonst kann der Schmuck abrutschen. Das ist schmerzhaft: den Kunden dabei ausatmen lassen.",
    "S. 112"
   ]
  ],
  "9-3": [
   [
-   "Welcher Schritt folgt auf: „Durch den Stichkanal drücken, nicht ziehen, sonst kann der Schmuck abrutschen. Das ist schmerzhaft: den Kunden dabei ausatmen lassen.“?",
+   "Ablauf, Schritt 16: „Durch den Stichkanal drücken, nicht ziehen, sonst kann der Schmuck abrutschen. Das ist schmerzhaft: den Kunden dabei ausatmen lassen“. Was kommt als Nächstes?",
    [
-    "Röhrchen vorsichtig vom Schmuck abziehen.",
-    "Begrüßung, Small Talk.",
-    "Nochmals mit Kodan einsprühen.",
-    "Den Kunden schauen lassen, ob es so passt."
+    "Röhrchen vorsichtig vom Schmuck abziehen",
+    "Ersteinsatz in den Kunststoffüberzug stecken",
+    "Stechen, im Idealfall immer in die sichtbare Seite, beim Labret zum Beispiel dort, wo die Kugel sitzt. Je schneller gestochen wird, desto weniger Schmerzen",
+    "Eventuell mit Pflaster abkleben (Brustwarze, Bauchnabel)"
    ],
-   "Schritt 16 → Schritt 17.",
+   "Schritt 17: Röhrchen vorsichtig vom Schmuck abziehen.",
    "S. 112"
   ],
   [
-   "Welcher Schritt folgt auf: „Röhrchen vorsichtig vom Schmuck abziehen.“?",
+   "Ablauf, Schritt 17: „Röhrchen vorsichtig vom Schmuck abziehen“. Was kommt als Nächstes?",
    [
-    "Kugel greifen.",
-    "Eventuell mit Pflaster abkleben (Brustwarze, Bauchnabel).",
-    "Ersteinsatz in den Kunststoffüberzug stecken.",
-    "Dem Kunden das Piercing im Spiegel zeigen."
+    "Kugel greifen",
+    "Eventuell mit Pflaster abkleben (Brustwarze, Bauchnabel)",
+    "Kunststoffüberzug mit der Schere leicht kürzen, damit der Schmuck besser hineingeht",
+    "Bei Zungenpiercings einen Eiswürfel geben"
    ],
-   "Schritt 17 → Schritt 18.",
+   "Schritt 18: Kugel greifen.",
    "S. 112"
   ],
   [
-   "Welcher Schritt folgt auf: „Kugel greifen.“?",
+   "Ablauf, Schritt 18: „Kugel greifen“. Was kommt als Nächstes?",
    [
-    "Schmuck mit der Klemmzange festhalten und die Kugel fest aufdrehen.",
-    "Fragen, welche Piercings gewünscht sind, eventuell Angst nehmen.",
-    "Pflegehinweise am besten auch schriftlich aushändigen.",
-    "Stechen, im Idealfall immer in die sichtbare Seite, beim Labret zum Beispiel dort, wo die Kugel sitzt. Je schneller gestochen wird, desto weniger Schmerzen."
+    "Schmuck mit der Klemmzange festhalten und die Kugel fest aufdrehen",
+    "Dem Kunden das Piercing im Spiegel zeigen",
+    "Ersteinsatz in den Kunststoffüberzug stecken",
+    "Kunststoffüberzug mit der Schere leicht kürzen, damit der Schmuck besser hineingeht"
    ],
-   "Schritt 18 → Schritt 19.",
+   "Schritt 19: Schmuck mit der Klemmzange festhalten und die Kugel fest aufdrehen.",
    "S. 112"
   ],
   [
-   "Welcher Schritt folgt auf: „Schmuck mit der Klemmzange festhalten und die Kugel fest aufdrehen.“?",
+   "Ablauf, Schritt 19: „Schmuck mit der Klemmzange festhalten und die Kugel fest aufdrehen“. Was kommt als Nächstes?",
    [
-    "Nochmals mit Kodan einsprühen.",
-    "Eventuell mit Pflaster abkleben (Brustwarze, Bauchnabel).",
-    "Den Kunden schauen lassen, ob es so passt.",
-    "Pflegemittel mitgeben und Pflegehinweise mündlich erklären."
+    "Nochmals mit Kodan einsprühen",
+    "Bei Zungenpiercings einen Eiswürfel geben",
+    "Röhrchen vorsichtig vom Schmuck abziehen",
+    "Dem Kunden das Piercing im Spiegel zeigen"
    ],
-   "Schritt 19 → Schritt 20.",
+   "Schritt 20: Nochmals mit Kodan einsprühen.",
    "S. 112"
   ],
   [
-   "Welcher Schritt folgt auf: „Nochmals mit Kodan einsprühen.“?",
+   "Ablauf, Schritt 20: „Nochmals mit Kodan einsprühen“. Was kommt als Nächstes?",
    [
-    "Dem Kunden das Piercing im Spiegel zeigen.",
-    "Schmuck mit der Klemmzange festhalten und die Kugel fest aufdrehen.",
-    "Durch den Stichkanal drücken, nicht ziehen, sonst kann der Schmuck abrutschen. Das ist schmerzhaft: den Kunden dabei ausatmen lassen.",
-    "Pflegehinweise am besten auch schriftlich aushändigen."
+    "Dem Kunden das Piercing im Spiegel zeigen",
+    "Eventuell mit Pflaster abkleben (Brustwarze, Bauchnabel)",
+    "Bei Wundheilstörungen soll der Kunde zur Beratung wiederkommen (siehe Modul 10)",
+    "Schmuck mit der Klemmzange festhalten und die Kugel fest aufdrehen"
    ],
-   "Schritt 20 → Schritt 21.",
+   "Schritt 21: Dem Kunden das Piercing im Spiegel zeigen.",
    "S. 112"
   ]
  ],
  "9-4": [
   [
-   "Welcher Schritt folgt auf: „Dem Kunden das Piercing im Spiegel zeigen.“?",
+   "Ablauf, Schritt 21: „Dem Kunden das Piercing im Spiegel zeigen“. Was kommt als Nächstes?",
    [
-    "Eventuell mit Pflaster abkleben (Brustwarze, Bauchnabel).",
-    "Nochmals mit Kodan einsprühen.",
-    "Währenddessen den Arbeitsplatz vorbereiten und alle Instrumente parat legen.",
-    "Röhrchen vorsichtig vom Schmuck abziehen."
+    "Eventuell mit Pflaster abkleben (Brustwarze, Bauchnabel)",
+    "Pflegehinweise am besten auch schriftlich aushändigen",
+    "Pflegemittel mitgeben und Pflegehinweise mündlich erklären",
+    "Bei Zungenpiercings einen Eiswürfel geben"
    ],
-   "Schritt 21 → Schritt 22.",
+   "Schritt 22: Eventuell mit Pflaster abkleben (Brustwarze, Bauchnabel).",
    "S. 113"
   ],
   [
-   "Welcher Schritt folgt auf: „Eventuell mit Pflaster abkleben (Brustwarze, Bauchnabel).“?",
+   "Ablauf, Schritt 22: „Eventuell mit Pflaster abkleben (Brustwarze, Bauchnabel)“. Was kommt als Nächstes?",
    [
-    "Bei Zungenpiercings einen Eiswürfel geben.",
-    "Einverständniserklärung ausfüllen lassen.",
-    "Fragen, welche Piercings gewünscht sind, eventuell Angst nehmen.",
-    "Pflegehinweise am besten auch schriftlich aushändigen."
+    "Bei Zungenpiercings einen Eiswürfel geben",
+    "Pflegemittel mitgeben und Pflegehinweise mündlich erklären",
+    "Nochmals mit Kodan einsprühen",
+    "Dem Kunden das Piercing im Spiegel zeigen"
    ],
-   "Schritt 22 → Schritt 23.",
+   "Schritt 23: Bei Zungenpiercings einen Eiswürfel geben.",
    "S. 113"
   ],
   [
-   "Welcher Schritt folgt auf: „Bei Zungenpiercings einen Eiswürfel geben.“?",
+   "Ablauf, Schritt 23: „Bei Zungenpiercings einen Eiswürfel geben“. Was kommt als Nächstes?",
    [
-    "Pflegemittel mitgeben und Pflegehinweise mündlich erklären.",
-    "Eventuell mit Pflaster abkleben (Brustwarze, Bauchnabel).",
-    "Begrüßung, Small Talk.",
-    "Fragen, welche Piercings gewünscht sind, eventuell Angst nehmen."
+    "Pflegemittel mitgeben und Pflegehinweise mündlich erklären",
+    "Schmuck mit der Klemmzange festhalten und die Kugel fest aufdrehen",
+    "Bei Wundheilstörungen soll der Kunde zur Beratung wiederkommen (siehe Modul 10)",
+    "Pflegehinweise am besten auch schriftlich aushändigen"
    ],
-   "Schritt 23 → Schritt 24.",
+   "Schritt 24: Pflegemittel mitgeben und Pflegehinweise mündlich erklären.",
    "S. 113"
   ],
   [
-   "Welcher Schritt folgt auf: „Pflegemittel mitgeben und Pflegehinweise mündlich erklären.“?",
+   "Ablauf, Schritt 24: „Pflegemittel mitgeben und Pflegehinweise mündlich erklären“. Was kommt als Nächstes?",
    [
-    "Pflegehinweise am besten auch schriftlich aushändigen.",
-    "Die Stelle begutachten und den passenden Ersteinsatz wählen (Überlänge!).",
-    "Eventuell mit Pflaster abkleben (Brustwarze, Bauchnabel).",
-    "Nochmals mit Kodan einsprühen."
+    "Pflegehinweise am besten auch schriftlich aushändigen",
+    "Dem Kunden das Piercing im Spiegel zeigen",
+    "Nochmals mit Kodan einsprühen",
+    "Bei Wundheilstörungen soll der Kunde zur Beratung wiederkommen (siehe Modul 10)"
    ],
-   "Schritt 24 → Schritt 25.",
+   "Schritt 25: Pflegehinweise am besten auch schriftlich aushändigen.",
    "S. 113"
   ],
   [
-   "Welcher Schritt folgt auf: „Pflegehinweise am besten auch schriftlich aushändigen.“?",
+   "Ablauf, Schritt 25: „Pflegehinweise am besten auch schriftlich aushändigen“. Was kommt als Nächstes?",
    [
-    "Bei Wundheilstörungen soll der Kunde zur Beratung wiederkommen (siehe Modul 10).",
-    "Bei Zungenpiercings einen Eiswürfel geben.",
-    "Die Stelle begutachten und den passenden Ersteinsatz wählen (Überlänge!).",
-    "Währenddessen den Arbeitsplatz vorbereiten und alle Instrumente parat legen."
+    "Bei Wundheilstörungen soll der Kunde zur Beratung wiederkommen (siehe Modul 10)",
+    "Dem Kunden das Piercing im Spiegel zeigen",
+    "Eventuell mit Pflaster abkleben (Brustwarze, Bauchnabel)",
+    "Pflegemittel mitgeben und Pflegehinweise mündlich erklären"
    ],
-   "Schritt 25 → Schritt 26.",
+   "Schritt 26: Bei Wundheilstörungen soll der Kunde zur Beratung wiederkommen (siehe Modul 10).",
    "S. 113"
   ]
  ],
  "10-2": [
   [
-   "Welche Abheilzeit nennt das Kursbuch für: Knorpelpiercings?",
+   "Welche Abheilzeit nennt das Kursbuch für ein Lobe?",
    [
-    "mindestens 3 Monate",
-    "ca. 2 Monate",
-    "ca. 1 bis 2 Monate",
-    "ca. 1 Monat"
-   ],
-   "Richtwerte bei komplikationsfreier Heilung.",
-   "S. 49"
-  ],
-  [
-   "Welche Abheilzeit nennt das Kursbuch für: Lobe?",
-   [
-    "ca. 2 Monate",
-    "mindestens 3 Monate",
-    "ca. 4 bis 6 Monate",
-    "ca. 1 Monat"
-   ],
-   "Richtwerte bei komplikationsfreier Heilung.",
-   "S. 49"
-  ],
-  [
-   "Welche Abheilzeit nennt das Kursbuch für: Bauchnabel?",
-   [
-    "ca. 4 bis 6 Monate",
-    "ca. 2 Monate",
-    "ca. 1 bis 2 Monate",
-    "ca. 1 Monat"
-   ],
-   "Richtwerte bei komplikationsfreier Heilung.",
-   "S. 49"
-  ],
-  [
-   "Welche Abheilzeit nennt das Kursbuch für: Labret?",
-   [
-    "ca. 1 bis 2 Monate",
-    "mindestens 3 Monate",
+    "Ca. 2 Monate",
     "3 bis 12 Monate",
-    "ca. 4 bis 6 Monate"
+    "Mindestens 3 Monate",
+    "Ca. 4 bis 6 Monate"
    ],
-   "Richtwerte bei komplikationsfreier Heilung.",
+   "Richtwerte bei komplikationsfreier Heilung; jeder Mensch heilt anders.",
    "S. 49"
   ],
   [
-   "Welche Abheilzeit nennt das Kursbuch für: Lippenbändchen?",
+   "Welche Abheilzeit nennt das Kursbuch für ein Bauchnabelpiercing?",
    [
-    "ca. 1 Monat",
+    "Ca. 4 bis 6 Monate",
+    "Ca. 1 bis 2 Monate",
     "2 bis 3 Monate",
-    "ca. 4 bis 6 Monate",
-    "ca. 2 Monate"
+    "Ca. 1 Monat"
    ],
-   "Richtwerte bei komplikationsfreier Heilung.",
+   "Richtwerte bei komplikationsfreier Heilung; jeder Mensch heilt anders.",
    "S. 49"
   ],
   [
-   "Welche Abheilzeit nennt das Kursbuch für: Zunge?",
+   "Welche Abheilzeit nennt das Kursbuch für ein Labret?",
    [
-    "ca. 1 Monat",
+    "Ca. 1 bis 2 Monate",
     "3 bis 12 Monate",
-    "ca. 2 Monate",
-    "ca. 4 bis 6 Monate"
+    "Ca. 4 bis 6 Monate",
+    "Mindestens 3 Monate"
    ],
-   "Richtwerte bei komplikationsfreier Heilung.",
+   "Richtwerte bei komplikationsfreier Heilung; jeder Mensch heilt anders.",
    "S. 49"
   ],
   [
-   "Welche Abheilzeit nennt das Kursbuch für: Brustwarze?",
+   "Welche Abheilzeit nennt das Kursbuch für ein Lippenbändchen-Piercing?",
+   [
+    "Ca. 1 Monat",
+    "Ca. 4 bis 6 Monate",
+    "2 bis 3 Monate",
+    "Mindestens 3 Monate"
+   ],
+   "Richtwerte bei komplikationsfreier Heilung; jeder Mensch heilt anders.",
+   "S. 49"
+  ],
+  [
+   "Welche Abheilzeit nennt das Kursbuch für ein Zungenpiercing?",
+   [
+    "Ca. 1 Monat",
+    "2 bis 3 Monate",
+    "Ca. 4 bis 6 Monate",
+    "Ca. 2 Monate"
+   ],
+   "Richtwerte bei komplikationsfreier Heilung; jeder Mensch heilt anders.",
+   "S. 49"
+  ],
+  [
+   "Welche Abheilzeit nennt das Kursbuch für ein Brustwarzenpiercing?",
    [
     "3 bis 12 Monate",
-    "ca. 1 Monat",
-    "ca. 1 bis 2 Monate",
-    "ca. 2 Monate"
+    "Ca. 1 Monat",
+    "Ca. 2 Monate",
+    "Ca. 1 bis 2 Monate"
    ],
-   "Richtwerte bei komplikationsfreier Heilung.",
+   "Richtwerte bei komplikationsfreier Heilung; jeder Mensch heilt anders.",
    "S. 49"
   ],
   [
-   "Welche Abheilzeit nennt das Kursbuch für: Augenbraue?",
+   "Welche Abheilzeit nennt das Kursbuch für ein Augenbrauenpiercing?",
    [
-    "ca. 1 Monat",
+    "Ca. 1 Monat",
     "3 bis 12 Monate",
-    "ca. 4 bis 6 Monate",
-    "2 bis 3 Monate"
+    "Ca. 4 bis 6 Monate",
+    "Ca. 2 Monate"
    ],
-   "Richtwerte bei komplikationsfreier Heilung.",
+   "Richtwerte bei komplikationsfreier Heilung; jeder Mensch heilt anders.",
    "S. 49"
   ],
   [
-   "Welche Abheilzeit nennt das Kursbuch für: Intim?",
+   "Welche Abheilzeit nennt das Kursbuch für Intimpiercings?",
    [
     "2 bis 3 Monate",
-    "ca. 4 bis 6 Monate",
-    "ca. 1 Monat"
+    "Ca. 1 Monat",
+    "Ca. 4 bis 6 Monate"
    ],
-   "Richtwerte bei komplikationsfreier Heilung.",
+   "Richtwerte bei komplikationsfreier Heilung; jeder Mensch heilt anders.",
    "S. 49"
   ]
  ]

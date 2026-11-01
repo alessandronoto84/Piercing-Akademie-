@@ -62,7 +62,6 @@ window.KURS = window.KURS || { module: [] };
         fragen: [
           ["Wo kann ein Helix gestochen werden?", ["Überall an der Ohrkante", "Nur am oberen Ohrrand", "Nur in der Antihelix", "Nur an der Helixwurzel"], "Von oberhalb des Ohrläppchens bis um die Rundung.", "S. 78"],
           ["Wie viele Helix-Piercings ist ein Industrial anatomisch?", ["Zwei", "Eins", "Drei", "Ein Helix und ein Rook"], "Ein langer Barbell geht durch beide.", "S. 84"],
-          ["Was ist beim Allergiepiercing verboten?", ["Heilversprechen zu geben oder damit zu werben", "Es mit 18G zu stechen", "Es mit Nadelauffangrohr zu stechen", "Es bei Allergikern zu stechen"], "Hinweis im Datenblatt.", "S. 83"]
         ]
       },
       {
@@ -139,7 +138,7 @@ window.KURS = window.KURS || { module: [] };
         fragen: [
           ["Warum heißt das Lippenbändchen-Piercing auch Smiley?", ["Weil es nur beim Lächeln sichtbar ist", "Weil es ein Lächeln formt", "Weil es durch die Mundwinkel geht", "Weil es ein Labret mit Smiley-Kugel ist"], "Durch das Frenulum.", "S. 87"],
           ["In welche Richtung wird die Zunge gestochen?", ["Von unten nach oben", "Von oben nach unten", "Seitlich von links", "Schräg von vorn"], "Datenblatt Zunge.", "S. 90"],
-          ["Womit kühlt der Kunde nach dem Zungenpiercing?", ["Mit Eiswürfeln, am besten aus Kamillentee", "Mit Eisspray", "Mit kaltem Kaffee", "Mit Lidocain-Spray"], "Sofort nach dem Stechen.", "S. 90"],
+          ["Womit kühlt der Kunde nach dem Zungenpiercing?", ["Mit Eiswürfeln, am besten aus Kamillentee", "Mit Eisspray", "Mit kalter Milch", "Mit Lidocain-Spray"], "Sofort nach dem Stechen.", "S. 90"],
           ["Wann kann der Barbell beim Zungenpiercing gekürzt werden?", ["Nach etwa 10 Tagen", "Nach 2 Tagen", "Nach 3 Monaten", "Nie, die Länge bleibt"], "Ersteinsatz 20 mm Barbell.", "S. 90"]
         ]
       },

@@ -21,7 +21,7 @@ KURS.module.push({
       fragen: [
         ["Was bedeutet das Wort „Piercing“ laut Kursbuch?", ["Loch in der Haut (das Durchstechen selbst)", "Das Schmuckstück im Stichkanal", "Den Heilungsprozess nach dem Stich", "Den Ersteinsatz mit Überlänge"], "Oft wird es fälschlich mit dem Schmuck gleichgesetzt.", "S. 3"],
         ["Zu welcher Form der Körperkunst zählt Piercing?", ["Bodymodding", "Scarification", "Tätowierung", "Permanent Make-up"], "Piercing ist eine Form von Bodymodding oder Körperkunst.", "S. 3"],
-        ["Durch welches Gewebe wird der Schmuck beim Piercing geführt?", ["Durch die Haut und das darunterliegende Fett- oder Knorpelgewebe", "Nur durch die Oberhaut, ohne tiefere Schichten", "Durch Haut und Muskelgewebe", "Nur durch Knorpel, nie durch Fettgewebe"], "So beschreibt es das Kursbuch.", "S. 3"],
+        ["Durch welches Gewebe wird der Schmuck beim Piercing geführt?", ["Durch die Haut und das darunterliegende Fett- oder Knorpelgewebe", "Nur durch die Oberhaut, ohne tiefere Schichten", "Durch Haut und Muskelgewebe", "Nur durch Knorpel, nie durch Fettgewebe"], "Je nach Stelle durch Haut und Fettgewebe (zum Beispiel Ohrläppchen) oder durch Haut und Knorpel (zum Beispiel Helix).", "S. 3"],
         ["Wie alt sind Piercings laut Kursbuch?", ["So alt wie die menschliche Zivilisation", "Etwa so alt wie das Römische Reich", "Sie stammen aus dem Mittelalter", "Sie entstanden mit der Punkbewegung der 1970er"], "Merksatz aus Kap. 2.1.", "S. 3"]
       ]
     },
@@ -40,7 +40,7 @@ KURS.module.push({
       ],
       fragen: [
         ["Wie alt sind die ältesten im Kursbuch genannten Funde von Ohrschmuck?", ["Über 7000 Jahre (Algerien)", "Etwa 3300 Jahre (Tutanchamun)", "Etwa 2600 Jahre (Hallstattkultur)", "Etwa 4000 Jahre (Mittlerer Osten)"], "Neolithische Funde aus Algerien.", "S. 3"],
-        ["Woraus bestanden die ältesten Ohrgehänge aus Algerien?", ["Aus Tierknochen und Zähnen", "Aus Gold", "Aus Bronze", "Aus Muscheln und Holz"], "So steht es im Kursbuch.", "S. 3"],
+        ["Woraus bestanden die ältesten Ohrgehänge aus Algerien?", ["Aus Tierknochen und Zähnen", "Aus Gold", "Aus Bronze", "Aus Muscheln und Holz"], "Die jungsteinzeitlichen Funde aus Algerien waren aus Tierknochen und Zähnen; Metallschmuck kam erst viel später.", "S. 3"],
         ["Aus welcher Zeit stammen die ältesten bekannten Piercing-Spuren?", ["Aus der Jungsteinzeit (Neolithikum)", "Aus der Bronzezeit Europas", "Aus der Zeit der Pharaonen", "Aus der griechischen Antike"], "Neolithikum bedeutet jüngere Steinzeit.", "S. 3"],
         ["Welche berühmte Maske zeigt Ohrlöcher?", ["Die Goldmaske des Tutanchamun", "Die Goldmaske des Agamemnon", "Die Totenmaske Napoleons", "Die Maske des Pakal aus Palenque"], "Dazu kamen Goldohrringe als Grabbeigabe.", "S. 3"],
         ["Aus welcher Zeit stammen die ägyptischen Pharaonendarstellungen mit Ohrenschmuck?", ["Etwa 1400 bis 1300 v. Chr.", "Etwa 3000 bis 2900 v. Chr.", "Etwa 500 bis 400 v. Chr.", "Etwa 100 bis 200 n. Chr."], "So datiert sie das Kursbuch.", "S. 3"]
@@ -63,7 +63,7 @@ KURS.module.push({
         ["Welches Körperideal galt im antiken Griechenland und in Rom?", ["Der unversehrte Körper", "Ein möglichst reich geschmückter Körper", "Ein Körper mit Zeichen der Zugehörigkeit wie Ohrringen", "Ein tätowierter Körper als Zeichen von Mut"], "Deshalb gibt es dort kaum Piercing-Spuren.", "S. 4"],
         ["Wo wurde das Nasenpiercing erstmals praktiziert?", ["Im Mittleren Osten, vor etwa 4000 Jahren", "In Indien, vor etwa 4000 Jahren", "In Ägypten, vor etwa 7000 Jahren", "In Indien, im 16. Jahrhundert"], "Im 16. Jahrhundert kam es nach Indien.", "S. 85"],
         ["Was gilt für das Septum-Piercing?", ["Es ist eines der ältesten Piercings und in vielen Kulturen verbreitet", "Es kam erst im 16. Jahrhundert aus Indien", "Es wird durch den Nasenscheidewandknorpel gestochen", "Es ist nur in Europa traditionell"], "Der Name kommt von „Septum nasi“.", "S. 88"],
-        ["Warum haben sich Menschen schon früh geschmückt?", ["Um Zugehörigkeit zu zeigen und sich zugleich hervorzuheben", "Vor allem aus medizinischen Gründen", "Hauptsächlich als Strafe für Verbrecher", "Nur um den sozialen Rang zu verbergen"], "Piercings waren Initiationsritus oder Schmuck.", "S. 4"]
+        ["Warum haben sich Menschen schon früh geschmückt?", ["Um Zugehörigkeit zu zeigen und sich zugleich hervorzuheben", "Vor allem aus medizinischen Gründen", "Hauptsächlich als Schutz vor Krankheiten", "Nur um den sozialen Rang zu verbergen"], "Piercings waren Initiationsritus oder Schmuck.", "S. 4"]
       ]
     },
     {
@@ -103,7 +103,6 @@ KURS.module.push({
         ["Womit vergleicht das Kursbuch den Piercingraum?", ["Mit einem OP-Raum im Krankenhaus", "Mit einer Zahnarztpraxis", "Mit einem Labor", "Mit einem Kosmetikstudio"], "Er ist sauber und steril zu halten.", "S. 5"],
         ["Wie lange soll ein frisches Piercing etwa gereinigt werden?", ["Etwa 2 Wochen, 2- bis 3-mal täglich", "Etwa 2 Wochen, einmal täglich", "Bis zur vollständigen Abheilung, stündlich", "3 Tage lang, 5-mal täglich"], "Vom Kunden selbst, mit einem geeigneten Mittel.", "S. 6"],
         ["Welches Pflegemittel darf bei Knorpelpiercings nie empfohlen werden?", ["Octenisept", "Prontolind", "Kochsalzlösung", "Sterile Kochsalzlösung aus der Sprühflasche"], "Octenisept enthält Octenidin, das Knorpelzellen schädigt. Prontolind ist am Knorpel erlaubt.", "S. 6"],
-        ["Welches Pflegemittel ist nicht für alle Piercings geeignet?", ["Octenisept", "Kochsalzlösung", "Prontolind", "Sterile Kochsalzlösung"], "Octenisept nie bei Knorpel; Kochsalzlösung und Prontolind gehen überall.", "S. 6"],
         ["Wie lange darf der Schmuck nach dem Piercen nicht gewechselt werden?", ["Bis zu mehreren Monaten, bis zur vollständigen Abheilung", "Etwa 2 Wochen, bis die Pflege endet", "Bis die Rötung verschwunden ist", "Nur in den ersten 3 Tagen"], "Ein früher Wechsel kann Infektionen auslösen.", "S. 6"],
         ["Fall: Eine Kundin mit frischem Helix fragt, ob sie Octenisept zur Pflege nehmen kann. Was antwortest du?", ["Nein, beim Knorpel nicht; ich empfehle Kochsalzlösung oder Prontolind", "Ja, verdünnt ist es für Knorpel geeignet", "Ja, wenn sie es nur abends nimmt", "Ja, aber nur in der ersten Woche"], "Der Helix ist Knorpel; Octenidin ist knorpeltoxisch. Prontolind ist erlaubt.", "S. 6"]
       ]
@@ -127,7 +126,7 @@ KURS.module.push({
         ["Warum gehört die Ohrlochpistole nicht ins Studio?", ["Gewebe kann einreißen, sie ist nicht vollständig sterilisierbar und verteilt Keime", "Sie ist in Deutschland ausdrücklich verboten", "Sie funktioniert nur am Ohrläppchen", "Sie lässt sich nur mit Stahlschmuck laden"], "Dazu kommen ungeeignete Ersteinsätze.", "S. 6"],
         ["Was kann mit Knorpel beim Schießen passieren?", ["Er kann splittern", "Er kann sich verformen und weicher werden", "Er verkalkt an der Stichstelle", "Er bildet sofort wildes Fleisch"], "Hautgewebe kann einreißen, Knorpel splittern.", "S. 6"],
         ["Was passiert mit Keimen beim Schießen mit der Pistole?", ["Sie fliegen durch den Raum", "Sie werden durch die Reibungswärme abgetötet", "Sie bleiben auf der Einweg-Kartusche", "Sie werden durch den Ohrstecker abgedichtet"], "Die Pistole ist zudem nicht vollständig sterilisierbar.", "S. 6"],
-        ["Was gilt für die Ersteinsätze der Ohrlochpistole?", ["Sie sind je nach Material ungeeignet bis gefährlich", "Sie entsprechen immer der Norm ASTM F136", "Sie haben immer 4 mm Überlänge", "Sie sind aus PTFE"], "So steht es im Kursbuch.", "S. 6"]
+        ["Was gilt für die Ersteinsätze der Ohrlochpistole?", ["Sie sind je nach Material ungeeignet bis gefährlich", "Sie entsprechen immer der Norm ASTM F136", "Sie haben immer 4 mm Überlänge", "Sie sind aus PTFE"], "Pistolen-Stecker sind oft aus ungeeignetem Material und ohne Überlänge; je nach Material ungeeignet bis gefährlich.", "S. 6"]
       ]
     },
     {

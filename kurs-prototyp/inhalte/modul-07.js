@@ -49,7 +49,7 @@ KURS.module.push({
           "Verwechslungsgefahr beim Bestellen: Schmuck mit 1,2 mm heißt im Handel 16G, gestochen wird er aber mit der 18G-Kanüle."
         ] },
         { typ: "praxis", text: "Probiere jede Kombination aus Kanüle und Ersteinsatz vorher am Übungsmodell aus, nicht erst am Kunden." },
-        { typ: "ergaenzung", text: "Schmuckstärken nach gängigen Händlertabellen, Kanülenmaße nach Herstellerangabe (siehe KURS-RECHERCHE.md, Abschnitt 9). Die Kombinationen sind der Standard der Piercing Akademie." }
+        { typ: "ergaenzung", text: "Schmuckstärken nach gängigen Händlertabellen, Kanülenmaße nach Herstellerangabe. Die Kombinationen sind der Standard der Piercing Akademie." }
       ],
       fragen: [
         ["Welche Stabstärke hat Schmuck in 16G?", ["1,2 mm", "1,7 mm", "1,6 mm", "1,0 mm"], "Eine 16G-Kanüle hat dagegen 1,7 mm.", "Ergänzung"],
@@ -117,7 +117,6 @@ KURS.module.push({
         ["Wofür ist die Schere beim Piercen da?", ["Zum Kürzen des Kunststoffröhrchens nach dem Stich", "Zum Kürzen des Ersteinsatzes", "Zum Abschneiden von Haaren an der Stichstelle", "Zum Öffnen der Sterilverpackung"], "So lässt sich der Schmuck leichter einführen.", "S. 67"],
         ["Worauf achtest du bei der Einführhilfe?", ["Sehr vorsichtig vorgehen, um Verletzungen zu vermeiden", "Sie nur bei frischen Stichkanälen verwenden", "Sie mit Druck drehen, bis sie durchgeht", "Sie ohne Gleitmittel verwenden"], "Abgeheilte Kanäle vorsichtig dehnen.", "S. 66"],
         ["Womit trennst du Schmuck auf, dessen Kugel sich nicht löst?", ["Mit dem Mini-Seitenschneider", "Mit der Ringöffnungszange", "Mit dem Kugelgreifer", "Mit der Schere"], "Der Schmuck wird dabei zerstört.", "S. 73"],
-        ["Womit hältst du den Schmuck fest, während du die Kugel aufdrehst?", ["Mit der Klemmzange", "Mit dem Kugelgreifer", "Mit der Piercing-Zange mit Fenster", "Mit dem Messschieber"], "Siehe Werkzeugtabelle.", "S. 66"]
       ]
     },
     {
@@ -140,7 +139,7 @@ KURS.module.push({
         ["Warum werden Haare an der Stichstelle entfernt?", ["Haare enthalten Keime und können die Heilung stören", "Damit der Hautmarker besser hält", "Damit der Kunde weniger Schmerz spürt", "Weil die Klemme sonst abrutscht"], "Dafür gibt es Einmalrasierer.", "S. 70"],
         ["Womit markierst du Ein- und Ausstichpunkt?", ["Mit einem Einmal-Hautmarker", "Mit einem desinfizierten Kugelschreiber", "Mit einem Kajalstift", "Mit Jodlösung"], "Chirurgenstift.", "S. 69"],
         ["Womit desinfizierst du die zu piercende Stelle?", ["Mit einem Alkoholtupfer", "Mit Kochsalzlösung", "Mit Octenisept bei jedem Piercing", "Mit Flächendesinfektionsmittel"], "Siehe Einmalmaterial.", "S. 70"],
-        ["Wie arbeitest du am Kunden?", ["Stets mit desinfizierten Händen und (sterilen) Einmalhandschuhen", "Mit Einmalhandschuhen, die Hände müssen nicht desinfiziert sein", "Mit desinfizierten Händen ohne Handschuhe", "Mit wiederverwendbaren, desinfizierten Handschuhen"], "Siehe Kursbuch.", "S. 71"]
+        ["Wie arbeitest du am Kunden?", ["Stets mit desinfizierten Händen und (sterilen) Einmalhandschuhen", "Mit Einmalhandschuhen, die Hände müssen nicht desinfiziert sein", "Mit desinfizierten Händen ohne Handschuhe", "Mit wiederverwendbaren, desinfizierten Handschuhen"], "Handschuhe ersetzen die Händedesinfektion nicht: erst desinfizieren, dann Handschuhe anziehen.", "S. 71"]
       ]
     },
     {

@@ -31,7 +31,7 @@ KURS.module.push({
         ["Wie lässt sich G23-Titan färben?", ["Durch Anodisieren", "Durch Galvanisieren mit Farbpigmenten", "Durch Pulverbeschichtung", "Durch Einbrennlack"], "Elektrochemisches Verfahren.", "S. 52"],
         ["Warum ist G23-Titan antiallergen?", ["Es ist nickelfrei", "Es ist mit PTFE beschichtet", "Es enthält Vanadium, das Allergien hemmt", "Es ist vergoldet"], "Deshalb ideal als Ersteinsatz.", "S. 52"],
         ["Warum ist G23-Titan dauerhaft farbbeständig?", ["Wegen seines starken Oxidmantels", "Weil die Farbe eingebrannt ist", "Weil es mit PVD beschichtet ist", "Weil es kaum Wärme leitet"], "Korrosionsresistent.", "S. 53"],
-        ["Wofür ist G23-Titan ebenfalls zugelassen?", ["Für Implantate wie künstliche Gelenke", "Nur für Schmuck und Uhren", "Nur für chirurgische Instrumente", "Für Lebensmittelverpackungen"], "Genormt als Implantatwerkstoff (ASTM F136).", "S. 53"],
+        ["Wofür ist G23-Titan ebenfalls zugelassen?", ["Für Implantate wie künstliche Gelenke", "Nur für Schmuck und Uhren", "Nur für chirurgische Instrumente", "Nur für Brillengestelle"], "Genormt als Implantatwerkstoff (ASTM F136).", "S. 53"],
         ["Wodurch entsteht beim Anodisieren die Farbe?", ["Durch eine Oxidschicht, deren Dicke von der Spannung abhängt", "Durch einen eingebrannten Farbstoff", "Durch eine PVD-Beschichtung", "Durch Beimischen anderer Metalle"], "Höhere Spannung, dickere Schicht, andere Farbe.", "S. 53"]
       ]
     },
@@ -45,7 +45,7 @@ KURS.module.push({
       ],
       fragen: [
         ["Mit welchem Verfahren wird Blackline-Titan beschichtet?", ["PVD (Physical Vapor Deposition)", "Galvanisieren", "Anodisieren", "Pulverbeschichtung"], "Hauchdünn und abriebfest.", "S. 54"],
-        ["Welche Eigenschaften haben Blackline-Piercings?", ["Nahezu dauerhaft kratzbeständig, farbsicher und verträglich", "Sie werden durch Anodisieren schwarz", "Sie enthalten schwarzes Nickel", "Sie sind besonders für den Ersteinsatz empfohlen"], "Siehe Kursbuch.", "S. 54"],
+        ["Welche Eigenschaften haben Blackline-Piercings?", ["Nahezu dauerhaft kratzbeständig, farbsicher und verträglich", "Sie werden durch Anodisieren schwarz", "Sie enthalten schwarzes Nickel", "Sie sind besonders für den Ersteinsatz empfohlen"], "Die PVD-Schicht ist sehr dünn und hart. Als Ersteinsatz bleibt die Akademie trotzdem bei G23-Titan oder PTFE.", "S. 54"],
         ["Was ist Zirkon-Gold-Titan?", ["Titan mit goldfarbener Beschichtung als Alternative zu Goldschmuck", "Massives 14-Karat-Gold", "Vergoldeter Chirurgenstahl", "Eine Gold-Titan-Legierung"], "Glatter, leichter, preiswerter.", "S. 54"]
       ]
     },
@@ -77,7 +77,7 @@ KURS.module.push({
       fragen: [
         ["Welche Materialien verwendest du als Ersteinsatz?", ["G23-Titan oder PTFE", "G23-Titan oder 316L", "PTFE oder Zirkon-Gold", "316 LVM oder Blackline-Titan"], "Viele Menschen haben unbemerkt eine Nickelallergie.", "S. 56"],
         ["Was gilt für 303er Stahl?", ["Er ruft bei Nickelsensitiven erhebliche Reaktionen hervor und ist zu meiden", "Er ist als Zweiteinsatz unbedenklich", "Er ist nickelfrei, aber schwer zu verarbeiten", "Er ist identisch mit 316L"], "Hochschwefelhaltig.", "S. 56"],
-        ["Welche Materialien wären möglich, sind aber wirtschaftlich nicht sinnvoll?", ["Implantanium, Niob oder hochreines Gold", "PTFE und G23-Titan", "316L und 303er Stahl", "Blackline- und Zirkon-Gold-Titan"], "Im Buch „Nionium“, gemeint ist vermutlich Niob.", "S. 56"],
+        ["Welche Materialien wären möglich, sind aber wirtschaftlich nicht sinnvoll?", ["Implantanium, Niob oder hochreines Gold", "PTFE und G23-Titan", "316L und 303er Stahl", "Blackline- und Zirkon-Gold-Titan"], "Möglich, aber teuer: Implantanium, Niob und hochreines Gold. In der Praxis bleibt es bei G23-Titan und PTFE.", "S. 56"],
         ["Wie viel Nickel darf Schmuck für frische Piercings nach EU-Recht höchstens abgeben?", ["0,2 µg pro cm² und Woche", "0,5 µg pro cm² und Woche", "2 µg pro cm² und Woche", "0,02 µg pro cm² und Tag"], "REACH, Eintrag 27 (Ergänzung).", "Ergänzung"],
         ["Fall: Ein Kunde bringt eigenen Schmuck aus Chirurgenstahl für sein frisches Piercing mit. Was tust du?", ["Ich setze als Ersteinsatz G23-Titan oder PTFE ein", "Ich setze seinen Schmuck nach dem Autoklavieren ein", "Ich setze ihn ein, wenn er 4 mm Überlänge hat", "Ich setze ihn ein, wenn der Kunde unterschreibt"], "316L ist als Ersteinsatz ungeeignet.", "S. 55–56"]
       ]
@@ -95,7 +95,7 @@ KURS.module.push({
         ["Woran erkennt man eine Nickelallergie auf der Haut?", ["Rötung, Schwellung, raue, trockene und juckende Haut", "Blaue Verfärbung um den Stichkanal", "Wildes Fleisch am Stichkanal", "Sofortige Schwellung innerhalb von Minuten"], "Manchmal nässende Kontaktekzeme.", "S. 57"],
         ["Wann treten die Symptome einer Nickelallergie auf?", ["Etwa 48 bis 72 Stunden nach dem Kontakt", "Innerhalb von Minuten", "Nach 2 bis 6 Stunden", "Erst nach 2 bis 3 Wochen"], "Spättyp-Allergie.", "S. 57"],
         ["Wie nennt man eine Allergie, die erst Tage nach dem Kontakt auftritt?", ["Spättyp-Allergie", "Soforttyp-Allergie", "Kreuzallergie", "Pseudoallergie"], "Typisch für Nickel.", "S. 57"],
-        ["Kann sich der Ausschlag über den ganzen Körper ausbreiten?", ["Ja, bei einigen Betroffenen", "Nein, er bleibt immer am Schmuck", "Nur bei Knorpelpiercings", "Nur bei Kindern"], "So steht es im Kursbuch.", "S. 57"],
+        ["Kann sich der Ausschlag über den ganzen Körper ausbreiten?", ["Ja, bei einigen Betroffenen", "Nein, er bleibt immer am Schmuck", "Nur bei Knorpelpiercings", "Nur bei Kindern"], "Bei starker Sensibilisierung kann die Allergie auch an anderen Körperstellen aufblühen (Streureaktion).", "S. 57"],
         ["Fall: Drei Tage nach einem Schmuckwechsel auf Stahl juckt und nässt die Stelle. Woran denkst du?", ["An eine Nickelallergie (Spättyp)", "An wildes Fleisch", "An eine normale Entzündungsphase", "An eine Perichondritis"], "Symptome nach 48 bis 72 Stunden.", "S. 57"]
       ]
     },
@@ -138,7 +138,7 @@ KURS.module.push({
           "Autoklavierbar; steril verpackt oder vor dem Einsatz sterilisiert.",
           "Nickelabgabe nach EU-Recht: höchstens 0,2 µg pro cm² und Woche für Schmuck in frischen Piercings (Modul 11)."
         ] },
-        { typ: "ergaenzung", text: "Die Normen stammen aus den Mindeststandards der Association of Professional Piercers (APP) und aus Herstellerangaben (siehe KURS-RECHERCHE.md, Abschnitt 9). Die APP lässt auch Implantatstahl und Gold als Ersteinsatz zu; die Akademie bleibt bei ihrer strengeren Regel: G23-Titan oder PTFE." }
+        { typ: "ergaenzung", text: "Die Normen stammen aus den Mindeststandards der Association of Professional Piercers (APP) und aus Herstellerangaben. Die APP lässt auch Implantatstahl und Gold als Ersteinsatz zu; die Akademie bleibt bei ihrer strengeren Regel: G23-Titan oder PTFE." }
       ],
       fragen: [
         ["Welche Norm gehört zu Titan G23 (Ti6Al4V ELI)?", ["ASTM F136", "ASTM F138", "ASTM F67", "EN 1811"], "Auch ISO 5832-3.", "Ergänzung"],

@@ -33,8 +33,7 @@ KURS.module.push({
       ],
       fragen: [
         ["Welcher Wirkstoff in Octenisept schädigt in Laborstudien Knorpelzellen?", ["Octenidin", "Natriumchlorid", "Polihexanid", "Chlorhexidin"], "Nicht auf Knorpel anwenden.", "S. 48"],
-        ["Welches Pflegemittel empfiehlst du für den Mundbereich?", ["Chlorhexamed", "Octenisept", "Teebaumöl pur", "Tyrosur-Gel"], "Laut Kursbuch.", "S. 48"],
-        ["Welches Mittel passt nicht für alle Piercings?", ["Octenisept", "Einfache Kochsalzlösung", "Prontolind", "Sterile Kochsalzlösung"], "Octenisept nie bei Knorpel.", "S. 48"],
+        ["Welches Pflegemittel empfiehlst du für den Mundbereich?", ["Chlorhexamed", "Octenisept", "Teebaumöl pur", "Tyrosur-Gel"], "Chlorhexamed ist eine Mundspüllösung mit Chlorhexidin und für die Mundschleimhaut gedacht.", "S. 48"],
         ["Fall: Ein Kunde mit frischem Conch-Piercing fragt nach Prontolind. Was antwortest du?", ["Ja, Prontolind darf er auch am Knorpel nehmen", "Nein, am Knorpel nur Octenisept", "Nein, am Knorpel gar kein Pflegemittel", "Nur verdünnt mit Leitungswasser"], "Prontolind (Polihexanid) ist am Knorpel erlaubt, Octenisept nicht.", "S. 48"]
       ]
     },
@@ -70,7 +69,6 @@ KURS.module.push({
         ] }
       ],
       fragen: [
-        ["Wann soll der Kunde bei fehlender Epithelisierung zum Arzt?", ["Nach 10 bis 14 Tagen", "Nach 2 bis 3 Tagen", "Nach 4 Wochen", "Nach 3 Monaten"], "So steht es im Kursbuch.", "S. 50"],
         ["Was kann ständiges Nachbluten verursachen?", ["Diabetes, Bindegewebsschwäche oder eine Bluterkrankheit", "Eine Nickelallergie", "Die Pflege mit Kochsalzlösung", "Zu viel Überlänge"], "Dann einen Arzt aufsuchen.", "S. 50"],
         ["Was passiert bei der Epithelisierung?", ["Zellen wandern vom Wundrand ein, die Wunde wird kleiner", "Granulationsgewebe wuchert aus dem Kanal", "Der Knorpel bildet sich neu", "Die Entzündungsphase beginnt"], "Regenerationsphase.", "S. 50"]
       ]
@@ -91,11 +89,11 @@ KURS.module.push({
         { typ: "merke", text: "Raucher, Alkoholiker und Diabetiker gehören zu den Risikogruppen; bei ihnen treten Komplikationen schneller auf." }
       ],
       fragen: [
-        ["Was ist meist die Ursache einer Entzündung?", ["Keime oder Fremdstoffe in der Wunde", "Zu viel Überlänge", "Die Kochsalzlösung", "Ein zu leichter Titanschmuck"], "Zum Beispiel von den Haaren.", "S. 50"],
+        ["Was ist meist die Ursache einer Entzündung?", ["Keime oder Fremdstoffe in der Wunde", "Zu viel Überlänge", "Die Kochsalzlösung", "Ein Ersteinsatz aus PTFE"], "Zum Beispiel von den Haaren.", "S. 50"],
         ["Was droht, wenn Eiter nicht abfließen kann?", ["Eine Blutvergiftung", "Eine Nickelallergie", "Wildes Fleisch", "Eine schnellere Heilung"], "Eiter muss abfließen können.", "S. 50"],
         ["Welche Salbe aus der Apotheke nennt das Kursbuch?", ["Tyrosur", "Bepanthen", "Betaisodona", "Fucidine"], "Lege dem Kunden nahe, sie zu kaufen.", "S. 50"],
-        ["Was kann bei einer Entzündung helfen?", ["Kamille, verdünntes Teebaumöl oder Manukahonig und tägliches Reinigen", "Den Schmuck sofort herausnehmen und den Kanal zukleben", "Häufiger Schmuckwechsel", "Octenisept auf Knorpel"], "Siehe Kursbuch.", "S. 50"],
-        ["Fall: Ein Kunde ruft an, das Piercing ist stark gerötet, und er hat Fieber. Was tust du?", ["Ich schicke ihn sofort zum Arzt", "Ich empfehle Teebaumöl und 3 Tage abwarten", "Ich wechsle den Schmuck auf PTFE", "Ich empfehle Tyrosur und Ruhe"], "Ergänzung der Akademie.", "Ergänzung"]
+        ["Was kann bei einer Entzündung helfen?", ["Kamille, verdünntes Teebaumöl oder Manukahonig und tägliches Reinigen", "Den Schmuck sofort herausnehmen und den Kanal zukleben", "Häufiger Schmuckwechsel", "Octenisept auf Knorpel"], "Das sind die Hausmittel, die das Kursbuch bei leichten Entzündungen nennt. Bei Fieber oder sich ausbreitender Rötung geht der Kunde zum Arzt.", "S. 50"],
+        ["Fall: Ein Kunde ruft an, das Piercing ist stark gerötet, und er hat Fieber. Was tust du?", ["Ich schicke ihn sofort zum Arzt", "Ich empfehle Teebaumöl und 3 Tage abwarten", "Ich wechsle den Schmuck auf PTFE", "Ich empfehle Tyrosur und Ruhe"], "Fieber zeigt, dass sich die Entzündung im Körper ausbreitet. Das gehört sofort in ärztliche Hände, nicht in die Hausapotheke.", "Ergänzung"]
       ]
     },
     {
@@ -118,7 +116,7 @@ KURS.module.push({
           "In England wurde 2023 eine Häufung nach Ohrpiercings auf verunreinigtes Wasser (Waschbecken, Durchlauferhitzer) in einem Studio zurückgeführt; 2016 löste ein verunreinigtes Pflegespray landesweit über 100 Verdachtsfälle aus.",
           "Vorbeugen: steril arbeiten, zur Pflege sterile Kochsalzlösung statt Leitungswasser empfehlen, kein Octenidin auf Knorpel, Druck und Reibung auf das frische Piercing vermeiden (zum Beispiel nicht darauf schlafen)."
         ] },
-        { typ: "ergaenzung", text: "Ergänzung der Akademie nach medizinischer Fachliteratur (siehe KURS-RECHERCHE.md, Abschnitt 9). Fachlich prüfen." }
+        { typ: "ergaenzung", text: "Grundlage: medizinische Fachliteratur zu Knorpelentzündungen nach Ohrpiercings." }
       ],
       fragen: [
         ["Was ist eine Perichondritis?", ["Eine Entzündung der Knorpelhaut, meist an der Ohrmuschel", "Eine Nickelallergie am Knorpel", "Wildes Fleisch am Knorpelpiercing", "Eine Entzündung des Ohrläppchens"], "Gefährlichste Komplikation von Knorpelpiercings.", "Ergänzung"],
@@ -126,7 +124,7 @@ KURS.module.push({
         ["Welcher Erreger verursacht eine Perichondritis nach Ohrpiercing am häufigsten?", ["Pseudomonas aeruginosa", "Staphylococcus epidermidis aus der Hautflora", "Candida albicans", "Herpesviren"], "Er lebt in feuchter Umgebung.", "Ergänzung"],
         ["Was tust du bei Verdacht auf eine Perichondritis?", ["Den Kunden sofort zum Arzt schicken", "Mit Tyrosur behandeln und eine Woche warten", "Den Schmuck selbst entfernen", "Kühlen und Kochsalzlösung empfehlen"], "Am besten zum HNO-Arzt.", "Ergänzung"],
         ["Was droht, wenn eine Perichondritis nicht behandelt wird?", ["Eine bleibende Verformung (Blumenkohlohr)", "Nur eine Narbe am Stichkanal", "Ein Herauswachsen des Schmucks", "Eine Nickelallergie"], "Der Knorpel kann zerstört werden.", "Ergänzung"],
-        ["Warum empfiehlst du zur Pflege sterile Kochsalzlösung statt Leitungswasser?", ["Weil Pseudomonas in feuchter Umgebung wie Wasserleitungen lebt", "Weil Leitungswasser zu viel Kalk enthält", "Weil Kochsalzlösung Knorpel aufbaut", "Weil Leitungswasser Octenidin enthält"], "Vorbeugung gegen Perichondritis.", "Ergänzung"]
+        ["Warum empfiehlst du zur Pflege sterile Kochsalzlösung statt Leitungswasser?", ["Weil Pseudomonas in feuchter Umgebung wie Wasserleitungen lebt", "Weil Leitungswasser zu viel Kalk enthält", "Weil Kochsalzlösung Knorpel aufbaut", "Weil Leitungswasser den Schmuck verfärbt"], "Vorbeugung gegen Perichondritis.", "Ergänzung"]
       ]
     },
     {
@@ -147,7 +145,7 @@ KURS.module.push({
         ["Was ist der erste Weg bei wildem Fleisch?", ["Nichts tun, oft stößt der Körper es ab", "Sofort mit der Wildfleischdisk behandeln", "Zum Dermatologen schicken", "Den Schmuck entfernen"], "Weg 1 von 5.", "S. 51"],
         ["Was ist eine Wildfleischdisk?", ["Eine Kunststoffscheibe, die auf den Schmuck gestülpt wird", "Ein Pflaster mit Silberionen", "Eine Salbe", "Eine spezielle Kugel aus Titan"], "Weg 3 von 5.", "S. 51"],
         ["Welcher Schmuckwechsel kann helfen?", ["Zum Beispiel ein Titan-Labret gegen einen PTFE-Barbell tauschen", "Ein kürzerer Stab ohne Überlänge", "Ein schwererer Stahlring", "Ein dünnerer Schmuck mit Außengewinde"], "Weg 4 von 5.", "S. 51"],
-        ["Wer entfernt wildes Fleisch, wenn nichts hilft?", ["Ein Arzt bzw. Dermatologe, chirurgisch", "Der Piercer mit der sterilen Schere", "Der Kunde mit Wasserstoffperoxid", "Das Gesundheitsamt"], "Weg 5 von 5.", "S. 51"]
+        ["Wer entfernt wildes Fleisch, wenn nichts hilft?", ["Ein Arzt bzw. Dermatologe, chirurgisch", "Der Piercer mit der sterilen Schere", "Der Kunde mit Wasserstoffperoxid", "Der Kunde selbst mit einer Pinzette"], "Weg 5 von 5.", "S. 51"]
       ]
     }
   ],

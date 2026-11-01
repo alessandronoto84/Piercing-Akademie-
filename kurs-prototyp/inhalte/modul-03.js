@@ -4,7 +4,7 @@ window.KURS = window.KURS || { module: [] };
 KURS.module.push({
   nr: 3,
   titel: "Anatomie, Haut und Wundheilung",
-  quelle: "Neu. Teile aus dem Kursbuch S. 48–50, 73, 89–92 und 104; Grundlagen als Entwurf",
+  quelle: "Ergänzung der Akademie, mit Teilen aus dem Kursbuch (S. 48–50, 73, 89–92 und 104)",
   entwurf: true,
   ziel: "Du verstehst, durch welche Gewebe ein Stichkanal führt, warum Knorpel langsamer heilt als ein Ohrläppchen und wo Gefäße und Nerven ein Risiko sind.",
   lektionen: [
@@ -102,7 +102,7 @@ KURS.module.push({
           "Die Gesichtsarterie (A. facialis) zieht vom Unterkieferrand schräg zum Mundwinkel und weiter zur Nase.",
           "Ein Cheek-Piercing liegt mitten in diesem Gebiet. Deshalb lehnst du es als Anfänger ab."
         ] },
-        { typ: "ergaenzung", text: "Anatomische Ergänzung der Akademie auf Grundlage medizinischer Nachschlagewerke (siehe KURS-RECHERCHE.md, Abschnitt 9). Das Kursbuch spricht bei der Augenbraue von Lähmungsgefahr. Genauer betrachtet treten innen vor allem Gefühlsnerven aus, während die Stirnbewegung über einen seitlichen Ast des Gesichtsnervs läuft. An der Regel ändert das nichts." },
+        { typ: "ergaenzung", text: "Genauer betrachtet treten am inneren Augenbrauenrand vor allem Gefühlsnerven aus; eine Verletzung führt eher zu Taubheit als zu einer Lähmung. Die Stirnbewegung läuft über einen seitlichen Ast des Gesichtsnervs. An der Regel ändert das nichts: Augenbraue nur im äußeren Drittel." },
         { typ: "merke", text: "Die Lage von Nerven und Gefäßen ist von Mensch zu Mensch verschieden. Die Zeichnungen zeigen, wo Gefahr liegt, nicht, wo es garantiert sicher ist." }
       ],
       fragen: [
@@ -127,7 +127,7 @@ KURS.module.push({
       ],
       fragen: [
         ["Welches Licht empfiehlt das Kursbuch zum Durchleuchten des Ohrs?", ["Grünes Licht", "UV-Licht", "Weißes Blitzlicht", "Infrarotlicht"], "So erkennst du Blutgefäße.", "S. 73"],
-        ["Warum stichst du nicht durch ein Blutgefäß?", ["Der Kunde kann sonst stark bluten", "Die Kanüle wird dadurch stumpf", "Das Blut färbt den Schmuck", "Gefäße liegen nur im Knorpel"], "Gefäße vorher erkennen.", "S. 73"],
+        ["Warum stichst du nicht durch ein Blutgefäß?", ["Der Kunde kann sonst stark bluten", "Die Kanüle wird dadurch stumpf", "Blut verwischt die Markierung", "Gefäße heilen schlechter als Haut"], "Gefäße vorher erkennen.", "S. 73"],
         ["Was darf beim Zungenpiercing nicht verletzt werden?", ["Das Zungenbändchen", "Die Zungenspitze", "Die Geschmacksknospen am Zungenrand", "Das Lippenbändchen"], "Von unten nach oben stechen.", "S. 90"],
         ["Was kann beim Stich durch die Schwellkörper des Penis passieren?", ["Ernsthafte Schäden bis zum Verbluten", "Nur eine längere Heilungszeit", "Eine Nickelallergie", "Ein Herauswachsen des Schmucks"], "Dringend davon abzuraten.", "S. 104"]
       ]
@@ -145,7 +145,7 @@ KURS.module.push({
         ] },
         { typ: "grafik", id: "wundheilung" },
         { typ: "grafik", id: "lobe3d" },
-        { typ: "ergaenzung", text: "Richtwerte aus der Wundheilungslehre: Die Entzündungsphase dauert etwa 1 bis 4 Tage. Die Granulationsphase beginnt nach wenigen Tagen und reicht bis etwa zur dritten Woche. Epithelisierung und Umbau dauern Wochen bis Monate, und die Phasen gehen fließend ineinander über. Eine Narbe hat nach etwa drei Wochen rund 20 Prozent der Reißfestigkeit gesunder Haut, nach einigen Monaten bis zu etwa 80 Prozent; ganz so fest wie vorher wird sie nie, und der Umbau dauert bis zu einem Jahr. Ein Stichkanal ist eine lange, schmale Wunde, die auf ganzer Länge ausheilen muss; daher die langen Abheilzeiten in Modul 10 (Quellen: KURS-RECHERCHE.md, Abschnitt 9)." },
+        { typ: "ergaenzung", text: "Richtwerte aus der Wundheilungslehre: Die Entzündungsphase dauert etwa 1 bis 4 Tage. Die Granulationsphase beginnt nach wenigen Tagen und reicht bis etwa zur dritten Woche. Epithelisierung und Umbau dauern Wochen bis Monate, und die Phasen gehen fließend ineinander über. Eine Narbe hat nach etwa drei Wochen rund 20 Prozent der Reißfestigkeit gesunder Haut, nach einigen Monaten bis zu etwa 80 Prozent; ganz so fest wie vorher wird sie nie, und der Umbau dauert bis zu einem Jahr. Ein Stichkanal ist eine lange, schmale Wunde, die auf ganzer Länge ausheilen muss; daher die langen Abheilzeiten in Modul 10." },
         { typ: "achtung", text: "Setzt die Epithelisierung nicht ein, soll der Kunde nach 10 bis 14 Tagen einen Arzt aufsuchen." }
       ],
       fragen: [
@@ -153,7 +153,7 @@ KURS.module.push({
         ["Warum braucht der Ersteinsatz Überlänge?", ["Weil der frische Stichkanal anschwellen kann", "Damit der Kunde den Schmuck leichter wechseln kann", "Damit sich der Stichkanal dehnt", "Weil kurze Stäbe schneller herauswachsen"], "Etwa 4 mm Überlänge.", "S. 74"],
         ["Wie heißt das zarte neue Gewebe im Stichkanal?", ["Granulationsgewebe", "Epithelgewebe", "Narbengewebe", "Knorpelgewebe"], "Es wird später zu Narbengewebe.", "S. 50"],
         ["Was ist die Epithelisierung?", ["Zellen wandern vom Wundrand ein, die Wunde wird kleiner", "Die Entzündungsphase mit Rötung und Sekret", "Die Bildung von wildem Fleisch", "Das Einwachsen des Schmucks ins Gewebe"], "Auch Regenerationsphase genannt.", "S. 50"],
-        ["Wann soll der Kunde bei fehlender Epithelisierung zum Arzt?", ["Nach 10 bis 14 Tagen", "Nach 3 bis 4 Tagen", "Nach 4 bis 6 Wochen", "Erst nach 3 Monaten"], "So steht es im Kursbuch.", "S. 50"],
+        ["Wann soll der Kunde bei fehlender Epithelisierung zum Arzt?", ["Nach 10 bis 14 Tagen", "Nach 3 bis 4 Tagen", "Nach 4 bis 6 Wochen", "Erst nach 3 Monaten"], "Bleibt die Epithelisierung nach 10 bis 14 Tagen aus, stimmt etwas mit der Heilung nicht. Das gehört ärztlich abgeklärt.", "S. 50"],
         ["Womit ist ein abgeheilter Stichkanal innen ausgekleidet?", ["Mit Oberhaut (Epithel)", "Mit Knorpel", "Mit Granulationsgewebe", "Mit Fettgewebe"], "Die Oberhaut wächst vom Rand in den Kanal ein.", "S. 50"],
         ["Wie lange dauert die Entzündungsphase ungefähr?", ["Etwa 1 bis 4 Tage", "Etwa 2 bis 3 Wochen", "Etwa 3 Monate", "Nur wenige Stunden"], "Danach überwiegt der Aufbau neuen Gewebes.", "Ergänzung"],
         ["Wie fest wird Narbengewebe im Vergleich zu gesunder Haut höchstens?", ["Etwa 80 Prozent der ursprünglichen Reißfestigkeit", "Doppelt so fest wie gesunde Haut", "Schon nach 2 Wochen genauso fest", "Etwa 20 Prozent, auch nach einem Jahr"], "Der Umbau dauert Monate; deshalb den Schmuck erst nach vollständiger Abheilung wechseln.", "Ergänzung"],
@@ -170,7 +170,7 @@ KURS.module.push({
         { typ: "praxis", text: "Die Einverständniserklärung fragt Krankheiten und Medikamente ab. Lies diese Angaben vor dem Stich, nicht erst danach, und sprich Risikofaktoren offen an." }
       ],
       fragen: [
-        ["Welche Gruppen haben ein höheres Risiko für Heilungskomplikationen?", ["Raucher, Alkoholiker und Diabetiker", "Sportler und Vegetarier", "Menschen mit Nickelallergie und Brillenträger", "Menschen unter 25 Jahren"], "Bei ihnen treten Komplikationen schneller auf.", "S. 50"],
+        ["Welche Gruppen haben ein höheres Risiko für Heilungskomplikationen?", ["Raucher, Alkoholiker und Diabetiker", "Sportler und Menschen mit trockener Haut", "Menschen mit Heuschnupfen", "Menschen unter 25 Jahren"], "Bei ihnen treten Komplikationen schneller auf.", "S. 50"],
         ["Welche Ursachen für ständiges Nachbluten nennt das Kursbuch?", ["Diabetes, Bindegewebsschwäche oder eine Bluterkrankheit", "Eine Nickelallergie", "Zu kurzer Schmuck", "Die Pflege mit Kochsalzlösung"], "Dann einen Arzt aufsuchen.", "S. 50"],
         ["Fall: Ein Kunde gibt Diabetes an. Was ist richtig?", ["Ich kläre ihn über das höhere Heilungsrisiko auf, bevor ich steche", "Ich steche nur mit PTFE, dann gibt es kein Risiko", "Diabetes spielt beim Piercen keine Rolle", "Ich verdopple die Überlänge"], "Diabetiker zählen zu den Risikogruppen.", "S. 50"]
       ]

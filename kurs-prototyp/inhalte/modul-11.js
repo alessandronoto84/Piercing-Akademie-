@@ -3,7 +3,7 @@ window.KURS = window.KURS || { module: [] };
 KURS.module.push({
   nr: 11,
   titel: "Studio starten",
-  quelle: "Neu. Grundlage: Kursbuch S. 36–39 und Recherche (KURS-RECHERCHE.md); Entwurf",
+  quelle: "Ergänzung der Akademie auf Grundlage des Kursbuchs (S. 36–39) und der Merkblätter der Gesundheitsämter",
   entwurf: true,
   ziel: "Du weißt, welche Schritte vor dem Start deines eigenen Piercing-Angebots anstehen: Gewerbe, Gesundheitsamt, Hygieneplan, Dokumentation, Versicherung, Preise und Einkauf.",
   lektionen: [
@@ -23,7 +23,7 @@ KURS.module.push({
         ["Wo meldest du dein Gewerbe an?", ["Beim zuständigen Gewerbeamt", "Beim Gesundheitsamt", "Bei der Handwerkskammer", "Beim Finanzamt"], "Erster Schritt vor dem Start.", "Entwurf"],
         ["Wen fragst du nach dem Rahmenhygieneplan für dein Studio?", ["Das örtliche Gesundheitsamt", "Das Gewerbeamt", "Die Berufsgenossenschaft", "Die IHK"], "Empfehlung des Kursbuchs.", "S. 36"],
         ["Gibt es in Deutschland eine staatlich geregelte Piercer-Ausbildung?", ["Nein", "Ja, als dreijährige Ausbildung", "Ja, über die Handwerkskammer", "Nur in Niedersachsen"], "Das Zertifikat der Akademie ist ein Teilnahme- und Trainingsnachweis.", "Entwurf"],
-        ["Wer überwacht Piercingstudios in Niedersachsen auf Grundlage der Hygieneverordnung?", ["Das Gesundheitsamt", "Das Gewerbeamt", "Die Berufsgenossenschaft", "Die Handwerkskammer"], "Siehe KURS-RECHERCHE.md.", "Entwurf"]
+        ["Wer überwacht Piercingstudios in Niedersachsen auf Grundlage der Hygieneverordnung?", ["Das Gesundheitsamt", "Das Gewerbeamt", "Die Berufsgenossenschaft", "Die Handwerkskammer"], "Die Hygieneverordnung wird vom Gesundheitsamt überwacht. Das Gewerbeamt ist nur für die Anmeldung zuständig.", "Entwurf"]
       ]
     },
     {
@@ -43,7 +43,6 @@ KURS.module.push({
       ],
       fragen: [
         ["Wie wird der Arbeitsplatz vom Wartebereich getrennt?", ["Baulich oder mindestens durch eine Trennwand", "Durch einen Vorhang", "Durch eine Markierung am Boden", "Durch einen Paravent mit Stoffbespannung"], "Laut Merkblättern und Kursbuch.", "S. 26"],
-        ["Welche Oberfläche brauchen Liege und Möbel?", ["Glatt und abwaschbar", "Mit Stoffbezug, täglich gewaschen", "Aus offenporigem Holz", "Mit Ziernähten für besseren Halt"], "Siehe Modul 5.", "S. 26"],
         ["Was gehört an den Handwaschplatz?", ["Spender für Desinfektion, Waschlotion und Einmalhandtücher", "Ein Stück Seife und ein Stoffhandtuch", "Nur ein Desinfektionsspender", "Eine Nagelbürste und ein Handtuch"], "Ohne Handkontakt bedienbar.", "S. 25"]
       ]
     },
@@ -62,7 +61,7 @@ KURS.module.push({
       ],
       fragen: [
         ["Was dokumentierst du für jede Sterilgut-Charge?", ["Sterilisierdatum und Chargennummer", "Nur das Sterilisierdatum", "Den Namen des Kunden", "Die Temperatur des Ultraschallbads"], "So lässt sich jede Charge nachverfolgen.", "S. 46"],
-        ["Was gehört in die Dokumentation deines Studios?", ["Hygieneplan, Sterilgut-Chargen, Autoklav-Prüfungen und Einverständniserklärungen", "Nur die Einverständniserklärungen", "Nur Rechnungen und Kassenbuch", "Nur die Autoklav-Prüfungen"], "Siehe Lektion.", "Entwurf"],
+        ["Was gehört in die Dokumentation deines Studios?", ["Hygieneplan, Sterilgut-Chargen, Autoklav-Prüfungen und Einverständniserklärungen", "Nur die Einverständniserklärungen", "Nur Rechnungen und Kassenbuch", "Nur die Autoklav-Prüfungen"], "Gesundheitsamt und Versicherung wollen im Zweifel alles lückenlos sehen.", "Entwurf"],
         ["Wem legst du die Prüfungen des Autoklavs auf Verlangen vor?", ["Den örtlichen Behörden", "Den Kunden", "Dem Hersteller", "Der Krankenkasse"], "Siehe Modul 5.", "S. 47"]
       ]
     },
@@ -80,7 +79,7 @@ KURS.module.push({
       ],
       fragen: [
         ["Was solltest du vor dem ersten Kunden klären?", ["Eine Betriebs- bzw. Berufshaftpflicht", "Eine Rechtsschutzversicherung genügt", "Eine Hausratversicherung", "Nichts, die Einverständniserklärung reicht"], "Lass dich beraten.", "Entwurf"],
-        ["Was gehört in die Preiskalkulation?", ["Material, Arbeitszeit inklusive Beratung und Aufbereitung, laufende Kosten", "Nur Schmuck und Kanüle", "Nur die Arbeitszeit am Kunden", "Nur Miete und Versicherung"], "Siehe Lektion.", "Entwurf"]
+        ["Was gehört in die Preiskalkulation?", ["Material, Arbeitszeit inklusive Beratung und Aufbereitung, laufende Kosten", "Nur Schmuck und Kanüle", "Nur die Arbeitszeit am Kunden", "Nur Miete und Versicherung"], "Nur so deckt dein Preis auch Beratung, Aufbereitung und laufende Kosten.", "Entwurf"]
       ]
     },
     {

@@ -29,7 +29,7 @@ KURS.module.push({
         { typ: "tabelle", kopf: ["Reiz", "Beispiele"], zeilen: [["Thermisch", "Hitze, Kälte"], ["Mechanisch", "Hiebe, Schnitte, Stiche, starker Druck"], ["Chemisch", "Säuren, Laugen"]] },
         { typ: "foto", id: "frei-haut-rezeptoren", text: "Rezeptoren und Anhangsgebilde der Haut, links unbehaarte Leistenhaut (Handfläche), rechts behaarte Haut (Achsel); englisch beschriftet." },
         { typ: "merke", text: "Die International Association for the Study of Pain (IASP) definiert Schmerz seit 2020 als „ein unangenehmes Sinnes- und Gefühlserlebnis, das mit einer tatsächlichen oder drohenden Gewebeschädigung verknüpft ist oder einer solchen ähnelt“. Das Kursbuch zitiert die ältere Fassung, nach der auch Schmerz zählt, den Betroffene so beschreiben, als wäre eine Gewebeschädigung die Ursache." },
-        { typ: "text", text: "In seltenen Fällen spüren Kunden schon vor dem eigentlichen Stich Schmerz, allein bei der Berührung der Haut. Schmerz kann also auch ohne körperliche Schädigung empfunden werden, etwa als Erwartungsschmerz aus Angst. (Im Kursbuch steht hier „Phantomschmerz“; fachlich meint Phantomschmerz Schmerzen in einem amputierten Körperteil.)" }
+        { typ: "text", text: "In seltenen Fällen spüren Kunden schon vor dem eigentlichen Stich Schmerz, allein bei der Berührung der Haut. Schmerz kann also auch ohne körperliche Schädigung empfunden werden, etwa als Erwartungsschmerz aus Angst." }
       ],
       fragen: [
         ["Wie heißen die Schmerzrezeptoren?", ["Nozizeptoren", "Mechanorezeptoren", "Thermorezeptoren", "Mastzellen"], "Meist freie Nervenenden.", "S. 7–8"],
@@ -104,7 +104,7 @@ KURS.module.push({
         ["Dürfen Piercer verschreibungspflichtige Anästhetika auf Opiat-Basis einsetzen?", ["Nein", "Ja, mit schriftlicher Einwilligung", "Nur bei Intimpiercings", "Ja, wenn ein Arzt sie verschrieben hat"], "Unüblich und in Deutschland verboten.", "S. 11"],
         ["Welche Betäubung darf nur ein Arzt durchführen?", ["Die Teilbetäubung von Nerven, Nervengeflechten oder Rückenmark", "Das Kühlen mit Eisspray", "Das Auftragen einer rezeptfreien Salbe", "Das Kühlen mit Eiswürfeln"], "Siehe Kap. 4.", "S. 11"],
         ["Worauf beruht die Lokalanästhesie?", ["Auf der Beeinflussung des peripheren Nervensystems", "Auf der Beeinflussung des Gehirns", "Auf der Blockade des Rückenmarks", "Auf der Verengung der Blutgefäße"], "Sie blockiert die Weiterleitung an den Nervenenden.", "S. 11–12"],
-        ["Warum arbeitest du in einem abgegrenzten, ruhigen Raum?", ["Wegen der Hygiene und zum Schutz vor Stressfaktoren", "Weil das Gewerbeamt es vorschreibt", "Damit keine Kunden beim Preis mithören", "Nur wegen der Lautstärke des Autoklavs"], "Telefon, Klingel und Publikumsverkehr stören.", "S. 12"],
+        ["Warum arbeitest du in einem abgegrenzten, ruhigen Raum?", ["Wegen der Hygiene und zum Schutz vor Stressfaktoren", "Weil das Gewerbeamt es vorschreibt", "Damit du schneller arbeiten kannst", "Nur wegen der Lautstärke des Autoklavs"], "Telefon, Klingel und Publikumsverkehr stören.", "S. 12"],
         ["Fall: Während des Stichs klingelt das Studiotelefon. Was tust du?", ["Ich lasse es klingeln und bleibe beim Kunden", "Ich gehe kurz ran und desinfiziere danach die Hände", "Ich bitte den Kunden, kurz zu warten", "Ich nehme mit Handschuhen ab"], "Nichts darf die Ruhe in diesem Moment stören.", "S. 12"]
       ]
     },
@@ -123,8 +123,8 @@ KURS.module.push({
         ["Was ist laut Kursbuch der Idealfall?", ["Dem Kunden die Angst nehmen und ohne Betäubung piercen", "Jeden Kunden mit Eisspray kühlen", "Lidocainsalbe bei jedem Schleimhautpiercing", "Möglichst langsam stechen"], "Ruhige, harmonische Umgebung.", "S. 13"],
         ["Wie wirkt Eisspray?", ["Starke, kurzfristige Kälte betäubt die Nervenenden", "Es betäubt die Stelle für etwa eine Stunde", "Es desinfiziert und betäubt gleichzeitig", "Es verengt die Gefäße, sodass die Stelle nicht blutet"], "Wirkt direkt und kurz.", "S. 13"],
         ["Welches Kältespray nennt das Kursbuch als Beispiel?", ["Chlorethyl", "Lidocain", "Benzocain", "Menthol"], "Viele Sport-Kältesprays enthalten heute andere Treibgase; das Prinzip ist dieselbe starke Kälte.", "S. 13"],
-        ["Wo bekommt man Lidocainsalbe (Xylocain)?", ["In der Apotheke", "Nur im Großhandel für Ärzte", "Im Drogeriemarkt", "Im Piercing-Fachhandel"], "So steht es im Kursbuch.", "S. 13"],
-        ["Wie steht die Piercing Akademie zur Lidocainsalbe?", ["Erlaubt, aber nicht empfohlen", "Empfohlen bei allen Knorpelpiercings", "Verboten", "Pflicht bei Intimpiercings"], "Angabe der Akademie.", "Akademie"],
+        ["Wo bekommt man Lidocainsalbe (Xylocain)?", ["In der Apotheke", "Nur im Großhandel für Ärzte", "Im Drogeriemarkt", "Im Piercing-Fachhandel"], "Lidocainsalbe ist ein Arzneimittel und nur in der Apotheke erhältlich.", "S. 13"],
+        ["Wie steht die Piercing Akademie zur Lidocainsalbe?", ["Erlaubt, aber nicht empfohlen", "Empfohlen bei allen Knorpelpiercings", "Verboten", "Pflicht bei Intimpiercings"], "Die Akademie setzt auf eine ruhige Atmosphäre statt Betäubung, denn Lidocain bringt Neben- und Wechselwirkungen mit sich.", "Akademie"],
         ["Was musst du vor dem Einsatz von Lidocain tun?", ["Den Kunden schriftlich und mündlich nach der Verträglichkeit fragen", "Nur die Einwirkzeit abwarten", "Die Stelle vorher mit Eisspray kühlen", "Den Hausarzt des Kunden anrufen"], "Dazu Nebenwirkungen und Wechselwirkungen beachten.", "S. 13"]
       ]
     },

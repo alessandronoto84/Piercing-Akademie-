@@ -21,7 +21,7 @@ KURS.module.push({
       ],
       fragen: [
         ["Was passiert in Schritt 2 des Ablaufs?", ["Begrüßung und Small Talk", "Einverständniserklärung ausfüllen", "Arbeitsplatz vorbereiten", "Gewünschtes Piercing klären"], "Ablauf Kap. 11.", "S. 111"],
-        ["Was klärst du in Schritt 3?", ["Welche Piercings gewünscht sind, eventuell Angst nehmen", "Welche Kanüle du nimmst", "Ob der Kunde bar zahlt", "Welches Pflegemittel er hat"], "Ablauf Kap. 11.", "S. 111"],
+        ["Was klärst du in Schritt 3?", ["Welche Piercings gewünscht sind, eventuell Angst nehmen", "Welche Kanüle du nimmst", "Wie viel Zeit er mitgebracht hat", "Welches Pflegemittel er hat"], "Ablauf Kap. 11.", "S. 111"],
         ["Wann lässt du die Einverständniserklärung ausfüllen?", ["Vor dem Stich, in Schritt 4", "Nach dem Anzeichnen, kurz vor dem Stich", "Nach dem Stich, zusammen mit den Pflegehinweisen", "Bei der Terminvereinbarung am Telefon"], "Parallel bereitest du den Arbeitsplatz vor.", "S. 111"]
       ]
     },
@@ -41,10 +41,10 @@ KURS.module.push({
       ],
       fragen: [
         ["Wann bereitest du Arbeitsplatz und Instrumente vor?", ["Während der Kunde die Einverständniserklärung ausfüllt", "Bevor der Kunde das Studio betritt, für den ganzen Tag", "Nach dem Anzeichnen", "Wenn der Kunde schon auf der Liege liegt"], "Schritt 5.", "S. 111"],
-        ["Worauf achtest du beim Wählen des Ersteinsatzes?", ["Auf die Überlänge", "Auf die Lieblingsfarbe des Kunden", "Auf ein möglichst kurzes Modell", "Auf den Preis"], "Schritt 7.", "S. 111"],
+        ["Worauf achtest du beim Wählen des Ersteinsatzes?", ["Auf die Überlänge", "Auf eine möglichst große Kugel", "Auf ein möglichst kurzes Modell", "Auf ein Außengewinde"], "Schritt 7.", "S. 111"],
         ["Womit desinfizierst du die Stelle in Schritt 8?", ["Mit einem Alkoholtupfer", "Mit Kochsalzlösung", "Mit Kodan erst nach dem Stich", "Mit Chlorhexamed"], "Ablauf Schritt 8.", "S. 111"],
         ["Womit markierst du Ein- und Austrittsstelle?", ["Mit dem Einmalstift", "Mit einem desinfizierten Kugelschreiber", "Mit der Kanülenspitze", "Mit einem Kajalstift"], "Schritt 9.", "S. 111"],
-        ["Warum lässt du den Kunden nach dem Anzeichnen schauen?", ["Damit er prüft, ob es so passt", "Damit er sich an die Nadel gewöhnt", "Damit die Desinfektion einwirkt", "Weil das Gesundheitsamt es verlangt"], "Schritt 10.", "S. 111"]
+        ["Warum lässt du den Kunden nach dem Anzeichnen schauen?", ["Damit er prüft, ob es so passt", "Damit er sich an die Nadel gewöhnt", "Damit die Desinfektion einwirkt", "Damit er die Pflegehinweise sieht"], "Schritt 10.", "S. 111"]
       ]
     },
     {
@@ -123,8 +123,8 @@ KURS.module.push({
       fragen: [
         ["Was hilft bei einem Kreislaufabfall?", ["Hinlegen, Beine hoch, ruhen lassen; dann Traubenzucker und etwas trinken", "Aufrecht hinsetzen und Kaffee geben", "Weiterstechen, damit es schnell vorbei ist", "Kaltes Wasser ins Gesicht und aufstehen lassen"], "Siehe S. 113.", "S. 113"],
         ["Wie erkennst du rechtzeitig einen Kreislaufabfall?", ["Ich frage während des Vorgangs immer nach", "Ich messe vorher den Blutdruck", "Ich achte nur auf Schweiß", "Gar nicht, der Kunde meldet sich"], "„Immer fragen!“", "S. 113"],
-        ["Welche Notfallnummern sollten aushängen?", ["Notarzt, Hausarzt, Feuerwehr", "Polizei und Gesundheitsamt", "Nur die 110", "Lieferant und Vermieter"], "Kap. 5.4.", "S. 26"],
-        ["Welche Nummer wählst du bei Bewusstlosigkeit?", ["112", "110", "116 117", "Die Nummer des Hausarztes"], "Ergänzung der Akademie.", "Ergänzung"],
+        ["Welche Notfallnummern sollten aushängen?", ["Notarzt, Hausarzt, Feuerwehr", "Polizei und Gesundheitsamt", "Nur die 110", "Gesundheitsamt und Gewerbeamt"], "Kap. 5.4.", "S. 26"],
+        ["Welche Nummer wählst du bei Bewusstlosigkeit?", ["112", "110", "116 117", "Die Nummer des Hausarztes"], "112 erreicht in ganz Europa Rettungsdienst und Feuerwehr. 110 ist die Polizei, 116 117 der ärztliche Bereitschaftsdienst.", "Ergänzung"],
         ["Fall: Beim Stechen wird die Kundin blass und ihr wird schwindelig. Was tust du?", ["Abbrechen, hinlegen, Beine hoch, später Traubenzucker und Getränk", "Schnell zu Ende stechen", "Sie aufstehen und herumlaufen lassen", "Eisspray auf die Stelle sprühen"], "Kreislaufabfall, siehe S. 113.", "S. 113"]
       ]
     }

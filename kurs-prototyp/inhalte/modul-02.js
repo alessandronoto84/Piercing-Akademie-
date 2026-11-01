@@ -17,7 +17,7 @@ KURS.module.push({
       ],
       fragen: [
         ["Was fügt der Piercer dem Kunden rechtlich gesehen zu?", ["Eine gewollte Körperverletzung", "Eine Sachbeschädigung", "Eine Ordnungswidrigkeit", "Einen ärztlichen Eingriff"], "Das Öffnen der Haut ist eine Körperverletzung.", "S. 1"],
-        ["Warum ist ein Piercing trotzdem nicht rechtswidrig?", ["Weil der Kunde wirksam eingewilligt hat", "Weil der Kunde bezahlt", "Weil Piercer ein angemeldetes Gewerbe haben", "Weil der Schmerz nur kurz ist"], "Wie bei ärztlichen Eingriffen.", "S. 1"],
+        ["Warum ist ein Piercing trotzdem nicht rechtswidrig?", ["Weil der Kunde wirksam eingewilligt hat", "Weil der Kunde bezahlt", "Weil Piercer ein angemeldetes Gewerbe haben", "Weil Piercen ein angemeldetes Handwerk ist"], "Wie bei ärztlichen Eingriffen.", "S. 1"],
         ["Wann brauchst du ein Einverständnis?", ["Vor jedem Piercing, auch bei Freunden und Stammkunden", "Einmal pro Kunde, dann gilt es für alle weiteren Piercings", "Nur bei neuen Kunden und bei Intimpiercings", "Nur wenn der Kunde unter 21 ist"], "Ausnahmen gibt es nicht.", "S. 1"],
         ["Fall: Deine beste Freundin will spontan ein Helix-Piercing. Was gilt?", ["Auch sie unterschreibt vorher die Einverständniserklärung", "Eine mündliche Zusage reicht unter Freunden", "Sie unterschreibt nachträglich, wenn alles gut verheilt", "Bei Knorpelpiercings ist keine Erklärung nötig"], "Das Kursbuch nennt Freunde und Bekannte ausdrücklich.", "S. 1"]
       ]
@@ -58,7 +58,7 @@ KURS.module.push({
       fragen: [
         ["Warum gehört die Rasur in die Einverständniserklärung?", ["Weil auch das rechtswidrige Abschneiden von Haaren eine Körperverletzung ist", "Weil die Rasur gesondert abgerechnet wird", "Weil das Gesundheitsamt es so verlangt", "Weil Rasieren das Infektionsrisiko erhöht"], "Deshalb wird vermerkt, dass gegebenenfalls rasiert wird.", "S. 2"],
         ["Was kann passieren, wenn die schriftliche Einverständniserklärung fehlt?", ["Kunden, Angehörige oder Dritte können Schadensersatz fordern", "Nur eine Verwarnung durch das Gesundheitsamt", "Das Piercing muss kostenlos wiederholt werden", "Nichts, denn das Piercing gilt dann als genehmigt"], "Deshalb immer schriftlich: Nur so lässt sich die Einwilligung beweisen.", "S. 2"],
-        ["Wer macht Schadensersatz nach einem misslungenen Piercing in der Regel geltend?", ["Der Kunde, oft über einen Anwalt, bei Minderjährigen die Eltern", "Nur das Gesundheitsamt", "Die Industrie- und Handelskammer", "Niemand, wenn bar bezahlt wurde"], "Anwälte vertreten den Kunden; eigene Ansprüche haben sie nicht.", "S. 2"],
+        ["Wer macht Schadensersatz nach einem misslungenen Piercing in der Regel geltend?", ["Der Kunde, oft über einen Anwalt, bei Minderjährigen die Eltern", "Nur das Gesundheitsamt", "Die Industrie- und Handelskammer", "Die Krankenkasse, nie der Kunde selbst"], "Anwälte vertreten den Kunden; eigene Ansprüche haben sie nicht.", "S. 2"],
         ["Fall: Vor einem Bauchnabelpiercing musst du rasieren. Was muss vorher geklärt sein?", ["Die Rasur ist in der unterschriebenen Einverständniserklärung erwähnt", "Der Kunde muss die Rasur mündlich erlauben, das genügt", "Rasieren ist Teil des Piercings und braucht keine Erwähnung", "Die Rasur darf nur der Kunde selbst durchführen"], "Rechtswidriges Haareschneiden ist eine Körperverletzung.", "S. 2"]
       ]
     },
@@ -96,9 +96,9 @@ KURS.module.push({
       fragen: [
         ["Welche Personalien gehören in die Einverständniserklärung?", ["Name, Anschrift, Telefon, Geburtsdatum und Ausweisnummer", "Name, E-Mail und Krankenkasse", "Name und Unterschrift genügen", "Name, Beruf und Familienstand"], "Dazu die Bestätigung, mindestens 18 zu sein.", "S. 114"],
         ["Welche Gesundheitsangaben fragt die Erklärung ab?", ["Krankheiten, Allergien und Medikamente", "Nur Allergien", "Blutgruppe und Impfstatus", "Gewicht und Blutdruck"], "Dazu Essen, Trinken, Alkohol und Drogen.", "S. 114"],
-        ["Wie lange vorher soll laut Formular kein Alkohol und keine Drogen genommen worden sein?", ["Mindestens 2 Tage", "Mindestens 12 Stunden", "Mindestens 24 Stunden", "Mindestens 1 Woche"], "So steht es im Formular.", "S. 114"],
+        ["Wie lange vorher soll laut Formular kein Alkohol und keine Drogen genommen worden sein?", ["Mindestens 2 Tage", "Mindestens 12 Stunden", "Mindestens 24 Stunden", "Mindestens 1 Woche"], "Das Muster-Formular ist bewusst strenger als die 24-Stunden-Regel aus Modul 01: Mit der Unterschrift bestätigt der Kunde zwei Tage ohne Alkohol und Drogen.", "S. 114"],
         ["Welcher Teil wird vom Studio ausgefüllt?", ["Informationen zur Behandlung: Art, Körperstelle, Datum, Aufklärung, Pflegehinweise", "Die Angaben zu Krankheiten und Medikamenten", "Die Personalien des Kunden", "Der Abschnitt zur Foto-Einwilligung"], "„Von uns auszufüllen!“", "S. 114"],
-        ["Was kann zur Ablehnung des Piercings führen?", ["Gesundheitliche Einschränkungen, chronische Erkrankungen oder starker Medikamentenkonsum", "Der Wunsch nach einem Knorpelpiercing", "Eine bekannte Nickelallergie", "Ein früheres Piercing an derselben Stelle"], "So steht es im Formular.", "S. 114"]
+        ["Was kann zur Ablehnung des Piercings führen?", ["Gesundheitliche Einschränkungen, chronische Erkrankungen oder starker Medikamentenkonsum", "Der Wunsch nach einem Knorpelpiercing", "Eine bekannte Nickelallergie", "Ein früheres Piercing an derselben Stelle"], "Solche Angaben können die Heilung gefährden. Dann entscheidest du, ob du stichst, und lehnst im Zweifel ab.", "S. 114"]
       ]
     },
     {
@@ -130,13 +130,13 @@ KURS.module.push({
       inhalt: [
         { typ: "text", text: "Wenn du Bilder vom gestochenen Piercing veröffentlichen willst, brauchst du die schriftliche Erlaubnis des Kunden. Die Beispiel-Erklärung enthält dafür einen eigenen Abschnitt für Website, Social Media und Werbebanner." },
         { typ: "text", text: "In der Erklärung werden auch Gesundheitsdaten erhoben. Das sind besondere Daten im Sinne von Art. 9 DSGVO. Ihre Verarbeitung braucht eine ausdrückliche Einwilligung, die jederzeit widerrufen werden kann. Nach einem Widerruf dürfen die Bilder nicht mehr verwendet werden." },
-        { typ: "ergaenzung", text: "Für die Foto-Einwilligung ist Art. 6 Abs. 1 lit. a DSGVO (Einwilligung) die passende Rechtsgrundlage; im Kursbuch steht an dieser Stelle lit. f. Lass das Formular vor dem Einsatz in deinem Studio rechtlich prüfen." }
+        { typ: "ergaenzung", text: "Für die Foto-Einwilligung ist Art. 6 Abs. 1 lit. a DSGVO (Einwilligung) die passende Rechtsgrundlage, nicht das berechtigte Interesse nach lit. f. Lass dein Formular vor dem Einsatz im Studio rechtlich prüfen." }
       ],
       fragen: [
         ["Was brauchst du, bevor du ein Foto eines Kundenpiercings veröffentlichst?", ["Die schriftliche Erlaubnis des Kunden", "Nichts, wenn das Gesicht nicht zu sehen ist", "Eine mündliche Zustimmung beim Termin", "Nur einen Hinweis in den AGB"], "Die Erlaubnis muss schriftlich vorliegen.", "S. 1"],
         ["Was sind Gesundheitsdaten im Sinne der DSGVO?", ["Besondere Kategorien personenbezogener Daten (Art. 9 DSGVO)", "Normale personenbezogene Daten (Art. 6 DSGVO)", "Anonyme Daten", "Öffentlich zugängliche Daten"], "Ihre Verarbeitung braucht eine ausdrückliche Einwilligung.", "S. 115"],
-        ["Kann der Kunde seine Einwilligung zu Fotos widerrufen?", ["Ja, jederzeit mit Wirkung für die Zukunft", "Nein, nach der Unterschrift nicht mehr", "Nur innerhalb von 14 Tagen", "Nur gegen eine Gebühr"], "Danach dürfen die Bilder nicht mehr genutzt werden.", "S. 115"],
-        ["Welche Rechtsgrundlage passt für eine Foto-Einwilligung?", ["Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)", "Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)", "Art. 6 Abs. 1 lit. b DSGVO (Vertrag)", "Art. 9 Abs. 2 lit. h DSGVO (Gesundheitsvorsorge)"], "Ergänzung der Akademie.", "Ergänzung"],
+        ["Kann der Kunde seine Einwilligung zu Fotos widerrufen?", ["Ja, jederzeit mit Wirkung für die Zukunft", "Nein, nach der Unterschrift nicht mehr", "Nur innerhalb von 14 Tagen", "Nur schriftlich per Einschreiben"], "Danach dürfen die Bilder nicht mehr genutzt werden.", "S. 115"],
+        ["Welche Rechtsgrundlage passt für eine Foto-Einwilligung?", ["Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)", "Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)", "Art. 6 Abs. 1 lit. b DSGVO (Vertrag)", "Art. 9 Abs. 2 lit. h DSGVO (Gesundheitsvorsorge)"], "Für Fotos gibt es weder einen Vertragszweck noch ein überwiegendes Interesse des Studios. Es braucht die Einwilligung des Kunden.", "Ergänzung"],
         ["Fall: Eine Kundin widerruft ihre Foto-Einwilligung. Was tust du?", ["Ich verwende die Bilder ab sofort nicht mehr", "Ich lasse bereits veröffentlichte Bilder online", "Ich lösche die Bilder nach Ablauf eines Jahres", "Ich verpixele nur das Gesicht"], "Nach dem Widerruf dürfen die Bilder nicht weiter genutzt werden.", "S. 115"]
       ]
     },

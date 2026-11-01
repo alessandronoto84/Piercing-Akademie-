@@ -109,7 +109,7 @@
   }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
   ziele.forEach(function (el) { beobachter.observe(el); });
 
-  // ---------- Zahlen hochzählen (11 Module, 103 Lektionen, 605 Fragen) ----------
+  // ---------- Zahlen hochzählen (11 Module, 103 Lektionen, 575 Fragen) ----------
   function hochzaehlen(dd) {
     if (dd.dataset.gezaehlt) return;
     dd.dataset.gezaehlt = "1";

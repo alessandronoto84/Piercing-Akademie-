@@ -118,6 +118,7 @@
 
   // ---------- Hilfsfunktionen ----------
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;" }[c]; }); }
+  function seitenLabel(s) { return s === "Entwurf" ? "Ergänzung der Akademie" : s; }
   function zwei(n) { return (n < 10 ? "0" : "") + n; }
   function mischen(liste) { var a = liste.slice(); for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
   function benoetigt(n, q) { return Math.ceil(n * (q || BESTEHEN_AB) - 1e-9); }
@@ -137,7 +138,7 @@
       case "merke": return '<div class="k-box k-merke"><strong>Merke</strong><p>' + esc(b.text) + "</p></div>";
       case "achtung": return '<div class="k-box k-achtung"><strong>Achtung</strong><p>' + esc(b.text) + "</p></div>";
       case "praxis": return '<div class="k-box k-praxis"><strong>Aus der Praxis</strong><p>' + esc(b.text) + "</p></div>";
-      case "ergaenzung": return '<div class="k-box k-ergaenzung"><strong>Ergänzung der Akademie, fachlich prüfen</strong><p>' + esc(b.text) + "</p></div>";
+      case "ergaenzung": return '<div class="k-box k-ergaenzung"><strong>Ergänzung der Akademie</strong><p>' + esc(b.text) + "</p></div>";
       case "liste": return (b.titel ? "<h4>" + esc(b.titel) + "</h4>" : "") + "<ul>" + b.punkte.map(function (p) { return "<li>" + esc(p) + "</li>"; }).join("") + "</ul>";
       case "schritte": return (b.titel ? "<h4>" + esc(b.titel) + "</h4>" : "") + '<ol class="k-schritte"' + (b.start ? ' start="' + b.start + '"' : "") + ">" + b.punkte.map(function (p) { return "<li>" + esc(p) + "</li>"; }).join("") + "</ol>";
       case "tabelle":
@@ -278,7 +279,7 @@
       weiterLernen() + '<h2 class="k-h2">Module</h2><div class="k-modulraster">';
     MODULE.forEach(function (m) {
       var status = stand.bestanden[m.nr] ? "bestanden" : modulOffen(m) ? "offen" : "gesperrt";
-      html += '<a class="k-modulkarte k-' + status + '" href="#modul-' + m.nr + '">' + titelbild(m, true) + '<span class="label">Modul ' + zwei(m.nr) + (m.entwurf ? " · Entwurf" : "") + "</span><strong>" + esc(m.titel) + "</strong>" +
+      html += '<a class="k-modulkarte k-' + status + '" href="#modul-' + m.nr + '">' + titelbild(m, true) + '<span class="label">Modul ' + zwei(m.nr) + (m.entwurf && stand.vorschau ? " · Entwurf" : "") + "</span><strong>" + esc(m.titel) + "</strong>" +
         balken(erledigteLektionen(m), m.lektionen.length, "Lektionen in Modul " + m.nr) +
         '<span class="k-meta">' + erledigteLektionen(m) + " von " + m.lektionen.length + " Lektionen · " + m.pool.length + " Fragen · " + (status === "bestanden" ? "Prüfung bestanden" : status === "offen" ? "offen" : "gesperrt") + "</span></a>";
     });
@@ -317,13 +318,13 @@
       app.innerHTML = '<section class="k-kopf"><p class="label">Modul ' + zwei(m.nr) + "</p><h1>" + esc(m.titel) + '</h1><p class="lead">Dieses Modul öffnet sich, sobald du die Modulprüfung ' + zwei(m.nr - 1) + ' bestanden hast.</p><p><a class="btn" href="#modul-' + (m.nr - 1) + '">Zu Modul ' + zwei(m.nr - 1) + "</a></p></section>";
       return;
     }
-    var html = '<section class="k-kopf"><p class="label">Modul ' + zwei(m.nr) + " von " + MODULE.length + (m.entwurf ? " · Entwurf, fachlich prüfen" : "") + "</p><h1>" + esc(m.titel) + '</h1><p class="lead">' + esc(m.ziel) + '</p><p class="fine">Quelle: ' + esc(m.quelle) + "</p></section>" + titelbild(m, false) +
+    var html = '<section class="k-kopf"><p class="label">Modul ' + zwei(m.nr) + " von " + MODULE.length + (m.entwurf && stand.vorschau ? " · Entwurf, fachlich prüfen" : "") + "</p><h1>" + esc(m.titel) + '</h1><p class="lead">' + esc(m.ziel) + '</p><p class="fine">Quelle: ' + esc(m.quelle) + "</p></section>" + titelbild(m, false) +
       '<div class="k-fortschritt">' + balken(erledigteLektionen(m), m.lektionen.length, "Lektionen") + "<p><strong>" + erledigteLektionen(m) + " von " + m.lektionen.length + "</strong> Lektionen erledigt</p></div>" +
       '<ol class="k-lektionsliste">';
     m.lektionen.forEach(function (l, i) {
       var st = lektionErledigt(m, i) ? "erledigt" : lektionOffen(m, i) ? "offen" : "gesperrt";
       html += '<li class="k-' + st + '"><a href="#lektion-' + m.nr + "-" + i + '"' + (st === "gesperrt" ? ' aria-disabled="true"' : "") + '><span class="n">' + (i + 1) + "</span><span><strong>" + esc(l.titel) + "</strong>" +
-        '<span class="k-meta">' + l.alleFragen.length + " Fragen" + (l.seite ? " · Kursbuch " + esc(l.seite) : "") + (l.entwurf ? " · Entwurf" : "") + '</span></span><span class="k-status">' + (st === "erledigt" ? "✓" : st === "gesperrt" ? "gesperrt" : "offen") + "</span></a></li>";
+        '<span class="k-meta">' + l.alleFragen.length + " Fragen" + (l.seite && l.seite !== "Entwurf" ? " · Kursbuch " + esc(l.seite) : "") + (l.entwurf && stand.vorschau ? " · Entwurf" : "") + '</span></span><span class="k-status">' + (st === "erledigt" ? "✓" : st === "gesperrt" ? "gesperrt" : "offen") + "</span></a></li>";
     });
     html += "</ol>" +
       '<section class="k-lektion"><h2>Modulprüfung</h2><p>' + Math.min(FRAGEN_JE_PRUEFUNG, m.pool.length) + " zufällige Fragen aus allen " + m.pool.length + " Fragen dieses Moduls. Bestanden ab " + benoetigt(Math.min(FRAGEN_JE_PRUEFUNG, m.pool.length)) + " richtigen Antworten." +
@@ -358,8 +359,8 @@
       app.innerHTML = '<section class="k-kopf"><p class="label">Modul ' + zwei(m.nr) + " · Lektion " + (i + 1) + "</p><h1>" + esc(l.titel) + '</h1><p class="lead">' + (modulOffen(m) ? "Diese Lektion öffnet sich, sobald du die vorige Lektion abgeschlossen hast." : "Dieses Modul ist noch gesperrt.") + '</p><p><a class="btn" href="#modul-' + m.nr + '">Zur Modulübersicht</a></p></section>';
       return;
     }
-    var html = '<section class="k-kopf"><p class="label"><a href="#modul-' + m.nr + '">Modul ' + zwei(m.nr) + " · " + esc(m.titel) + "</a> · Lektion " + (i + 1) + " von " + m.lektionen.length + (l.entwurf ? " · Entwurf" : "") + "</p><h1>" + esc(l.titel) + "</h1>" +
-      (l.seite ? '<p class="fine">Kursbuch ' + esc(l.seite) + "</p>" : "") + "</section>" +
+    var html = '<section class="k-kopf"><p class="label"><a href="#modul-' + m.nr + '">Modul ' + zwei(m.nr) + " · " + esc(m.titel) + "</a> · Lektion " + (i + 1) + " von " + m.lektionen.length + (l.entwurf && stand.vorschau ? " · Entwurf" : "") + "</p><h1>" + esc(l.titel) + "</h1>" +
+      (l.seite ? '<p class="fine">' + (l.seite === "Entwurf" ? "Ergänzung der Akademie" : "Kursbuch " + esc(l.seite)) + "</p>" : "") + "</section>" +
       '<ol class="k-phasen" aria-label="Ablauf der Lektion"><li class="aktiv" id="phase-1"><span class="n">1</span>Erklärung</li><li id="phase-2"><span class="n">2</span>Fragen (' + l.alleFragen.length + ')</li><li id="phase-3"><span class="n">3</span>Geschafft</li></ol>' +
       '<article class="k-lektion" id="erklaerung">' + l.inhalt.map(block).join("") + "</article>" +
       '<div class="k-weiter" id="start-bereich"><button type="button" class="btn" id="fragen-start">Erklärung gelesen: Fragen starten</button>' + (lektionErledigt(m, i) ? ' <span class="fine">Diese Lektion hast du schon abgeschlossen. Du kannst die Fragen zur Wiederholung noch einmal beantworten.</span>' : "") + "</div>" +
@@ -419,7 +420,7 @@
         form.querySelectorAll("input").forEach(function (x) { x.disabled = true; });
         rm.hidden = false;
         rm.innerHTML = (ok ? "<strong>Richtig.</strong> " : "<strong>Nicht richtig.</strong> Richtig ist: „" + esc(f.antworten[f.richtig]) + "“. Die Frage kommt am Ende noch einmal. ") + esc(f.erklaerung) +
-          (f.seite ? ' <span class="label">' + esc(f.seite) + "</span>" : "") + (opt.hinweis ? "<br><em>" + esc(opt.hinweis(f, ok)) + "</em>" : "");
+          (f.seite ? ' <span class="label">' + esc(seitenLabel(f.seite)) + "</span>" : "") + (opt.hinweis ? "<br><em>" + esc(opt.hinweis(f, ok)) + "</em>" : "");
         pruefen.hidden = true; weiter.hidden = false; weiter.focus();
       });
       weiter.addEventListener("click", naechste);
@@ -452,7 +453,7 @@
         var feld = form.querySelector('.k-frage[data-index="' + i + '"]');
         feld.classList.add(ok ? "k-richtig" : "k-falsch");
         var r = feld.querySelector(".k-rueckmeldung"); r.hidden = false;
-        r.innerHTML = (ok ? "<strong>Richtig.</strong> " : "<strong>Nicht richtig.</strong> Richtig ist: „" + esc(f.antworten[f.richtig]) + "“. ") + esc(f.erklaerung) + ' <span class="label">' + esc(f.seite || "") + " · Modul " + zwei(f.modul) + "</span>";
+        r.innerHTML = (ok ? "<strong>Richtig.</strong> " : "<strong>Nicht richtig.</strong> Richtig ist: „" + esc(f.antworten[f.richtig]) + "“. ") + esc(f.erklaerung) + ' <span class="label">' + esc(seitenLabel(f.seite || "")) + " · Modul " + zwei(f.modul) + "</span>";
       });
       speichern();
       form.querySelectorAll("input").forEach(function (x) { x.disabled = true; });

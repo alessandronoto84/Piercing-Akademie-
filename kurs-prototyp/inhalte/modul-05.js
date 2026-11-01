@@ -28,9 +28,9 @@ KURS.module.push({
         ["Wie definiert das Kursbuch Hygiene?", ["Die Lehre von der Verhütung von Krankheiten und der Erhaltung der Gesundheit", "Die Gesamtheit aller Desinfektionsmaßnahmen", "Die Lehre von den Krankheitserregern", "Das keimfreie Arbeiten im OP"], "Zitat am Beginn von Kap. 5.", "S. 16"],
         ["Wie lange desinfizierst du die Hände mindestens?", ["30 Sekunden", "10 Sekunden", "90 Sekunden", "3 Minuten"], "Mindestens 30 Sekunden bzw. nach Herstellerangabe.", "S. 16"],
         ["Welche Werkzeuge müssen steril bzw. Einwegmaterial sein?", ["Werkzeuge mit Hautkontakt wie Zangen, Nadeln und Ersteinsätze", "Nur die Nadeln, Zangen werden desinfiziert", "Kugelgreifer, Scheren und Klemmen ohne Hautkontakt", "Nur die Ersteinsätze"], "Werkzeuge ohne Hautkontakt werden desinfiziert.", "S. 16"],
-        ["Wo werden medizinische Instrumente gespült?", ["Getrennt vom OP", "Am Handwaschbecken im Arbeitsbereich", "Direkt in der Instrumentenschale", "Im Waschbecken der Kundentoilette"], "Liste der Hygienemaßnahmen.", "S. 16"],
+        ["Wo werden medizinische Instrumente gespült?", ["Getrennt vom OP", "Am Handwaschbecken im Arbeitsbereich", "Direkt in der Instrumentenschale", "Im Ultraschallbad neben der Liege"], "Liste der Hygienemaßnahmen.", "S. 16"],
         ["Womit wird die Arbeitskleidung gewaschen?", ["Mit kochheißem Wasser und Waschmittel", "Bei 40 °C mit Hygienespüler", "Bei 60 °C ohne Waschmittel", "Kalt mit Desinfektionsmittel"], "Bei Verunreinigung mindestens 90 °C.", "S. 16, 39"],
-        ["Womit trocknest du die Hände nach dem Waschen?", ["Mit Einmalhandtüchern", "Mit einem täglich gewechselten Stoffhandtuch", "Mit dem Händetrockner", "Lufttrocknen lassen"], "So steht es in der Liste.", "S. 16"]
+        ["Womit trocknest du die Hände nach dem Waschen?", ["Mit Einmalhandtüchern", "Mit einem täglich gewechselten Stoffhandtuch", "Mit dem Händetrockner", "Lufttrocknen lassen"], "Stoffhandtücher werden mehrfach benutzt und verbreiten Keime, Einmalhandtücher nicht.", "S. 16"]
       ]
     },
     {
@@ -172,11 +172,10 @@ KURS.module.push({
         { typ: "merke", text: "Alle wiederverwendbaren Instrumente, Geräte, Werkzeuge und Arbeitsflächen, die während der Behandlung mit Blut oder anderen Körperflüssigkeiten verunreinigt wurden oder verunreinigt sein könnten, werden anschließend sorgfältig desinfiziert." }
       ],
       fragen: [
-        ["Wer darf sich während des Piercens im Arbeitsbereich aufhalten?", ["Nur der Piercer und der Kunde", "Eine Begleitperson, wenn sie Abstand hält", "Auszubildende ohne Handschuhe", "Begleitpersonen bei Kunden unter 25"], "Keine Zuschauer.", "S. 26"],
+        ["Wer darf sich während des Piercens im Arbeitsbereich aufhalten?", ["Nur der Piercer und der Kunde", "Eine Begleitperson, wenn sie Abstand hält", "Auszubildende ohne Handschuhe", "Eine Begleitperson, wenn die Kundin Angst hat"], "Keine Zuschauer.", "S. 26"],
         ["Was muss klar sichtbar und schnell zugänglich im Studio hängen?", ["Ein aktueller Erste-Hilfe-Kasten", "Der Rahmenhygieneplan", "Die Preisliste", "Der Gewerbeschein"], "Dazu die Notfallnummern.", "S. 26"],
         ["Welche Oberfläche brauchen Liege und Möbel?", ["Glatt und abwaschbar", "Aus Kunstleder mit Ziernähten", "Aus Stoff mit Schonbezug", "Aus lackiertem Holz mit Fugen"], "Eventuell Einweg-Liegenbezüge.", "S. 26"],
-        ["Welche Notfallnummern sollten aushängen?", ["Notarzt, Hausarzt, Feuerwehr", "Polizei und Gesundheitsamt", "Nur die 112", "Notarzt und Lieferant"], "So steht es im Kursbuch.", "S. 26"],
-        ["Warum werden Behandlung und Aufbereitung räumlich getrennt?", ["Damit benutzte Instrumente und Sterilgut sich nicht kreuzen", "Damit der Kunde den Autoklav nicht hört", "Weil das Ultraschallbad Strom spart", "Weil die Liege sonst nicht passt"], "Unreine und reine Seite bleiben getrennt.", "Ergänzung"],
+        ["Warum werden Behandlung und Aufbereitung räumlich getrennt?", ["Damit benutzte Instrumente und Sterilgut sich nicht kreuzen", "Damit Kunden die Aufbereitung nicht sehen", "Damit du kürzere Wege hast", "Weil der Autoklav Wärme abgibt"], "Unreine und reine Seite bleiben getrennt.", "Ergänzung"],
         ["Fall: Die Freundin der Kundin möchte beim Stechen zuschauen. Was antwortest du?", ["Sie wartet draußen; im Arbeitsbereich sind nur Kundin und Piercer", "Sie darf zuschauen, wenn sie einen Mundschutz trägt", "Sie darf die Hand der Kundin halten", "Sie darf filmen, wenn die Kundin zustimmt"], "Keine Zuschauer im Arbeitsbereich.", "S. 26"]
       ]
     },
@@ -190,8 +189,8 @@ KURS.module.push({
         { typ: "text", text: "Der Mund-Nasen-Schutz ist ein Hilfsmittel aus der Medizin. Er verhindert, dass Keime durch Sekrettröpfchen beim Atmen übertragen werden oder auf rein zu haltende Oberflächen gelangen. Er reduziert die Ausbreitung von Keimen deutlich, ist aber keine perfekte Lösung: Er filtert den Atemstrom nicht zu 100 Prozent, Luft strömt an den Seiten vorbei, und frei schwebende Keime werden wegen der Größe der Filterporen nicht vollständig erfasst." }
       ],
       fragen: [
-        ["Wann kommt eine benutzte Nadel in den Nadelabwurfbehälter?", ["Direkt und unmittelbar nach dem Stechen", "Nachdem der Schmuck gesichert ist", "Am Ende der Behandlung zusammen mit dem Müll", "Am Ende des Arbeitstags"], "So steht es im Kursbuch.", "S. 27"],
-        ["Wie wird ein voller Nadelabwurfbehälter entsorgt?", ["Komplett verschlossen im Restmüll", "Offen im Gelben Sack", "Im Altglas", "Ausgeleert, der Behälter wird wiederverwendet"], "Nur komplett verschlossen.", "S. 27"],
+        ["Wann kommt eine benutzte Nadel in den Nadelabwurfbehälter?", ["Direkt und unmittelbar nach dem Stechen", "Nachdem der Schmuck gesichert ist", "Am Ende der Behandlung zusammen mit dem Müll", "Am Ende des Arbeitstags"], "Jede Sekunde, die eine benutzte Nadel offen herumliegt, ist ein Risiko für eine Stichverletzung.", "S. 27"],
+        ["Wie wird ein voller Nadelabwurfbehälter entsorgt?", ["Komplett verschlossen im Restmüll", "Offen im Gelben Sack", "Im Gelben Sack, verschlossen", "Ausgeleert, der Behälter wird wiederverwendet"], "Nur komplett verschlossen.", "S. 27"],
         ["Filtert ein Mundschutz die Atemluft zu 100 Prozent?", ["Nein, Luft strömt an den Seiten vorbei", "Ja, wenn er richtig sitzt", "Ja, bei OP-Masken", "Nur in den ersten 2 Stunden"], "Er reduziert Keime aber deutlich.", "S. 27"],
         ["Wozu dient der Mund-Nasen-Schutz?", ["Er verhindert die Übertragung von Keimen durch Sekrettröpfchen", "Er ersetzt die Händedesinfektion", "Er schützt vollständig vor Viren in der Luft", "Er schützt vor Desinfektionsmitteldämpfen"], "Hilfsmittel aus der Medizin.", "S. 27"]
       ]
@@ -215,7 +214,7 @@ KURS.module.push({
           "Sofort einen Arzt aufsuchen, bei einem Arbeitsunfall einen Durchgangsarzt (D-Arzt). Eine vorbeugende Behandlung gegen HIV wirkt am besten, wenn sie innerhalb weniger Stunden beginnt.",
           "Den Vorfall dokumentieren: wann, womit, bei welchem Kunden. Ob der Kunde zu einem Bluttest bereit ist, klärt der Arzt."
         ] },
-        { typ: "ergaenzung", text: "Ergänzung der Akademie nach der S1-Leitlinie zu Hygieneanforderungen beim Tätowieren und Piercen und den Empfehlungen der Unfallversicherungsträger (siehe KURS-RECHERCHE.md, Abschnitt 9). Kläre in Modul 11, bei welcher Berufsgenossenschaft du versichert bist. Fachlich prüfen." }
+        { typ: "ergaenzung", text: "Grundlage: S1-Leitlinie zu Hygieneanforderungen beim Tätowieren und Piercen und die Empfehlungen der Unfallversicherungsträger. Kläre in Modul 11, bei welcher Berufsgenossenschaft du versichert bist." }
       ],
       fragen: [
         ["Gegen welche durch Blut übertragbare Krankheit gibt es eine Impfung?", ["Hepatitis B", "Hepatitis C", "HIV", "Gegen alle drei"], "Impferfolg beim Arzt kontrollieren lassen.", "Ergänzung"],
@@ -268,7 +267,7 @@ KURS.module.push({
         ["Wie wirken Desinfektionsmittel grundsätzlich?", ["Denaturierend: sie verändern eiweißhaltige Strukturen der Keime", "Sie spülen die Keime nur mechanisch ab", "Sie entziehen den Keimen Wärme", "Sie stärken die Hautflora gegen Keime"], "Manche schädigen auch Lipidmembranen.", "S. 31"],
         ["Welche Wirkungsweise gehört zu den Kategorien?", ["Proteindenaturierung", "Austrocknung durch Kälte", "Bestrahlung", "Filtration"], "Dazu Oxidation, Oberflächenspannung, Enzymhemmung, Nukleinsäuren.", "S. 31"],
         ["Welcher Stoff wirkt durch Oxidation?", ["Wasserstoffperoxid", "Phenol", "Ethanol", "Aldehyd"], "Er entzieht den Bausteinen der Keime Elektronen und zerstört sie so.", "S. 31"],
-        ["Wozu dienen Hilfsstoffe in Desinfektionsmitteln?", ["Damit der Wirkstoff an den Wirkungsort gelangt", "Damit das Mittel länger auf der Haut haftet", "Um die Einwirkzeit zu ersetzen", "Um die Viruswirksamkeit zu senken"], "So steht es im Kursbuch.", "S. 31"]
+        ["Wozu dienen Hilfsstoffe in Desinfektionsmitteln?", ["Damit der Wirkstoff an den Wirkungsort gelangt", "Damit das Mittel länger auf der Haut haftet", "Um die Einwirkzeit zu ersetzen", "Um die Viruswirksamkeit zu senken"], "Der Wirkstoff muss die Keime erreichen. Hilfsstoffe sorgen dafür, dass er benetzt und sich verteilt.", "S. 31"]
       ]
     },
     {
@@ -289,7 +288,7 @@ KURS.module.push({
         ["Was ist bei der Instrumentendesinfektion wichtig?", ["Das Mittel muss kleinste Vertiefungen und Bohrungen erreichen", "Das Mittel muss auf den Instrumenten antrocknen", "Das Mittel muss stark schäumen", "Das Mittel muss alkoholisch sein"], "Gut wasserlöslich, schnell trocknend.", "S. 33"],
         ["Darfst du für Haut, Flächen und Instrumente dasselbe Mittel verwenden?", ["Nein, es sind unterschiedliche Mittel zu verwenden", "Ja, wenn es VAH-gelistet ist", "Ja, wenn es viruzid ist", "Nur für Haut und Flächen"], "Merksatz S. 34.", "S. 34"],
         ["Was ist die VAH-Liste?", ["Die Liste der Produkte mit gültigem Zertifikat des Verbunds für Angewandte Hygiene", "Die Liste der vom RKI angeordneten Entseuchungsmittel", "Die Liste der Medizinprodukte des BfArM", "Die Liste der IHO"], "www.vah-online.de", "S. 34"],
-        ["Wann wird eine außerplanmäßige Flächendesinfektion durchgeführt?", ["Nach Kontakt mit Blut oder anderem organischem Material", "Nur am Wochenende", "Nur auf Anordnung des Gesundheitsamts", "Nur nach Intimpiercings"], "Siehe Flächendesinfektion.", "S. 33"]
+        ["Wann wird eine außerplanmäßige Flächendesinfektion durchgeführt?", ["Nach Kontakt mit Blut oder anderem organischem Material", "Nur bei der Grundreinigung am Abend", "Nur auf Anordnung des Gesundheitsamts", "Nur nach Intimpiercings"], "Siehe Flächendesinfektion.", "S. 33"]
       ]
     },
     {
@@ -355,7 +354,7 @@ KURS.module.push({
         ["Welche Anzeigeinstrumente hat ein Dampfautoklav mindestens?", ["Thermometer und Manometer", "Nur eine Zeitschaltuhr", "Thermometer und Hygrometer", "Manometer und Waage"], "Moderne Geräte zeigen digital an.", "S. 40"],
         ["Wie wird beim Vakuumverfahren die Luft entfernt?", ["Durch mehrmaliges Leerpumpen im Wechsel mit Dampf", "Sattdampf verdrängt die Luft nach unten", "Durch Erhitzen ohne Dampf", "Durch Öffnen eines Ventils am Ende"], "Fraktioniertes Vorvakuum.", "S. 41"],
         ["Welche Autoklaven verlangt das Kursbuch, wenn keine Einweginstrumente verwendet werden?", ["Typ S oder besser Typ B mit Vorvakuum und automatischem Schreiber", "Typ N mit Gravitationsverfahren", "Jeden Dampfautoklaven ohne Schreiber", "Heißluftsterilisatoren"], "Lokale Gesetzeslage beachten.", "S. 41"],
-        ["Was wird für den Betrieb eines Dampfautoklaven immer häufiger verlangt?", ["Ein Sachkundenachweis", "Eine Meisterprüfung", "Eine TÜV-Plakette am Gerät", "Eine Genehmigung der Berufsgenossenschaft"], "So steht es im Kursbuch.", "S. 41"]
+        ["Was wird für den Betrieb eines Dampfautoklaven immer häufiger verlangt?", ["Ein Sachkundenachweis", "Eine Meisterprüfung", "Eine TÜV-Plakette am Gerät", "Eine Genehmigung der Berufsgenossenschaft"], "Wer Medizinprodukte aufbereitet, muss die nötige Sachkunde nachweisen können. Viele Gesundheitsämter fragen danach.", "S. 41"]
       ]
     },
     {
@@ -425,7 +424,7 @@ KURS.module.push({
         { typ: "merke", text: "Diese Tests können beim zuständigen Gesundheitsamt angefordert werden und sind den örtlichen Behörden auf Verlangen vorzulegen." }
       ],
       fragen: [
-        ["Womit wird die Sterilisierverpackung beschriftet?", ["Mit Datum der Sterilisation und Chargennummer", "Mit dem Namen des Kunden", "Mit dem Ablaufdatum des Autoklaven", "Mit dem Preis des Instruments"], "Lagerung in geschlossenen Schubladen.", "S. 46"],
+        ["Womit wird die Sterilisierverpackung beschriftet?", ["Mit Datum der Sterilisation und Chargennummer", "Mit dem Namen des Kunden", "Mit dem Ablaufdatum des Autoklaven", "Mit dem Namen des Piercers"], "Lagerung in geschlossenen Schubladen.", "S. 46"],
         ["Wie lange darf Sterilgut im offenen Regal lagern?", ["Maximal 48 Stunden", "Maximal 6 Monate", "Maximal 1 Woche", "Maximal 5 Jahre"], "Egal ob einzeln oder doppelt verpackt.", "S. 46"],
         ["Wie lange darf einzeln verpacktes Sterilgut in einer geschlossenen Schublade lagern?", ["6 Monate", "48 Stunden", "5 Jahre", "4 Wochen"], "Doppelt verpackt bis zu 5 Jahre.", "S. 46"],
         ["Wie oft wird die Gerätesicherheit geprüft?", ["Jährlich durch einen Prüfingenieur (TÜV)", "Alle 5 Jahre", "Halbjährlich durch den Betreiber", "Täglich mit dem Bowie-Dick-Test"], "Funktionskontrolle.", "S. 47"],
