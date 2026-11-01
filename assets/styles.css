@@ -317,6 +317,20 @@ input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px soli
 .form .fine{margin-top:0}
 .form .btn{justify-self:start;margin-top:0}
 .form .btn.ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+/* Bestellseite */
+.form fieldset{border:0;margin:0;padding:0;min-width:0;display:grid;gap:12px}
+.form legend{padding:0;margin-bottom:12px}
+.b-paket{display:grid;grid-template-columns:1.4rem minmax(0,1fr);gap:10px;align-items:start;border:1px solid var(--line);border-radius:12px;padding:14px 16px;cursor:pointer}
+.b-paket:has(input:checked){border:2px solid var(--accent);padding:13px 15px;background:var(--accent-soft)}
+.b-paket input{width:1.2rem;height:1.2rem;margin:.2em 0 0;padding:0;accent-color:var(--accent)}
+.b-preis{font-family:var(--f-mono);font-weight:500;color:var(--accent);margin-left:6px}
+.b-inhalt{font-size:.9rem;color:var(--muted)}
+.b-summe{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0}
+.b-summe p:first-child{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-weight:600}
+.b-summe strong{font-family:var(--f-display);font-size:1.8rem;font-weight:800}
+.b-summe .fine{margin-top:6px}
+label.check{font-size:.95rem;line-height:1.5}
+.spec .spec-title small{font-size:.55em;font-weight:500;color:var(--muted);margin-left:6px}
 .status{border:2px solid var(--accent);border-radius:12px;padding:16px 18px;background:var(--accent-soft)}
 .status p+p{margin-top:8px}
 .status .btn{margin-top:12px}

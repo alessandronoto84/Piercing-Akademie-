@@ -63,3 +63,16 @@ CREATE TABLE IF NOT EXISTS bescheinigungen (
   richtig INTEGER,
   gesamt INTEGER
 );
+-- Bestellungen über bestellen.html: Nachweis der beiden Häkchen (AGB/18+, sofortiger Beginn § 356 Abs. 5 BGB).
+-- Unbezahlte nach 30 Tagen gelöscht, bezahlte nach 3 Jahren.
+CREATE TABLE IF NOT EXISTS bestellungen (
+  id TEXT PRIMARY KEY,
+  zeit TEXT,                        -- ISO-Zeit des Klicks auf „Zahlungspflichtig bestellen“
+  paket TEXT,
+  sprache TEXT,
+  agb INTEGER,
+  sofort INTEGER,
+  fassung TEXT,                     -- Fassung der Häkchen-Texte
+  stripe_session TEXT,
+  bezahlt INTEGER
+);

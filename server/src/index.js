@@ -40,6 +40,8 @@ export async function aufraeumen(env) {
   await env.DB.batch([
     env.DB.prepare("DELETE FROM anmeldungen WHERE zeit < ?").bind(t - 90 * 86400),
     env.DB.prepare("DELETE FROM anfragen WHERE zeit < ?").bind(t - 86400),
+    env.DB.prepare("DELETE FROM bestellungen WHERE bezahlt = 0 AND zeit < ?").bind(new Date(Date.now() - 30 * 86400000).toISOString()),
+    env.DB.prepare("DELETE FROM bestellungen WHERE zeit < ?").bind(new Date(Date.now() - 3 * 365 * 86400000).toISOString()),
     env.DB.prepare("DELETE FROM widerrufe WHERE eingang < ?").bind(new Date(Date.now() - 3 * 365 * 86400000).toISOString()),
     env.DB.prepare("DELETE FROM sitzungen WHERE zuletzt < ?").bind(t - SITZUNG_TAGE * 86400),
     env.DB.prepare("DELETE FROM codes WHERE ablauf < ?").bind(t - 3600), // letzte Anforderung über eine Stunde her
@@ -148,9 +150,11 @@ async function kurs(req, env, url, p) {
 async function api(req, env, url, ctx) {
   const p = url.pathname;
   if (p === "/api/stripe" && req.method === "POST") return stripeWebhook(req, env, ctx);
+  if (p === "/api/bestellen" && req.method === "GET") return json({ aktiv: !!env.STRIPE_SECRET_KEY }, 200, { "Cache-Control": "no-store" });
   if (req.method === "POST" && !gleicheHerkunft(req, url)) return json({ fehler: "herkunft" }, 403);
   if (p === "/api/anfrage" && req.method === "POST") return anfrage(req, env, ctx);
   if (p === "/api/widerruf" && req.method === "POST") return widerruf(req, env, ctx);
+  if (p === "/api/bestellen" && req.method === "POST") return bestellen(req, env, url);
   if (p === "/api/code" && req.method === "POST") return codeAnfordern(req, env, ctx);
   if (p === "/api/anmelden" && req.method === "POST") return anmelden(req, env, ctx);
   if (p === "/api/abmelden" && req.method === "POST") {
@@ -289,6 +293,68 @@ async function widerruf(req, env, ctx) {
   return json({ ok: true, eingang });
 }
 
+// ---------- Bestellung: eigene Bestellseite → Stripe Checkout ----------
+// Preise stehen nur hier (Cent, Endpreise inkl. MwSt.) – nie vom Browser übernehmen. Bei Preisänderung auch die Website anpassen.
+export const PAKETE = {
+  basis: { cent: 24900, name: { de: "Paket Basis – Online-Kurs", en: "Basic package – online course", es: "Paquete Básico – curso online" } },
+  praxis: { cent: 99900, name: { de: "Paket Praxis – Online-Kurs + 1 Praxistag", en: "Practice package – online course + 1 practice day", es: "Paquete Práctica – curso online + 1 día de práctica" } },
+  komplett: { cent: 249000, name: { de: "Paket Komplett – Online-Kurs, 2 Praxistage, 1:1-Coaching", en: "Complete package – online course, 2 practice days, 1:1 coaching", es: "Paquete Completo – curso online, 2 días de práctica, mentoría 1:1" } }
+};
+// Fassung der beiden Häkchen auf bestellen.html – bei jeder Textänderung dort hochzählen
+const ZUSTIMMUNG_FASSUNG = "2026-11-01";
+
+async function bestellen(req, env, url) {
+  if (!env.STRIPE_SECRET_KEY) return json({ fehler: "nicht_eingerichtet" }, 503);
+  const d = await req.json().catch(() => null);
+  if (!d) return json({ fehler: "daten" }, 400);
+  const paket = PAKETE[d.paket] ? d.paket : null;
+  const sprache = ["de", "en", "es"].includes(d.sprache) ? d.sprache : "de";
+  if (!paket) return json({ fehler: "paket" }, 400);
+  if (d.agb !== true || d.sofort !== true) return json({ fehler: "zustimmung" }, 400);
+  const schluessel = await sha256("b:" + (req.headers.get("CF-Connecting-IP") || "lokal") + ":" + (env.CODE_PFEFFER || ""));
+  const n = await env.DB.prepare("SELECT COUNT(*) AS n FROM anfragen WHERE schluessel = ? AND zeit > ?").bind(schluessel, jetzt() - 3600).first();
+  if (n.n >= 10) return json({ fehler: "zu_oft" }, 429);
+  await env.DB.prepare("INSERT INTO anfragen (zeit, schluessel) VALUES (?, ?)").bind(jetzt(), schluessel).run();
+
+  const id = zufall(12);
+  const zeit = new Date().toISOString();
+  const basis = url.origin + (sprache === "de" ? "" : "/" + sprache);
+  const f = new URLSearchParams();
+  f.set("mode", "payment");
+  f.set("locale", sprache);
+  f.set("client_reference_id", sprache);
+  f.set("line_items[0][quantity]", "1");
+  f.set("line_items[0][price_data][currency]", "eur");
+  f.set("line_items[0][price_data][unit_amount]", String(PAKETE[paket].cent));
+  f.set("line_items[0][price_data][product_data][name]", PAKETE[paket].name[sprache]);
+  f.set("billing_address_collection", "required"); // Rechnungsadresse (Rechnung, Land für die Umsatzsteuer)
+  f.set("metadata[paket]", paket);
+  f.set("metadata[sprache]", sprache);
+  f.set("metadata[bestellung]", id);
+  f.set("payment_intent_data[metadata][bestellung]", id);
+  f.set("success_url", basis + "/danke.html?bestellung={CHECKOUT_SESSION_ID}");
+  f.set("cancel_url", basis + "/bestellen.html?paket=" + paket);
+
+  let sess;
+  if (env.DEV === "1" && env.STRIPE_SECRET_KEY === "sk_test_lokal") {
+    sess = { id: "cs_test_lokal_" + id, url: "https://checkout.stripe.com/c/pay/cs_test_lokal_" + id, dev_formular: f.toString() };
+  } else {
+    const r = await fetch("https://api.stripe.com/v1/checkout/sessions", {
+      method: "POST",
+      headers: { Authorization: "Bearer " + env.STRIPE_SECRET_KEY, "Content-Type": "application/x-www-form-urlencoded", "Idempotency-Key": "bestellung-" + id },
+      body: f.toString()
+    });
+    sess = await r.json().catch(() => ({}));
+    if (!r.ok || !sess.url) { console.error("Stripe", r.status, sess.error && sess.error.message); return json({ fehler: "stripe" }, 502); }
+  }
+  // Nachweis der Zustimmung (§ 356 Abs. 5 BGB): wann, welches Paket, welche Fassung der Häkchen
+  await env.DB.prepare("INSERT INTO bestellungen (id, zeit, paket, sprache, agb, sofort, fassung, stripe_session, bezahlt) VALUES (?, ?, ?, ?, 1, 1, ?, ?, 0)")
+    .bind(id, zeit, paket, sprache, ZUSTIMMUNG_FASSUNG, sess.id).run();
+  const antwort = { url: sess.url };
+  if (env.DEV === "1" && sess.dev_formular) antwort.dev_formular = sess.dev_formular;
+  return json(antwort);
+}
+
 // ---------- Bescheinigung ----------
 async function bescheinigung(req, env, s) {
   const vorhanden = await env.DB.prepare("SELECT * FROM bescheinigungen WHERE email = ?").bind(s.email).first();
@@ -345,8 +411,18 @@ async function stripeWebhook(req, env, ctx) {
   const paket = ["basis", "praxis", "komplett"].includes(meta.paket) ? meta.paket : "basis";
   // Sprache: aus den Link-Metadaten, sonst aus client_reference_id (setzt assets/zahlung.js je Website-Sprache), sonst Deutsch
   const sprache = [meta.sprache, sess.client_reference_id, (sess.locale || "").slice(0, 2)].find((x) => ["de", "en", "es"].includes(x)) || "de";
-  const felder = (sess.custom_fields || []).map((f) => ({ key: f.key, label: f.label && f.label.custom, wert: (f.dropdown && f.dropdown.value) || (f.text && f.text.value) || "" }));
-  const zustimmung = felder.find((f) => /sofort|kursbeginn|start/i.test(f.key + " " + (f.label || "")));
+  // Zustimmung zum sofortigen Beginn: von der Bestellseite (Tabelle bestellungen), sonst aus einem Feld eines Payment Links
+  let zustimmungText = "";
+  const best = meta.bestellung ? await env.DB.prepare("SELECT zeit FROM bestellungen WHERE id = ? AND stripe_session = ?").bind(meta.bestellung, sess.id).first() : null;
+  if (best) {
+    await env.DB.prepare("UPDATE bestellungen SET bezahlt = 1 WHERE id = ?").bind(meta.bestellung).run();
+    const wann = new Date(best.zeit).toLocaleString({ de: "de-DE", en: "en-GB", es: "es-ES" }[sprache], { timeZone: "Europe/Berlin", dateStyle: "medium", timeStyle: "short" });
+    zustimmungText = { de: "Häkchen auf der Bestellseite gesetzt am " + wann, en: "box ticked on the order page on " + wann, es: "casilla marcada en la página de pedido el " + wann }[sprache];
+  } else {
+    const felder = (sess.custom_fields || []).map((f) => ({ key: f.key, label: f.label && f.label.custom, wert: (f.dropdown && f.dropdown.value) || (f.text && f.text.value) || "" }));
+    const feld = felder.find((f) => /sofort|kursbeginn|start/i.test(f.key + " " + (f.label || "")));
+    zustimmungText = feld ? feld.wert : "";
+  }
   const name = (sess.customer_details && sess.customer_details.name) || "";
   const gekauft = new Date((sess.created || jetzt()) * 1000).toISOString();
   const bis = new Date(); bis.setMonth(bis.getMonth() + parseInt(env.ZUGANG_MONATE || "12", 10));
@@ -357,9 +433,9 @@ async function stripeWebhook(req, env, ctx) {
       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 0, 0)
       ON CONFLICT(email) DO UPDATE SET name = excluded.name, paket = excluded.paket, sprache = excluded.sprache, gekauft_am = excluded.gekauft_am,
         gueltig_bis = excluded.gueltig_bis, stripe_session = excluded.stripe_session, betrag = excluded.betrag, zustimmung = excluded.zustimmung`)
-    .bind(email, name, paket, sprache, gekauft, bis.toISOString(), sess.id, sess.amount_total || 0, zustimmung ? zustimmung.wert : "").run();
+    .bind(email, name, paket, sprache, gekauft, bis.toISOString(), sess.id, sess.amount_total || 0, zustimmungText).run();
 
-  const mail = mailWillkommen({ env, email, name, paket, sprache, betrag: sess.amount_total || 0, waehrung: sess.currency || "eur", gekauft, zustimmung: zustimmung ? zustimmung.wert : "" });
+  const mail = mailWillkommen({ env, email, name, paket, sprache, betrag: sess.amount_total || 0, waehrung: sess.currency || "eur", gekauft, zustimmung: zustimmungText });
   ctx.waitUntil(sende(env, email, mail));
   return json({ ok: true });
 }

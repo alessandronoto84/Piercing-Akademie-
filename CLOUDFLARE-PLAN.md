@@ -33,7 +33,7 @@ Alle Schlüssel kommen in die **Umgebungseinstellungen** (Cloud-Umgebung → Edi
 |---|---|---|
 | `CLOUDFLARE_API_TOKEN` (neuer Token, der alte für Bilder bleibt) | Cloudflare → My Profile → API Tokens → Create Token → „Custom token“ | Account: Cloudflare Pages Bearbeiten, Workers Scripts Bearbeiten, D1 Bearbeiten; Zone (piercingakademie.de): DNS Bearbeiten |
 | `CLOUDFLARE_ACCOUNT_ID` | ist schon bekannt | – |
-| `STRIPE_SECRET_KEY` | Stripe → Entwickler → API-Schlüssel → **eingeschränkter Schlüssel**, zuerst im **Testmodus** (`rk_test_…`) | Checkout Sessions lesen, Kunden lesen, Webhook-Endpunkte schreiben, Payment Links schreiben |
+| `STRIPE_SECRET_KEY` | Stripe → Entwickler → API-Schlüssel → **eingeschränkter Schlüssel**, zuerst im **Testmodus** (`rk_test_…`) | Checkout Sessions schreiben (Website-Bestellungen), Webhook-Endpunkte schreiben (nur zum Einrichten) |
 | `RESEND_API_KEY` | resend.com → API Keys | Sending access |
 
 Außerdem:

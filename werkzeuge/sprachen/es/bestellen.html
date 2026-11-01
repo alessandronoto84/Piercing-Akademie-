@@ -1,0 +1,38 @@
+<!-- title: Pedido – Piercing Akademie -->
+<!-- description: Pide un paquete de la Piercing Akademie: resumen, precio con IVA incluido y pago seguro con Stripe. -->
+  <article class="legal bestell-seite">
+    <p class="label">Pedido</p>
+    <h1 class="sec-title">Tu pedido</h1>
+    <p>Revisa tu paquete, confirma los dos puntos de abajo y haz el pedido. El pago se realiza de forma segura con Stripe en el siguiente paso.</p>
+
+    <form class="form" id="bestell-formular" novalidate>
+      <fieldset class="b-pakete">
+        <legend class="form-title">1. Paquete</legend>
+        <label class="b-paket"><input type="radio" name="paket" value="basis"><span><strong>Básico</strong> <span class="b-preis">249 €</span><br><span class="b-inhalt">Curso online con los 11 módulos, preguntas, listas de control, examen final, libro del curso y certificado de participación</span></span></label>
+        <label class="b-paket"><input type="radio" name="paket" value="praxis" checked><span><strong>Práctica</strong> <span class="b-preis">999 €</span><br><span class="b-inhalt">Todo lo de Básico, más 1 día de práctica en Lingen con modelos reales y material de práctica de silicona</span></span></label>
+        <label class="b-paket"><input type="radio" name="paket" value="komplett"><span><strong>Completo</strong> <span class="b-preis">2490 €</span><br><span class="b-inhalt">Todo lo de Práctica, más mentoría 1:1, un segundo día de práctica, material de práctica para casa y 12 meses de soporte</span></span></label>
+      </fieldset>
+
+      <div class="b-summe">
+        <p><span>Precio total</span> <strong id="b-summe">999 €</strong></p>
+        <p class="fine">Precio final, IVA incluido. Pago único, sin suscripción. Acceso al curso online durante 12 meses desde la activación. La fecha de los días de práctica y la mentoría la acordamos contigo después de la reserva. Los días de práctica y la mentoría se imparten en alemán o inglés.</p>
+      </div>
+
+      <fieldset class="b-zustimmung">
+        <legend class="form-title">2. Confirmar</legend>
+        <label class="check"><input type="checkbox" name="agb" id="b-agb"><span>Tengo al menos 18 años y acepto las <a href="agb.html" target="_blank" rel="noopener">condiciones generales</a>. He tomado conocimiento de la <a href="agb.html#widerruf" target="_blank" rel="noopener">información sobre el desistimiento</a> y de la <a href="datenschutz.html" target="_blank" rel="noopener">política de privacidad</a>. <span class="req">*</span></span></label>
+        <label class="check"><input type="checkbox" name="sofort" id="b-sofort"><span>Solicito expresamente que empecéis a prestar el curso online antes de que finalice el plazo de desistimiento. Sé que con ello pierdo mi derecho de desistimiento respecto del curso online: se extingue al activarse mi acceso, es decir, con mi primer inicio de sesión. <span class="req">*</span></span></label>
+        <p class="fine" id="b-praxis-hinweis">Para los días de práctica y la mentoría, la información sobre el desistimiento se aplica sin cambios.</p>
+      </fieldset>
+
+      <p class="err" id="b-fehler" role="alert" hidden></p>
+      <button class="btn" type="submit" id="b-bestellen">Pedido con obligación de pago</button>
+      <p class="fine">Después del clic pasas a la página de pago de Stripe. Allí indicas el correo electrónico al que enviamos tu acceso y la confirmación del contrato, y eliges el método de pago. Si cancelas el pago, no se celebra ningún contrato.</p>
+
+      <div class="status" id="b-nicht-bereit" role="status" tabindex="-1" hidden>
+        <p><strong>La reserva online no está disponible en este momento.</strong> Envíanos una <a href="index.html#kontakt">consulta</a> y hacemos la reserva directamente contigo.</p>
+      </div>
+    </form>
+
+    <p class="fine"><a href="index.html#pakete">Volver a los paquetes</a> · ¿Preguntas? <a href="mailto:diepiercingakademie@gmail.com">diepiercingakademie@gmail.com</a></p>
+  </article>

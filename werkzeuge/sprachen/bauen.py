@@ -19,7 +19,7 @@ import texte  # noqa: E402
 DOMAIN = "https://piercingakademie.de/"
 SPRACHEN = {"en": ("English", "en_US"), "es": ("Español", "es_ES")}
 TABELLEN = {"index.html": texte.INDEX, "online-kurs.html": texte.ONLINE_KURS}
-ARTIKEL = ["agb.html", "datenschutz.html", "impressum.html", "danke.html", "widerrufen.html"]
+ARTIKEL = ["agb.html", "datenschutz.html", "impressum.html", "danke.html", "widerrufen.html", "bestellen.html"]
 SEITEN = list(TABELLEN) + ARTIKEL
 LABEL = {"de": "Sprache", "en": "Language", "es": "Idioma"}
 

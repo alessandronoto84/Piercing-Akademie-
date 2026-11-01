@@ -142,3 +142,28 @@ test("Elektronischer Widerruf: Pflichtfelder, Eingang, Spam-Falle", async () => 
   assert.equal((await get("/widerrufen.html")).status, 200);
   assert.equal((await get("/en/widerrufen.html")).status, 200);
 });
+
+test("Bestellseite: beide Häkchen Pflicht, Preis nur vom Server, Zustimmung landet beim Kauf", async () => {
+  assert.equal((await (await get("/api/bestellen")).json()).aktiv, true);
+  assert.equal((await post("/api/bestellen", { paket: "praxis", sprache: "de", agb: true, sofort: false })).status, 400);
+  assert.equal((await post("/api/bestellen", { paket: "gratis", sprache: "de", agb: true, sofort: true })).status, 400);
+  assert.equal((await post("/api/bestellen", { paket: "praxis", agb: true, sofort: true }, null, { Origin: "https://boese.example" })).status, 403);
+  const r = await post("/api/bestellen", { paket: "praxis", sprache: "en", agb: true, sofort: true, preis: 1 });
+  assert.equal(r.status, 200);
+  const d = await r.json();
+  assert.match(d.url, /^https:\/\/checkout\.stripe\.com\//);
+  const f = new URLSearchParams(d.dev_formular);
+  assert.equal(f.get("line_items[0][price_data][unit_amount]"), "99900");
+  assert.equal(f.get("metadata[paket]"), "praxis");
+  assert.equal(f.get("locale"), "en");
+  assert.match(f.get("success_url"), /\/en\/danke\.html\?bestellung=\{CHECKOUT_SESSION_ID\}$/);
+  // Webhook zu dieser Sitzung: Zustimmung kommt aus der Bestellung, nicht aus einem Payment-Link-Feld
+  const sid = d.url.split("/").pop();
+  const email = "bestellung-" + Date.now() + "@example.com";
+  const ev = kauf(email, sid, { amount_total: 99900, locale: "en", metadata: { paket: "praxis", sprache: "en", bestellung: f.get("metadata[bestellung]") }, custom_fields: [] });
+  assert.equal((await webhook(ev)).status, 200);
+  const c = await (await post("/api/code", { email })).json();
+  assert.ok(c.dev_code, "Käufer über die Bestellseite bekommt einen Code");
+  assert.equal((await get("/bestellen.html")).status, 200);
+  assert.equal((await get("/es/bestellen.html")).status, 200);
+});

@@ -1,0 +1,38 @@
+<!-- title: Order – Piercing Akademie -->
+<!-- description: Order a Piercing Akademie package: overview, price including VAT and secure payment via Stripe. -->
+  <article class="legal bestell-seite">
+    <p class="label">Order</p>
+    <h1 class="sec-title">Your order</h1>
+    <p>Check your package, confirm the two points below and place your order. Payment follows securely via Stripe in the next step.</p>
+
+    <form class="form" id="bestell-formular" novalidate>
+      <fieldset class="b-pakete">
+        <legend class="form-title">1. Package</legend>
+        <label class="b-paket"><input type="radio" name="paket" value="basis"><span><strong>Basic</strong> <span class="b-preis">€249</span><br><span class="b-inhalt">Online course with all 11 modules, questions, checklists, final test, course book and certificate of participation</span></span></label>
+        <label class="b-paket"><input type="radio" name="paket" value="praxis" checked><span><strong>Practice</strong> <span class="b-preis">€999</span><br><span class="b-inhalt">Everything in Basic, plus 1 practice day in Lingen with real models and silicone practice material</span></span></label>
+        <label class="b-paket"><input type="radio" name="paket" value="komplett"><span><strong>Complete</strong> <span class="b-preis">€2,490</span><br><span class="b-inhalt">Everything in Practice, plus 1:1 coaching, a second practice day, practice material for home and 12 months of support</span></span></label>
+      </fieldset>
+
+      <div class="b-summe">
+        <p><span>Total price</span> <strong id="b-summe">€999</strong></p>
+        <p class="fine">Final price including VAT. One-off payment, no subscription. Access to the online course for 12 months from activation. We arrange the date for practice days and coaching with you after booking. Practice days and coaching take place in German or English.</p>
+      </div>
+
+      <fieldset class="b-zustimmung">
+        <legend class="form-title">2. Confirm</legend>
+        <label class="check"><input type="checkbox" name="agb" id="b-agb"><span>I am at least 18 years old and accept the <a href="agb.html" target="_blank" rel="noopener">terms and conditions</a>. I have taken note of the <a href="agb.html#widerruf" target="_blank" rel="noopener">cancellation policy</a> and the <a href="datenschutz.html" target="_blank" rel="noopener">privacy policy</a>. <span class="req">*</span></span></label>
+        <label class="check"><input type="checkbox" name="sofort" id="b-sofort"><span>I expressly request that you begin providing the online course before the withdrawal period ends. I acknowledge that I thereby lose my right of withdrawal for the online course: it expires when my access is activated, i.e. with my first login. <span class="req">*</span></span></label>
+        <p class="fine" id="b-praxis-hinweis">For practice days and coaching, the cancellation policy applies unchanged.</p>
+      </fieldset>
+
+      <p class="err" id="b-fehler" role="alert" hidden></p>
+      <button class="btn" type="submit" id="b-bestellen">Order with obligation to pay</button>
+      <p class="fine">After clicking, you go to the Stripe payment page. There you enter the email address to which we send your access and the contract confirmation, and choose your payment method. If you cancel the payment, no contract is concluded.</p>
+
+      <div class="status" id="b-nicht-bereit" role="status" tabindex="-1" hidden>
+        <p><strong>Online booking is not available right now.</strong> Feel free to send us an <a href="index.html#kontakt">enquiry</a> and we will book directly with you.</p>
+      </div>
+    </form>
+
+    <p class="fine"><a href="index.html#pakete">Back to the packages</a> · Questions? <a href="mailto:diepiercingakademie@gmail.com">diepiercingakademie@gmail.com</a></p>
+  </article>

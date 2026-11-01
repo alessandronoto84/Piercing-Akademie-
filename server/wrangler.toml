@@ -1,5 +1,6 @@
 # Cloudflare Worker der Piercing Akademie: Website (statisch), Login, Bezahlschranke für /kurs/, Stripe-Webhook.
 # Geheimnisse NICHT hier eintragen, sondern mit `wrangler secret put NAME`:
+#   STRIPE_SECRET_KEY      (rk_live_… eingeschränkter Schlüssel: nur „Checkout Sessions: Schreiben“)
 #   STRIPE_WEBHOOK_SECRET  (whsec_…, Signatur der Stripe-Webhooks)
 #   RESEND_API_KEY         (E-Mail-Versand)
 #   CODE_PFEFFER           (zufälliger Text, sichert die Login-Codes zusätzlich)

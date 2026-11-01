@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Order – Piercing Akademie</title>
+<meta name="description" content="Order a Piercing Akademie package: overview, price including VAT and secure payment via Stripe.">
+<meta name="robots" content="noindex">
+<meta property="og:image" content="https://piercingakademie.de/assets/og-bild.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Piercing Akademie: Learn to pierce. Clean and safe. Online course and practice days in Lingen, Germany.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#111114" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#09090B" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://piercingakademie.de/en/bestellen.html">
+<link rel="alternate" hreflang="de" href="https://piercingakademie.de/bestellen.html">
+<link rel="alternate" hreflang="en" href="https://piercingakademie.de/en/bestellen.html">
+<link rel="alternate" hreflang="es" href="https://piercingakademie.de/es/bestellen.html">
+<link rel="alternate" hreflang="x-default" href="https://piercingakademie.de/bestellen.html">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#inhalt">Skip to content</a>
+<div class="nacht">
+<div class="wrap">
+  <header>
+    <a class="brand" href="index.html"><img src="../assets/favicon.png" alt="" width="34" height="34">Piercing Akademie</a>
+    <nav aria-label="Site navigation">
+      <a href="index.html#kurs">Course content</a>
+      <a href="online-kurs.html">Online course</a>
+      <a href="index.html#pakete">Packages</a>
+      <a href="index.html#praxistag">Practice day</a>
+      <a href="index.html#faq">FAQ</a>
+      <span class="sprachwahl" role="group" aria-label="Language"><a href="../bestellen.html" hreflang="de" lang="de">DE</a><a href="bestellen.html" hreflang="en" lang="en" aria-current="true">EN</a><a href="../es/bestellen.html" hreflang="es" lang="es">ES</a></span>
+      <a class="btn small" href="index.html#kontakt">Sign up</a>
+    </nav>
+  </header>
+</div>
+</div>
+<main class="wrap" id="inhalt" tabindex="-1">
+  <article class="legal bestell-seite">
+    <p class="label">Order</p>
+    <h1 class="sec-title">Your order</h1>
+    <p>Check your package, confirm the two points below and place your order. Payment follows securely via Stripe in the next step.</p>
+
+    <form class="form" id="bestell-formular" novalidate>
+      <fieldset class="b-pakete">
+        <legend class="form-title">1. Package</legend>
+        <label class="b-paket"><input type="radio" name="paket" value="basis"><span><strong>Basic</strong> <span class="b-preis">€249</span><br><span class="b-inhalt">Online course with all 11 modules, questions, checklists, final test, course book and certificate of participation</span></span></label>
+        <label class="b-paket"><input type="radio" name="paket" value="praxis" checked><span><strong>Practice</strong> <span class="b-preis">€999</span><br><span class="b-inhalt">Everything in Basic, plus 1 practice day in Lingen with real models and silicone practice material</span></span></label>
+        <label class="b-paket"><input type="radio" name="paket" value="komplett"><span><strong>Complete</strong> <span class="b-preis">€2,490</span><br><span class="b-inhalt">Everything in Practice, plus 1:1 coaching, a second practice day, practice material for home and 12 months of support</span></span></label>
+      </fieldset>
+
+      <div class="b-summe">
+        <p><span>Total price</span> <strong id="b-summe">€999</strong></p>
+        <p class="fine">Final price including VAT. One-off payment, no subscription. Access to the online course for 12 months from activation. We arrange the date for practice days and coaching with you after booking. Practice days and coaching take place in German or English.</p>
+      </div>
+
+      <fieldset class="b-zustimmung">
+        <legend class="form-title">2. Confirm</legend>
+        <label class="check"><input type="checkbox" name="agb" id="b-agb"><span>I am at least 18 years old and accept the <a href="agb.html" target="_blank" rel="noopener">terms and conditions</a>. I have taken note of the <a href="agb.html#widerruf" target="_blank" rel="noopener">cancellation policy</a> and the <a href="datenschutz.html" target="_blank" rel="noopener">privacy policy</a>. <span class="req">*</span></span></label>
+        <label class="check"><input type="checkbox" name="sofort" id="b-sofort"><span>I expressly request that you begin providing the online course before the withdrawal period ends. I acknowledge that I thereby lose my right of withdrawal for the online course: it expires when my access is activated, i.e. with my first login. <span class="req">*</span></span></label>
+        <p class="fine" id="b-praxis-hinweis">For practice days and coaching, the cancellation policy applies unchanged.</p>
+      </fieldset>
+
+      <p class="err" id="b-fehler" role="alert" hidden></p>
+      <button class="btn" type="submit" id="b-bestellen">Order with obligation to pay</button>
+      <p class="fine">After clicking, you go to the Stripe payment page. There you enter the email address to which we send your access and the contract confirmation, and choose your payment method. If you cancel the payment, no contract is concluded.</p>
+
+      <div class="status" id="b-nicht-bereit" role="status" tabindex="-1" hidden>
+        <p><strong>Online booking is not available right now.</strong> Feel free to send us an <a href="index.html#kontakt">enquiry</a> and we will book directly with you.</p>
+      </div>
+    </form>
+
+    <p class="fine"><a href="index.html#pakete">Back to the packages</a> · Questions? <a href="mailto:diepiercingakademie@gmail.com">diepiercingakademie@gmail.com</a></p>
+  </article>
+</main>
+<div class="wrap">
+  <footer>
+    <div>© Piercing Akademie · 740 Piercing, Burgstraße 12, 49808 Lingen</div>
+    <nav aria-label="Instagram">
+      <a href="https://www.instagram.com/diepiercingakademie/" rel="noopener" target="_blank">Instagram @diepiercingakademie</a>
+    </nav>
+    <nav aria-label="Legal">
+      <a href="impressum.html">Legal notice</a>
+      <a href="datenschutz.html">Privacy</a>
+      <a href="agb.html">Terms and withdrawal</a>
+      <a href="widerrufen.html" class="widerruf-link">Withdraw from contract</a>
+    </nav>
+  </footer>
+</div>
+<script src="../assets/bestellen.js" defer></script>
+</body>
+</html>
