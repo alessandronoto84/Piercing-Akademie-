@@ -17,7 +17,7 @@ KURS.module.push({
         { typ: "text", text: "The skin is the largest organ of the human body. It consists of three layers, and a piercing channel passes through all three." },
         { typ: "tabelle", kopf: ["Layer", "Structure", "Relevance for piercing"], zeilen: [
           ["Epidermis (outer skin)", "Outermost, keratinised layer without its own blood vessels", "Protective barrier against germs. It is disinfected before piercing and grows back from the wound edge during healing."],
-          ["Dermis (true skin)", "Connective tissue with blood vessels, nerves, hair roots and glands", "This is where the piercing bleeds and hurts. This is where the vessels lie that you look for with the flashlight."],
+          ["Dermis (true skin)", "Connective tissue with blood vessels, nerves, hair roots and glands", "This is where the piercing bleeds and hurts. This is where the vessels lie that you look for with the torch."],
           ["Subcutis (subcutaneous tissue)", "Mainly fatty tissue", "Provides cushioning. In places such as the navel, it determines how long the piercing channel will be."]
         ] },
         { typ: "grafik", id: "haut" },
@@ -116,7 +116,7 @@ KURS.module.push({
       titel: "Recognising vessels, avoiding erectile tissue",
       seite: "S. 73, 90, 104",
       inhalt: [
-        { typ: "text", text: "With a flashlight with green light, you can, for example, shine through the ear and thus recognise blood vessels. Never pierce through a blood vessel, otherwise the client may bleed heavily." },
+        { typ: "text", text: "With a torch with green light, you can, for example, shine through the ear and thus recognise blood vessels. Never pierce through a blood vessel, otherwise the client may bleed heavily." },
         { typ: "liste", titel: "Other places where you take particular care", punkte: [
           "Tongue: do not injure the frenulum of the tongue (p. 90).",
           "Penis: never pierce through the erectile tissue (corpora cavernosa). There is a risk of serious damage, up to the client bleeding to death (p. 104)."
@@ -177,6 +177,6 @@ KURS.module.push({
   uebung: [
     "Draw a cross-section of the skin with the three layers and a piercing channel.",
     "Sort ten piercings from module 8 by tissue type: cartilage, soft tissue or mucous membrane.",
-    "Practise recognising blood vessels in your own ear with a flashlight."
+    "Practise recognising blood vessels in your own ear with a torch."
   ]
 });
