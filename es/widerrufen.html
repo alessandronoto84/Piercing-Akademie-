@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Desistir del contrato – Piercing Akademie</title>
+<meta name="description" content="Desiste electrónicamente de un contrato celebrado a través del sitio web de la Piercing Akademie.">
+<meta name="robots" content="noindex">
+<meta property="og:image" content="https://piercingakademie.de/assets/og-bild.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Piercing Akademie: Aprende a perforar. Limpio y seguro. Curso online y días de práctica en Lingen (Alemania).">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#111114" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#09090B" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://piercingakademie.de/es/widerrufen.html">
+<link rel="alternate" hreflang="de" href="https://piercingakademie.de/widerrufen.html">
+<link rel="alternate" hreflang="en" href="https://piercingakademie.de/en/widerrufen.html">
+<link rel="alternate" hreflang="es" href="https://piercingakademie.de/es/widerrufen.html">
+<link rel="alternate" hreflang="x-default" href="https://piercingakademie.de/widerrufen.html">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#inhalt">Saltar al contenido</a>
+<div class="nacht">
+<div class="wrap">
+  <header>
+    <a class="brand" href="index.html"><img src="../assets/favicon.png" alt="" width="34" height="34">Piercing Akademie</a>
+    <nav aria-label="Navegación del sitio">
+      <a href="index.html#kurs">Contenido</a>
+      <a href="online-kurs.html">Curso online</a>
+      <a href="index.html#pakete">Paquetes</a>
+      <a href="index.html#praxistag">Día de práctica</a>
+      <a href="index.html#faq">Preguntas</a>
+      <span class="sprachwahl" role="group" aria-label="Idioma"><a href="../widerrufen.html" hreflang="de" lang="de">DE</a><a href="../en/widerrufen.html" hreflang="en" lang="en">EN</a><a href="widerrufen.html" hreflang="es" lang="es" aria-current="true">ES</a></span>
+      <a class="btn small" href="index.html#kontakt">Inscripción</a>
+    </nav>
+  </header>
+</div>
+</div>
+<main class="wrap" id="inhalt" tabindex="-1">
+  <article class="legal widerruf-seite">
+    <p class="label">Información legal</p>
+    <h1 class="sec-title">Desistir del contrato</h1>
+    <p>Si celebraste un contrato con nosotros a través de este sitio web, puedes desistir de él aquí de forma electrónica. Recibirás de inmediato una confirmación de recepción por correo electrónico. Si puedes desistir y hasta cuándo se indica en la <a href="agb.html#widerruf">información sobre el desistimiento</a>.</p>
+
+    <form class="form" id="widerruf" novalidate>
+      <div id="w-schritt1">
+        <p class="form-title">Paso 1: Tus datos</p>
+        <div class="field">
+          <label for="w-name">Nombre <span class="req">*</span></label>
+          <input id="w-name" name="name" type="text" autocomplete="name" required maxlength="120">
+        </div>
+        <div class="field">
+          <label for="w-email">Correo electrónico con el que reservaste <span class="req">*</span></label>
+          <input id="w-email" name="email" type="email" autocomplete="email" required maxlength="200">
+        </div>
+        <div class="field">
+          <label for="w-vertrag">¿De qué contrato quieres desistir? <span class="req">*</span></label>
+          <select id="w-vertrag" name="vertrag" required>
+            <option value="">Elige una opción</option>
+            <option value="basis">Paquete Básico</option>
+            <option value="praxis">Paquete Práctica</option>
+            <option value="komplett">Paquete Completo</option>
+            <option value="sonstiges">Otro contrato</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="w-datum">Reservado el <span class="req">(opcional)</span></label>
+          <input id="w-datum" name="datum" type="date">
+        </div>
+        <div class="field">
+          <label for="w-nachricht">Nota <span class="req">(opcional)</span></label>
+          <textarea id="w-nachricht" name="nachricht" rows="3" maxlength="1500"></textarea>
+        </div>
+        <div class="feld-falle" aria-hidden="true"><label for="w-website">Website</label><input id="w-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+        <p class="err" id="w-fehler" role="alert" hidden></p>
+        <button class="btn" type="button" id="w-weiter">Continuar a la confirmación</button>
+      </div>
+
+      <div id="w-schritt2" hidden>
+        <p class="form-title">Paso 2: Confirmar el desistimiento</p>
+        <p id="w-zusammenfassung"></p>
+        <button class="btn" type="submit" id="w-senden">Confirmar el desistimiento</button>
+        <button class="btn ghost small" type="button" id="w-zurueck">Cambiar datos</button>
+      </div>
+
+      <div class="status" id="w-ok" role="status" tabindex="-1" hidden>
+        <p><strong>Hemos recibido tu desistimiento.</strong> Te hemos enviado la confirmación de recepción con fecha y hora a tu correo electrónico. Te contactaremos para el reembolso.</p>
+      </div>
+      <div class="status" id="w-mail" role="status" tabindex="-1" hidden>
+        <p><strong>Ahora debería haberse abierto tu programa de correo.</strong> Envía desde allí la declaración de desistimiento preparada. También puedes escribirnos a diepiercingakademie@gmail.com.</p>
+      </div>
+    </form>
+
+    <p class="fine">También puedes desistir sin este formulario, por ejemplo por correo electrónico a <a href="mailto:diepiercingakademie@gmail.com">diepiercingakademie@gmail.com</a> o por carta a 740 Piercing, Alessandro Noto, Burgstraße 12, 49808 Lingen (Ems), Alemania.</p>
+  </article>
+</main>
+<div class="wrap">
+  <footer>
+    <div>© Piercing Akademie · 740 Piercing, Burgstraße 12, 49808 Lingen</div>
+    <nav aria-label="Instagram">
+      <a href="https://www.instagram.com/diepiercingakademie/" rel="noopener" target="_blank">Instagram @diepiercingakademie</a>
+    </nav>
+    <nav aria-label="Información legal">
+      <a href="impressum.html">Aviso legal</a>
+      <a href="datenschutz.html">Privacidad</a>
+      <a href="agb.html">Condiciones y desistimiento</a>
+      <a href="widerrufen.html" class="widerruf-link">Desistir del contrato</a>
+    </nav>
+  </footer>
+</div>
+<script src="../assets/widerruf.js" defer></script>
+</body>
+</html>

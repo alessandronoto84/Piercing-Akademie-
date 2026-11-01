@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Vertrag widerrufen – Piercing Akademie</title>
+<meta name="description" content="Einen über die Website der Piercing Akademie geschlossenen Vertrag elektronisch widerrufen.">
+<meta name="robots" content="noindex">
+<meta property="og:image" content="https://piercingakademie.de/assets/og-bild.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Piercing Akademie: Piercen lernen. Sauber und sicher. Online-Kurs und Praxistage in Lingen.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#111114" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#09090B" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://piercingakademie.de/widerrufen.html">
+<link rel="alternate" hreflang="de" href="https://piercingakademie.de/widerrufen.html">
+<link rel="alternate" hreflang="en" href="https://piercingakademie.de/en/widerrufen.html">
+<link rel="alternate" hreflang="es" href="https://piercingakademie.de/es/widerrufen.html">
+<link rel="alternate" hreflang="x-default" href="https://piercingakademie.de/widerrufen.html">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
+<div class="nacht">
+<div class="wrap">
+  <header>
+    <a class="brand" href="index.html"><img src="assets/favicon.png" alt="" width="34" height="34">Piercing Akademie</a>
+    <nav aria-label="Seitennavigation">
+      <a href="index.html#kurs">Kursinhalt</a>
+      <a href="online-kurs.html">Online-Kurs</a>
+      <a href="index.html#pakete">Pakete</a>
+      <a href="index.html#praxistag">Praxistag</a>
+      <a href="index.html#faq">Fragen</a>
+      <span class="sprachwahl" role="group" aria-label="Sprache"><a href="widerrufen.html" hreflang="de" lang="de" aria-current="true">DE</a><a href="en/widerrufen.html" hreflang="en" lang="en">EN</a><a href="es/widerrufen.html" hreflang="es" lang="es">ES</a></span>
+      <a class="btn small" href="index.html#kontakt">Anmeldung</a>
+    </nav>
+  </header>
+</div>
+</div>
+<main class="wrap" id="inhalt" tabindex="-1">
+  <article class="legal widerruf-seite">
+    <p class="label">Rechtliches</p>
+    <h1 class="sec-title">Vertrag widerrufen</h1>
+    <p>Hast du mit uns einen Vertrag über diese Website geschlossen, kannst du ihn hier elektronisch widerrufen. Du bekommst sofort eine Eingangsbestätigung per E-Mail. Ob und bis wann du widerrufen kannst, steht in der <a href="agb.html#widerruf">Widerrufsbelehrung</a>.</p>
+
+    <form class="form" id="widerruf" novalidate>
+      <div id="w-schritt1">
+        <p class="form-title">Schritt 1: Deine Angaben</p>
+        <div class="field">
+          <label for="w-name">Name <span class="req">*</span></label>
+          <input id="w-name" name="name" type="text" autocomplete="name" required maxlength="120">
+        </div>
+        <div class="field">
+          <label for="w-email">E-Mail-Adresse, mit der du gebucht hast <span class="req">*</span></label>
+          <input id="w-email" name="email" type="email" autocomplete="email" required maxlength="200">
+        </div>
+        <div class="field">
+          <label for="w-vertrag">Welchen Vertrag möchtest du widerrufen? <span class="req">*</span></label>
+          <select id="w-vertrag" name="vertrag" required>
+            <option value="">Bitte wählen</option>
+            <option value="basis">Paket Basis</option>
+            <option value="praxis">Paket Praxis</option>
+            <option value="komplett">Paket Komplett</option>
+            <option value="sonstiges">Anderer Vertrag</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="w-datum">Gebucht am <span class="req">(optional)</span></label>
+          <input id="w-datum" name="datum" type="date">
+        </div>
+        <div class="field">
+          <label for="w-nachricht">Anmerkung <span class="req">(optional)</span></label>
+          <textarea id="w-nachricht" name="nachricht" rows="3" maxlength="1500"></textarea>
+        </div>
+        <div class="feld-falle" aria-hidden="true"><label for="w-website">Website</label><input id="w-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+        <p class="err" id="w-fehler" role="alert" hidden></p>
+        <button class="btn" type="button" id="w-weiter">Weiter zur Bestätigung</button>
+      </div>
+
+      <div id="w-schritt2" hidden>
+        <p class="form-title">Schritt 2: Widerruf bestätigen</p>
+        <p id="w-zusammenfassung"></p>
+        <button class="btn" type="submit" id="w-senden">Widerruf jetzt bestätigen</button>
+        <button class="btn ghost small" type="button" id="w-zurueck">Angaben ändern</button>
+      </div>
+
+      <div class="status" id="w-ok" role="status" tabindex="-1" hidden>
+        <p><strong>Dein Widerruf ist bei uns eingegangen.</strong> Die Eingangsbestätigung mit Datum und Uhrzeit haben wir an deine E-Mail-Adresse geschickt. Wir melden uns zur Rückzahlung.</p>
+      </div>
+      <div class="status" id="w-mail" role="status" tabindex="-1" hidden>
+        <p><strong>Dein E-Mail-Programm sollte sich jetzt geöffnet haben.</strong> Bitte sende die vorbereitete Widerrufserklärung dort ab. Alternativ erreichst du uns unter diepiercingakademie@gmail.com.</p>
+      </div>
+    </form>
+
+    <p class="fine">Du kannst auch ohne dieses Formular widerrufen, zum Beispiel per E-Mail an <a href="mailto:diepiercingakademie@gmail.com">diepiercingakademie@gmail.com</a> oder per Brief an 740 Piercing, Alessandro Noto, Burgstraße 12, 49808 Lingen (Ems).</p>
+  </article>
+</main>
+<div class="wrap">
+  <footer>
+    <div>© Piercing Akademie · 740 Piercing, Burgstraße 12, 49808 Lingen</div>
+    <nav aria-label="Instagram">
+      <a href="https://www.instagram.com/diepiercingakademie/" rel="noopener" target="_blank">Instagram @diepiercingakademie</a>
+    </nav>
+    <nav aria-label="Rechtliches">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+      <a href="agb.html">AGB und Widerruf</a>
+      <a href="widerrufen.html" class="widerruf-link">Vertrag widerrufen</a>
+    </nav>
+  </footer>
+</div>
+<script src="assets/widerruf.js" defer></script>
+</body>
+</html>

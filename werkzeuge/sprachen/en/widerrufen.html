@@ -1,0 +1,58 @@
+<!-- title: Withdraw from contract – Piercing Akademie -->
+<!-- description: Withdraw electronically from a contract concluded via the Piercing Akademie website. -->
+  <article class="legal widerruf-seite">
+    <p class="label">Legal</p>
+    <h1 class="sec-title">Withdraw from contract</h1>
+    <p>If you concluded a contract with us via this website, you can withdraw from it electronically here. You will immediately receive a confirmation of receipt by email. Whether and until when you can withdraw is set out in the <a href="agb.html#widerruf">cancellation policy</a>.</p>
+
+    <form class="form" id="widerruf" novalidate>
+      <div id="w-schritt1">
+        <p class="form-title">Step 1: Your details</p>
+        <div class="field">
+          <label for="w-name">Name <span class="req">*</span></label>
+          <input id="w-name" name="name" type="text" autocomplete="name" required maxlength="120">
+        </div>
+        <div class="field">
+          <label for="w-email">Email address you booked with <span class="req">*</span></label>
+          <input id="w-email" name="email" type="email" autocomplete="email" required maxlength="200">
+        </div>
+        <div class="field">
+          <label for="w-vertrag">Which contract do you want to withdraw from? <span class="req">*</span></label>
+          <select id="w-vertrag" name="vertrag" required>
+            <option value="">Please choose</option>
+            <option value="basis">Basic package</option>
+            <option value="praxis">Practice package</option>
+            <option value="komplett">Complete package</option>
+            <option value="sonstiges">Other contract</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="w-datum">Booked on <span class="req">(optional)</span></label>
+          <input id="w-datum" name="datum" type="date">
+        </div>
+        <div class="field">
+          <label for="w-nachricht">Note <span class="req">(optional)</span></label>
+          <textarea id="w-nachricht" name="nachricht" rows="3" maxlength="1500"></textarea>
+        </div>
+        <div class="feld-falle" aria-hidden="true"><label for="w-website">Website</label><input id="w-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+        <p class="err" id="w-fehler" role="alert" hidden></p>
+        <button class="btn" type="button" id="w-weiter">Continue to confirmation</button>
+      </div>
+
+      <div id="w-schritt2" hidden>
+        <p class="form-title">Step 2: Confirm withdrawal</p>
+        <p id="w-zusammenfassung"></p>
+        <button class="btn" type="submit" id="w-senden">Confirm withdrawal now</button>
+        <button class="btn ghost small" type="button" id="w-zurueck">Change details</button>
+      </div>
+
+      <div class="status" id="w-ok" role="status" tabindex="-1" hidden>
+        <p><strong>We have received your withdrawal.</strong> We have sent the confirmation of receipt with date and time to your email address. We will contact you about the refund.</p>
+      </div>
+      <div class="status" id="w-mail" role="status" tabindex="-1" hidden>
+        <p><strong>Your email program should now have opened.</strong> Please send the prepared withdrawal statement from there. Alternatively, you can reach us at diepiercingakademie@gmail.com.</p>
+      </div>
+    </form>
+
+    <p class="fine">You can also withdraw without this form, for example by email to <a href="mailto:diepiercingakademie@gmail.com">diepiercingakademie@gmail.com</a> or by letter to 740 Piercing, Alessandro Noto, Burgstraße 12, 49808 Lingen (Ems), Germany.</p>
+  </article>

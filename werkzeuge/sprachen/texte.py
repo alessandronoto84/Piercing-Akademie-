@@ -16,6 +16,7 @@ GEMEINSAM = [
     ('>Impressum</a>', '>Legal notice</a>', '>Aviso legal</a>'),
     ('>Datenschutz</a>', '>Privacy</a>', '>Privacidad</a>'),
     ('>AGB und Widerruf</a>', '>Terms and withdrawal</a>', '>Condiciones y desistimiento</a>'),
+    ('class="widerruf-link">Vertrag widerrufen</a>', 'class="widerruf-link">Withdraw from contract</a>', 'class="widerruf-link">Desistir del contrato</a>'),
     ('Piercing Akademie: Piercen lernen. Sauber und sicher. Online-Kurs und Praxistage in Lingen.',
      'Piercing Akademie: Learn to pierce. Clean and safe. Online course and practice days in Lingen, Germany.',
      'Piercing Akademie: Aprende a perforar. Limpio y seguro. Curso online y días de práctica en Lingen (Alemania).'),

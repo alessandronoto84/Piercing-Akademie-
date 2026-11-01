@@ -132,3 +132,13 @@ test("Anfrageformular: Pflichtfelder und Spam-Falle", async () => {
   assert.equal(falle.status, 200);
   assert.equal((await post("/api/anfrage", { paket: "basis", name: "X", email: "x@example.com" }, null, { Origin: "https://boese.example" })).status, 403);
 });
+
+test("Elektronischer Widerruf: Pflichtfelder, Eingang, Spam-Falle", async () => {
+  assert.equal((await post("/api/widerruf", { name: "X", email: "x@example.com" })).status, 400);
+  const r = await post("/api/widerruf", { name: "Maria Test", email: "maria@example.com", vertrag: "basis", vertragText: "Paket Basis", datum: "2026-11-01", sprache: "de" });
+  assert.equal(r.status, 200);
+  assert.match((await r.json()).eingang, /^\d{4}-\d{2}-\d{2}T/);
+  assert.equal((await post("/api/widerruf", { name: "Bot", email: "b@example.com", vertrag: "basis", website: "x" })).status, 200);
+  assert.equal((await get("/widerrufen.html")).status, 200);
+  assert.equal((await get("/en/widerrufen.html")).status, 200);
+});

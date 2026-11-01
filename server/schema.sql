@@ -40,6 +40,16 @@ CREATE TABLE IF NOT EXISTS fortschritt (
   daten TEXT,
   aktualisiert INTEGER
 );
+-- Elektronische Widerrufe (§ 356a BGB), aufbewahrt als Nachweis (3 Jahre)
+CREATE TABLE IF NOT EXISTS widerrufe (
+  eingang TEXT,                     -- ISO-Zeit des Eingangs
+  email TEXT,
+  name TEXT,
+  vertrag TEXT,
+  gebucht_am TEXT,
+  nachricht TEXT,
+  sprache TEXT
+);
 -- nur zur Begrenzung von Formular-Spam: Zeitpunkt und gehashte IP, wird nach einem Tag gelöscht
 CREATE TABLE IF NOT EXISTS anfragen (
   zeit INTEGER,

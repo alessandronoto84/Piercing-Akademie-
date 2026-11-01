@@ -4,7 +4,7 @@
    - Login ohne Passwort: 6-stelliger Code per E-Mail an die beim Kauf angegebene Adresse
    - Stripe-Webhook: legt nach der Zahlung den Zugang an und schickt Zugang + Vertragsbestätigung (§ 312f BGB)
    - speichert Fortschritt und vergibt prüfbare Bescheinigungsnummern */
-import { mailCode, mailWillkommen, mailVerdacht, mailAnfrage, sende } from "./mail.js";
+import { mailCode, mailWillkommen, mailVerdacht, mailAnfrage, mailWiderrufEingang, mailWiderrufAkademie, sende } from "./mail.js";
 
 const COOKIE = "pa_sitzung";
 const SITZUNG_TAGE = 30;
@@ -21,7 +21,7 @@ export default {
       if (p.startsWith("/api/")) return await api(req, env, url, ctx);
       if (p === "/pruefen") return await pruefSeite(env, url);
       if (p === "/kurs" || p.startsWith("/kurs/")) return await kurs(req, env, url, p);
-      return env.ASSETS.fetch(req);
+      return datei(req, env, url);
     } catch (e) {
       console.error(e);
       return json({ fehler: "server" }, 500);
@@ -40,6 +40,7 @@ export async function aufraeumen(env) {
   await env.DB.batch([
     env.DB.prepare("DELETE FROM anmeldungen WHERE zeit < ?").bind(t - 90 * 86400),
     env.DB.prepare("DELETE FROM anfragen WHERE zeit < ?").bind(t - 86400),
+    env.DB.prepare("DELETE FROM widerrufe WHERE eingang < ?").bind(new Date(Date.now() - 3 * 365 * 86400000).toISOString()),
     env.DB.prepare("DELETE FROM sitzungen WHERE zuletzt < ?").bind(t - SITZUNG_TAGE * 86400),
     env.DB.prepare("DELETE FROM codes WHERE ablauf < ?").bind(t - 3600), // letzte Anforderung über eine Stunde her
     env.DB.prepare("DELETE FROM fortschritt WHERE email IN (SELECT email FROM kunden WHERE gueltig_bis < ?)").bind(alt),
@@ -50,6 +51,12 @@ export async function aufraeumen(env) {
 }
 
 // ---------- Hilfen ----------
+// Statische Datei; Ordneradressen („/“, „/en/“) liefern deren index.html (html_handling = "none")
+function datei(req, env, url) {
+  if (url.pathname.endsWith("/")) return env.ASSETS.fetch(new Request(new URL(url.pathname + "index.html" + url.search, url), req));
+  if (url.pathname === "/kurs") return Response.redirect(new URL("/kurs/", url).toString(), 301);
+  return env.ASSETS.fetch(req);
+}
 function json(daten, status = 200, extra = {}) {
   return new Response(JSON.stringify(daten), { status, headers: { "Content-Type": "application/json; charset=utf-8", "Cache-Control": "no-store", ...extra } });
 }
@@ -129,7 +136,7 @@ async function kurs(req, env, url, p) {
       headers: { "Content-Type": "text/javascript; charset=utf-8", "Cache-Control": "private, no-store" }
     });
   }
-  const res = await env.ASSETS.fetch(req);
+  const res = await datei(req, env, url);
   const h = new Headers(res.headers);
   h.set("Cache-Control", "private, no-store");
   h.set("X-Robots-Tag", "noindex, nofollow");
@@ -143,6 +150,7 @@ async function api(req, env, url, ctx) {
   if (p === "/api/stripe" && req.method === "POST") return stripeWebhook(req, env, ctx);
   if (req.method === "POST" && !gleicheHerkunft(req, url)) return json({ fehler: "herkunft" }, 403);
   if (p === "/api/anfrage" && req.method === "POST") return anfrage(req, env, ctx);
+  if (p === "/api/widerruf" && req.method === "POST") return widerruf(req, env, ctx);
   if (p === "/api/code" && req.method === "POST") return codeAnfordern(req, env, ctx);
   if (p === "/api/anmelden" && req.method === "POST") return anmelden(req, env, ctx);
   if (p === "/api/abmelden" && req.method === "POST") {
@@ -256,6 +264,29 @@ async function anfrage(req, env, ctx) {
   const admin = String(env.ADMIN_EMAILS || "").split(",")[0].trim();
   ctx.waitUntil(sende(env, admin, mailAnfrage(a), a.email));
   return json({ ok: true });
+}
+
+// ---------- Elektronischer Widerruf (§ 356a BGB) ----------
+// Gespeichert als Nachweis; der Verbraucher bekommt sofort eine Eingangsbestätigung mit Datum und Uhrzeit.
+async function widerruf(req, env, ctx) {
+  const d = await req.json().catch(() => null);
+  if (!d) return json({ fehler: "daten" }, 400);
+  if (d.website) return json({ ok: true });
+  const kurz = (v, n) => String(v || "").trim().slice(0, n);
+  const w = { name: kurz(d.name, 120), email: normal(d.email), vertrag: kurz(d.vertragText || d.vertrag, 80), datum: kurz(d.datum, 20),
+    nachricht: kurz(d.nachricht, 1500), sprache: ["de", "en", "es"].includes(d.sprache) ? d.sprache : "de" };
+  if (!w.name || !w.vertrag || !emailOk(w.email)) return json({ fehler: "pflichtfelder" }, 400);
+  const schluessel = await sha256("w:" + (req.headers.get("CF-Connecting-IP") || "lokal") + ":" + (env.CODE_PFEFFER || ""));
+  const n = await env.DB.prepare("SELECT COUNT(*) AS n FROM anfragen WHERE schluessel = ? AND zeit > ?").bind(schluessel, jetzt() - 3600).first();
+  if (n.n >= 5) return json({ fehler: "zu_oft" }, 429);
+  const eingang = new Date().toISOString();
+  await env.DB.batch([
+    env.DB.prepare("INSERT INTO anfragen (zeit, schluessel) VALUES (?, ?)").bind(jetzt(), schluessel),
+    env.DB.prepare("INSERT INTO widerrufe (eingang, email, name, vertrag, gebucht_am, nachricht, sprache) VALUES (?, ?, ?, ?, ?, ?, ?)").bind(eingang, w.email, w.name, w.vertrag, w.datum, w.nachricht, w.sprache)
+  ]);
+  const admin = String(env.ADMIN_EMAILS || "").split(",")[0].trim();
+  ctx.waitUntil(Promise.all([sende(env, w.email, mailWiderrufEingang(w, eingang)), sende(env, admin, mailWiderrufAkademie(w, eingang), w.email)]));
+  return json({ ok: true, eingang });
 }
 
 // ---------- Bescheinigung ----------

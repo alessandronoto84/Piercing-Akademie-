@@ -1,0 +1,58 @@
+<!-- title: Desistir del contrato – Piercing Akademie -->
+<!-- description: Desiste electrónicamente de un contrato celebrado a través del sitio web de la Piercing Akademie. -->
+  <article class="legal widerruf-seite">
+    <p class="label">Información legal</p>
+    <h1 class="sec-title">Desistir del contrato</h1>
+    <p>Si celebraste un contrato con nosotros a través de este sitio web, puedes desistir de él aquí de forma electrónica. Recibirás de inmediato una confirmación de recepción por correo electrónico. Si puedes desistir y hasta cuándo se indica en la <a href="agb.html#widerruf">información sobre el desistimiento</a>.</p>
+
+    <form class="form" id="widerruf" novalidate>
+      <div id="w-schritt1">
+        <p class="form-title">Paso 1: Tus datos</p>
+        <div class="field">
+          <label for="w-name">Nombre <span class="req">*</span></label>
+          <input id="w-name" name="name" type="text" autocomplete="name" required maxlength="120">
+        </div>
+        <div class="field">
+          <label for="w-email">Correo electrónico con el que reservaste <span class="req">*</span></label>
+          <input id="w-email" name="email" type="email" autocomplete="email" required maxlength="200">
+        </div>
+        <div class="field">
+          <label for="w-vertrag">¿De qué contrato quieres desistir? <span class="req">*</span></label>
+          <select id="w-vertrag" name="vertrag" required>
+            <option value="">Elige una opción</option>
+            <option value="basis">Paquete Básico</option>
+            <option value="praxis">Paquete Práctica</option>
+            <option value="komplett">Paquete Completo</option>
+            <option value="sonstiges">Otro contrato</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="w-datum">Reservado el <span class="req">(opcional)</span></label>
+          <input id="w-datum" name="datum" type="date">
+        </div>
+        <div class="field">
+          <label for="w-nachricht">Nota <span class="req">(opcional)</span></label>
+          <textarea id="w-nachricht" name="nachricht" rows="3" maxlength="1500"></textarea>
+        </div>
+        <div class="feld-falle" aria-hidden="true"><label for="w-website">Website</label><input id="w-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+        <p class="err" id="w-fehler" role="alert" hidden></p>
+        <button class="btn" type="button" id="w-weiter">Continuar a la confirmación</button>
+      </div>
+
+      <div id="w-schritt2" hidden>
+        <p class="form-title">Paso 2: Confirmar el desistimiento</p>
+        <p id="w-zusammenfassung"></p>
+        <button class="btn" type="submit" id="w-senden">Confirmar el desistimiento</button>
+        <button class="btn ghost small" type="button" id="w-zurueck">Cambiar datos</button>
+      </div>
+
+      <div class="status" id="w-ok" role="status" tabindex="-1" hidden>
+        <p><strong>Hemos recibido tu desistimiento.</strong> Te hemos enviado la confirmación de recepción con fecha y hora a tu correo electrónico. Te contactaremos para el reembolso.</p>
+      </div>
+      <div class="status" id="w-mail" role="status" tabindex="-1" hidden>
+        <p><strong>Ahora debería haberse abierto tu programa de correo.</strong> Envía desde allí la declaración de desistimiento preparada. También puedes escribirnos a diepiercingakademie@gmail.com.</p>
+      </div>
+    </form>
+
+    <p class="fine">También puedes desistir sin este formulario, por ejemplo por correo electrónico a <a href="mailto:diepiercingakademie@gmail.com">diepiercingakademie@gmail.com</a> o por carta a 740 Piercing, Alessandro Noto, Burgstraße 12, 49808 Lingen (Ems), Alemania.</p>
+  </article>

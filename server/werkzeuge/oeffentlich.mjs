@@ -14,7 +14,7 @@ fs.mkdirSync(ZIEL, { recursive: true });
 const kopiere = (von, nach) => fs.cpSync(path.join(WURZEL, von), path.join(ZIEL, nach || von), { recursive: true });
 
 // Website
-for (const f of ["index.html", "online-kurs.html", "agb.html", "datenschutz.html", "impressum.html", "danke.html", "robots.txt", "sitemap.xml"]) kopiere(f);
+for (const f of ["index.html", "online-kurs.html", "agb.html", "datenschutz.html", "impressum.html", "danke.html", "widerrufen.html", "robots.txt", "sitemap.xml"]) kopiere(f);
 for (const d of ["en", "es", "assets"]) kopiere(d);
 for (const f of fs.readdirSync(path.join(SERVER, "seiten"))) fs.cpSync(path.join(SERVER, "seiten", f), path.join(ZIEL, f));
 

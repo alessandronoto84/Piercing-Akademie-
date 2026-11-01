@@ -92,6 +92,32 @@ export function mailAnfrage(a) {
   return { betreff: "Anfrage Piercing Akademie – " + a.paket + " – " + a.name, ...r };
 }
 
+function zeitText(iso, s) {
+  return new Date(iso).toLocaleString(s === "en" ? "en-GB" : s === "es" ? "es-ES" : "de-DE", { timeZone: "Europe/Berlin", dateStyle: "long", timeStyle: "short" }) + " (Europe/Berlin)";
+}
+
+export function mailWiderrufEingang(w, eingang) {
+  const s = PAKETE[w.sprache] ? w.sprache : "de";
+  const T = {
+    de: ["Eingangsbestätigung deines Widerrufs", "Wir haben deinen Widerruf am " + zeitText(eingang, s) + " erhalten:", "Vertrag", "Gebucht am", "Name", "E-Mail", "Anmerkung", "Bei einem wirksamen Widerruf erstatten wir dir die Zahlung nach unserer Widerrufsbelehrung. Bei Fragen antworte einfach auf diese E-Mail oder schreib an diepiercingakademie@gmail.com."],
+    en: ["Confirmation of receipt of your withdrawal", "We received your withdrawal on " + zeitText(eingang, s) + ":", "Contract", "Booked on", "Name", "Email", "Note", "If your withdrawal is valid, we will refund your payment in accordance with our cancellation policy. If you have any questions, email diepiercingakademie@gmail.com."],
+    es: ["Confirmación de recepción de tu desistimiento", "Hemos recibido tu desistimiento el " + zeitText(eingang, s) + ":", "Contrato", "Reservado el", "Nombre", "Correo", "Nota", "Si el desistimiento es válido, te reembolsaremos el pago conforme a nuestra información sobre el desistimiento. Si tienes preguntas, escribe a diepiercingakademie@gmail.com."]
+  }[s];
+  const zeilen = [[T[2], w.vertrag], [T[3], w.datum || "–"], [T[4], w.name], [T[5], w.email]].concat(w.nachricht ? [[T[6], w.nachricht]] : []);
+  const r = rahmen(T[0], [T[1], { html: "<ul>" + zeilen.map((z) => "<li>" + esc(z[0]) + ": <strong>" + esc(z[1]) + "</strong></li>").join("") + "</ul>", text: zeilen.map((z) => z[0] + ": " + z[1]).join("\n") }, T[7]]);
+  return { betreff: T[0] + " – Piercing Akademie", ...r };
+}
+
+export function mailWiderrufAkademie(w, eingang) {
+  const r = rahmen("Widerruf eingegangen: " + w.vertrag, [
+    "Eingang: " + zeitText(eingang, "de") + ". Die Eingangsbestätigung ist automatisch an " + w.email + " gegangen.",
+    { html: "<p>Name: <strong>" + esc(w.name) + "</strong><br>E-Mail: " + esc(w.email) + "<br>Vertrag: " + esc(w.vertrag) + "<br>Gebucht am: " + esc(w.datum || "–") + (w.nachricht ? "<br>Anmerkung: " + esc(w.nachricht) : "") + "</p>",
+      text: "Name: " + w.name + "\nE-Mail: " + w.email + "\nVertrag: " + w.vertrag + "\nGebucht am: " + (w.datum || "–") + (w.nachricht ? "\nAnmerkung: " + w.nachricht : "") },
+    "Bitte prüfen: Besteht das Widerrufsrecht noch (beim Online-Kurs erloschen nach der ersten Anmeldung)? Erstattung über Stripe binnen 14 Tagen; bei Bedarf den Kurszugang sperren."
+  ]);
+  return { betreff: "Widerruf: " + w.name + " – " + w.vertrag, ...r };
+}
+
 export async function sende(env, an, mail, antwortAn) {
   if (env.DEV === "1" || !env.RESEND_API_KEY) {
     console.log("[E-Mail an " + an + (antwortAn ? ", Antwort an " + antwortAn : "") + "] " + mail.betreff + "\n" + mail.text);
