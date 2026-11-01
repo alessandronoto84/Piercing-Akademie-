@@ -121,6 +121,7 @@
   function seitenLabel(s) { return s === "Entwurf" ? "Ergänzung der Akademie" : s; }
   function zwei(n) { return (n < 10 ? "0" : "") + n; }
   function mischen(liste) { var a = liste.slice(); for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function simulationsUmfang() { return MODULE.reduce(function (s, m) { return s + Math.min(m.pool.length, STRENG[m.nr] ? STRENG[m.nr].simFragen : SIMULATION_JE_MODUL); }, 0); }
   function benoetigt(n, q) { return Math.ceil(n * (q || BESTEHEN_AB) - 1e-9); }
   // Antwortreihenfolge mischen; „richtig“ zeigt danach auf die neue Position
   function gemischt(f) {
@@ -285,7 +286,8 @@
     });
     html += '</div><h2 class="k-h2">Training und Nachschlagen</h2><div class="k-modulraster">' +
       '<a class="k-modulkarte" href="#fehler"><span class="label">Training</span><strong>Fehler-Training</strong><span class="k-meta">' + anzahlFehler() + " Fragen, die du falsch beantwortet hast</span></a>" +
-      '<a class="k-modulkarte' + (simulationOffen() ? "" : " k-gesperrt") + '" href="#simulation"><span class="label">Abschluss</span><strong>Prüfungssimulation</strong><span class="k-meta">' + (MODULE.length * SIMULATION_JE_MODUL) + " Fragen aus allen Modulen" + (simulationOffen() ? "" : " · öffnet nach allen Modulprüfungen") + "</span></a>" +
+      '<a class="k-modulkarte' + (simulationOffen() ? "" : " k-gesperrt") + '" href="#simulation"><span class="label">Abschluss</span><strong>Prüfungssimulation</strong><span class="k-meta">' + simulationsUmfang() + " Fragen aus allen Modulen" + (simulationOffen() ? "" : " · öffnet nach allen Modulprüfungen") + "</span></a>" +
+      (LABOR ? '<a class="k-modulkarte" href="#labor"><span class="label">Praxis</span><strong>Praxislabor</strong><span class="k-meta">' + laborAnzahl() + " von " + LABOR.aufgaben.length + " Übungen am Silikon-Übungsmodell</span></a>" : "") +
       '<a class="k-modulkarte" href="#glossar"><span class="label">Nachschlagen</span><strong>Glossar</strong><span class="k-meta">' + (KURS.glossar || []).length + " Fachbegriffe</span></a>" +
       '<a class="k-modulkarte" href="#checklisten"><span class="label">Praxis</span><strong>Checklisten und Vorlagen</strong><span class="k-meta">' + (KURS.checklisten || []).length + " Checklisten, " + VORLAGEN.length + " Druckvorlagen als PDF</span></a></div>" +
       '<section class="k-einstellungen"><h2>Prototyp-Einstellungen</h2>' +

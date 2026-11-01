@@ -234,6 +234,7 @@
 .k-grafik .a-ring{fill:none;stroke:var(--accent);stroke-width:1.5;stroke-dasharray:3 3}
 .k-grafik .fnone{fill:none}
 .k-grafik .dunkel{fill:#000;opacity:.16}
+.k-grafik .gw-rille{stroke:#3f484d;stroke-width:1.2;stroke-linecap:round}
 .k-grafik .dunkel2{fill:#000;opacity:.07}
 .k-grafik .f-sub-l{fill:var(--g-sub);filter:brightness(1.06)}
 .k-grafik .f-blut{fill:var(--g-blut)}

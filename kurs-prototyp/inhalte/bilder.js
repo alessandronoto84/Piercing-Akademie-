@@ -182,12 +182,6 @@ KURS.bilder = {
 "h": 207,
 "seite": 20
 },
-"nadelabwurf": {
-"src": "inhalte/bilder/nadelabwurf.webp",
-"w": 134,
-"h": 201,
-"seite": 27
-},
 "mundschutz": {
 "src": "inhalte/bilder/mundschutz.webp",
 "w": 224,

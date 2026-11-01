@@ -27,7 +27,6 @@ KURS.module.push({
       inhalt: [
         { typ: "text", text: "Voraussetzung für das Empfinden von Schmerz sind Schmerzrezeptoren (Nozizeptoren) und die ungestörte Weiterleitung an das Gehirn (zentrales Nervensystem). Die Schmerzrezeptoren sind meist freie Nervenenden." },
         { typ: "tabelle", kopf: ["Reiz", "Beispiele"], zeilen: [["Thermisch", "Hitze, Kälte"], ["Mechanisch", "Hiebe, Schnitte, Stiche, starker Druck"], ["Chemisch", "Säuren, Laugen"]] },
-        { typ: "foto", id: "frei-haut-rezeptoren", text: "Rezeptoren und Anhangsgebilde der Haut, links unbehaarte Leistenhaut (Handfläche), rechts behaarte Haut (Achsel); englisch beschriftet." },
         { typ: "merke", text: "Die International Association for the Study of Pain (IASP) definiert Schmerz seit 2020 als „ein unangenehmes Sinnes- und Gefühlserlebnis, das mit einer tatsächlichen oder drohenden Gewebeschädigung verknüpft ist oder einer solchen ähnelt“. Das Kursbuch zitiert die ältere Fassung, nach der auch Schmerz zählt, den Betroffene so beschreiben, als wäre eine Gewebeschädigung die Ursache." },
         { typ: "text", text: "In seltenen Fällen spüren Kunden schon vor dem eigentlichen Stich Schmerz, allein bei der Berührung der Haut. Schmerz kann also auch ohne körperliche Schädigung empfunden werden, etwa als Erwartungsschmerz aus Angst." }
       ],

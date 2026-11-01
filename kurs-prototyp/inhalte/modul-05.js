@@ -65,7 +65,6 @@ KURS.module.push({
         { typ: "liste", titel: "Wann", punkte: ["vor und nach dem Kontakt mit dem Kunden", "vor Tätigkeiten in einem sterilen Umfeld", "nach dem Kontakt mit potenziell infektiösen Materialien", "nach dem Kontakt mit der unmittelbaren Umgebung des Kunden"] },
         { typ: "text", text: "Das Desinfektionsmittel wird in alle Bereiche der Hand eingerieben. Achte besonders darauf, dass Handgelenke, Daumen, Fingerspitzen und Fingerzwischenräume dauerhaft benetzt sind. Der Vorgang dauert so lange wie die vom Hersteller empfohlene Einwirkzeit. Das Einreibe-Schema in acht Schritten zeigen die Bilder aus dem Kursbuch." },
         { typ: "galerie", titel: "Einreibe-Schema in acht Schritten", bilder: [["haende-1", "Schritt 1"], ["haende-2", "Schritt 2"], ["haende-3", "Schritt 3"], ["haende-4", "Schritt 4"], ["haende-5", "Schritt 5"], ["haende-6", "Schritt 6"], ["haende-7", "Schritt 7"], ["haende-8", "Schritt 8"]], text: "Jeder Schritt wird mehrmals wiederholt, bis die Einwirkzeit erreicht ist. Kursbuch S. 20." },
-        { typ: "foto", id: "frei-haende", text: "Das Einreibe-Schema als Piktogramm: alle Handflächen, Handrücken, Daumen, Fingerkuppen und Zwischenräume benetzen, die Einwirkzeit einhalten." }
       ],
       fragen: [
         ["Was soll die hygienische Händedesinfektion vor allem beseitigen?", ["Die transiente Hautflora", "Die residente Hautflora", "Bakteriensporen", "Sichtbaren Schmutz"], "Sie verhindert Übertragung zwischen Kunden.", "S. 19"],
@@ -184,7 +183,6 @@ KURS.module.push({
       seite: "S. 27",
       inhalt: [
         { typ: "text", text: "Nach dem Stechen muss die benutzte Nadel direkt und unmittelbar in einem Nadelabwurfbehälter entsorgt werden. Der volle Behälter wird verschlossen und kann dann im Restmüll entsorgt werden, aber nur komplett verschlossen." },
-        { typ: "foto", id: "nadelabwurf", text: "Nadelabwurfbehälter: verschließbar, durchstichsicher, in Griffweite. Kursbuch S. 27." },
         { typ: "foto", id: "frei-abwurf", text: "Durchstichsicherer Abwurfbehälter für Kanülen mit Warnhinweis." },
         { typ: "text", text: "Der Mund-Nasen-Schutz ist ein Hilfsmittel aus der Medizin. Er verhindert, dass Keime durch Sekrettröpfchen beim Atmen übertragen werden oder auf rein zu haltende Oberflächen gelangen. Er reduziert die Ausbreitung von Keimen deutlich, ist aber keine perfekte Lösung: Er filtert den Atemstrom nicht zu 100 Prozent, Luft strömt an den Seiten vorbei, und frei schwebende Keime werden wegen der Größe der Filterporen nicht vollständig erfasst." }
       ],

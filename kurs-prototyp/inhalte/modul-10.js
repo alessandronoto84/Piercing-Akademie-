@@ -103,7 +103,6 @@ KURS.module.push({
       inhalt: [
         { typ: "text", text: "Eine Perichondritis ist eine Entzündung der Knorpelhaut, meist an der Ohrmuschel. Sie ist die gefährlichste Komplikation von Knorpelpiercings: Knorpel hat keine eigenen Blutgefäße, wehrt Keime schlecht ab und kann dauerhaft zerstört werden." },
         { typ: "grafik", id: "perichondritis" },
-        { typ: "foto", id: "frei-pseudomonas", text: "Kolonien von Pseudomonas aeruginosa auf Blutagar im Labor." },
         { typ: "liste", titel: "Daran erkennst du sie", punkte: [
           "Die Ohrmuschel ist großflächig gerötet, geschwollen, heiß und sehr schmerzhaft, oft einige Tage bis Wochen nach dem Stich.",
           "Das Ohrläppchen bleibt meist ausgespart, weil es keinen Knorpel enthält. Das unterscheidet die Perichondritis von einer einfachen Hautentzündung.",

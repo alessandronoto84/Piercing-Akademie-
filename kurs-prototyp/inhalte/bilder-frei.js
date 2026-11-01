@@ -12,26 +12,6 @@ Object.assign(KURS.bilder = KURS.bilder || {}, {
 "url": "https://commons.wikimedia.org/w/index.php?curid=85919471",
 "lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0/"
 },
-"frei-haut-rezeptoren": {
-"src": "inhalte/bilder/frei-haut-rezeptoren.webp",
-"w": 640,
-"h": 453,
-"quelle": "Wikimedia Commons",
-"urheber": "Guido4",
-"lizenz": "CC BY-SA 4.0",
-"url": "https://commons.wikimedia.org/w/index.php?curid=63765352",
-"lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0/"
-},
-"frei-haende": {
-"src": "inhalte/bilder/frei-haende.webp",
-"w": 640,
-"h": 453,
-"quelle": "Wikimedia Commons",
-"urheber": "Raimundo Pastor",
-"lizenz": "CC BY-SA 4.0",
-"url": "https://commons.wikimedia.org/w/index.php?curid=88078866",
-"lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0/"
-},
 "frei-abwurf": {
 "src": "inhalte/bilder/frei-abwurf.webp",
 "w": 640,
@@ -52,16 +32,6 @@ Object.assign(KURS.bilder = KURS.bilder || {}, {
 "url": "https://commons.wikimedia.org/w/index.php?curid=29515961",
 "lizenz_url": "https://creativecommons.org/licenses/by/3.0/"
 },
-"frei-pseudomonas": {
-"src": "inhalte/bilder/frei-pseudomonas.webp",
-"w": 640,
-"h": 381,
-"quelle": "Wikimedia Commons",
-"urheber": "HansN.",
-"lizenz": "CC BY-SA 4.0",
-"url": "https://commons.wikimedia.org/w/index.php?curid=86321941",
-"lizenz_url": "https://creativecommons.org/licenses/by-sa/4.0/"
-},
 "frei-staph": {
 "src": "inhalte/bilder/frei-staph.webp",
 "w": 640,
@@ -71,16 +41,6 @@ Object.assign(KURS.bilder = KURS.bilder || {}, {
 "lizenz": "CC BY 2.0",
 "url": "https://commons.wikimedia.org/w/index.php?curid=158430136",
 "lizenz_url": "https://creativecommons.org/licenses/by/2.0/"
-},
-"frei-kanuele": {
-"src": "inhalte/bilder/frei-kanuele.webp",
-"w": 640,
-"h": 355,
-"quelle": "Wikimedia Commons",
-"urheber": "Fifo",
-"lizenz": "CC BY-SA 2.5",
-"url": "https://commons.wikimedia.org/w/index.php?curid=700192",
-"lizenz_url": "https://creativecommons.org/licenses/by-sa/2.5/"
 },
 "frei-anodisiert": {
 "src": "inhalte/bilder/frei-anodisiert.webp",
@@ -101,25 +61,5 @@ Object.assign(KURS.bilder = KURS.bilder || {}, {
 "lizenz": "CC BY 4.0",
 "url": "https://commons.wikimedia.org/w/index.php?curid=112338125",
 "lizenz_url": "https://creativecommons.org/licenses/by/4.0/"
-},
-"frei-gesichtsnerv": {
-"src": "inhalte/bilder/frei-gesichtsnerv.webp",
-"w": 640,
-"h": 589,
-"quelle": "Wikimedia Commons",
-"urheber": "Henry Vandyke Carter (Gray's Anatomy, 1918)",
-"lizenz": "Public Domain",
-"url": "https://commons.wikimedia.org/wiki/File:Gray788.png",
-"lizenz_url": ""
-},
-"frei-parotis": {
-"src": "inhalte/bilder/frei-parotis.webp",
-"w": 500,
-"h": 318,
-"quelle": "Wikimedia Commons",
-"urheber": "Henry Vandyke Carter (Gray's Anatomy, 1918)",
-"lizenz": "Public Domain",
-"url": "https://commons.wikimedia.org/wiki/File:Gray1022.png",
-"lizenz_url": ""
 }
 });

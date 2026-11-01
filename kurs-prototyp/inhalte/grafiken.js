@@ -577,6 +577,85 @@ window.KURS = window.KURS || { module: [] };
         l(x1 + 60, y0 + dy / 2 + 60, 520, 96, "sl") + t(526, 100, "Haut der Rückseite", "tb") };
   })();
 
+  // ---------- Gewebe als 3D-Scheibe (senkrecht, z. B. Ohrläppchen) und als 3D-Band (waagerecht) ----------
+  // Schichten von außen nach innen: Oberhaut, Lederhaut, Unterhaut (Fett), Lederhaut, Oberhaut
+  function scheibe3d(x0, x1, y0, y1, dx, dy, schwellung) {
+    var w = x1 - x0, ep = Math.max(3, w * 0.07), de = w * 0.2, out = "";
+    var st = [[x0, x0 + ep, "f-epi"], [x0 + ep, x0 + ep + de, "f-derm"], [x0 + ep + de, x1 - ep - de, "f-sub"], [x1 - ep - de, x1 - ep, "f-derm"], [x1 - ep, x1, "f-epi"]];
+    st.forEach(function (z) { out += '<polygon points="' + [z[0], y0, z[1], y0, z[1] + dx, y0 + dy, z[0] + dx, y0 + dy].join(",") + '" class="' + z[2] + '"/>'; });
+    out += '<polygon points="' + [x0, y0, x1, y0, x1 + dx, y0 + dy, x0 + dx, y0 + dy].join(",") + '" class="s1 fnone"/>';
+    out += '<polygon points="' + [x1, y0, x1 + dx, y0 + dy, x1 + dx, y1 + dy, x1, y1].join(",") + '" class="f-epi s1"/><polygon points="' + [x1, y0, x1 + dx, y0 + dy, x1 + dx, y1 + dy, x1, y1].join(",") + '" class="dunkel"/>';
+    st.forEach(function (z) { out += r(z[0], y0, z[1] - z[0], y1 - y0, z[2]); });
+    var mx = (x0 + x1) / 2, fh = (y1 - y0);
+    [[0.18, -0.02], [0.42, 0.04], [0.7, -0.03], [0.88, 0.02]].forEach(function (q) { out += e(mx + q[1] * w, y0 + q[0] * fh, Math.max(4, (w - 2 * ep - 2 * de) * 0.32), 6, "sd"); });
+    out += r(x0, y0, w, y1 - y0, "s1 fnone");
+    if (schwellung) out += e(mx, (y0 + y1) / 2, w * 0.95, fh * 0.32, "f-risk o5");
+    return out;
+  }
+  function band3d(x0, x1, y0, dicke, dx, dy) {
+    var y1 = y0 + dicke, ep = 3, de = dicke * 0.22, out = "";
+    out += '<polygon points="' + [x0, y0, x1, y0, x1 + dx, y0 + dy, x0 + dx, y0 + dy].join(",") + '" class="f-epi s1"/>';
+    out += '<polygon points="' + [x1, y0, x1 + dx, y0 + dy, x1 + dx, y1 + dy, x1, y1].join(",") + '" class="f-sub s1"/><polygon points="' + [x1, y0, x1 + dx, y0 + dy, x1 + dx, y1 + dy, x1, y1].join(",") + '" class="dunkel"/>';
+    out += r(x0, y0, x1 - x0, ep, "f-epi") + r(x0, y0 + ep, x1 - x0, de, "f-derm") + r(x0, y0 + ep + de, x1 - x0, dicke - 2 * (ep + de), "f-sub") + r(x0, y1 - ep - de, x1 - x0, de, "f-derm") + r(x0, y1 - ep, x1 - x0, ep, "f-epi");
+    return out + r(x0, y0, x1 - x0, dicke, "s1 fnone");
+  }
+  function zangenbacke(v, x, y, w, h) { return '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" rx="3" fill="url(#' + v + 's)" class="s1"/>'; }
+  var gruenVerlauf = function (id) { return '<linearGradient id="' + id + '" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1f5e2b"/><stop offset=".45" stop-color="#5cbf6d"/><stop offset="1" stop-color="#1f5e2b"/></linearGradient>'; };
+  var plastikVerlauf = function (id) { return '<linearGradient id="' + id + '" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#b9c6cb" stop-opacity=".9"/><stop offset=".5" stop-color="#ffffff" stop-opacity=".95"/><stop offset="1" stop-color="#9fb0b6" stop-opacity=".9"/></linearGradient>'; };
+
+  // ---------- Modul 9: Der Stich in vier Bildern, schattiert ----------
+  (function () {
+    var D = "<defs>" + metallDefs("sx") + gruenVerlauf("sxg") + plastikVerlauf("sxk") + '<linearGradient id="sxn" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#56626a"/><stop offset=".45" stop-color="#f3f5f6"/><stop offset="1" stop-color="#6f7a7f"/></linearGradient></defs>';
+    function feld(ox, n, titel, sub, inhalt) {
+      return '<g transform="translate(' + ox + ' 0)">' + r(4, 4, 152, 236, "fsurf s1", 10) + nr(24, 26, n) + t(40, 30, titel, "tb") +
+        e(84, 192, 60, 5, "schatten") + band3d(16, 136, 120, 30, 10, -10) + inhalt + t(80, 214, sub[0], "tm", "middle") + t(80, 228, sub[1] || "", "tm", "middle") + "</g>";
+    }
+    var klemme = zangenbacke("sx", 18, 104, 50, 11) + zangenbacke("sx", 92, 104, 50, 11) + zangenbacke("sx", 18, 155, 50, 11) + zangenbacke("sx", 92, 155, 50, 11);
+    var markierung = e(80, 120, 4, 2, "fa");
+    var kanuele = function (y1) { return '<rect x="76" y="62" width="8" height="' + (y1 - 62) + '" rx="2" fill="url(#sxk)" class="s1"/>' + '<rect x="78.5" y="56" width="3" height="' + (y1 - 52) + '" fill="url(#sxn)"/>' + '<polygon points="78.5,' + (y1 + 4) + ' 81.5,' + (y1 + 4) + ' 80,' + (y1 + 16) + '" fill="url(#sxn)"/>' + '<rect x="71" y="46" width="18" height="16" rx="3" fill="url(#sxg)"/>'; };
+    G.stich = { w: 640, h: 244, alt: G.stich.alt, text: G.stich.text,
+      svg: D + [
+        feld(0, "1", "Klemme", ["Fenster über der", "Markierung"], klemme + markierung),
+        feld(160, "2", "Stechen", ["zügig, in die", "sichtbare Seite"], klemme + '<g class="anim-stechen">' + kanuele(168) + "</g>" + pfeil(114, 66, 114, 100, "a b2")),
+        feld(320, "3", "Nadel heraus", ["Kunststoffüberzug", "bleibt im Kanal"], '<rect x="76" y="100" width="8" height="66" rx="2" fill="url(#sxk)" class="s1"/>' + '<g class="anim-raus"><rect x="78.5" y="58" width="3" height="38" fill="url(#sxn)"/><rect x="71" y="46" width="18" height="14" rx="3" fill="url(#sxg)"/></g>' + pfeil(114, 100, 114, 62, "a b2")),
+        feld(480, "4", "Schmuck rein", ["drücken, nicht ziehen;", "Kunde atmet aus"], '<rect x="76" y="126" width="8" height="54" rx="2" fill="url(#sxk)" class="s1"/>' + '<g class="anim-schieben">' + '<rect x="77" y="58" width="6" height="74" rx="3" fill="url(#sxp)"/>' + kugel3d("sx", 80, 52, 8) + "</g>" + pfeil(114, 66, 114, 106, "a b2"))
+      ].join("") };
+  })();
+
+  // ---------- Modul 6: Außen- und Innengewinde, schattiert ----------
+  (function () {
+    var D = "<defs>" + metallDefs("gw") + "</defs>";
+    var gewindeAussen = ""; for (var x = 118; x < 214; x += 6) gewindeAussen += l(x, 89, x + 4, 101, "gw-rille");
+    var gewindeInnen = ""; for (var x2 = 530; x2 < 548; x2 += 4) gewindeInnen += l(x2, 91, x2 + 3, 99, "gw-rille");
+    G.gewinde = { w: 640, h: 220, alt: G.gewinde.alt, text: G.gewinde.text,
+      svg: D + e(140, 178, 110, 6, "schatten") + scheibe3d(112, 152, 40, 160, 22, -14) +
+        stab3d("gw", 40, 216, 95, 10) + gewindeAussen + kugel3d("gw", 230, 95, 13) +
+        e(132, 95, 30, 18, "f-risk o5") + p("M118 86 l6 -5 M118 104 l6 5 M146 86 l-6 -5 M146 104 l-6 5", "err") +
+        t(140, 196, "Außengewinde", "tb", "middle") + t(140, 212, "Gewinde reibt im Stichkanal", "terr", "middle") +
+        e(460, 178, 110, 6, "schatten") + scheibe3d(432, 472, 40, 160, 22, -14) +
+        stab3d("gw", 360, 524, 95, 10) + '<rect x="524" y="92" width="26" height="6" rx="2" fill="url(#gws)"/>' + gewindeInnen + kugel3d("gw", 564, 95, 13) +
+        l(537, 99, 537, 128, "sl") + t(537, 142, "Gewinde am Stift", "tm", "middle") + t(537, 156, "der Kugel", "tm", "middle") +
+        t(460, 196, "Innengewinde", "tb", "middle") + t(460, 212, "glatter Stab gleitet hindurch", "tok", "middle") };
+  })();
+
+  // ---------- Modul 6: Überlänge, schattiert ----------
+  (function () {
+    var D = "<defs>" + metallDefs("ul") + "</defs>";
+    function feld(cx, dicke, halb, schwellung, druck) {
+      var x0 = cx - dicke / 2, x1 = cx + dicke / 2;
+      return e(cx + 10, 186, 90, 6, "schatten") + scheibe3d(x0, x1, 46, 166, 20, -12, schwellung) +
+        stab3d("ul", cx - halb, cx + halb, 106, 8) + kugel3d("ul", cx - halb - 6, 106, 11) + kugel3d("ul", cx + halb + 6, 106, 11) +
+        (druck ? c(cx - halb - 2, 106, 17, "f-risk o5") + c(cx + halb + 2, 106, 17, "f-risk o5") : "");
+    }
+    G.ueberlaenge = { w: 660, h: 240, alt: G.ueberlaenge.alt, text: G.ueberlaenge.text,
+      svg: D + feld(110, 56, 52, true, false) + p("M62 186 v6 h96 v-6", "sd") +
+        t(110, 214, "frisch: Spielraum", "tb", "middle") + t(110, 230, "≈ 4 mm Überlänge", "tm", "middle") +
+        feld(330, 56, 30, true, true) +
+        t(330, 214, "zu kurz", "terr", "middle") + t(330, 230, "Kugeln drücken ins Gewebe", "tm", "middle") +
+        feld(550, 40, 24, false, false) +
+        t(550, 214, "abgeheilt", "tb", "middle") + t(550, 230, "kürzerer Zweiteinsatz", "tm", "middle") };
+  })();
+
   // ---------- Anodisierfarben von Titan ----------
   (function () {
     var farben = [["Bronze", "≈ 15 V", "#9c6b30"], ["Violett", "≈ 20 V", "#6a3fa0"], ["Dunkelblau", "≈ 25 V", "#24418f"], ["Blau", "≈ 30 V", "#2f6fd0"], ["Hellblau", "≈ 40 V", "#7fb8e8"], ["Gold", "≈ 55 V", "#d9b44a"], ["Rosa", "≈ 75 V", "#d76a9a"], ["Türkis", "≈ 85 V", "#3cb7ae"], ["Grün", "≈ 95 V", "#5daa5a"]];

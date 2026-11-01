@@ -64,7 +64,7 @@ KURS.module.push({
       inhalt: [
         { typ: "text", text: "An einigen Stellen im Gesicht liegen wichtige Gefäße und Nerven dicht unter der Haut. Das Kursbuch nennt diese Zonen ausdrücklich." },
         { typ: "tabelle", kopf: ["Piercing", "Risiko", "Regel"], zeilen: [
-          ["Augenbraue", "Innen Austritt von Nerven und Gefäßen (laut Kursbuch Lähmungsgefahr)", "Nur im äußeren Drittel der Augenbraue stechen"],
+          ["Augenbraue", "Innen treten Nerven und Gefäße aus (Taubheit, Blutung)", "Nur im äußeren Drittel der Augenbraue stechen"],
           ["Cheek (Wange)", "Wichtige Arterien und Nerven, Gefahr einer Verunstaltung; Grübchen können bleiben", "Nur durch professionelle Piercer; als Anfänger ablehnen"],
           ["Bridge", "Zu tief: Druck auf Nervenbahnen; zu oberflächlich: Herauswachsen", "Als Anfänger ablehnen"],
           ["Eskimo", "Einreißen oder dauerhaftes Einfallen der Lippe", "Als Anfänger ablehnen, nicht ins Lippenrot stechen"]
@@ -72,7 +72,7 @@ KURS.module.push({
         { typ: "praxis", text: "Ein Nein zu einem riskanten Wunsch ist professionell. Empfiehl einem Kunden lieber einen erfahrenen Kollegen, als ein Piercing zu stechen, das du nicht sicher beherrschst." }
       ],
       fragen: [
-        ["Wo darf ein Augenbrauenpiercing gestochen werden?", ["Nur im äußeren Drittel", "Im inneren Drittel nahe der Nase", "Im mittleren Drittel über der Pupille", "Überall, wenn oberflächlich gestochen wird"], "Innen treten Nerven und Gefäße aus (im Kursbuch: Lähmungsgefahr).", "S. 89"],
+        ["Wo darf ein Augenbrauenpiercing gestochen werden?", ["Nur im äußeren Drittel", "Im inneren Drittel nahe der Nase", "Im mittleren Drittel über der Pupille", "Überall, wenn oberflächlich gestochen wird"], "Innen treten Nerven und Gefäße aus; eine Verletzung kann Taubheit an Stirn und Oberlid verursachen.", "S. 89"],
         ["Warum lehnen Anfänger das Cheek-Piercing ab?", ["Dort verlaufen wichtige Arterien, Nerven und der Speichelgang", "Es lässt sich nur mit Biopsiestanze stechen", "Es heilt schneller als andere Piercings", "Es braucht immer eine Betäubung"], "Zudem droht eine Verunstaltung.", "S. 92"],
         ["Was kann ein zu tief gestochenes Bridge verursachen?", ["Druck auf Nervenbahnen", "Herauswachsen", "Eine Perichondritis", "Einen Einriss der Lippe"], "Zu oberflächlich wächst es heraus.", "S. 91"],
         ["Was passiert, wenn ein Bridge zu oberflächlich gestochen wird?", ["Es wächst heraus", "Es drückt auf Nervenbahnen", "Es durchsticht das Nasenbein", "Es heilt besonders schnell"], "Als Anfänger ablehnen.", "S. 91"],
@@ -94,8 +94,6 @@ KURS.module.push({
           "Im äußeren Drittel liegen keine größeren Austrittspunkte. Das ist der Grund für die Regel des Kursbuchs."
         ] },
         { typ: "grafik", id: "wange" },
-        { typ: "foto", id: "frei-gesichtsnerv", text: "Verlauf und Verbindungen des Gesichtsnervs (N. facialis) als Schema aus Gray's Anatomy, 1918 (englisch beschriftet)." },
-        { typ: "foto", id: "frei-parotis", text: "Die Ohrspeicheldrüse mit ihrem Ausführungsgang (Parotid duct = Ductus parotideus), Gray's Anatomy, 1918." },
         { typ: "liste", titel: "Wange", punkte: [
           "Der Gesichtsnerv (N. facialis) tritt unterhalb des Ohrs aus dem Schädel, läuft durch die Ohrspeicheldrüse und fächert sich in Äste zu Stirn, Auge, Wange, Mund und Kinn auf. Er steuert die Mimik; eine Verletzung kann Teile des Gesichts lähmen.",
           "Der Speichelgang der Ohrspeicheldrüse (Ductus parotideus) verläuft etwa zwei Zentimeter unterhalb des Jochbogens quer über den Kaumuskel und mündet gegenüber dem zweiten oberen Backenzahn in den Mund.",

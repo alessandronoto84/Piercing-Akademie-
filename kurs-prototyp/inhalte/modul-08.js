@@ -106,12 +106,12 @@ window.KURS = window.KURS || { module: [] };
         seite: "S. 89, 91",
         inhalt: [
           { typ: "grafik", id: "augenbraue" },
-          db("Augenbraue", "Meist vertikal durch die Augenbraue, etwa 8 mm Stichkanal.", "Banane, Hufeisen", "18G", "Snaptile, Gazeklemme", "Nur im äußeren Drittel der Augenbraue stechen: Innen treten Nerven und Gefäße aus (im Kursbuch: Lähmungsgefahr; siehe Modul 3).", "S. 89"),
+          db("Augenbraue", "Meist vertikal durch die Augenbraue, etwa 8 mm Stichkanal.", "Banane, Hufeisen", "18G", "Snaptile, Gazeklemme", "Nur im äußeren Drittel der Augenbraue stechen: Innen treten Nerven und Gefäße aus (siehe Modul 3).", "S. 89"),
           db("Bridge", "Auch Erl. Am oberen Ende des Nasenrückens, waagerecht auf dem Nasenbein zwischen den Augen. Zu tief kann es auf Nervenbahnen drücken, zu oberflächlich wächst es heraus.", "Barbell, Banane", "18G", "Snaptile, Gazeklemme", "Als Piercing-Anfänger ablehnen.", "S. 91")
         ],
         fragen: [
           ["Wie lang ist der Stichkanal beim Augenbrauenpiercing etwa?", ["8 mm", "4 mm", "12 mm", "2 cm"], "Datenblatt Augenbraue.", "S. 89"],
-          ["Wo darf das Augenbrauenpiercing gestochen werden?", ["Nur im äußeren Drittel", "Im inneren Drittel", "Im mittleren Drittel", "Überall bei oberflächlichem Stich"], "Innen treten Nerven und Gefäße aus (im Kursbuch: Lähmungsgefahr).", "S. 89"],
+          ["Wo darf das Augenbrauenpiercing gestochen werden?", ["Nur im äußeren Drittel", "Im inneren Drittel", "Im mittleren Drittel", "Überall bei oberflächlichem Stich"], "Innen treten Nerven und Gefäße aus; eine Verletzung kann Taubheit an Stirn und Oberlid verursachen.", "S. 89"],
           ["Wie verhältst du dich als Anfänger beim Wunsch nach einem Bridge?", ["Ich lehne ab", "Ich steche es besonders oberflächlich", "Ich steche es besonders tief", "Ich steche es mit 14G"], "Als Anfänger ablehnen.", "S. 91"]
         ]
       },
