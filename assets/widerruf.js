@@ -3,7 +3,7 @@
    als Nachweis und schickt sofort eine Eingangsbestätigung per E-Mail. Ohne Server: vorbereitete E-Mail (mailto). */
 (function () {
   "use strict";
-  var form = document.getElementById("widerruf");
+  var form = document.getElementById("widerruf-formular");
   if (!form) return;
   var SPRACHE = (document.documentElement.lang || "de").slice(0, 2);
   var T = {
