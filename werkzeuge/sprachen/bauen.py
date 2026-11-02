@@ -51,11 +51,20 @@ def relativ(von, nach, seite):
     return "../" + nach + "/" + seite
 
 
+# Flaggen als kleine SVGs (Englisch: US-Flagge, weil die Website amerikanisches Englisch verwendet)
+FLAGGE = {
+    "de": '<svg viewBox="0 0 5 3" aria-hidden="true"><rect width="5" height="1" fill="#000"/><rect y="1" width="5" height="1" fill="#DD0000"/><rect y="2" width="5" height="1" fill="#FFCE00"/></svg>',
+    "en": '<svg viewBox="0 0 19 10" aria-hidden="true"><rect width="19" height="10" fill="#B22234"/>' + "".join('<rect y="%.4f" width="19" height="%.4f" fill="#fff"/>' % ((2 * i + 1) * 10 / 13, 10 / 13) for i in range(6)) + '<rect width="7.6" height="5.385" fill="#3C3B6E"/>' + "".join('<circle cx="%.2f" cy="%.2f" r=".38" fill="#fff"/>' % (0.95 + 1.27 * x + (0.63 if y % 2 else 0), 0.6 + 0.6 * y * 1.13) for y in range(7) for x in range(6 if y % 2 == 0 else 5)) + '</svg>',
+    "es": '<svg viewBox="0 0 4 3" aria-hidden="true"><rect width="4" height="3" fill="#AA151B"/><rect y=".75" width="4" height="1.5" fill="#F1BF00"/></svg>',
+}
+NAME = {"de": "Deutsch", "en": "English", "es": "Español"}
+
+
 def sprachwahl(sprache, seite):
     teile = []
     for code in ["de", "en", "es"]:
         aktuell = ' aria-current="true"' if code == sprache else ""
-        teile.append('<a href="%s" hreflang="%s" lang="%s"%s>%s</a>' % (relativ(sprache, code, seite), code, code, aktuell, code.upper()))
+        teile.append('<a href="%s" hreflang="%s" lang="%s" title="%s" aria-label="%s"%s>%s</a>' % (relativ(sprache, code, seite), code, code, NAME[code], NAME[code], aktuell, FLAGGE[code]))
     return '<span class="sprachwahl" role="group" aria-label="%s">%s</span>' % (LABEL[sprache], "".join(teile))
 
 
@@ -66,11 +75,12 @@ def hreflang(seite):
 
 
 def mehrsprachig(s, sprache, seite):
-    """Sprachauswahl in die Navigation und hreflang in den Kopf (ersetzt vorhandene)."""
+    """Sprachauswahl (Flaggen) in die Kopfzeile und hreflang in den Kopf (ersetzt vorhandene)."""
     s = re.sub(r'<span class="sprachwahl"[^>]*>.*?</span>\n[ \t]*', "", s, flags=re.S)
     s = re.sub(r'<link rel="alternate" hreflang="[^"]+" href="[^"]+">\n', "", s)
-    s = s.replace('<a class="btn small" href=', sprachwahl(sprache, seite) + '\n      <a class="btn small" href=', 1)
-    assert 'class="sprachwahl"' in s, (sprache, seite, "Navigation ohne Anmeldeknopf")
+    # Flaggen stehen außerhalb des Menüs direkt in der Kopfzeile (auch auf dem Handy immer sichtbar)
+    s = re.sub(r'\n    <nav aria-label="', lambda m: '\n    ' + sprachwahl(sprache, seite) + m.group(0), s, count=1)
+    assert 'class="sprachwahl"' in s, (sprache, seite, "Kopfzeile ohne Navigation")
     s = re.sub(r'(<link rel="canonical" href="[^"]+">)', lambda m: m.group(1) + "\n" + hreflang(seite), s, count=1)
     return s
 
