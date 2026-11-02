@@ -4,28 +4,6 @@ Stand: 21.10.2026. Recherchiert über die Websuche. Die Netzwerk-Richtlinie dies
 
 ---
 
-## 1. Fernunterrichtsschutzgesetz (FernUSG) – wichtig für den Online-Kurs
-
-**Worum es geht:** Nach dem FernUSG braucht ein bezahlter Kurs eine Zulassung der Staatlichen Zentralstelle für Fernunterricht (ZFU), wenn er Wissen überwiegend räumlich getrennt vermittelt und der Anbieter oder seine Beauftragten den Lernerfolg überwachen. Ohne diese Zulassung ist der Vertrag nichtig (§ 7 FernUSG). Teilnehmende können dann ihr Geld zurückfordern.
-
-**Rechtsprechung:**
-- **BGH, 12.06.2025, III ZR 109/24:** Ein überwiegend asynchrones Online-Mentoring ohne ZFU-Zulassung war nichtig; der Teilnehmer bekam rund 47.600 € zurück. Das Gesetz gilt auch, wenn die Teilnehmenden Unternehmer sind. Für die Überwachung des Lernerfolgs genügt sehr wenig.
-- **BGH, 05.02.2026, III ZR 137/25:** Live-Online-Formate mit unmittelbarer Interaktion fallen in der Regel nicht unter das FernUSG. Aufgezeichnete Module ohne Rückfragemöglichkeit bleiben erfasst. Entscheidend ist, was der Vertrag verspricht, nicht wie der Kurs tatsächlich abläuft.
-
-**Bedeutung für die Piercing Akademie:**
-- **Online-Kurs:** Er wird im eigenen Tempo absolviert (asynchron) und hat Quizfragen und einen Abschlusstest. Im Komplett-Paket kommen 1:1-Coaching und 12 Monate Support hinzu. Das sind genau die Merkmale, die der BGH 2025 als Fernunterricht gewertet hat.
-- **Praxistage in Lingen:** Sie sind Präsenzunterricht und für sich genommen kein Fernunterricht.
-- **Folge:** Vor dem Verkauf klären lassen, ob für das Basis-Paket und den Online-Anteil der anderen Pakete eine ZFU-Zulassung nötig ist. Alternativ lässt sich das Angebot so gestalten, dass es nicht unter das Gesetz fällt. **Diese Frage sollte vor dem Start der Buchungen anwaltlich geprüft werden.** Sie wirkt sich auch auf AGB und Kursplattform aus.
-
-Quellen:
-- [LTO: BGH zu Online-Kursen (III ZR 109/24)](https://www.lto.de/recht/juristen/b/bgh-iiizr10924-anwaelte-fortbildung-online-aufzeichnung-zulassung-fernunterricht)
-- [Versicherungsbote: BGH – Online-Coaching ohne Zulassung nichtig](https://www.versicherungsbote.de/id/4941333/BGH-Online-Coaching-ohne-Zulassung-nichtig/)
-- [FGS: BGH vom 05.02.2026 (III ZR 137/25) – keine FernUSG-Anwendbarkeit auf Live-Online-Formate](https://www.fgs.de/en/news-and-insights/blog/detail/bundesgerichtshof-vom-05022026-iii-zr-13725-keine-fernusg-anwendbarkeit-auf-live-online-formate)
-- [beck-aktuell: Live statt asynchron – BGH grenzt Fernunterricht neu ab](https://www.beck-aktuell.de/heute-im-recht/rechtsprechung/live-statt-asynchron-bgh-fernunterricht-online-coaching-2026-03-04)
-- [anwalt.de: BGH präzisiert FernUSG 2026](https://www.anwalt.de/rechtstipps/bgh-praezisiert-fernusg-2026-wann-online-coachings-nicht-unter-das-fernunterrichtsgesetz-fallen-264942.html)
-
----
-
 ## 2. Kanülenstärken (Website-Grafik und Kursbuch S. 64)
 
 | Stärke | Kursbuch S. 64 | Website | Herstellerangabe B. Braun Vasofix | Nennmaß Gauge |

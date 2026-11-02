@@ -6,7 +6,6 @@ Stand: 26.10.2026. Erledigtes steht unten. Details und Quellen: `KURS-RECHERCHE.
 
 | # | Was | Warum | Wer |
 |---|---|---|---|
-| 1 | **Anwalt: Fernunterrichtsgesetz (ZFU-Zulassung)** prüfen lassen | Ein bezahlter Online-Kurs mit Tests ist nach BGH 2025/2026 sehr wahrscheinlich zulassungspflichtig. Ohne Zulassung ist der Vertrag nichtig, Teilnehmer bekommen ihr Geld zurück. Alternative: Online-Teil als Live-Termine anbieten. | Anwalt |
 | 2 | **Anwalt oder Abmahnschutz-Dienst:** AGB, Widerruf, Datenschutz, Impressum, Muster-Einverständniserklärung | Schutz vor Abmahnungen; die Texte sind sorgfältige Entwürfe, aber keine Rechtsberatung. | Anwalt / z. B. IT-Recht-Kanzlei, eRecht24 |
 | 3 | **Entscheidung Kursplattform** (z. B. elopage, Digistore24, Teachable oder eigene Lösung) | Login, Bezahlung, Freischaltung nach Kauf, Fortschritt auf dem Server, fälschungssichere Bescheinigung, gesperrter Prüfmodus. Ich übertrage die Inhalte dorthin. | du |
 | 4 | **Domain und Hosting** (z. B. piercingakademie.de; Hoster mit Sitz in der EU) | Seite online stellen; Datenschutzerklärung braucht Name, Sitz und Auftragsverarbeitungsvertrag des Hosters. | du |
@@ -16,7 +15,7 @@ Stand: 26.10.2026. Erledigtes steht unten. Details und Quellen: `KURS-RECHERCHE.
 | 8 | **Händlerliste für Modul 11** (Schmuck, Kanülen, Desinfektion) oder Streichung | Platzhalter „Welche Händler sich bewährt haben …“ | du |
 | 9 | **Echte Fotos und kurze Videos**: du im Studio, Arbeitsplatz, Autoklav, Praxistag | Echte Bilder wirken stärker als Symbolbilder. | du |
 | 10 | **Stimmen von Teilnehmern** (3–5, mit Einwilligung) | Vertrauen; bis dahin bewusst kein Bewertungsbereich. | du |
-| 11 | **Rechnungsangaben**: Kleinunternehmer oder Umsatzsteuer? | Preisangaben („inkl. MwSt.“ oder Hinweis § 19 UStG) und Rechnungen. | du / Steuerberater |
+| 11 | ~~Rechnungsangaben~~ | Erledigt: Verkauf über dein Einzelunternehmen (740 Piercing); Preise bleiben „inkl. MwSt.“. | – |
 | 12 | **Berufshaftpflicht** für Kurs und Praxistage bestätigen | Absicherung der Praxistage mit Modellen. | Versicherung |
 | 13 | **Stripe: API-Schlüssel und Webhook** nach `STRIPE-ANLEITUNG.md` in den Umgebungseinstellungen hinterlegen (keine Bezahl-Links mehr nötig, die Bestellseite ist fertig) | Kaufknopf und Bestellseite auf der Website. | du |
 | 14 | **Cloudflare-Zugänge** nach `CLOUDFLARE-PLAN.md` in den Umgebungseinstellungen hinterlegen (entschieden: eigene Lösung auf Cloudflare) | Login, Bezahlschranke und automatische Freischaltung. | du, dann ich |

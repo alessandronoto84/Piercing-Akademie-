@@ -129,8 +129,7 @@ Auf den Rechtsseiten sind die offenen Punkte sichtbar als „Zur Prüfung“ mar
 5. **E-Mail-Postfach:** privates Gmail oder Google Workspace mit Auftragsverarbeitungsvertrag?
 6. **Verbraucherstreitbeilegung (§ 36 VSBG):** seit 21.10.2026 im Impressum: „Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.“ Das gilt so nur, solange die Akademie höchstens 10 Personen beschäftigt.
 7. **Bildrechte:** geklärt am 21.10.2026. Für alle Fotos auf der Website liegen schriftliche Einwilligungen vor.
-8. **Fernunterrichtsschutzgesetz (FernUSG):** Der Online-Kurs (asynchron, mit Quiz, Abschlusstest und Support) kann nach dem BGH-Urteil vom 12.06.2025 (III ZR 109/24) eine Zulassung der Staatlichen Zentralstelle für Fernunterricht (ZFU) brauchen. Ohne Zulassung wären die Verträge nichtig. Vor dem Start der Buchungen anwaltlich klären lassen; Details und Quellen in [KURS-RECHERCHE.md](KURS-RECHERCHE.md), Abschnitt 1.
-9. **Gesamtprüfung:** Datenschutz, Impressum und AGB vor dem Livegang anwaltlich prüfen lassen.
+8. **Gesamtprüfung:** Datenschutz, Impressum und AGB vor dem Livegang anwaltlich prüfen lassen.
 
 ---
 
@@ -199,10 +198,9 @@ Stand 24.10.2026. Entscheidung: Kurs-Prototyp und Verkaufsseite bauen; Kursplatt
 
 **Offen:**
 1. **Kursplattform:** Wahl der Plattform und Übernahme der Inhalte.
-2. **FernUSG:** Klärung, ob eine ZFU-Zulassung nötig ist (siehe Abschnitt 6, Punkt 8). Das betrifft genau diesen asynchronen Kurs mit Tests.
-3. **Fachliche Durchsicht:** Module 03 und 11 sowie alle „Ergänzungen“ fachlich prüfen.
-4. **Händlerliste:** Die bewährten Händler fehlen noch in Modul 11.
-5. **Zugangsdauer:** 12 Monate stehen auf der Verkaufsseite (aus dem AGB-Vorschlag); bitte bestätigen.
+2. **Fachliche Durchsicht:** Module 03 und 11 sowie alle „Ergänzungen“ fachlich prüfen.
+3. **Händlerliste:** Die bewährten Händler fehlen noch in Modul 11.
+4. **Zugangsdauer:** 12 Monate stehen auf der Verkaufsseite (aus dem AGB-Vorschlag); bitte bestätigen.
 
 ## 7a. Abgleich mit dem Kursbuch
 
@@ -235,8 +233,6 @@ Die Markierung „neu“ auf der Website passt damit genau zu den Modulen, die �
 - **Bildquellen im Buch:** „Canva, Wikipedia“. Für den Online-Kurs die Lizenzbedingungen der Bilder prüfen, besonders bei Wikipedia-Bildern (Namensnennung).
 
 ## 8. Offene Entscheidungen
-
-0. **FernUSG/ZFU (vorrangig):** Online-Kurs zulassen lassen oder so gestalten, dass er nicht unter das FernUSG fällt (siehe Abschnitt 6, Punkt 8). Davon hängen AGB, Kursplattform und der Buchungsstart ab.
 
 1. **Kursplattform:** Welche Plattform, welche URL? Danach den Buchungsbutton aktivieren und die Rechtstexte ergänzen.
 2. **Formular-Backend:** Den heutigen E-Mail-Entwurf beibehalten oder auf FormSubmit umstellen? FormSubmit wäre bequemer, weil das Formular dann direkt sendet. Es leitet aber alle Daten über einen US-Dienst; das muss in die Datenschutzerklärung, und die Zieladresse muss einmalig per Bestätigungs-Mail freigeschaltet werden. Umstellung nur nach Freigabe.

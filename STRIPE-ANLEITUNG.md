@@ -15,7 +15,7 @@ Stand: 01.11.2026. Website und Server sind fertig vorbereitet: Preiskarten, eige
 
 **Preise ändern:** in `server/src/index.js` (`PAKETE`, in Cent) **und** auf der Website (`index.html`, `bestellen.html`, danach `python3 werkzeuge/sprachen/bauen.py`).
 
-> **Vorher klären:** Verkauf des Online-Kurses erst nach der Prüfung zum Fernunterrichtsgesetz (STARTLISTE Punkt 1). Ob „inkl. MwSt.“ stimmt oder du Kleinunternehmer bist (dann Hinweis nach § 19 UStG statt „inkl. MwSt.“), klärt STARTLISTE Punkt 11.
+> Verkauft wird über dein Einzelunternehmen (740 Piercing); die Preise sind Endpreise inkl. MwSt.
 
 ## 1. Konto vorbereiten (Stripe-Dashboard, dashboard.stripe.com)
 
