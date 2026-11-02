@@ -36,6 +36,7 @@ export function mailWillkommen({ env, email, name, paket, sprache, betrag, waehr
   const datum = new Date(gekauft).toLocaleDateString(s === "en" ? "en-US" : s === "es" ? "es-ES" : "de-DE");
   const p = PAKETE[s][paket] || paket;
   const mitPraxis = paket !== "basis";
+  const mitSet = paket === "komplett"; // Übungsset für zu Hause wird verschickt
   const T = {
     de: {
       betreff: "Deine Buchung bei der Piercing Akademie – Zugang zum Online-Kurs",
@@ -46,6 +47,7 @@ export function mailWillkommen({ env, email, name, paket, sprache, betrag, waehr
         buchLink ? "Das Kursbuch ist in deinem Paket enthalten: Du liest es online in der Fahrschule unter „Kursbuch“, mit Suche und eigenen Notizen." : "",
         "Deine Zustimmung im Bestellvorgang: Du hast ausdrücklich verlangt, dass wir vor Ablauf der Widerrufsfrist mit der Bereitstellung des Online-Kurses beginnen, und bestätigt, dass du dadurch dein Widerrufsrecht für den Online-Kurs verlierst. Es erlischt mit der Freischaltung deines Zugangs, also mit deiner ersten Anmeldung (§ 356 Abs. 5 BGB)." + (zustimmung ? " (Deine Angabe: „" + zustimmung + "“)" : ""),
         mitPraxis ? "Für Praxistage und Coaching gilt die Widerrufsbelehrung in unseren AGB. Wir melden uns, um den Termin deines Praxistags zu vereinbaren." : "",
+        mitSet ? "Dein Übungsset für zu Hause schicken wir an die Lieferadresse, die du bei der Bezahlung angegeben hast. Für das Übungsset gilt das Widerrufsrecht von 14 Tagen ab Erhalt; ausgenommen sind steril verpackte Teile (z. B. Kanülen), deren Versiegelung du nach der Lieferung entfernt hast." : "",
         { html: '<p>Unsere AGB mit Widerrufsbelehrung: <a href="' + esc(agb) + '">' + esc(agb) + "</a></p>", text: "Unsere AGB mit Widerrufsbelehrung: " + agb }]
     },
     en: {
@@ -57,6 +59,7 @@ export function mailWillkommen({ env, email, name, paket, sprache, betrag, waehr
         buchLink ? "The course book is included in your package: you read it online in the course under “Course book”, translated into English with the German original pages, search and your own notes." : "",
         "Your consent during checkout: you expressly requested that we begin providing the online course before the end of the withdrawal period and acknowledged that you thereby lose your right of withdrawal for the online course. It expires when your access is activated, i.e. with your first login (Section 356 (5) German Civil Code)." + (zustimmung ? " (Your selection: “" + zustimmung + "”)" : ""),
         mitPraxis ? "The cancellation policy in our terms applies to practice days and coaching. We will contact you to arrange the date of your practice day." : "",
+        mitSet ? "We will ship your practice set for home to the delivery address you entered at checkout. For the practice set, the 14-day right of withdrawal runs from receipt; it does not apply to sterile-packed items (e.g. cannulas) whose seal you have removed after delivery." : "",
         { html: '<p>Our terms and cancellation policy: <a href="' + esc(agb) + '">' + esc(agb) + "</a> (the German version is legally binding)</p>", text: "Our terms and cancellation policy: " + agb + " (the German version is legally binding)" }]
     },
     es: {
@@ -68,6 +71,7 @@ export function mailWillkommen({ env, email, name, paket, sprache, betrag, waehr
         buchLink ? "El libro del curso está incluido en tu paquete: lo lees online en el curso, en «Libro del curso», traducido al español, con las páginas originales en alemán, búsqueda y notas propias." : "",
         "Tu consentimiento durante la compra: solicitaste expresamente que empezáramos a prestar el curso online antes de que finalice el plazo de desistimiento y reconociste que con ello pierdes tu derecho de desistimiento respecto del curso online. Se extingue al activarse tu acceso, es decir, con tu primer inicio de sesión (art. 356, apdo. 5, del Código Civil alemán)." + (zustimmung ? " (Tu selección: «" + zustimmung + "»)" : ""),
         mitPraxis ? "Para los días de práctica y la mentoría se aplica la información sobre el desistimiento de nuestras condiciones. Te contactaremos para acordar la fecha de tu día de práctica." : "",
+        mitSet ? "Te enviaremos tu set de práctica para casa a la dirección de entrega que indicaste al pagar. Para el set de práctica, el plazo de desistimiento de 14 días cuenta desde la recepción; se exceptúan los artículos en envase estéril (p. ej. cánulas) cuyo precinto hayas retirado tras la entrega." : "",
         { html: '<p>Nuestras condiciones e información sobre el desistimiento: <a href="' + esc(agb) + '">' + esc(agb) + "</a> (la versión alemana es la vinculante)</p>", text: "Nuestras condiciones e información sobre el desistimiento: " + agb + " (la versión alemana es la vinculante)" }]
     }
   }[s];
@@ -138,40 +142,14 @@ export async function sende(env, an, mail, antwortAn) {
 function euro(cent, s) { return (cent / 100).toLocaleString(s === "en" ? "en-US" : s === "es" ? "es-ES" : "de-DE", { style: "currency", currency: "EUR" }); }
 function agbLink(env, s) { return env.DOMAIN + "/" + (s === "de" ? "" : s + "/") + "agb.html"; }
 
-// Praxiskit: Vertragsbestätigung an den Kunden (Ware, Versand frei, 14 Tage Widerruf mit Ausnahme versiegelter Hygieneartikel)
-export function mailKit({ sprache, name, betrag, rabatt, adresse, env }) {
-  const s = PAKETE[sprache] ? sprache : "de";
-  const agb = agbLink(env, s);
-  const T = {
-    de: ["Deine Bestellung: Praxiskit", "Danke für deine Bestellung" + (name ? ", " + name : "") + "!",
-      "Du hast das Praxiskit (Übungsset mit Silikonohr) zum Preis von " + euro(betrag, s) + (rabatt ? " (Preis für Kursteilnehmer)" : "") + " bestellt, versandkostenfrei. Diese E-Mail ist deine Vertragsbestätigung.",
-      "Lieferadresse:", "Wir verschicken das Kit in der Regel innerhalb von 3 bis 5 Werktagen. Die Anleitung zu allen Übungen findest du im Praxislabor der Fahrschule; ohne Kurszugang schicken wir dir die Anleitung mit.",
-      "Widerrufsrecht: Du kannst den Kauf innerhalb von 14 Tagen nach Erhalt widerrufen. Ausgenommen sind sterile Teile (z. B. Kanülen), deren Versiegelung du nach der Lieferung entfernt hast. Die Kosten der Rücksendung trägst du.",
-      "Unsere AGB mit Widerrufsbelehrung: "],
-    en: ["Your order: practice kit", "Thank you for your order" + (name ? ", " + name : "") + "!",
-      "You ordered the practice kit (training set with silicone ear) for " + euro(betrag, s) + (rabatt ? " (course participant price)" : "") + ", free shipping. This email is your contract confirmation.",
-      "Delivery address:", "We usually ship the kit within 3 to 5 working days. The instructions for all exercises are in the practice lab of the online course; without course access we include the instructions in the parcel.",
-      "Right of withdrawal: you can withdraw from the purchase within 14 days of receipt. This does not apply to sterile items (e.g. cannulas) whose seal you have removed after delivery. You bear the cost of returning the goods.",
-      "Our terms and cancellation policy (the German version is legally binding): "],
-    es: ["Tu pedido: kit de práctica", "¡Gracias por tu pedido" + (name ? ", " + name : "") + "!",
-      "Has pedido el kit de práctica (set con oreja de silicona) por " + euro(betrag, s) + (rabatt ? " (precio para alumnos)" : "") + ", con envío gratuito. Este correo es tu confirmación del contrato.",
-      "Dirección de entrega:", "Normalmente enviamos el kit en un plazo de 3 a 5 días laborables. Las instrucciones de todos los ejercicios están en el laboratorio de práctica del curso online; si no tienes acceso al curso, las incluimos en el paquete.",
-      "Derecho de desistimiento: puedes desistir de la compra en un plazo de 14 días desde la recepción. Se exceptúan los artículos estériles (p. ej. cánulas) cuyo precinto hayas retirado tras la entrega. Los gastos de devolución corren de tu cuenta.",
-      "Nuestras condiciones e información sobre el desistimiento (la versión alemana es la vinculante): "]
-  }[s];
-  const r = rahmen(T[1], [T[2], { html: "<p>" + esc(T[3]) + "<br><strong>" + adresse.map(esc).join("<br>") + "</strong></p>", text: T[3] + "\n" + adresse.join("\n") }, T[4], T[5],
-    { html: "<p>" + esc(T[6]) + '<a href="' + esc(agb) + '">' + esc(agb) + "</a></p>", text: T[6] + agb }]);
-  return { betreff: T[0] + " – Piercing Akademie", ...r };
-}
-
-// Versandauftrag an die Akademie
-export function mailKitAkademie({ email, name, betrag, rabatt, adresse }) {
-  const r = rahmen("Praxiskit verschicken", [
-    "Neue Bestellung: Praxiskit für " + euro(betrag, "de") + (rabatt ? " (Kursteilnehmer-Rabatt)" : "") + ", bezahlt über Stripe.",
+// Versandauftrag an die Akademie: Übungsset aus dem Paket Komplett
+export function mailSetAkademie({ email, name, adresse }) {
+  const r = rahmen("Übungsset verschicken", [
+    "Neue Buchung: Paket Komplett, bezahlt über Stripe. Bitte das Übungsset für zu Hause verschicken.",
     { html: "<p>Lieferadresse:<br><strong>" + adresse.map(esc).join("<br>") + "</strong></p><p>E-Mail: " + esc(email) + "</p>", text: "Lieferadresse:\n" + adresse.join("\n") + "\nE-Mail: " + email },
-    "Bitte innerhalb von 3 bis 5 Werktagen verschicken und die Übungsanleitung beilegen, falls der Kunde keinen Kurszugang hat. Antworten an diese E-Mail gehen direkt an " + (name || email) + "."
+    "Antworten an diese E-Mail gehen direkt an " + (name || email) + "."
   ]);
-  return { betreff: "Versand: Praxiskit für " + (name || email), ...r };
+  return { betreff: "Versand: Übungsset (Paket Komplett) für " + (name || email), ...r };
 }
 
 // Kursbuch digital: Lesezugang in der Fahrschule (24 Monate) und Bestätigung (digitaler Inhalt, § 356 Abs. 5 BGB)

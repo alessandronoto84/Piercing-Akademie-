@@ -142,6 +142,304 @@ window.KURS.labor = {
   ]
 };
 
+/* Praxisaufgaben für die Module 01–04, 06, 10 und 11 (Trockenübungen, ohne Stechen). Grundlage: die jeweiligen Lektionen.
+   Die Modulseite zeigt alle Aufgaben mit passendem „modul“; das Praxislabor zeigt sie nach Modulen sortiert. */
+window.KURS.labor.aufgaben = window.KURS.labor.aufgaben.concat([
+  {
+    "id": "werkzeug-sortieren",
+    "titel": "Nombrar y clasificar las herramientas: estéril o limpio",
+    "modul": 7,
+    "material": [
+      "tu material de práctica: cánulas con capuchón, pinza, marcador cutáneo, guantes desechables, empapador desechable",
+      "una hoja con dos columnas: «tiene que estar estéril» y «tiene que estar limpio y desinfectado»"
+    ],
+    "schritte": [
+      "Coloca todo sobre el empapador desechable y di en voz alta el nombre de cada pieza.",
+      "Lee el calibre en cada envase de cánula y asígnale el grosor de joya que corresponde (lección «Calibre de la cánula y grosor de la joya»).",
+      "Clasifica cada pieza en una de las dos columnas de tu hoja.",
+      "Compara tus columnas con la lección «¿Estéril o solo limpio?» y corrige lo que esté mal."
+    ],
+    "kontrolle": [
+      "He nombrado bien cada pieza.",
+      "He asignado a cada cánula el grosor de joya correcto.",
+      "Mi clasificación estéril/limpio coincide con la lección."
+    ]
+  },
+  {
+    "id": "pistole-kanuele",
+    "titel": "Cánula en lugar de pistola: saber explicarlo",
+    "modul": 1,
+    "material": [
+      "Cánula con capuchón protector",
+      "una joya de práctica",
+      "móvil para grabar",
+      "una segunda persona que escuche"
+    ],
+    "schritte": [
+      "Coloca delante de ti la cánula (con el capuchón puesto) y la joya de práctica.",
+      "Explica a quien te escucha, en un minuto como máximo, por qué en el estudio se perfora con una cánula estéril de un solo uso y no con la pistola de perforar orejas. Grábate con el móvil.",
+      "Escucha la grabación y compárala con las lecciones «Los motivos» y «Pistola o cánula: qué ocurre en el tejido».",
+      "Repite la explicación hasta que puedas decirlo todo sin notas."
+    ],
+    "kontrolle": [
+      "He nombrado los cuatro motivos de la lección: el tejido se desgarra, la pistola no se puede esterilizar, los gérmenes se esparcen por la sala, la joya inicial no es adecuada.",
+      "He explicado qué cambia en el tejido cuando se perfora con cánula.",
+      "La cánula ha tenido el capuchón puesto en todo momento."
+    ]
+  },
+  {
+    "id": "einverstaendnis-rollenspiel",
+    "titel": "Consentimiento informado en un juego de roles",
+    "modul": 2,
+    "material": [
+      "Consentimiento informado (plantilla, impresa)",
+      "bolígrafo",
+      "una segunda persona como «cliente»"
+    ],
+    "schritte": [
+      "Imprime el modelo de consentimiento de la sección de plantillas.",
+      "Representa la conversación informativa: explica con tus palabras las complicaciones de la lección «Información sobre complicaciones» antes de que tu «cliente» firme nada.",
+      "Haz que rellene el formulario. Para el ejercicio, usa datos de documento inventados, no reales.",
+      "Al final, revisa campo por campo: ¿está todo rellenado, se ha comprobado la edad, está firmado?"
+    ],
+    "kontrolle": [
+      "He explicado las complicaciones antes de la firma.",
+      "He comprobado la edad y sé qué más haría falta con menores.",
+      "Todos los campos están rellenados y firmados.",
+      "En el formulario de práctica no hay datos de documento reales."
+    ]
+  },
+  {
+    "id": "anatomie-ohr",
+    "titel": "Anatomía de la oreja en el modelo",
+    "modul": 3,
+    "material": [
+      "Oreja de silicona de práctica (o una oreja impresa)",
+      "marcador cutáneo desechable",
+      "linterna"
+    ],
+    "schritte": [
+      "Con el marcador, marca en la oreja de silicona los puntos de lobe, helix, tragus, conch, rook y daith, y ponles nombre.",
+      "Escribe junto a cada punto el tipo de tejido: tejido blando o cartílago.",
+      "Compara tus marcas con los tipos de piercing del módulo 08.",
+      "Ilumina tu propia oreja desde atrás con la linterna y busca los vasos sanguíneos."
+    ],
+    "kontrolle": [
+      "Los seis puntos están bien marcados (comparados con el módulo 08).",
+      "Lo sé: el lobe es tejido blando; los otros cinco puntos están en cartílago.",
+      "He reconocido vasos sanguíneos en mi oreja."
+    ]
+  },
+  {
+    "id": "schmerz-gespraech",
+    "titel": "Conversación con un cliente nervioso",
+    "modul": 4,
+    "material": [
+      "una segunda persona como «cliente»",
+      "tu lista de preguntas sobre la tolerancia a la lidocaína (ejercicio del módulo 04)"
+    ],
+    "schritte": [
+      "Tu «cliente» está nervioso y pregunta: «¿Duele?». Responde con sinceridad y explica con calma lo que va a pasar.",
+      "El «cliente» pide anestesia. Haz todas las preguntas de tolerancia antes de ofrecer nada.",
+      "Explica qué anestesia no puedes usar como piercer.",
+      "Intercambiad los papeles y hablad después de lo que os ha tranquilizado."
+    ],
+    "kontrolle": [
+      "No he prometido nada como «Te garantizo que no duele».",
+      "He hecho todas las preguntas de tolerancia.",
+      "He explicado bien: los anestésicos con receta y los bloqueos nerviosos no son para piercers; eso solo lo hace un médico."
+    ]
+  },
+  {
+    "id": "schmuck-messen",
+    "titel": "Identificar y medir joyas",
+    "modul": 6,
+    "material": [
+      "Joyas de práctica (labret, aro de bola cautiva, barbell y, si puedes, una herradura)",
+      "pie de rey",
+      "albarán o certificado de material de la joya, si lo tienes"
+    ],
+    "schritte": [
+      "Ordena tus joyas de práctica por forma y nombra cada pieza.",
+      "Mide con el pie de rey el grosor y la longitud (en los aros, el diámetro interior) y anota los valores.",
+      "Revisa la indicación del material: ¿figura una norma para implantes, por ejemplo ASTM F136, y hay un certificado?",
+      "Para una barra que vaya a ser joya inicial, calcula una longitud extra de unos 4 mm (lección «Longitud extra de la joya inicial»)."
+    ],
+    "kontrolle": [
+      "Cada pieza tiene el nombre de forma correcto.",
+      "Grosor y longitud o diámetro interior están medidos y anotados.",
+      "He comprobado si hay un certificado de material en vez de fiarme de «titanio» en la etiqueta."
+    ]
+  },
+  {
+    "id": "pflege-gespraech",
+    "titel": "Conversación sobre los cuidados tras la perforación",
+    "modul": 10,
+    "material": [
+      "Instrucciones de cuidado (plantilla, impresa)",
+      "bolígrafo",
+      "una segunda persona como «cliente»"
+    ],
+    "schritte": [
+      "Rellena las instrucciones de cuidado para un helix recién perforado: piercing, fecha, joya, producto de cuidado.",
+      "Explica los cuidados a tu «cliente» en tres minutos como máximo.",
+      "Pide que te pregunte: «¿Cuándo tengo que ir al médico?». Responde sin mirar la hoja.",
+      "Compara tus respuestas con la hoja y con la lección «Explicar los cuidados»."
+    ],
+    "kontrolle": [
+      "He nombrado un producto de cuidado apto para cartílago, y no Octenisept.",
+      "He dicho el tiempo de cicatrización de los piercings de cartílago según la tabla.",
+      "He nombrado las señales de alarma por las que el cliente debe ir al médico enseguida."
+    ]
+  },
+  {
+    "id": "preis-kalkulieren",
+    "titel": "Calcular el precio y planificar las compras",
+    "modul": 11,
+    "material": [
+      "Lista de material del laboratorio de práctica",
+      "precios actuales de una tienda, por ejemplo de nuestro socio Youlindo",
+      "calculadora u hoja de cálculo"
+    ],
+    "schritte": [
+      "Anota todo lo que gastas en un piercing de helix: joya, cánula, material desechable, producto de cuidado.",
+      "Busca los precios actuales y calcula el coste de material de un piercing.",
+      "Calcula tu tiempo de trabajo con asesoramiento, consentimiento y reprocesamiento, y fija una tarifa por hora.",
+      "Suma una parte de los gastos fijos (local, aparatos, revisiones, seguro) y compara el resultado con el precio que tenías pensado."
+    ],
+    "kontrolle": [
+      "Están las tres partidas de la lección: material, tiempo de trabajo, gastos fijos.",
+      "Conozco mi coste de material para un piercing de helix.",
+      "Sé si el precio que tenía pensado cubre los costes."
+    ]
+  }
+]);
+
+/* Materialliste: Material gibt es nur im Paket Komplett per Post (imSet = im Übungsset enthalten, Inhalt laut CLIPS-PRAXISLABOR.md).
+   Basis und Praxis kaufen selbst; Partner-Shop: Youlindo. Gezielte Produktlinks lassen sich je Eintrag mit "link" ergänzen. */
+window.KURS.labor.einkauf = {
+  "titel": "Lista de material",
+  "partner": {
+    "name": "Youlindo",
+    "url": "https://www.youlindo.de"
+  },
+  "komplett": "Con el paquete Completo te enviamos el set de práctica por correo. Lo marcado con «en el set de práctica» viene incluido; el resto lo consigues tú.",
+  "selbst": "Con los paquetes Básico y Práctica, el material lo consigues tú. Las joyas y los accesorios los encuentras en nuestro socio Youlindo; lo que no tengan, lo consigues en tiendas especializadas en material de piercing y tatuaje o en la farmacia.",
+  "prototyp": "Con el paquete Completo te enviamos el set de práctica por correo. Con los paquetes Básico y Práctica, el material lo consigues tú, por ejemplo en nuestro socio Youlindo; lo que no tengan, lo consigues en tiendas especializadas en material de piercing y tatuaje o en la farmacia.",
+  "knopf": "Ir a la tienda de Youlindo",
+  "liste": [
+    {
+      "name": "Oreja de silicona de práctica o piel de práctica",
+      "wofuer": "Marcar, colocar la pinza, apoyar la cánula",
+      "module": [
+        3,
+        8
+      ],
+      "imSet": true
+    },
+    {
+      "name": "Cánulas intravenosas 18G y 16G, estériles",
+      "wofuer": "Manejar la cánula (ejercicio en seco con el capuchón puesto)",
+      "module": [
+        1,
+        7,
+        8
+      ],
+      "imSet": true
+    },
+    {
+      "name": "Contenedor pequeño para objetos punzantes",
+      "wofuer": "Desechar las cánulas con seguridad",
+      "module": [
+        5,
+        7
+      ],
+      "imSet": true
+    },
+    {
+      "name": "Pinza (Snaptile o pinza de gasa)",
+      "wofuer": "Sujetar el tejido en la oreja de práctica",
+      "module": [
+        7,
+        8
+      ],
+      "imSet": true
+    },
+    {
+      "name": "Marcador cutáneo desechable",
+      "wofuer": "Marcar los puntos",
+      "module": [
+        3,
+        8,
+        9
+      ],
+      "imSet": true
+    },
+    {
+      "name": "Guantes desechables (nitrilo) y empapadores desechables",
+      "wofuer": "Preparar el puesto de trabajo y ponerse los guantes",
+      "module": [
+        5
+      ],
+      "imSet": true
+    },
+    {
+      "name": "Joyas de práctica: labret, BCR (aro de bola cautiva), barbell de 38 mm",
+      "wofuer": "Identificar, medir y colocar joyas",
+      "module": [
+        1,
+        6,
+        7
+      ],
+      "imSet": true
+    },
+    {
+      "name": "Desinfectante de manos",
+      "wofuer": "Preparar las manos",
+      "module": [
+        5
+      ],
+      "imSet": false
+    },
+    {
+      "name": "Regla con milímetros",
+      "wofuer": "Marcar distancias y simetría",
+      "module": [
+        8,
+        9
+      ],
+      "imSet": false
+    },
+    {
+      "name": "Pie de rey",
+      "wofuer": "Medir el grosor y la longitud de las joyas",
+      "module": [
+        6
+      ],
+      "imSet": false
+    },
+    {
+      "name": "Linterna",
+      "wofuer": "Reconocer vasos sanguíneos en la oreja",
+      "module": [
+        3
+      ],
+      "imSet": false
+    },
+    {
+      "name": "Impresiones de las plantillas (plantilla de práctica, consentimiento, instrucciones de cuidado)",
+      "wofuer": "Juegos de roles y registro de prácticas",
+      "module": [
+        2,
+        9,
+        10
+      ],
+      "imSet": false,
+      "vorlage": true
+    }
+  ]
+};
+
 /* Ejercicios de perforación en la oreja de silicona: solo se perfora uno mismo con el paquete Completo (kit de práctica de la Academia).
    Todos los demás ven los mismos ejercicios en modo «solo mirar»: clip y procedimiento, sin autocontrol.
    Se perfora exclusivamente en silicona. Procedimiento según el libro del curso págs. 111–112 (pasos 9–19), valores de las fichas técnicas (módulo 08).

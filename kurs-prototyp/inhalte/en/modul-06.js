@@ -207,7 +207,7 @@ KURS.module.push({
     }
   ],
   uebung: [
-    "Sort the jewelry from your practice set into barbell, curved barbell (banana), labret, BCR and horseshoe.",
+    "Sort your practice jewelry into barbell, curved barbell (banana), labret, BCR and horseshoe.",
     "Explain to a client in two sentences why you do not use 316L as initial jewelry.",
     "Use the caliper to measure the length of an initial jewelry piece and plan the extra length."
   ]

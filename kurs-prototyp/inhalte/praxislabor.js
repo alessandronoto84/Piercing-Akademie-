@@ -142,6 +142,304 @@ window.KURS.labor = {
   ]
 };
 
+/* Praxisaufgaben für die Module 01–04, 06, 10 und 11 (Trockenübungen, ohne Stechen). Grundlage: die jeweiligen Lektionen.
+   Die Modulseite zeigt alle Aufgaben mit passendem „modul“; das Praxislabor zeigt sie nach Modulen sortiert. */
+window.KURS.labor.aufgaben = window.KURS.labor.aufgaben.concat([
+  {
+    "id": "werkzeug-sortieren",
+    "titel": "Werkzeug benennen und sortieren: steril oder sauber",
+    "modul": 7,
+    "material": [
+      "dein Übungsmaterial: Kanülen mit Schutzkappe, Klemme, Hautmarker, Einmalhandschuhe, Einmalunterlage",
+      "Zettel mit zwei Spalten: „muss steril sein“ und „muss sauber und desinfiziert sein“"
+    ],
+    "schritte": [
+      "Leg alles auf die Einmalunterlage und benenne jedes Teil laut.",
+      "Lies auf jeder Kanülenverpackung die Stärke ab und ordne sie der passenden Schmuckstärke zu (Lektion „Kanülenstärke und Schmuckstärke“).",
+      "Sortiere jedes Teil in eine der beiden Spalten auf deinem Zettel.",
+      "Vergleiche deine Spalten mit der Lektion „Steril oder nur sauber?“ und korrigiere, was falsch war."
+    ],
+    "kontrolle": [
+      "Ich konnte jedes Teil richtig benennen.",
+      "Ich habe jeder Kanüle die passende Schmuckstärke zugeordnet.",
+      "Meine Einteilung steril oder sauber stimmt mit der Lektion überein."
+    ]
+  },
+  {
+    "id": "pistole-kanuele",
+    "titel": "Kanüle statt Pistole: erklären können",
+    "modul": 1,
+    "material": [
+      "Kanüle mit Schutzkappe",
+      "ein Stück Übungsschmuck",
+      "Handy zum Aufnehmen",
+      "eine zweite Person als Zuhörer"
+    ],
+    "schritte": [
+      "Leg die Kanüle (Schutzkappe bleibt drauf) und den Übungsschmuck vor dich.",
+      "Erkläre deinem Zuhörer in höchstens einer Minute, warum im Studio mit einer sterilen Einmalkanüle gestochen wird und nicht mit der Ohrlochpistole. Nimm dich dabei mit dem Handy auf.",
+      "Hör dir die Aufnahme an und vergleiche sie mit den Lektionen „Die Gründe“ und „Pistole oder Kanüle: was im Gewebe passiert“.",
+      "Wiederhole die Erklärung, bis du alles ohne Zettel sagen kannst."
+    ],
+    "kontrolle": [
+      "Ich habe alle vier Gründe aus der Lektion genannt: Gewebe reißt ein, Pistole nicht sterilisierbar, Keime fliegen durch den Raum, ungeeigneter Ersteinsatz.",
+      "Ich habe erklärt, was beim Stechen mit der Kanüle im Gewebe anders ist.",
+      "Die Kanüle hatte die ganze Zeit ihre Schutzkappe."
+    ]
+  },
+  {
+    "id": "einverstaendnis-rollenspiel",
+    "titel": "Einverständniserklärung im Rollenspiel",
+    "modul": 2,
+    "material": [
+      "Einverständniserklärung (Vorlage, ausgedruckt)",
+      "Stift",
+      "eine zweite Person als „Kunde“"
+    ],
+    "schritte": [
+      "Druck die Muster-Einverständniserklärung aus dem Bereich Vorlagen aus.",
+      "Spiel das Aufklärungsgespräch durch: Erkläre die Komplikationen aus der Lektion „Aufklärung über Komplikationen“ in eigenen Worten, bevor dein „Kunde“ etwas unterschreibt.",
+      "Lass den Bogen ausfüllen. Trag für die Übung erfundene Ausweisdaten ein, keine echten.",
+      "Prüf am Ende Feld für Feld: Ist alles ausgefüllt, ist das Alter geprüft, ist unterschrieben?"
+    ],
+    "kontrolle": [
+      "Ich habe die Komplikationen erklärt, bevor unterschrieben wurde.",
+      "Ich habe das Alter geprüft und weiß, was bei Minderjährigen zusätzlich nötig wäre.",
+      "Alle Felder sind ausgefüllt und unterschrieben.",
+      "Auf dem Übungsbogen stehen keine echten Ausweisdaten."
+    ]
+  },
+  {
+    "id": "anatomie-ohr",
+    "titel": "Ohr-Anatomie am Modell",
+    "modul": 3,
+    "material": [
+      "Silikon-Übungsohr (oder ein ausgedrucktes Ohr)",
+      "Einmal-Hautmarker",
+      "Taschenlampe"
+    ],
+    "schritte": [
+      "Markiere am Silikon-Übungsohr mit dem Hautmarker die Stellen für Lobe, Helix, Tragus, Conch, Rook und Daith und beschrifte sie.",
+      "Schreib zu jeder Stelle die Gewebeart dazu: Weichgewebe oder Knorpel.",
+      "Vergleiche deine Markierungen mit den Piercing-Arten in Modul 08.",
+      "Leuchte mit der Taschenlampe von hinten durch dein eigenes Ohr und such die Blutgefäße."
+    ],
+    "kontrolle": [
+      "Alle sechs Stellen sind richtig markiert (mit Modul 08 verglichen).",
+      "Ich weiß: Das Lobe ist Weichgewebe, die anderen fünf Stellen liegen im Knorpel.",
+      "Ich habe an meinem Ohr Blutgefäße erkannt."
+    ]
+  },
+  {
+    "id": "schmerz-gespraech",
+    "titel": "Gespräch mit einem ängstlichen Kunden",
+    "modul": 4,
+    "material": [
+      "eine zweite Person als „Kunde“",
+      "deine Liste mit den Fragen zur Verträglichkeit von Lidocain (Übung aus Modul 04)"
+    ],
+    "schritte": [
+      "Dein „Kunde“ ist nervös und fragt: „Tut das weh?“ Antworte ehrlich und erkläre ruhig, was gleich passiert.",
+      "Der „Kunde“ fragt nach einer Betäubung. Stell alle Fragen zur Verträglichkeit, bevor du etwas anbietest.",
+      "Erkläre, welche Betäubung du als Piercer nicht einsetzen darfst.",
+      "Tauscht die Rollen und sprecht danach darüber, was beruhigt hat."
+    ],
+    "kontrolle": [
+      "Ich habe nichts versprochen wie „Das tut garantiert nicht weh“.",
+      "Ich habe alle Fragen zur Verträglichkeit gestellt.",
+      "Ich habe richtig erklärt: verschreibungspflichtige Anästhetika und Nervenblockaden sind nichts für Piercer, das macht nur ein Arzt."
+    ]
+  },
+  {
+    "id": "schmuck-messen",
+    "titel": "Schmuck bestimmen und messen",
+    "modul": 6,
+    "material": [
+      "Übungsschmuck (Labret, Klemmkugelring, Barbell, wenn möglich ein Hufeisen)",
+      "Messschieber",
+      "Lieferschein oder Materialnachweis des Schmucks, falls vorhanden"
+    ],
+    "schritte": [
+      "Sortiere deinen Übungsschmuck nach Form und benenne jedes Stück.",
+      "Miss mit dem Messschieber Stärke und Länge (bei Ringen den Innendurchmesser) und schreib die Werte auf.",
+      "Prüf die Materialangabe: Steht eine Norm für Implantate dabei, zum Beispiel ASTM F136, und gibt es einen Nachweis?",
+      "Plan für einen Stab als Ersteinsatz die Überlänge von etwa 4 mm ein (Lektion „Überlänge beim Ersteinsatz“)."
+    ],
+    "kontrolle": [
+      "Jedes Stück ist mit der richtigen Form benannt.",
+      "Stärke und Länge bzw. Innendurchmesser sind gemessen und notiert.",
+      "Ich habe geprüft, ob ein Materialnachweis vorliegt, statt mich auf „Titan“ auf dem Etikett zu verlassen."
+    ]
+  },
+  {
+    "id": "pflege-gespraech",
+    "titel": "Pflegegespräch nach dem Stich",
+    "modul": 10,
+    "material": [
+      "Pflegehinweise (Vorlage, ausgedruckt)",
+      "Stift",
+      "eine zweite Person als „Kunde“"
+    ],
+    "schritte": [
+      "Füll die Pflegehinweise für ein frisch gestochenes Helix-Piercing aus: Piercing, Datum, Schmuck, Pflegemittel.",
+      "Erkläre deinem „Kunden“ die Pflege in höchstens drei Minuten.",
+      "Lass dich fragen: „Wann muss ich zum Arzt?“ Antworte, ohne auf das Blatt zu schauen.",
+      "Vergleiche deine Antworten mit dem Blatt und der Lektion „Pflege anleiten“."
+    ],
+    "kontrolle": [
+      "Ich habe ein Pflegemittel genannt, das für Knorpel geeignet ist, und kein Octenisept.",
+      "Ich habe die Abheilzeit für Knorpelpiercings aus der Tabelle genannt.",
+      "Ich habe die Warnzeichen genannt, bei denen der Kunde sofort zum Arzt geht."
+    ]
+  },
+  {
+    "id": "preis-kalkulieren",
+    "titel": "Preis kalkulieren und Einkauf planen",
+    "modul": 11,
+    "material": [
+      "Materialliste aus dem Praxislabor",
+      "aktuelle Preise aus einem Shop, zum Beispiel bei unserem Partner Youlindo",
+      "Taschenrechner oder Tabelle"
+    ],
+    "schritte": [
+      "Schreib alles auf, was du für ein Helix-Piercing verbrauchst: Schmuck, Kanüle, Einmalmaterial, Pflegemittel.",
+      "Such die aktuellen Preise heraus und rechne die Materialkosten für ein Piercing aus.",
+      "Schätz deine Arbeitszeit mit Beratung, Einverständniserklärung und Aufbereitung und setz einen Stundensatz an.",
+      "Rechne einen Anteil für laufende Kosten dazu (Raum, Geräte, Prüfungen, Versicherung) und vergleiche das Ergebnis mit deinem geplanten Preis."
+    ],
+    "kontrolle": [
+      "Alle drei Bereiche aus der Lektion sind drin: Material, Arbeitszeit, laufende Kosten.",
+      "Ich kenne meine Materialkosten für ein Helix-Piercing.",
+      "Ich weiß, ob mein geplanter Preis die Kosten deckt."
+    ]
+  }
+]);
+
+/* Materialliste: Material gibt es nur im Paket Komplett per Post (imSet = im Übungsset enthalten, Inhalt laut CLIPS-PRAXISLABOR.md).
+   Basis und Praxis kaufen selbst; Partner-Shop: Youlindo. Gezielte Produktlinks lassen sich je Eintrag mit "link" ergänzen. */
+window.KURS.labor.einkauf = {
+  "titel": "Materialliste",
+  "partner": {
+    "name": "Youlindo",
+    "url": "https://www.youlindo.de"
+  },
+  "komplett": "Im Paket Komplett schicken wir dir das Übungsset per Post. Was mit „im Übungsset“ markiert ist, ist darin enthalten; den Rest besorgst du dir selbst.",
+  "selbst": "In den Paketen Basis und Praxis besorgst du das Material selbst. Schmuck und Zubehör findest du bei unserem Partner Youlindo; was es dort nicht gibt, bekommst du im Fachhandel für Piercing- und Tattoobedarf oder in der Apotheke.",
+  "prototyp": "Im Paket Komplett schicken wir dir das Übungsset per Post. In den Paketen Basis und Praxis besorgst du das Material selbst, zum Beispiel bei unserem Partner Youlindo; was es dort nicht gibt, bekommst du im Fachhandel für Piercing- und Tattoobedarf oder in der Apotheke.",
+  "knopf": "Zum Shop von Youlindo",
+  "liste": [
+    {
+      "name": "Silikon-Übungsohr oder Übungshaut",
+      "wofuer": "Anzeichnen, Klemme setzen, Kanüle ansetzen",
+      "module": [
+        3,
+        8
+      ],
+      "imSet": true
+    },
+    {
+      "name": "Venenverweilkanülen 18G und 16G, steril",
+      "wofuer": "Kanüle handhaben (Trockenübung mit Schutzkappe)",
+      "module": [
+        1,
+        7,
+        8
+      ],
+      "imSet": true
+    },
+    {
+      "name": "Kleiner Nadelabwurfbehälter",
+      "wofuer": "Kanülen sicher entsorgen",
+      "module": [
+        5,
+        7
+      ],
+      "imSet": true
+    },
+    {
+      "name": "Klemme (Gazeklemme oder Snaptile)",
+      "wofuer": "Gewebe fixieren am Übungsohr",
+      "module": [
+        7,
+        8
+      ],
+      "imSet": true
+    },
+    {
+      "name": "Einmal-Hautmarker",
+      "wofuer": "Stellen anzeichnen",
+      "module": [
+        3,
+        8,
+        9
+      ],
+      "imSet": true
+    },
+    {
+      "name": "Einmalhandschuhe (Nitril) und Einmalunterlagen",
+      "wofuer": "Arbeitsplatz und Handschuhe anziehen",
+      "module": [
+        5
+      ],
+      "imSet": true
+    },
+    {
+      "name": "Übungsschmuck: Labret, Klemmkugelring (BCR), Barbell 38 mm",
+      "wofuer": "Schmuck bestimmen, messen und einsetzen",
+      "module": [
+        1,
+        6,
+        7
+      ],
+      "imSet": true
+    },
+    {
+      "name": "Händedesinfektionsmittel",
+      "wofuer": "Hände vorbereiten",
+      "module": [
+        5
+      ],
+      "imSet": false
+    },
+    {
+      "name": "Lineal mit Millimetereinteilung",
+      "wofuer": "Abstände und Symmetrie anzeichnen",
+      "module": [
+        8,
+        9
+      ],
+      "imSet": false
+    },
+    {
+      "name": "Messschieber",
+      "wofuer": "Schmuckstärke und Länge messen",
+      "module": [
+        6
+      ],
+      "imSet": false
+    },
+    {
+      "name": "Taschenlampe",
+      "wofuer": "Blutgefäße am Ohr erkennen",
+      "module": [
+        3
+      ],
+      "imSet": false
+    },
+    {
+      "name": "Ausdrucke der Vorlagen (Übungsvorlage, Einverständniserklärung, Pflegehinweise)",
+      "wofuer": "Rollenspiele und Übungsprotokoll",
+      "module": [
+        2,
+        9,
+        10
+      ],
+      "imSet": false,
+      "vorlage": true
+    }
+  ]
+};
+
 /* Stichübungen am Silikonohr: selbst gestochen wird nur im Paket Komplett (Übungsset der Akademie).
    Alle anderen sehen dieselben Übungen als „Zuschauen“: Clip und Ablauf, ohne Selbstkontrolle.
    Gestochen wird ausschließlich ins Silikon. Ablauf nach Kursbuch S. 111–112 (Schritte 9–19), Werte aus den Datenblättern (Modul 08).

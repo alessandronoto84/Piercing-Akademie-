@@ -168,14 +168,18 @@ test("Bestellseite: beide Häkchen Pflicht, Preis nur vom Server, Zustimmung lan
   assert.equal((await get("/es/bestellen.html")).status, 200);
 });
 
-test("Einzelprodukte: Praxiskit (Versand, Rabatt nach Kursabschluss) und Kursbuch-PDF", async () => {
-  // Kit: ohne Sofort-Häkchen erlaubt, Normalpreis, Lieferadresse wird abgefragt
-  const k = await post("/api/bestellen", { paket: "kit", sprache: "de", agb: true, sofort: false });
-  assert.equal(k.status, 200);
-  const kf = new URLSearchParams((await k.json()).dev_formular);
-  assert.equal(kf.get("line_items[0][price_data][unit_amount]"), "9900");
-  assert.equal(kf.get("shipping_address_collection[allowed_countries][0]"), "DE");
-  assert.equal(kf.get("metadata[art]"), "ware");
+test("Einzelprodukte: Kursbuch digital; Praxiskit gibt es nicht mehr, Komplett fragt die Lieferadresse ab", async () => {
+  // Praxiskit ist kein Produkt mehr (Material nur im Paket Komplett)
+  assert.equal((await post("/api/bestellen", { paket: "kit", sprache: "de", agb: true, sofort: true })).status, 400);
+  // Komplett: Übungsset wird verschickt, deshalb Lieferadresse
+  const ko = await post("/api/bestellen", { paket: "komplett", sprache: "de", agb: true, sofort: true });
+  assert.equal(ko.status, 200);
+  const kof = new URLSearchParams((await ko.json()).dev_formular);
+  assert.equal(kof.get("line_items[0][price_data][unit_amount]"), "249000");
+  assert.equal(kof.get("shipping_address_collection[allowed_countries][0]"), "DE");
+  // Basis: keine Lieferadresse
+  const ba = await post("/api/bestellen", { paket: "basis", sprache: "de", agb: true, sofort: true });
+  assert.equal(new URLSearchParams((await ba.json()).dev_formular).get("shipping_address_collection[allowed_countries][0]"), null);
   // Buch: digitaler Inhalt, Sofort-Häkchen Pflicht
   assert.equal((await post("/api/bestellen", { paket: "buch", sprache: "de", agb: true, sofort: false })).status, 400);
   const b = await post("/api/bestellen", { paket: "buch", sprache: "en", agb: true, sofort: true });
@@ -183,27 +187,12 @@ test("Einzelprodukte: Praxiskit (Versand, Rabatt nach Kursabschluss) und Kursbuc
   assert.equal(bf.get("line_items[0][price_data][unit_amount]"), "1990");
   assert.equal(bf.get("shipping_address_collection[allowed_countries][0]"), null);
 
-  // Rabatt: Basis-Kunde ohne bestandene Simulation -> Normalpreis, danach 84,15 €
-  const email = "kit-" + Date.now() + "@example.com";
-  assert.equal((await webhook(kauf(email, "cs_test_kit_" + Date.now()))).status, 200);
-  const { cookie } = await anmelden(email);
-  assert.equal((await (await get("/api/bestellen", cookie)).json()).kitRabatt, false);
-  const ohne = await post("/api/bestellen", { paket: "kit", sprache: "de", agb: true }, cookie);
-  assert.equal(new URLSearchParams((await ohne.json()).dev_formular).get("line_items[0][price_data][unit_amount]"), "9900");
-  const fortschritt = await fetch(BASIS + "/api/fortschritt", { method: "PUT", headers: { "Content-Type": "application/json", Cookie: cookie }, body: JSON.stringify({ simulation: { bestanden: true, richtig: 45, gesamt: 50 } }) });
-  assert.equal(fortschritt.status, 200);
-  assert.equal((await (await get("/api/bestellen", cookie)).json()).kitRabatt, true);
-  const mit = await post("/api/bestellen", { paket: "kit", sprache: "de", agb: true }, cookie);
-  const mf = new URLSearchParams((await mit.json()).dev_formular);
-  assert.equal(mf.get("line_items[0][price_data][unit_amount]"), "8415");
-  assert.equal(mf.get("metadata[rabatt]"), "kursteilnehmer");
-
-  // Bezahltes Kit schaltet keinen Kurs frei; doppelte Webhooks werden erkannt
-  const kaeufer = "nurkit-" + Date.now() + "@example.com", sid = "cs_test_nurkit_" + Date.now();
-  const ev = kauf(kaeufer, sid, { amount_total: 9900, metadata: { paket: "kit", sprache: "de", art: "ware" }, custom_fields: [], shipping_details: { name: "Kit Käufer", address: { line1: "Teststraße 1", postal_code: "49808", city: "Lingen", country: "DE" } } });
+  // Komplett-Kauf mit Lieferadresse: Kurs wird freigeschaltet, doppelte Webhooks werden erkannt
+  const kunde = "komplett-" + Date.now() + "@example.com", sid = "cs_test_komplett_" + Date.now();
+  const ev = kauf(kunde, sid, { amount_total: 249000, metadata: { paket: "komplett", sprache: "de" }, shipping_details: { name: "Komplett Kunde", address: { line1: "Teststraße 1", postal_code: "49808", city: "Lingen", country: "DE" } } });
   assert.equal((await webhook(ev)).status, 200);
   assert.equal((await (await webhook(ev)).json()).doppelt, true);
-  assert.equal((await (await post("/api/code", { email: kaeufer })).json()).dev_code, undefined);
+  assert.ok((await (await post("/api/code", { email: kunde })).json()).dev_code);
 
   // Buch digital: Kauf legt einen reinen Lesezugang an (kein Kurs, keine Bescheinigung), Seiten und Suche nur angemeldet
   const leser = "buch-" + Date.now() + "@example.com";

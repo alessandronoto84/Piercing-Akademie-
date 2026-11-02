@@ -17,7 +17,7 @@
   var KNOPF_TEXT = knopf.textContent;
 
   function gewaehlt() { var r = form.querySelector("input[name=paket]:checked"); return r ? r.value : ""; }
-  // Art des gewählten Produkts: kurs (Online-Kurs-Pakete), ware (Praxiskit), digital (Kursbuch-PDF)
+  // Art des gewählten Produkts: kurs (Online-Kurs-Pakete), digital (Kursbuch); „ware“ bleibt für künftige Versandprodukte
   function art() { var r = form.querySelector("input[name=paket]:checked"); return r ? r.closest(".b-paket").getAttribute("data-art") || "kurs" : "kurs"; }
   function anzeigen() {
     var r = form.querySelector("input[name=paket]:checked"), a = art();
@@ -50,20 +50,6 @@
       })
       .catch(function () { knopf.disabled = false; knopf.textContent = KNOPF_TEXT; geschlossen(); });
   });
-  // Kursteilnehmer (Basis/Praxis) mit bestandener Prüfungssimulation: Kit-Preis mit 15 % Rabatt anzeigen (der Server rechnet ihn ab)
-  if (/^https?:$/.test(window.location.protocol) && !window.PA_VORSCHAU && window.fetch) {
-    fetch("/api/bestellen", { headers: { Accept: "application/json" }, credentials: "same-origin" })
-      .then(function (r) { return r.ok ? r.json() : null; })
-      .then(function (d) {
-        if (!d || !d.kitRabatt) return;
-        var preis = form.querySelector('input[value="kit"]');
-        if (!preis) return;
-        var el = preis.parentNode.querySelector(".b-preis");
-        el.textContent = el.getAttribute("data-rabatt-preis");
-        var hinweis = preis.parentNode.querySelector(".b-rabatt"); if (hinweis) hinweis.hidden = false;
-        anzeigen();
-      }).catch(function () {});
-  }
   // Zurück aus Stripe (Browser-Zurück): Knopf wieder freigeben
   window.addEventListener("pageshow", function () { knopf.disabled = false; knopf.textContent = KNOPF_TEXT; });
 })();

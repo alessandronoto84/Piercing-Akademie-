@@ -207,7 +207,7 @@ KURS.module.push({
     }
   ],
   uebung: [
-    "Clasifica las joyas de tu set de práctica en barbell, barbell curvo (banana), labret, BCR y herradura.",
+    "Clasifica tus joyas de práctica en barbell, barbell curvo (banana), labret, BCR y herradura.",
     "Explícale a un cliente en dos frases por qué no usas 316L como joya inicial.",
     "Mide con el calibre la longitud de una joya inicial y planifica la longitud extra."
   ]

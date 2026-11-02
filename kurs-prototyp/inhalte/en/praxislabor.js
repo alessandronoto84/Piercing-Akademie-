@@ -142,6 +142,304 @@ window.KURS.labor = {
   ]
 };
 
+/* Praxisaufgaben für die Module 01–04, 06, 10 und 11 (Trockenübungen, ohne Stechen). Grundlage: die jeweiligen Lektionen.
+   Die Modulseite zeigt alle Aufgaben mit passendem „modul“; das Praxislabor zeigt sie nach Modulen sortiert. */
+window.KURS.labor.aufgaben = window.KURS.labor.aufgaben.concat([
+  {
+    "id": "werkzeug-sortieren",
+    "titel": "Name and sort your tools: sterile or clean",
+    "modul": 7,
+    "material": [
+      "your practice materials: cannulas with protective caps, clamp, skin marker, disposable gloves, disposable underpad",
+      "a sheet with two columns: “must be sterile” and “must be clean and disinfected”"
+    ],
+    "schritte": [
+      "Lay everything out on the disposable underpad and name each item out loud.",
+      "Read the size on each cannula package and match it to the right jewelry gauge (lesson “Cannula size and jewelry size”).",
+      "Sort each item into one of the two columns on your sheet.",
+      "Compare your columns with the lesson “Sterile or just clean?” and correct anything you got wrong."
+    ],
+    "kontrolle": [
+      "I named every item correctly.",
+      "I matched each cannula to the right jewelry gauge.",
+      "My sterile/clean sorting matches the lesson."
+    ]
+  },
+  {
+    "id": "pistole-kanuele",
+    "titel": "Cannula, not a piercing gun: explain why",
+    "modul": 1,
+    "material": [
+      "Cannula with protective cap",
+      "a piece of practice jewelry",
+      "phone for recording",
+      "a second person as listener"
+    ],
+    "schritte": [
+      "Place the cannula (keep the protective cap on) and the practice jewelry in front of you.",
+      "In no more than one minute, explain to your listener why studios pierce with a sterile single-use cannula and not with an ear piercing gun. Record yourself on your phone.",
+      "Listen to the recording and compare it with the lessons “The reasons” and “Gun or cannula: what happens in the tissue”.",
+      "Repeat the explanation until you can say everything without notes."
+    ],
+    "kontrolle": [
+      "I named all four reasons from the lesson: the tissue tears, the gun cannot be sterilized, germs spread through the room, unsuitable initial jewelry.",
+      "I explained what happens differently in the tissue when you pierce with a cannula.",
+      "The cannula kept its protective cap on the whole time."
+    ]
+  },
+  {
+    "id": "einverstaendnis-rollenspiel",
+    "titel": "Consent form role-play",
+    "modul": 2,
+    "material": [
+      "Consent form (template, printed)",
+      "pen",
+      "a second person as “client”"
+    ],
+    "schritte": [
+      "Print the sample consent form from the templates section.",
+      "Role-play the briefing: explain the complications from the lesson “Informing clients about complications” in your own words before your “client” signs anything.",
+      "Have the form filled in. Use made-up ID details for the exercise, not real ones.",
+      "At the end, check field by field: is everything filled in, has the age been checked, is it signed?"
+    ],
+    "kontrolle": [
+      "I explained the complications before anything was signed.",
+      "I checked the age and know what would additionally be required for minors.",
+      "All fields are filled in and signed.",
+      "There are no real ID details on the practice form."
+    ]
+  },
+  {
+    "id": "anatomie-ohr",
+    "titel": "Ear anatomy on the model",
+    "modul": 3,
+    "material": [
+      "Silicone practice ear (or a printed ear)",
+      "single-use skin marker",
+      "flashlight"
+    ],
+    "schritte": [
+      "Using the skin marker, mark the spots for lobe, helix, tragus, conch, rook and daith on the silicone practice ear and label them.",
+      "Write down the tissue type for each spot: soft tissue or cartilage.",
+      "Compare your marks with the piercing types in module 08.",
+      "Shine the flashlight through your own ear from behind and look for the blood vessels."
+    ],
+    "kontrolle": [
+      "All six spots are marked correctly (checked against module 08).",
+      "I know: the lobe is soft tissue; the other five spots are in cartilage.",
+      "I spotted blood vessels in my own ear."
+    ]
+  },
+  {
+    "id": "schmerz-gespraech",
+    "titel": "Talking to a nervous client",
+    "modul": 4,
+    "material": [
+      "a second person as “client”",
+      "your list of questions on lidocaine tolerance (exercise from module 04)"
+    ],
+    "schritte": [
+      "Your “client” is nervous and asks: “Does it hurt?” Answer honestly and calmly explain what is about to happen.",
+      "The “client” asks for numbing. Ask all the tolerance questions before you offer anything.",
+      "Explain which kinds of anesthesia you are not allowed to use as a piercer.",
+      "Switch roles and talk afterwards about what helped calm you down."
+    ],
+    "kontrolle": [
+      "I did not promise anything like “I guarantee it won't hurt.”",
+      "I asked all the tolerance questions.",
+      "I explained correctly: prescription anesthetics and nerve blocks are not for piercers; only a doctor does that."
+    ]
+  },
+  {
+    "id": "schmuck-messen",
+    "titel": "Identify and measure jewelry",
+    "modul": 6,
+    "material": [
+      "Practice jewelry (labret, ball closure ring, barbell, a horseshoe if possible)",
+      "caliper",
+      "delivery note or material certificate for the jewelry, if available"
+    ],
+    "schritte": [
+      "Sort your practice jewelry by shape and name each piece.",
+      "Use the caliper to measure gauge and length (inner diameter for rings) and write down the values.",
+      "Check the material information: does it state an implant standard, for example ASTM F136, and is there a certificate?",
+      "For a bar used as initial jewelry, plan an extra length of about 4 mm (lesson “Extra length of initial jewelry”)."
+    ],
+    "kontrolle": [
+      "Each piece is named with the correct shape.",
+      "Gauge and length or inner diameter are measured and written down.",
+      "I checked for a material certificate instead of relying on “titanium” on the label."
+    ]
+  },
+  {
+    "id": "pflege-gespraech",
+    "titel": "Aftercare talk after piercing",
+    "modul": 10,
+    "material": [
+      "Aftercare instructions (template, printed)",
+      "pen",
+      "a second person as “client”"
+    ],
+    "schritte": [
+      "Fill in the aftercare instructions for a freshly pierced helix: piercing, date, jewelry, aftercare product.",
+      "Explain the aftercare to your “client” in no more than three minutes.",
+      "Have them ask you: “When do I need to see a doctor?” Answer without looking at the sheet.",
+      "Compare your answers with the sheet and the lesson “Explaining aftercare”."
+    ],
+    "kontrolle": [
+      "I named an aftercare product suitable for cartilage, not Octenisept.",
+      "I gave the healing time for cartilage piercings from the table.",
+      "I named the warning signs that mean the client should see a doctor right away."
+    ]
+  },
+  {
+    "id": "preis-kalkulieren",
+    "titel": "Calculate a price and plan purchasing",
+    "modul": 11,
+    "material": [
+      "Materials list from the practice lab",
+      "current prices from a shop, for example our partner Youlindo",
+      "calculator or spreadsheet"
+    ],
+    "schritte": [
+      "Write down everything you use for a helix piercing: jewelry, cannula, disposables, aftercare product.",
+      "Look up current prices and work out the material cost of one piercing.",
+      "Estimate your working time, including consultation, consent form and reprocessing, and set an hourly rate.",
+      "Add a share of your running costs (premises, equipment, inspections, insurance) and compare the result with your planned price."
+    ],
+    "kontrolle": [
+      "All three areas from the lesson are included: materials, working time, running costs.",
+      "I know my material cost for a helix piercing.",
+      "I know whether my planned price covers the costs."
+    ]
+  }
+]);
+
+/* Materialliste: Material gibt es nur im Paket Komplett per Post (imSet = im Übungsset enthalten, Inhalt laut CLIPS-PRAXISLABOR.md).
+   Basis und Praxis kaufen selbst; Partner-Shop: Youlindo. Gezielte Produktlinks lassen sich je Eintrag mit "link" ergänzen. */
+window.KURS.labor.einkauf = {
+  "titel": "Materials list",
+  "partner": {
+    "name": "Youlindo",
+    "url": "https://www.youlindo.de"
+  },
+  "komplett": "With the Complete package, we mail you the practice set. Items marked “in the practice set” are included; you get the rest yourself.",
+  "selbst": "With the Basic and Practice packages, you get the materials yourself. You will find jewelry and accessories at our partner Youlindo; anything they don't carry is available from specialist piercing and tattoo suppliers or at a pharmacy.",
+  "prototyp": "With the Complete package, we mail you the practice set. With the Basic and Practice packages, you get the materials yourself, for example from our partner Youlindo; anything they don't carry is available from specialist piercing and tattoo suppliers or at a pharmacy.",
+  "knopf": "Go to the Youlindo shop",
+  "liste": [
+    {
+      "name": "Silicone practice ear or practice skin",
+      "wofuer": "Marking, applying the clamp, positioning the cannula",
+      "module": [
+        3,
+        8
+      ],
+      "imSet": true
+    },
+    {
+      "name": "IV cannulas 18G and 16G, sterile",
+      "wofuer": "Handling the cannula (dry exercise with the cap on)",
+      "module": [
+        1,
+        7,
+        8
+      ],
+      "imSet": true
+    },
+    {
+      "name": "Small sharps container",
+      "wofuer": "Disposing of cannulas safely",
+      "module": [
+        5,
+        7
+      ],
+      "imSet": true
+    },
+    {
+      "name": "Clamp (Snaptile or gauze clamp)",
+      "wofuer": "Holding tissue on the practice ear",
+      "module": [
+        7,
+        8
+      ],
+      "imSet": true
+    },
+    {
+      "name": "Single-use skin marker",
+      "wofuer": "Marking the spots",
+      "module": [
+        3,
+        8,
+        9
+      ],
+      "imSet": true
+    },
+    {
+      "name": "Disposable gloves (nitrile) and disposable underpads",
+      "wofuer": "Setting up the workstation, putting on gloves",
+      "module": [
+        5
+      ],
+      "imSet": true
+    },
+    {
+      "name": "Practice jewelry: labret, ball closure ring (BCR), barbell 38 mm",
+      "wofuer": "Identifying, measuring and inserting jewelry",
+      "module": [
+        1,
+        6,
+        7
+      ],
+      "imSet": true
+    },
+    {
+      "name": "Hand sanitizer",
+      "wofuer": "Preparing your hands",
+      "module": [
+        5
+      ],
+      "imSet": false
+    },
+    {
+      "name": "Ruler with millimeter markings",
+      "wofuer": "Marking distances and symmetry",
+      "module": [
+        8,
+        9
+      ],
+      "imSet": false
+    },
+    {
+      "name": "Caliper",
+      "wofuer": "Measuring jewelry gauge and length",
+      "module": [
+        6
+      ],
+      "imSet": false
+    },
+    {
+      "name": "Flashlight",
+      "wofuer": "Spotting blood vessels in the ear",
+      "module": [
+        3
+      ],
+      "imSet": false
+    },
+    {
+      "name": "Printouts of the templates (practice template, consent form, aftercare instructions)",
+      "wofuer": "Role-plays and practice log",
+      "module": [
+        2,
+        9,
+        10
+      ],
+      "imSet": false,
+      "vorlage": true
+    }
+  ]
+};
+
 /* Piercing exercises on the silicone ear: you only pierce yourself with the Complete package (the Academy’s practice set).
    Everyone else sees the same exercises as “watch only”: clip and procedure, without self-check.
    Piercing is done exclusively into silicone. Procedure according to course book pp. 111–112 (steps 9–19), values from the data sheets (module 08).

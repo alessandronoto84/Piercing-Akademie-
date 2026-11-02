@@ -207,7 +207,7 @@ KURS.module.push({
     }
   ],
   uebung: [
-    "Sortiere Schmuckstücke aus deinem Übungsset nach Barbell, Banane, Labret, BCR und Hufeisen.",
+    "Sortiere deinen Übungsschmuck nach Barbell, Banane, Labret, BCR und Hufeisen.",
     "Erkläre einem Kunden in zwei Sätzen, warum du als Ersteinsatz kein 316L verwendest.",
     "Miss mit dem Messschieber die Länge eines Ersteinsatzes und plane die Überlänge."
   ]

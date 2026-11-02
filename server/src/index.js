@@ -4,7 +4,7 @@
    - Login ohne Passwort: 6-stelliger Code per E-Mail an die beim Kauf angegebene Adresse
    - Stripe-Webhook: legt nach der Zahlung den Zugang an und schickt Zugang + Vertragsbestätigung (§ 312f BGB)
    - speichert Fortschritt und vergibt prüfbare Bescheinigungsnummern */
-import { mailCode, mailWillkommen, mailVerdacht, mailAnfrage, mailWiderrufEingang, mailWiderrufAkademie, mailKit, mailKitAkademie, mailBuch, sende } from "./mail.js";
+import { mailCode, mailWillkommen, mailVerdacht, mailAnfrage, mailWiderrufEingang, mailWiderrufAkademie, mailSetAkademie, mailBuch, sende } from "./mail.js";
 
 const COOKIE = "pa_sitzung";
 const SITZUNG_TAGE = 30;
@@ -153,7 +153,7 @@ async function kurs(req, env, url, p) {
 async function api(req, env, url, ctx) {
   const p = url.pathname;
   if (p === "/api/stripe" && req.method === "POST") return stripeWebhook(req, env, ctx);
-  if (p === "/api/bestellen" && req.method === "GET") return json({ aktiv: !!env.STRIPE_SECRET_KEY, kitRabatt: await kitRabatt(req, env) }, 200, { "Cache-Control": "no-store" });
+  if (p === "/api/bestellen" && req.method === "GET") return json({ aktiv: !!env.STRIPE_SECRET_KEY }, 200, { "Cache-Control": "no-store" });
   if (req.method === "POST" && !gleicheHerkunft(req, url)) return json({ fehler: "herkunft" }, 403);
   if (p === "/api/anfrage" && req.method === "POST") return anfrage(req, env, ctx);
   if (p === "/api/widerruf" && req.method === "POST") return widerruf(req, env, ctx);
@@ -305,24 +305,13 @@ export const PAKETE = {
   praxis: { cent: 99900, name: { de: "Paket Praxis – Online-Kurs + 1 Praxistag", en: "Practice package – online course + 1 practice day", es: "Paquete Práctica – curso online + 1 día de práctica" } },
   komplett: { cent: 249000, name: { de: "Paket Komplett – Online-Kurs, 2 Praxistage, 1:1-Coaching", en: "Complete package – online course, 2 practice days, 1:1 coaching", es: "Paquete Completo – curso online, 2 días de práctica, mentoría 1:1" } }
 };
-// Einzelprodukte: Praxiskit (Ware, Versand frei) und Kursbuch als PDF (digitaler Inhalt).
+// Einzelprodukt: Kursbuch digital (digitaler Inhalt). Übungsmaterial gibt es nur im Paket Komplett (Versand).
 // BUCH-PREIS VORLÄUFIG: E-Book-Preise unterliegen der Buchpreisbindung – den endgültigen Preis legt Alessandro fest.
 export const PRODUKTE = {
-  kit: { cent: 9900, rabattCent: 8415, art: "ware", name: { de: "Praxiskit – Übungsset mit Silikonohr", en: "Practice kit – training set with silicone ear", es: "Kit de práctica – set con oreja de silicona" } },
   buch: { cent: 1990, art: "digital", monate: 24, name: { de: "Kursbuch digital – online lesen (24 Monate)", en: "Course book digital – read online (24 months, German)", es: "Libro del curso digital – lectura online (24 meses, en alemán)" } }
 };
-const KIT_RABATT_PAKETE = ["basis", "praxis"]; // 15 % nach bestandener Prüfungssimulation; Komplett hat das Kit schon
-const VERSAND_LAENDER = ["DE", "AT"];
+const VERSAND_LAENDER = ["DE", "AT"]; // Übungsset im Paket Komplett
 const BUCH_SEITEN_PRO_STUNDE = 300; // Bremse gegen massenhaftes Abrufen der Buchseiten
-
-// Kursteilnehmer (Basis/Praxis) mit bestandener Prüfungssimulation bekommen das Kit günstiger
-async function kitRabatt(req, env) {
-  const s = await sitzung(req, env);
-  if (!s || !KIT_RABATT_PAKETE.includes(s.kunde.paket)) return false;
-  const f = await env.DB.prepare("SELECT daten FROM fortschritt WHERE email = ?").bind(s.email).first();
-  const st = f ? JSON.parse(f.daten) : null;
-  return !!(st && st.simulation && st.simulation.bestanden);
-}
 
 // Fassung der beiden Häkchen auf bestellen.html – bei jeder Textänderung dort hochzählen
 const ZUSTIMMUNG_FASSUNG = "2026-11-01";
@@ -351,13 +340,11 @@ async function bestellen(req, env, url) {
   f.set("client_reference_id", sprache);
   f.set("line_items[0][quantity]", "1");
   f.set("line_items[0][price_data][currency]", "eur");
-  const rabatt = paket === "kit" && (await kitRabatt(req, env));
-  const cent = PAKETE[paket] ? PAKETE[paket].cent : rabatt ? PRODUKTE.kit.rabattCent : PRODUKTE[paket].cent;
+  const cent = (PAKETE[paket] || PRODUKTE[paket]).cent;
   f.set("line_items[0][price_data][unit_amount]", String(cent));
-  f.set("line_items[0][price_data][product_data][name]", (PAKETE[paket] || PRODUKTE[paket]).name[sprache] + (rabatt ? { de: " – Preis für Kursteilnehmer", en: " – course participant price", es: " – precio para alumnos" }[sprache] : ""));
-  if (art === "ware") VERSAND_LAENDER.forEach((l, i) => f.set("shipping_address_collection[allowed_countries][" + i + "]", l));
+  f.set("line_items[0][price_data][product_data][name]", (PAKETE[paket] || PRODUKTE[paket]).name[sprache]);
+  if (art === "ware" || paket === "komplett") VERSAND_LAENDER.forEach((l, i) => f.set("shipping_address_collection[allowed_countries][" + i + "]", l));
   f.set("metadata[art]", art);
-  if (rabatt) f.set("metadata[rabatt]", "kursteilnehmer");
   f.set("billing_address_collection", "required"); // Rechnungsadresse (Rechnung, Land für die Umsatzsteuer)
   f.set("metadata[paket]", paket);
   f.set("metadata[sprache]", sprache);
@@ -470,10 +457,17 @@ async function stripeWebhook(req, env, ctx) {
 
   const mail = mailWillkommen({ env, email, name, paket, sprache, betrag: sess.amount_total || 0, waehrung: sess.currency || "eur", gekauft, zustimmung: zustimmungText, buchLink: true });
   ctx.waitUntil(sende(env, email, mail));
+  if (paket === "komplett") {
+    const v = sess.shipping_details || (sess.collected_information && sess.collected_information.shipping_details) || {};
+    const a = v.address || (sess.customer_details && sess.customer_details.address) || {};
+    const adresse = [v.name || name, a.line1, a.line2, [a.postal_code, a.city].filter(Boolean).join(" "), a.country].filter(Boolean);
+    const admin = String(env.ADMIN_EMAILS || "").split(",")[0].trim();
+    if (admin) ctx.waitUntil(sende(env, admin, mailSetAkademie({ email, name, adresse }), email));
+  }
   return json({ ok: true });
 }
 
-// ---------- Einzelprodukte: Praxiskit (Versand) und Kursbuch (PDF-Download) ----------
+// ---------- Einzelprodukt: Kursbuch digital ----------
 async function produktVerkauft(env, ctx, sess, meta, email) {
   const schon = await env.DB.prepare("SELECT stripe_session FROM verkaeufe WHERE stripe_session = ?").bind(sess.id).first();
   if (schon) return json({ ok: true, doppelt: true });
@@ -484,14 +478,7 @@ async function produktVerkauft(env, ctx, sess, meta, email) {
     env.DB.prepare("INSERT INTO verkaeufe (stripe_session, produkt, email, zeit, betrag) VALUES (?, ?, ?, ?, ?)").bind(sess.id, meta.paket, email, new Date().toISOString(), betrag),
     env.DB.prepare("UPDATE bestellungen SET bezahlt = 1 WHERE id = ? AND stripe_session = ?").bind(meta.bestellung || "", sess.id)
   ]);
-  const admin = String(env.ADMIN_EMAILS || "").split(",")[0].trim();
-  if (meta.paket === "kit") {
-    const v = sess.shipping_details || (sess.collected_information && sess.collected_information.shipping_details) || {};
-    const a = v.address || (sess.customer_details && sess.customer_details.address) || {};
-    const adresse = [v.name || name, a.line1, a.line2, [a.postal_code, a.city].filter(Boolean).join(" "), a.country].filter(Boolean);
-    ctx.waitUntil(Promise.all([sende(env, email, mailKit({ sprache, name, betrag, rabatt: meta.rabatt === "kursteilnehmer", adresse, env })),
-      sende(env, admin, mailKitAkademie({ email, name, betrag, rabatt: meta.rabatt === "kursteilnehmer", adresse }), email)]));
-  } else if (meta.paket === "buch") {
+  if (meta.paket === "buch") {
     // Lesezugang zum Kursbuch in der Fahrschule; bestehende Kurskunden behalten ihr Paket (das Buch ist dort enthalten)
     const bis = new Date(); bis.setMonth(bis.getMonth() + PRODUKTE.buch.monate);
     await env.DB.prepare(`INSERT INTO kunden (email, name, paket, sprache, gekauft_am, gueltig_bis, stripe_session, betrag, zustimmung, gesperrt, verdacht)
