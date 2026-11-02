@@ -11,7 +11,7 @@ KURS.module.push({
       seite: "S. 16",
       inhalt: [
         { typ: "merke", text: "«La higiene es la ciencia de la prevención de las enfermedades y de la conservación y el fortalecimiento de la salud»." },
-        { typ: "liste", titel: "Esto forma parte de las medidas de higiene", punkte: [
+        { typ: "liste", titel: "Forman parte de las medidas de higiene", punkte: [
           "Guantes desechables (estériles), mascarilla desechable y gafas de protección",
           "Desinfectantes para superficies y equipos",
           "Lavado de manos a fondo con jabón suave para la piel y secado con toallas desechables",
@@ -20,7 +20,7 @@ KURS.module.push({
           "Herramientas estériles o desechables que entran en contacto con la piel (pinzas, agujas, joyas iniciales)",
           "Limpieza de los instrumentos sin contacto con la piel (pinzas, tijeras, pinzas para bolas) con desinfectantes adecuados",
           "Lavado del instrumental médico separado de la sala de intervención",
-          "Lavar la ropa de trabajo con regularidad con agua hirviendo y detergente",
+          "Lavar la ropa de trabajo con regularidad con agua muy caliente y detergente",
           "Limpiar el suelo y las superficies de trabajo con productos adecuados"
         ] }
       ],
@@ -29,7 +29,7 @@ KURS.module.push({
         ["¿Durante cuánto tiempo, como mínimo, te desinfectas las manos?", ["30 segundos", "10 segundos", "90 segundos", "3 minutos"], "Al menos 30 segundos o según las indicaciones del fabricante.", "S. 16"],
         ["¿Qué herramientas deben ser estériles o desechables?", ["Las que tocan la piel, como pinzas, agujas y joyas iniciales", "Solo las agujas; las pinzas se desinfectan", "Pinzas para bolas, tijeras y pinzas sin contacto con la piel", "Solo las joyas iniciales"], "Las herramientas sin contacto con la piel se desinfectan.", "S. 16"],
         ["¿Dónde se lava el instrumental médico?", ["Separado de la sala de intervención", "En el lavamanos de la zona de trabajo", "Directamente en la bandeja de instrumental", "En el baño de ultrasonidos junto a la camilla"], "Lista de medidas de higiene.", "S. 16"],
-        ["¿Con qué se lava la ropa de trabajo?", ["Con agua hirviendo y detergente", "A 40 °C con suavizante higiénico", "A 60 °C sin detergente", "En frío con desinfectante"], "Si está manchada, al menos a 90 °C.", "S. 16, 39"],
+        ["¿Con qué se lava la ropa de trabajo?", ["Con agua muy caliente y detergente", "A 40 °C con desinfectante para la ropa", "A 60 °C sin detergente", "En frío con desinfectante"], "Si está manchada, al menos a 90 °C.", "S. 16, 39"],
         ["¿Con qué te secas las manos después de lavarlas?", ["Con toallas desechables", "Con una toalla de tela cambiada a diario", "Con el secador de manos", "Dejándolas secar al aire"], "Las toallas de tela se usan varias veces y propagan gérmenes; las desechables, no.", "S. 16"]
       ]
     },
@@ -38,7 +38,7 @@ KURS.module.push({
       seite: "S. 17–18",
       inhalt: [
         { typ: "text", text: "La higiene de manos es una de las medidas más importantes para prevenir infecciones. En el trabajo diario, las manos del piercer están en contacto constante con clientes y objetos; así pueden transmitirse agentes patógenos." },
-        { typ: "liste", titel: "Objetivos", punkte: ["Proteger contra la propagación de contaminaciones de la piel", "Eliminar o destruir los microorganismos pasajeros (transitorios)", "Reducir la flora cutánea presente de forma permanente (residente)", "Eliminar la suciedad", "Proteger y cuidar las manos"] },
+        { typ: "liste", titel: "Objetivos", punkte: ["Evitar la propagación de contaminación desde la piel", "Eliminar o destruir los microorganismos pasajeros (transitorios)", "Reducir la flora cutánea presente de forma permanente (residente)", "Eliminar la suciedad", "Proteger y cuidar las manos"] },
         { typ: "schritte", titel: "Requisitos para una higiene eficaz", punkte: [
           "Nada de joyas, relojes ni anillos en manos y antebrazos.",
           "Están prohibidos el esmalte de uñas y las uñas largas.",
@@ -101,7 +101,7 @@ KURS.module.push({
       inhalt: [
         { typ: "text", text: "En la rutina se puede prescindir de la fase de lavado antes de la desinfección quirúrgica de manos. Con las manos visiblemente limpias, el lavado ya no es necesario en general, porque reduce el efecto de los desinfectantes a base de alcohol. Sin embargo, antes de empezar la jornada el lavado de manos sigue siendo obligatorio, porque el alcohol es poco eficaz contra las esporas bacterianas." },
         { typ: "tabelle", kopf: ["Flora cutánea", "Qué es", "Objetivo"], zeilen: [
-          ["Flora cutánea transitoria", "Colonización pasajera y ajena a la piel, entre otros con gérmenes patógenos", "Eliminarla en gran parte con el lavado, destruirla con la desinfección"],
+          ["Flora cutánea transitoria", "Colonización pasajera por organismos ajenos a la piel, entre ellos gérmenes patógenos", "Eliminarla en gran parte con el lavado, destruirla con la desinfección"],
           ["Flora cutánea residente", "Flora propia del cuerpo, protege contra gérmenes patógenos", "No destruirla, solo reducirla"]
         ] },
         { typ: "achtung", text: "Si te has lavado las manos, sécalas por completo antes de desinfectarlas. No apliques nunca desinfectante sobre la piel húmeda: se diluye y actúa peor." }
@@ -109,7 +109,7 @@ KURS.module.push({
       fragen: [
         ["¿Por qué en la rutina no hace falta lavarse las manos antes de desinfectarlas?", ["El lavado reduce el efecto de los desinfectantes a base de alcohol", "El agua contiene más gérmenes que las manos", "El lavado no reseca la piel", "El desinfectante también elimina toda la suciedad"], "Con las manos visiblemente limpias.", "S. 22"],
         ["¿Cuándo sigue siendo obligatorio lavarse las manos?", ["Antes de empezar la jornada, porque el alcohol apenas actúa contra las esporas", "Antes de cada cliente", "Después de cada desinfección de manos", "Solo al terminar la jornada"], "El alcohol es poco eficaz contra las esporas.", "S. 22"],
-        ["¿Qué es la flora cutánea transitoria?", ["Una colonización pasajera y ajena a la piel, p. ej. con patógenos", "La flora protectora propia del cuerpo", "Los gérmenes de las capas profundas de la piel", "Los gérmenes que solo alcanza la desinfección quirúrgica"], "Se puede eliminar y destruir.", "S. 22"],
+        ["¿Qué es la flora cutánea transitoria?", ["Una colonización pasajera por organismos ajenos a la piel, entre ellos patógenos", "La flora protectora propia del cuerpo", "Los gérmenes de las capas profundas de la piel", "Los gérmenes que solo alcanza la desinfección quirúrgica"], "Se puede eliminar y destruir.", "S. 22"],
         ["¿Qué es la flora cutánea residente?", ["La flora propia del cuerpo, que protege contra gérmenes patógenos", "Una colonización pasajera con agentes patógenos", "La flora que desaparece por completo con el lavado", "Una infección de la piel por hongos"], "Solo se reduce.", "S. 22"],
         ["¿Qué se aplica al desinfectante y la piel húmeda?", ["No aplicarlo nunca sobre piel húmeda", "La piel húmeda potencia el efecto", "Solo se permite en la desinfección quirúrgica", "Da igual si se frota más tiempo"], "Primero secar.", "S. 22"]
       ]
@@ -152,7 +152,7 @@ KURS.module.push({
         ["¿Se permiten pastillas de jabón en el lavamanos?", ["No", "Sí, si se cambian a diario", "Sí, para los clientes", "Sí, con jabonera"], "Un dispensador para el desinfectante y otro para el jabón líquido.", "S. 25"],
         ["¿Cómo se accionan el grifo y los dispensadores?", ["Con el pie, el codo o un sensor", "Con la mano, y después desinfectar", "Con un papel", "Con el dorso de la mano"], "Sin contacto de las manos.", "S. 25"],
         ["¿Qué se aplica a los dispensadores de jabón líquido antes de rellenarlos?", ["Vaciarlos, desinfectarlos y limpiarlos a fondo", "Simplemente rellenarlos cuando estén a la mitad", "Limpiarlos solo una vez al año", "Diluir con agua y rellenar"], "Mejor, botellas desechables.", "S. 25"],
-        ["¿Por qué el lavamanos debe poder usarse sin contacto de las manos?", ["Porque en dispensadores y lavamanos se transmiten fácilmente patógenos", "Porque la oficina local de salud pública (Gesundheitsamt) solo lo exige a médicos", "Para gastar menos agua", "Porque si no, los guantes se rompen"], "Hay que evitar el contacto.", "S. 25"]
+        ["¿Por qué el lavamanos debe poder usarse sin contacto de las manos?", ["Porque en dispensadores y lavamanos se transmiten fácilmente patógenos", "Porque la oficina local de salud pública solo lo exige a médicos", "Para gastar menos agua", "Porque si no, los guantes se rompen"], "Hay que evitar el contacto.", "S. 25"]
       ]
     },
     {
@@ -198,7 +198,7 @@ KURS.module.push({
       seite: "Ergänzung",
       entwurf: true,
       inhalt: [
-        { typ: "text", text: "Al perforar tienes contacto con sangre. A través de la sangre pueden transmitirse la hepatitis B, la hepatitis C y el VIH, con mayor frecuencia por un pinchazo con una cánula usada. Por eso te proteges por partida doble: trabajando de forma segura y vacunándote." },
+        { typ: "text", text: "Al perforar tienes contacto con sangre. A través de la sangre pueden transmitirse la hepatitis B, la hepatitis C y el VIH, sobre todo por un pinchazo con una cánula usada. Por eso te proteges por partida doble: trabajando de forma segura y vacunándote." },
         { typ: "liste", titel: "Prevención", punkte: [
           "Vacunarte contra la hepatitis B y hacer que un médico compruebe el éxito de la vacunación (título de anticuerpos). La guía de higiene para tatuajes y piercings recomienda la vacuna a todas las personas que perforan.",
           "Contra la hepatitis C y el VIH no hay vacuna. Aquí solo protegen los guantes, el trabajo seguro y el desecho inmediato de las agujas.",
@@ -209,7 +209,7 @@ KURS.module.push({
           "Interrumpe el trabajo de inmediato y quítate el guante.",
           "Favorece el sangrado: presiona el tejido alrededor de la herida durante al menos un minuto; no aprietes directamente en el punto de punción.",
           "Desinfecta la herida con un antiséptico cutáneo a base de alcohol.",
-          "Acude de inmediato a un médico; en caso de accidente laboral, a un médico autorizado por la mutua de accidentes (Durchgangsarzt, D-Arzt). Un tratamiento preventivo contra el VIH funciona mejor si se empieza en pocas horas.",
+          "Acude de inmediato a un médico; en caso de accidente laboral, a un médico autorizado por la mutua de accidentes (Durchgangsarzt, D-Arzt). Un tratamiento preventivo contra el VIH funciona mejor si se inicia en las primeras horas.",
           "Documenta el incidente: cuándo, con qué, con qué cliente. El médico aclara si el cliente está dispuesto a hacerse un análisis de sangre."
         ] },
         { typ: "ergaenzung", text: "Fundamento: la guía S1 sobre requisitos de higiene en tatuajes y piercings y las recomendaciones de las aseguradoras de accidentes. En el módulo 11, averigua con qué mutua de accidentes laborales (Berufsgenossenschaft) estás asegurado." }
@@ -219,7 +219,7 @@ KURS.module.push({
         ["¿Qué haces con una cánula usada?", ["Directa al contenedor, nunca de vuelta al capuchón", "De vuelta al capuchón y luego al contenedor", "Primero asegurar la joya y después desecharla", "Dejarla en la bandeja de instrumental"], "Volver a poner el capuchón es una causa frecuente de pinchazos.", "S. 27"],
         ["¿Qué haces tras un pinchazo, después de interrumpir el trabajo?", ["Favorecer el sangrado presionando el tejido alrededor de la herida", "Vendar la herida con fuerza de inmediato", "Apretar con fuerza en el punto de punción", "Chupar la herida"], "Después, desinfectar.", "Ergänzung"],
         ["¿Con qué desinfectas una herida por pinchazo?", ["Con un antiséptico cutáneo a base de alcohol", "Con desinfectante de superficies", "Con solución salina", "Con agua oxigenada"], "Después, al médico de inmediato.", "Ergänzung"],
-        ["¿A quién acudes tras un pinchazo en el trabajo?", ["Al médico de inmediato; si es accidente laboral, a un D-Arzt", "Al médico de cabecera el siguiente día laborable", "A la oficina local de salud pública", "Al médico solo si hay molestias"], "La prevención del VIH funciona mejor en pocas horas.", "Ergänzung"],
+        ["¿A quién acudes tras un pinchazo en el trabajo?", ["Al médico de inmediato; si es un accidente laboral, a un médico de la mutua (D-Arzt)", "Al médico de cabecera el siguiente día laborable", "A la oficina local de salud pública", "Al médico solo si hay molestias"], "La profilaxis del VIH funciona mejor si se inicia en las primeras horas.", "Ergänzung"],
         ["¿Por qué haces comprobar el éxito de la vacuna contra la hepatitis B?", ["Porque no toda vacunación genera suficientes anticuerpos", "Porque la vacuna caduca al cabo de un año", "Porque la oficina de comercio exige el comprobante", "Porque también debe proteger contra la hepatitis C"], "Control mediante el título de anticuerpos.", "Ergänzung"]
       ]
     },
@@ -250,7 +250,7 @@ KURS.module.push({
       titel: "Cómo actúan los desinfectantes",
       seite: "S. 30–31",
       inhalt: [
-        { typ: "liste", titel: "Requisitos de los desinfectantes", punkte: ["reducir el número de gérmenes de forma rápida y amplia", "alcanzar una profundidad de penetración suficiente", "actuar también en presencia de material orgánico", "tener solo una baja toxicidad sistémica", "ser tolerados por la piel, las mucosas y las heridas abiertas", "conservarse mucho tiempo y a la vez ser biodegradables", "mantener baja la carga de olores"] },
+        { typ: "liste", titel: "Requisitos de los desinfectantes", punkte: ["reducir el número de gérmenes de forma rápida y amplia", "alcanzar una profundidad de penetración suficiente", "actuar también en presencia de material orgánico", "tener solo una baja toxicidad sistémica", "ser tolerados por la piel, las mucosas y las heridas abiertas", "conservarse mucho tiempo y a la vez ser biodegradables", "desprender poco olor"] },
         { typ: "text", text: "Los desinfectantes actúan desnaturalizando: alteran las estructuras proteicas de los microorganismos y las destruyen. Algunos dañan además las membranas lipídicas (por ejemplo, la envoltura de los virus) o los ácidos nucleicos. Los excipientes hacen que el principio activo llegue al lugar de acción." },
         { typ: "tabelle", kopf: ["Mecanismo de acción", "Ejemplo"], zeilen: [
           ["Desnaturalización de proteínas", "Productos con aldehídos o alcoholes"],
@@ -263,7 +263,7 @@ KURS.module.push({
       fragen: [
         ["¿Qué requisito debe cumplir un desinfectante?", ["Debe tener solo una baja toxicidad sistémica", "Debe permanecer en la piel el mayor tiempo posible", "Debe sellar el material orgánico", "No debe ser biodegradable"], "Además, una reducción de gérmenes rápida y amplia.", "S. 30"],
         ["¿Cómo actúan, en principio, los desinfectantes?", ["Desnaturalizando: alteran las estructuras proteicas de los gérmenes", "Solo arrastran los gérmenes de forma mecánica", "Les quitan calor a los gérmenes", "Refuerzan la flora cutánea contra los gérmenes"], "Algunos también dañan las membranas lipídicas.", "S. 31"],
-        ["¿Qué mecanismo de acción forma parte de las categorías?", ["Desnaturalización de proteínas", "Desecación por frío", "Irradiación", "Filtración"], "Además, oxidación, tensión superficial, inhibición enzimática y ácidos nucleicos.", "S. 31"],
+        ["¿Cuál de estos es uno de los mecanismos de acción indicados?", ["Desnaturalización de proteínas", "Desecación por frío", "Irradiación", "Filtración"], "Además, oxidación, tensión superficial, inhibición enzimática y ácidos nucleicos.", "S. 31"],
         ["¿Qué sustancia actúa por oxidación?", ["Peróxido de hidrógeno", "Fenol", "Etanol", "Aldehído"], "Les quita electrones a los componentes de los gérmenes y así los destruye.", "S. 31"],
         ["¿Para qué sirven los excipientes en los desinfectantes?", ["Para que el principio activo llegue al lugar de acción", "Para que el producto se adhiera más tiempo a la piel", "Para sustituir el tiempo de actuación", "Para reducir la eficacia virucida"], "El principio activo tiene que llegar a los gérmenes. Los excipientes hacen que moje la superficie y se distribuya.", "S. 31"]
       ]
@@ -331,7 +331,7 @@ KURS.module.push({
         ["¿Qué debe adjuntarse al plan marco de higiene?", ["Un plan de limpieza y desinfección", "El registro de la actividad comercial", "Los formularios de consentimiento", "Un plan de protección contra incendios"], "Cada paso de trabajo debe quedar reflejado.", "S. 36"],
         ["¿A quién consultas el plan marco de higiene para estudios de piercing?", ["A la oficina local de salud pública competente", "A la oficina de comercio", "A la mutua de accidentes laborales", "A la cámara de artesanía"], "Además de los conocimientos adquiridos en el curso.", "S. 36"],
         ["¿Cómo se protegen las superficies de trabajo antes de perforar?", ["Con film impermeable, cambiado después de cada cliente", "Con un paño de tela, cambiado a diario", "Con papel, cambiado una vez al día", "Desinfectándolas una vez por la mañana"], "Plan de ejemplo.", "S. 38"],
-        ["¿Cómo se lava la ropa de trabajo manchada?", ["Al menos 30 minutos a 90 °C", "Al menos 30 minutos a 60 °C", "Brevemente a 40 °C con suavizante higiénico", "A 30 °C con desinfectante"], "Plan de ejemplo, ropa de trabajo.", "S. 39"],
+        ["¿Cómo se lava la ropa de trabajo manchada?", ["Al menos 30 minutos a 90 °C", "Al menos 30 minutos a 60 °C", "Brevemente a 40 °C con desinfectante para la ropa", "A 30 °C con desinfectante"], "Plan de ejemplo, ropa de trabajo.", "S. 39"],
         ["¿Puedes adoptar sin cambios el plan de ejemplo del libro del curso?", ["No, debe acordarse con la oficina de salud pública", "Sí, es de validez general", "Sí, en Niedersachsen", "Sí, si lo firmas"], "Solo como ejemplo.", "S. 39"]
       ]
     },
@@ -352,7 +352,7 @@ KURS.module.push({
         ["¿Qué indicadores tiene como mínimo un autoclave de vapor?", ["Termómetro y manómetro", "Solo un temporizador", "Termómetro e higrómetro", "Manómetro y báscula"], "Los aparatos modernos muestran los valores en digital.", "S. 40"],
         ["¿Cómo se elimina el aire en el procedimiento de vacío?", ["Con bombeo repetido alternado con vapor", "El vapor saturado empuja el aire hacia abajo", "Calentando sin vapor", "Abriendo una válvula al final"], "Prevacío fraccionado.", "S. 41"],
         ["¿Qué autoclaves exige el libro del curso si no se usa instrumental desechable?", ["Tipo S o, mejor, tipo B con prevacío y registrador automático", "Tipo N con procedimiento por gravedad", "Cualquier autoclave de vapor sin registrador", "Esterilizadores de aire caliente"], "Ten en cuenta la legislación local.", "S. 41"],
-        ["¿Qué se exige cada vez más para manejar un autoclave de vapor?", ["Una acreditación de competencia técnica", "Un título de maestro artesano", "Una pegatina de inspección del TÜV en el aparato", "Una autorización de la Berufsgenossenschaft"], "Quien reprocesa productos sanitarios debe poder demostrar la competencia necesaria. Muchas oficinas de salud pública lo preguntan.", "S. 41"]
+        ["¿Qué se exige cada vez más para manejar un autoclave de vapor?", ["Una acreditación de competencia técnica", "Un título de maestro artesano", "Una pegatina de inspección del TÜV en el aparato", "Una autorización de la mutua de accidentes laborales"], "Quien reprocesa productos sanitarios debe poder demostrar la competencia necesaria. Muchas oficinas de salud pública lo preguntan.", "S. 41"]
       ]
     },
     {
@@ -411,12 +411,12 @@ KURS.module.push({
       inhalt: [
         { typ: "text", text: "El envase de esterilización se marca con la fecha de esterilización y el número de lote. Se recomienda guardar el material estéril en cajones cerrados." },
         { typ: "tabelle", kopf: ["Almacenamiento", "Estante abierto", "Cajón cerrado"], zeilen: [["Envase simple", "máx. 48 horas", "máx. 6 meses"], ["Envase doble", "máx. 48 horas", "máx. 5 años"]] },
-        { typ: "ergaenzung", text: "Según la norma DIN 58953-8, los 5 años solo son válidos si el material estéril se guarda además en un envase de almacenamiento que lo proteja del polvo. En caso de duda: protegido en armario o cajón, como máximo 6 meses; al aire libre, solo para uso inmediato." },
-        { typ: "liste", titel: "Control de funcionamiento (según el libro del curso, prescrito por la Ley de Productos Sanitarios (MPG) y la Berufsgenossenschaft; la MPG ya no está vigente desde 2021; hoy rigen la Ley de aplicación del derecho de productos sanitarios (MPDG) y el Reglamento de operadores de productos sanitarios (MPBetreibV))", punkte: [
+        { typ: "ergaenzung", text: "Según la norma DIN 58953-8, los 5 años solo son válidos si el material estéril se guarda además en un envase de almacenamiento que lo proteja del polvo. En caso de duda: protegido en armario o cajón, como máximo 6 meses; en estante abierto, solo para uso inmediato." },
+        { typ: "liste", titel: "Control de funcionamiento (según el libro del curso, prescrito por la Ley de Productos Sanitarios (MPG) y la mutua de accidentes laborales (Berufsgenossenschaft); la MPG ya no está vigente desde 2021; hoy rigen la Ley de aplicación del derecho de productos sanitarios (MPDG) y el Reglamento de operadores de productos sanitarios (MPBetreibV))", punkte: [
           "Seguridad eléctrica y mecánica del aparato, una vez al año, por un ingeniero de inspección (TÜV)",
           "Indicadores físicos: termómetros, medidores de presión y temporizadores en la cámara",
           "Control continuo con indicadores químicos en los envases o tiras adhesivas (tiras Sponti) que cambian de color, normalmente a marrón",
-          "Cada seis meses o tras 400 lotes: esterilizar muestras de esporas (esporas del suelo) y hacerlas analizar en un laboratorio certificado",
+          "Cada seis meses o tras 400 lotes: pasar indicadores biológicos (pruebas de esporas) por el autoclave y hacerlos analizar en un laboratorio certificado",
           "En aparatos con prevacío, el test de Bowie-Dick a diario (según el aparato, como test Helix)"
         ] },
         { typ: "merke", text: "Estas pruebas se pueden solicitar a la oficina de salud pública competente y deben presentarse a las autoridades locales cuando las pidan." }

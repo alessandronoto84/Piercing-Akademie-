@@ -30,7 +30,7 @@ KURS.module.push({
       seite: "Ergänzung",
       entwurf: true,
       inhalt: [
-        { typ: "text", text: "Cannulas and jewellery are both specified in gauge, but the same number does not mean the same millimetres. If you mix them up, you order the wrong jewellery." },
+        { typ: "text", text: "Cannulas and jewellery are both specified in gauge, but the same number does not mean the same diameter in millimetres. Mix them up and you’ll order the wrong jewellery." },
         { typ: "tabelle", kopf: ["Gauge", "Cannula (outer diameter)", "Jewellery (bar thickness)"], zeilen: [
           ["20G", "–", "0.8 mm"], ["18G", "1.3 mm", "1.0 mm"], ["16G", "1.7 mm", "1.2 mm"], ["14G", "2.2 mm", "1.6 mm"], ["12G", "–", "2.0 mm"]
         ] },
@@ -55,11 +55,11 @@ KURS.module.push({
         ["What bar thickness does 14G jewellery have?", ["1.6 mm", "2.2 mm", "1.2 mm", "2.0 mm"], "A 14G cannula is 2.2 mm.", "Ergänzung"],
         ["Which cannula does the Academy use for 1.2 mm jewellery?", ["18G", "16G", "14G", "20G"], "18G cannula with 1.3 mm outer diameter.", "Akademie"],
         ["Which cannula does the Academy use for 1.6 mm jewellery?", ["16G", "18G", "14G", "12G"], "16G cannula with 1.7 mm outer diameter.", "Akademie"],
-        ["Case: You order initial jewellery in 16G. Which cannula do you pierce it with?", ["The 18G cannula, as 16G jewellery is 1.2 mm", "The 16G cannula, same number", "The 14G cannula, one step thicker", "The 20G cannula"], "Jewellery gauge and cannula gauge are not the same millimetres.", "Akademie"],
+        ["Case: You order initial jewellery in 16G. Which cannula do you pierce it with?", ["The 18G cannula, as 16G jewellery is 1.2 mm", "The 16G cannula, same number", "The 14G cannula, one step thicker", "The 20G cannula"], "Jewellery gauge and cannula gauge do not correspond to the same millimetres.", "Akademie"],
         ["Which cannula does the Academy use to pierce a normal Lobe?", ["18G", "16G", "14G", "Biopsy punch"], "14G only if a tunnel is wanted.", "S. 74"],
         ["When do you use the 14G cannula for a Lobe?", ["Only if a tunnel is wanted", "For every Lobe", "For clients with thick earlobes", "For an Upper Lobe"], "Otherwise the Academy pierces the Lobe with 18G.", "S. 74"],
         ["Which cannula does the Academy use to pierce the Prince Albert?", ["14G", "16G", "18G", "12G"], "According to the data sheet; the initial jewellery is a BCR.", "S. 98"],
-        ["Does 16G mean the same millimetres for cannula and jewellery?", ["No, the 16G cannula (1.7 mm) is thicker than 16G jewellery (1.2 mm)", "Yes, both are 1.6 mm", "No, the 16G cannula is thinner than 16G jewellery", "Yes, gauge is a uniform standard"], "Cannulas and jewellery are measured differently.", "Ergänzung"],
+        ["Does 16G mean the same diameter for cannula and jewellery?", ["No, the 16G cannula (1.7 mm) is thicker than 16G jewellery (1.2 mm)", "Yes, both are 1.6 mm", "No, the 16G cannula is thinner than 16G jewellery", "Yes, gauge is a uniform standard"], "Cannulas and jewellery are measured differently.", "Ergänzung"],
         ["Why is the cannula thicker than the jewellery?", ["Because the jewellery is inserted into the plastic sheath", "So the channel is larger than the jewellery and heals faster", "So that less blood escapes", "Because thicker cannulas hurt less"], "See module 9, The piercing.", "Ergänzung"],
         ["What applies to jewellery: the higher the gauge number …", ["… the thinner the bar", "… the thicker the bar", "… the longer the bar", "… the bigger the ball"], "As with cannulas.", "Ergänzung"],
         ["Where do you try out a new combination of cannula and jewellery?", ["On the practice model first", "Directly on the first client", "On your own ear", "Not at all, supplier charts are enough"], "Not on a client.", "Ergänzung"]
@@ -92,7 +92,7 @@ KURS.module.push({
       fragen: [
         ["What is a piercing clamp for?", ["It holds the area so the skin stays in position while piercing", "It holds the jewellery while the ball is screwed on", "It catches the cannula for Rook and Daith", "It spreads ball closure rings"], "There are many clamps for different piercings.", "S. 65"],
         ["What do you use a receiving tube for?", ["For areas such as Rook and Daith where no clamp fits", "For shortening the cannula", "For stretching the piercing channel", "For storing used needles"], "It protects the surrounding tissue.", "S. 68"],
-        ["Where can you find which clamp fits a piercing?", ["In the piercing’s data sheet", "On the cannula packaging", "In the framework hygiene plan", "In the consent form"], "See module 8.", "S. 74–110"]
+        ["Where can you find out which clamp suits a piercing?", ["In the piercing’s data sheet", "On the cannula packaging", "In the framework hygiene plan", "In the consent form"], "See module 8.", "S. 74–110"]
       ]
     },
     {
@@ -100,12 +100,12 @@ KURS.module.push({
       seite: "S. 66–69, 73",
       inhalt: [
         { typ: "tabelle", kopf: ["Tool", "What for"], zeilen: [
-          ["Insertion taper", "Pointed bar that gradually widens; carefully stretch healed piercing channels or push through channels that have stuck together"],
-          ["Holding pliers", "Hold the inserted jewellery while the ball is screwed on"],
-          ["Scissors", "Shorten the plastic tube of the cannula after piercing so the jewellery goes in more easily"],
+          ["Insertion taper", "Pointed bar that gradually widens; used to carefully stretch healed piercing channels or to reopen channels that have closed up"],
+          ["Holding pliers", "Holds the inserted jewellery while the ball is screwed on"],
+          ["Scissors", "Shortens the plastic tube of the cannula after piercing so the jewellery goes in more easily"],
           ["Ball grabber", "Holds piercing balls and makes screwing them on easier"],
           ["Caliper", "Measures jewellery and adjusts the position of the piercing"],
-          ["Ring opening and ring closing pliers", "Spread or close ball closure rings (BCR) to remove or insert the ball"],
+          ["Ring opening and ring closing pliers", "Spreads or closes ball closure rings (BCR) to remove or insert the ball"],
           ["Torch (green light)", "Shines through the ear, for example, to identify blood vessels"],
           ["Mini side cutter", "Cuts through jewellery when a ball can no longer be loosened"]
         ] },
@@ -135,7 +135,7 @@ KURS.module.push({
         { typ: "text", text: "There are countless tools, aids and versions; the course book shows a selection of the most important ones." }
       ],
       fragen: [
-        ["Why is hair removed from the piercing site?", ["Hair carries germs and can disturb healing", "So the skin marker holds better", "So the client feels less pain", "Because otherwise the clamp slips"], "That is what disposable razors are for.", "S. 70"],
+        ["Why is hair removed from the piercing site?", ["Hair carries germs and can impair healing", "So the skin marker holds better", "So the client feels less pain", "Because otherwise the clamp slips"], "That is what disposable razors are for.", "S. 70"],
         ["What do you use to mark the entry and exit points?", ["A single-use skin marker", "A disinfected ballpoint pen", "A kohl pencil", "Iodine solution"], "Surgical marker.", "S. 69"],
         ["What do you use to disinfect the area to be pierced?", ["An alcohol swab", "Saline solution", "Octenisept for every piercing", "Surface disinfectant"], "See single-use materials.", "S. 70"],
         ["How do you work on the client?", ["Always with disinfected hands and (sterile) disposable gloves", "With disposable gloves; hands need not be disinfected", "With disinfected hands, without gloves", "With reusable, disinfected gloves"], "Gloves do not replace hand disinfection: disinfect first, then put on gloves.", "S. 71"]

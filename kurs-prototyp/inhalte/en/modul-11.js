@@ -33,7 +33,7 @@ KURS.module.push({
         { typ: "video", id: "studio-raum", text: "Treatment room with a wipeable couch, hand washbasin and autoclave.", schleife: true },
         { typ: "liste", punkte: [
           "Workstation separated from the waiting area structurally or at least by a partition wall; ideally a separate room.",
-          "Hand washbasin with running water and dispensers for disinfectant, washing lotion and disposable towels, operable without hand contact and without splashes reaching the workstation.",
+          "Hand washbasin with running water and dispensers for disinfectant, liquid soap and disposable towels, operable without hand contact and without splashes reaching the workstation.",
           "Couch and furniture with smooth, wipeable surfaces.",
           "Separate toilet with hand washbasin, dispensers, waste bin and sanitary bin.",
           "First aid kit and emergency numbers clearly visible."
@@ -43,7 +43,7 @@ KURS.module.push({
       ],
       fragen: [
         ["How is the workstation separated from the waiting area?", ["Structurally or at least by a partition wall", "By a curtain", "By a marking on the floor", "By a fabric-covered folding screen"], "According to the information sheets and the course book.", "S. 26"],
-        ["What belongs at the hand-washing station?", ["Dispensers for disinfectant, washing lotion and disposable towels", "A bar of soap and a cloth towel", "Only a disinfectant dispenser", "A nail brush and a towel"], "Operable without hand contact.", "S. 25"]
+        ["What belongs at the hand-washing station?", ["Dispensers for disinfectant, liquid soap and disposable towels", "A bar of soap and a cloth towel", "Only a disinfectant dispenser", "A nail brush and a towel"], "Operable without hand contact.", "S. 25"]
       ]
     },
     {
@@ -105,7 +105,7 @@ KURS.module.push({
         { typ: "liste", punkte: [
           "A written consent form before every piercing (module 2).",
           "Check age: under 18 only with the consent of the parents or legal guardians, better not at all.",
-          "No promises of healing and no advertising with them.",
+          "No health claims, and no advertising based on them.",
           "You turn down piercings you have not safely mastered; you never perform piercings marked “Do not perform” (module 8).",
           "If complications occur, you refer the client to a doctor."
         ] }

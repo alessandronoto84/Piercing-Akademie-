@@ -58,13 +58,13 @@ KURS.module.push({
           "Retirar la cánula; la vaina de plástico se queda en el canal de la perforación.",
           "Recortar un poco la vaina de plástico con tijeras para que la joya entre mejor.",
           "Introducir la joya inicial en la vaina de plástico.",
-          "Empujarla a través del canal de la perforación, no tirar de ella; si no, la joya puede soltarse. Es doloroso: pide al cliente que exhale mientras tanto."
+          "Empujarla a través del canal de la perforación, no tirar de ella; si no, la joya puede salirse. Es doloroso: pide al cliente que exhale mientras tanto."
         ] },
         { typ: "grafik", id: "stich" }
       ],
       fragen: [
         ["¿Hacia dónde perforas idealmente?", ["Hacia el lado visible; en el labret, donde va la bola", "Siempre de dentro hacia fuera", "Siempre de atrás hacia delante", "Hacia donde va la placa"], "Paso 12.", "S. 112"],
-        ["¿Qué se aplica a la velocidad de la perforación?", ["Cuanto más rápido se perfora, menos dolor", "Perforar despacio para que el tejido ceda", "La velocidad no influye", "Rápido solo en cartílago, si no, despacio"], "Paso 12.", "S. 112"],
+        ["¿Qué es cierto sobre la velocidad de la perforación?", ["Cuanto más rápido se perfora, menos dolor", "Perforar despacio para que el tejido ceda", "La velocidad no influye", "Rápido solo en cartílago, si no, despacio"], "Paso 12.", "S. 112"],
         ["¿Por qué recortas la vaina de plástico?", ["Para que la joya entre mejor", "Para que no se quede en el canal", "Para que la aguja salga más fácilmente", "Para que salga menos sangre"], "Paso 14.", "S. 112"],
         ["¿Qué le pides al cliente mientras empujas la joya?", ["Que exhale", "Que inhale y aguante la respiración", "Que cuente en voz alta", "Que cierre los ojos y trague"], "Paso 16.", "S. 112"]
       ]
@@ -111,7 +111,7 @@ KURS.module.push({
       seite: "S. 26, 50, 113",
       inhalt: [
         { typ: "achtung", text: "Si al cliente le baja la tensión durante el procedimiento (¡pregunta siempre!), dale glucosa (por ejemplo, Dextro Energy) y algo de beber. Si es necesario, túmbalo y déjalo descansar." },
-        { typ: "ergaenzung", text: "Lo que funciona en un colapso circulatorio: tumbar a la persona en horizontal y elevarle las piernas para que la sangre vuelva a la cabeza. La glucosa y la bebida, solo cuando el cliente vuelva a tragar con seguridad." },
+        { typ: "ergaenzung", text: "Lo que da buen resultado en un colapso circulatorio: tumbar a la persona en horizontal y elevarle las piernas para que la sangre vuelva a la cabeza. La glucosa y la bebida, solo cuando el cliente vuelva a tragar con seguridad." },
         { typ: "liste", titel: "Estar preparado", punkte: [
           "En el estudio hay un botiquín de primeros auxilios actualizado, bien visible y de acceso rápido.",
           "Los números de emergencia (médico de urgencias, médico de cabecera, bomberos) están expuestos.",
@@ -123,7 +123,7 @@ KURS.module.push({
       fragen: [
         ["¿Qué ayuda cuando baja la tensión?", ["Tumbarse, piernas en alto, descansar; luego glucosa y algo de beber", "Sentarlo erguido y darle café", "Seguir perforando para que acabe rápido", "Agua fría en la cara y hacer que se levante"], "Ver pág. 113.", "S. 113"],
         ["¿Cómo detectas a tiempo una bajada de tensión?", ["Pregunto siempre durante el procedimiento", "Mido la tensión antes", "Solo me fijo en el sudor", "No lo hago, el cliente ya avisará"], "«¡Pregunta siempre!»", "S. 113"],
-        ["¿Qué números de emergencia deben estar expuestos?", ["Médico de urgencias, médico de cabecera, bomberos", "Policía y oficina local de salud pública (Gesundheitsamt)", "Solo el 110", "Oficina local de salud pública y oficina de comercio (Gewerbeamt)"], "Cap. 5.4.", "S. 26"],
+        ["¿Qué números de emergencia deben estar expuestos?", ["Médico de urgencias, médico de cabecera, bomberos", "Policía y oficina local de salud pública", "Solo la policía (110)", "Oficina local de salud pública y oficina de comercio"], "Cap. 5.4.", "S. 26"],
         ["¿Qué número marcas en caso de pérdida de conciencia?", ["112", "110", "116 117", "El número del médico de cabecera"], "El 112 comunica en toda Europa con los servicios de emergencias y los bomberos. El 110 es la policía y el 116 117 el servicio médico de guardia (en Alemania).", "Ergänzung"],
         ["Caso: mientras perforas, la clienta se pone pálida y se marea. ¿Qué haces?", ["Interrumpir, tumbarla, piernas en alto, después glucosa y bebida", "Terminar de perforar rápido", "Hacer que se levante y camine", "Rociar espray de frío en la zona"], "Bajada de tensión, ver pág. 113.", "S. 113"]
       ]

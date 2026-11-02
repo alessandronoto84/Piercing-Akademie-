@@ -30,19 +30,19 @@ KURS.module.push({
       seite: "S. 3",
       inhalt: [
         { typ: "text", text: "The earliest traces of piercing lead back to the Neolithic period in Africa. The course book cites Neolithic finds from Algeria: people there are said to have worn pendants made of animal bones and teeth in their earlobes more than 7000 years ago." },
-        { typ: "ergaenzung", text: "The oldest direct evidence is described in a 2022 study (journal Antiquity): in graves at Boncuklu Tarla in south-eastern Turkey, jewellery made of stone, obsidian and copper was still lying at the ears and chins of the dead, around 10,000 to 8,000 BC. We have found no independent source for the course book’s statement about Algeria." },
-        { typ: "text", text: "Old depictions of pharaohs from Egypt (around 1400 to 1300 BC) also show signs of ear jewellery. The famous gold mask of Tutankhamun shows ear piercings. In addition, magnificent gold earrings were found as grave goods." },
+        { typ: "ergaenzung", text: "The oldest direct evidence is described in a 2022 study (journal Antiquity): in graves at Boncuklu Tarla in south-eastern Turkey, jewellery made of stone, obsidian and copper was still in place at the ears and chins of the dead, around 10,000 to 8,000 BC. We have found no independent source for the course book’s statement about Algeria." },
+        { typ: "text", text: "Old depictions of pharaohs from Egypt (around 1400 to 1300 BC) also show signs of ear jewellery. The famous gold mask of Tutankhamun shows pierced ears. In addition, magnificent gold earrings were found as grave goods." },
         { typ: "tabelle", kopf: ["Find", "Age", "What it shows"], zeilen: [
           ["Neolithic finds in Algeria", "over 7000 years", "Ear pendants made of animal bones and teeth"],
           ["Depictions of pharaohs in Egypt", "approx. 1400–1300 BC", "Ear jewellery"],
-          ["Gold mask of Tutankhamun", "approx. 3300 years", "Ear piercings; gold earrings as grave goods"]
+          ["Gold mask of Tutankhamun", "approx. 3300 years", "Pierced ears; gold earrings as grave goods"]
         ] }
       ],
       fragen: [
         ["How old are the oldest finds of ear jewellery mentioned in the course book?", ["Over 7000 years (Algeria)", "About 3300 years (Tutankhamun)", "About 2600 years (Hallstatt culture)", "About 4000 years (Middle East)"], "Neolithic finds from Algeria.", "S. 3"],
         ["What were the oldest ear pendants from Algeria made of?", ["Animal bones and teeth", "Gold", "Bronze", "Shells and wood"], "The Neolithic finds from Algeria were made of animal bones and teeth; metal jewellery came much later.", "S. 3"],
         ["From what period do the oldest known traces of piercing date?", ["The New Stone Age (Neolithic)", "The European Bronze Age", "The age of the pharaohs", "Ancient Greece"], "Neolithic means the New Stone Age.", "S. 3"],
-        ["Which famous mask shows ear piercings?", ["The gold mask of Tutankhamun", "The gold mask of Agamemnon", "Napoleon’s death mask", "The mask of Pakal from Palenque"], "In addition, there were gold earrings as grave goods.", "S. 3"],
+        ["Which famous mask shows pierced ears?", ["The gold mask of Tutankhamun", "The gold mask of Agamemnon", "Napoleon’s death mask", "The mask of Pakal from Palenque"], "In addition, there were gold earrings as grave goods.", "S. 3"],
         ["From what period do the Egyptian depictions of pharaohs with ear jewellery date?", ["About 1400 to 1300 BC", "About 3000 to 2900 BC", "About 500 to 400 BC", "About AD 100 to 200"], "That is how the course book dates them.", "S. 3"]
       ]
     },
@@ -50,7 +50,7 @@ KURS.module.push({
       titel: "Europe, antiquity and other cultures",
       seite: "S. 4, 85, 88",
       inhalt: [
-        { typ: "text", text: "In Europe, there are not as many traces of early piercing. As one of the few pieces of evidence, the course book cites the bronze mask from the Hallstatt culture (Kleinklein, Styria), about 2600 years old, which is said to show several ear piercings on both sides. In ancient Greece and Rome, by contrast, an unblemished body was the ideal." },
+        { typ: "text", text: "Europe has comparatively few traces of early piercing. As one of the few pieces of evidence, the course book cites the bronze mask from the Hallstatt culture (Kleinklein, Styria), about 2600 years old, which is said to show several piercings in each ear. In ancient Greece and Rome, by contrast, an unblemished body was the ideal." },
         { typ: "liste", titel: "History of individual piercings", punkte: [
           "Nose piercing (Nostril): first practised about 4000 years ago in the Middle East, adopted in India in the 16th century. There it is preferably worn on the left side of the nose.",
           "Septum: one of the oldest piercings, traditionally found in many cultures worldwide. The name comes from the Latin “septum nasi”."
@@ -58,8 +58,8 @@ KURS.module.push({
         { typ: "text", text: "Piercings are a universal phenomenon and are found in almost all cultures, as an initiation rite or as adornment. From the earliest days, people have decorated themselves with them: they wanted to show that they belonged to a group and at the same time stand out from it. Whether with tattoos, piercings, scarifications, hairstyles or clothing, every person has their own way of expressing themselves." }
       ],
       fragen: [
-        ["Which European find with ear piercings does the course book mention?", ["A bronze mask from the Hallstatt culture", "A Roman marble bust", "A Roman grave relief", "A Greek vase painting"], "The mask is about 2600 years old.", "S. 4"],
-        ["Roughly how old is the bronze mask from the Hallstatt culture?", ["About 2600 years", "About 7000 years", "About 4000 years", "About 1200 years"], "It shows several ear piercings on both sides.", "S. 4"],
+        ["Which European find with pierced ears does the course book mention?", ["A bronze mask from the Hallstatt culture", "A Roman marble bust", "A Roman grave relief", "A Greek vase painting"], "The mask is about 2600 years old.", "S. 4"],
+        ["Roughly how old is the bronze mask from the Hallstatt culture?", ["About 2600 years", "About 7000 years", "About 4000 years", "About 1200 years"], "It shows several piercings in each ear.", "S. 4"],
         ["What was the ideal body in ancient Greece and Rome?", ["The unblemished body", "A body adorned as richly as possible", "A body with signs of belonging such as earrings", "A tattooed body as a sign of courage"], "That is why there are hardly any traces of piercing there.", "S. 4"],
         ["Where was nose piercing first practised?", ["In the Middle East, about 4000 years ago", "In India, about 4000 years ago", "In Egypt, about 7000 years ago", "In India, in the 16th century"], "It came to India in the 16th century.", "S. 85"],
         ["What is true of the septum piercing?", ["It is one of the oldest piercings and is widespread in many cultures", "It only came from India in the 16th century", "It is pierced through the cartilage of the nasal septum", "It is only traditional in Europe"], "The name comes from “septum nasi”.", "S. 88"],
@@ -111,21 +111,21 @@ KURS.module.push({
       titel: "Why no ear-piercing gun",
       seite: "S. 6",
       inhalt: [
-        { typ: "text", text: "To this day, jewellers offer ear or nose piercings that are shot with an ear-piercing gun. This is strongly advised against on principle." },
+        { typ: "text", text: "To this day, jewellers offer ear or nose piercings that are shot with an ear-piercing gun. As a matter of principle, this should be avoided." },
         { typ: "liste", titel: "The reasons", punkte: [
           "With this technique, the skin tissue can tear, and cartilage can even shatter.",
           "The guns cannot be fully sterilised.",
-          "When shooting, germs fly through the room.",
+          "When the gun is fired, germs are spread through the room.",
           "Depending on the material, the initial jewellery used ranges from unsuitable to dangerous for the client."
         ] },
         { typ: "grafik", id: "pistole", titel: "Gun or cannula: what happens in the tissue" },
         { typ: "ergaenzung", text: "Academy note: The gun’s stud is blunt and is forced through the tissue by spring pressure. The tissue is not cut but displaced and crushed; this means more swelling and slower healing. In addition, the stud is short and the backing sits tight, so there is no room for swelling. The cannula cuts a smooth channel with its sharp bevel, comes sterile-packed and is used only once." },
-        { typ: "praxis", text: "If a client comes to you with a shot ear piercing that won’t heal, explain objectively why the method is unsuitable and advise them on aftercare. There is no need to badmouth colleagues; the facts are enough." }
+        { typ: "praxis", text: "If a client comes to you with a gun-pierced earlobe that won’t heal, explain objectively why the method is unsuitable and advise them on aftercare. There is no need to badmouth colleagues; the facts are enough." }
       ],
       fragen: [
         ["Why does the ear-piercing gun have no place in the studio?", ["Tissue can tear, it cannot be fully sterilised and it spreads germs", "It is expressly prohibited in Germany", "It only works on the earlobe", "It can only be loaded with steel jewellery"], "On top of that, the initial jewellery is unsuitable.", "S. 6"],
-        ["What can happen to cartilage when shooting?", ["It can shatter", "It can deform and become softer", "It calcifies at the piercing site", "It immediately forms hypergranulation"], "Skin tissue can tear, cartilage can shatter.", "S. 6"],
-        ["What happens to germs when shooting with the gun?", ["They fly through the room", "They are killed by the frictional heat", "They stay on the disposable cartridge", "They are sealed in by the ear stud"], "In addition, the gun cannot be fully sterilised.", "S. 6"],
+        ["What can happen to cartilage when a gun is used?", ["It can shatter", "It can deform and become softer", "It calcifies at the piercing site", "It immediately forms hypergranulation"], "Skin tissue can tear, cartilage can shatter.", "S. 6"],
+        ["What happens to germs when the gun is fired?", ["They are spread through the room", "They are killed by the frictional heat", "They stay on the disposable cartridge", "They are sealed in by the ear stud"], "In addition, the gun cannot be fully sterilised.", "S. 6"],
         ["What is true of the initial jewellery used in ear-piercing guns?", ["Depending on the material, it ranges from unsuitable to dangerous", "It always meets the ASTM F136 standard", "It always has 4 mm of extra length", "It is made of PTFE"], "Gun studs are often made of unsuitable material and have no extra length; depending on the material, unsuitable to dangerous.", "S. 6"]
       ]
     },

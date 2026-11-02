@@ -235,7 +235,7 @@ window.KURS.labor.stich = {
         "Retirar el tubito, colocar la bola y cerrar el aro con la pinza para cerrar aros de modo que la bola encaje firmemente."
       ],
       kontrolle: [
-        "El aro queda redondo y sin dobleces; no lo he sobreabierto.",
+        "El aro queda redondo y sin dobleces; no lo he abierto de más.",
         "La bola encaja firmemente y no se sale al girar el aro.",
         "El canal de la perforación atraviesa en línea recta el cartílago de la oreja de silicona."
       ]

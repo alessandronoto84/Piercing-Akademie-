@@ -42,14 +42,14 @@ KURS.module.push({
         { typ: "tabelle", kopf: ["Tejido", "Ejemplos", "Cicatrización según el libro del curso"], zeilen: [
           ["Cartílago", "Pabellón auricular, tragus, helix, conch, aleta de la nariz", "al menos 3 meses"],
           ["Tejido blando", "Lóbulo, ceja, ombligo", "Lobe aprox. 2 meses, ceja aprox. 1 mes, ombligo aprox. 4 a 6 meses"],
-          ["Mucosa", "Lengua, frenillo labial, zona íntima", "Lengua y frenillo labial aprox. 1 mes, íntimos 2 a 3 meses"]
+          ["Mucosa", "Lengua, frenillo labial, zona íntima", "Lengua y frenillo labial aprox. 1 mes, zona íntima 2 a 3 meses"]
         ] },
         { typ: "grafik", id: "ohr" },
-        { typ: "ergaenzung", text: "El cartílago no tiene vasos sanguíneos propios y solo se nutre a través del pericondrio que lo rodea. Por eso cicatriza despacio y reacciona con sensibilidad a la irritación." },
+        { typ: "ergaenzung", text: "El cartílago no tiene vasos sanguíneos propios y solo se nutre a través del pericondrio que lo rodea. Por eso cicatriza despacio y es sensible a la irritación." },
         { typ: "achtung", text: "La octenidina, el principio activo de Octenisept, daña las células del cartílago en estudios de laboratorio. Por eso nunca recomiendas Octenisept en piercings de cartílago. Prontolind (principio activo polihexanida) está permitido en cartílago." }
       ],
       fragen: [
-        ["¿Por qué los piercings de cartílago cicatrizan más despacio que un lobe?", ["El cartílago no tiene vasos sanguíneos propios", "El cartílago tiene muchísimos nervios", "El cartílago es más fino que el lóbulo", "El cartílago no forma tejido de granulación"], "Se nutre a través del pericondrio.", "Entwurf"],
+        ["¿Por qué los piercings de cartílago cicatrizan más despacio que un lobe?", ["El cartílago no tiene vasos sanguíneos propios", "El cartílago tiene una cantidad especialmente alta de nervios", "El cartílago es más fino que el lóbulo", "El cartílago no forma tejido de granulación"], "Se nutre a través del pericondrio.", "Entwurf"],
         ["¿Qué tiempo de cicatrización indica el libro del curso para los piercings de cartílago?", ["Al menos 3 meses", "Unas 4 a 6 semanas", "Unos 2 meses", "De 1 a 2 meses"], "Para comparar: lobe aprox. 2 meses.", "S. 49"],
         ["¿Qué tejido cicatriza más rápido?", ["La mucosa", "El cartílago", "El tejido blando, como el lóbulo", "El tejido graso del ombligo"], "Lengua y frenillo labial aprox. 1 mes.", "S. 49"],
         ["¿A qué tipo de tejido pertenece el helix?", ["Cartílago", "Tejido blando", "Mucosa", "Tejido graso"], "El borde de la oreja es cartílago.", "S. 78"],
@@ -75,9 +75,9 @@ KURS.module.push({
         ["¿Dónde se puede perforar un piercing de ceja?", ["Solo en el tercio externo", "En el tercio interno, cerca de la nariz", "En el tercio medio, sobre la pupila", "En cualquier sitio, si se perfora superficialmente"], "En la parte interna salen nervios y vasos; una lesión puede causar entumecimiento en la frente y el párpado superior.", "S. 89"],
         ["¿Por qué los principiantes rechazan el piercing de cheek?", ["Por ahí pasan arterias y nervios importantes y el conducto salival", "Solo se puede hacer con punch de biopsia", "Cicatriza más rápido que otros piercings", "Siempre requiere anestesia"], "Además, hay riesgo de desfiguración.", "S. 92"],
         ["¿Qué puede causar un bridge perforado demasiado profundo?", ["Presión sobre vías nerviosas", "Expulsión", "Una pericondritis", "Un desgarro del labio"], "Si es demasiado superficial, se expulsa.", "S. 91"],
-        ["¿Qué ocurre si un bridge se perfora demasiado superficial?", ["Se expulsa", "Presiona sobre vías nerviosas", "Atraviesa el hueso nasal", "Cicatriza especialmente rápido"], "Recházalo si eres principiante.", "S. 91"],
+        ["¿Qué ocurre si un bridge se perfora con demasiado poca profundidad?", ["Se expulsa", "Presiona sobre vías nerviosas", "Atraviesa el hueso nasal", "Cicatriza especialmente rápido"], "Recházalo si eres principiante.", "S. 91"],
         ["¿Qué puede quedar de forma permanente tras un piercing de cheek?", ["Hoyuelos causados por la perforación", "Una decoloración de los dientes", "Un hundimiento del labio", "Un entumecimiento permanente de la lengua"], "Ficha técnica Cheek.", "S. 92"],
-        ["Caso: Como primer piercing que vas a hacer en tu vida, un cliente quiere un cheek. ¿Qué haces?", ["Lo rechazo y le recomiendo un piercer con experiencia", "Lo perforo con la cánula más fina", "Lo perforo si firma", "Lo perforo a mano alzada para ser flexible"], "Recházalo si eres principiante.", "S. 92"]
+        ["Caso: Un cliente quiere un cheek y sería el primer piercing que haces en tu vida. ¿Qué haces?", ["Lo rechazo y le recomiendo un piercer con experiencia", "Lo perforo con la cánula más fina", "Lo perforo si firma", "Lo perforo a mano alzada para ser flexible"], "Recházalo si eres principiante.", "S. 92"]
       ]
     },
     {
@@ -101,13 +101,13 @@ KURS.module.push({
           "Un piercing de cheek se sitúa justo en medio de esta zona. Por eso lo rechazas si eres principiante."
         ] },
         { typ: "ergaenzung", text: "Si se mira con más detalle, en el borde interno de la ceja salen sobre todo nervios sensitivos; una lesión provoca más bien entumecimiento que parálisis. El movimiento de la frente depende de una rama lateral del nervio facial. Eso no cambia la regla: ceja solo en el tercio externo." },
-        { typ: "merke", text: "La posición de nervios y vasos varía de una persona a otra. Los dibujos muestran dónde hay peligro, no dónde es seguro con garantía." }
+        { typ: "merke", text: "La posición de nervios y vasos varía de una persona a otra. Los dibujos muestran dónde hay peligro, no dónde hay seguridad garantizada." }
       ],
       fragen: [
         ["¿Qué nervio sensitivo sale por el borde superior de la órbita, más o menos sobre la pupila?", ["El nervio supraorbitario", "El nervio facial", "El nervio trigémino en conjunto, en el arco cigomático", "El nervio óptico"], "Sale por una pequeña abertura del hueso e inerva la frente y el párpado superior. Más hacia dentro está el N. supratroclear. Por eso solo perforas en el tercio externo.", "Ergänzung"],
         ["¿Qué puede causar una lesión del nervio supraorbitario?", ["Entumecimiento o sensaciones anómalas en la frente y el párpado superior", "Una parálisis de los músculos faciales", "Trastornos de la visión", "Salida de saliva por la herida"], "Es un nervio sensitivo.", "Ergänzung"],
         ["¿Qué controla el nervio facial (N. facialis)?", ["La mímica", "La sensibilidad de la piel de la cara", "Los músculos de la masticación", "El movimiento de los ojos"], "Una lesión puede paralizar partes de la cara.", "Ergänzung"],
-        ["¿Por dónde discurre el conducto salival de la glándula parótida?", ["Unos 2 cm por debajo del arco cigomático, de través por la mejilla", "Justo por el borde de la mandíbula", "En vertical por delante de la oreja hacia el cuello", "Por debajo del ojo hacia la nariz"], "Desemboca frente al segundo molar superior.", "Ergänzung"],
+        ["¿Por dónde discurre el conducto salival de la glándula parótida?", ["Unos 2 cm por debajo del arco cigomático, atravesando la mejilla", "Justo por el borde de la mandíbula", "En vertical por delante de la oreja hacia el cuello", "Por debajo del ojo hacia la nariz"], "Desemboca frente al segundo molar superior.", "Ergänzung"],
         ["¿Qué estructuras se encuentran en la zona del piercing de cheek?", ["Ramas del nervio facial, el conducto salival y la arteria facial", "Solo tejido graso y piel", "El nervio supraorbitario y la glándula lagrimal", "Cartílago y el músculo masetero"], "Por eso rechazas el cheek si eres principiante.", "S. 92"],
         ["¿Por qué solo perforas la ceja en el tercio externo?", ["Porque en la parte interna salen nervios y vasos del hueso", "Porque el tercio externo está mejor irrigado y cicatriza antes", "Porque allí el pelo es más denso y tapa la joya", "Porque en la parte interna el nervio facial controla la mímica"], "Punto de salida en el borde interno de la órbita.", "S. 89"]
       ]
@@ -143,17 +143,17 @@ KURS.module.push({
         ] },
         { typ: "grafik", id: "wundheilung" },
         { typ: "grafik", id: "lobe3d" },
-        { typ: "ergaenzung", text: "Valores orientativos de la ciencia de la cicatrización: la fase inflamatoria dura unos 1 a 4 días. La fase de granulación empieza a los pocos días y se extiende hasta aproximadamente la tercera semana. La epitelización y la remodelación duran de semanas a meses, y las fases se solapan de forma gradual. Al cabo de unas tres semanas, una cicatriz tiene alrededor del 20 por ciento de la resistencia a la tracción de la piel sana, y al cabo de unos meses hasta aproximadamente el 80 por ciento; nunca llega a ser tan resistente como antes, y la remodelación dura hasta un año. Un canal de perforación es una herida larga y estrecha que tiene que cicatrizar en toda su longitud; de ahí los largos tiempos de cicatrización del módulo 10." },
-        { typ: "achtung", text: "Si la epitelización no comienza, el cliente debe acudir al médico al cabo de 10 a 14 días." }
+        { typ: "ergaenzung", text: "Valores orientativos de la ciencia de la cicatrización: la fase inflamatoria dura aproximadamente de 1 a 4 días. La fase de granulación empieza a los pocos días y se extiende hasta aproximadamente la tercera semana. La epitelización y la remodelación duran de semanas a meses, y las fases se solapan de forma gradual. Al cabo de unas tres semanas, una cicatriz tiene alrededor del 20 por ciento de la resistencia a la tracción de la piel sana, y al cabo de unos meses hasta aproximadamente el 80 por ciento; nunca llega a ser tan resistente como antes, y la remodelación dura hasta un año. Un canal de perforación es una herida larga y estrecha que tiene que cicatrizar en toda su longitud; de ahí los largos tiempos de cicatrización del módulo 10." },
+        { typ: "achtung", text: "Si la epitelización no comienza, el cliente debe acudir al médico pasados entre 10 y 14 días." }
       ],
       fragen: [
         ["¿Qué es normal en los primeros días tras la perforación?", ["Ligero enrojecimiento, hinchazón, calor y algo de secreción clara", "Pus amarillo y fiebre", "Un enrojecimiento que se extiende por todo el pabellón auricular", "Ausencia total de dolor y nada de hinchazón"], "Fase inflamatoria o de limpieza.", "Entwurf"],
         ["¿Por qué la joya inicial necesita longitud extra?", ["Porque el canal recién perforado puede hincharse", "Para que el cliente pueda cambiar la joya más fácilmente", "Para que el canal de la perforación se dilate", "Porque las barras cortas se expulsan antes"], "Unos 4 mm de longitud extra.", "S. 74"],
         ["¿Cómo se llama el tejido nuevo y delicado del canal de la perforación?", ["Tejido de granulación", "Tejido epitelial", "Tejido cicatricial", "Tejido cartilaginoso"], "Más tarde se convierte en tejido cicatricial.", "S. 50"],
         ["¿Qué es la epitelización?", ["Las células migran desde el borde de la herida y esta se hace más pequeña", "La fase inflamatoria con enrojecimiento y secreción", "La formación de hipergranulación", "La joya incrustándose en el tejido"], "También se llama fase de regeneración.", "S. 50"],
-        ["¿Cuándo debe ir el cliente al médico si no hay epitelización?", ["Al cabo de 10 a 14 días", "Al cabo de 3 a 4 días", "Al cabo de 4 a 6 semanas", "Solo al cabo de 3 meses"], "Si a los 10 a 14 días no hay epitelización, algo va mal en la cicatrización. Debe valorarlo un médico.", "S. 50"],
+        ["¿Cuándo debe ir el cliente al médico si no hay epitelización?", ["Pasados entre 10 y 14 días", "Pasados entre 3 y 4 días", "Pasadas entre 4 y 6 semanas", "No antes de 3 meses"], "Si pasados entre 10 y 14 días no hay epitelización, algo va mal en la cicatrización. Debe valorarlo un médico.", "S. 50"],
         ["¿De qué está revestido por dentro un canal de perforación ya cicatrizado?", ["De epidermis (epitelio)", "De cartílago", "De tejido de granulación", "De tejido graso"], "La epidermis crece desde el borde hacia el interior del canal.", "S. 50"],
-        ["¿Cuánto dura aproximadamente la fase inflamatoria?", ["Unos 1 a 4 días", "Unas 2 a 3 semanas", "Unos 3 meses", "Solo unas horas"], "Después predomina la formación de tejido nuevo.", "Ergänzung"],
+        ["¿Cuánto dura aproximadamente la fase inflamatoria?", ["Aproximadamente de 1 a 4 días", "Unas 2 a 3 semanas", "Unos 3 meses", "Solo unas horas"], "Después predomina la formación de tejido nuevo.", "Ergänzung"],
         ["Como máximo, ¿qué resistencia alcanza el tejido cicatricial en comparación con la piel sana?", ["Alrededor del 80 por ciento de la resistencia original a la tracción", "El doble de resistencia que la piel sana", "La misma resistencia ya a las 2 semanas", "Alrededor del 20 por ciento, incluso al cabo de un año"], "La remodelación dura meses; por eso la joya solo se cambia tras la cicatrización completa.", "Ergänzung"],
         ["¿Las fases de la cicatrización se suceden de forma estrictamente consecutiva?", ["No, se solapan de forma gradual", "Sí, cada una empieza solo cuando acaba la anterior", "Sí, con una pausa de unos 2 días", "Solo hay una única fase"], "Ver la línea de tiempo.", "Ergänzung"]
       ]

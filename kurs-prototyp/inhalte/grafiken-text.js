@@ -121,10 +121,10 @@ en: {
 "Kreislauf der Instrumentenaufbereitung: benutzt, reinigen im Ultraschallbad, trocknen, verpacken, sterilisieren im Autoklav, lagern mit Datum und Charge, steril öffnen am Arbeitsplatz. Unreine und reine Seite sind getrennt.": "Cycle of instrument reprocessing: used, cleaned in the ultrasonic bath, dried, packed, sterilised in the autoclave, stored with date and batch, opened sterile at the workstation. The unclean and clean sides are kept separate.",
 "Der Weg eines Instruments durch dein Studio. Unreine und reine Seite kreuzen sich nicht: Was benutzt ist, kommt erst nach dem Autoklav wieder in die Nähe von Sterilgut. Kanülen und Einmalmaterial kommen sofort in den Abwurf und werden nie aufbereitet.": "The path of an instrument through your studio. The unclean and clean sides never cross: anything used only comes near sterile goods again after the autoclave. Cannulas and single-use materials go straight into the sharps container and are never reprocessed.",
 // autoklav
-"Steigzeit": "Rise time",
+"Steigzeit": "Heat-up",
 "Vakuumstöße": "vacuum pulses",
-"Aus-": "Equali-",
-"gleich": "sation",
+"Aus-": "Equili-",
+"gleich": "bration",
 "z. B. 134 °C": "e.g. 134 °C",
 "Trocknung": "Drying",
 "Vakuum": "vacuum",
@@ -132,7 +132,7 @@ en: {
 "ca. 2 bar": "approx. 2 bar",
 "Zeit": "Time",
 "Gültig ist die Anleitung deines Geräts.": "Your device’s manual is what counts.",
-"Schematischer Druckverlauf im Autoklav Typ B: Steigzeit mit mehreren Vakuumstößen, Ausgleichszeit, Sterilisationsphase auf dem Höchstdruck, Trockenphase mit Druckabfall und Vakuumtrocknung.": "Schematic pressure curve in a type B autoclave: rise time with several vacuum pulses, equalisation time, sterilisation phase at maximum pressure, drying phase with pressure drop and vacuum drying.",
+"Schematischer Druckverlauf im Autoklav Typ B: Steigzeit mit mehreren Vakuumstößen, Ausgleichszeit, Sterilisationsphase auf dem Höchstdruck, Trockenphase mit Druckabfall und Vakuumtrocknung.": "Schematic pressure curve in a type B autoclave: heat-up time with several vacuum pulses, equilibration time, sterilisation phase at maximum pressure, drying phase with pressure drop and vacuum drying.",
 "Druckverlauf eines Typ-B-Autoklaven (schematisch). Erst wird die Luft mit Vakuumstößen entfernt, dann hält der Dampf den Druck während der Sterilisationsphase; zum Schluss trocknet ein Vakuum das Sterilgut.": "Pressure curve of a type B autoclave (schematic). First the air is removed with vacuum pulses, then the steam holds the pressure during the sterilisation phase; finally a vacuum dries the sterile goods.",
 // staebe
 "Barbell": "Barbell",
@@ -393,8 +393,8 @@ es: {
 // autoklav
 "Steigzeit": "Subida",
 "Vakuumstöße": "pulsos de vacío",
-"Aus-": "Equi-",
-"gleich": "librio",
+"Aus-": "Compen-",
+"gleich": "sación",
 "z. B. 134 °C": "p. ej. 134 °C",
 "Trocknung": "Secado",
 "Vakuum": "vacío",
@@ -402,7 +402,7 @@ es: {
 "ca. 2 bar": "aprox. 2 bar",
 "Zeit": "Tiempo",
 "Gültig ist die Anleitung deines Geräts.": "Lo que vale es el manual de tu equipo.",
-"Schematischer Druckverlauf im Autoklav Typ B: Steigzeit mit mehreren Vakuumstößen, Ausgleichszeit, Sterilisationsphase auf dem Höchstdruck, Trockenphase mit Druckabfall und Vakuumtrocknung.": "Curva de presión esquemática en un autoclave tipo B: tiempo de subida con varios pulsos de vacío, tiempo de equilibrio, fase de esterilización a la presión máxima, fase de secado con descenso de presión y secado al vacío.",
+"Schematischer Druckverlauf im Autoklav Typ B: Steigzeit mit mehreren Vakuumstößen, Ausgleichszeit, Sterilisationsphase auf dem Höchstdruck, Trockenphase mit Druckabfall und Vakuumtrocknung.": "Curva de presión esquemática en un autoclave tipo B: tiempo de subida con varios pulsos de vacío, tiempo de compensación, fase de esterilización a la presión máxima, fase de secado con descenso de presión y secado al vacío.",
 "Druckverlauf eines Typ-B-Autoklaven (schematisch). Erst wird die Luft mit Vakuumstößen entfernt, dann hält der Dampf den Druck während der Sterilisationsphase; zum Schluss trocknet ein Vakuum das Sterilgut.": "Curva de presión de un autoclave tipo B (esquema). Primero se elimina el aire con pulsos de vacío, después el vapor mantiene la presión durante la fase de esterilización; al final, un vacío seca el material estéril.",
 // staebe
 "Barbell": "Barbell",

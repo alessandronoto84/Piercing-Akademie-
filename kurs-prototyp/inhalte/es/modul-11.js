@@ -94,7 +94,7 @@ KURS.module.push({
         { typ: "ergaenzung", text: "Qué proveedores han dado buen resultado lo añadirá aquí la Piercing Akademie a partir de su propia experiencia." }
       ],
       fragen: [
-        ["¿Qué joyas iniciales compras?", ["Titanio G23 o PTFE con certificado de material", "316L, porque es más barato", "Titanio con oro y circón", "Acero 303"], "Ver módulo 6.", "S. 56"],
+        ["¿Qué joyas iniciales compras?", ["Titanio G23 o PTFE con certificado de material", "316L, porque es más barato", "Titanio oro circonio", "Acero 303"], "Ver módulo 6.", "S. 56"],
         ["¿Qué desinfectantes compras?", ["Productos de la lista VAH con eficacia demostrada", "Productos con el mayor contenido de alcohol posible", "Limpiadores domésticos con cloro", "Cualquier producto de droguería"], "Ver módulo 5.", "S. 34"]
       ]
     },
@@ -105,7 +105,7 @@ KURS.module.push({
         { typ: "liste", punkte: [
           "Antes de cada piercing, un formulario de consentimiento por escrito (módulo 2).",
           "Comprobar la edad: menores de 18 solo con el consentimiento de los padres o tutores legales; mejor, nunca.",
-          "Ninguna promesa de curación y ninguna publicidad con ella.",
+          "Ninguna promesa de curación, tampoco en la publicidad.",
           "Rechazas los piercings que no dominas con seguridad; los piercings marcados con «No realizar» no los realizas nunca (módulo 8).",
           "Si hay complicaciones, remites al cliente a un médico."
         ] }

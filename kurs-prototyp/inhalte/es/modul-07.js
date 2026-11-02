@@ -55,13 +55,13 @@ KURS.module.push({
         ["¿Qué grosor de barra tiene una joya de 14G?", ["1,6 mm", "2,2 mm", "1,2 mm", "2,0 mm"], "Una cánula 14G mide 2,2 mm.", "Ergänzung"],
         ["¿Qué cánula usa la Academia para joyas de 1,2 mm?", ["18G", "16G", "14G", "20G"], "Cánula 18G con 1,3 mm de diámetro exterior.", "Akademie"],
         ["¿Qué cánula usa la Academia para joyas de 1,6 mm?", ["16G", "18G", "14G", "12G"], "Cánula 16G con 1,7 mm de diámetro exterior.", "Akademie"],
-        ["Caso: pides joyas iniciales de 16G. ¿Con qué cánula las perforas?", ["Con la cánula 18G, porque la joya 16G mide 1,2 mm", "Con la cánula 16G, mismo número", "Con la cánula 14G, un calibre más gruesa", "Con la cánula 20G"], "El gauge de la joya y el de la cánula no son los mismos milímetros.", "Akademie"],
+        ["Caso: pides joyas iniciales de 16G. ¿Con qué cánula las perforas?", ["Con la cánula 18G, porque la joya 16G mide 1,2 mm", "Con la cánula 16G, mismo número", "Con la cánula 14G, un calibre más gruesa", "Con la cánula 20G"], "El gauge de la joya y el de la cánula no corresponden a los mismos milímetros.", "Akademie"],
         ["¿Con qué cánula perfora la Academia un Lobe normal?", ["18G", "16G", "14G", "Punch de biopsia"], "14G solo si se desea un túnel.", "S. 74"],
         ["¿Cuándo usas la cánula 14G en el Lobe?", ["Solo si se desea un túnel", "En todos los Lobe", "En clientes con lóbulo grueso", "En un Upper Lobe"], "En los demás casos, la Academia perfora el Lobe con 18G.", "S. 74"],
         ["¿Con qué cánula perfora la Academia el Príncipe Alberto?", ["14G", "16G", "18G", "12G"], "Según la ficha técnica; la joya inicial es un BCR.", "S. 98"],
-        ["¿Significa 16G los mismos milímetros en cánula y joya?", ["No, la cánula 16G (1,7 mm) es más gruesa que la joya 16G (1,2 mm)", "Sí, ambas miden 1,6 mm", "No, la cánula 16G es más fina que la joya 16G", "Sí, el gauge es una norma uniforme"], "Las cánulas y las joyas se miden de forma distinta.", "Ergänzung"],
+        ["¿Corresponde 16G a los mismos milímetros en cánula y en joya?", ["No, la cánula 16G (1,7 mm) es más gruesa que la joya 16G (1,2 mm)", "Sí, ambas miden 1,6 mm", "No, la cánula 16G es más fina que la joya 16G", "Sí, el gauge es una norma uniforme"], "Las cánulas y las joyas se miden de forma distinta.", "Ergänzung"],
         ["¿Por qué la cánula es más gruesa que la joya?", ["Porque la joya se introduce en la vaina de plástico", "Para que el canal sea más grande que la joya y cicatrice antes", "Para que salga menos sangre", "Porque las cánulas gruesas duelen menos"], "Ver módulo 9, La perforación.", "Ergänzung"],
-        ["¿Qué vale para las joyas: cuanto mayor es el número gauge …", ["… más fina es la barra", "… más gruesa es la barra", "… más larga es la barra", "… más grande es la bola"], "Igual que en las cánulas.", "Ergänzung"],
+        ["En las joyas: cuanto mayor es el número gauge …", ["… más fina es la barra", "… más gruesa es la barra", "… más larga es la barra", "… más grande es la bola"], "Igual que en las cánulas.", "Ergänzung"],
         ["¿Dónde pruebas una nueva combinación de cánula y joya?", ["Antes, en el modelo de práctica", "Directamente en el primer cliente", "En tu propia oreja", "En ningún sitio, bastan las tablas"], "No directamente en el cliente.", "Ergänzung"]
       ]
     },
@@ -107,7 +107,7 @@ KURS.module.push({
           ["Calibre", "Mide las joyas y ajusta la posición del piercing"],
           ["Pinza para abrir aros y pinza para cerrar aros", "Abren o cierran los aros de bola cautiva (BCR) para retirar o colocar la bola"],
           ["Linterna (luz verde)", "Ilumina por transparencia, por ejemplo, la oreja para ver los vasos sanguíneos"],
-          ["Alicate de corte mini", "Corta la joya cuando una bola ya no se puede soltar"]
+          ["Alicate de corte mini", "Corta la joya cuando una bola ya no se puede desenroscar"]
         ] },
         { typ: "achtung", text: "Con el cónico de inserción, procede siempre con mucho cuidado para evitar lesiones." },
         { typ: "galerie", titel: "Las herramientas auxiliares", bilder: [["einfuehrhilfe", "Cónico de inserción"], ["klemmzange", "Pinza de sujeción"], ["schere", "Tijeras"], ["kugelgreifer", "Pinza para bolas"], ["messschieber", "Calibre"], ["ringoeffnungszange", "Pinza para abrir aros"], ["ringschliesszange", "Pinza para cerrar aros"], ["taschenlampe", "Linterna (luz verde)"], ["seitenschneider", "Alicate de corte mini"]], text: "Libro del curso págs. 66–69 y 73." }

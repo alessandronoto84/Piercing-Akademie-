@@ -57,7 +57,7 @@ window.KURS = window.KURS || { module: [] };
         inhalt: [
           db("Helix", "Possible anywhere along the rim of the ear, from just above the earlobe up and around the curve of the outer ear.", "labret, BCR, horseshoe (circular barbell)", "18G", "Snaptile, gauze clamp, freehand", "", "S. 78"),
           db("Industrial", "Also called Scaffold. The upper rim of the outer ear is pierced close to the head and opposite on the outer rim, so that a long barbell runs through both piercing channels. Anatomically, these are two Helix piercings.", "barbell 38 mm", "16G", "freehand, receiving tube", "", "S. 84"),
-          db("Allergy piercing", "At the top centre through the curve of the Helix, at the “antihistamine” acupuncture point. The permanent stimulation is said to relieve allergies.", "horseshoe (circular barbell), curved barbell (banana), BCR", "18G", "freehand, receiving tube", "Do not make healing promises or advertise with them.", "S. 83")
+          db("Allergy piercing", "At the top centre through the curve of the Helix, at the “antihistamine” acupuncture point. The permanent stimulation is said to relieve allergies.", "horseshoe (circular barbell), curved barbell (banana), BCR", "18G", "freehand, receiving tube", "Do not make health claims or use them in advertising.", "S. 83")
         ],
         fragen: [
           ["Where can a Helix be pierced?", ["Anywhere along the rim of the ear", "Only on the upper rim of the ear", "Only in the antihelix", "Only at the root of the helix"], "From above the earlobe around the curve.", "S. 78"],
@@ -81,12 +81,12 @@ window.KURS = window.KURS || { module: [] };
         seite: "S. 80–81",
         inhalt: [
           db("Rook", "Vertically in the antihelix, the cartilage ridge that borders the cavum conchae at the back.", "horseshoe (circular barbell), curved barbell (banana), BCR", "18G", "receiving tube", "", "S. 80"),
-          db("Daith", "Through the root of the helix (crus helicis), the cartilage fold directly above the ear canal. Its effect against migraine is not scientifically proven.", "curved barbell (banana), BCR", "18G (bend if necessary)", "receiving tube", "Do not make healing promises or advertise with them.", "S. 81")
+          db("Daith", "Through the root of the helix (crus helicis), the cartilage fold directly above the ear canal. There is no scientific evidence that it helps against migraine.", "curved barbell (banana), BCR", "18G (bend if necessary)", "receiving tube", "Do not make health claims or use them in advertising.", "S. 81")
         ],
         fragen: [
           ["Where is the Rook placed?", ["Vertically in the antihelix", "Horizontally in the root of the helix", "In the Tragus", "In the inner Conch"], "Cartilage ridge around the cavum conchae.", "S. 80"],
           ["Why are Rook and Daith pierced with a receiving tube?", ["No clamp fits in the inner ear", "Because they bleed particularly heavily", "Because they are pierced with a punch", "Because they need especially thick cannulas"], "The tube protects the surrounding tissue.", "S. 68"],
-          ["May you advertise the Daith as a remedy for migraine?", ["No", "Yes, with “may help”", "Yes, if studies are cited", "Only verbally, not in writing"], "No healing promises.", "S. 81"]
+          ["Are you allowed to advertise the Daith as a remedy for migraine?", ["No", "Yes, with “may help”", "Yes, if studies are cited", "Only verbally, not in writing"], "No health claims.", "S. 81"]
         ]
       },
       {
@@ -107,11 +107,11 @@ window.KURS = window.KURS || { module: [] };
         inhalt: [
           { typ: "grafik", id: "augenbraue" },
           db("Eyebrow", "Usually vertically through the eyebrow, piercing channel about 8 mm.", "curved barbell (banana), horseshoe (circular barbell)", "18G", "Snaptile, gauze clamp", "Only pierce in the outer third of the eyebrow: nerves and vessels emerge on the inner side (see module 3).", "S. 89"),
-          db("Bridge", "Also called Erl. At the top of the bridge of the nose, horizontally on the nasal bone between the eyes. Too deep, it can press on nerve pathways; too shallow, it grows out.", "barbell, curved barbell (banana)", "18G", "Snaptile, gauze clamp", "Turn it down as a piercing beginner.", "S. 91")
+          db("Bridge", "Also called Erl. At the top of the bridge of the nose, horizontally on the nasal bone between the eyes. If it is too deep, it can press on nerve pathways; if it is too shallow, it grows out.", "barbell, curved barbell (banana)", "18G", "Snaptile, gauze clamp", "Turn it down if you are a beginner.", "S. 91")
         ],
         fragen: [
           ["About how long is the piercing channel in an eyebrow piercing?", ["8 mm", "4 mm", "12 mm", "2 cm"], "Eyebrow data sheet.", "S. 89"],
-          ["Where may the eyebrow piercing be placed?", ["Only in the outer third", "In the inner third", "In the middle third", "Anywhere, if pierced shallowly"], "Nerves and vessels emerge on the inner side; injuring them can cause numbness of the forehead and upper eyelid.", "S. 89"],
+          ["Where can the eyebrow piercing be placed?", ["Only in the outer third", "In the inner third", "In the middle third", "Anywhere, if pierced shallowly"], "Nerves and vessels emerge on the inner side; injuring them can cause numbness of the forehead and upper eyelid.", "S. 89"],
           ["As a beginner, how do you respond to a request for a Bridge?", ["I turn it down", "I pierce it especially shallowly", "I pierce it especially deep", "I pierce it with 14G"], "Turn it down as a beginner.", "S. 91"]
         ]
       },
@@ -124,7 +124,7 @@ window.KURS = window.KURS || { module: [] };
         ],
         fragen: [
           ["How far from the vermilion border is a Labret piercing placed?", ["More than 3 mm", "Exactly 1 mm", "No distance, right on the vermilion", "More than 1 cm"], "Labret data sheet.", "S. 86"],
-          ["What is a piercing centred in the upper lip, in the philtrum, called?", ["Medusa", "Monroe", "Smiley", "Eskimo"], "Strictly speaking, Labret is the lower lip.", "S. 86"],
+          ["What is a piercing centred in the upper lip, in the philtrum, called?", ["Medusa", "Monroe", "Smiley", "Eskimo"], "Strictly speaking, a Labret is in the lower lip.", "S. 86"],
           ["What can an incorrectly pierced Eskimo cause?", ["Tearing or permanent sinking of the lip", "Pressure on nerve pathways of the forehead", "Damage to the tongue frenulum", "Perichondritis"], "Turn it down as a beginner.", "S. 93"]
         ]
       },
@@ -139,7 +139,7 @@ window.KURS = window.KURS || { module: [] };
           ["Why is the lip frenulum piercing also called Smiley?", ["Because it is only visible when smiling", "Because it forms a smile", "Because it goes through the corners of the mouth", "Because it is a labret with a smiley ball"], "Through the frenulum.", "S. 87"],
           ["In which direction is the tongue pierced?", ["From below upwards", "From above downwards", "Sideways from the left", "Diagonally from the front"], "Tongue data sheet.", "S. 90"],
           ["What does the client use to cool the area after a tongue piercing?", ["Ice cubes, ideally made from chamomile tea", "Cold spray", "Cold milk", "Lidocaine spray"], "Immediately after piercing.", "S. 90"],
-          ["When can the barbell in a tongue piercing be shortened?", ["After about 10 days", "After 2 days", "After 3 months", "Never, the length stays"], "Initial jewellery 20 mm barbell.", "S. 90"]
+          ["When can the barbell in a tongue piercing be shortened?", ["After about 10 days", "After 2 days", "After 3 months", "Never, the length stays the same"], "Initial jewellery 20 mm barbell.", "S. 90"]
         ]
       },
       {
@@ -181,7 +181,7 @@ window.KURS = window.KURS || { module: [] };
         titel: "Surface",
         seite: "S. 96",
         inhalt: [
-          db("Surface", "Surface piercing in areas that are neither convex nor concave; entry and exit points lie on one plane. More often rejected and grows out; healing takes considerably longer. Suitable jewellery and precise placement reduce the risk.", "surface bar, curved barbell (banana), Dermal Anchor", "16G, 18G, biopsy punch", "freehand, Snaptile, gauze clamp", "", "S. 96")
+          db("Surface", "Surface piercing in areas that are neither convex nor concave; entry and exit points lie on one plane. It is rejected and grows out more often, and healing takes considerably longer. Suitable jewellery and precise placement reduce the risk.", "surface bar, curved barbell (banana), Dermal Anchor", "16G, 18G, biopsy punch", "freehand, Snaptile, gauze clamp", "", "S. 96")
         ],
         fragen: [
           ["What is typical of surface piercings?", ["They are rejected more often and take much longer to heal", "They heal faster than a Lobe", "They are always on curved areas", "They are only pierced with a receiving tube"], "Entry and exit on one plane.", "S. 96"],
@@ -216,7 +216,7 @@ window.KURS = window.KURS || { module: [] };
           db("Labia", "In the inner or outer labia.", "BCR", "16G, 18G", "freehand, Snaptile, gauze clamp", "", "S. 107")
         ],
         fragen: [
-          ["What applies to the Christina piercing?", ["It is not anatomically possible in every woman", "It is pierced through the clitoral hood", "It is marked “Do not perform”", "It heals in 2 weeks"], "Christina data sheet.", "S. 105"],
+          ["What is true of the Christina piercing?", ["It is not anatomically possible in every woman", "It is pierced through the clitoral hood", "It is marked “Do not perform”", "It heals in 2 weeks"], "Christina data sheet.", "S. 105"],
           ["Is the clitoris pierced in a clitoral hood piercing?", ["No, only the hood", "Yes, vertically", "Yes, horizontally", "Yes, if requested"], "Only the hood.", "S. 106"]
         ]
       },

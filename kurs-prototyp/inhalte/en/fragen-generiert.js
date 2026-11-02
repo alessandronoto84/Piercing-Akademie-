@@ -4,856 +4,856 @@ window.KURS = window.KURS || { module: [] };
 KURS.lektionsfragen = {
  "8-1": [
   [
-   "Which jewellery does the data sheet list as suitable initial jewellery for the Lobe?",
+   "Which jewellery does the “Lobe” data sheet list as suitable initial jewellery?",
    [
     "Labret",
     "Horseshoe (circular barbell)",
     "Surface bar",
     "BCR (ball closure ring)"
    ],
-   "Data sheet Lobe: initial jewellery labret; cannula 18G; Snaptile, gauze clamp.",
+   "Lobe data sheet: initial jewellery labret; cannula 18G; Snaptile, gauze clamp.",
    "S. 74"
   ],
   [
-   "According to the data sheet, what is the Lobe pierced with?",
+   "What does the “Lobe” data sheet say you pierce with?",
    [
     "18G cannula",
     "20G cannula",
     "14G cannula",
     "16G cannula"
    ],
-   "Data sheet Lobe: initial jewellery labret; cannula 18G; Snaptile, gauze clamp.",
+   "Lobe data sheet: initial jewellery labret; cannula 18G; Snaptile, gauze clamp.",
    "S. 74"
   ],
   [
-   "Which jewellery does the data sheet list as suitable initial jewellery for the Upper Lobe?",
+   "Which jewellery does the “Upper Lobe” data sheet list as suitable initial jewellery?",
    [
     "Labret",
     "Barbell",
     "Horseshoe (circular barbell)",
     "BCR (ball closure ring)"
    ],
-   "Data sheet Upper Lobe: initial jewellery labret; cannula 18G, 16G; Snaptile, gauze clamp.",
+   "Upper Lobe data sheet: initial jewellery labret; cannula 18G, 16G; Snaptile, gauze clamp.",
    "S. 75"
   ],
   [
-   "According to the data sheet, what is the Upper Lobe pierced with?",
+   "What does the “Upper Lobe” data sheet say you pierce with?",
    [
     "18G cannula",
     "20G cannula",
     "Biopsy punch",
     "14G cannula"
    ],
-   "Data sheet Upper Lobe: initial jewellery labret; cannula 18G, 16G; Snaptile, gauze clamp.",
+   "Upper Lobe data sheet: initial jewellery labret; cannula 18G, 16G; Snaptile, gauze clamp.",
    "S. 75"
   ]
  ],
  "8-2": [
   [
-   "Which jewellery does the data sheet list as suitable initial jewellery for the Tragus?",
+   "Which jewellery does the “Tragus” data sheet list as suitable initial jewellery?",
    [
     "Barbell",
     "Dermal anchor",
     "Surface bar",
     "Horseshoe (circular barbell)"
    ],
-   "Data sheet Tragus: initial jewellery labret, BCR, barbell; cannula biopsy punch, 18G, 16G; tragus forceps, receiving tube.",
+   "Tragus data sheet: initial jewellery labret, BCR, barbell; cannula biopsy punch, 18G, 16G; tragus forceps, receiving tube.",
    "S. 76"
   ],
   [
-   "According to the data sheet, what is the Tragus pierced with?",
+   "What does the “Tragus” data sheet say you pierce with?",
    [
     "16G cannula",
     "20G cannula",
     "12G cannula",
     "14G cannula"
    ],
-   "Data sheet Tragus: initial jewellery labret, BCR, barbell; cannula biopsy punch, 18G, 16G; tragus forceps, receiving tube.",
+   "Tragus data sheet: initial jewellery labret, BCR, barbell; cannula biopsy punch, 18G, 16G; tragus forceps, receiving tube.",
    "S. 76"
   ],
   [
-   "Which instrument does the data sheet list for the Tragus?",
+   "Which instrument does the “Tragus” data sheet list?",
    [
     "Tragus forceps",
     "Snaptile",
     "Septum forceps",
     "Tongue forceps"
    ],
-   "Data sheet Tragus: initial jewellery labret, BCR, barbell; cannula biopsy punch, 18G, 16G; tragus forceps, receiving tube.",
+   "Tragus data sheet: initial jewellery labret, BCR, barbell; cannula biopsy punch, 18G, 16G; tragus forceps, receiving tube.",
    "S. 76"
   ],
   [
-   "Which jewellery does the data sheet list as suitable initial jewellery for the Anti-Tragus?",
+   "Which jewellery does the “Anti-Tragus” data sheet list as suitable initial jewellery?",
    [
     "BCR (ball closure ring)",
     "Dermal anchor",
     "Surface bar",
     "Labret"
    ],
-   "Data sheet Anti-Tragus: initial jewellery horseshoe (circular barbell), curved barbell (banana), BCR; cannula 18G; receiving tube.",
+   "Anti-Tragus data sheet: initial jewellery horseshoe (circular barbell), curved barbell (banana), BCR; cannula 18G; receiving tube.",
    "S. 77"
   ],
   [
-   "According to the data sheet, what is the Anti-Tragus pierced with?",
+   "What does the “Anti-Tragus” data sheet say you pierce with?",
    [
     "18G cannula",
     "20G cannula",
     "14G cannula",
     "Biopsy punch"
    ],
-   "Data sheet Anti-Tragus: initial jewellery horseshoe (circular barbell), curved barbell (banana), BCR; cannula 18G; receiving tube.",
+   "Anti-Tragus data sheet: initial jewellery horseshoe (circular barbell), curved barbell (banana), BCR; cannula 18G; receiving tube.",
    "S. 77"
   ],
   [
-   "Which instrument does the data sheet list for the Anti-Tragus?",
+   "Which instrument does the “Anti-Tragus” data sheet list?",
    [
     "Receiving tube",
     "Gauze clamp",
     "Tongue forceps",
     "Snaptile"
    ],
-   "Data sheet Anti-Tragus: initial jewellery horseshoe (circular barbell), curved barbell (banana), BCR; cannula 18G; receiving tube.",
+   "Anti-Tragus data sheet: initial jewellery horseshoe (circular barbell), curved barbell (banana), BCR; cannula 18G; receiving tube.",
    "S. 77"
   ]
  ],
  "8-3": [
   [
-   "Which jewellery does the data sheet list as suitable initial jewellery for the Helix?",
+   "Which jewellery does the “Helix” data sheet list as suitable initial jewellery?",
    [
     "BCR (ball closure ring)",
     "Curved barbell (banana)",
     "Dermal anchor",
     "Surface bar"
    ],
-   "Data sheet Helix: initial jewellery labret, BCR, horseshoe (circular barbell); cannula 18G; Snaptile, gauze clamp, freehand.",
+   "Helix data sheet: initial jewellery labret, BCR, horseshoe (circular barbell); cannula 18G; Snaptile, gauze clamp, freehand.",
    "S. 78"
   ],
   [
-   "According to the data sheet, what is the Helix pierced with?",
+   "What does the “Helix” data sheet say you pierce with?",
    [
     "18G cannula",
     "20G cannula",
     "Biopsy punch",
     "12G cannula"
    ],
-   "Data sheet Helix: initial jewellery labret, BCR, horseshoe (circular barbell); cannula 18G; Snaptile, gauze clamp, freehand.",
+   "Helix data sheet: initial jewellery labret, BCR, horseshoe (circular barbell); cannula 18G; Snaptile, gauze clamp, freehand.",
    "S. 78"
   ],
   [
-   "Which jewellery does the data sheet list as suitable initial jewellery for the Industrial?",
+   "Which jewellery does the “Industrial” data sheet list as suitable initial jewellery?",
    [
     "Barbell",
     "Dermal anchor",
     "Labret",
     "Horseshoe (circular barbell)"
    ],
-   "Data sheet Industrial: initial jewellery barbell 38 mm; cannula 16G; freehand, receiving tube.",
+   "Industrial data sheet: initial jewellery barbell 38 mm; cannula 16G; freehand, receiving tube.",
    "S. 84"
   ],
   [
-   "According to the data sheet, what is the Industrial pierced with?",
+   "What does the “Industrial” data sheet say you pierce with?",
    [
     "16G cannula",
     "18G cannula",
     "Biopsy punch",
     "14G cannula"
    ],
-   "Data sheet Industrial: initial jewellery barbell 38 mm; cannula 16G; freehand, receiving tube.",
+   "Industrial data sheet: initial jewellery barbell 38 mm; cannula 16G; freehand, receiving tube.",
    "S. 84"
   ],
   [
-   "Which instrument does the data sheet list for the Industrial?",
+   "Which instrument does the “Industrial” data sheet list?",
    [
     "Receiving tube",
     "Tragus forceps",
     "Gauze clamp",
     "Septum forceps"
    ],
-   "Data sheet Industrial: initial jewellery barbell 38 mm; cannula 16G; freehand, receiving tube.",
+   "Industrial data sheet: initial jewellery barbell 38 mm; cannula 16G; freehand, receiving tube.",
    "S. 84"
   ],
   [
-   "Which jewellery does the data sheet list as suitable initial jewellery for the Allergy piercing?",
+   "Which jewellery does the “Allergy piercing” data sheet list as suitable initial jewellery?",
    [
     "BCR (ball closure ring)",
     "Labret",
     "Surface bar",
     "Barbell"
    ],
-   "Data sheet Allergy piercing: initial jewellery horseshoe (circular barbell), curved barbell (banana), BCR; cannula 18G; freehand, receiving tube.",
+   "Allergy piercing data sheet: initial jewellery horseshoe (circular barbell), curved barbell (banana), BCR; cannula 18G; freehand, receiving tube.",
    "S. 83"
   ],
   [
-   "According to the data sheet, what is the Allergy piercing pierced with?",
+   "What does the “Allergy piercing” data sheet say you pierce with?",
    [
     "18G cannula",
     "12G cannula",
     "Biopsy punch",
     "20G cannula"
    ],
-   "Data sheet Allergy piercing: initial jewellery horseshoe (circular barbell), curved barbell (banana), BCR; cannula 18G; freehand, receiving tube.",
+   "Allergy piercing data sheet: initial jewellery horseshoe (circular barbell), curved barbell (banana), BCR; cannula 18G; freehand, receiving tube.",
    "S. 83"
   ],
   [
-   "Which instrument does the data sheet list for the Allergy piercing?",
+   "Which instrument does the “Allergy piercing” data sheet list?",
    [
     "Receiving tube",
     "Septum forceps",
     "Snaptile",
     "Tongue forceps"
    ],
-   "Data sheet Allergy piercing: initial jewellery horseshoe (circular barbell), curved barbell (banana), BCR; cannula 18G; freehand, receiving tube.",
+   "Allergy piercing data sheet: initial jewellery horseshoe (circular barbell), curved barbell (banana), BCR; cannula 18G; freehand, receiving tube.",
    "S. 83"
   ]
  ],
  "8-4": [
   [
-   "Which jewellery does the data sheet list as suitable initial jewellery for the Conch?",
+   "Which jewellery does the “Conch” data sheet list as suitable initial jewellery?",
    [
     "Barbell",
     "Surface bar",
     "Horseshoe (circular barbell)",
     "Dermal anchor"
    ],
-   "Data sheet Conch: initial jewellery labret, barbell, BCR; cannula 18G, 16G, biopsy punch; Snaptile, gauze clamp.",
+   "Conch data sheet: initial jewellery labret, barbell, BCR; cannula 18G, 16G, biopsy punch; Snaptile, gauze clamp.",
    "S. 79"
   ],
   [
-   "According to the data sheet, what is the Conch pierced with?",
+   "What does the “Conch” data sheet say you pierce with?",
    [
     "18G cannula",
     "12G cannula",
     "20G cannula",
     "14G cannula"
    ],
-   "Data sheet Conch: initial jewellery labret, barbell, BCR; cannula 18G, 16G, biopsy punch; Snaptile, gauze clamp.",
+   "Conch data sheet: initial jewellery labret, barbell, BCR; cannula 18G, 16G, biopsy punch; Snaptile, gauze clamp.",
    "S. 79"
   ],
   [
-   "Which jewellery does the data sheet list as suitable initial jewellery for the Snug?",
+   "Which jewellery does the “Snug” data sheet list as suitable initial jewellery?",
    [
     "Barbell",
     "Dermal anchor",
     "Labret",
     "Surface bar"
    ],
-   "Data sheet Snug: initial jewellery curved barbell (banana), barbell, BCR, horseshoe (circular barbell); cannula 18G; freehand, receiving tube.",
+   "Snug data sheet: initial jewellery curved barbell (banana), barbell, BCR, horseshoe (circular barbell); cannula 18G; freehand, receiving tube.",
    "S. 82"
   ],
   [
-   "According to the data sheet, what is the Snug pierced with?",
+   "What does the “Snug” data sheet say you pierce with?",
    [
     "18G cannula",
     "20G cannula",
     "16G cannula",
     "14G cannula"
    ],
-   "Data sheet Snug: initial jewellery curved barbell (banana), barbell, BCR, horseshoe (circular barbell); cannula 18G; freehand, receiving tube.",
+   "Snug data sheet: initial jewellery curved barbell (banana), barbell, BCR, horseshoe (circular barbell); cannula 18G; freehand, receiving tube.",
    "S. 82"
   ],
   [
-   "Which instrument does the data sheet list for the Snug?",
+   "Which instrument does the “Snug” data sheet list?",
    [
     "Receiving tube",
     "Gauze clamp",
     "Tongue forceps",
     "Snaptile"
    ],
-   "Data sheet Snug: initial jewellery curved barbell (banana), barbell, BCR, horseshoe (circular barbell); cannula 18G; freehand, receiving tube.",
+   "Snug data sheet: initial jewellery curved barbell (banana), barbell, BCR, horseshoe (circular barbell); cannula 18G; freehand, receiving tube.",
    "S. 82"
   ]
  ],
  "8-5": [
   [
-   "Which jewellery does the data sheet list as suitable initial jewellery for the Rook?",
+   "Which jewellery does the “Rook” data sheet list as suitable initial jewellery?",
    [
     "Horseshoe (circular barbell)",
     "Dermal anchor",
     "Barbell",
     "Labret"
    ],
-   "Data sheet Rook: initial jewellery horseshoe (circular barbell), curved barbell (banana), BCR; cannula 18G; receiving tube.",
+   "Rook data sheet: initial jewellery horseshoe (circular barbell), curved barbell (banana), BCR; cannula 18G; receiving tube.",
    "S. 80"
   ],
   [
-   "According to the data sheet, what is the Rook pierced with?",
+   "What does the “Rook” data sheet say you pierce with?",
    [
     "18G cannula",
     "16G cannula",
     "Biopsy punch",
     "14G cannula"
    ],
-   "Data sheet Rook: initial jewellery horseshoe (circular barbell), curved barbell (banana), BCR; cannula 18G; receiving tube.",
+   "Rook data sheet: initial jewellery horseshoe (circular barbell), curved barbell (banana), BCR; cannula 18G; receiving tube.",
    "S. 80"
   ],
   [
-   "Which instrument does the data sheet list for the Rook?",
+   "Which instrument does the “Rook” data sheet list?",
    [
     "Receiving tube",
     "Tongue forceps",
     "Snaptile",
     "Septum forceps"
    ],
-   "Data sheet Rook: initial jewellery horseshoe (circular barbell), curved barbell (banana), BCR; cannula 18G; receiving tube.",
+   "Rook data sheet: initial jewellery horseshoe (circular barbell), curved barbell (banana), BCR; cannula 18G; receiving tube.",
    "S. 80"
   ],
   [
-   "Which jewellery does the data sheet list as suitable initial jewellery for the Daith?",
+   "Which jewellery does the “Daith” data sheet list as suitable initial jewellery?",
    [
     "BCR (ball closure ring)",
     "Horseshoe (circular barbell)",
     "Barbell",
     "Labret"
    ],
-   "Data sheet Daith: initial jewellery curved barbell (banana), BCR; cannula 18G (bend if necessary); receiving tube.",
+   "Daith data sheet: initial jewellery curved barbell (banana), BCR; cannula 18G (bend if necessary); receiving tube.",
    "S. 81"
   ],
   [
-   "According to the data sheet, what is the Daith pierced with?",
+   "What does the “Daith” data sheet say you pierce with?",
    [
     "18G cannula",
     "16G cannula",
     "20G cannula",
     "12G cannula"
    ],
-   "Data sheet Daith: initial jewellery curved barbell (banana), BCR; cannula 18G (bend if necessary); receiving tube.",
+   "Daith data sheet: initial jewellery curved barbell (banana), BCR; cannula 18G (bend if necessary); receiving tube.",
    "S. 81"
   ],
   [
-   "Which instrument does the data sheet list for the Daith?",
+   "Which instrument does the “Daith” data sheet list?",
    [
     "Receiving tube",
     "Snaptile",
     "Gauze clamp",
     "Tragus forceps"
    ],
-   "Data sheet Daith: initial jewellery curved barbell (banana), BCR; cannula 18G (bend if necessary); receiving tube.",
+   "Daith data sheet: initial jewellery curved barbell (banana), BCR; cannula 18G (bend if necessary); receiving tube.",
    "S. 81"
   ]
  ],
  "8-6": [
   [
-   "Which jewellery does the data sheet list as suitable initial jewellery for the Nose (Nostril)?",
+   "Which jewellery does the “Nose (Nostril)” data sheet list as suitable initial jewellery?",
    [
     "Labret",
     "Dermal anchor",
     "Curved barbell (banana)",
     "Horseshoe (circular barbell)"
    ],
-   "Data sheet Nose (Nostril): initial jewellery labret; cannula 18G; gauze clamp, Snaptile.",
+   "Nose (Nostril) data sheet: initial jewellery labret; cannula 18G; gauze clamp, Snaptile.",
    "S. 85"
   ],
   [
-   "According to the data sheet, what is the Nose (Nostril) pierced with?",
+   "What does the “Nose (Nostril)” data sheet say you pierce with?",
    [
     "18G cannula",
     "14G cannula",
     "16G cannula",
     "20G cannula"
    ],
-   "Data sheet Nose (Nostril): initial jewellery labret; cannula 18G; gauze clamp, Snaptile.",
+   "Nose (Nostril) data sheet: initial jewellery labret; cannula 18G; gauze clamp, Snaptile.",
    "S. 85"
   ],
   [
-   "Which jewellery does the data sheet list as suitable initial jewellery for the Septum?",
+   "Which jewellery does the “Septum” data sheet list as suitable initial jewellery?",
    [
     "Horseshoe (circular barbell)",
     "Curved barbell (banana)",
     "Labret",
     "Barbell"
    ],
-   "Data sheet Septum: initial jewellery horseshoe (circular barbell); cannula 18G, 16G; septum forceps.",
+   "Septum data sheet: initial jewellery horseshoe (circular barbell); cannula 18G, 16G; septum forceps.",
    "S. 88"
   ],
   [
-   "According to the data sheet, what is the Septum pierced with?",
+   "What does the “Septum” data sheet say you pierce with?",
    [
     "16G cannula",
     "12G cannula",
     "20G cannula",
     "14G cannula"
    ],
-   "Data sheet Septum: initial jewellery horseshoe (circular barbell); cannula 18G, 16G; septum forceps.",
+   "Septum data sheet: initial jewellery horseshoe (circular barbell); cannula 18G, 16G; septum forceps.",
    "S. 88"
   ],
   [
-   "Which instrument does the data sheet list for the Septum?",
+   "Which instrument does the “Septum” data sheet list?",
    [
     "Septum forceps",
     "Tragus forceps",
     "Snaptile",
     "Receiving tube"
    ],
-   "Data sheet Septum: initial jewellery horseshoe (circular barbell); cannula 18G, 16G; septum forceps.",
+   "Septum data sheet: initial jewellery horseshoe (circular barbell); cannula 18G, 16G; septum forceps.",
    "S. 88"
   ]
  ],
  "8-7": [
   [
-   "Which jewellery does the data sheet list as suitable initial jewellery for the Eyebrow?",
+   "Which jewellery does the “Eyebrow” data sheet list as suitable initial jewellery?",
    [
     "Horseshoe (circular barbell)",
     "Surface bar",
     "Labret",
     "Dermal anchor"
    ],
-   "Data sheet Eyebrow: initial jewellery curved barbell (banana), horseshoe (circular barbell); cannula 18G; Snaptile, gauze clamp.",
+   "Eyebrow data sheet: initial jewellery curved barbell (banana), horseshoe (circular barbell); cannula 18G; Snaptile, gauze clamp.",
    "S. 89"
   ],
   [
-   "According to the data sheet, what is the Eyebrow pierced with?",
+   "What does the “Eyebrow” data sheet say you pierce with?",
    [
     "18G cannula",
     "20G cannula",
     "14G cannula",
     "16G cannula"
    ],
-   "Data sheet Eyebrow: initial jewellery curved barbell (banana), horseshoe (circular barbell); cannula 18G; Snaptile, gauze clamp.",
+   "Eyebrow data sheet: initial jewellery curved barbell (banana), horseshoe (circular barbell); cannula 18G; Snaptile, gauze clamp.",
    "S. 89"
   ],
   [
-   "Which jewellery does the data sheet list as suitable initial jewellery for the Bridge?",
+   "Which jewellery does the “Bridge” data sheet list as suitable initial jewellery?",
    [
     "Curved barbell (banana)",
     "BCR (ball closure ring)",
     "Surface bar",
     "Dermal anchor"
    ],
-   "Data sheet Bridge: initial jewellery barbell, curved barbell (banana); cannula 18G; Snaptile, gauze clamp.",
+   "Bridge data sheet: initial jewellery barbell, curved barbell (banana); cannula 18G; Snaptile, gauze clamp.",
    "S. 91"
   ],
   [
-   "According to the data sheet, what is the Bridge pierced with?",
+   "What does the “Bridge” data sheet say you pierce with?",
    [
     "18G cannula",
     "14G cannula",
     "20G cannula",
     "16G cannula"
    ],
-   "Data sheet Bridge: initial jewellery barbell, curved barbell (banana); cannula 18G; Snaptile, gauze clamp.",
+   "Bridge data sheet: initial jewellery barbell, curved barbell (banana); cannula 18G; Snaptile, gauze clamp.",
    "S. 91"
   ]
  ],
  "8-8": [
   [
-   "Which jewellery does the data sheet list as suitable initial jewellery for the Labret?",
+   "Which jewellery does the “Labret” data sheet list as suitable initial jewellery?",
    [
     "Labret",
     "Dermal anchor",
     "Surface bar",
     "Curved barbell (banana)"
    ],
-   "Data sheet Labret: initial jewellery labret, horseshoe (circular barbell); cannula 18G; Snaptile, gauze clamp.",
+   "Labret data sheet: initial jewellery labret, horseshoe (circular barbell); cannula 18G; Snaptile, gauze clamp.",
    "S. 86"
   ],
   [
-   "According to the data sheet, what is the Labret pierced with?",
+   "What does the “Labret” data sheet say you pierce with?",
    [
     "18G cannula",
     "Biopsy punch",
     "20G cannula",
     "14G cannula"
    ],
-   "Data sheet Labret: initial jewellery labret, horseshoe (circular barbell); cannula 18G; Snaptile, gauze clamp.",
+   "Labret data sheet: initial jewellery labret, horseshoe (circular barbell); cannula 18G; Snaptile, gauze clamp.",
    "S. 86"
   ],
   [
-   "Which jewellery does the data sheet list as suitable initial jewellery for the Eskimo?",
+   "Which jewellery does the “Eskimo” data sheet list as suitable initial jewellery?",
    [
     "Barbell",
     "BCR (ball closure ring)",
     "Surface bar",
     "Dermal anchor"
    ],
-   "Data sheet Eskimo: initial jewellery barbell, curved barbell (banana); cannula 18G; Snaptile, gauze clamp, freehand.",
+   "Eskimo data sheet: initial jewellery barbell, curved barbell (banana); cannula 18G; Snaptile, gauze clamp, freehand.",
    "S. 93"
   ],
   [
-   "According to the data sheet, what is the Eskimo pierced with?",
+   "What does the “Eskimo” data sheet say you pierce with?",
    [
     "18G cannula",
     "14G cannula",
     "Biopsy punch",
     "20G cannula"
    ],
-   "Data sheet Eskimo: initial jewellery barbell, curved barbell (banana); cannula 18G; Snaptile, gauze clamp, freehand.",
+   "Eskimo data sheet: initial jewellery barbell, curved barbell (banana); cannula 18G; Snaptile, gauze clamp, freehand.",
    "S. 93"
   ]
  ],
  "8-9": [
   [
-   "Which jewellery does the data sheet list as suitable initial jewellery for the Lip frenulum (Smiley)?",
+   "Which jewellery does the “Lip frenulum (Smiley)” data sheet list as suitable initial jewellery?",
    [
     "BCR (ball closure ring)",
     "Labret",
     "Barbell",
     "Curved barbell (banana)"
    ],
-   "Data sheet Lip frenulum (Smiley): initial jewellery horseshoe (circular barbell), BCR; cannula 18G; septum forceps, freehand.",
+   "Lip frenulum (Smiley) data sheet: initial jewellery horseshoe (circular barbell), BCR; cannula 18G; septum forceps, freehand.",
    "S. 87"
   ],
   [
-   "According to the data sheet, what is the Lip frenulum (Smiley) pierced with?",
+   "What does the “Lip frenulum (Smiley)” data sheet say you pierce with?",
    [
     "18G cannula",
     "20G cannula",
     "16G cannula",
     "Biopsy punch"
    ],
-   "Data sheet Lip frenulum (Smiley): initial jewellery horseshoe (circular barbell), BCR; cannula 18G; septum forceps, freehand.",
+   "Lip frenulum (Smiley) data sheet: initial jewellery horseshoe (circular barbell), BCR; cannula 18G; septum forceps, freehand.",
    "S. 87"
   ],
   [
-   "Which instrument does the data sheet list for the Lip frenulum (Smiley)?",
+   "Which instrument does the “Lip frenulum (Smiley)” data sheet list?",
    [
     "Septum forceps",
     "Receiving tube",
     "Tongue forceps",
     "Snaptile"
    ],
-   "Data sheet Lip frenulum (Smiley): initial jewellery horseshoe (circular barbell), BCR; cannula 18G; septum forceps, freehand.",
+   "Lip frenulum (Smiley) data sheet: initial jewellery horseshoe (circular barbell), BCR; cannula 18G; septum forceps, freehand.",
    "S. 87"
   ],
   [
-   "Which jewellery does the data sheet list as suitable initial jewellery for the Tongue?",
+   "Which jewellery does the “Tongue” data sheet list as suitable initial jewellery?",
    [
     "Barbell",
     "Curved barbell (banana)",
     "BCR (ball closure ring)",
     "Dermal anchor"
    ],
-   "Data sheet Tongue: initial jewellery 20 mm barbell (shorter after 10 days if needed); cannula 16G; Snaptile, gauze clamp, tongue forceps.",
+   "Tongue data sheet: initial jewellery 20 mm barbell (shorter after 10 days if needed); cannula 16G; Snaptile, gauze clamp, tongue forceps.",
    "S. 90"
   ],
   [
-   "According to the data sheet, what is the Tongue pierced with?",
+   "What does the “Tongue” data sheet say you pierce with?",
    [
     "16G cannula",
     "12G cannula",
     "20G cannula",
     "14G cannula"
    ],
-   "Data sheet Tongue: initial jewellery 20 mm barbell (shorter after 10 days if needed); cannula 16G; Snaptile, gauze clamp, tongue forceps.",
+   "Tongue data sheet: initial jewellery 20 mm barbell (shorter after 10 days if needed); cannula 16G; Snaptile, gauze clamp, tongue forceps.",
    "S. 90"
   ],
   [
-   "Which instrument does the data sheet list for the Tongue?",
+   "Which instrument does the “Tongue” data sheet list?",
    [
     "Tongue forceps",
     "Receiving tube",
     "Tragus forceps",
     "Septum forceps"
    ],
-   "Data sheet Tongue: initial jewellery 20 mm barbell (shorter after 10 days if needed); cannula 16G; Snaptile, gauze clamp, tongue forceps.",
+   "Tongue data sheet: initial jewellery 20 mm barbell (shorter after 10 days if needed); cannula 16G; Snaptile, gauze clamp, tongue forceps.",
    "S. 90"
   ]
  ],
  "8-10": [
   [
-   "Which jewellery does the data sheet list as suitable initial jewellery for the Cheek?",
+   "Which jewellery does the “Cheek” data sheet list as suitable initial jewellery?",
    [
     "Barbell",
     "Surface bar",
     "BCR (ball closure ring)",
     "Horseshoe (circular barbell)"
    ],
-   "Data sheet Cheek: initial jewellery barbell, labret; cannula 18G; Snaptile, gauze clamp.",
+   "Cheek data sheet: initial jewellery barbell, labret; cannula 18G; Snaptile, gauze clamp.",
    "S. 92"
   ],
   [
-   "According to the data sheet, what is the Cheek pierced with?",
+   "What does the “Cheek” data sheet say you pierce with?",
    [
     "18G cannula",
     "16G cannula",
     "12G cannula",
     "20G cannula"
    ],
-   "Data sheet Cheek: initial jewellery barbell, labret; cannula 18G; Snaptile, gauze clamp.",
+   "Cheek data sheet: initial jewellery barbell, labret; cannula 18G; Snaptile, gauze clamp.",
    "S. 92"
   ]
  ],
  "8-11": [
   [
-   "Which jewellery does the data sheet list as suitable initial jewellery for the Navel?",
+   "Which jewellery does the “Navel” data sheet list as suitable initial jewellery?",
    [
     "BCR (ball closure ring)",
     "Horseshoe (circular barbell)",
     "Barbell",
     "Surface bar"
    ],
-   "Data sheet Navel: initial jewellery curved barbell (banana), BCR; cannula 16G; Snaptile, freehand.",
+   "Navel data sheet: initial jewellery curved barbell (banana), BCR; cannula 16G; Snaptile, freehand.",
    "S. 94"
   ],
   [
-   "According to the data sheet, what is the Navel pierced with?",
+   "What does the “Navel” data sheet say you pierce with?",
    [
     "16G cannula",
     "18G cannula",
     "Biopsy punch",
     "20G cannula"
    ],
-   "Data sheet Navel: initial jewellery curved barbell (banana), BCR; cannula 16G; Snaptile, freehand.",
+   "Navel data sheet: initial jewellery curved barbell (banana), BCR; cannula 16G; Snaptile, freehand.",
    "S. 94"
   ]
  ],
  "8-12": [
   [
-   "Which jewellery does the data sheet list as suitable initial jewellery for the Nipple?",
+   "Which jewellery does the “Nipple” data sheet list as suitable initial jewellery?",
    [
     "Barbell",
     "Horseshoe (circular barbell)",
     "Surface bar",
     "Curved barbell (banana)"
    ],
-   "Data sheet Nipple: initial jewellery barbell, BCR; cannula 16G; Snaptile, gauze clamp.",
+   "Nipple data sheet: initial jewellery barbell, BCR; cannula 16G; Snaptile, gauze clamp.",
    "S. 95"
   ],
   [
-   "According to the data sheet, what is the Nipple pierced with?",
+   "What does the “Nipple” data sheet say you pierce with?",
    [
     "16G cannula",
     "18G cannula",
     "20G cannula",
     "14G cannula"
    ],
-   "Data sheet Nipple: initial jewellery barbell, BCR; cannula 16G; Snaptile, gauze clamp.",
+   "Nipple data sheet: initial jewellery barbell, BCR; cannula 16G; Snaptile, gauze clamp.",
    "S. 95"
   ]
  ],
  "8-13": [
   [
-   "Which jewellery does the data sheet list as suitable initial jewellery for the Surface?",
+   "Which jewellery does the “Surface” data sheet list as suitable initial jewellery?",
    [
     "Dermal anchor",
     "Labret",
     "Barbell",
     "BCR (ball closure ring)"
    ],
-   "Data sheet Surface: initial jewellery surface bar, curved barbell (banana), Dermal Anchor; cannula 16G, 18G, biopsy punch; freehand, Snaptile, gauze clamp.",
+   "Surface data sheet: initial jewellery surface bar, curved barbell (banana), Dermal Anchor; cannula 16G, 18G, biopsy punch; freehand, Snaptile, gauze clamp.",
    "S. 96"
   ],
   [
-   "According to the data sheet, what is the Surface pierced with?",
+   "What does the “Surface” data sheet say you pierce with?",
    [
     "18G cannula",
     "12G cannula",
     "20G cannula",
     "14G cannula"
    ],
-   "Data sheet Surface: initial jewellery surface bar, curved barbell (banana), Dermal Anchor; cannula 16G, 18G, biopsy punch; freehand, Snaptile, gauze clamp.",
+   "Surface data sheet: initial jewellery surface bar, curved barbell (banana), Dermal Anchor; cannula 16G, 18G, biopsy punch; freehand, Snaptile, gauze clamp.",
    "S. 96"
   ]
  ],
  "8-14": [
   [
-   "Which jewellery does the data sheet list as suitable initial jewellery for the Frenulum?",
+   "Which jewellery does the “Frenulum” data sheet list as suitable initial jewellery?",
    [
     "Curved barbell (banana)",
     "Labret",
     "BCR (ball closure ring)",
     "Surface bar"
    ],
-   "Data sheet Frenulum: initial jewellery curved barbell (banana), barbell; cannula 16G, 18G; receiving tube, freehand, gauze clamp.",
+   "Frenulum data sheet: initial jewellery curved barbell (banana), barbell; cannula 16G, 18G; receiving tube, freehand, gauze clamp.",
    "S. 97"
   ],
   [
-   "According to the data sheet, what is the Frenulum pierced with?",
+   "What does the “Frenulum” data sheet say you pierce with?",
    [
     "18G cannula",
     "20G cannula",
     "14G cannula",
     "Biopsy punch"
    ],
-   "Data sheet Frenulum: initial jewellery curved barbell (banana), barbell; cannula 16G, 18G; receiving tube, freehand, gauze clamp.",
+   "Frenulum data sheet: initial jewellery curved barbell (banana), barbell; cannula 16G, 18G; receiving tube, freehand, gauze clamp.",
    "S. 97"
   ],
   [
-   "Which instrument does the data sheet list for the Frenulum?",
+   "Which instrument does the “Frenulum” data sheet list?",
    [
     "Receiving tube",
     "Tragus forceps",
     "Tongue forceps",
     "Snaptile"
    ],
-   "Data sheet Frenulum: initial jewellery curved barbell (banana), barbell; cannula 16G, 18G; receiving tube, freehand, gauze clamp.",
+   "Frenulum data sheet: initial jewellery curved barbell (banana), barbell; cannula 16G, 18G; receiving tube, freehand, gauze clamp.",
    "S. 97"
   ],
   [
-   "Which jewellery does the data sheet list as suitable initial jewellery for the Prince Albert?",
+   "Which jewellery does the “Prince Albert” data sheet list as suitable initial jewellery?",
    [
     "BCR (ball closure ring)",
     "Surface bar",
     "Horseshoe (circular barbell)",
     "Dermal anchor"
    ],
-   "Data sheet Prince Albert: initial jewellery BCR; cannula 14G; freehand.",
+   "Prince Albert data sheet: initial jewellery BCR; cannula 14G; freehand.",
    "S. 98"
   ],
   [
-   "According to the data sheet, what is the Prince Albert pierced with?",
+   "What does the “Prince Albert” data sheet say you pierce with?",
    [
     "14G cannula",
     "18G cannula",
     "16G cannula",
     "20G cannula"
    ],
-   "Data sheet Prince Albert: initial jewellery BCR; cannula 14G; freehand.",
+   "Prince Albert data sheet: initial jewellery BCR; cannula 14G; freehand.",
    "S. 98"
   ],
   [
-   "Which jewellery does the data sheet list as suitable initial jewellery for the Dydoe?",
+   "Which jewellery does the “Dydoe” data sheet list as suitable initial jewellery?",
    [
     "Barbell",
     "Dermal anchor",
     "BCR (ball closure ring)",
     "Horseshoe (circular barbell)"
    ],
-   "Data sheet Dydoe: initial jewellery curved barbell (banana), barbell; cannula 16G, 18G; freehand.",
+   "Dydoe data sheet: initial jewellery curved barbell (banana), barbell; cannula 16G, 18G; freehand.",
    "S. 99"
   ],
   [
-   "According to the data sheet, what is the Dydoe pierced with?",
+   "What does the “Dydoe” data sheet say you pierce with?",
    [
     "18G cannula",
     "20G cannula",
     "Biopsy punch",
     "14G cannula"
    ],
-   "Data sheet Dydoe: initial jewellery curved barbell (banana), barbell; cannula 16G, 18G; freehand.",
+   "Dydoe data sheet: initial jewellery curved barbell (banana), barbell; cannula 16G, 18G; freehand.",
    "S. 99"
   ],
   [
-   "Which jewellery does the data sheet list as suitable initial jewellery for the Pubic?",
+   "Which jewellery does the “Pubic” data sheet list as suitable initial jewellery?",
    [
     "Surface bar",
     "Horseshoe (circular barbell)",
     "Labret",
     "Dermal anchor"
    ],
-   "Data sheet Pubic: initial jewellery BCR, barbell, surface bar, curved barbell (banana); cannula 16G, 18G; freehand, gauze clamp.",
+   "Pubic data sheet: initial jewellery BCR, barbell, surface bar, curved barbell (banana); cannula 16G, 18G; freehand, gauze clamp.",
    "S. 100"
   ],
   [
-   "According to the data sheet, what is the Pubic pierced with?",
+   "What does the “Pubic” data sheet say you pierce with?",
    [
     "18G cannula",
     "12G cannula",
     "20G cannula",
     "Biopsy punch"
    ],
-   "Data sheet Pubic: initial jewellery BCR, barbell, surface bar, curved barbell (banana); cannula 16G, 18G; freehand, gauze clamp.",
+   "Pubic data sheet: initial jewellery BCR, barbell, surface bar, curved barbell (banana); cannula 16G, 18G; freehand, gauze clamp.",
    "S. 100"
   ],
   [
-   "Which jewellery does the data sheet list as suitable initial jewellery for the Hafada?",
+   "Which jewellery does the “Hafada” data sheet list as suitable initial jewellery?",
    [
     "Curved barbell (banana)",
     "Dermal anchor",
     "Labret",
     "Horseshoe (circular barbell)"
    ],
-   "Data sheet Hafada: initial jewellery BCR, curved barbell (banana); cannula 16G, 18G; freehand, Snaptile, gauze clamp.",
+   "Hafada data sheet: initial jewellery BCR, curved barbell (banana); cannula 16G, 18G; freehand, Snaptile, gauze clamp.",
    "S. 101"
   ],
   [
-   "According to the data sheet, what is the Hafada pierced with?",
+   "What does the “Hafada” data sheet say you pierce with?",
    [
     "18G cannula",
     "14G cannula",
     "12G cannula",
     "20G cannula"
    ],
-   "Data sheet Hafada: initial jewellery BCR, curved barbell (banana); cannula 16G, 18G; freehand, Snaptile, gauze clamp.",
+   "Hafada data sheet: initial jewellery BCR, curved barbell (banana); cannula 16G, 18G; freehand, Snaptile, gauze clamp.",
    "S. 101"
   ],
   [
-   "Which jewellery does the data sheet list as suitable initial jewellery for the Guiche?",
+   "Which jewellery does the “Guiche” data sheet list as suitable initial jewellery?",
    [
     "Barbell",
     "Horseshoe (circular barbell)",
     "Surface bar",
     "Curved barbell (banana)"
    ],
-   "Data sheet Guiche: initial jewellery BCR, barbell; cannula 16G, 18G; freehand.",
+   "Guiche data sheet: initial jewellery BCR, barbell; cannula 16G, 18G; freehand.",
    "S. 102"
   ],
   [
-   "According to the data sheet, what is the Guiche pierced with?",
+   "What does the “Guiche” data sheet say you pierce with?",
    [
     "18G cannula",
     "14G cannula",
     "12G cannula",
     "20G cannula"
    ],
-   "Data sheet Guiche: initial jewellery BCR, barbell; cannula 16G, 18G; freehand.",
+   "Guiche data sheet: initial jewellery BCR, barbell; cannula 16G, 18G; freehand.",
    "S. 102"
   ]
  ],
  "8-15": [
   [
-   "Which jewellery does the data sheet list as suitable initial jewellery for the Christina?",
+   "Which jewellery does the “Christina” data sheet list as suitable initial jewellery?",
    [
     "BCR (ball closure ring)",
     "Horseshoe (circular barbell)",
     "Dermal anchor",
     "Labret"
    ],
-   "Data sheet Christina: initial jewellery curved barbell (banana), barbell, BCR; cannula 16G, 18G; freehand, Snaptile, gauze clamp.",
+   "Christina data sheet: initial jewellery curved barbell (banana), barbell, BCR; cannula 16G, 18G; freehand, Snaptile, gauze clamp.",
    "S. 105"
   ],
   [
-   "According to the data sheet, what is the Christina pierced with?",
+   "What does the “Christina” data sheet say you pierce with?",
    [
     "18G cannula",
     "Biopsy punch",
     "14G cannula",
     "12G cannula"
    ],
-   "Data sheet Christina: initial jewellery curved barbell (banana), barbell, BCR; cannula 16G, 18G; freehand, Snaptile, gauze clamp.",
+   "Christina data sheet: initial jewellery curved barbell (banana), barbell, BCR; cannula 16G, 18G; freehand, Snaptile, gauze clamp.",
    "S. 105"
   ],
   [
-   "Which jewellery does the data sheet list as suitable initial jewellery for the Clitoral hood?",
+   "Which jewellery does the “Clitoral hood” data sheet list as suitable initial jewellery?",
    [
     "Barbell",
     "Surface bar",
     "Horseshoe (circular barbell)",
     "Dermal anchor"
    ],
-   "Data sheet Clitoral hood: initial jewellery BCR, curved barbell (banana), barbell; cannula 16G, 18G; freehand.",
+   "Clitoral hood data sheet: initial jewellery BCR, curved barbell (banana), barbell; cannula 16G, 18G; freehand.",
    "S. 106"
   ],
   [
-   "According to the data sheet, what is the Clitoral hood pierced with?",
+   "What does the “Clitoral hood” data sheet say you pierce with?",
    [
     "18G cannula",
     "20G cannula",
     "Biopsy punch",
     "14G cannula"
    ],
-   "Data sheet Clitoral hood: initial jewellery BCR, curved barbell (banana), barbell; cannula 16G, 18G; freehand.",
+   "Clitoral hood data sheet: initial jewellery BCR, curved barbell (banana), barbell; cannula 16G, 18G; freehand.",
    "S. 106"
   ],
   [
-   "Which jewellery does the data sheet list as suitable initial jewellery for the Labia?",
+   "Which jewellery does the “Labia” data sheet list as suitable initial jewellery?",
    [
     "BCR (ball closure ring)",
     "Dermal anchor",
     "Barbell",
     "Horseshoe (circular barbell)"
    ],
-   "Data sheet Labia: initial jewellery BCR; cannula 16G, 18G; freehand, Snaptile, gauze clamp.",
+   "Labia data sheet: initial jewellery BCR; cannula 16G, 18G; freehand, Snaptile, gauze clamp.",
    "S. 107"
   ],
   [
-   "According to the data sheet, what is the Labia pierced with?",
+   "What does the “Labia” data sheet say you pierce with?",
    [
     "16G cannula",
     "14G cannula",
     "Biopsy punch",
     "20G cannula"
    ],
-   "Data sheet Labia: initial jewellery BCR; cannula 16G, 18G; freehand, Snaptile, gauze clamp.",
+   "Labia data sheet: initial jewellery BCR; cannula 16G, 18G; freehand, Snaptile, gauze clamp.",
    "S. 107"
   ]
  ],
@@ -953,9 +953,9 @@ KURS.lektionsfragen = {
   [
    "What do you need the scissors for when piercing?",
    [
-    "Shorten the plastic tube of the cannula after piercing so the jewellery goes in more easily",
+    "Shortens the plastic tube of the cannula after piercing so the jewellery goes in more easily",
     "Shines through the ear, for example, to identify blood vessels",
-    "Spread or close ball closure rings (BCR) to remove or insert the ball",
+    "Spreads or closes ball closure rings (BCR) to remove or insert the ball",
     "Cuts through jewellery when a ball can no longer be loosened"
    ],
    "Tool table: Scissors.",
@@ -967,7 +967,7 @@ KURS.lektionsfragen = {
     "Holds piercing balls and makes screwing them on easier",
     "Measures jewellery and adjusts the position of the piercing",
     "Cuts through jewellery when a ball can no longer be loosened",
-    "Shorten the plastic tube of the cannula after piercing so the jewellery goes in more easily"
+    "Shortens the plastic tube of the cannula after piercing so the jewellery goes in more easily"
    ],
    "Tool table: Ball grabber.",
    "S. 66–73"
@@ -986,10 +986,10 @@ KURS.lektionsfragen = {
   [
    "What are the ring opening and ring closing pliers for?",
    [
-    "Spread or close ball closure rings (BCR) to remove or insert the ball",
+    "Spreads or closes ball closure rings (BCR) to remove or insert the ball",
     "Shines through the ear, for example, to identify blood vessels",
     "Cuts through jewellery when a ball can no longer be loosened",
-    "Shorten the plastic tube of the cannula after piercing so the jewellery goes in more easily"
+    "Shortens the plastic tube of the cannula after piercing so the jewellery goes in more easily"
    ],
    "Tool table: Ring opening and ring closing pliers.",
    "S. 66–73"
@@ -1000,7 +1000,7 @@ KURS.lektionsfragen = {
     "Shines through the ear, for example, to identify blood vessels",
     "Cuts through jewellery when a ball can no longer be loosened",
     "Measures jewellery and adjusts the position of the piercing",
-    "Spread or close ball closure rings (BCR) to remove or insert the ball"
+    "Spreads or closes ball closure rings (BCR) to remove or insert the ball"
    ],
    "Tool table: Torch (green light).",
    "S. 66–73"
@@ -1011,7 +1011,7 @@ KURS.lektionsfragen = {
     "Cuts through jewellery when a ball can no longer be loosened",
     "Measures jewellery and adjusts the position of the piercing",
     "Shines through the ear, for example, to identify blood vessels",
-    "Spread or close ball closure rings (BCR) to remove or insert the ball"
+    "Spreads or closes ball closure rings (BCR) to remove or insert the ball"
    ],
    "Tool table: Mini side cutter.",
    "S. 66–73"
@@ -1304,7 +1304,7 @@ KURS.lektionsfragen = {
  ],
  "10-2": [
   [
-   "What healing time does the course book give for a lobe?",
+   "What healing time does the course book give for a lobe piercing?",
    [
     "Approx. 2 months",
     "3 to 12 months",

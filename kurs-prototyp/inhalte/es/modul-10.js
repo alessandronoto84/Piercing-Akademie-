@@ -8,7 +8,7 @@ KURS.module.push({
   ziel: "Das las instrucciones de cuidado correctas, conoces los tiempos de cicatrización y reconoces los trastornos de la cicatrización antes de que se conviertan en un problema.",
   lektionen: [
     {
-      titel: "Orientar los cuidados",
+      titel: "Explicar los cuidados",
       seite: "S. 48",
       inhalt: [
         { typ: "text", text: "Después de perforar, es imprescindible que el propio cliente trate y cuide correctamente el piercing para que la cicatrización transcurra de la mejor manera posible. Por eso, en todos los casos debes explicarle al cliente cómo tratar y cuidar el piercing recién hecho." },
@@ -56,7 +56,7 @@ KURS.module.push({
         ["¿Los tiempos de cicatrización son garantías fijas?", ["No, son valores orientativos con cicatrización óptima", "Sí, para adultos sanos", "Sí, si se siguen los cuidados", "Solo con joyas de PTFE"], "Cada persona cicatriza de forma distinta.", "S. 49"],
         ["¿Cuándo puede cambiarse la joya?", ["Solo tras la cicatrización completa", "A las 2 semanas, cuando terminan los cuidados", "Cuando ha bajado la hinchazón", "A las 4 semanas en todos los piercings"], "De lo contrario, hay riesgo de infección.", "S. 49"],
         ["¿Qué piercing tiene el mayor rango en el tiempo de cicatrización?", ["Pezón, 3 a 12 meses", "Ombligo, 4 a 6 meses", "Genital, 2 a 3 meses", "Labret, 1 a 2 meses"], "Ver gráfico.", "S. 49"],
-        ["Caso: una clienta quiere cambiar su piercing helix de 4 semanas por un aro. ¿Qué le aconsejas?", ["Esperar: el cartílago necesita al menos 3 meses", "Cambiarlo está bien si ya no está rojo", "Cambiarlo, pero solo por titanio", "Cambiarlo a las 6 semanas"], "Cambiar solo tras la cicatrización completa.", "S. 49"]
+        ["Caso: una clienta quiere cambiar la joya de su piercing helix de 4 semanas por un aro. ¿Qué le aconsejas?", ["Esperar: el cartílago necesita al menos 3 meses", "Cambiarlo está bien si ya no está rojo", "Cambiarlo, pero solo por titanio", "Cambiarlo a las 6 semanas"], "Cambiar solo tras la cicatrización completa.", "S. 49"]
       ]
     },
     {
@@ -64,7 +64,7 @@ KURS.module.push({
       seite: "S. 50",
       inhalt: [
         { typ: "tabelle", kopf: ["Trastorno", "Qué hacer"], zeilen: [
-          ["Falta de epitelización", "Acudir a un médico a los 10 a 14 días. En la epitelización, las células epiteliales migran desde el borde de la herida y la cubren; debajo, el tejido de granulación madura hasta convertirse en tejido cicatricial firme. La herida se hace más pequeña."],
+          ["Falta de epitelización", "Acudir a un médico pasados entre 10 y 14 días. En la epitelización, las células epiteliales migran desde el borde de la herida y la cubren; debajo, el tejido de granulación madura hasta convertirse en tejido cicatricial firme. La herida se hace más pequeña."],
           ["Sangrado posterior", "Si el sangrado no para, acudir a un médico. Posibles causas según el libro del curso: diabetes, debilidad del tejido conjuntivo, trastorno de la coagulación (hemofilia); además, medicamentos anticoagulantes."]
         ] }
       ],

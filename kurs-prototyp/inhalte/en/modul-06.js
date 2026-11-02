@@ -45,7 +45,7 @@ KURS.module.push({
       ],
       fragen: [
         ["Which process is used to coat Blackline titanium?", ["PVD (Physical Vapor Deposition)", "Electroplating", "Anodising", "Powder coating"], "Wafer-thin and abrasion-resistant.", "S. 54"],
-        ["What properties do Blackline piercings have?", ["Almost permanently scratch-resistant, colourfast and compatible", "They are turned black by anodising", "They contain black nickel", "They are especially recommended as initial jewellery"], "The PVD layer is very thin and hard. For initial jewellery, the Academy still sticks to G23 titanium or PTFE.", "S. 54"],
+        ["What properties do Blackline piercings have?", ["Almost permanently scratch-resistant, colourfast and well tolerated", "They are turned black by anodising", "They contain black nickel", "They are especially recommended as initial jewellery"], "The PVD layer is very thin and hard. For initial jewellery, the Academy still sticks to G23 titanium or PTFE.", "S. 54"],
         ["What is zircon gold titanium?", ["Titanium with a gold-coloured coating, an alternative to gold", "Solid 14-carat gold", "Gold-plated surgical steel", "A gold-titanium alloy"], "Smoother, lighter, cheaper.", "S. 54"]
       ]
     },
@@ -55,10 +55,10 @@ KURS.module.push({
       inhalt: [
         { typ: "text", text: "There are countless types of steel. Piercers use only three for jewellery: Composition D implant steel, surgical steel 316 LVM and, most commonly, surgical steel 316L. According to the EU Nickel Directive, these steels meet all the criteria to be worn as second jewellery (after complete healing) worldwide and for an unlimited time." },
         { typ: "text", text: "In medicine, 316L is used, for example, for bone screws, body needles, bone plates, sutures, staples and as a pacemaker electrode." },
-        { typ: "achtung", text: "Surgical steel 316L contains 10 to 14 percent nickel and is unsuitable as initial jewellery. As second jewellery it is usually safe." }
+        { typ: "achtung", text: "Surgical steel 316L contains 10 to 14 per cent nickel and is unsuitable as initial jewellery. As second jewellery it is usually safe." }
       ],
       fragen: [
-        ["How much nickel does surgical steel 316L contain?", ["10 to 14 percent", "0 percent", "2 to 4 percent", "18 to 20 percent"], "That is why it is not used as initial jewellery.", "S. 55"],
+        ["How much nickel does surgical steel 316L contain?", ["10 to 14 per cent", "0 per cent", "2 to 4 per cent", "18 to 20 per cent"], "That is why it is not used as initial jewellery.", "S. 55"],
         ["Which three steels do piercers use for jewellery?", ["Composition D implant steel, 316 LVM and 316L", "303, 304 and 316L", "316L, 316 LVM and 303", "Only 316L"], "Most commonly 316L.", "S. 55"],
         ["What is surgical steel 316L suitable for?", ["As second jewellery after complete healing", "As initial jewellery for people with nickel allergy", "As initial jewellery in cartilage piercings", "Only for tools, not for jewellery"], "As second jewellery it is usually safe.", "S. 55"],
         ["What is 316L used for in medicine?", ["For example, bone screws and pacemaker electrodes", "Only for disposable scalpels", "For contact lenses", "For artificial heart valves made of titanium"], "Also needles, plates, sutures, staples.", "S. 55"]
@@ -69,15 +69,15 @@ KURS.module.push({
       seite: "S. 56",
       inhalt: [
         { typ: "merke", text: "As a piercer, you never put your client’s health at risk." },
-        { typ: "text", text: "Some suppliers sell body jewellery made of 303 stainless steel, a high-sulphur steel that is easy to machine. 303 steel causes considerable adverse reactions in nickel-sensitive people (14 percent in test studies) and must be avoided under all circumstances." },
+        { typ: "text", text: "Some suppliers sell body jewellery made of 303 stainless steel, a high-sulphur steel that is easy to machine. 303 steel causes considerable adverse reactions in nickel-sensitive people (14 per cent in test studies) and must be avoided under all circumstances." },
         { typ: "achtung", text: "Because many people have a nickel allergy, often without knowing it, we always use G23 titanium or PTFE as initial jewellery." },
-        { typ: "text", text: "Implantanium, niobium or high-purity gold would also be possible, but they do not make sense for economic reasons." },
+        { typ: "text", text: "Implantanium, niobium or high-purity gold would also be possible, but they are not economically viable." },
         { typ: "ergaenzung", text: "Under EU law (REACH, Annex XVII, entry 27), metal parts inserted into pierced parts of the body may release no more than 0.2 µg of nickel per cm² per week (tested according to EN 1811). The Academy’s rule goes beyond this." }
       ],
       fragen: [
         ["Which materials do you use as initial jewellery?", ["G23 titanium or PTFE", "G23 titanium or 316L", "PTFE or zircon gold", "316 LVM or Blackline titanium"], "Many people have a nickel allergy without knowing it.", "S. 56"],
         ["What applies to 303 steel?", ["It causes considerable reactions in nickel-sensitive people and must be avoided", "It is safe as second jewellery", "It is nickel-free but hard to machine", "It is identical to 316L"], "High sulphur content.", "S. 56"],
-        ["Which materials would be possible but do not make economic sense?", ["Implantanium, niobium or high-purity gold", "PTFE and G23 titanium", "316L and 303 steel", "Blackline and zircon gold titanium"], "Possible but expensive: implantanium, niobium and high-purity gold. In practice, it stays G23 titanium and PTFE.", "S. 56"],
+        ["Which materials would be possible but do not make economic sense?", ["Implantanium, niobium or high-purity gold", "PTFE and G23 titanium", "316L and 303 steel", "Blackline and zircon gold titanium"], "Possible but expensive: implantanium, niobium and high-purity gold. In practice, G23 titanium and PTFE remain the choice.", "S. 56"],
         ["Under EU law, what is the maximum nickel release for jewellery in fresh piercings?", ["0.2 µg per cm² per week", "0.5 µg per cm² per week", "2 µg per cm² per week", "0.02 µg per cm² per day"], "REACH, entry 27 (Academy note).", "Ergänzung"],
         ["Case: A client brings his own surgical steel jewellery for his fresh piercing. What do you do?", ["I insert G23 titanium or PTFE as initial jewellery", "I insert his jewellery after autoclaving it", "I insert it if it has 4 mm extra length", "I insert it if the client signs a form"], "316L is unsuitable as initial jewellery.", "S. 55–56"]
       ]
@@ -95,7 +95,7 @@ KURS.module.push({
         ["How do you recognise a nickel allergy on the skin?", ["Redness, swelling, rough, dry and itchy skin", "Blue discolouration around the piercing channel", "Hypergranulation at the piercing channel", "Immediate swelling within minutes"], "Sometimes weeping contact eczema.", "S. 57"],
         ["When do the symptoms of a nickel allergy appear?", ["About 48 to 72 hours after contact", "Within minutes", "After 2 to 6 hours", "Only after 2 to 3 weeks"], "Delayed-type allergy.", "S. 57"],
         ["What do you call an allergy that only appears days after contact?", ["Delayed-type allergy", "Immediate-type allergy", "Cross-allergy", "Pseudo-allergy"], "Typical of nickel.", "S. 57"],
-        ["Can the rash spread over the whole body?", ["Yes, in some of those affected", "No, it always stays at the jewellery", "Only with cartilage piercings", "Only in children"], "With strong sensitisation, the allergy can also flare up on other parts of the body (scatter reaction).", "S. 57"],
+        ["Can the rash spread over the whole body?", ["Yes, in some of those affected", "No, it always stays around the jewellery", "Only with cartilage piercings", "Only in children"], "With strong sensitisation, the allergy can also flare up on other parts of the body (scatter reaction).", "S. 57"],
         ["Case: Three days after switching to steel jewellery, the area itches and weeps. What do you suspect?", ["A nickel allergy (delayed type)", "Hypergranulation", "A normal inflammatory phase", "Perichondritis"], "Symptoms after 48 to 72 hours.", "S. 57"]
       ]
     },
@@ -123,7 +123,7 @@ KURS.module.push({
       entwurf: true,
       inhalt: [
         { typ: "text", text: "“Titanium” or “surgical steel” on the label says little. What matters is whether the material meets an implant standard and whether the manufacturer proves this with a certificate." },
-        { typ: "tabelle", kopf: ["Material", "Standard", "Classification in this course"], zeilen: [
+        { typ: "tabelle", kopf: ["Material", "Standard", "How this course rates it"], zeilen: [
           ["Titanium Ti6Al4V ELI (G23)", "ASTM F136, ISO 5832-3", "Standard for initial jewellery"],
           ["Commercially pure titanium (unalloyed)", "ASTM F67, ISO 5832-2", "also implant-grade and nickel-free"],
           ["Implant steel 316LVM", "ASTM F138, ISO 5832-1", "contains nickel; not used as initial jewellery at the Academy"],
@@ -144,7 +144,7 @@ KURS.module.push({
         ["Which standard applies to titanium G23 (Ti6Al4V ELI)?", ["ASTM F136", "ASTM F138", "ASTM F67", "EN 1811"], "Also ISO 5832-3.", "Ergänzung"],
         ["Which standard applies to implant steel 316LVM?", ["ASTM F138", "ASTM F136", "ASTM F67", "ISO 5832-3"], "It contains nickel; not used as initial jewellery at the Academy.", "Ergänzung"],
         ["Why is an internal thread better for initial jewellery?", ["The bar is smooth and does not scrape the channel", "The ball is easier to lose", "It is cheaper to manufacture", "It allows thicker balls"], "An external thread scrapes during insertion.", "Ergänzung"],
-        ["What do you ask the manufacturer for when buying?", ["A material certificate", "A CE marking for fashion jewellery", "A photo of the jewellery on a model", "A return guarantee"], "Only this proves the material.", "Ergänzung"],
+        ["What do you ask the manufacturer for when buying?", ["A material certificate", "A CE marking for fashion jewellery", "A photo of the jewellery on a model", "A return guarantee"], "Only a certificate proves the material.", "Ergänzung"],
         ["Which gold meets the APP minimum standard?", ["Solid, at least 14 carat, nickel- and cadmium-free", "Gold-plated, at least 18 carat plating", "Solid, at least 8 carat", "White gold containing nickel"], "Gold plating can wear off.", "Ergänzung"],
         ["What must the surface of initial jewellery be like?", ["Mirror-polished, without scratches or burrs", "Matt brushed so it does not slip", "Slightly roughened for better grip in the tissue", "With a casting seam, which is normal for titanium"], "Rough spots irritate the piercing channel.", "Ergänzung"]
       ]
@@ -157,14 +157,14 @@ KURS.module.push({
         { typ: "text", text: "Different types of jewellery are used for different areas of the body, both as initial jewellery and as second jewellery." },
         { typ: "tabelle", kopf: ["Jewellery", "Description", "Typical use"], zeilen: [
           ["Curved barbell (banana)", "Slightly curved bar with balls", "Navel, eyebrow, Rook"],
-          ["Barbell", "Threaded metal bar with screw-on balls (named after the dumbbell)", "Tongue, Industrial, nipple"],
+          ["Barbell", "Threaded metal bar with screw-on balls (named after the weightlifting bar)", "Tongue, Industrial, nipple"],
           ["Labret stud", "Bar with a disc on one side and a thread for a ball or decorative top", "Labret, Tragus, Conch, Lobe, Nostril"]
         ] },
         { typ: "grafik", id: "staebe" }
       ],
       fragen: [
         ["What is the slightly curved bar with balls called?", ["Curved barbell (banana)", "Circular barbell", "Labret stud", "Threaded ring"], "Mostly for navel, eyebrow, Rook.", "S. 61"],
-        ["What is a barbell?", ["A straight threaded metal bar with screw-on balls", "A curved bar with balls", "A stud with a disc", "An open ring with a thread"], "Named after the dumbbell.", "S. 61"],
+        ["What is a barbell?", ["A straight threaded metal bar with screw-on balls", "A curved bar with balls", "A stud with a disc", "An open ring with a thread"], "Named after the weightlifting bar.", "S. 61"],
         ["What does a labret stud have at one end?", ["A disc", "A ball with dimples", "A hinge", "A segment"], "A thread at the other end.", "S. 62"],
         ["In which piercings is a labret stud also worn?", ["For example, Tragus and Conch", "Mainly in the Industrial", "Mainly in the navel", "Mainly in the Septum"], "Not only in the Labret.", "S. 62"]
       ]
@@ -186,7 +186,7 @@ KURS.module.push({
         ["How is a segment ring closed?", ["The segment is inserted into the recesses with pliers", "With a hinge and a click", "A ball snaps into the opening", "With threaded balls at both ends"], "It consists of two parts.", "S. 62"],
         ["How does a clicker ring open and close?", ["With a hinge and a “click”, without tools", "With ring opening pliers", "By unscrewing a ball", "By inserting a segment"], "Two permanently joined parts.", "S. 62"],
         ["What is the ring whose ball snaps into the ring opening called?", ["Ball closure ring (BCR)", "Clicker", "Segment ring", "Threaded ring"], "Also called a captive bead ring.", "S. 63"],
-        ["What do you use to open a BCR to insert the ball?", ["Spreading pliers (ring opening pliers)", "The ball grabber", "The holding pliers", "The side cutter"], "Spread it carefully.", "S. 63"],
+        ["What do you use to open a BCR to insert the ball?", ["Ring opening pliers", "The ball grabber", "The holding pliers", "The side cutter"], "Spread it carefully.", "S. 63"],
         ["What is the threaded ring also called?", ["Horseshoe", "Banana", "Clicker", "Captive ring"], "Open ring with a thread at both ends.", "S. 63"]
       ]
     },
@@ -201,7 +201,7 @@ KURS.module.push({
       ],
       fragen: [
         ["How much extra length does initial jewellery need?", ["About 4 mm", "About 1 mm", "About 8 mm", "About 1 cm"], "The fresh piercing channel can swell.", "S. 74"],
-        ["Why must initial jewellery not be too short?", ["Otherwise balls or discs constrict the swollen channel", "Otherwise it falls out more easily", "Because short bars release more nickel", "Otherwise it is harder to clean"], "Basic rule from ch. 10.", "S. 74"],
+        ["Why must initial jewellery not be too short?", ["Because otherwise balls or discs would constrict the swollen channel", "Because otherwise it would fall out more easily", "Because short bars release more nickel", "Because otherwise it would be harder to clean"], "Basic rule from ch. 10.", "S. 74"],
         ["What do you use to measure the area for the jewellery?", ["The caliper", "A ruler on the skin", "The receiving tube", "Your eye and the skin marker"], "See tools in module 7.", "S. 68"]
       ]
     }

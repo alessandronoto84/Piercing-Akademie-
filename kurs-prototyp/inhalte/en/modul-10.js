@@ -8,7 +8,7 @@ KURS.module.push({
   ziel: "You give the right aftercare instructions, know the healing times and recognise wound healing problems before they become a problem.",
   lektionen: [
     {
-      titel: "Guiding aftercare",
+      titel: "Explaining aftercare",
       seite: "S. 48",
       inhalt: [
         { typ: "text", text: "After piercing, correct treatment and care by the client themselves is essential for healing to go as well as possible. That is why you must always tell the client how to treat and care for the freshly pierced piercing." },
@@ -49,14 +49,14 @@ KURS.module.push({
           alt: "Bar chart of healing times in months: tongue, lip frenulum and eyebrow about 1, labret 1 to 2, lobe about 2, genital 2 to 3, cartilage at least 3, navel 4 to 6, nipple 3 to 12 months.",
           text: "Dark: safe minimum time, light: range. Mucous membrane heals fastest; cartilage, navel and nipple take the longest.",
           zeilen: [["Tongue", 1, null, false, "approx. 1"], ["Lip frenulum", 1, null, false, "approx. 1"], ["Eyebrow", 1, null, false, "approx. 1"], ["Labret", 1, 2, false, "1–2"], ["Lobe", 2, null, false, "approx. 2"], ["Genital", 2, 3, false, "2–3"], ["Cartilage", 3, null, true, "at least 3"], ["Navel", 4, 6, false, "4–6"], ["Nipple", 3, 12, false, "3–12"]] },
-        { typ: "ergaenzung", text: "Other sources sometimes give considerably longer times, for example cartilage 3 to 12 months, navel 6 to 12 months, eyebrow 6 to 8 weeks. It is better to brief your clients cautiously: better to wait too long than to change too early." },
+        { typ: "ergaenzung", text: "Other sources sometimes give considerably longer times, for example cartilage 3 to 12 months, navel 6 to 12 months, eyebrow 6 to 8 weeks. When advising clients, err on the side of caution: better to wait too long than to change too early." },
         { typ: "achtung", text: "The jewellery may only be changed once the piercing has fully healed; otherwise there is a risk of complications such as an infection." }
       ],
       fragen: [
         ["Are the healing times fixed guarantees?", ["No, they are guide values for optimal healing", "Yes, for healthy adults", "Yes, if the aftercare is followed", "Only with PTFE jewellery"], "Everyone heals differently.", "S. 49"],
-        ["When may the jewellery be changed?", ["Only once it has fully healed", "After 2 weeks, when aftercare ends", "When the swelling has gone", "After 4 weeks for all piercings"], "Otherwise there is a risk of infection.", "S. 49"],
+        ["When can the jewellery be changed?", ["Only once it has fully healed", "After 2 weeks, when aftercare ends", "When the swelling has gone", "After 4 weeks for all piercings"], "Otherwise there is a risk of infection.", "S. 49"],
         ["Which piercing has the widest range of healing time?", ["Nipple, 3 to 12 months", "Navel, 4 to 6 months", "Genital, 2 to 3 months", "Labret, 1 to 2 months"], "See chart.", "S. 49"],
-        ["Case: A client wants to swap her 4-week-old helix piercing for a ring. What do you advise?", ["Wait: cartilage needs at least 3 months", "Changing is fine if it’s no longer red", "Change it, but only to titanium", "Change it after 6 weeks"], "Only change once it has fully healed.", "S. 49"]
+        ["Case: A client wants to swap the jewellery in her 4-week-old helix piercing for a ring. What do you advise?", ["Wait: cartilage needs at least 3 months", "Changing is fine if it’s no longer red", "Change it, but only to titanium", "Change it after 6 weeks"], "Only change once it has fully healed.", "S. 49"]
       ]
     },
     {
@@ -113,7 +113,7 @@ KURS.module.push({
           "The most common pathogen is the bacterium Pseudomonas aeruginosa. It lives in moist environments, for example in water pipes, sinks and showers.",
           "Cases occur more often in the warmer months.",
           "In England in 2023, a cluster of cases after ear piercings was traced to contaminated water (sinks, instantaneous water heater) in a studio; in 2016, a contaminated aftercare spray triggered over 100 suspected cases nationwide.",
-          "Prevention: work sterile, recommend sterile saline solution instead of tap water for aftercare, no octenidine on cartilage, avoid pressure and friction on the fresh piercing (for example, don’t sleep on it)."
+          "Prevention: work under sterile conditions, recommend sterile saline solution instead of tap water for aftercare, no octenidine on cartilage, avoid pressure and friction on the fresh piercing (for example, don’t sleep on it)."
         ] },
         { typ: "ergaenzung", text: "Based on: medical literature on cartilage inflammation after ear piercings." }
       ],

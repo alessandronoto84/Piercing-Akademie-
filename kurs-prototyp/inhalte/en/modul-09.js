@@ -63,8 +63,8 @@ KURS.module.push({
         { typ: "grafik", id: "stich" }
       ],
       fragen: [
-        ["Where do you ideally pierce into?", ["The visible side – with a labret, where the ball sits", "Always from the inside out", "Always from back to front", "Where the disc sits"], "Step 12.", "S. 112"],
-        ["What applies to the speed of the piercing?", ["The faster you pierce, the less pain", "Pierce slowly so the tissue gives way", "Speed makes no difference", "Fast only for cartilage, otherwise slowly"], "Step 12.", "S. 112"],
+        ["Which side do you ideally pierce into?", ["The visible side – with a labret, where the ball sits", "Always from the inside out", "Always from back to front", "Where the disc sits"], "Step 12.", "S. 112"],
+        ["What is true of the speed of the piercing?", ["The faster you pierce, the less pain", "Pierce slowly so the tissue gives way", "Speed makes no difference", "Fast only for cartilage, otherwise slowly"], "Step 12.", "S. 112"],
         ["Why do you trim the plastic sheath?", ["So the jewellery goes in more easily", "So it doesn’t stay in the channel", "So the needle comes out more easily", "So less blood escapes"], "Step 14.", "S. 112"],
         ["What do you have the client do while you push the jewellery through?", ["Breathe out", "Breathe in and hold their breath", "Count out loud", "Close their eyes and swallow"], "Step 16.", "S. 112"]
       ]
@@ -88,7 +88,7 @@ KURS.module.push({
       ]
     },
     {
-      titel: "Aftercare and finishing",
+      titel: "Aftercare and wrapping up",
       seite: "S. 113",
       inhalt: [
         { typ: "schritte", start: 22, punkte: [
@@ -123,7 +123,7 @@ KURS.module.push({
       fragen: [
         ["What helps when circulation drops?", ["Lie down, legs up, let them rest; then glucose and something to drink", "Sit upright and give coffee", "Keep piercing so it’s over quickly", "Cold water on the face and let them stand up"], "See p. 113.", "S. 113"],
         ["How do you spot a drop in circulation in time?", ["I always ask during the procedure", "I measure blood pressure beforehand", "I only watch for sweating", "I don’t – the client will say something"], "“Always ask!”", "S. 113"],
-        ["Which emergency numbers should be posted?", ["Emergency doctor, family doctor, fire brigade", "Police and local public health office (Gesundheitsamt)", "Only 110", "Local public health office and trade office (Gewerbeamt)"], "Ch. 5.4.", "S. 26"],
+        ["Which emergency numbers should be posted?", ["Emergency doctor, family doctor, fire brigade", "Police and local public health office", "Only the police (110)", "Local public health office and trade office"], "Ch. 5.4.", "S. 26"],
         ["Which number do you call in case of unconsciousness?", ["112", "110", "116 117", "The family doctor’s number"], "112 reaches the ambulance service and fire brigade throughout Europe. 110 is the police, 116 117 the out-of-hours medical service (in Germany).", "Ergänzung"],
         ["Case: While you are piercing, the client turns pale and feels dizzy. What do you do?", ["Stop, lay her down, legs up, later glucose and a drink", "Quickly finish the piercing", "Let her stand up and walk around", "Spray ice spray on the area"], "Drop in circulation, see p. 113.", "S. 113"]
       ]

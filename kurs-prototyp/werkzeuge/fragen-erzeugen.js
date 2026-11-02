@@ -37,11 +37,11 @@ const T = {
     abheilErkl: "Richtwerte bei komplikationsfreier Heilung; jeder Mensch heilt anders."
   },
   en: {
-    schmuck: n => `Which jewellery does the data sheet list as suitable initial jewellery for the ${n}?`,
-    kanuele: n => `According to the data sheet, what is the ${n} pierced with?`,
-    instrument: n => `Which instrument does the data sheet list for the ${n}?`,
+    schmuck: n => `Which jewellery does the “${n}” data sheet list as suitable initial jewellery?`,
+    kanuele: n => `What does the “${n}” data sheet say you pierce with?`,
+    instrument: n => `Which instrument does the “${n}” data sheet list?`,
     nicht: n => `What does the course book say about the “${n}” piercing?`, nichtAntw: ["Do not perform", "Pierce with 16G and a BCR", "Only pierce under anaesthesia", "Only by experienced piercers"],
-    info: (n, e, k, kl) => `Data sheet ${n}: initial jewellery ${e}; cannula ${k}; ${kl}.`,
+    info: (n, e, k, kl) => `${n} data sheet: initial jewellery ${e}; cannula ${k}; ${kl}.`,
     schmuckText: { Labret: "Labret", Barbell: "Barbell", Banane: "Curved barbell (banana)", BCR: "BCR (ball closure ring)", Hufeisen: "Horseshoe (circular barbell)", Bar: "Surface bar", "Dermal Anchor": "Dermal anchor" },
     kanueleText: k => k === "Punch" ? "Biopsy punch" : k + " cannula",
     instrumentText: { Traguszange: "Tragus forceps", Nadelauffangrohr: "Receiving tube", "Septum-Zange": "Septum forceps", Zungenklemme: "Tongue forceps", Snaptile: "Snaptile", Gazeklemme: "Gauze clamp" },
@@ -50,24 +50,24 @@ const T = {
     werkzeug: { "Schere": "What do you need the scissors for when piercing?", "Kugelgreifer": "What is the ball grabber for?", "Messschieber": "What is the caliper for?", "Ringöffnungs- und Ringschließzange": "What are the ring opening and ring closing pliers for?", "Taschenlampe (grünes Licht)": "What is the torch with green light for?", "Mini-Seitenschneider": "What is the mini side cutter for?" },
     werkzeugErkl: w => `Tool table: ${w}.`,
     ablauf: (nr, t) => `Procedure, step ${nr}: “${t}”. What comes next?`, ablaufErkl: (nr, t) => `Step ${nr}: ${t}.`,
-    abheil: p => `What healing time does the course book give for ${{ Knorpelpiercings: "cartilage piercings", Lobe: "a lobe", Bauchnabel: "a navel piercing", Labret: "a labret", Lippenbändchen: "a lip frenulum piercing", Zunge: "a tongue piercing", Brustwarze: "a nipple piercing", Augenbraue: "an eyebrow piercing", Intim: "intimate piercings" }[p] || p}?`,
+    abheil: p => `What healing time does the course book give for ${{ Knorpelpiercings: "cartilage piercings", Lobe: "a lobe piercing", Bauchnabel: "a navel piercing", Labret: "a labret", Lippenbändchen: "a lip frenulum piercing", Zunge: "a tongue piercing", Brustwarze: "a nipple piercing", Augenbraue: "an eyebrow piercing", Intim: "intimate piercings" }[p] || p}?`,
     abheilErkl: "Guide values for complication-free healing; everyone heals differently."
   },
   es: {
-    schmuck: n => `¿Qué joya indica la ficha técnica como joya inicial adecuada para el piercing «${n}»?`,
-    kanuele: n => `Según la ficha técnica, ¿con qué se perfora el piercing «${n}»?`,
-    instrument: n => `¿Qué instrumento indica la ficha técnica para el piercing «${n}»?`,
-    nicht: n => `¿Qué dice el libro del curso sobre el piercing «${n}»?`, nichtAntw: ["No realizar", "Perforar con 16G y un BCR", "Solo perforar con anestesia", "Solo lo hacen perforadores con experiencia"],
+    schmuck: n => `¿Qué joya indica la ficha técnica «${n}» como joya inicial adecuada?`,
+    kanuele: n => `Según la ficha técnica «${n}», ¿con qué se perfora?`,
+    instrument: n => `¿Qué instrumento indica la ficha técnica «${n}»?`,
+    nicht: n => `¿Qué dice el libro del curso sobre el piercing «${n}»?`, nichtAntw: ["No realizar", "Perforar con 16G y un BCR", "Solo perforar con anestesia", "Solo por piercers con experiencia"],
     info: (n, e, k, kl) => `Ficha técnica ${n}: joya inicial ${e}; cánula ${k}; ${kl}.`,
     schmuckText: { Labret: "Labret", Barbell: "Barbell", Banane: "Barbell curvo (banana)", BCR: "BCR (aro de bola cautiva)", Hufeisen: "Herradura (circular barbell)", Bar: "Barra de superficie", "Dermal Anchor": "Dermal anchor" },
     kanueleText: k => k === "Punch" ? "Punch de biopsia" : "Cánula " + k,
     instrumentText: { Traguszange: "Pinza para tragus", Nadelauffangrohr: "Tubo receptor", "Septum-Zange": "Pinza para septum", Zungenklemme: "Pinza para lengua", Snaptile: "Snaptile", Gazeklemme: "Pinza de gasa" },
-    farbe: f => `Una cánula tiene el cono de color ${{ Grün: "verde", Grau: "gris", Orange: "naranja" }[f]}. ¿Qué calibre tiene?`,
+    farbe: f => `Una cánula tiene el conector de color ${{ Grün: "verde", Grau: "gris", Orange: "naranja" }[f]}. ¿Qué calibre tiene?`,
     mm: s => s, farbeErkl: "Verde 18G (1,3 mm), gris 16G (1,7 mm), naranja 14G (2,2 mm). Datos del fabricante; redondeados en el libro.",
     werkzeug: { "Schere": "¿Para qué necesitas las tijeras al perforar?", "Kugelgreifer": "¿Para qué sirve la pinza para bolas?", "Messschieber": "¿Para qué sirve el calibre?", "Ringöffnungs- und Ringschließzange": "¿Para qué sirven las pinzas para abrir y cerrar aros?", "Taschenlampe (grünes Licht)": "¿Para qué sirve la linterna de luz verde?", "Mini-Seitenschneider": "¿Para qué sirve el alicate de corte mini?" },
     werkzeugErkl: w => `Tabla de herramientas: ${w}.`,
     ablauf: (nr, t) => `Procedimiento, paso ${nr}: «${t}». ¿Qué viene después?`, ablaufErkl: (nr, t) => `Paso ${nr}: ${t}.`,
-    abheil: p => `¿Qué tiempo de cicatrización indica el libro del curso para ${{ Knorpelpiercings: "los piercings de cartílago", Lobe: "un lóbulo", Bauchnabel: "un piercing de ombligo", Labret: "un labret", Lippenbändchen: "un piercing de frenillo labial", Zunge: "un piercing de lengua", Brustwarze: "un piercing de pezón", Augenbraue: "un piercing de ceja", Intim: "los piercings íntimos" }[p] || p}?`,
+    abheil: p => `¿Qué tiempo de cicatrización indica el libro del curso para ${{ Knorpelpiercings: "los piercings de cartílago", Lobe: "un piercing de lóbulo", Bauchnabel: "un piercing de ombligo", Labret: "un labret", Lippenbändchen: "un piercing de frenillo labial", Zunge: "un piercing de lengua", Brustwarze: "un piercing de pezón", Augenbraue: "un piercing de ceja", Intim: "los piercings íntimos" }[p] || p}?`,
     abheilErkl: "Valores orientativos para una cicatrización sin complicaciones; cada persona cicatriza de forma distinta."
   }
 };

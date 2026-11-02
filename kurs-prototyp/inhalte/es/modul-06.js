@@ -45,7 +45,7 @@ KURS.module.push({
       ],
       fragen: [
         ["¿Con qué proceso se recubre el titanio Blackline?", ["PVD (Physical Vapor Deposition)", "Galvanizado", "Anodizado", "Pintura en polvo"], "Finísimo y resistente a la abrasión.", "S. 54"],
-        ["¿Qué propiedades tienen los piercings Blackline?", ["Casi permanentemente antiarañazos, de color estable y compatibles", "Se vuelven negros por anodizado", "Contienen níquel negro", "Se recomiendan especialmente como joya inicial"], "La capa PVD es muy fina y dura. Aun así, para la joya inicial la Academia se mantiene en titanio G23 o PTFE.", "S. 54"],
+        ["¿Qué propiedades tienen los piercings Blackline?", ["Resistentes a los arañazos de forma casi permanente, de color estable y bien tolerados", "Se vuelven negros por anodizado", "Contienen níquel negro", "Se recomiendan especialmente como joya inicial"], "La capa PVD es muy fina y dura. Aun así, para la joya inicial la Academia se mantiene en titanio G23 o PTFE.", "S. 54"],
         ["¿Qué es el titanio oro circonio?", ["Titanio con recubrimiento dorado, alternativa a las joyas de oro", "Oro macizo de 14 quilates", "Acero quirúrgico bañado en oro", "Una aleación de oro y titanio"], "Más liso, más ligero, más económico.", "S. 54"]
       ]
     },
@@ -71,7 +71,7 @@ KURS.module.push({
         { typ: "merke", text: "Como piercer, nunca pones en juego la salud de tu cliente." },
         { typ: "text", text: "Algunos proveedores venden joyería corporal de acero inoxidable 303, un acero con alto contenido de azufre y fácil de mecanizar. El acero 303 provoca reacciones adversas considerables en personas sensibles al níquel (14 por ciento en estudios) y debe evitarse en cualquier circunstancia." },
         { typ: "achtung", text: "Como muchas personas tienen alergia al níquel, a menudo sin saberlo, como joya inicial usamos siempre titanio G23 o PTFE." },
-        { typ: "text", text: "El implantanium, el niobio o el oro de alta pureza también serían posibles, pero no tienen sentido por razones económicas." },
+        { typ: "text", text: "El implantanium, el niobio o el oro de alta pureza también serían posibles, pero no resultan rentables." },
         { typ: "ergaenzung", text: "Según la legislación de la UE (REACH, anexo XVII, entrada 27), las piezas metálicas que se insertan en partes perforadas del cuerpo pueden liberar como máximo 0,2 µg de níquel por cm² y semana (ensayo según EN 1811). La regla de la Academia va más allá." }
       ],
       fragen: [
@@ -89,14 +89,14 @@ KURS.module.push({
         { typ: "text", text: "Cuando la piel de una persona alérgica entra en contacto con níquel, se enrojece, se hincha, se vuelve áspera y seca y pica. A veces estos llamados eccemas de contacto descaman o supuran, o se hinchan de forma dolorosa. La erupción puede limitarse a zonas pequeñas o extenderse por amplias áreas de piel, incluso por todo el cuerpo." },
         { typ: "text", text: "Los eccemas pueden aparecer en cualquier parte del cuerpo que haya estado en contacto con níquel, por ejemplo en manos, cara, brazos, piernas, en la mucosa bucal o en los genitales." },
         { typ: "foto", id: "frei-metalle", text: "Metales que pueden provocar alergias de contacto, marcados en la tabla periódica, entre ellos níquel (Ni), cobalto (Co) y cromo (Cr)." },
-        { typ: "merke", text: "Los síntomas aparecen unas 48 a 72 horas después del contacto. Los médicos hablan de una alergia de tipo retardado. Por eso es difícil de reconocer." }
+        { typ: "merke", text: "Los síntomas no aparecen hasta unas 48 a 72 horas después del contacto. Los médicos hablan de una alergia de tipo retardado. Por eso es difícil de reconocer." }
       ],
       fragen: [
         ["¿Cómo se reconoce una alergia al níquel en la piel?", ["Enrojecimiento, hinchazón, piel áspera, seca y con picor", "Coloración azulada alrededor del canal", "Hipergranulación en el canal de la perforación", "Hinchazón inmediata en pocos minutos"], "A veces eccemas de contacto que supuran.", "S. 57"],
-        ["¿Cuándo aparecen los síntomas de una alergia al níquel?", ["Unas 48 a 72 horas después del contacto", "En pocos minutos", "Tras 2 a 6 horas", "Solo tras 2 a 3 semanas"], "Alergia de tipo retardado.", "S. 57"],
+        ["¿Cuándo aparecen los síntomas de una alergia al níquel?", ["Entre 48 y 72 horas después del contacto", "En pocos minutos", "Entre 2 y 6 horas después", "No antes de 2 o 3 semanas"], "Alergia de tipo retardado.", "S. 57"],
         ["¿Cómo se llama una alergia que aparece días después del contacto?", ["Alergia de tipo retardado", "Alergia de tipo inmediato", "Alergia cruzada", "Pseudoalergia"], "Típica del níquel.", "S. 57"],
-        ["¿Puede la erupción extenderse por todo el cuerpo?", ["Sí, en algunas personas afectadas", "No, siempre se queda en la joya", "Solo en piercings de cartílago", "Solo en niños"], "Con una sensibilización fuerte, la alergia también puede brotar en otras partes del cuerpo (reacción a distancia).", "S. 57"],
-        ["Caso: tres días después de cambiar a una joya de acero, la zona pica y supura. ¿Qué sospechas?", ["Una alergia al níquel (tipo retardado)", "Hipergranulación", "Una fase inflamatoria normal", "Una pericondritis"], "Síntomas tras 48 a 72 horas.", "S. 57"]
+        ["¿Puede la erupción extenderse por todo el cuerpo?", ["Sí, en algunas personas afectadas", "No, siempre se limita a la zona de la joya", "Solo en piercings de cartílago", "Solo en niños"], "Con una sensibilización fuerte, la alergia también puede brotar en otras partes del cuerpo (reacción a distancia).", "S. 57"],
+        ["Caso: tres días después de cambiar a una joya de acero, la zona pica y supura. ¿Qué sospechas?", ["Una alergia al níquel (tipo retardado)", "Hipergranulación", "Una fase inflamatoria normal", "Una pericondritis"], "Síntomas entre 48 y 72 horas después.", "S. 57"]
       ]
     },
     {
@@ -157,14 +157,14 @@ KURS.module.push({
         { typ: "text", text: "Para las distintas zonas del cuerpo se usan distintos tipos de joyas, tanto como joya inicial como segunda joya." },
         { typ: "tabelle", kopf: ["Joya", "Descripción", "Uso típico"], zeilen: [
           ["Barbell curvo (banana)", "Barra ligeramente curvada con bolas", "Ombligo, ceja, Rook"],
-          ["Barbell", "Barra metálica con rosca y bolas enroscables (en inglés, «pesa»)", "Lengua, Industrial, pezón"],
+          ["Barbell", "Barra metálica con rosca y bolas enroscables (del inglés «barbell», barra de pesas)", "Lengua, Industrial, pezón"],
           ["Labret stud", "Barra con un disco en un lado y rosca para una bola o un adorno", "Labret, Tragus, Conch, Lobe, Nostril"]
         ] },
         { typ: "grafik", id: "staebe" }
       ],
       fragen: [
         ["¿Cómo se llama la barra ligeramente curvada con bolas?", ["Barbell curvo (banana)", "Circular barbell", "Labret stud", "Threaded ring"], "Sobre todo para ombligo, ceja, Rook.", "S. 61"],
-        ["¿Qué es un barbell?", ["Una barra metálica recta con rosca y bolas enroscables", "Una barra curvada con bolas", "Un labret con disco", "Un aro abierto con rosca"], "En inglés, «pesa».", "S. 61"],
+        ["¿Qué es un barbell?", ["Una barra metálica recta con rosca y bolas enroscables", "Una barra curvada con bolas", "Un labret con disco", "Un aro abierto con rosca"], "Del inglés «barbell», barra de pesas.", "S. 61"],
         ["¿Qué tiene un labret stud en un extremo?", ["Un disco", "Una bola con hendiduras", "Una bisagra", "Un segmento"], "En el otro extremo, una rosca.", "S. 62"],
         ["¿En qué piercings se lleva también un labret?", ["Por ejemplo, Tragus y Conch", "Sobre todo en el Industrial", "Sobre todo en el ombligo", "Sobre todo en el Septum"], "No solo en el Labret.", "S. 62"]
       ]

@@ -4,7 +4,7 @@ window.KURS = window.KURS || { module: [] };
 KURS.lektionsfragen = {
  "8-1": [
   [
-   "¿Qué joya indica la ficha técnica como joya inicial adecuada para el piercing «Lobe»?",
+   "¿Qué joya indica la ficha técnica «Lobe» como joya inicial adecuada?",
    [
     "Labret",
     "Herradura (circular barbell)",
@@ -15,7 +15,7 @@ KURS.lektionsfragen = {
    "S. 74"
   ],
   [
-   "Según la ficha técnica, ¿con qué se perfora el piercing «Lobe»?",
+   "Según la ficha técnica «Lobe», ¿con qué se perfora?",
    [
     "Cánula 18G",
     "Cánula 20G",
@@ -26,7 +26,7 @@ KURS.lektionsfragen = {
    "S. 74"
   ],
   [
-   "¿Qué joya indica la ficha técnica como joya inicial adecuada para el piercing «Upper Lobe»?",
+   "¿Qué joya indica la ficha técnica «Upper Lobe» como joya inicial adecuada?",
    [
     "Labret",
     "Barbell",
@@ -37,7 +37,7 @@ KURS.lektionsfragen = {
    "S. 75"
   ],
   [
-   "Según la ficha técnica, ¿con qué se perfora el piercing «Upper Lobe»?",
+   "Según la ficha técnica «Upper Lobe», ¿con qué se perfora?",
    [
     "Cánula 18G",
     "Cánula 20G",
@@ -50,7 +50,7 @@ KURS.lektionsfragen = {
  ],
  "8-2": [
   [
-   "¿Qué joya indica la ficha técnica como joya inicial adecuada para el piercing «Tragus»?",
+   "¿Qué joya indica la ficha técnica «Tragus» como joya inicial adecuada?",
    [
     "Barbell",
     "Dermal anchor",
@@ -61,7 +61,7 @@ KURS.lektionsfragen = {
    "S. 76"
   ],
   [
-   "Según la ficha técnica, ¿con qué se perfora el piercing «Tragus»?",
+   "Según la ficha técnica «Tragus», ¿con qué se perfora?",
    [
     "Cánula 16G",
     "Cánula 20G",
@@ -72,7 +72,7 @@ KURS.lektionsfragen = {
    "S. 76"
   ],
   [
-   "¿Qué instrumento indica la ficha técnica para el piercing «Tragus»?",
+   "¿Qué instrumento indica la ficha técnica «Tragus»?",
    [
     "Pinza para tragus",
     "Snaptile",
@@ -83,7 +83,7 @@ KURS.lektionsfragen = {
    "S. 76"
   ],
   [
-   "¿Qué joya indica la ficha técnica como joya inicial adecuada para el piercing «Anti-Tragus»?",
+   "¿Qué joya indica la ficha técnica «Anti-Tragus» como joya inicial adecuada?",
    [
     "BCR (aro de bola cautiva)",
     "Dermal anchor",
@@ -94,7 +94,7 @@ KURS.lektionsfragen = {
    "S. 77"
   ],
   [
-   "Según la ficha técnica, ¿con qué se perfora el piercing «Anti-Tragus»?",
+   "Según la ficha técnica «Anti-Tragus», ¿con qué se perfora?",
    [
     "Cánula 18G",
     "Cánula 20G",
@@ -105,7 +105,7 @@ KURS.lektionsfragen = {
    "S. 77"
   ],
   [
-   "¿Qué instrumento indica la ficha técnica para el piercing «Anti-Tragus»?",
+   "¿Qué instrumento indica la ficha técnica «Anti-Tragus»?",
    [
     "Tubo receptor",
     "Pinza de gasa",
@@ -118,7 +118,7 @@ KURS.lektionsfragen = {
  ],
  "8-3": [
   [
-   "¿Qué joya indica la ficha técnica como joya inicial adecuada para el piercing «Helix»?",
+   "¿Qué joya indica la ficha técnica «Helix» como joya inicial adecuada?",
    [
     "BCR (aro de bola cautiva)",
     "Barbell curvo (banana)",
@@ -129,7 +129,7 @@ KURS.lektionsfragen = {
    "S. 78"
   ],
   [
-   "Según la ficha técnica, ¿con qué se perfora el piercing «Helix»?",
+   "Según la ficha técnica «Helix», ¿con qué se perfora?",
    [
     "Cánula 18G",
     "Cánula 20G",
@@ -140,7 +140,7 @@ KURS.lektionsfragen = {
    "S. 78"
   ],
   [
-   "¿Qué joya indica la ficha técnica como joya inicial adecuada para el piercing «Industrial»?",
+   "¿Qué joya indica la ficha técnica «Industrial» como joya inicial adecuada?",
    [
     "Barbell",
     "Dermal anchor",
@@ -151,7 +151,7 @@ KURS.lektionsfragen = {
    "S. 84"
   ],
   [
-   "Según la ficha técnica, ¿con qué se perfora el piercing «Industrial»?",
+   "Según la ficha técnica «Industrial», ¿con qué se perfora?",
    [
     "Cánula 16G",
     "Cánula 18G",
@@ -162,7 +162,7 @@ KURS.lektionsfragen = {
    "S. 84"
   ],
   [
-   "¿Qué instrumento indica la ficha técnica para el piercing «Industrial»?",
+   "¿Qué instrumento indica la ficha técnica «Industrial»?",
    [
     "Tubo receptor",
     "Pinza para tragus",
@@ -173,7 +173,7 @@ KURS.lektionsfragen = {
    "S. 84"
   ],
   [
-   "¿Qué joya indica la ficha técnica como joya inicial adecuada para el piercing «Piercing antialergia»?",
+   "¿Qué joya indica la ficha técnica «Piercing antialergia» como joya inicial adecuada?",
    [
     "BCR (aro de bola cautiva)",
     "Labret",
@@ -184,7 +184,7 @@ KURS.lektionsfragen = {
    "S. 83"
   ],
   [
-   "Según la ficha técnica, ¿con qué se perfora el piercing «Piercing antialergia»?",
+   "Según la ficha técnica «Piercing antialergia», ¿con qué se perfora?",
    [
     "Cánula 18G",
     "Cánula 12G",
@@ -195,7 +195,7 @@ KURS.lektionsfragen = {
    "S. 83"
   ],
   [
-   "¿Qué instrumento indica la ficha técnica para el piercing «Piercing antialergia»?",
+   "¿Qué instrumento indica la ficha técnica «Piercing antialergia»?",
    [
     "Tubo receptor",
     "Pinza para septum",
@@ -208,7 +208,7 @@ KURS.lektionsfragen = {
  ],
  "8-4": [
   [
-   "¿Qué joya indica la ficha técnica como joya inicial adecuada para el piercing «Conch»?",
+   "¿Qué joya indica la ficha técnica «Conch» como joya inicial adecuada?",
    [
     "Barbell",
     "Barra de superficie",
@@ -219,7 +219,7 @@ KURS.lektionsfragen = {
    "S. 79"
   ],
   [
-   "Según la ficha técnica, ¿con qué se perfora el piercing «Conch»?",
+   "Según la ficha técnica «Conch», ¿con qué se perfora?",
    [
     "Cánula 18G",
     "Cánula 12G",
@@ -230,7 +230,7 @@ KURS.lektionsfragen = {
    "S. 79"
   ],
   [
-   "¿Qué joya indica la ficha técnica como joya inicial adecuada para el piercing «Snug»?",
+   "¿Qué joya indica la ficha técnica «Snug» como joya inicial adecuada?",
    [
     "Barbell",
     "Dermal anchor",
@@ -241,7 +241,7 @@ KURS.lektionsfragen = {
    "S. 82"
   ],
   [
-   "Según la ficha técnica, ¿con qué se perfora el piercing «Snug»?",
+   "Según la ficha técnica «Snug», ¿con qué se perfora?",
    [
     "Cánula 18G",
     "Cánula 20G",
@@ -252,7 +252,7 @@ KURS.lektionsfragen = {
    "S. 82"
   ],
   [
-   "¿Qué instrumento indica la ficha técnica para el piercing «Snug»?",
+   "¿Qué instrumento indica la ficha técnica «Snug»?",
    [
     "Tubo receptor",
     "Pinza de gasa",
@@ -265,7 +265,7 @@ KURS.lektionsfragen = {
  ],
  "8-5": [
   [
-   "¿Qué joya indica la ficha técnica como joya inicial adecuada para el piercing «Rook»?",
+   "¿Qué joya indica la ficha técnica «Rook» como joya inicial adecuada?",
    [
     "Herradura (circular barbell)",
     "Dermal anchor",
@@ -276,7 +276,7 @@ KURS.lektionsfragen = {
    "S. 80"
   ],
   [
-   "Según la ficha técnica, ¿con qué se perfora el piercing «Rook»?",
+   "Según la ficha técnica «Rook», ¿con qué se perfora?",
    [
     "Cánula 18G",
     "Cánula 16G",
@@ -287,7 +287,7 @@ KURS.lektionsfragen = {
    "S. 80"
   ],
   [
-   "¿Qué instrumento indica la ficha técnica para el piercing «Rook»?",
+   "¿Qué instrumento indica la ficha técnica «Rook»?",
    [
     "Tubo receptor",
     "Pinza para lengua",
@@ -298,7 +298,7 @@ KURS.lektionsfragen = {
    "S. 80"
   ],
   [
-   "¿Qué joya indica la ficha técnica como joya inicial adecuada para el piercing «Daith»?",
+   "¿Qué joya indica la ficha técnica «Daith» como joya inicial adecuada?",
    [
     "BCR (aro de bola cautiva)",
     "Herradura (circular barbell)",
@@ -309,7 +309,7 @@ KURS.lektionsfragen = {
    "S. 81"
   ],
   [
-   "Según la ficha técnica, ¿con qué se perfora el piercing «Daith»?",
+   "Según la ficha técnica «Daith», ¿con qué se perfora?",
    [
     "Cánula 18G",
     "Cánula 16G",
@@ -320,7 +320,7 @@ KURS.lektionsfragen = {
    "S. 81"
   ],
   [
-   "¿Qué instrumento indica la ficha técnica para el piercing «Daith»?",
+   "¿Qué instrumento indica la ficha técnica «Daith»?",
    [
     "Tubo receptor",
     "Snaptile",
@@ -333,7 +333,7 @@ KURS.lektionsfragen = {
  ],
  "8-6": [
   [
-   "¿Qué joya indica la ficha técnica como joya inicial adecuada para el piercing «Nariz (Nostril)»?",
+   "¿Qué joya indica la ficha técnica «Nariz (Nostril)» como joya inicial adecuada?",
    [
     "Labret",
     "Dermal anchor",
@@ -344,7 +344,7 @@ KURS.lektionsfragen = {
    "S. 85"
   ],
   [
-   "Según la ficha técnica, ¿con qué se perfora el piercing «Nariz (Nostril)»?",
+   "Según la ficha técnica «Nariz (Nostril)», ¿con qué se perfora?",
    [
     "Cánula 18G",
     "Cánula 14G",
@@ -355,7 +355,7 @@ KURS.lektionsfragen = {
    "S. 85"
   ],
   [
-   "¿Qué joya indica la ficha técnica como joya inicial adecuada para el piercing «Septum»?",
+   "¿Qué joya indica la ficha técnica «Septum» como joya inicial adecuada?",
    [
     "Herradura (circular barbell)",
     "Barbell curvo (banana)",
@@ -366,7 +366,7 @@ KURS.lektionsfragen = {
    "S. 88"
   ],
   [
-   "Según la ficha técnica, ¿con qué se perfora el piercing «Septum»?",
+   "Según la ficha técnica «Septum», ¿con qué se perfora?",
    [
     "Cánula 16G",
     "Cánula 12G",
@@ -377,7 +377,7 @@ KURS.lektionsfragen = {
    "S. 88"
   ],
   [
-   "¿Qué instrumento indica la ficha técnica para el piercing «Septum»?",
+   "¿Qué instrumento indica la ficha técnica «Septum»?",
    [
     "Pinza para septum",
     "Pinza para tragus",
@@ -390,7 +390,7 @@ KURS.lektionsfragen = {
  ],
  "8-7": [
   [
-   "¿Qué joya indica la ficha técnica como joya inicial adecuada para el piercing «Ceja»?",
+   "¿Qué joya indica la ficha técnica «Ceja» como joya inicial adecuada?",
    [
     "Herradura (circular barbell)",
     "Barra de superficie",
@@ -401,7 +401,7 @@ KURS.lektionsfragen = {
    "S. 89"
   ],
   [
-   "Según la ficha técnica, ¿con qué se perfora el piercing «Ceja»?",
+   "Según la ficha técnica «Ceja», ¿con qué se perfora?",
    [
     "Cánula 18G",
     "Cánula 20G",
@@ -412,7 +412,7 @@ KURS.lektionsfragen = {
    "S. 89"
   ],
   [
-   "¿Qué joya indica la ficha técnica como joya inicial adecuada para el piercing «Bridge»?",
+   "¿Qué joya indica la ficha técnica «Bridge» como joya inicial adecuada?",
    [
     "Barbell curvo (banana)",
     "BCR (aro de bola cautiva)",
@@ -423,7 +423,7 @@ KURS.lektionsfragen = {
    "S. 91"
   ],
   [
-   "Según la ficha técnica, ¿con qué se perfora el piercing «Bridge»?",
+   "Según la ficha técnica «Bridge», ¿con qué se perfora?",
    [
     "Cánula 18G",
     "Cánula 14G",
@@ -436,7 +436,7 @@ KURS.lektionsfragen = {
  ],
  "8-8": [
   [
-   "¿Qué joya indica la ficha técnica como joya inicial adecuada para el piercing «Labret»?",
+   "¿Qué joya indica la ficha técnica «Labret» como joya inicial adecuada?",
    [
     "Labret",
     "Dermal anchor",
@@ -447,7 +447,7 @@ KURS.lektionsfragen = {
    "S. 86"
   ],
   [
-   "Según la ficha técnica, ¿con qué se perfora el piercing «Labret»?",
+   "Según la ficha técnica «Labret», ¿con qué se perfora?",
    [
     "Cánula 18G",
     "Punch de biopsia",
@@ -458,7 +458,7 @@ KURS.lektionsfragen = {
    "S. 86"
   ],
   [
-   "¿Qué joya indica la ficha técnica como joya inicial adecuada para el piercing «Eskimo»?",
+   "¿Qué joya indica la ficha técnica «Eskimo» como joya inicial adecuada?",
    [
     "Barbell",
     "BCR (aro de bola cautiva)",
@@ -469,7 +469,7 @@ KURS.lektionsfragen = {
    "S. 93"
   ],
   [
-   "Según la ficha técnica, ¿con qué se perfora el piercing «Eskimo»?",
+   "Según la ficha técnica «Eskimo», ¿con qué se perfora?",
    [
     "Cánula 18G",
     "Cánula 14G",
@@ -482,7 +482,7 @@ KURS.lektionsfragen = {
  ],
  "8-9": [
   [
-   "¿Qué joya indica la ficha técnica como joya inicial adecuada para el piercing «Frenillo labial (Smiley)»?",
+   "¿Qué joya indica la ficha técnica «Frenillo labial (Smiley)» como joya inicial adecuada?",
    [
     "BCR (aro de bola cautiva)",
     "Labret",
@@ -493,7 +493,7 @@ KURS.lektionsfragen = {
    "S. 87"
   ],
   [
-   "Según la ficha técnica, ¿con qué se perfora el piercing «Frenillo labial (Smiley)»?",
+   "Según la ficha técnica «Frenillo labial (Smiley)», ¿con qué se perfora?",
    [
     "Cánula 18G",
     "Cánula 20G",
@@ -504,7 +504,7 @@ KURS.lektionsfragen = {
    "S. 87"
   ],
   [
-   "¿Qué instrumento indica la ficha técnica para el piercing «Frenillo labial (Smiley)»?",
+   "¿Qué instrumento indica la ficha técnica «Frenillo labial (Smiley)»?",
    [
     "Pinza para septum",
     "Tubo receptor",
@@ -515,7 +515,7 @@ KURS.lektionsfragen = {
    "S. 87"
   ],
   [
-   "¿Qué joya indica la ficha técnica como joya inicial adecuada para el piercing «Lengua»?",
+   "¿Qué joya indica la ficha técnica «Lengua» como joya inicial adecuada?",
    [
     "Barbell",
     "Barbell curvo (banana)",
@@ -526,7 +526,7 @@ KURS.lektionsfragen = {
    "S. 90"
   ],
   [
-   "Según la ficha técnica, ¿con qué se perfora el piercing «Lengua»?",
+   "Según la ficha técnica «Lengua», ¿con qué se perfora?",
    [
     "Cánula 16G",
     "Cánula 12G",
@@ -537,7 +537,7 @@ KURS.lektionsfragen = {
    "S. 90"
   ],
   [
-   "¿Qué instrumento indica la ficha técnica para el piercing «Lengua»?",
+   "¿Qué instrumento indica la ficha técnica «Lengua»?",
    [
     "Pinza para lengua",
     "Tubo receptor",
@@ -550,7 +550,7 @@ KURS.lektionsfragen = {
  ],
  "8-10": [
   [
-   "¿Qué joya indica la ficha técnica como joya inicial adecuada para el piercing «Cheek»?",
+   "¿Qué joya indica la ficha técnica «Cheek» como joya inicial adecuada?",
    [
     "Barbell",
     "Barra de superficie",
@@ -561,7 +561,7 @@ KURS.lektionsfragen = {
    "S. 92"
   ],
   [
-   "Según la ficha técnica, ¿con qué se perfora el piercing «Cheek»?",
+   "Según la ficha técnica «Cheek», ¿con qué se perfora?",
    [
     "Cánula 18G",
     "Cánula 16G",
@@ -574,7 +574,7 @@ KURS.lektionsfragen = {
  ],
  "8-11": [
   [
-   "¿Qué joya indica la ficha técnica como joya inicial adecuada para el piercing «Ombligo»?",
+   "¿Qué joya indica la ficha técnica «Ombligo» como joya inicial adecuada?",
    [
     "BCR (aro de bola cautiva)",
     "Herradura (circular barbell)",
@@ -585,7 +585,7 @@ KURS.lektionsfragen = {
    "S. 94"
   ],
   [
-   "Según la ficha técnica, ¿con qué se perfora el piercing «Ombligo»?",
+   "Según la ficha técnica «Ombligo», ¿con qué se perfora?",
    [
     "Cánula 16G",
     "Cánula 18G",
@@ -598,7 +598,7 @@ KURS.lektionsfragen = {
  ],
  "8-12": [
   [
-   "¿Qué joya indica la ficha técnica como joya inicial adecuada para el piercing «Pezón»?",
+   "¿Qué joya indica la ficha técnica «Pezón» como joya inicial adecuada?",
    [
     "Barbell",
     "Herradura (circular barbell)",
@@ -609,7 +609,7 @@ KURS.lektionsfragen = {
    "S. 95"
   ],
   [
-   "Según la ficha técnica, ¿con qué se perfora el piercing «Pezón»?",
+   "Según la ficha técnica «Pezón», ¿con qué se perfora?",
    [
     "Cánula 16G",
     "Cánula 18G",
@@ -622,7 +622,7 @@ KURS.lektionsfragen = {
  ],
  "8-13": [
   [
-   "¿Qué joya indica la ficha técnica como joya inicial adecuada para el piercing «Surface»?",
+   "¿Qué joya indica la ficha técnica «Surface» como joya inicial adecuada?",
    [
     "Dermal anchor",
     "Labret",
@@ -633,7 +633,7 @@ KURS.lektionsfragen = {
    "S. 96"
   ],
   [
-   "Según la ficha técnica, ¿con qué se perfora el piercing «Surface»?",
+   "Según la ficha técnica «Surface», ¿con qué se perfora?",
    [
     "Cánula 18G",
     "Cánula 12G",
@@ -646,7 +646,7 @@ KURS.lektionsfragen = {
  ],
  "8-14": [
   [
-   "¿Qué joya indica la ficha técnica como joya inicial adecuada para el piercing «Frenulum»?",
+   "¿Qué joya indica la ficha técnica «Frenulum» como joya inicial adecuada?",
    [
     "Barbell curvo (banana)",
     "Labret",
@@ -657,7 +657,7 @@ KURS.lektionsfragen = {
    "S. 97"
   ],
   [
-   "Según la ficha técnica, ¿con qué se perfora el piercing «Frenulum»?",
+   "Según la ficha técnica «Frenulum», ¿con qué se perfora?",
    [
     "Cánula 18G",
     "Cánula 20G",
@@ -668,7 +668,7 @@ KURS.lektionsfragen = {
    "S. 97"
   ],
   [
-   "¿Qué instrumento indica la ficha técnica para el piercing «Frenulum»?",
+   "¿Qué instrumento indica la ficha técnica «Frenulum»?",
    [
     "Tubo receptor",
     "Pinza para tragus",
@@ -679,7 +679,7 @@ KURS.lektionsfragen = {
    "S. 97"
   ],
   [
-   "¿Qué joya indica la ficha técnica como joya inicial adecuada para el piercing «Príncipe Alberto»?",
+   "¿Qué joya indica la ficha técnica «Príncipe Alberto» como joya inicial adecuada?",
    [
     "BCR (aro de bola cautiva)",
     "Barra de superficie",
@@ -690,7 +690,7 @@ KURS.lektionsfragen = {
    "S. 98"
   ],
   [
-   "Según la ficha técnica, ¿con qué se perfora el piercing «Príncipe Alberto»?",
+   "Según la ficha técnica «Príncipe Alberto», ¿con qué se perfora?",
    [
     "Cánula 14G",
     "Cánula 18G",
@@ -701,7 +701,7 @@ KURS.lektionsfragen = {
    "S. 98"
   ],
   [
-   "¿Qué joya indica la ficha técnica como joya inicial adecuada para el piercing «Dydoe»?",
+   "¿Qué joya indica la ficha técnica «Dydoe» como joya inicial adecuada?",
    [
     "Barbell",
     "Dermal anchor",
@@ -712,7 +712,7 @@ KURS.lektionsfragen = {
    "S. 99"
   ],
   [
-   "Según la ficha técnica, ¿con qué se perfora el piercing «Dydoe»?",
+   "Según la ficha técnica «Dydoe», ¿con qué se perfora?",
    [
     "Cánula 18G",
     "Cánula 20G",
@@ -723,7 +723,7 @@ KURS.lektionsfragen = {
    "S. 99"
   ],
   [
-   "¿Qué joya indica la ficha técnica como joya inicial adecuada para el piercing «Pubic»?",
+   "¿Qué joya indica la ficha técnica «Pubic» como joya inicial adecuada?",
    [
     "Barra de superficie",
     "Herradura (circular barbell)",
@@ -734,7 +734,7 @@ KURS.lektionsfragen = {
    "S. 100"
   ],
   [
-   "Según la ficha técnica, ¿con qué se perfora el piercing «Pubic»?",
+   "Según la ficha técnica «Pubic», ¿con qué se perfora?",
    [
     "Cánula 18G",
     "Cánula 12G",
@@ -745,7 +745,7 @@ KURS.lektionsfragen = {
    "S. 100"
   ],
   [
-   "¿Qué joya indica la ficha técnica como joya inicial adecuada para el piercing «Hafada»?",
+   "¿Qué joya indica la ficha técnica «Hafada» como joya inicial adecuada?",
    [
     "Barbell curvo (banana)",
     "Dermal anchor",
@@ -756,7 +756,7 @@ KURS.lektionsfragen = {
    "S. 101"
   ],
   [
-   "Según la ficha técnica, ¿con qué se perfora el piercing «Hafada»?",
+   "Según la ficha técnica «Hafada», ¿con qué se perfora?",
    [
     "Cánula 18G",
     "Cánula 14G",
@@ -767,7 +767,7 @@ KURS.lektionsfragen = {
    "S. 101"
   ],
   [
-   "¿Qué joya indica la ficha técnica como joya inicial adecuada para el piercing «Guiche»?",
+   "¿Qué joya indica la ficha técnica «Guiche» como joya inicial adecuada?",
    [
     "Barbell",
     "Herradura (circular barbell)",
@@ -778,7 +778,7 @@ KURS.lektionsfragen = {
    "S. 102"
   ],
   [
-   "Según la ficha técnica, ¿con qué se perfora el piercing «Guiche»?",
+   "Según la ficha técnica «Guiche», ¿con qué se perfora?",
    [
     "Cánula 18G",
     "Cánula 14G",
@@ -791,7 +791,7 @@ KURS.lektionsfragen = {
  ],
  "8-15": [
   [
-   "¿Qué joya indica la ficha técnica como joya inicial adecuada para el piercing «Christina»?",
+   "¿Qué joya indica la ficha técnica «Christina» como joya inicial adecuada?",
    [
     "BCR (aro de bola cautiva)",
     "Herradura (circular barbell)",
@@ -802,7 +802,7 @@ KURS.lektionsfragen = {
    "S. 105"
   ],
   [
-   "Según la ficha técnica, ¿con qué se perfora el piercing «Christina»?",
+   "Según la ficha técnica «Christina», ¿con qué se perfora?",
    [
     "Cánula 18G",
     "Punch de biopsia",
@@ -813,7 +813,7 @@ KURS.lektionsfragen = {
    "S. 105"
   ],
   [
-   "¿Qué joya indica la ficha técnica como joya inicial adecuada para el piercing «Capuchón del clítoris»?",
+   "¿Qué joya indica la ficha técnica «Capuchón del clítoris» como joya inicial adecuada?",
    [
     "Barbell",
     "Barra de superficie",
@@ -824,7 +824,7 @@ KURS.lektionsfragen = {
    "S. 106"
   ],
   [
-   "Según la ficha técnica, ¿con qué se perfora el piercing «Capuchón del clítoris»?",
+   "Según la ficha técnica «Capuchón del clítoris», ¿con qué se perfora?",
    [
     "Cánula 18G",
     "Cánula 20G",
@@ -835,25 +835,25 @@ KURS.lektionsfragen = {
    "S. 106"
   ],
   [
-   "¿Qué joya indica la ficha técnica como joya inicial adecuada para el piercing «Labio vaginal»?",
+   "¿Qué joya indica la ficha técnica «Labios vulvares» como joya inicial adecuada?",
    [
     "BCR (aro de bola cautiva)",
     "Dermal anchor",
     "Barbell",
     "Herradura (circular barbell)"
    ],
-   "Ficha técnica Labio vaginal: joya inicial BCR; cánula 16G, 18G; a mano alzada, Snaptile, pinza de gasa.",
+   "Ficha técnica Labios vulvares: joya inicial BCR; cánula 16G, 18G; a mano alzada, Snaptile, pinza de gasa.",
    "S. 107"
   ],
   [
-   "Según la ficha técnica, ¿con qué se perfora el piercing «Labio vaginal»?",
+   "Según la ficha técnica «Labios vulvares», ¿con qué se perfora?",
    [
     "Cánula 16G",
     "Cánula 14G",
     "Punch de biopsia",
     "Cánula 20G"
    ],
-   "Ficha técnica Labio vaginal: joya inicial BCR; cánula 16G, 18G; a mano alzada, Snaptile, pinza de gasa.",
+   "Ficha técnica Labios vulvares: joya inicial BCR; cánula 16G, 18G; a mano alzada, Snaptile, pinza de gasa.",
    "S. 107"
   ]
  ],
@@ -864,7 +864,7 @@ KURS.lektionsfragen = {
     "No realizar",
     "Perforar con 16G y un BCR",
     "Solo perforar con anestesia",
-    "Solo lo hacen perforadores con experiencia"
+    "Solo por piercers con experiencia"
    ],
    "NO REALIZAR. Riesgo de daños graves.",
    "S. 103"
@@ -875,7 +875,7 @@ KURS.lektionsfragen = {
     "No realizar",
     "Perforar con 16G y un BCR",
     "Solo perforar con anestesia",
-    "Solo lo hacen perforadores con experiencia"
+    "Solo por piercers con experiencia"
    ],
    "NO REALIZAR. Riesgo de daños graves. Nunca perfores a través de los cuerpos cavernosos: hay riesgo de daños graves, incluso de morir desangrado.",
    "S. 104"
@@ -886,7 +886,7 @@ KURS.lektionsfragen = {
     "No realizar",
     "Perforar con 16G y un BCR",
     "Solo perforar con anestesia",
-    "Solo lo hacen perforadores con experiencia"
+    "Solo por piercers con experiencia"
    ],
    "NO REALIZAR. Riesgo de dañar la libido.",
    "S. 108"
@@ -897,7 +897,7 @@ KURS.lektionsfragen = {
     "No realizar",
     "Perforar con 16G y un BCR",
     "Solo perforar con anestesia",
-    "Solo lo hacen perforadores con experiencia"
+    "Solo por piercers con experiencia"
    ],
    "NO REALIZAR. Riesgo de daños.",
    "S. 109"
@@ -908,7 +908,7 @@ KURS.lektionsfragen = {
     "No realizar",
     "Perforar con 16G y un BCR",
     "Solo perforar con anestesia",
-    "Solo lo hacen perforadores con experiencia"
+    "Solo por piercers con experiencia"
    ],
    "NO REALIZAR. Riesgo de daños.",
    "S. 110"
@@ -916,7 +916,7 @@ KURS.lektionsfragen = {
  ],
  "7-0": [
   [
-   "Una cánula tiene el cono de color verde. ¿Qué calibre tiene?",
+   "Una cánula tiene el conector de color verde. ¿Qué calibre tiene?",
    [
     "18G, 1,3 mm",
     "16G, 1,7 mm",
@@ -927,7 +927,7 @@ KURS.lektionsfragen = {
    "S. 64"
   ],
   [
-   "Una cánula tiene el cono de color gris. ¿Qué calibre tiene?",
+   "Una cánula tiene el conector de color gris. ¿Qué calibre tiene?",
    [
     "16G, 1,7 mm",
     "18G, 1,3 mm",
@@ -938,7 +938,7 @@ KURS.lektionsfragen = {
    "S. 64"
   ],
   [
-   "Una cánula tiene el cono de color naranja. ¿Qué calibre tiene?",
+   "Una cánula tiene el conector de color naranja. ¿Qué calibre tiene?",
    [
     "14G, 2,2 mm",
     "18G, 1,3 mm",
@@ -956,7 +956,7 @@ KURS.lektionsfragen = {
     "Acortan el tubito de plástico de la cánula tras la perforación para que la joya entre con más facilidad",
     "Ilumina por transparencia, por ejemplo, la oreja para ver los vasos sanguíneos",
     "Abren o cierran los aros de bola cautiva (BCR) para retirar o colocar la bola",
-    "Corta la joya cuando una bola ya no se puede soltar"
+    "Corta la joya cuando una bola ya no se puede desenroscar"
    ],
    "Tabla de herramientas: Tijeras.",
    "S. 66–73"
@@ -966,7 +966,7 @@ KURS.lektionsfragen = {
    [
     "Sujeta las bolas del piercing y facilita enroscarlas",
     "Mide las joyas y ajusta la posición del piercing",
-    "Corta la joya cuando una bola ya no se puede soltar",
+    "Corta la joya cuando una bola ya no se puede desenroscar",
     "Acortan el tubito de plástico de la cánula tras la perforación para que la joya entre con más facilidad"
    ],
    "Tabla de herramientas: Pinza para bolas.",
@@ -978,7 +978,7 @@ KURS.lektionsfragen = {
     "Mide las joyas y ajusta la posición del piercing",
     "Ilumina por transparencia, por ejemplo, la oreja para ver los vasos sanguíneos",
     "Sujeta las bolas del piercing y facilita enroscarlas",
-    "Corta la joya cuando una bola ya no se puede soltar"
+    "Corta la joya cuando una bola ya no se puede desenroscar"
    ],
    "Tabla de herramientas: Calibre.",
    "S. 66–73"
@@ -988,7 +988,7 @@ KURS.lektionsfragen = {
    [
     "Abren o cierran los aros de bola cautiva (BCR) para retirar o colocar la bola",
     "Ilumina por transparencia, por ejemplo, la oreja para ver los vasos sanguíneos",
-    "Corta la joya cuando una bola ya no se puede soltar",
+    "Corta la joya cuando una bola ya no se puede desenroscar",
     "Acortan el tubito de plástico de la cánula tras la perforación para que la joya entre con más facilidad"
    ],
    "Tabla de herramientas: Pinza para abrir aros y pinza para cerrar aros.",
@@ -998,7 +998,7 @@ KURS.lektionsfragen = {
    "¿Para qué sirve la linterna de luz verde?",
    [
     "Ilumina por transparencia, por ejemplo, la oreja para ver los vasos sanguíneos",
-    "Corta la joya cuando una bola ya no se puede soltar",
+    "Corta la joya cuando una bola ya no se puede desenroscar",
     "Mide las joyas y ajusta la posición del piercing",
     "Abren o cierran los aros de bola cautiva (BCR) para retirar o colocar la bola"
    ],
@@ -1008,7 +1008,7 @@ KURS.lektionsfragen = {
   [
    "¿Para qué sirve el alicate de corte mini?",
    [
-    "Corta la joya cuando una bola ya no se puede soltar",
+    "Corta la joya cuando una bola ya no se puede desenroscar",
     "Mide las joyas y ajusta la posición del piercing",
     "Ilumina por transparencia, por ejemplo, la oreja para ver los vasos sanguíneos",
     "Abren o cierran los aros de bola cautiva (BCR) para retirar o colocar la bola"
@@ -1127,7 +1127,7 @@ KURS.lektionsfragen = {
     "Colocar la pinza o el tubo receptor",
     "Examinar la zona y elegir la joya inicial adecuada (¡longitud extra!)",
     "Perforar, idealmente siempre hacia el lado visible; en el labret, por ejemplo, donde va la bola. Cuanto más rápido se perfora, menos dolor",
-    "Empujarla a través del canal de la perforación, no tirar de ella; si no, la joya puede soltarse. Es doloroso: pide al cliente que exhale mientras tanto"
+    "Empujarla a través del canal de la perforación, no tirar de ella; si no, la joya puede salirse. Es doloroso: pide al cliente que exhale mientras tanto"
    ],
    "Paso 11: Colocar la pinza o el tubo receptor.",
    "S. 112"
@@ -1179,18 +1179,18 @@ KURS.lektionsfragen = {
   [
    "Procedimiento, paso 15: «Introducir la joya inicial en la vaina de plástico». ¿Qué viene después?",
    [
-    "Empujarla a través del canal de la perforación, no tirar de ella; si no, la joya puede soltarse. Es doloroso: pide al cliente que exhale mientras tanto",
+    "Empujarla a través del canal de la perforación, no tirar de ella; si no, la joya puede salirse. Es doloroso: pide al cliente que exhale mientras tanto",
     "Recortar un poco la vaina de plástico con tijeras para que la joya entre mejor",
     "Retirar la cánula; la vaina de plástico se queda en el canal de la perforación",
     "Tomar la bola"
    ],
-   "Paso 16: Empujarla a través del canal de la perforación, no tirar de ella; si no, la joya puede soltarse. Es doloroso: pide al cliente que exhale mientras tanto.",
+   "Paso 16: Empujarla a través del canal de la perforación, no tirar de ella; si no, la joya puede salirse. Es doloroso: pide al cliente que exhale mientras tanto.",
    "S. 112"
   ]
  ],
  "9-3": [
   [
-   "Procedimiento, paso 16: «Empujarla a través del canal de la perforación, no tirar de ella; si no, la joya puede soltarse. Es doloroso: pide al cliente que exhale mientras tanto». ¿Qué viene después?",
+   "Procedimiento, paso 16: «Empujarla a través del canal de la perforación, no tirar de ella; si no, la joya puede salirse. Es doloroso: pide al cliente que exhale mientras tanto». ¿Qué viene después?",
    [
     "Retirar con cuidado el tubito de la joya",
     "Introducir la joya inicial en la vaina de plástico",
@@ -1304,7 +1304,7 @@ KURS.lektionsfragen = {
  ],
  "10-2": [
   [
-   "¿Qué tiempo de cicatrización indica el libro del curso para un lóbulo?",
+   "¿Qué tiempo de cicatrización indica el libro del curso para un piercing de lóbulo?",
    [
     "Aprox. 2 meses",
     "3 a 12 meses",

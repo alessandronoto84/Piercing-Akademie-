@@ -85,7 +85,7 @@ window.KURS = window.KURS || { module: [] };
         ],
         fragen: [
           ["¿Dónde se ubica el Rook?", ["En vertical en el antihélix", "En horizontal en la raíz del hélix", "En el Tragus", "En la concha interna"], "Pliegue de cartílago alrededor del cavum conchae.", "S. 80"],
-          ["¿Por qué Rook y Daith se perforan con tubo receptor?", ["En el interior de la oreja no cabe una pinza", "Porque sangran especialmente", "Porque se perforan con punch", "Porque necesitan cánulas muy gruesas"], "El tubo protege el tejido circundante.", "S. 68"],
+          ["¿Por qué Rook y Daith se perforan con tubo receptor?", ["En el interior de la oreja no cabe una pinza", "Porque sangran especialmente mucho", "Porque se perforan con punch", "Porque necesitan cánulas muy gruesas"], "El tubo protege el tejido circundante.", "S. 68"],
           ["¿Puedes anunciar el Daith como remedio contra la migraña?", ["No", "Sí, con «puede ayudar»", "Sí, si se citan estudios", "Solo de palabra, no por escrito"], "Sin promesas de curación.", "S. 81"]
         ]
       },
@@ -94,11 +94,11 @@ window.KURS = window.KURS || { module: [] };
         seite: "S. 85, 88",
         inhalt: [
           db("Nariz (Nostril)", "A través del ala de la nariz. Se practicó por primera vez hace unos 4000 años en Oriente Medio; en la India se lleva preferentemente en el ala izquierda.", "labret", "18G", "pinza de gasa, Snaptile", "", "S. 85"),
-          db("Septum", "A través del tejido conectivo situado bajo el cartílago del tabique nasal (lat. septum nasi). Uno de los piercings más antiguos. Se puede dilatar para joyas más grandes.", "herradura (circular barbell)", "18G, 16G", "pinza para septum", "", "S. 88")
+          db("Septum", "A través del tejido conjuntivo situado bajo el cartílago del tabique nasal (lat. septum nasi). Uno de los piercings más antiguos. Se puede dilatar para joyas más grandes.", "herradura (circular barbell)", "18G, 16G", "pinza para septum", "", "S. 88")
         ],
         fragen: [
           ["¿Por dónde se perfora el Nostril?", ["Por el ala de la nariz", "Por el tabique nasal", "Por el dorso de la nariz", "Por la punta de la nariz"], "Ficha técnica del Nostril.", "S. 85"],
-          ["¿Por qué tejido se perfora el Septum?", ["Por el tejido conectivo bajo el cartílago del tabique", "Por el cartílago del tabique", "Por el hueso nasal", "Por el ala de la nariz"], "Se puede dilatar para joyas más grandes.", "S. 88"]
+          ["¿Por qué tejido se perfora el Septum?", ["Por el tejido conjuntivo bajo el cartílago del tabique", "Por el cartílago del tabique", "Por el hueso nasal", "Por el ala de la nariz"], "Se puede dilatar para joyas más grandes.", "S. 88"]
         ]
       },
       {
@@ -112,7 +112,7 @@ window.KURS = window.KURS || { module: [] };
         fragen: [
           ["¿Cuánto mide aproximadamente el canal en el piercing de ceja?", ["8 mm", "4 mm", "12 mm", "2 cm"], "Ficha técnica de la ceja.", "S. 89"],
           ["¿Dónde se puede perforar la ceja?", ["Solo en el tercio externo", "En el tercio interno", "En el tercio medio", "En cualquier punto si es superficial"], "En la parte interna emergen nervios y vasos; lesionarlos puede causar insensibilidad en la frente y el párpado superior.", "S. 89"],
-          ["Como principiante, ¿qué haces si te piden un Bridge?", ["Lo rechazo", "Lo perforo muy superficial", "Lo perforo muy profundo", "Lo perforo con 14G"], "Rechazarlo como principiante.", "S. 91"]
+          ["Como principiante, ¿qué haces si te piden un Bridge?", ["Lo rechazo", "Lo perforo de forma muy superficial", "Lo perforo a mucha profundidad", "Lo perforo con 14G"], "Rechazarlo como principiante.", "S. 91"]
         ]
       },
       {
@@ -124,7 +124,7 @@ window.KURS = window.KURS || { module: [] };
         ],
         fragen: [
           ["¿A qué distancia del borde bermellón se coloca un Labret?", ["A más de 3 mm", "Exactamente a 1 mm", "Sin distancia, en el mismo bermellón", "A más de 1 cm"], "Ficha técnica del Labret.", "S. 86"],
-          ["¿Cómo se llama un piercing en el centro del labio superior, en el filtrum?", ["Medusa", "Monroe", "Smiley", "Eskimo"], "El Labret en sentido estricto es el labio inferior.", "S. 86"],
+          ["¿Cómo se llama un piercing en el centro del labio superior, en el filtrum?", ["Medusa", "Monroe", "Smiley", "Eskimo"], "En sentido estricto, el Labret se hace en el labio inferior.", "S. 86"],
           ["¿Qué puede causar un Eskimo mal perforado?", ["Desgarro o hundimiento permanente del labio", "Presión sobre vías nerviosas de la frente", "Daños en el frenillo lingual", "Una pericondritis"], "Rechazarlo como principiante.", "S. 93"]
         ]
       },
@@ -193,7 +193,7 @@ window.KURS = window.KURS || { module: [] };
         seite: "S. 97–102",
         inhalt: [
           { typ: "text", text: "Esta lección trata los piercings íntimos masculinos del libro del curso, sin imágenes." },
-          db("Frenulum", "Un poco por debajo del frenillo del prepucio, para que el frenillo no se desgarre. Suele cicatrizar en cuatro a ocho semanas; en hombres circuncidados solo es posible si queda suficiente frenillo.", "barbell curvo (banana), barbell", "16G, 18G", "tubo receptor, a mano alzada, pinza de gasa", "", "S. 97"),
+          db("Frenulum", "Un poco por debajo del frenillo del prepucio, para que el frenillo no se desgarre. Suele cicatrizar en un plazo de cuatro a ocho semanas; en hombres circuncidados solo es posible si queda suficiente frenillo.", "barbell curvo (banana), barbell", "16G, 18G", "tubo receptor, a mano alzada, pinza de gasa", "", "S. 97"),
           db("Príncipe Alberto", "Desde la uretra hasta la parte inferior del pene. Primero retirar un poco la aguja dentro de la cánula, colocarla correctamente y perforar empujando la aguja hacia delante. La cánula de plástico no debe doblarse.", "BCR", "14G", "a mano alzada", "Estándar de la Academia: cánula 14G (en el libro del curso: 14G o 16G).", "S. 98"),
           db("Dydoe", "A través del borde del glande, principalmente en hombres circuncidados.", "barbell curvo (banana), barbell", "16G, 18G", "a mano alzada", "", "S. 99"),
           db("Pubic", "En la base del pene, normalmente en horizontal, justo en la zona de transición. Piercing de superficie, tiende a salirse; eliminar antes el vello púbico.", "BCR, barbell, barra de superficie, barbell curvo (banana)", "16G, 18G", "a mano alzada, pinza de gasa", "", "S. 100"),
@@ -203,7 +203,7 @@ window.KURS = window.KURS || { module: [] };
         fragen: [
           ["¿A qué hay que prestar especial atención en el Príncipe Alberto?", ["La cánula de plástico no debe doblarse al empujar", "Se perfora con 18G y pinza", "Se perfora con barbell", "Se perfora a través de los cuerpos cavernosos"], "Si no, la aguja puede atravesar la cánula.", "S. 98"],
           ["¿Qué hay que hacer antes de un piercing Pubic?", ["Eliminar el vello púbico de la zona", "Enfriar la zona con espray de frío", "Aplicar lidocaína", "Preparar un punch de biopsia"], "Piercing de superficie en la base del pene.", "S. 100"],
-          ["¿En cuánto tiempo suele cicatrizar un piercing Frenulum?", ["En cuatro a ocho semanas", "En 3 a 6 meses", "En una semana", "En 6 a 12 meses"], "Ficha técnica del Frenulum.", "S. 97"]
+          ["¿En cuánto tiempo suele cicatrizar un piercing Frenulum?", ["Entre cuatro y ocho semanas", "Entre 3 y 6 meses", "En una semana", "Entre 6 y 12 meses"], "Ficha técnica del Frenulum.", "S. 97"]
         ]
       },
       {
@@ -213,7 +213,7 @@ window.KURS = window.KURS || { module: [] };
           { typ: "text", text: "Esta lección trata los piercings íntimos femeninos del libro del curso, sin imágenes." },
           db("Christina", "En vertical en el pliegue donde se unen por arriba los labios mayores, con salida en el monte de Venus. No es anatómicamente posible en todas las mujeres.", "barbell curvo (banana), barbell, BCR", "16G, 18G", "a mano alzada, Snaptile, pinza de gasa", "", "S. 105"),
           db("Capuchón del clítoris", "A través del capuchón del clítoris, en vertical u horizontal; el clítoris en sí no se perfora.", "BCR, barbell curvo (banana), barbell", "16G, 18G", "a mano alzada", "", "S. 106"),
-          db("Labio vaginal", "En los labios menores o mayores.", "BCR", "16G, 18G", "a mano alzada, Snaptile, pinza de gasa", "", "S. 107")
+          db("Labios vulvares", "En los labios menores o mayores.", "BCR", "16G, 18G", "a mano alzada, Snaptile, pinza de gasa", "", "S. 107")
         ],
         fragen: [
           ["¿Qué ocurre con el piercing Christina?", ["No es anatómicamente posible en todas las mujeres", "Se perfora a través del capuchón del clítoris", "Está marcado con «No realizar»", "Cicatriza en 2 semanas"], "Ficha técnica del Christina.", "S. 105"],

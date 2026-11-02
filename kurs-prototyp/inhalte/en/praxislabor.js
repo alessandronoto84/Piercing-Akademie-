@@ -17,7 +17,7 @@ window.KURS.labor = {
       id: "arbeitsplatz",
       titel: "Setting up the workstation",
       modul: 5,
-      material: ["Disposable underpad", "Everything on the checklist “Workstation before every client” (as far as available, otherwise labelled placeholders)"],
+      material: ["Disposable underpad", "Everything on the checklist “Workstation before every client” (whatever you have; otherwise use labelled placeholders)"],
       schritte: [
         "Wash your hands and dry them completely; remove jewellery from hands and forearms.",
         "Cover the work surface with the disposable underpad.",
@@ -287,7 +287,7 @@ window.KURS.labor.stich = {
       material: ["Complete practice set", "A second person as the “client”", "Consent form and aftercare instructions (templates)"],
       schritte: [
         "Go through the procedure from module 09 from step 4 to 25: the second person fills in the consent form while you prepare the workstation.",
-        "The piercing is done into the silicone ear lying next to the person; everything else (conversation, showing the marking, aftercare instructions) you do with them.",
+        "The piercing is done into the silicone ear lying next to the person; you do everything else with them (conversation, showing the marking, aftercare instructions).",
         "Have the person keep an eye on the clock and say at the end what they noticed."
       ],
       kontrolle: [

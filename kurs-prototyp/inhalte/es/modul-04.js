@@ -18,7 +18,7 @@ KURS.module.push({
         ["¿Existe una regla general sobre cuánto duele cada piercing?", ["No, cada persona lo percibe de forma distinta", "Sí: el cartílago siempre duele más", "Sí: cuanto más gruesa la cánula, más duele", "Sí: la mucosa nunca duele"], "La experiencia muestra que algunos son más dolorosos, pero no hay una regla.", "S. 7"],
         ["¿Qué es el dolor según el libro del curso?", ["Una percepción sensorial compleja, a menudo con un fuerte componente psicológico", "Una reacción puramente refleja de la médula espinal", "Una reacción inflamatoria de la piel", "La consecuencia de un trastorno circulatorio"], "Así lo define el cap. 3.", "S. 7"],
         ["¿Cómo se llama el dolor en lenguaje técnico?", ["Algesia", "Anestesia", "Analgesia", "Asepsia"], "La anestesia es la insensibilización.", "S. 7"],
-        ["Caso: Un cliente pregunta si le dolerá su piercing de tragus. ¿Qué respuesta es adecuada?", ["Con sinceridad: cada uno lo siente distinto, es un momento breve", "«No vas a sentir nada».", "«El cartílago siempre es lo que más duele».", "«Con lidocaína seguro que no duele»."], "No hay una regla general; nada de falsas promesas.", "S. 7"]
+        ["Caso: Un cliente pregunta si le dolerá su piercing de tragus. ¿Qué respuesta es adecuada?", ["Con sinceridad: cada persona lo siente de forma distinta, es un momento breve", "«No vas a sentir nada».", "«El cartílago siempre es lo que más duele».", "«Con lidocaína seguro que no duele»."], "No hay una regla general; nada de falsas promesas.", "S. 7"]
       ]
     },
     {
@@ -96,7 +96,7 @@ KURS.module.push({
           ["Anestesia local en sentido amplio", "Bloquea la transmisión de una pequeña superficie directamente en las terminaciones nerviosas", "Piercer, con productos permitidos"]
         ] },
         { typ: "text", text: "Además de aliviar el dolor, un anestesiólogo se asegura de que se mantengan las funciones vitales y de que el organismo esté protegido de factores de estrés, como el ir y venir de personas, el teléfono o el timbre." },
-        { typ: "merke", text: "También por eso, y no solo por la higiene, trabajas exclusivamente en una sala separada y tranquila a la que solo tienen acceso el cliente y tú. En ese momento no hay nada más importante que pueda interrumpir esa calma." }
+        { typ: "merke", text: "También por eso, y no solo por la higiene, trabajas exclusivamente en una sala separada y tranquila a la que solo tienen acceso el cliente y tú. En ese momento, nada es tan importante como para interrumpir esa calma." }
       ],
       fragen: [
         ["¿Qué sustancias propias del cuerpo atenúan el dolor en la médula espinal?", ["Endorfinas", "Histaminas", "Prostaglandinas", "Bradicininas"], "Aquí actúan los opiáceos.", "S. 11"],
@@ -113,16 +113,16 @@ KURS.module.push({
       inhalt: [
         { typ: "text", text: "Ante todo, el piercer con experiencia intenta quitarle el miedo al cliente y crear un ambiente tranquilo y armonioso. En el caso ideal, el cliente pierde el miedo y se le puede perforar sin anestesia." },
         { typ: "tabelle", kopf: ["Producto", "Efecto", "Observación"], zeilen: [
-          ["Espray de frío (p. ej., cloruro de etilo)", "El frío intenso y breve insensibiliza las terminaciones nerviosas durante poco tiempo", "Actúa directamente"],
-          ["Pomada de lidocaína (Xylocain)", "De farmacia, sin receta o con receta según el preparado; se absorbe bien a través de la mucosa (boca, zona íntima), también disponible en espray", "Permitida según la Academia, pero no recomendada"]
+          ["Espray de frío (p. ej., cloruro de etilo)", "El frío intenso y breve insensibiliza las terminaciones nerviosas durante poco tiempo", "Actúa de inmediato"],
+          ["Pomada de lidocaína (Xylocaína)", "De farmacia, sin receta o con receta según el preparado; se absorbe bien a través de la mucosa (boca, zona íntima), también disponible en espray", "Permitida según la Academia, pero no recomendada"]
         ] },
         { typ: "achtung", text: "Al usar lidocaína, respeta siempre el tiempo de actuación, informa sobre los efectos secundarios y descarta interacciones con otros medicamentos (por ejemplo, betabloqueantes), sobre todo en la boca. Pregunta obligatoriamente al cliente antes sobre la tolerancia: por escrito y de nuevo de forma oral." }
       ],
       fragen: [
         ["¿Cuál es el caso ideal según el libro del curso?", ["Quitarle el miedo al cliente y perforar sin anestesia", "Enfriar a cada cliente con espray de frío", "Pomada de lidocaína en cada piercing de mucosa", "Perforar lo más despacio posible"], "Ambiente tranquilo y armonioso.", "S. 13"],
-        ["¿Cómo actúa el espray de frío?", ["El frío intenso y breve insensibiliza las terminaciones nerviosas", "Insensibiliza la zona durante una hora aproximadamente", "Desinfecta e insensibiliza a la vez", "Estrecha los vasos para que la zona no sangre"], "Actúa de forma directa y breve.", "S. 13"],
+        ["¿Cómo actúa el espray de frío?", ["El frío intenso y breve insensibiliza las terminaciones nerviosas", "Insensibiliza la zona durante una hora aproximadamente", "Desinfecta e insensibiliza a la vez", "Estrecha los vasos para que la zona no sangre"], "Actúa de inmediato y durante poco tiempo.", "S. 13"],
         ["¿Qué espray de frío menciona el libro del curso como ejemplo?", ["Cloruro de etilo", "Lidocaína", "Benzocaína", "Mentol"], "Hoy muchos espráis de frío deportivos contienen otros propelentes; el principio es el mismo frío intenso.", "S. 13"],
-        ["¿Dónde se consigue la pomada de lidocaína (Xylocain)?", ["En la farmacia", "Solo en mayoristas para médicos", "En la droguería", "En tiendas especializadas en piercing"], "La pomada de lidocaína es un medicamento y solo se vende en farmacias.", "S. 13"],
+        ["¿Dónde se consigue la pomada de lidocaína (Xylocaína)?", ["En la farmacia", "Solo en mayoristas para médicos", "En la droguería", "En tiendas especializadas en piercing"], "La pomada de lidocaína es un medicamento y solo se vende en farmacias.", "S. 13"],
         ["¿Qué postura tiene la Piercing Akademie sobre la pomada de lidocaína?", ["Permitida, pero no recomendada", "Recomendada en todos los piercings de cartílago", "Prohibida", "Obligatoria en piercings íntimos"], "La Academia apuesta por un ambiente tranquilo en lugar de anestesia, porque la lidocaína conlleva efectos secundarios e interacciones.", "Akademie"],
         ["¿Qué debes hacer antes de usar lidocaína?", ["Preguntar al cliente por escrito y oralmente sobre la tolerancia", "Solo esperar el tiempo de actuación", "Enfriar antes la zona con espray de frío", "Llamar al médico de cabecera del cliente"], "Además, ten en cuenta efectos secundarios e interacciones.", "S. 13"]
       ]

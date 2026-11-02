@@ -30,8 +30,8 @@ KURS.module.push({
       seite: "S. 3",
       inhalt: [
         { typ: "text", text: "Las huellas más antiguas del piercing nos llevan al Neolítico africano. El libro del curso menciona hallazgos neolíticos de Argelia: allí, hace más de 7000 años, las personas ya habrían llevado colgantes de huesos de animales y dientes en los lóbulos de las orejas." },
-        { typ: "ergaenzung", text: "La prueba directa más antigua la describe un estudio de 2022 (revista Antiquity): en tumbas de Boncuklu Tarla, en el sureste de Turquía, había joyas de piedra, obsidiana y cobre todavía junto a las orejas y el mentón de los difuntos, hacia 10.000 a 8.000 a. C. Para el dato del libro del curso sobre Argelia no hemos encontrado ninguna fuente independiente." },
-        { typ: "text", text: "También en antiguas representaciones de faraones de Egipto (hacia 1400 a 1300 a. C.) se encuentran indicios de joyas en las orejas. La famosa máscara de oro de Tutankamón muestra orificios en las orejas. A ello se suman espléndidos pendientes de oro hallados como ajuar funerario." },
+        { typ: "ergaenzung", text: "La prueba directa más antigua la describe un estudio de 2022 (revista Antiquity): en tumbas de Boncuklu Tarla, en el sureste de Turquía, había joyas de piedra, obsidiana y cobre todavía junto a las orejas y el mentón de los difuntos, aproximadamente entre el 10.000 y el 8.000 a. C. Para el dato del libro del curso sobre Argelia no hemos encontrado ninguna fuente independiente." },
+        { typ: "text", text: "También en antiguas representaciones de faraones de Egipto (aproximadamente entre 1400 y 1300 a. C.) se encuentran indicios de joyas en las orejas. La famosa máscara de oro de Tutankamón muestra orificios en las orejas. A ello se suman espléndidos pendientes de oro hallados como ajuar funerario." },
         { typ: "tabelle", kopf: ["Hallazgo", "Antigüedad", "Qué muestra"], zeilen: [
           ["Hallazgos neolíticos en Argelia", "más de 7000 años", "Colgantes para las orejas de huesos de animales y dientes"],
           ["Representaciones de faraones en Egipto", "aprox. 1400–1300 a. C.", "Joyas en las orejas"],
@@ -43,7 +43,7 @@ KURS.module.push({
         ["¿De qué estaban hechos los colgantes para las orejas más antiguos de Argelia?", ["De huesos de animales y dientes", "De oro", "De bronce", "De conchas y madera"], "Los hallazgos neolíticos de Argelia eran de huesos de animales y dientes; las joyas de metal llegaron mucho más tarde.", "S. 3"],
         ["¿De qué época proceden las huellas de piercing más antiguas que se conocen?", ["Del Neolítico (Nueva Edad de Piedra)", "De la Edad del Bronce europea", "De la época de los faraones", "De la Antigüedad griega"], "Neolítico significa Nueva Edad de Piedra.", "S. 3"],
         ["¿Qué famosa máscara muestra orificios en las orejas?", ["La máscara de oro de Tutankamón", "La máscara de oro de Agamenón", "La máscara mortuoria de Napoleón", "La máscara de Pakal de Palenque"], "Además había pendientes de oro como ajuar funerario.", "S. 3"],
-        ["¿De qué época son las representaciones egipcias de faraones con joyas en las orejas?", ["Hacia 1400 a 1300 a. C.", "Hacia 3000 a 2900 a. C.", "Hacia 500 a 400 a. C.", "Hacia 100 a 200 d. C."], "Así las fecha el libro del curso.", "S. 3"]
+        ["¿De qué época son las representaciones egipcias de faraones con joyas en las orejas?", ["Entre 1400 y 1300 a. C., aprox.", "Entre 3000 y 2900 a. C., aprox.", "Entre 500 y 400 a. C., aprox.", "Entre 100 y 200 d. C., aprox."], "Así las fecha el libro del curso.", "S. 3"]
       ]
     },
     {
@@ -62,7 +62,7 @@ KURS.module.push({
         ["¿Qué antigüedad aproximada tiene la máscara de bronce de la cultura de Hallstatt?", ["Unos 2600 años", "Unos 7000 años", "Unos 4000 años", "Unos 1200 años"], "Muestra varios orificios en ambas orejas.", "S. 4"],
         ["¿Qué ideal corporal regía en la antigua Grecia y en Roma?", ["El cuerpo intacto", "Un cuerpo lo más adornado posible", "Un cuerpo con signos de pertenencia como pendientes", "Un cuerpo tatuado como signo de valor"], "Por eso allí apenas hay huellas de piercing.", "S. 4"],
         ["¿Dónde se practicó por primera vez el piercing nasal?", ["En Oriente Medio, hace unos 4000 años", "En la India, hace unos 4000 años", "En Egipto, hace unos 7000 años", "En la India, en el siglo XVI"], "En el siglo XVI llegó a la India.", "S. 85"],
-        ["¿Qué es cierto sobre el piercing de septum?", ["Es uno de los piercings más antiguos y está extendido en muchas culturas", "Llegó de la India apenas en el siglo XVI", "Se perfora a través del cartílago del tabique nasal", "Solo es tradicional en Europa"], "El nombre viene de «septum nasi».", "S. 88"],
+        ["¿Qué es cierto sobre el piercing de septum?", ["Es uno de los piercings más antiguos y está extendido en muchas culturas", "No llegó desde la India hasta el siglo XVI", "Se perfora a través del cartílago del tabique nasal", "Solo es tradicional en Europa"], "El nombre viene de «septum nasi».", "S. 88"],
         ["¿Por qué las personas se adornaban ya desde muy pronto?", ["Para mostrar pertenencia y destacar al mismo tiempo", "Sobre todo por motivos médicos", "Principalmente como protección contra enfermedades", "Solo para ocultar su rango social"], "Los piercings eran rito de iniciación o adorno.", "S. 4"]
       ]
     },
@@ -78,7 +78,7 @@ KURS.module.push({
           "La joya se introduce en el tubito y se empuja a través del canal de la perforación."
         ] },
         { typ: "achtung", text: "Empujar, nunca tirar. Si se tira, el riesgo de que la joya se escape durante la inserción es demasiado grande." },
-        { typ: "praxis", text: "El tubito protege el canal recién perforado. Si empujas con limpieza, la joya entra deslizándose sin dolor adicional. Pide al cliente que espire mientras tanto (más sobre esto en el módulo 9)." }
+        { typ: "praxis", text: "El tubito protege el canal recién perforado. Si empujas con limpieza, la joya entra deslizándose sin dolor adicional. Pide al cliente que suelte el aire mientras tanto (más sobre esto en el módulo 9)." }
       ],
       fragen: [
         ["¿Con qué se perforan hoy los piercings de forma profesional?", ["Con una cánula intravenosa («Braunüle»)", "Con una pistola de perforar orejas con cartucho desechable", "Con una aguja de piercing maciza sin vaina", "Con un punch de biopsia en cada piercing"], "La aguja está dentro de una vaina de plástico.", "S. 5"],
@@ -94,7 +94,7 @@ KURS.module.push({
       seite: "S. 5–6",
       inhalt: [
         { typ: "text", text: "Al perforar y durante el cuidado posterior hay que mantener una higiene suficiente; de lo contrario, el piercing puede inflamarse. La sala de piercing debe mantenerse limpia y estéril como un quirófano de hospital, y los instrumentos deben estar estériles." },
-        { typ: "ergaenzung", text: "En sentido estricto, una sala no se puede esterilizar. Lo que se quiere decir es: la sala está limpiada y desinfectada de forma higiénicamente impecable, y todo lo que entra en contacto con el canal de la perforación es estéril." },
+        { typ: "ergaenzung", text: "En sentido estricto, una sala no se puede esterilizar. Lo que se quiere decir es: la sala está limpia y desinfectada de forma higiénicamente impecable, y todo lo que entra en contacto con el canal de la perforación es estéril." },
         { typ: "text", text: "Es obligatorio que informes al cliente sobre el cuidado correcto y los tiempos de cicatrización. Durante unas dos semanas, el propio cliente debe limpiar el piercing nuevo dos o tres veces al día con un producto adecuado, por ejemplo, solución salina, Prontolind u Octenisept." },
         { typ: "achtung", text: "Nunca recomiendes Octenisept en piercings de cartílago. Contiene octenidina, que en estudios de laboratorio daña las células del cartílago. Prontolind (principio activo polihexanida), en cambio, sí puedes recomendarlo también en piercings de cartílago." },
         { typ: "text", text: "La joya no debe cambiarse hasta varios meses después de la perforación. Un cambio demasiado temprano puede alterar la cicatrización y provocar infecciones." }

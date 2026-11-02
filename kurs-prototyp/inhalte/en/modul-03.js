@@ -17,7 +17,7 @@ KURS.module.push({
         { typ: "text", text: "The skin is the largest organ of the human body. It consists of three layers, and a piercing channel passes through all three." },
         { typ: "tabelle", kopf: ["Layer", "Structure", "Relevance for piercing"], zeilen: [
           ["Epidermis (outer skin)", "Outermost, keratinised layer without its own blood vessels", "Protective barrier against germs. It is disinfected before piercing and grows back from the wound edge during healing."],
-          ["Dermis (true skin)", "Connective tissue with blood vessels, nerves, hair roots and glands", "This is where the piercing bleeds and hurts. This is where the vessels lie that you look for with the torch."],
+          ["Dermis (true skin)", "Connective tissue with blood vessels, nerves, hair roots and glands", "This is where the piercing bleeds and hurts. This is where the vessels are that you check for with the torch."],
           ["Subcutis (subcutaneous tissue)", "Mainly fatty tissue", "Provides cushioning. In places such as the navel, it determines how long the piercing channel will be."]
         ] },
         { typ: "grafik", id: "haut" },
@@ -31,7 +31,7 @@ KURS.module.push({
         ["Which skin layer contains blood vessels and nerves?", ["Dermis", "Epidermis", "Only the subcutis", "The horny layer"], "The epidermis has no blood vessels of its own.", "Entwurf"],
         ["What does the subcutis mainly consist of?", ["Fatty tissue", "Cartilage", "Keratinocytes", "Muscle fibres"], "It provides cushioning.", "Entwurf"],
         ["Which layers does a piercing channel pass through?", ["All three layers", "Only the epidermis and dermis", "Only the epidermis", "The dermis and subcutis; the epidermis is pushed aside"], "That is why it heals from the edge.", "Entwurf"],
-        ["What often lies together as a bundle in the dermis?", ["Artery, vein and nerve", "Hair root and sweat gland", "Fat lobules and cartilage", "Only capillaries"], "See the 3D skin block.", "Ergänzung"]
+        ["What often runs together as a bundle in the dermis?", ["Artery, vein and nerve", "Hair root and sweat gland", "Fat lobules and cartilage", "Only capillaries"], "See the 3D skin block.", "Ergänzung"]
       ]
     },
     {
@@ -40,21 +40,21 @@ KURS.module.push({
       inhalt: [
         { typ: "text", text: "Not every tissue heals equally fast. This explains the big differences in the healing times you give your clients." },
         { typ: "tabelle", kopf: ["Tissue", "Examples", "Healing according to the course book"], zeilen: [
-          ["Cartilage", "Auricle, tragus, helix, conch, side of the nose", "at least 3 months"],
+          ["Cartilage", "Auricle, tragus, helix, conch, nostril", "at least 3 months"],
           ["Soft tissue", "Earlobe, eyebrow, navel", "Lobe approx. 2 months, eyebrow approx. 1 month, navel approx. 4 to 6 months"],
-          ["Mucous membrane", "Tongue, lip frenulum, intimate area", "Tongue and lip frenulum approx. 1 month, intimate 2 to 3 months"]
+          ["Mucous membrane", "Tongue, lip frenulum, intimate area", "Tongue and lip frenulum approx. 1 month, intimate area 2 to 3 months"]
         ] },
         { typ: "grafik", id: "ohr" },
-        { typ: "ergaenzung", text: "Cartilage has no blood vessels of its own and is supplied only via the surrounding perichondrium. That is why it heals slowly and reacts sensitively to irritation." },
+        { typ: "ergaenzung", text: "Cartilage has no blood vessels of its own and is supplied only via the surrounding perichondrium. That is why it heals slowly and is sensitive to irritation." },
         { typ: "achtung", text: "Octenidine, the active ingredient of Octenisept, damages cartilage cells in laboratory studies. You therefore never recommend Octenisept for cartilage piercings. Prontolind (active ingredient polihexanide) is allowed on cartilage." }
       ],
       fragen: [
-        ["Why do cartilage piercings heal more slowly than a lobe?", ["Cartilage has no blood vessels of its own", "Cartilage has particularly many nerves", "Cartilage is thinner than the earlobe", "Cartilage does not form granulation tissue"], "It is supplied via the perichondrium.", "Entwurf"],
+        ["Why do cartilage piercings heal more slowly than a lobe?", ["Cartilage has no blood vessels of its own", "Cartilage has a particularly large number of nerves", "Cartilage is thinner than the earlobe", "Cartilage does not form granulation tissue"], "It is supplied via the perichondrium.", "Entwurf"],
         ["What healing time does the course book give for cartilage piercings?", ["At least 3 months", "About 4 to 6 weeks", "About 2 months", "1 to 2 months"], "For comparison: lobe approx. 2 months.", "S. 49"],
         ["Which tissue heals fastest?", ["Mucous membrane", "Cartilage", "Soft tissue such as the earlobe", "Fatty tissue at the navel"], "Tongue and lip frenulum approx. 1 month.", "S. 49"],
         ["Which type of tissue does the helix belong to?", ["Cartilage", "Soft tissue", "Mucous membrane", "Fatty tissue"], "The rim of the ear is cartilage.", "S. 78"],
-        ["Which type of tissue does the tongue piercing belong to?", ["Mucous membrane", "Cartilage", "Soft tissue without mucous membrane", "Connective tissue of the skin"], "Mucous membrane heals quickly.", "S. 49"],
-        ["Why is octenidine taboo for cartilage piercings?", ["It damages cartilage cells in laboratory studies", "It discolours the cartilage", "It has no antiseptic effect on cartilage", "It triggers nickel allergies on cartilage"], "Octenidine is in Octenisept; Prontolind contains polihexanide.", "S. 48"],
+        ["What type of tissue does a tongue piercing go through?", ["Mucous membrane", "Cartilage", "Soft tissue without mucous membrane", "Connective tissue of the skin"], "Mucous membrane heals quickly.", "S. 49"],
+        ["Why is octenidine off-limits for cartilage piercings?", ["It damages cartilage cells in laboratory studies", "It discolours the cartilage", "It has no antiseptic effect on cartilage", "It triggers nickel allergies on cartilage"], "Octenidine is in Octenisept; Prontolind contains polihexanide.", "S. 48"],
         ["Which part of the outer ear contains no cartilage?", ["The earlobe", "The tragus", "The anti-tragus", "The conch"], "The earlobe is soft tissue and heals faster.", "S. 49"]
       ]
     },
@@ -73,11 +73,11 @@ KURS.module.push({
       ],
       fragen: [
         ["Where may an eyebrow piercing be placed?", ["Only in the outer third", "In the inner third near the nose", "In the middle third above the pupil", "Anywhere, as long as it is pierced shallowly"], "On the inner side, nerves and vessels emerge; an injury can cause numbness of the forehead and upper eyelid.", "S. 89"],
-        ["Why do beginners refuse the cheek piercing?", ["Important arteries, nerves and the salivary duct run there", "It can only be done with a biopsy punch", "It heals faster than other piercings", "It always requires anaesthesia"], "In addition, there is a risk of disfigurement.", "S. 92"],
-        ["What can a bridge pierced too deep cause?", ["Pressure on nerve pathways", "Growing out", "Perichondritis", "A tear in the lip"], "If too shallow, it grows out.", "S. 91"],
+        ["Why should beginners turn down cheek piercings?", ["Important arteries, nerves and the salivary duct run there", "It can only be done with a biopsy punch", "It heals faster than other piercings", "It always requires anaesthesia"], "In addition, there is a risk of disfigurement.", "S. 92"],
+        ["What can a bridge piercing that is too deep cause?", ["Pressure on nerve pathways", "Growing out", "Perichondritis", "A tear in the lip"], "If too shallow, it grows out.", "S. 91"],
         ["What happens if a bridge is pierced too shallowly?", ["It grows out", "It presses on nerve pathways", "It pierces the nasal bone", "It heals particularly quickly"], "Refuse as a beginner.", "S. 91"],
         ["What can remain permanently after a cheek piercing?", ["Dimples created by the piercing", "Discoloration of the teeth", "Sinking-in of the lip", "Permanent numbness of the tongue"], "Cheek data sheet.", "S. 92"],
-        ["Case: As the very first piercing you will ever do, a client wants a cheek. What do you do?", ["I refuse and recommend an experienced piercer", "I pierce it with the thinnest cannula", "I pierce it if he signs", "I pierce it freehand so that I stay flexible"], "Refuse as a beginner.", "S. 92"]
+        ["Case: A client wants a cheek piercing, and it would be the very first piercing you ever do. What do you do?", ["I refuse and recommend an experienced piercer", "I pierce it with the thinnest cannula", "I pierce it if he signs", "I pierce it freehand so that I stay flexible"], "Refuse as a beginner.", "S. 92"]
       ]
     },
     {
@@ -100,7 +100,7 @@ KURS.module.push({
           "The facial artery (A. facialis) runs diagonally from the edge of the lower jaw to the corner of the mouth and on to the nose.",
           "A cheek piercing lies right in the middle of this area. That is why you refuse it as a beginner."
         ] },
-        { typ: "ergaenzung", text: "Looked at more closely, it is mainly sensory nerves that emerge at the inner edge of the eyebrow; an injury is more likely to cause numbness than paralysis. Forehead movement is controlled by a lateral branch of the facial nerve. This does not change the rule: eyebrow only in the outer third." },
+        { typ: "ergaenzung", text: "On closer inspection, it is mainly sensory nerves that emerge at the inner edge of the eyebrow; an injury is more likely to cause numbness than paralysis. Forehead movement is controlled by a lateral branch of the facial nerve. This does not change the rule: eyebrow only in the outer third." },
         { typ: "merke", text: "The position of nerves and vessels varies from person to person. The drawings show where danger lies, not where it is guaranteed to be safe." }
       ],
       fragen: [
@@ -125,7 +125,7 @@ KURS.module.push({
       ],
       fragen: [
         ["What light does the course book recommend for shining through the ear?", ["Green light", "UV light", "White flash", "Infrared light"], "This lets you recognise blood vessels.", "S. 73"],
-        ["Why do you not pierce through a blood vessel?", ["Otherwise the client may bleed heavily", "It makes the cannula blunt", "Blood smudges the marking", "Vessels heal worse than skin"], "Recognise vessels beforehand.", "S. 73"],
+        ["Why do you not pierce through a blood vessel?", ["Otherwise the client may bleed heavily", "It makes the cannula blunt", "Blood smudges the marking", "Vessels heal less well than skin"], "Recognise vessels beforehand.", "S. 73"],
         ["What must not be injured during a tongue piercing?", ["The frenulum of the tongue", "The tip of the tongue", "The taste buds at the edge of the tongue", "The lip frenulum"], "Pierce from bottom to top.", "S. 90"],
         ["What can happen when piercing through the erectile tissue of the penis?", ["Serious damage, up to bleeding to death", "Only a longer healing time", "A nickel allergy", "The jewellery growing out"], "Strongly advised against.", "S. 104"]
       ]
@@ -159,18 +159,18 @@ KURS.module.push({
       ]
     },
     {
-      titel: "Who heals less well",
+      titel: "Who heals more slowly",
       seite: "S. 50",
       inhalt: [
-        { typ: "text", text: "Smokers, alcoholics and diabetics belong to the risk groups: in them, complications in the healing process occur more quickly." },
+        { typ: "text", text: "Smokers, alcoholics and diabetics are among the risk groups: they are more prone to complications during healing." },
         { typ: "text", text: "According to the course book, possible causes of constant re-bleeding are diabetes, connective tissue weakness or a bleeding disorder (haemophilia). In this case, a doctor should be consulted." },
         { typ: "ergaenzung", text: "Prolonged re-bleeding most often occurs when the client takes blood-thinning medication (for example ASA) or has a clotting disorder. Diabetes mainly delays wound healing and increases the risk of infection." },
         { typ: "praxis", text: "The consent form asks about illnesses and medication. Read this information before piercing, not afterwards, and address risk factors openly." }
       ],
       fragen: [
-        ["Which groups have a higher risk of healing complications?", ["Smokers, alcoholics and diabetics", "Athletes and people with dry skin", "People with hay fever", "People under 25"], "In them, complications occur more quickly.", "S. 50"],
+        ["Which groups have a higher risk of healing complications?", ["Smokers, alcoholics and diabetics", "Athletes and people with dry skin", "People with hay fever", "People under 25"], "They are more prone to complications.", "S. 50"],
         ["Which causes of constant re-bleeding does the course book name?", ["Diabetes, connective tissue weakness or a bleeding disorder", "A nickel allergy", "Jewellery that is too short", "Aftercare with saline solution"], "Then see a doctor.", "S. 50"],
-        ["Case: A client states that he has diabetes. What is correct?", ["I inform him about the higher healing risk before I pierce", "I only pierce with PTFE, then there is no risk", "Diabetes plays no role in piercing", "I double the extra length"], "Diabetics are one of the risk groups.", "S. 50"]
+        ["Case: A client states that he has diabetes. What is correct?", ["I inform him about the higher healing risk before I pierce", "I only pierce with PTFE, then there is no risk", "Diabetes is irrelevant to piercing", "I double the extra length"], "Diabetics are one of the risk groups.", "S. 50"]
       ]
     }
   ],
