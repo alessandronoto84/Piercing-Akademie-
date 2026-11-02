@@ -16,7 +16,7 @@
     en: { paket: "Please choose a package or “Not sure yet”.", name: "Please enter your name.", email: "Please enter a valid email address.", telefon: "Please enter a valid phone number or leave the field empty.",
       volljaehrig: "You must be 18 or older to take part. Please confirm your age.", pruefen: "Please check your entry.", hallo: "Hello Piercing Akademie,",
       interesse: "I am interested in: ", nameZ: "Name: ", emailZ: "Email: ", telZ: "Phone: ", erfahrungZ: "Studio: ", zeitraumZ: "Preferred practice day: ", modelleZ: "Own models: ", quelleZ: "Heard about us via: ",
-      voll: "Aged 18 or over: yes", nachricht: "Message:", gruss: "Best regards", betreff: "Enquiry Piercing Akademie – ", kopiert: "Text copied", zuOft: "Too many enquiries in a short time. Please try again later or call us." },
+      voll: "18 or older: yes", nachricht: "Message:", gruss: "Best regards", betreff: "Inquiry Piercing Akademie – ", kopiert: "Text copied", zuOft: "Too many inquiries in a short time. Please try again later or call us." },
     es: { paket: "Elige un paquete o «Aún no lo sé».", name: "Indica tu nombre.", email: "Indica un correo electrónico válido.", telefon: "Indica un número de teléfono válido o deja el campo vacío.",
       volljaehrig: "La participación solo es posible a partir de 18 años. Confirma tu edad.", pruefen: "Revisa lo que has escrito.", hallo: "Hola, Piercing Akademie:",
       interesse: "Me interesa: ", nameZ: "Nombre: ", emailZ: "Correo: ", telZ: "Teléfono: ", erfahrungZ: "Estudio: ", zeitraumZ: "Fechas para el día de práctica: ", modelleZ: "Modelos propios: ", quelleZ: "Nos conoció por: ",

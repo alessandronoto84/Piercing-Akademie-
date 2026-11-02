@@ -32,8 +32,8 @@ export function mailWillkommen({ env, email, name, paket, sprache, betrag, waehr
   const pfad = s === "de" ? "" : s + "/";
   const login = env.DOMAIN + "/login.html?email=" + encodeURIComponent(email) + "&sprache=" + s;
   const agb = env.DOMAIN + "/" + pfad + "agb.html";
-  const preis = (betrag / 100).toLocaleString(s === "en" ? "en-GB" : s === "es" ? "es-ES" : "de-DE", { style: "currency", currency: (waehrung || "eur").toUpperCase() });
-  const datum = new Date(gekauft).toLocaleDateString(s === "en" ? "en-GB" : s === "es" ? "es-ES" : "de-DE");
+  const preis = (betrag / 100).toLocaleString(s === "en" ? "en-US" : s === "es" ? "es-ES" : "de-DE", { style: "currency", currency: (waehrung || "eur").toUpperCase() });
+  const datum = new Date(gekauft).toLocaleDateString(s === "en" ? "en-US" : s === "es" ? "es-ES" : "de-DE");
   const p = PAKETE[s][paket] || paket;
   const mitPraxis = paket !== "basis";
   const T = {
@@ -96,7 +96,7 @@ export function mailAnfrage(a) {
 }
 
 function zeitText(iso, s) {
-  return new Date(iso).toLocaleString(s === "en" ? "en-GB" : s === "es" ? "es-ES" : "de-DE", { timeZone: "Europe/Berlin", dateStyle: "long", timeStyle: "short" }) + " (Europe/Berlin)";
+  return new Date(iso).toLocaleString(s === "en" ? "en-US" : s === "es" ? "es-ES" : "de-DE", { timeZone: "Europe/Berlin", dateStyle: "long", timeStyle: "short" }) + " (Europe/Berlin)";
 }
 
 export function mailWiderrufEingang(w, eingang) {
@@ -135,7 +135,7 @@ export async function sende(env, an, mail, antwortAn) {
 }
 
 
-function euro(cent, s) { return (cent / 100).toLocaleString(s === "en" ? "en-GB" : s === "es" ? "es-ES" : "de-DE", { style: "currency", currency: "EUR" }); }
+function euro(cent, s) { return (cent / 100).toLocaleString(s === "en" ? "en-US" : s === "es" ? "es-ES" : "de-DE", { style: "currency", currency: "EUR" }); }
 function agbLink(env, s) { return env.DOMAIN + "/" + (s === "de" ? "" : s + "/") + "agb.html"; }
 
 // Praxiskit: Vertragsbestätigung an den Kunden (Ware, Versand frei, 14 Tage Widerruf mit Ausnahme versiegelter Hygieneartikel)

@@ -4,14 +4,14 @@ window.KURS = window.KURS || { module: [] };
 KURS.lektionsfragen = {
  "8-1": [
   [
-   "Which jewellery does the “Lobe” data sheet list as suitable initial jewellery?",
+   "Which jewelry does the “Lobe” data sheet list as suitable initial jewelry?",
    [
     "Labret",
     "Horseshoe (circular barbell)",
     "Surface bar",
     "BCR (ball closure ring)"
    ],
-   "Lobe data sheet: initial jewellery labret; cannula 18G; Snaptile, gauze clamp.",
+   "Lobe data sheet: initial jewelry labret; cannula 18G; Snaptile, gauze clamp.",
    "S. 74"
   ],
   [
@@ -22,18 +22,18 @@ KURS.lektionsfragen = {
     "14G cannula",
     "16G cannula"
    ],
-   "Lobe data sheet: initial jewellery labret; cannula 18G; Snaptile, gauze clamp.",
+   "Lobe data sheet: initial jewelry labret; cannula 18G; Snaptile, gauze clamp.",
    "S. 74"
   ],
   [
-   "Which jewellery does the “Upper Lobe” data sheet list as suitable initial jewellery?",
+   "Which jewelry does the “Upper Lobe” data sheet list as suitable initial jewelry?",
    [
     "Labret",
     "Barbell",
     "Horseshoe (circular barbell)",
     "BCR (ball closure ring)"
    ],
-   "Upper Lobe data sheet: initial jewellery labret; cannula 18G, 16G; Snaptile, gauze clamp.",
+   "Upper Lobe data sheet: initial jewelry labret; cannula 18G, 16G; Snaptile, gauze clamp.",
    "S. 75"
   ],
   [
@@ -44,20 +44,20 @@ KURS.lektionsfragen = {
     "Biopsy punch",
     "14G cannula"
    ],
-   "Upper Lobe data sheet: initial jewellery labret; cannula 18G, 16G; Snaptile, gauze clamp.",
+   "Upper Lobe data sheet: initial jewelry labret; cannula 18G, 16G; Snaptile, gauze clamp.",
    "S. 75"
   ]
  ],
  "8-2": [
   [
-   "Which jewellery does the “Tragus” data sheet list as suitable initial jewellery?",
+   "Which jewelry does the “Tragus” data sheet list as suitable initial jewelry?",
    [
     "Barbell",
     "Dermal anchor",
     "Surface bar",
     "Horseshoe (circular barbell)"
    ],
-   "Tragus data sheet: initial jewellery labret, BCR, barbell; cannula biopsy punch, 18G, 16G; tragus forceps, receiving tube.",
+   "Tragus data sheet: initial jewelry labret, BCR, barbell; cannula biopsy punch, 18G, 16G; tragus forceps, receiving tube.",
    "S. 76"
   ],
   [
@@ -68,7 +68,7 @@ KURS.lektionsfragen = {
     "12G cannula",
     "14G cannula"
    ],
-   "Tragus data sheet: initial jewellery labret, BCR, barbell; cannula biopsy punch, 18G, 16G; tragus forceps, receiving tube.",
+   "Tragus data sheet: initial jewelry labret, BCR, barbell; cannula biopsy punch, 18G, 16G; tragus forceps, receiving tube.",
    "S. 76"
   ],
   [
@@ -79,18 +79,18 @@ KURS.lektionsfragen = {
     "Septum forceps",
     "Tongue forceps"
    ],
-   "Tragus data sheet: initial jewellery labret, BCR, barbell; cannula biopsy punch, 18G, 16G; tragus forceps, receiving tube.",
+   "Tragus data sheet: initial jewelry labret, BCR, barbell; cannula biopsy punch, 18G, 16G; tragus forceps, receiving tube.",
    "S. 76"
   ],
   [
-   "Which jewellery does the “Anti-Tragus” data sheet list as suitable initial jewellery?",
+   "Which jewelry does the “Anti-Tragus” data sheet list as suitable initial jewelry?",
    [
     "BCR (ball closure ring)",
     "Dermal anchor",
     "Surface bar",
     "Labret"
    ],
-   "Anti-Tragus data sheet: initial jewellery horseshoe (circular barbell), curved barbell (banana), BCR; cannula 18G; receiving tube.",
+   "Anti-Tragus data sheet: initial jewelry horseshoe (circular barbell), curved barbell (banana), BCR; cannula 18G; receiving tube.",
    "S. 77"
   ],
   [
@@ -101,7 +101,7 @@ KURS.lektionsfragen = {
     "14G cannula",
     "Biopsy punch"
    ],
-   "Anti-Tragus data sheet: initial jewellery horseshoe (circular barbell), curved barbell (banana), BCR; cannula 18G; receiving tube.",
+   "Anti-Tragus data sheet: initial jewelry horseshoe (circular barbell), curved barbell (banana), BCR; cannula 18G; receiving tube.",
    "S. 77"
   ],
   [
@@ -112,20 +112,20 @@ KURS.lektionsfragen = {
     "Tongue forceps",
     "Snaptile"
    ],
-   "Anti-Tragus data sheet: initial jewellery horseshoe (circular barbell), curved barbell (banana), BCR; cannula 18G; receiving tube.",
+   "Anti-Tragus data sheet: initial jewelry horseshoe (circular barbell), curved barbell (banana), BCR; cannula 18G; receiving tube.",
    "S. 77"
   ]
  ],
  "8-3": [
   [
-   "Which jewellery does the “Helix” data sheet list as suitable initial jewellery?",
+   "Which jewelry does the “Helix” data sheet list as suitable initial jewelry?",
    [
     "BCR (ball closure ring)",
     "Curved barbell (banana)",
     "Dermal anchor",
     "Surface bar"
    ],
-   "Helix data sheet: initial jewellery labret, BCR, horseshoe (circular barbell); cannula 18G; Snaptile, gauze clamp, freehand.",
+   "Helix data sheet: initial jewelry labret, BCR, horseshoe (circular barbell); cannula 18G; Snaptile, gauze clamp, freehand.",
    "S. 78"
   ],
   [
@@ -136,18 +136,18 @@ KURS.lektionsfragen = {
     "Biopsy punch",
     "12G cannula"
    ],
-   "Helix data sheet: initial jewellery labret, BCR, horseshoe (circular barbell); cannula 18G; Snaptile, gauze clamp, freehand.",
+   "Helix data sheet: initial jewelry labret, BCR, horseshoe (circular barbell); cannula 18G; Snaptile, gauze clamp, freehand.",
    "S. 78"
   ],
   [
-   "Which jewellery does the “Industrial” data sheet list as suitable initial jewellery?",
+   "Which jewelry does the “Industrial” data sheet list as suitable initial jewelry?",
    [
     "Barbell",
     "Dermal anchor",
     "Labret",
     "Horseshoe (circular barbell)"
    ],
-   "Industrial data sheet: initial jewellery barbell 38 mm; cannula 16G; freehand, receiving tube.",
+   "Industrial data sheet: initial jewelry barbell 38 mm; cannula 16G; freehand, receiving tube.",
    "S. 84"
   ],
   [
@@ -158,7 +158,7 @@ KURS.lektionsfragen = {
     "Biopsy punch",
     "14G cannula"
    ],
-   "Industrial data sheet: initial jewellery barbell 38 mm; cannula 16G; freehand, receiving tube.",
+   "Industrial data sheet: initial jewelry barbell 38 mm; cannula 16G; freehand, receiving tube.",
    "S. 84"
   ],
   [
@@ -169,18 +169,18 @@ KURS.lektionsfragen = {
     "Gauze clamp",
     "Septum forceps"
    ],
-   "Industrial data sheet: initial jewellery barbell 38 mm; cannula 16G; freehand, receiving tube.",
+   "Industrial data sheet: initial jewelry barbell 38 mm; cannula 16G; freehand, receiving tube.",
    "S. 84"
   ],
   [
-   "Which jewellery does the “Allergy piercing” data sheet list as suitable initial jewellery?",
+   "Which jewelry does the “Allergy piercing” data sheet list as suitable initial jewelry?",
    [
     "BCR (ball closure ring)",
     "Labret",
     "Surface bar",
     "Barbell"
    ],
-   "Allergy piercing data sheet: initial jewellery horseshoe (circular barbell), curved barbell (banana), BCR; cannula 18G; freehand, receiving tube.",
+   "Allergy piercing data sheet: initial jewelry horseshoe (circular barbell), curved barbell (banana), BCR; cannula 18G; freehand, receiving tube.",
    "S. 83"
   ],
   [
@@ -191,7 +191,7 @@ KURS.lektionsfragen = {
     "Biopsy punch",
     "20G cannula"
    ],
-   "Allergy piercing data sheet: initial jewellery horseshoe (circular barbell), curved barbell (banana), BCR; cannula 18G; freehand, receiving tube.",
+   "Allergy piercing data sheet: initial jewelry horseshoe (circular barbell), curved barbell (banana), BCR; cannula 18G; freehand, receiving tube.",
    "S. 83"
   ],
   [
@@ -202,20 +202,20 @@ KURS.lektionsfragen = {
     "Snaptile",
     "Tongue forceps"
    ],
-   "Allergy piercing data sheet: initial jewellery horseshoe (circular barbell), curved barbell (banana), BCR; cannula 18G; freehand, receiving tube.",
+   "Allergy piercing data sheet: initial jewelry horseshoe (circular barbell), curved barbell (banana), BCR; cannula 18G; freehand, receiving tube.",
    "S. 83"
   ]
  ],
  "8-4": [
   [
-   "Which jewellery does the “Conch” data sheet list as suitable initial jewellery?",
+   "Which jewelry does the “Conch” data sheet list as suitable initial jewelry?",
    [
     "Barbell",
     "Surface bar",
     "Horseshoe (circular barbell)",
     "Dermal anchor"
    ],
-   "Conch data sheet: initial jewellery labret, barbell, BCR; cannula 18G, 16G, biopsy punch; Snaptile, gauze clamp.",
+   "Conch data sheet: initial jewelry labret, barbell, BCR; cannula 18G, 16G, biopsy punch; Snaptile, gauze clamp.",
    "S. 79"
   ],
   [
@@ -226,18 +226,18 @@ KURS.lektionsfragen = {
     "20G cannula",
     "14G cannula"
    ],
-   "Conch data sheet: initial jewellery labret, barbell, BCR; cannula 18G, 16G, biopsy punch; Snaptile, gauze clamp.",
+   "Conch data sheet: initial jewelry labret, barbell, BCR; cannula 18G, 16G, biopsy punch; Snaptile, gauze clamp.",
    "S. 79"
   ],
   [
-   "Which jewellery does the “Snug” data sheet list as suitable initial jewellery?",
+   "Which jewelry does the “Snug” data sheet list as suitable initial jewelry?",
    [
     "Barbell",
     "Dermal anchor",
     "Labret",
     "Surface bar"
    ],
-   "Snug data sheet: initial jewellery curved barbell (banana), barbell, BCR, horseshoe (circular barbell); cannula 18G; freehand, receiving tube.",
+   "Snug data sheet: initial jewelry curved barbell (banana), barbell, BCR, horseshoe (circular barbell); cannula 18G; freehand, receiving tube.",
    "S. 82"
   ],
   [
@@ -248,7 +248,7 @@ KURS.lektionsfragen = {
     "16G cannula",
     "14G cannula"
    ],
-   "Snug data sheet: initial jewellery curved barbell (banana), barbell, BCR, horseshoe (circular barbell); cannula 18G; freehand, receiving tube.",
+   "Snug data sheet: initial jewelry curved barbell (banana), barbell, BCR, horseshoe (circular barbell); cannula 18G; freehand, receiving tube.",
    "S. 82"
   ],
   [
@@ -259,20 +259,20 @@ KURS.lektionsfragen = {
     "Tongue forceps",
     "Snaptile"
    ],
-   "Snug data sheet: initial jewellery curved barbell (banana), barbell, BCR, horseshoe (circular barbell); cannula 18G; freehand, receiving tube.",
+   "Snug data sheet: initial jewelry curved barbell (banana), barbell, BCR, horseshoe (circular barbell); cannula 18G; freehand, receiving tube.",
    "S. 82"
   ]
  ],
  "8-5": [
   [
-   "Which jewellery does the “Rook” data sheet list as suitable initial jewellery?",
+   "Which jewelry does the “Rook” data sheet list as suitable initial jewelry?",
    [
     "Horseshoe (circular barbell)",
     "Dermal anchor",
     "Barbell",
     "Labret"
    ],
-   "Rook data sheet: initial jewellery horseshoe (circular barbell), curved barbell (banana), BCR; cannula 18G; receiving tube.",
+   "Rook data sheet: initial jewelry horseshoe (circular barbell), curved barbell (banana), BCR; cannula 18G; receiving tube.",
    "S. 80"
   ],
   [
@@ -283,7 +283,7 @@ KURS.lektionsfragen = {
     "Biopsy punch",
     "14G cannula"
    ],
-   "Rook data sheet: initial jewellery horseshoe (circular barbell), curved barbell (banana), BCR; cannula 18G; receiving tube.",
+   "Rook data sheet: initial jewelry horseshoe (circular barbell), curved barbell (banana), BCR; cannula 18G; receiving tube.",
    "S. 80"
   ],
   [
@@ -294,18 +294,18 @@ KURS.lektionsfragen = {
     "Snaptile",
     "Septum forceps"
    ],
-   "Rook data sheet: initial jewellery horseshoe (circular barbell), curved barbell (banana), BCR; cannula 18G; receiving tube.",
+   "Rook data sheet: initial jewelry horseshoe (circular barbell), curved barbell (banana), BCR; cannula 18G; receiving tube.",
    "S. 80"
   ],
   [
-   "Which jewellery does the “Daith” data sheet list as suitable initial jewellery?",
+   "Which jewelry does the “Daith” data sheet list as suitable initial jewelry?",
    [
     "BCR (ball closure ring)",
     "Horseshoe (circular barbell)",
     "Barbell",
     "Labret"
    ],
-   "Daith data sheet: initial jewellery curved barbell (banana), BCR; cannula 18G (bend if necessary); receiving tube.",
+   "Daith data sheet: initial jewelry curved barbell (banana), BCR; cannula 18G (bend if necessary); receiving tube.",
    "S. 81"
   ],
   [
@@ -316,7 +316,7 @@ KURS.lektionsfragen = {
     "20G cannula",
     "12G cannula"
    ],
-   "Daith data sheet: initial jewellery curved barbell (banana), BCR; cannula 18G (bend if necessary); receiving tube.",
+   "Daith data sheet: initial jewelry curved barbell (banana), BCR; cannula 18G (bend if necessary); receiving tube.",
    "S. 81"
   ],
   [
@@ -327,20 +327,20 @@ KURS.lektionsfragen = {
     "Gauze clamp",
     "Tragus forceps"
    ],
-   "Daith data sheet: initial jewellery curved barbell (banana), BCR; cannula 18G (bend if necessary); receiving tube.",
+   "Daith data sheet: initial jewelry curved barbell (banana), BCR; cannula 18G (bend if necessary); receiving tube.",
    "S. 81"
   ]
  ],
  "8-6": [
   [
-   "Which jewellery does the “Nose (Nostril)” data sheet list as suitable initial jewellery?",
+   "Which jewelry does the “Nose (Nostril)” data sheet list as suitable initial jewelry?",
    [
     "Labret",
     "Dermal anchor",
     "Curved barbell (banana)",
     "Horseshoe (circular barbell)"
    ],
-   "Nose (Nostril) data sheet: initial jewellery labret; cannula 18G; gauze clamp, Snaptile.",
+   "Nose (Nostril) data sheet: initial jewelry labret; cannula 18G; gauze clamp, Snaptile.",
    "S. 85"
   ],
   [
@@ -351,18 +351,18 @@ KURS.lektionsfragen = {
     "16G cannula",
     "20G cannula"
    ],
-   "Nose (Nostril) data sheet: initial jewellery labret; cannula 18G; gauze clamp, Snaptile.",
+   "Nose (Nostril) data sheet: initial jewelry labret; cannula 18G; gauze clamp, Snaptile.",
    "S. 85"
   ],
   [
-   "Which jewellery does the “Septum” data sheet list as suitable initial jewellery?",
+   "Which jewelry does the “Septum” data sheet list as suitable initial jewelry?",
    [
     "Horseshoe (circular barbell)",
     "Curved barbell (banana)",
     "Labret",
     "Barbell"
    ],
-   "Septum data sheet: initial jewellery horseshoe (circular barbell); cannula 18G, 16G; septum forceps.",
+   "Septum data sheet: initial jewelry horseshoe (circular barbell); cannula 18G, 16G; septum forceps.",
    "S. 88"
   ],
   [
@@ -373,7 +373,7 @@ KURS.lektionsfragen = {
     "20G cannula",
     "14G cannula"
    ],
-   "Septum data sheet: initial jewellery horseshoe (circular barbell); cannula 18G, 16G; septum forceps.",
+   "Septum data sheet: initial jewelry horseshoe (circular barbell); cannula 18G, 16G; septum forceps.",
    "S. 88"
   ],
   [
@@ -384,20 +384,20 @@ KURS.lektionsfragen = {
     "Snaptile",
     "Receiving tube"
    ],
-   "Septum data sheet: initial jewellery horseshoe (circular barbell); cannula 18G, 16G; septum forceps.",
+   "Septum data sheet: initial jewelry horseshoe (circular barbell); cannula 18G, 16G; septum forceps.",
    "S. 88"
   ]
  ],
  "8-7": [
   [
-   "Which jewellery does the “Eyebrow” data sheet list as suitable initial jewellery?",
+   "Which jewelry does the “Eyebrow” data sheet list as suitable initial jewelry?",
    [
     "Horseshoe (circular barbell)",
     "Surface bar",
     "Labret",
     "Dermal anchor"
    ],
-   "Eyebrow data sheet: initial jewellery curved barbell (banana), horseshoe (circular barbell); cannula 18G; Snaptile, gauze clamp.",
+   "Eyebrow data sheet: initial jewelry curved barbell (banana), horseshoe (circular barbell); cannula 18G; Snaptile, gauze clamp.",
    "S. 89"
   ],
   [
@@ -408,18 +408,18 @@ KURS.lektionsfragen = {
     "14G cannula",
     "16G cannula"
    ],
-   "Eyebrow data sheet: initial jewellery curved barbell (banana), horseshoe (circular barbell); cannula 18G; Snaptile, gauze clamp.",
+   "Eyebrow data sheet: initial jewelry curved barbell (banana), horseshoe (circular barbell); cannula 18G; Snaptile, gauze clamp.",
    "S. 89"
   ],
   [
-   "Which jewellery does the “Bridge” data sheet list as suitable initial jewellery?",
+   "Which jewelry does the “Bridge” data sheet list as suitable initial jewelry?",
    [
     "Curved barbell (banana)",
     "BCR (ball closure ring)",
     "Surface bar",
     "Dermal anchor"
    ],
-   "Bridge data sheet: initial jewellery barbell, curved barbell (banana); cannula 18G; Snaptile, gauze clamp.",
+   "Bridge data sheet: initial jewelry barbell, curved barbell (banana); cannula 18G; Snaptile, gauze clamp.",
    "S. 91"
   ],
   [
@@ -430,20 +430,20 @@ KURS.lektionsfragen = {
     "20G cannula",
     "16G cannula"
    ],
-   "Bridge data sheet: initial jewellery barbell, curved barbell (banana); cannula 18G; Snaptile, gauze clamp.",
+   "Bridge data sheet: initial jewelry barbell, curved barbell (banana); cannula 18G; Snaptile, gauze clamp.",
    "S. 91"
   ]
  ],
  "8-8": [
   [
-   "Which jewellery does the “Labret” data sheet list as suitable initial jewellery?",
+   "Which jewelry does the “Labret” data sheet list as suitable initial jewelry?",
    [
     "Labret",
     "Dermal anchor",
     "Surface bar",
     "Curved barbell (banana)"
    ],
-   "Labret data sheet: initial jewellery labret, horseshoe (circular barbell); cannula 18G; Snaptile, gauze clamp.",
+   "Labret data sheet: initial jewelry labret, horseshoe (circular barbell); cannula 18G; Snaptile, gauze clamp.",
    "S. 86"
   ],
   [
@@ -454,18 +454,18 @@ KURS.lektionsfragen = {
     "20G cannula",
     "14G cannula"
    ],
-   "Labret data sheet: initial jewellery labret, horseshoe (circular barbell); cannula 18G; Snaptile, gauze clamp.",
+   "Labret data sheet: initial jewelry labret, horseshoe (circular barbell); cannula 18G; Snaptile, gauze clamp.",
    "S. 86"
   ],
   [
-   "Which jewellery does the “Eskimo” data sheet list as suitable initial jewellery?",
+   "Which jewelry does the “Eskimo” data sheet list as suitable initial jewelry?",
    [
     "Barbell",
     "BCR (ball closure ring)",
     "Surface bar",
     "Dermal anchor"
    ],
-   "Eskimo data sheet: initial jewellery barbell, curved barbell (banana); cannula 18G; Snaptile, gauze clamp, freehand.",
+   "Eskimo data sheet: initial jewelry barbell, curved barbell (banana); cannula 18G; Snaptile, gauze clamp, freehand.",
    "S. 93"
   ],
   [
@@ -476,20 +476,20 @@ KURS.lektionsfragen = {
     "Biopsy punch",
     "20G cannula"
    ],
-   "Eskimo data sheet: initial jewellery barbell, curved barbell (banana); cannula 18G; Snaptile, gauze clamp, freehand.",
+   "Eskimo data sheet: initial jewelry barbell, curved barbell (banana); cannula 18G; Snaptile, gauze clamp, freehand.",
    "S. 93"
   ]
  ],
  "8-9": [
   [
-   "Which jewellery does the “Lip frenulum (Smiley)” data sheet list as suitable initial jewellery?",
+   "Which jewelry does the “Lip frenulum (Smiley)” data sheet list as suitable initial jewelry?",
    [
     "BCR (ball closure ring)",
     "Labret",
     "Barbell",
     "Curved barbell (banana)"
    ],
-   "Lip frenulum (Smiley) data sheet: initial jewellery horseshoe (circular barbell), BCR; cannula 18G; septum forceps, freehand.",
+   "Lip frenulum (Smiley) data sheet: initial jewelry horseshoe (circular barbell), BCR; cannula 18G; septum forceps, freehand.",
    "S. 87"
   ],
   [
@@ -500,7 +500,7 @@ KURS.lektionsfragen = {
     "16G cannula",
     "Biopsy punch"
    ],
-   "Lip frenulum (Smiley) data sheet: initial jewellery horseshoe (circular barbell), BCR; cannula 18G; septum forceps, freehand.",
+   "Lip frenulum (Smiley) data sheet: initial jewelry horseshoe (circular barbell), BCR; cannula 18G; septum forceps, freehand.",
    "S. 87"
   ],
   [
@@ -511,18 +511,18 @@ KURS.lektionsfragen = {
     "Tongue forceps",
     "Snaptile"
    ],
-   "Lip frenulum (Smiley) data sheet: initial jewellery horseshoe (circular barbell), BCR; cannula 18G; septum forceps, freehand.",
+   "Lip frenulum (Smiley) data sheet: initial jewelry horseshoe (circular barbell), BCR; cannula 18G; septum forceps, freehand.",
    "S. 87"
   ],
   [
-   "Which jewellery does the “Tongue” data sheet list as suitable initial jewellery?",
+   "Which jewelry does the “Tongue” data sheet list as suitable initial jewelry?",
    [
     "Barbell",
     "Curved barbell (banana)",
     "BCR (ball closure ring)",
     "Dermal anchor"
    ],
-   "Tongue data sheet: initial jewellery 20 mm barbell (shorter after 10 days if needed); cannula 16G; Snaptile, gauze clamp, tongue forceps.",
+   "Tongue data sheet: initial jewelry 20 mm barbell (shorter after 10 days if needed); cannula 16G; Snaptile, gauze clamp, tongue forceps.",
    "S. 90"
   ],
   [
@@ -533,7 +533,7 @@ KURS.lektionsfragen = {
     "20G cannula",
     "14G cannula"
    ],
-   "Tongue data sheet: initial jewellery 20 mm barbell (shorter after 10 days if needed); cannula 16G; Snaptile, gauze clamp, tongue forceps.",
+   "Tongue data sheet: initial jewelry 20 mm barbell (shorter after 10 days if needed); cannula 16G; Snaptile, gauze clamp, tongue forceps.",
    "S. 90"
   ],
   [
@@ -544,20 +544,20 @@ KURS.lektionsfragen = {
     "Tragus forceps",
     "Septum forceps"
    ],
-   "Tongue data sheet: initial jewellery 20 mm barbell (shorter after 10 days if needed); cannula 16G; Snaptile, gauze clamp, tongue forceps.",
+   "Tongue data sheet: initial jewelry 20 mm barbell (shorter after 10 days if needed); cannula 16G; Snaptile, gauze clamp, tongue forceps.",
    "S. 90"
   ]
  ],
  "8-10": [
   [
-   "Which jewellery does the “Cheek” data sheet list as suitable initial jewellery?",
+   "Which jewelry does the “Cheek” data sheet list as suitable initial jewelry?",
    [
     "Barbell",
     "Surface bar",
     "BCR (ball closure ring)",
     "Horseshoe (circular barbell)"
    ],
-   "Cheek data sheet: initial jewellery barbell, labret; cannula 18G; Snaptile, gauze clamp.",
+   "Cheek data sheet: initial jewelry barbell, labret; cannula 18G; Snaptile, gauze clamp.",
    "S. 92"
   ],
   [
@@ -568,20 +568,20 @@ KURS.lektionsfragen = {
     "12G cannula",
     "20G cannula"
    ],
-   "Cheek data sheet: initial jewellery barbell, labret; cannula 18G; Snaptile, gauze clamp.",
+   "Cheek data sheet: initial jewelry barbell, labret; cannula 18G; Snaptile, gauze clamp.",
    "S. 92"
   ]
  ],
  "8-11": [
   [
-   "Which jewellery does the “Navel” data sheet list as suitable initial jewellery?",
+   "Which jewelry does the “Navel” data sheet list as suitable initial jewelry?",
    [
     "BCR (ball closure ring)",
     "Horseshoe (circular barbell)",
     "Barbell",
     "Surface bar"
    ],
-   "Navel data sheet: initial jewellery curved barbell (banana), BCR; cannula 16G; Snaptile, freehand.",
+   "Navel data sheet: initial jewelry curved barbell (banana), BCR; cannula 16G; Snaptile, freehand.",
    "S. 94"
   ],
   [
@@ -592,20 +592,20 @@ KURS.lektionsfragen = {
     "Biopsy punch",
     "20G cannula"
    ],
-   "Navel data sheet: initial jewellery curved barbell (banana), BCR; cannula 16G; Snaptile, freehand.",
+   "Navel data sheet: initial jewelry curved barbell (banana), BCR; cannula 16G; Snaptile, freehand.",
    "S. 94"
   ]
  ],
  "8-12": [
   [
-   "Which jewellery does the “Nipple” data sheet list as suitable initial jewellery?",
+   "Which jewelry does the “Nipple” data sheet list as suitable initial jewelry?",
    [
     "Barbell",
     "Horseshoe (circular barbell)",
     "Surface bar",
     "Curved barbell (banana)"
    ],
-   "Nipple data sheet: initial jewellery barbell, BCR; cannula 16G; Snaptile, gauze clamp.",
+   "Nipple data sheet: initial jewelry barbell, BCR; cannula 16G; Snaptile, gauze clamp.",
    "S. 95"
   ],
   [
@@ -616,20 +616,20 @@ KURS.lektionsfragen = {
     "20G cannula",
     "14G cannula"
    ],
-   "Nipple data sheet: initial jewellery barbell, BCR; cannula 16G; Snaptile, gauze clamp.",
+   "Nipple data sheet: initial jewelry barbell, BCR; cannula 16G; Snaptile, gauze clamp.",
    "S. 95"
   ]
  ],
  "8-13": [
   [
-   "Which jewellery does the “Surface” data sheet list as suitable initial jewellery?",
+   "Which jewelry does the “Surface” data sheet list as suitable initial jewelry?",
    [
     "Dermal anchor",
     "Labret",
     "Barbell",
     "BCR (ball closure ring)"
    ],
-   "Surface data sheet: initial jewellery surface bar, curved barbell (banana), Dermal Anchor; cannula 16G, 18G, biopsy punch; freehand, Snaptile, gauze clamp.",
+   "Surface data sheet: initial jewelry surface bar, curved barbell (banana), Dermal Anchor; cannula 16G, 18G, biopsy punch; freehand, Snaptile, gauze clamp.",
    "S. 96"
   ],
   [
@@ -640,20 +640,20 @@ KURS.lektionsfragen = {
     "20G cannula",
     "14G cannula"
    ],
-   "Surface data sheet: initial jewellery surface bar, curved barbell (banana), Dermal Anchor; cannula 16G, 18G, biopsy punch; freehand, Snaptile, gauze clamp.",
+   "Surface data sheet: initial jewelry surface bar, curved barbell (banana), Dermal Anchor; cannula 16G, 18G, biopsy punch; freehand, Snaptile, gauze clamp.",
    "S. 96"
   ]
  ],
  "8-14": [
   [
-   "Which jewellery does the “Frenulum” data sheet list as suitable initial jewellery?",
+   "Which jewelry does the “Frenulum” data sheet list as suitable initial jewelry?",
    [
     "Curved barbell (banana)",
     "Labret",
     "BCR (ball closure ring)",
     "Surface bar"
    ],
-   "Frenulum data sheet: initial jewellery curved barbell (banana), barbell; cannula 16G, 18G; receiving tube, freehand, gauze clamp.",
+   "Frenulum data sheet: initial jewelry curved barbell (banana), barbell; cannula 16G, 18G; receiving tube, freehand, gauze clamp.",
    "S. 97"
   ],
   [
@@ -664,7 +664,7 @@ KURS.lektionsfragen = {
     "14G cannula",
     "Biopsy punch"
    ],
-   "Frenulum data sheet: initial jewellery curved barbell (banana), barbell; cannula 16G, 18G; receiving tube, freehand, gauze clamp.",
+   "Frenulum data sheet: initial jewelry curved barbell (banana), barbell; cannula 16G, 18G; receiving tube, freehand, gauze clamp.",
    "S. 97"
   ],
   [
@@ -675,18 +675,18 @@ KURS.lektionsfragen = {
     "Tongue forceps",
     "Snaptile"
    ],
-   "Frenulum data sheet: initial jewellery curved barbell (banana), barbell; cannula 16G, 18G; receiving tube, freehand, gauze clamp.",
+   "Frenulum data sheet: initial jewelry curved barbell (banana), barbell; cannula 16G, 18G; receiving tube, freehand, gauze clamp.",
    "S. 97"
   ],
   [
-   "Which jewellery does the “Prince Albert” data sheet list as suitable initial jewellery?",
+   "Which jewelry does the “Prince Albert” data sheet list as suitable initial jewelry?",
    [
     "BCR (ball closure ring)",
     "Surface bar",
     "Horseshoe (circular barbell)",
     "Dermal anchor"
    ],
-   "Prince Albert data sheet: initial jewellery BCR; cannula 14G; freehand.",
+   "Prince Albert data sheet: initial jewelry BCR; cannula 14G; freehand.",
    "S. 98"
   ],
   [
@@ -697,18 +697,18 @@ KURS.lektionsfragen = {
     "16G cannula",
     "20G cannula"
    ],
-   "Prince Albert data sheet: initial jewellery BCR; cannula 14G; freehand.",
+   "Prince Albert data sheet: initial jewelry BCR; cannula 14G; freehand.",
    "S. 98"
   ],
   [
-   "Which jewellery does the “Dydoe” data sheet list as suitable initial jewellery?",
+   "Which jewelry does the “Dydoe” data sheet list as suitable initial jewelry?",
    [
     "Barbell",
     "Dermal anchor",
     "BCR (ball closure ring)",
     "Horseshoe (circular barbell)"
    ],
-   "Dydoe data sheet: initial jewellery curved barbell (banana), barbell; cannula 16G, 18G; freehand.",
+   "Dydoe data sheet: initial jewelry curved barbell (banana), barbell; cannula 16G, 18G; freehand.",
    "S. 99"
   ],
   [
@@ -719,18 +719,18 @@ KURS.lektionsfragen = {
     "Biopsy punch",
     "14G cannula"
    ],
-   "Dydoe data sheet: initial jewellery curved barbell (banana), barbell; cannula 16G, 18G; freehand.",
+   "Dydoe data sheet: initial jewelry curved barbell (banana), barbell; cannula 16G, 18G; freehand.",
    "S. 99"
   ],
   [
-   "Which jewellery does the “Pubic” data sheet list as suitable initial jewellery?",
+   "Which jewelry does the “Pubic” data sheet list as suitable initial jewelry?",
    [
     "Surface bar",
     "Horseshoe (circular barbell)",
     "Labret",
     "Dermal anchor"
    ],
-   "Pubic data sheet: initial jewellery BCR, barbell, surface bar, curved barbell (banana); cannula 16G, 18G; freehand, gauze clamp.",
+   "Pubic data sheet: initial jewelry BCR, barbell, surface bar, curved barbell (banana); cannula 16G, 18G; freehand, gauze clamp.",
    "S. 100"
   ],
   [
@@ -741,18 +741,18 @@ KURS.lektionsfragen = {
     "20G cannula",
     "Biopsy punch"
    ],
-   "Pubic data sheet: initial jewellery BCR, barbell, surface bar, curved barbell (banana); cannula 16G, 18G; freehand, gauze clamp.",
+   "Pubic data sheet: initial jewelry BCR, barbell, surface bar, curved barbell (banana); cannula 16G, 18G; freehand, gauze clamp.",
    "S. 100"
   ],
   [
-   "Which jewellery does the “Hafada” data sheet list as suitable initial jewellery?",
+   "Which jewelry does the “Hafada” data sheet list as suitable initial jewelry?",
    [
     "Curved barbell (banana)",
     "Dermal anchor",
     "Labret",
     "Horseshoe (circular barbell)"
    ],
-   "Hafada data sheet: initial jewellery BCR, curved barbell (banana); cannula 16G, 18G; freehand, Snaptile, gauze clamp.",
+   "Hafada data sheet: initial jewelry BCR, curved barbell (banana); cannula 16G, 18G; freehand, Snaptile, gauze clamp.",
    "S. 101"
   ],
   [
@@ -763,18 +763,18 @@ KURS.lektionsfragen = {
     "12G cannula",
     "20G cannula"
    ],
-   "Hafada data sheet: initial jewellery BCR, curved barbell (banana); cannula 16G, 18G; freehand, Snaptile, gauze clamp.",
+   "Hafada data sheet: initial jewelry BCR, curved barbell (banana); cannula 16G, 18G; freehand, Snaptile, gauze clamp.",
    "S. 101"
   ],
   [
-   "Which jewellery does the “Guiche” data sheet list as suitable initial jewellery?",
+   "Which jewelry does the “Guiche” data sheet list as suitable initial jewelry?",
    [
     "Barbell",
     "Horseshoe (circular barbell)",
     "Surface bar",
     "Curved barbell (banana)"
    ],
-   "Guiche data sheet: initial jewellery BCR, barbell; cannula 16G, 18G; freehand.",
+   "Guiche data sheet: initial jewelry BCR, barbell; cannula 16G, 18G; freehand.",
    "S. 102"
   ],
   [
@@ -785,20 +785,20 @@ KURS.lektionsfragen = {
     "12G cannula",
     "20G cannula"
    ],
-   "Guiche data sheet: initial jewellery BCR, barbell; cannula 16G, 18G; freehand.",
+   "Guiche data sheet: initial jewelry BCR, barbell; cannula 16G, 18G; freehand.",
    "S. 102"
   ]
  ],
  "8-15": [
   [
-   "Which jewellery does the “Christina” data sheet list as suitable initial jewellery?",
+   "Which jewelry does the “Christina” data sheet list as suitable initial jewelry?",
    [
     "BCR (ball closure ring)",
     "Horseshoe (circular barbell)",
     "Dermal anchor",
     "Labret"
    ],
-   "Christina data sheet: initial jewellery curved barbell (banana), barbell, BCR; cannula 16G, 18G; freehand, Snaptile, gauze clamp.",
+   "Christina data sheet: initial jewelry curved barbell (banana), barbell, BCR; cannula 16G, 18G; freehand, Snaptile, gauze clamp.",
    "S. 105"
   ],
   [
@@ -809,18 +809,18 @@ KURS.lektionsfragen = {
     "14G cannula",
     "12G cannula"
    ],
-   "Christina data sheet: initial jewellery curved barbell (banana), barbell, BCR; cannula 16G, 18G; freehand, Snaptile, gauze clamp.",
+   "Christina data sheet: initial jewelry curved barbell (banana), barbell, BCR; cannula 16G, 18G; freehand, Snaptile, gauze clamp.",
    "S. 105"
   ],
   [
-   "Which jewellery does the “Clitoral hood” data sheet list as suitable initial jewellery?",
+   "Which jewelry does the “Clitoral hood” data sheet list as suitable initial jewelry?",
    [
     "Barbell",
     "Surface bar",
     "Horseshoe (circular barbell)",
     "Dermal anchor"
    ],
-   "Clitoral hood data sheet: initial jewellery BCR, curved barbell (banana), barbell; cannula 16G, 18G; freehand.",
+   "Clitoral hood data sheet: initial jewelry BCR, curved barbell (banana), barbell; cannula 16G, 18G; freehand.",
    "S. 106"
   ],
   [
@@ -831,18 +831,18 @@ KURS.lektionsfragen = {
     "Biopsy punch",
     "14G cannula"
    ],
-   "Clitoral hood data sheet: initial jewellery BCR, curved barbell (banana), barbell; cannula 16G, 18G; freehand.",
+   "Clitoral hood data sheet: initial jewelry BCR, curved barbell (banana), barbell; cannula 16G, 18G; freehand.",
    "S. 106"
   ],
   [
-   "Which jewellery does the “Labia” data sheet list as suitable initial jewellery?",
+   "Which jewelry does the “Labia” data sheet list as suitable initial jewelry?",
    [
     "BCR (ball closure ring)",
     "Dermal anchor",
     "Barbell",
     "Horseshoe (circular barbell)"
    ],
-   "Labia data sheet: initial jewellery BCR; cannula 16G, 18G; freehand, Snaptile, gauze clamp.",
+   "Labia data sheet: initial jewelry BCR; cannula 16G, 18G; freehand, Snaptile, gauze clamp.",
    "S. 107"
   ],
   [
@@ -853,7 +853,7 @@ KURS.lektionsfragen = {
     "Biopsy punch",
     "20G cannula"
    ],
-   "Labia data sheet: initial jewellery BCR; cannula 16G, 18G; freehand, Snaptile, gauze clamp.",
+   "Labia data sheet: initial jewelry BCR; cannula 16G, 18G; freehand, Snaptile, gauze clamp.",
    "S. 107"
   ]
  ],
@@ -863,7 +863,7 @@ KURS.lektionsfragen = {
    [
     "Do not perform",
     "Pierce with 16G and a BCR",
-    "Only pierce under anaesthesia",
+    "Only pierce under anesthesia",
     "Only by experienced piercers"
    ],
    "DO NOT PERFORM. Risk of serious harm.",
@@ -874,7 +874,7 @@ KURS.lektionsfragen = {
    [
     "Do not perform",
     "Pierce with 16G and a BCR",
-    "Only pierce under anaesthesia",
+    "Only pierce under anesthesia",
     "Only by experienced piercers"
    ],
    "DO NOT PERFORM. Risk of serious harm. Never pierce through the erectile tissue: there is a risk of serious damage, even bleeding to death.",
@@ -885,7 +885,7 @@ KURS.lektionsfragen = {
    [
     "Do not perform",
     "Pierce with 16G and a BCR",
-    "Only pierce under anaesthesia",
+    "Only pierce under anesthesia",
     "Only by experienced piercers"
    ],
    "DO NOT PERFORM. Risk of damage to the libido.",
@@ -896,7 +896,7 @@ KURS.lektionsfragen = {
    [
     "Do not perform",
     "Pierce with 16G and a BCR",
-    "Only pierce under anaesthesia",
+    "Only pierce under anesthesia",
     "Only by experienced piercers"
    ],
    "DO NOT PERFORM. Risk of harm.",
@@ -907,7 +907,7 @@ KURS.lektionsfragen = {
    [
     "Do not perform",
     "Pierce with 16G and a BCR",
-    "Only pierce under anaesthesia",
+    "Only pierce under anesthesia",
     "Only by experienced piercers"
    ],
    "DO NOT PERFORM. Risk of harm.",
@@ -923,18 +923,18 @@ KURS.lektionsfragen = {
     "14G, 2.2 mm",
     "20G. 1,1 mm"
    ],
-   "Green 18G (1.3 mm), grey 16G (1.7 mm), orange 14G (2.2 mm). Manufacturer data; rounded in the book.",
+   "Green 18G (1.3 mm), gray 16G (1.7 mm), orange 14G (2.2 mm). Manufacturer data; rounded in the book.",
    "S. 64"
   ],
   [
-   "A cannula has a grey hub. What gauge is it?",
+   "A cannula has a gray hub. What gauge is it?",
    [
     "16G, 1.7 mm",
     "18G, 1.3 mm",
     "14G, 2.2 mm",
     "20G. 1,1 mm"
    ],
-   "Green 18G (1.3 mm), grey 16G (1.7 mm), orange 14G (2.2 mm). Manufacturer data; rounded in the book.",
+   "Green 18G (1.3 mm), gray 16G (1.7 mm), orange 14G (2.2 mm). Manufacturer data; rounded in the book.",
    "S. 64"
   ],
   [
@@ -945,7 +945,7 @@ KURS.lektionsfragen = {
     "16G, 1.7 mm",
     "20G. 1,1 mm"
    ],
-   "Green 18G (1.3 mm), grey 16G (1.7 mm), orange 14G (2.2 mm). Manufacturer data; rounded in the book.",
+   "Green 18G (1.3 mm), gray 16G (1.7 mm), orange 14G (2.2 mm). Manufacturer data; rounded in the book.",
    "S. 64"
   ]
  ],
@@ -953,10 +953,10 @@ KURS.lektionsfragen = {
   [
    "What do you need the scissors for when piercing?",
    [
-    "Shortens the plastic tube of the cannula after piercing so the jewellery goes in more easily",
+    "Shortens the plastic tube of the cannula after piercing so the jewelry goes in more easily",
     "Shines through the ear, for example, to identify blood vessels",
     "Spreads or closes ball closure rings (BCR) to remove or insert the ball",
-    "Cuts through jewellery when a ball can no longer be loosened"
+    "Cuts through jewelry when a ball can no longer be loosened"
    ],
    "Tool table: Scissors.",
    "S. 66–73"
@@ -965,9 +965,9 @@ KURS.lektionsfragen = {
    "What is the ball grabber for?",
    [
     "Holds piercing balls and makes screwing them on easier",
-    "Measures jewellery and adjusts the position of the piercing",
-    "Cuts through jewellery when a ball can no longer be loosened",
-    "Shortens the plastic tube of the cannula after piercing so the jewellery goes in more easily"
+    "Measures jewelry and adjusts the position of the piercing",
+    "Cuts through jewelry when a ball can no longer be loosened",
+    "Shortens the plastic tube of the cannula after piercing so the jewelry goes in more easily"
    ],
    "Tool table: Ball grabber.",
    "S. 66–73"
@@ -975,10 +975,10 @@ KURS.lektionsfragen = {
   [
    "What is the caliper for?",
    [
-    "Measures jewellery and adjusts the position of the piercing",
+    "Measures jewelry and adjusts the position of the piercing",
     "Shines through the ear, for example, to identify blood vessels",
     "Holds piercing balls and makes screwing them on easier",
-    "Cuts through jewellery when a ball can no longer be loosened"
+    "Cuts through jewelry when a ball can no longer be loosened"
    ],
    "Tool table: Caliper.",
    "S. 66–73"
@@ -988,28 +988,28 @@ KURS.lektionsfragen = {
    [
     "Spreads or closes ball closure rings (BCR) to remove or insert the ball",
     "Shines through the ear, for example, to identify blood vessels",
-    "Cuts through jewellery when a ball can no longer be loosened",
-    "Shortens the plastic tube of the cannula after piercing so the jewellery goes in more easily"
+    "Cuts through jewelry when a ball can no longer be loosened",
+    "Shortens the plastic tube of the cannula after piercing so the jewelry goes in more easily"
    ],
    "Tool table: Ring opening and ring closing pliers.",
    "S. 66–73"
   ],
   [
-   "What is the torch with green light for?",
+   "What is the flashlight with green light for?",
    [
     "Shines through the ear, for example, to identify blood vessels",
-    "Cuts through jewellery when a ball can no longer be loosened",
-    "Measures jewellery and adjusts the position of the piercing",
+    "Cuts through jewelry when a ball can no longer be loosened",
+    "Measures jewelry and adjusts the position of the piercing",
     "Spreads or closes ball closure rings (BCR) to remove or insert the ball"
    ],
-   "Tool table: Torch (green light).",
+   "Tool table: Flashlight (green light).",
    "S. 66–73"
   ],
   [
    "What is the mini side cutter for?",
    [
-    "Cuts through jewellery when a ball can no longer be loosened",
-    "Measures jewellery and adjusts the position of the piercing",
+    "Cuts through jewelry when a ball can no longer be loosened",
+    "Measures jewelry and adjusts the position of the piercing",
     "Shines through the ear, for example, to identify blood vessels",
     "Spreads or closes ball closure rings (BCR) to remove or insert the ball"
    ],
@@ -1045,7 +1045,7 @@ KURS.lektionsfragen = {
    [
     "Have the client fill in the consent form",
     "Disinfect the area (alcohol swab)",
-    "Examine the area and choose suitable initial jewellery (extra length!)",
+    "Examine the area and choose suitable initial jewelry (extra length!)",
     "Meanwhile, prepare the workstation and lay out all instruments ready to hand"
    ],
    "Step 4: Have the client fill in the consent form.",
@@ -1078,16 +1078,16 @@ KURS.lektionsfragen = {
   [
    "Procedure, step 6: “The client enters the piercing room: create a pleasant atmosphere and ease the client’s anxiety”. What comes next?",
    [
-    "Examine the area and choose suitable initial jewellery (extra length!)",
+    "Examine the area and choose suitable initial jewelry (extra length!)",
     "Greeting, small talk",
     "Ask which piercings the client wants; ease any anxiety if needed",
     "Mark the entry and exit points of the cannula with the single-use marker"
    ],
-   "Step 7: Examine the area and choose suitable initial jewellery (extra length!).",
+   "Step 7: Examine the area and choose suitable initial jewelry (extra length!).",
    "S. 111"
   ],
   [
-   "Procedure, step 7: “Examine the area and choose suitable initial jewellery (extra length!)”. What comes next?",
+   "Procedure, step 7: “Examine the area and choose suitable initial jewelry (extra length!)”. What comes next?",
    [
     "Disinfect the area (alcohol swab)",
     "The client enters the piercing room: create a pleasant atmosphere and ease the client’s anxiety",
@@ -1112,9 +1112,9 @@ KURS.lektionsfragen = {
    "Procedure, step 9: “Mark the entry and exit points of the cannula with the single-use marker”. What comes next?",
    [
     "Let the client check whether it looks right",
-    "Insert the initial jewellery into the plastic sheath",
+    "Insert the initial jewelry into the plastic sheath",
     "Apply the clamp or receiving tube",
-    "Examine the area and choose suitable initial jewellery (extra length!)"
+    "Examine the area and choose suitable initial jewelry (extra length!)"
    ],
    "Step 10: Let the client check whether it looks right.",
    "S. 111"
@@ -1125,9 +1125,9 @@ KURS.lektionsfragen = {
    "Procedure, step 10: “Let the client check whether it looks right”. What comes next?",
    [
     "Apply the clamp or receiving tube",
-    "Examine the area and choose suitable initial jewellery (extra length!)",
+    "Examine the area and choose suitable initial jewelry (extra length!)",
     "Pierce, ideally always into the visible side – with a labret, for example, where the ball will sit. The faster you pierce, the less pain",
-    "Push it through the piercing channel, don’t pull, or the jewellery may slip off. This is painful: have the client breathe out while you do it"
+    "Push it through the piercing channel, don’t pull, or the jewelry may slip off. This is painful: have the client breathe out while you do it"
    ],
    "Step 11: Apply the clamp or receiving tube.",
    "S. 112"
@@ -1137,8 +1137,8 @@ KURS.lektionsfragen = {
    [
     "Pierce, ideally always into the visible side – with a labret, for example, where the ball will sit. The faster you pierce, the less pain",
     "Mark the entry and exit points of the cannula with the single-use marker",
-    "Carefully pull the tube off the jewellery",
-    "Insert the initial jewellery into the plastic sheath"
+    "Carefully pull the tube off the jewelry",
+    "Insert the initial jewelry into the plastic sheath"
    ],
    "Step 12: Pierce, ideally always into the visible side – with a labret, for example, where the ball will sit. The faster you pierce, the less pain.",
    "S. 112"
@@ -1148,7 +1148,7 @@ KURS.lektionsfragen = {
    [
     "Pull out the cannula; the plastic sheath stays in the piercing channel",
     "Disinfect the area (alcohol swab)",
-    "Trim the plastic sheath slightly with scissors so the jewellery goes in more easily",
+    "Trim the plastic sheath slightly with scissors so the jewelry goes in more easily",
     "Pick up the ball"
    ],
    "Step 13: Pull out the cannula; the plastic sheath stays in the piercing channel.",
@@ -1157,55 +1157,55 @@ KURS.lektionsfragen = {
   [
    "Procedure, step 13: “Pull out the cannula; the plastic sheath stays in the piercing channel”. What comes next?",
    [
-    "Trim the plastic sheath slightly with scissors so the jewellery goes in more easily",
+    "Trim the plastic sheath slightly with scissors so the jewelry goes in more easily",
     "Let the client check whether it looks right",
     "Mark the entry and exit points of the cannula with the single-use marker",
     "Apply the clamp or receiving tube"
    ],
-   "Step 14: Trim the plastic sheath slightly with scissors so the jewellery goes in more easily.",
+   "Step 14: Trim the plastic sheath slightly with scissors so the jewelry goes in more easily.",
    "S. 112"
   ],
   [
-   "Procedure, step 14: “Trim the plastic sheath slightly with scissors so the jewellery goes in more easily”. What comes next?",
+   "Procedure, step 14: “Trim the plastic sheath slightly with scissors so the jewelry goes in more easily”. What comes next?",
    [
-    "Insert the initial jewellery into the plastic sheath",
+    "Insert the initial jewelry into the plastic sheath",
     "Apply the clamp or receiving tube",
-    "Carefully pull the tube off the jewellery",
+    "Carefully pull the tube off the jewelry",
     "Pull out the cannula; the plastic sheath stays in the piercing channel"
    ],
-   "Step 15: Insert the initial jewellery into the plastic sheath.",
+   "Step 15: Insert the initial jewelry into the plastic sheath.",
    "S. 112"
   ],
   [
-   "Procedure, step 15: “Insert the initial jewellery into the plastic sheath”. What comes next?",
+   "Procedure, step 15: “Insert the initial jewelry into the plastic sheath”. What comes next?",
    [
-    "Push it through the piercing channel, don’t pull, or the jewellery may slip off. This is painful: have the client breathe out while you do it",
-    "Trim the plastic sheath slightly with scissors so the jewellery goes in more easily",
+    "Push it through the piercing channel, don’t pull, or the jewelry may slip off. This is painful: have the client breathe out while you do it",
+    "Trim the plastic sheath slightly with scissors so the jewelry goes in more easily",
     "Pull out the cannula; the plastic sheath stays in the piercing channel",
     "Pick up the ball"
    ],
-   "Step 16: Push it through the piercing channel, don’t pull, or the jewellery may slip off. This is painful: have the client breathe out while you do it.",
+   "Step 16: Push it through the piercing channel, don’t pull, or the jewelry may slip off. This is painful: have the client breathe out while you do it.",
    "S. 112"
   ]
  ],
  "9-3": [
   [
-   "Procedure, step 16: “Push it through the piercing channel, don’t pull, or the jewellery may slip off. This is painful: have the client breathe out while you do it”. What comes next?",
+   "Procedure, step 16: “Push it through the piercing channel, don’t pull, or the jewelry may slip off. This is painful: have the client breathe out while you do it”. What comes next?",
    [
-    "Carefully pull the tube off the jewellery",
-    "Insert the initial jewellery into the plastic sheath",
+    "Carefully pull the tube off the jewelry",
+    "Insert the initial jewelry into the plastic sheath",
     "Pierce, ideally always into the visible side – with a labret, for example, where the ball will sit. The faster you pierce, the less pain",
-    "If needed, cover with a plaster (nipple, navel)"
+    "If needed, cover with a bandage (nipple, navel)"
    ],
-   "Step 17: Carefully pull the tube off the jewellery.",
+   "Step 17: Carefully pull the tube off the jewelry.",
    "S. 112"
   ],
   [
-   "Procedure, step 17: “Carefully pull the tube off the jewellery”. What comes next?",
+   "Procedure, step 17: “Carefully pull the tube off the jewelry”. What comes next?",
    [
     "Pick up the ball",
-    "If needed, cover with a plaster (nipple, navel)",
-    "Trim the plastic sheath slightly with scissors so the jewellery goes in more easily",
+    "If needed, cover with a bandage (nipple, navel)",
+    "Trim the plastic sheath slightly with scissors so the jewelry goes in more easily",
     "For tongue piercings, give the client an ice cube"
    ],
    "Step 18: Pick up the ball.",
@@ -1214,20 +1214,20 @@ KURS.lektionsfragen = {
   [
    "Procedure, step 18: “Pick up the ball”. What comes next?",
    [
-    "Hold the jewellery with the holding pliers and screw the ball on firmly",
+    "Hold the jewelry with the holding pliers and screw the ball on firmly",
     "Show the client the piercing in the mirror",
-    "Insert the initial jewellery into the plastic sheath",
-    "Trim the plastic sheath slightly with scissors so the jewellery goes in more easily"
+    "Insert the initial jewelry into the plastic sheath",
+    "Trim the plastic sheath slightly with scissors so the jewelry goes in more easily"
    ],
-   "Step 19: Hold the jewellery with the holding pliers and screw the ball on firmly.",
+   "Step 19: Hold the jewelry with the holding pliers and screw the ball on firmly.",
    "S. 112"
   ],
   [
-   "Procedure, step 19: “Hold the jewellery with the holding pliers and screw the ball on firmly”. What comes next?",
+   "Procedure, step 19: “Hold the jewelry with the holding pliers and screw the ball on firmly”. What comes next?",
    [
     "Spray again with Kodan",
     "For tongue piercings, give the client an ice cube",
-    "Carefully pull the tube off the jewellery",
+    "Carefully pull the tube off the jewelry",
     "Show the client the piercing in the mirror"
    ],
    "Step 20: Spray again with Kodan.",
@@ -1237,9 +1237,9 @@ KURS.lektionsfragen = {
    "Procedure, step 20: “Spray again with Kodan”. What comes next?",
    [
     "Show the client the piercing in the mirror",
-    "If needed, cover with a plaster (nipple, navel)",
+    "If needed, cover with a bandage (nipple, navel)",
     "If wound healing problems occur, the client should come back for advice (see module 10)",
-    "Hold the jewellery with the holding pliers and screw the ball on firmly"
+    "Hold the jewelry with the holding pliers and screw the ball on firmly"
    ],
    "Step 21: Show the client the piercing in the mirror.",
    "S. 112"
@@ -1249,16 +1249,16 @@ KURS.lektionsfragen = {
   [
    "Procedure, step 21: “Show the client the piercing in the mirror”. What comes next?",
    [
-    "If needed, cover with a plaster (nipple, navel)",
+    "If needed, cover with a bandage (nipple, navel)",
     "Ideally, also hand over the aftercare instructions in writing",
     "Hand over the aftercare product and explain the aftercare instructions verbally",
     "For tongue piercings, give the client an ice cube"
    ],
-   "Step 22: If needed, cover with a plaster (nipple, navel).",
+   "Step 22: If needed, cover with a bandage (nipple, navel).",
    "S. 113"
   ],
   [
-   "Procedure, step 22: “If needed, cover with a plaster (nipple, navel)”. What comes next?",
+   "Procedure, step 22: “If needed, cover with a bandage (nipple, navel)”. What comes next?",
    [
     "For tongue piercings, give the client an ice cube",
     "Hand over the aftercare product and explain the aftercare instructions verbally",
@@ -1272,7 +1272,7 @@ KURS.lektionsfragen = {
    "Procedure, step 23: “For tongue piercings, give the client an ice cube”. What comes next?",
    [
     "Hand over the aftercare product and explain the aftercare instructions verbally",
-    "Hold the jewellery with the holding pliers and screw the ball on firmly",
+    "Hold the jewelry with the holding pliers and screw the ball on firmly",
     "If wound healing problems occur, the client should come back for advice (see module 10)",
     "Ideally, also hand over the aftercare instructions in writing"
    ],
@@ -1295,7 +1295,7 @@ KURS.lektionsfragen = {
    [
     "If wound healing problems occur, the client should come back for advice (see module 10)",
     "Show the client the piercing in the mirror",
-    "If needed, cover with a plaster (nipple, navel)",
+    "If needed, cover with a bandage (nipple, navel)",
     "Hand over the aftercare product and explain the aftercare instructions verbally"
    ],
    "Step 26: If wound healing problems occur, the client should come back for advice (see module 10).",

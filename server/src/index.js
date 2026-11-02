@@ -449,7 +449,7 @@ async function stripeWebhook(req, env, ctx) {
   const best = meta.bestellung ? await env.DB.prepare("SELECT zeit FROM bestellungen WHERE id = ? AND stripe_session = ?").bind(meta.bestellung, sess.id).first() : null;
   if (best) {
     await env.DB.prepare("UPDATE bestellungen SET bezahlt = 1 WHERE id = ?").bind(meta.bestellung).run();
-    const wann = new Date(best.zeit).toLocaleString({ de: "de-DE", en: "en-GB", es: "es-ES" }[sprache], { timeZone: "Europe/Berlin", dateStyle: "medium", timeStyle: "short" });
+    const wann = new Date(best.zeit).toLocaleString({ de: "de-DE", en: "en-US", es: "es-ES" }[sprache], { timeZone: "Europe/Berlin", dateStyle: "medium", timeStyle: "short" });
     zustimmungText = { de: "Häkchen auf der Bestellseite gesetzt am " + wann, en: "box ticked on the order page on " + wann, es: "casilla marcada en la página de pedido el " + wann }[sprache];
   } else {
     const felder = (sess.custom_fields || []).map((f) => ({ key: f.key, label: f.label && f.label.custom, wert: (f.dropdown && f.dropdown.value) || (f.text && f.text.value) || "" }));

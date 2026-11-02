@@ -1,5 +1,5 @@
 /* Module 08 – Types of piercing. Source: course book ch. 10 (pp. 74–110). Data sheets as in the book; intimate area without images.
-   For each data sheet, werkzeuge/fragen-erzeugen.js also generates questions on initial jewellery, cannula and clamp (fragen-generiert.js). */
+   For each data sheet, werkzeuge/fragen-erzeugen.js also generates questions on initial jewelry, cannula and clamp (fragen-generiert.js). */
 window.KURS = window.KURS || { module: [] };
 (function () {
   function db(name, beschreibung, ersteinsatz, kanuele, klemme, hinweis, seite) {
@@ -10,19 +10,19 @@ window.KURS = window.KURS || { module: [] };
     nr: 8,
     titel: "Types of piercing",
     quelle: "Course book ch. 10, pp. 74–110",
-    ziel: "For every piercing you know the placement, initial jewellery, cannula and clamp, and you know which piercings you turn down as a beginner or never perform at all.",
+    ziel: "For every piercing you know the placement, initial jewelry, cannula and clamp, and you know which piercings you turn down as a beginner or never perform at all.",
     lektionen: [
       {
         titel: "How to read a data sheet",
         seite: "S. 74",
         inhalt: [
-          { typ: "text", text: "Every piercing has a data sheet with four details: where it is placed, which initial jewellery fits, which cannula size (or punch) you use and what you hold the area with (clamp, receiving tube or freehand)." },
-          { typ: "achtung", text: "Initial jewellery always needs an extra length of about 4 mm, because the fresh piercing channel can swell. During healing it must never be constricted by balls or discs." },
-          { typ: "merke", text: "In the following lessons you learn each piercing individually. After each lesson, the course tests you on the data sheets: initial jewellery, cannula and clamp." }
+          { typ: "text", text: "Every piercing has a data sheet with four details: where it is placed, which initial jewelry fits, which cannula size (or punch) you use and what you hold the area with (clamp, receiving tube or freehand)." },
+          { typ: "achtung", text: "Initial jewelry always needs an extra length of about 4 mm, because the fresh piercing channel can swell. During healing it must never be constricted by balls or discs." },
+          { typ: "merke", text: "In the following lessons you learn each piercing individually. After each lesson, the course tests you on the data sheets: initial jewelry, cannula and clamp." }
         ],
         fragen: [
-          ["What information does every data sheet contain?", ["Placement, initial jewellery, cannula and clamp", "Placement, price and healing time", "Initial jewellery, aftercare product and price", "Only cannula and clamp"], "All data sheets are structured this way.", "S. 74"],
-          ["How much extra length does initial jewellery need?", ["About 4 mm", "About 2 mm", "About 6 mm", "About 1 cm"], "The fresh piercing channel can swell.", "S. 74"],
+          ["What information does every data sheet contain?", ["Placement, initial jewelry, cannula and clamp", "Placement, price and healing time", "Initial jewelry, aftercare product and price", "Only cannula and clamp"], "All data sheets are structured this way.", "S. 74"],
+          ["How much extra length does initial jewelry need?", ["About 4 mm", "About 2 mm", "About 6 mm", "About 1 cm"], "The fresh piercing channel can swell.", "S. 74"],
           ["What does “freehand” mean in the data sheet?", ["You pierce without a clamp or receiving tube", "The client holds the area themselves", "You pierce without gloves", "You pierce without marking"], "Instead of a clamp or receiving tube.", "S. 74–110"]
         ]
       },
@@ -57,7 +57,7 @@ window.KURS = window.KURS || { module: [] };
         inhalt: [
           db("Helix", "Possible anywhere along the rim of the ear, from just above the earlobe up and around the curve of the outer ear.", "labret, BCR, horseshoe (circular barbell)", "18G", "Snaptile, gauze clamp, freehand", "", "S. 78"),
           db("Industrial", "Also called Scaffold. The upper rim of the outer ear is pierced close to the head and opposite on the outer rim, so that a long barbell runs through both piercing channels. Anatomically, these are two Helix piercings.", "barbell 38 mm", "16G", "freehand, receiving tube", "", "S. 84"),
-          db("Allergy piercing", "At the top centre through the curve of the Helix, at the “antihistamine” acupuncture point. The permanent stimulation is said to relieve allergies.", "horseshoe (circular barbell), curved barbell (banana), BCR", "18G", "freehand, receiving tube", "Do not make health claims or use them in advertising.", "S. 83")
+          db("Allergy piercing", "At the top center through the curve of the Helix, at the “antihistamine” acupuncture point. The permanent stimulation is said to relieve allergies.", "horseshoe (circular barbell), curved barbell (banana), BCR", "18G", "freehand, receiving tube", "Do not make health claims or use them in advertising.", "S. 83")
         ],
         fragen: [
           ["Where can a Helix be pierced?", ["Anywhere along the rim of the ear", "Only on the upper rim of the ear", "Only in the antihelix", "Only at the root of the helix"], "From above the earlobe around the curve.", "S. 78"],
@@ -93,12 +93,12 @@ window.KURS = window.KURS || { module: [] };
         titel: "Nose: Nostril and Septum",
         seite: "S. 85, 88",
         inhalt: [
-          db("Nose (Nostril)", "Through the side of the nose (nasal ala). First practised about 4000 years ago in the Middle East; in India preferably worn on the left side of the nose.", "labret", "18G", "gauze clamp, Snaptile", "", "S. 85"),
-          db("Septum", "Through the connective tissue below the cartilage of the nasal septum (Latin septum nasi). One of the oldest piercings. Can be stretched for larger jewellery.", "horseshoe (circular barbell)", "18G, 16G", "septum forceps", "", "S. 88")
+          db("Nose (Nostril)", "Through the side of the nose (nasal ala). First practiced about 4000 years ago in the Middle East; in India preferably worn on the left side of the nose.", "labret", "18G", "gauze clamp, Snaptile", "", "S. 85"),
+          db("Septum", "Through the connective tissue below the cartilage of the nasal septum (Latin septum nasi). One of the oldest piercings. Can be stretched for larger jewelry.", "horseshoe (circular barbell)", "18G, 16G", "septum forceps", "", "S. 88")
         ],
         fragen: [
           ["What is the Nostril pierced through?", ["The side of the nose (nasal ala)", "The nasal septum", "The bridge of the nose", "The tip of the nose"], "Nostril data sheet.", "S. 85"],
-          ["Through which tissue is the Septum pierced?", ["The connective tissue below the septal cartilage", "The septal cartilage", "The nasal bone", "The side of the nose"], "Can be stretched for larger jewellery.", "S. 88"]
+          ["Through which tissue is the Septum pierced?", ["The connective tissue below the septal cartilage", "The septal cartilage", "The nasal bone", "The side of the nose"], "Can be stretched for larger jewelry.", "S. 88"]
         ]
       },
       {
@@ -119,12 +119,12 @@ window.KURS = window.KURS || { module: [] };
         titel: "Lip: Labret, Medusa and Eskimo",
         seite: "S. 86, 93",
         inhalt: [
-          db("Labret", "Strictly speaking, a piercing of the lower lip; on the upper lip it is called Medusa (centred in the philtrum, the groove below the nose) or Madonna or Monroe (offset to the side). More than 3 mm away from the vermilion border.", "labret, horseshoe (circular barbell)", "18G", "Snaptile, gauze clamp", "", "S. 86"),
+          db("Labret", "Strictly speaking, a piercing of the lower lip; on the upper lip it is called Medusa (centered in the philtrum, the groove below the nose) or Madonna or Monroe (offset to the side). More than 3 mm away from the vermilion border.", "labret, horseshoe (circular barbell)", "18G", "Snaptile, gauze clamp", "", "S. 86"),
           db("Eskimo", "Vertically through the lip to below the lip. If pierced incorrectly, the lip can tear or sink in permanently.", "barbell, curved barbell (banana)", "18G", "Snaptile, gauze clamp, freehand", "Turn it down as a beginner. Do not pierce into the vermilion.", "S. 93")
         ],
         fragen: [
           ["How far from the vermilion border is a Labret piercing placed?", ["More than 3 mm", "Exactly 1 mm", "No distance, right on the vermilion", "More than 1 cm"], "Labret data sheet.", "S. 86"],
-          ["What is a piercing centred in the upper lip, in the philtrum, called?", ["Medusa", "Monroe", "Smiley", "Eskimo"], "Strictly speaking, a Labret is in the lower lip.", "S. 86"],
+          ["What is a piercing centered in the upper lip, in the philtrum, called?", ["Medusa", "Monroe", "Smiley", "Eskimo"], "Strictly speaking, a Labret is in the lower lip.", "S. 86"],
           ["What can an incorrectly pierced Eskimo cause?", ["Tearing or permanent sinking of the lip", "Pressure on nerve pathways of the forehead", "Damage to the tongue frenulum", "Perichondritis"], "Turn it down as a beginner.", "S. 93"]
         ]
       },
@@ -139,7 +139,7 @@ window.KURS = window.KURS || { module: [] };
           ["Why is the lip frenulum piercing also called Smiley?", ["Because it is only visible when smiling", "Because it forms a smile", "Because it goes through the corners of the mouth", "Because it is a labret with a smiley ball"], "Through the frenulum.", "S. 87"],
           ["In which direction is the tongue pierced?", ["From below upwards", "From above downwards", "Sideways from the left", "Diagonally from the front"], "Tongue data sheet.", "S. 90"],
           ["What does the client use to cool the area after a tongue piercing?", ["Ice cubes, ideally made from chamomile tea", "Cold spray", "Cold milk", "Lidocaine spray"], "Immediately after piercing.", "S. 90"],
-          ["When can the barbell in a tongue piercing be shortened?", ["After about 10 days", "After 2 days", "After 3 months", "Never, the length stays the same"], "Initial jewellery 20 mm barbell.", "S. 90"]
+          ["When can the barbell in a tongue piercing be shortened?", ["After about 10 days", "After 2 days", "After 3 months", "Never, the length stays the same"], "Initial jewelry 20 mm barbell.", "S. 90"]
         ]
       },
       {
@@ -158,19 +158,19 @@ window.KURS = window.KURS || { module: [] };
         titel: "Navel",
         seite: "S. 94",
         inhalt: [
-          db("Navel", "Vertically above or below the navel, piercing channel about 1 cm long. Pierce with the client lying down: this makes the work easier and prevents circulatory problems. Cover with a sterile plaster and recommend plasters for the next 3 days.", "curved barbell (banana), BCR", "16G", "Snaptile, freehand", "", "S. 94")
+          db("Navel", "Vertically above or below the navel, piercing channel about 1 cm long. Pierce with the client lying down: this makes the work easier and prevents circulatory problems. Cover with a sterile bandage and recommend bandages for the next 3 days.", "curved barbell (banana), BCR", "16G", "Snaptile, freehand", "", "S. 94")
         ],
         fragen: [
           ["How is a navel piercing done?", ["Lying down, to prevent circulatory problems", "Standing, so the navel is positioned correctly", "Sitting", "Standing, then checked lying down"], "It also makes the work easier.", "S. 94"],
           ["About how long is the piercing channel in a navel piercing?", ["1 cm", "5 mm", "2 cm", "3 cm"], "Navel data sheet.", "S. 94"],
-          ["How long should the client wear a plaster?", ["For the next 3 days", "Only on the first day", "2 weeks", "Until completely healed"], "Sterile plaster.", "S. 94"]
+          ["How long should the client wear a bandage?", ["For the next 3 days", "Only on the first day", "2 weeks", "Until completely healed"], "Sterile bandage.", "S. 94"]
         ]
       },
       {
         titel: "Nipple",
         seite: "S. 95",
         inhalt: [
-          db("Nipple", "Through the nipple or areola, usually horizontally or vertically, in women and men. Several piercings one above the other are possible. For marking, the upper body must be completely uncovered; cover with a sterile plaster and recommend plasters for 3 days.", "barbell, BCR", "16G", "Snaptile, gauze clamp", "", "S. 95")
+          db("Nipple", "Through the nipple or areola, usually horizontally or vertically, in women and men. Several piercings one above the other are possible. For marking, the upper body must be completely uncovered; cover with a sterile bandage and recommend bandages for 3 days.", "barbell, BCR", "16G", "Snaptile, gauze clamp", "", "S. 95")
         ],
         fragen: [
           ["What has to happen before marking a nipple piercing?", ["The upper body must be completely uncovered", "Only the one side is uncovered", "The client lies down", "The nipple is cooled beforehand"], "Nipple data sheet.", "S. 95"],
@@ -181,11 +181,11 @@ window.KURS = window.KURS || { module: [] };
         titel: "Surface",
         seite: "S. 96",
         inhalt: [
-          db("Surface", "Surface piercing in areas that are neither convex nor concave; entry and exit points lie on one plane. It is rejected and grows out more often, and healing takes considerably longer. Suitable jewellery and precise placement reduce the risk.", "surface bar, curved barbell (banana), Dermal Anchor", "16G, 18G, biopsy punch", "freehand, Snaptile, gauze clamp", "", "S. 96")
+          db("Surface", "Surface piercing in areas that are neither convex nor concave; entry and exit points lie on one plane. It is rejected and grows out more often, and healing takes considerably longer. Suitable jewelry and precise placement reduce the risk.", "surface bar, curved barbell (banana), Dermal Anchor", "16G, 18G, biopsy punch", "freehand, Snaptile, gauze clamp", "", "S. 96")
         ],
         fragen: [
           ["What is typical of surface piercings?", ["They are rejected more often and take much longer to heal", "They heal faster than a Lobe", "They are always on curved areas", "They are only pierced with a receiving tube"], "Entry and exit on one plane.", "S. 96"],
-          ["What reduces the risk of a surface piercing growing out?", ["Suitable jewellery and precise placement", "A particularly thin ring", "An early change of jewellery", "A particularly short bar"], "Surface data sheet.", "S. 96"]
+          ["What reduces the risk of a surface piercing growing out?", ["Suitable jewelry and precise placement", "A particularly thin ring", "An early change of jewelry", "A particularly short bar"], "Surface data sheet.", "S. 96"]
         ]
       },
       {
@@ -235,13 +235,13 @@ window.KURS = window.KURS || { module: [] };
           ["Which piercing do you never perform?", ["Ampallang", "Christina", "Frenulum", "Hafada"], "Risk of serious harm.", "S. 103"],
           ["Why do you never pierce through the erectile tissue of the penis?", ["There is a risk of serious damage, even bleeding to death", "It only heals more slowly", "It causes a nickel allergy", "It grows out immediately"], "Note on the Apadravya.", "S. 104"],
           ["According to the course book, what is the risk of piercing the clitoris directly?", ["Damage to the libido", "Growing out", "Perichondritis", "Only longer healing"], "Do not perform.", "S. 108"],
-          ["Case: A client offers you a lot of money for an Ampallang. What do you do?", ["I turn it down", "I pierce it under anaesthetic", "I pierce it if he signs a liability waiver", "I pierce it with a thinner cannula"], "Do not perform, not even on request.", "S. 103"]
+          ["Case: A client offers you a lot of money for an Ampallang. What do you do?", ["I turn it down", "I pierce it under anesthetic", "I pierce it if he signs a liability waiver", "I pierce it with a thinner cannula"], "Do not perform, not even on request.", "S. 103"]
         ]
       }
     ],
     uebung: [
       "Write down the data sheets for Lobe, Helix, Tragus and Nostril from memory.",
-      "Practise on the silicone ear: mark the area, position the clamp, place the cannula (without piercing).",
+      "Practice on the silicone ear: mark the area, position the clamp, place the cannula (without piercing).",
       "List all piercings you turn down as a beginner and all piercings you never perform."
     ]
   });

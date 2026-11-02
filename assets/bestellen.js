@@ -9,7 +9,7 @@
   var SPRACHE = (document.documentElement.lang || "de").slice(0, 2);
   var T = {
     de: { beide: "Bitte bestätige beide Punkte, um zu bestellen.", agb: "Bitte bestätige die AGB, um zu bestellen.", zuOft: "Zu viele Versuche in kurzer Zeit. Bitte versuch es später noch einmal oder schick uns eine Anfrage.", warte: "Einen Moment …" },
-    en: { beide: "Please confirm both points to place your order.", agb: "Please accept the terms to place your order.", zuOft: "Too many attempts in a short time. Please try again later or send us an enquiry.", warte: "One moment …" },
+    en: { beide: "Please confirm both points to place your order.", agb: "Please accept the terms to place your order.", zuOft: "Too many attempts in a short time. Please try again later or send us an inquiry.", warte: "One moment …" },
     es: { beide: "Confirma los dos puntos para hacer el pedido.", agb: "Acepta las condiciones para hacer el pedido.", zuOft: "Demasiados intentos en poco tiempo. Inténtalo más tarde o envíanos una consulta.", warte: "Un momento …" }
   }[SPRACHE] || { beide: "", zuOft: "", warte: "…" };
   var fehler = document.getElementById("b-fehler"), summe = document.getElementById("b-summe");

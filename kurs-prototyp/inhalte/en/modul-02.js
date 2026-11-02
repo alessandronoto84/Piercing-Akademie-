@@ -16,7 +16,7 @@ KURS.module.push({
         { typ: "praxis", text: "Make the consent form a fixed routine, just like hand disinfection. That way you will never catch yourself thinking “we can skip it with him”." }
       ],
       fragen: [
-        ["From a legal point of view, what does the piercer inflict on the client?", ["Intended bodily harm", "Damage to property", "An administrative offence", "A medical procedure"], "Opening the skin is bodily harm.", "S. 1"],
+        ["From a legal point of view, what does the piercer inflict on the client?", ["Intended bodily harm", "Damage to property", "An administrative offense", "A medical procedure"], "Opening the skin is bodily harm.", "S. 1"],
         ["Why is a piercing nevertheless not unlawful?", ["Because the client has given valid consent", "Because the client pays", "Because piercers have a registered business", "Because piercing is a registered trade"], "As with medical procedures.", "S. 1"],
         ["When do you need consent?", ["Before every piercing, even for friends and regular clients", "Once per client, then it applies to all further piercings", "Only for new clients and for intimate piercings", "Only if the client is under 21"], "There are no exceptions.", "S. 1"],
         ["Case: Your best friend spontaneously wants a helix piercing. What applies?", ["She too signs the consent form beforehand", "A verbal agreement is enough between friends", "She signs afterwards once everything has healed well", "No form is needed for cartilage piercings"], "The course book expressly mentions friends and acquaintances.", "S. 1"]
@@ -26,7 +26,7 @@ KURS.module.push({
       titel: "What the Criminal Code says",
       seite: "S. 1–2",
       inhalt: [
-        { typ: "text", text: "In German criminal law, bodily harm is regulated in Chapter 17 of the German Criminal Code (StGB) (§§ 223 to 231). The basic offence is described in § 223 StGB." },
+        { typ: "text", text: "In German criminal law, bodily harm is regulated in Chapter 17 of the German Criminal Code (StGB) (§§ 223 to 231). The basic offense is described in § 223 StGB." },
         { typ: "liste", titel: "§ 223 StGB, as quoted in the course book", punkte: [
           "Whoever physically abuses another person or damages their health incurs a penalty of imprisonment for a term not exceeding five years or a fine.",
           "The attempt is punishable."
@@ -38,7 +38,7 @@ KURS.module.push({
         { typ: "merke", text: "Whether the victim feels pain is irrelevant." }
       ],
       fragen: [
-        ["Where is bodily harm regulated in German criminal law?", ["In Chapter 17 of the StGB, §§ 223 to 231", "In the German Civil Code (BGB), §§ 823 ff.", "In the Infection Protection Act", "In the Non-Medical Practitioners Act"], "The basic offence is § 223 StGB.", "S. 1"],
+        ["Where is bodily harm regulated in German criminal law?", ["In Chapter 17 of the StGB, §§ 223 to 231", "In the German Civil Code (BGB), §§ 823 ff.", "In the Infection Protection Act", "In the Non-Medical Practitioners Act"], "The basic offense is § 223 StGB.", "S. 1"],
         ["What is the maximum penalty under § 223 StGB?", ["Imprisonment of up to 5 years or a fine", "Imprisonment of up to 10 years", "Imprisonment of up to 2 years or a fine", "Only a fine"], "That is how the course book quotes it.", "S. 2"],
         ["Is the mere attempt at bodily harm punishable?", ["Yes", "No, only the completed act", "Only for dangerous bodily harm", "Only if permanent damage is likely"], "§ 223 (2) StGB.", "S. 2"],
         ["What is physical abuse?", ["Malicious, inappropriate treatment that impairs well-being or integrity to more than an insignificant degree", "Only an injury that leaves visible marks", "Any touch without consent, even without impairment", "Only an injury that requires medical treatment"], "Definition according to the course book.", "S. 2"],
@@ -85,7 +85,7 @@ KURS.module.push({
       inhalt: [
         { typ: "text", text: "On pp. 114–115, the course book contains a sample consent form. It is divided into clear sections." },
         { typ: "tabelle", kopf: ["Section", "Content"], zeilen: [
-          ["Personal details", "First and last name, street, postcode and town, phone, confirmation “at least 18 years old”, date of birth, ID number"],
+          ["Personal details", "First and last name, street, ZIP code and town, phone, confirmation “at least 18 years old”, date of birth, ID number"],
           ["Legal guardians", "For minors and persons under guardianship: name, address, ID number, date and signature"],
           ["Personal information", "Illnesses, allergies, medication, has eaten and drunk enough, no alcohol and no drugs in the last two days"],
           ["Treatment information (filled in by the studio)", "Type and body area, date, information about the risks, aftercare instructions handed over"],
@@ -120,7 +120,7 @@ KURS.module.push({
         ["Is there a risk of complications even when the piercing is performed properly?", ["Yes", "No, only if the piercer makes mistakes", "Only for intimate piercings", "Only for clients with pre-existing conditions"], "That is why clients are informed about it.", "S. 115"],
         ["Which complications from the list in the consent form mainly affect oral piercings?", ["Tooth and gum damage, tooth displacement, speech problems", "Permanent loss of taste", "Jaw fracture", "Tonsillitis"], "Also periodontal disease and tooth displacement.", "S. 115"],
         ["Which of these are possible complications?", ["Hypergranulation, keloid formation and growing out", "Only slight redness in the first few days", "Only allergies to titanium", "Only complications due to aftercare mistakes by the client"], "The list is detailed.", "S. 115"],
-        ["What does the client undertake to do by signing?", ["To follow the aftercare instructions", "Not to sue the studio in case of complications", "To come for a check-up after 3 days", "To change the jewellery only at the studio"], "That is what the text of the form says.", "S. 115"],
+        ["What does the client undertake to do by signing?", ["To follow the aftercare instructions", "Not to sue the studio in case of complications", "To come for a check-up after 3 days", "To change the jewelry only at the studio"], "That is what the text of the form says.", "S. 115"],
         ["What else does the client confirm?", ["That they were informed, had enough time to think and are not under the influence of alcohol, drugs or medication", "That they waive all claims against the studio", "That they guarantee to observe the healing time", "That they will come for a check-up after one week"], "See the consent form.", "S. 115"]
       ]
     },

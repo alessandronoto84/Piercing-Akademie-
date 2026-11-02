@@ -15,7 +15,7 @@
   var SPRACHE = /^(en|es)$/.test(window.KURS_SPRACHE || "") ? window.KURS_SPRACHE : "de";
   var UI = (KURS.ui && KURS.ui[SPRACHE]) || {};
   var GT = (KURS.grafikText && KURS.grafikText[SPRACHE]) || {};
-  var LOCALE = { de: "de-DE", en: "en-GB", es: "es-ES" }[SPRACHE];
+  var LOCALE = { de: "de-DE", en: "en-US", es: "es-ES" }[SPRACHE];
   function tr(s, p) {
     var t = SPRACHE !== "de" && typeof UI[s] === "string" ? UI[s] : s;
     return p ? t.replace(/\{(\w+)\}/g, function (m, k) { return p[k] != null ? String(p[k]) : m; }) : t;

@@ -5,7 +5,7 @@ KURS.module.push({
   nr: 10,
   titel: "Aftercare and wound healing problems",
   quelle: "Course book ch. 6, pp. 48–51",
-  ziel: "You give the right aftercare instructions, know the healing times and recognise wound healing problems before they become a problem.",
+  ziel: "You give the right aftercare instructions, know the healing times and recognize wound healing problems before they become a problem.",
   lektionen: [
     {
       titel: "Explaining aftercare",
@@ -50,27 +50,27 @@ KURS.module.push({
           text: "Dark: safe minimum time, light: range. Mucous membrane heals fastest; cartilage, navel and nipple take the longest.",
           zeilen: [["Tongue", 1, null, false, "approx. 1"], ["Lip frenulum", 1, null, false, "approx. 1"], ["Eyebrow", 1, null, false, "approx. 1"], ["Labret", 1, 2, false, "1–2"], ["Lobe", 2, null, false, "approx. 2"], ["Genital", 2, 3, false, "2–3"], ["Cartilage", 3, null, true, "at least 3"], ["Navel", 4, 6, false, "4–6"], ["Nipple", 3, 12, false, "3–12"]] },
         { typ: "ergaenzung", text: "Other sources sometimes give considerably longer times, for example cartilage 3 to 12 months, navel 6 to 12 months, eyebrow 6 to 8 weeks. When advising clients, err on the side of caution: better to wait too long than to change too early." },
-        { typ: "achtung", text: "The jewellery may only be changed once the piercing has fully healed; otherwise there is a risk of complications such as an infection." }
+        { typ: "achtung", text: "The jewelry may only be changed once the piercing has fully healed; otherwise there is a risk of complications such as an infection." }
       ],
       fragen: [
-        ["Are the healing times fixed guarantees?", ["No, they are guide values for optimal healing", "Yes, for healthy adults", "Yes, if the aftercare is followed", "Only with PTFE jewellery"], "Everyone heals differently.", "S. 49"],
-        ["When can the jewellery be changed?", ["Only once it has fully healed", "After 2 weeks, when aftercare ends", "When the swelling has gone", "After 4 weeks for all piercings"], "Otherwise there is a risk of infection.", "S. 49"],
+        ["Are the healing times fixed guarantees?", ["No, they are guide values for optimal healing", "Yes, for healthy adults", "Yes, if the aftercare is followed", "Only with PTFE jewelry"], "Everyone heals differently.", "S. 49"],
+        ["When can the jewelry be changed?", ["Only once it has fully healed", "After 2 weeks, when aftercare ends", "When the swelling has gone", "After 4 weeks for all piercings"], "Otherwise there is a risk of infection.", "S. 49"],
         ["Which piercing has the widest range of healing time?", ["Nipple, 3 to 12 months", "Navel, 4 to 6 months", "Genital, 2 to 3 months", "Labret, 1 to 2 months"], "See chart.", "S. 49"],
-        ["Case: A client wants to swap the jewellery in her 4-week-old helix piercing for a ring. What do you advise?", ["Wait: cartilage needs at least 3 months", "Changing is fine if it’s no longer red", "Change it, but only to titanium", "Change it after 6 weeks"], "Only change once it has fully healed.", "S. 49"]
+        ["Case: A client wants to swap the jewelry in her 4-week-old helix piercing for a ring. What do you advise?", ["Wait: cartilage needs at least 3 months", "Changing is fine if it’s no longer red", "Change it, but only to titanium", "Change it after 6 weeks"], "Only change once it has fully healed.", "S. 49"]
       ]
     },
     {
-      titel: "Lack of epithelialisation and rebleeding",
+      titel: "Lack of epithelialization and rebleeding",
       seite: "S. 50",
       inhalt: [
         { typ: "tabelle", kopf: ["Problem", "What to do"], zeilen: [
-          ["Lack of epithelialisation", "See a doctor after 10 to 14 days. During epithelialisation, epithelial cells migrate in from the wound edge and cover the wound; underneath, the granulation tissue matures into firm scar tissue. The wound gets smaller."],
+          ["Lack of epithelialization", "See a doctor after 10 to 14 days. During epithelialization, epithelial cells migrate in from the wound edge and cover the wound; underneath, the granulation tissue matures into firm scar tissue. The wound gets smaller."],
           ["Rebleeding", "If bleeding keeps recurring, see a doctor. Possible causes according to the course book: diabetes, connective tissue weakness, bleeding disorder; also blood-thinning medication."]
         ] }
       ],
       fragen: [
         ["What can cause persistent rebleeding?", ["Diabetes, connective tissue weakness or a bleeding disorder", "A nickel allergy", "Aftercare with saline solution", "Too much extra length"], "In that case, see a doctor.", "S. 50"],
-        ["What happens during epithelialisation?", ["Cells migrate in from the wound edge, the wound gets smaller", "Granulation tissue grows out of the channel", "The cartilage regenerates", "The inflammatory phase begins"], "Regeneration phase.", "S. 50"]
+        ["What happens during epithelialization?", ["Cells migrate in from the wound edge, the wound gets smaller", "Granulation tissue grows out of the channel", "The cartilage regenerates", "The inflammatory phase begins"], "Regeneration phase.", "S. 50"]
       ]
     },
     {
@@ -89,11 +89,11 @@ KURS.module.push({
         { typ: "merke", text: "Smokers, people with alcohol dependence and diabetics are among the risk groups; complications occur more quickly in them." }
       ],
       fragen: [
-        ["What is usually the cause of inflammation?", ["Germs or foreign substances in the wound", "Too much extra length", "The saline solution", "Initial jewellery made of PTFE"], "For example from hair.", "S. 50"],
+        ["What is usually the cause of inflammation?", ["Germs or foreign substances in the wound", "Too much extra length", "The saline solution", "Initial jewelry made of PTFE"], "For example from hair.", "S. 50"],
         ["What is the risk if pus cannot drain?", ["Blood poisoning", "A nickel allergy", "Hypergranulation", "Faster healing"], "Pus must be able to drain.", "S. 50"],
         ["Which pharmacy ointment does the course book mention?", ["Tyrosur", "Bepanthen", "Betaisodona", "Fucidine"], "Encourage the client to buy it.", "S. 50"],
-        ["What can help with inflammation?", ["Chamomile, diluted tea tree oil or manuka honey, and daily cleaning", "Removing the jewellery immediately and taping the channel shut", "Changing the jewellery frequently", "Octenisept on cartilage"], "These are the home remedies the course book mentions for mild inflammation. If there is fever or spreading redness, the client goes to a doctor.", "S. 50"],
-        ["Case: A client calls; the piercing is very red and he has a fever. What do you do?", ["I send him to a doctor immediately", "I recommend tea tree oil and waiting 3 days", "I change the jewellery to PTFE", "I recommend Tyrosur and rest"], "Fever shows that the inflammation is spreading in the body. This belongs in a doctor’s hands immediately, not in the home medicine cabinet.", "Ergänzung"]
+        ["What can help with inflammation?", ["Chamomile, diluted tea tree oil or manuka honey, and daily cleaning", "Removing the jewelry immediately and taping the channel shut", "Changing the jewelry frequently", "Octenisept on cartilage"], "These are the home remedies the course book mentions for mild inflammation. If there is fever or spreading redness, the client goes to a doctor.", "S. 50"],
+        ["Case: A client calls; the piercing is very red and he has a fever. What do you do?", ["I send him to a doctor immediately", "I recommend tea tree oil and waiting 3 days", "I change the jewelry to PTFE", "I recommend Tyrosur and rest"], "Fever shows that the inflammation is spreading in the body. This belongs in a doctor’s hands immediately, not in the home medicine cabinet.", "Ergänzung"]
       ]
     },
     {
@@ -103,12 +103,12 @@ KURS.module.push({
       inhalt: [
         { typ: "text", text: "Perichondritis is an inflammation of the perichondrium (the membrane covering the cartilage), usually on the auricle. It is the most dangerous complication of cartilage piercings: cartilage has no blood vessels of its own, fights off germs poorly and can be permanently destroyed." },
         { typ: "grafik", id: "perichondritis" },
-        { typ: "liste", titel: "How to recognise it", punkte: [
+        { typ: "liste", titel: "How to recognize it", punkte: [
           "The auricle is red over a large area, swollen, hot and very painful, often a few days to weeks after piercing.",
           "The earlobe is usually spared because it contains no cartilage. This distinguishes perichondritis from a simple skin inflammation.",
           "Later, fever, pus or a collection of pus under the perichondrium may follow."
         ] },
-        { typ: "achtung", text: "If you suspect it, send the client to a doctor immediately, ideally an ENT specialist. Perichondritis usually requires an antibiotic that is also effective against Pseudomonas. The doctor decides whether the jewellery is removed. Untreated, it can lead to permanent deformity, known as cauliflower ear." },
+        { typ: "achtung", text: "If you suspect it, send the client to a doctor immediately, ideally an ENT specialist. Perichondritis usually requires an antibiotic that is also effective against Pseudomonas. The doctor decides whether the jewelry is removed. Untreated, it can lead to permanent deformity, known as cauliflower ear." },
         { typ: "liste", titel: "Background", punkte: [
           "The most common pathogen is the bacterium Pseudomonas aeruginosa. It lives in moist environments, for example in water pipes, sinks and showers.",
           "Cases occur more often in the warmer months.",
@@ -121,29 +121,29 @@ KURS.module.push({
         ["What is perichondritis?", ["An inflammation of the perichondrium, usually on the auricle", "A nickel allergy on cartilage", "Hypergranulation on a cartilage piercing", "An inflammation of the earlobe"], "The most dangerous complication of cartilage piercings.", "Ergänzung"],
         ["Which part of the ear is usually spared in perichondritis?", ["The earlobe, because it contains no cartilage", "The helix", "The tragus", "The conch"], "A typical identifying sign.", "Ergänzung"],
         ["Which pathogen most often causes perichondritis after an ear piercing?", ["Pseudomonas aeruginosa", "Staphylococcus epidermidis from the skin flora", "Candida albicans", "Herpes viruses"], "It lives in moist environments.", "Ergänzung"],
-        ["What do you do if you suspect perichondritis?", ["Send the client to a doctor immediately", "Treat it with Tyrosur and wait a week", "Remove the jewellery yourself", "Recommend cooling and saline solution"], "Ideally to an ENT specialist.", "Ergänzung"],
-        ["What is the risk if perichondritis is not treated?", ["Permanent deformity (cauliflower ear)", "Just a scar at the piercing channel", "The jewellery growing out", "A nickel allergy"], "The cartilage can be destroyed.", "Ergänzung"],
-        ["Why do you recommend sterile saline solution instead of tap water for aftercare?", ["Because Pseudomonas lives in moist environments such as water pipes", "Because tap water contains too much limescale", "Because saline solution rebuilds cartilage", "Because tap water discolours the jewellery"], "Prevention of perichondritis.", "Ergänzung"]
+        ["What do you do if you suspect perichondritis?", ["Send the client to a doctor immediately", "Treat it with Tyrosur and wait a week", "Remove the jewelry yourself", "Recommend cooling and saline solution"], "Ideally to an ENT specialist.", "Ergänzung"],
+        ["What is the risk if perichondritis is not treated?", ["Permanent deformity (cauliflower ear)", "Just a scar at the piercing channel", "The jewelry growing out", "A nickel allergy"], "The cartilage can be destroyed.", "Ergänzung"],
+        ["Why do you recommend sterile saline solution instead of tap water for aftercare?", ["Because Pseudomonas lives in moist environments such as water pipes", "Because tap water contains too much limescale", "Because saline solution rebuilds cartilage", "Because tap water discolors the jewelry"], "Prevention of perichondritis.", "Ergänzung"]
       ]
     },
     {
       titel: "Hypergranulation (“proud flesh”)",
       seite: "S. 51",
       inhalt: [
-        { typ: "text", text: "Hypergranulation (“proud flesh”) is caused by persistent irritation of the wound, for example through pressure, friction or movement of the jewellery: the granulation tissue grows beyond the wound edge and forms a red, flesh-like mass, so the wound can no longer close over with skin. (The course book speaks of irritation of the subcutaneous tissue.)" },
+        { typ: "text", text: "Hypergranulation (“proud flesh”) is caused by persistent irritation of the wound, for example through pressure, friction or movement of the jewelry: the granulation tissue grows beyond the wound edge and forms a red, flesh-like mass, so the wound can no longer close over with skin. (The course book speaks of irritation of the subcutaneous tissue.)" },
         { typ: "schritte", titel: "How you can proceed", punkte: [
           "Do nothing: it may disappear on its own; the body usually rejects it.",
           "Dehydrate it: saline solution, chamomile tea, hydrogen peroxide, tea tree oil or eucalyptus oil help to push it back (according to the course book; hydrogen peroxide also damages healthy tissue and is hardly recommended for wounds today).",
-          "Hypergranulation disc: a plastic disc that is slipped over the jewellery.",
-          "Change the shape or material of the jewellery, for example swap a titanium labret for a PTFE barbell.",
+          "Hypergranulation disc: a plastic disc that is slipped over the jewelry.",
+          "Change the shape or material of the jewelry, for example swap a titanium labret for a PTFE barbell.",
           "If none of this helps: the client goes to a doctor or dermatologist, who removes the hypergranulation surgically."
         ] }
       ],
       fragen: [
         ["What causes hypergranulation?", ["Persistent irritation of the wound, e.g. through pressure or friction", "A nickel allergy", "Pseudomonas", "Too much extra length"], "Red, flesh-like mass.", "S. 51"],
-        ["What is the first approach to hypergranulation?", ["Do nothing; the body often rejects it", "Treat it immediately with a hypergranulation disc", "Send the client to a dermatologist", "Remove the jewellery"], "Approach 1 of 5.", "S. 51"],
-        ["What is a hypergranulation disc?", ["A plastic disc that is slipped over the jewellery", "A plaster with silver ions", "An ointment", "A special titanium ball"], "Approach 3 of 5.", "S. 51"],
-        ["Which change of jewellery can help?", ["For example, swapping a titanium labret for a PTFE barbell", "A shorter bar without extra length", "A heavier steel ring", "Thinner jewellery with external threading"], "Approach 4 of 5.", "S. 51"],
+        ["What is the first approach to hypergranulation?", ["Do nothing; the body often rejects it", "Treat it immediately with a hypergranulation disc", "Send the client to a dermatologist", "Remove the jewelry"], "Approach 1 of 5.", "S. 51"],
+        ["What is a hypergranulation disc?", ["A plastic disc that is slipped over the jewelry", "A bandage with silver ions", "An ointment", "A special titanium ball"], "Approach 3 of 5.", "S. 51"],
+        ["Which change of jewelry can help?", ["For example, swapping a titanium labret for a PTFE barbell", "A shorter bar without extra length", "A heavier steel ring", "Thinner jewelry with external threading"], "Approach 4 of 5.", "S. 51"],
         ["Who removes hypergranulation if nothing helps?", ["A doctor or dermatologist, surgically", "The piercer with sterile scissors", "The client with hydrogen peroxide", "The client themselves with tweezers"], "Approach 5 of 5.", "S. 51"]
       ]
     }

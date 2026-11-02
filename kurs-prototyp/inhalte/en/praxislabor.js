@@ -1,28 +1,28 @@
 /* Practice lab: exercises on the silicone practice model with self-check.
    Basis: procedure from module 09 (steps 1–26, course book pp. 111–112), checklists from module 05 and the exercise from module 08
-   (“Practise on the silicone ear: mark the area, apply the clamp, position the cannula (without piercing)”).
+   (“Practice on the silicone ear: mark the area, apply the clamp, position the cannula (without piercing)”).
    No piercing is ever done here: that is reserved for the practice day under supervision.
    Format: { id, titel, modul (reference), material: [...], schritte: [...], kontrolle: [...] } */
 window.KURS = window.KURS || { module: [] };
 window.KURS.labor = {
-  einleitung: "Here you practise the hand movements you will need on the practice day. Part 1 consists of dry exercises without piercing: on the silicone practice model, on paper and at the workstation. In part 2, clips show you how piercing is done; with the Complete package, you pierce the silicone ear yourself there using the practice set. Every exercise has a self-check. Only tick off what you have really managed. Bring the completed practice template with you to the practice day.",
+  einleitung: "Here you practice the hand movements you will need on the practice day. Part 1 consists of dry exercises without piercing: on the silicone practice model, on paper and at the workstation. In part 2, clips show you how piercing is done; with the Complete package, you pierce the silicone ear yourself there using the practice set. Every exercise has a self-check. Only tick off what you have really managed. Bring the completed practice template with you to the practice day.",
   sicherheit: [
     "No piercing is done in the dry exercises. You only pierce the silicone ear with the practice set from the Complete package. You never pierce people or animals; you learn that on the practice day under supervision.",
     "Only use cannulas as a dry exercise with the protective cap on. Used or uncapped cannulas go straight into the sharps container.",
     "The online course and the practice lab do not replace hands-on supervision."
   ],
-  material: "Silicone practice model (e.g. a silicone ear or practice skin from a specialist supplier of piercing and tattoo supplies; a practice set is included in the Complete package), single-use skin marker, ruler with millimetre markings, clamp, cannula with protective cap, disposable underpad, gloves, the practice template to print out.",
+  material: "Silicone practice model (e.g. a silicone ear or practice skin from a specialist supplier of piercing and tattoo supplies; a practice set is included in the Complete package), single-use skin marker, ruler with millimeter markings, clamp, cannula with protective cap, disposable underpad, gloves, the practice template to print out.",
   aufgaben: [
     {
       id: "arbeitsplatz",
       titel: "Setting up the workstation",
       modul: 5,
-      material: ["Disposable underpad", "Everything on the checklist “Workstation before every client” (whatever you have; otherwise use labelled placeholders)"],
+      material: ["Disposable underpad", "Everything on the checklist “Workstation before every client” (whatever you have; otherwise use labeled placeholders)"],
       schritte: [
-        "Wash your hands and dry them completely; remove jewellery from hands and forearms.",
+        "Wash your hands and dry them completely; remove jewelry from hands and forearms.",
         "Cover the work surface with the disposable underpad.",
         "Lay out everything on the checklist “Workstation before every client” without looking at the list.",
-        "Practise checking each sterile goods package: packaging undamaged, indicator changed colour, storage period not exceeded.",
+        "Practice checking each sterile goods package: packaging undamaged, indicator changed color, storage period not exceeded.",
         "Take a photo from above and compare it with the checklist. Repeat three times."
       ],
       kontrolle: [
@@ -38,7 +38,7 @@ window.KURS.labor = {
       modul: 5,
       material: ["Hand disinfectant", "Disposable gloves in your size"],
       schritte: [
-        "Nails short, no nail polish, no jewellery on hands and forearms.",
+        "Nails short, no nail polish, no jewelry on hands and forearms.",
         "Disinfect your hands as described in module 05; the contact time is stated on the disinfectant.",
         "Wait until your hands are completely dry.",
         "Put on the gloves without touching the outside with your bare hand more than necessary.",
@@ -57,10 +57,10 @@ window.KURS.labor = {
       modul: 9,
       material: ["Practice template (page 1)", "Single-use skin marker or fine pen", "Ruler"],
       schritte: [
-        "Print the practice template at original size (100 %, not “fit to page”). The control line must measure exactly 100 mm.",
+        "Print the practice template at original size (100%, not “fit to page”). The control line must measure exactly 100 mm.",
         "For each row, measure the given pair of points and copy it onto the line to the right.",
-        "In the symmetry exercise, mirror the points on the left onto the right side: same distance from the centre line, same height.",
-        "Only once everything is drawn, measure and note the deviation in millimetres."
+        "In the symmetry exercise, mirror the points on the left onto the right side: same distance from the center line, same height.",
+        "Only once everything is drawn, measure and note the deviation in millimeters."
       ],
       kontrolle: [
         "My points are small and clear, not a big blot.",
@@ -95,7 +95,7 @@ window.KURS.labor = {
       schritte: [
         "Put on gloves (exercise 2).",
         "Apply the clamp at the marking (procedure step 11) so that the entry and exit points lie in the opening.",
-        "Position the cannula with its protective cap at the entry point, pointing towards the exit point, from the visible side (step 12). Do not pierce.",
+        "Position the cannula with its protective cap at the entry point, pointing toward the exit point, from the visible side (step 12). Do not pierce.",
         "Say out loud what would come next: steps 13 to 19 from module 09.",
         "Release the clamp, put down the capped cannula. Repeat five times, also at other locations."
       ],
@@ -119,7 +119,7 @@ window.KURS.labor = {
       ],
       kontrolle: [
         "All 26 steps are correct, in the right order.",
-        "I can explain why the jewellery is pushed, not pulled, through the piercing channel (step 16).",
+        "I can explain why the jewelry is pushed, not pulled, through the piercing channel (step 16).",
         "I explained the aftercare instructions without a cheat sheet."
       ]
     },
@@ -149,15 +149,15 @@ window.KURS.labor = {
    Shot list for the clips: CLIPS-PRAXISLABOR.md in the main folder. */
 window.KURS.labor.stich = {
   pakete: ["komplett"],
-  einleitung: "With your practice set, you now pierce yourself: into the silicone ear, following the procedure from module 09 and the data sheets from module 08. Watch the clip first, then practise. Bring your pierced silicone ear and the practice log with you to the practice day: we’ll look at your piercing channels together there.",
-  zuschauen: "In these clips you see how piercing is done: on the silicone ear, step by step, following the procedure from module 09 and the data sheets from module 08. Watch closely and say the steps along with the clip. You learn to pierce yourself on the practice day under supervision; with the Complete package, you practise at home beforehand with the practice set.",
+  einleitung: "With your practice set, you now pierce yourself: into the silicone ear, following the procedure from module 09 and the data sheets from module 08. Watch the clip first, then practice. Bring your pierced silicone ear and the practice log with you to the practice day: we’ll look at your piercing channels together there.",
+  zuschauen: "In these clips you see how piercing is done: on the silicone ear, step by step, following the procedure from module 09 and the data sheets from module 08. Watch closely and say the steps along with the clip. You learn to pierce yourself on the practice day under supervision; with the Complete package, you practice at home beforehand with the practice set.",
   sicherheit: [
     "Only pierce the silicone ear. Never yourself, other people or animals, not even “just to try it out”.",
-    "Never put cannulas back into the protective cap. The steel needle goes straight into the sharps container after you pull it out; the full container is closed tightly and disposed of with general waste.",
+    "Never put cannulas back into the protective cap. The steel needle goes straight into the sharps container after you pull it out; the full container is closed tightly and disposed of with regular trash.",
     "Work with gloves on a disposable underpad, without distractions and out of reach of children. Keep cannulas and the sharps container locked away.",
     "If you do prick yourself, the checklist “After a needlestick injury” from module 05 applies."
   ],
-  set: ["Silicone ear", "IV cannulas 18G and 16G", "Small sharps container", "Clamp (Snaptile or gauze clamp)", "Single-use skin marker", "Disposable gloves and disposable underpad", "Practice jewellery: labret, ball closure ring (BCR), barbell 38 mm", "Scissors for the plastic sheath"],
+  set: ["Silicone ear", "IV cannulas 18G and 16G", "Small sharps container", "Clamp (Snaptile or gauze clamp)", "Single-use skin marker", "Disposable gloves and disposable underpad", "Practice jewelry: labret, ball closure ring (BCR), barbell 38 mm", "Scissors for the plastic sheath"],
   aufgaben: [
     {
       id: "stich-kanuele",
@@ -169,7 +169,7 @@ window.KURS.labor.stich = {
       schritte: [
         "Place the sharps container so that you can reach it with your working hand without changing your grip.",
         "Take the cannula out of the packaging without touching the needle. Pull the protective cap straight off and put it aside.",
-        "Hold the cannula by the hub and pierce the silicone (anywhere, just to practise the movement).",
+        "Hold the cannula by the hub and pierce the silicone (anywhere, just to practice the movement).",
         "Pull the steel needle out by the hub; the plastic sheath stays in the silicone. Needle straight into the sharps container.",
         "Repeat three times until the movement from packaging to disposal flows smoothly."
       ],
@@ -193,13 +193,13 @@ window.KURS.labor.stich = {
         "Pull out the steel needle and dispose of it; the plastic sheath stays in the piercing channel (step 13).",
         "Trim the sheath slightly with the scissors and insert the labret into it (steps 14 and 15).",
         "Push the labret through the piercing channel, don’t pull (step 16). Carefully pull off the tube (step 17).",
-        "Pick up the ball, hold the jewellery with the holding pliers and screw the ball on firmly (steps 18 and 19).",
+        "Pick up the ball, hold the jewelry with the holding pliers and screw the ball on firmly (steps 18 and 19).",
         "Repeat three times at different points on the earlobe."
       ],
       kontrolle: [
         "The exit is no more than 1 mm from my rear marking.",
         "The bar goes straight through the earlobe, not at an angle.",
-        "I pushed the jewellery, I didn’t pull it.",
+        "I pushed the jewelry, I didn’t pull it.",
         "The ball is firmly in place, and the disc lies flat at the back."
       ]
     },
@@ -256,26 +256,26 @@ window.KURS.labor.stich = {
       kontrolle: [
         "The barbell sits straight and does not squeeze the auricle together.",
         "Both piercing channels point in the same direction; the bar slides through without force.",
-        "I checked beforehand whether the markings match the length of the jewellery."
+        "I checked beforehand whether the markings match the length of the jewelry."
       ]
     },
     {
       id: "stich-schmuck",
-      titel: "Securing and changing jewellery",
+      titel: "Securing and changing jewelry",
       modul: 7,
       clip: "labor-schmuck",
-      clipText: "Screw on a ball with the ball grabber and holding pliers, open and close a ball closure ring, change jewellery on the silicone ear.",
-      material: ["Silicone ear with pierced channels", "Ball grabber", "Holding pliers", "Ring opening pliers and ring closing pliers", "Practice jewellery"],
+      clipText: "Screw on a ball with the ball grabber and holding pliers, open and close a ball closure ring, change jewelry on the silicone ear.",
+      material: ["Silicone ear with pierced channels", "Ball grabber", "Holding pliers", "Ring opening pliers and ring closing pliers", "Practice jewelry"],
       schritte: [
         "Pick up a ball with the ball grabber and screw it onto the bar you are holding with the holding pliers.",
         "Open a ball closure ring, take out the ball, put it back in and close the ring.",
         "In a finished piercing channel, swap the labret for a BCR and back again.",
-        "Remember: with a real client, the initial jewellery is only changed after complete healing (module 10)."
+        "Remember: with a real client, the initial jewelry is only changed after complete healing (module 10)."
       ],
       kontrolle: [
         "I didn’t drop a single ball or let one spring away.",
         "The ring is round again after closing.",
-        "I can explain why the initial jewellery is not changed early on a client."
+        "I can explain why the initial jewelry is not changed early on a client."
       ]
     },
     {

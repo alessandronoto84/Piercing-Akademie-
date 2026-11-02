@@ -32,7 +32,7 @@ KURS.module.push({
         { typ: "schritte", start: 5, punkte: [
           "Meanwhile, prepare the workstation and lay out all instruments ready to hand.",
           "The client enters the piercing room: create a pleasant atmosphere and ease the client’s anxiety.",
-          "Examine the area and choose suitable initial jewellery (extra length!).",
+          "Examine the area and choose suitable initial jewelry (extra length!).",
           "Disinfect the area (alcohol swab).",
           "Mark the entry and exit points of the cannula with the single-use marker.",
           "Let the client check whether it looks right."
@@ -41,7 +41,7 @@ KURS.module.push({
       ],
       fragen: [
         ["When do you prepare the workstation and instruments?", ["While the client fills in the consent form", "Before the client enters the studio, for the whole day", "After marking", "When the client is already lying on the couch"], "Step 5.", "S. 111"],
-        ["What do you pay attention to when choosing the initial jewellery?", ["Extra length", "The largest possible ball", "The shortest possible model", "External threading"], "Step 7.", "S. 111"],
+        ["What do you pay attention to when choosing the initial jewelry?", ["Extra length", "The largest possible ball", "The shortest possible model", "External threading"], "Step 7.", "S. 111"],
         ["What do you use to disinfect the area in step 8?", ["An alcohol swab", "Saline solution", "Kodan, only after piercing", "Chlorhexamed"], "Procedure, step 8.", "S. 111"],
         ["What do you use to mark the entry and exit points?", ["The single-use marker", "A disinfected ballpoint pen", "The tip of the cannula", "A kohl pencil"], "Step 9.", "S. 111"],
         ["Why do you let the client look after marking?", ["So the client can check whether it looks right", "So the client gets used to the needle", "So the disinfectant can take effect", "So the client sees the aftercare instructions"], "Step 10.", "S. 111"]
@@ -56,35 +56,35 @@ KURS.module.push({
           "Apply the clamp or receiving tube.",
           "Pierce, ideally always into the visible side – with a labret, for example, where the ball will sit. The faster you pierce, the less pain.",
           "Pull out the cannula; the plastic sheath stays in the piercing channel.",
-          "Trim the plastic sheath slightly with scissors so the jewellery goes in more easily.",
-          "Insert the initial jewellery into the plastic sheath.",
-          "Push it through the piercing channel, don’t pull, or the jewellery may slip off. This is painful: have the client breathe out while you do it."
+          "Trim the plastic sheath slightly with scissors so the jewelry goes in more easily.",
+          "Insert the initial jewelry into the plastic sheath.",
+          "Push it through the piercing channel, don’t pull, or the jewelry may slip off. This is painful: have the client breathe out while you do it."
         ] },
         { typ: "grafik", id: "stich" }
       ],
       fragen: [
         ["Which side do you ideally pierce into?", ["The visible side – with a labret, where the ball sits", "Always from the inside out", "Always from back to front", "Where the disc sits"], "Step 12.", "S. 112"],
         ["What is true of the speed of the piercing?", ["The faster you pierce, the less pain", "Pierce slowly so the tissue gives way", "Speed makes no difference", "Fast only for cartilage, otherwise slowly"], "Step 12.", "S. 112"],
-        ["Why do you trim the plastic sheath?", ["So the jewellery goes in more easily", "So it doesn’t stay in the channel", "So the needle comes out more easily", "So less blood escapes"], "Step 14.", "S. 112"],
-        ["What do you have the client do while you push the jewellery through?", ["Breathe out", "Breathe in and hold their breath", "Count out loud", "Close their eyes and swallow"], "Step 16.", "S. 112"]
+        ["Why do you trim the plastic sheath?", ["So the jewelry goes in more easily", "So it doesn’t stay in the channel", "So the needle comes out more easily", "So less blood escapes"], "Step 14.", "S. 112"],
+        ["What do you have the client do while you push the jewelry through?", ["Breathe out", "Breathe in and hold their breath", "Count out loud", "Close their eyes and swallow"], "Step 16.", "S. 112"]
       ]
     },
     {
-      titel: "Securing the jewellery",
+      titel: "Securing the jewelry",
       seite: "S. 112",
       inhalt: [
         { typ: "schritte", start: 17, punkte: [
-          "Carefully pull the tube off the jewellery.",
+          "Carefully pull the tube off the jewelry.",
           "Pick up the ball.",
-          "Hold the jewellery with the holding pliers and screw the ball on firmly.",
+          "Hold the jewelry with the holding pliers and screw the ball on firmly.",
           "Spray again with Kodan.",
           "Show the client the piercing in the mirror."
         ] }
       ],
       fragen: [
-        ["What do you hold the jewellery with while screwing on the ball?", ["The holding pliers", "The ball grabber", "The clamp with a window", "The caliper"], "Step 19.", "S. 112"],
-        ["What is sprayed on again after inserting the jewellery?", ["Kodan", "Octenisept", "Ice spray", "Saline solution"], "Step 20.", "S. 112"],
-        ["What happens in step 21?", ["Showing the client the piercing in the mirror", "Spraying with Kodan", "Screwing the ball on firmly", "Covering with a plaster"], "Procedure, ch. 11.", "S. 112"]
+        ["What do you hold the jewelry with while screwing on the ball?", ["The holding pliers", "The ball grabber", "The clamp with a window", "The caliper"], "Step 19.", "S. 112"],
+        ["What is sprayed on again after inserting the jewelry?", ["Kodan", "Octenisept", "Ice spray", "Saline solution"], "Step 20.", "S. 112"],
+        ["What happens in step 21?", ["Showing the client the piercing in the mirror", "Spraying with Kodan", "Screwing the ball on firmly", "Covering with a bandage"], "Procedure, ch. 11.", "S. 112"]
       ]
     },
     {
@@ -92,7 +92,7 @@ KURS.module.push({
       seite: "S. 113",
       inhalt: [
         { typ: "schritte", start: 22, punkte: [
-          "If needed, cover with a plaster (nipple, navel).",
+          "If needed, cover with a bandage (nipple, navel).",
           "For tongue piercings, give the client an ice cube.",
           "Hand over the aftercare product and explain the aftercare instructions verbally.",
           "Ideally, also hand over the aftercare instructions in writing.",
@@ -100,10 +100,10 @@ KURS.module.push({
         ] }
       ],
       fragen: [
-        ["For which piercings may you cover the area with a plaster?", ["For example nipple and navel", "For example lobe and helix", "For example tongue and lip", "For all cartilage piercings"], "Step 22.", "S. 113"],
-        ["What does the client get after a tongue piercing?", ["An ice cube", "A sterile plaster", "A lidocaine lozenge", "A glass of warm tea"], "Step 23.", "S. 113"],
+        ["For which piercings may you cover the area with a bandage?", ["For example nipple and navel", "For example lobe and helix", "For example tongue and lip", "For all cartilage piercings"], "Step 22.", "S. 113"],
+        ["What does the client get after a tongue piercing?", ["An ice cube", "A sterile bandage", "A lidocaine lozenge", "A glass of warm tea"], "Step 23.", "S. 113"],
         ["How do you pass on the aftercare instructions?", ["Verbally and ideally also in writing", "Only verbally", "Only as a link to the website", "Only if the client asks"], "Steps 24 and 25.", "S. 113"],
-        ["What should the client do if wound healing problems occur?", ["Come back for advice", "Remove the jewellery themselves", "Treat it with undiluted tea tree oil", "Swap the jewellery for steel"], "Step 26.", "S. 113"]
+        ["What should the client do if wound healing problems occur?", ["Come back for advice", "Remove the jewelry themselves", "Treat it with undiluted tea tree oil", "Swap the jewelry for steel"], "Step 26.", "S. 113"]
       ]
     },
     {

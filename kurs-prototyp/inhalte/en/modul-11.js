@@ -12,7 +12,7 @@ KURS.module.push({
       seite: "Entwurf",
       entwurf: true,
       inhalt: [
-        { typ: "text", text: "In Germany there is no regulated training for piercers and no officially recognised quality seal. Whether, and under which conditions, you may offer piercings is decided by the local authorities. This course shows you what matters; it does not replace clarifying things with the authorities locally." },
+        { typ: "text", text: "In Germany there is no regulated training for piercers and no officially recognized quality seal. Whether, and under which conditions, you may offer piercings is decided by the local authorities. This course shows you what matters; it does not replace clarifying things with the authorities locally." },
         { typ: "schritte", punkte: [
           "Register your business with the responsible trade office (Gewerbeamt).",
           "Contact the local public health office (Gesundheitsamt): ask about the requirements for premises and hygiene, and ask for the framework hygiene plan for piercing studios (course book p. 36).",
@@ -30,12 +30,12 @@ KURS.module.push({
       titel: "Planning the premises",
       seite: "S. 25–26, 38",
       inhalt: [
-        { typ: "video", id: "studio-raum", text: "Treatment room with a wipeable couch, hand washbasin and autoclave.", schleife: true },
+        { typ: "video", id: "studio-raum", text: "Treatment room with a wipeable couch, hand sink and autoclave.", schleife: true },
         { typ: "liste", punkte: [
           "Workstation separated from the waiting area structurally or at least by a partition wall; ideally a separate room.",
-          "Hand washbasin with running water and dispensers for disinfectant, liquid soap and disposable towels, operable without hand contact and without splashes reaching the workstation.",
+          "Hand sink with running water and dispensers for disinfectant, liquid soap and disposable towels, operable without hand contact and without splashes reaching the workstation.",
           "Couch and furniture with smooth, wipeable surfaces.",
-          "Separate toilet with hand washbasin, dispensers, waste bin and sanitary bin.",
+          "Separate toilet with hand sink, dispensers, trash can and sanitary disposal bin.",
           "First aid kit and emergency numbers clearly visible."
         ] },
         { typ: "grafik", id: "studio3d" },
@@ -53,14 +53,14 @@ KURS.module.push({
       inhalt: [
         { typ: "liste", titel: "What you keep in writing", punkte: [
           "Framework hygiene plan with cleaning and disinfection plan (examples in the course book pp. 37–39; agree it with the local public health office)",
-          "Sterile goods: every batch with sterilisation date and batch number",
+          "Sterile goods: every batch with sterilization date and batch number",
           "Autoclave test records: daily tests, six-monthly spore tests, annual device inspection",
           "Every client’s consent form, stored securely",
           "Photo consents, before you publish any client pictures"
         ] }
       ],
       fragen: [
-        ["What do you document for every batch of sterile goods?", ["Sterilisation date and batch number", "Only the sterilisation date", "The client’s name", "The temperature of the ultrasonic bath"], "This way every batch can be traced.", "S. 46"],
+        ["What do you document for every batch of sterile goods?", ["Sterilization date and batch number", "Only the sterilization date", "The client’s name", "The temperature of the ultrasonic bath"], "This way every batch can be traced.", "S. 46"],
         ["What belongs in your studio’s documentation?", ["Hygiene plan, sterile goods batches, autoclave tests and consent forms", "Only the consent forms", "Only invoices and the cash book", "Only the autoclave tests"], "If in doubt, the local public health office and the insurer will want to see everything without gaps.", "Entwurf"],
         ["To whom do you present the autoclave tests on request?", ["The local authorities", "The clients", "The manufacturer", "The health insurance fund"], "See module 5.", "S. 47"]
       ]
@@ -72,14 +72,14 @@ KURS.module.push({
       inhalt: [
         { typ: "text", text: "Get advice on business or professional liability insurance for piercing before you pierce your first client." },
         { typ: "liste", titel: "What belongs in your price calculation", punkte: [
-          "Materials: jewellery, cannula, disposables, aftercare products",
+          "Materials: jewelry, cannula, disposables, aftercare products",
           "Your working time, including consultation, consent form and reprocessing",
           "Running costs: premises, equipment, inspections, insurance"
         ] }
       ],
       fragen: [
         ["What should you sort out before your first client?", ["Business or professional liability insurance", "Legal expenses insurance is enough", "Home contents insurance", "Nothing, the consent form is enough"], "Get advice.", "Entwurf"],
-        ["What belongs in the price calculation?", ["Materials, working time including consultation and reprocessing, running costs", "Only jewellery and cannula", "Only the working time with the client", "Only rent and insurance"], "Only then does your price also cover consultation, reprocessing and running costs.", "Entwurf"]
+        ["What belongs in the price calculation?", ["Materials, working time including consultation and reprocessing, running costs", "Only jewelry and cannula", "Only the working time with the client", "Only rent and insurance"], "Only then does your price also cover consultation, reprocessing and running costs.", "Entwurf"]
       ]
     },
     {
@@ -87,14 +87,14 @@ KURS.module.push({
       seite: "S. 34, 56",
       inhalt: [
         { typ: "liste", punkte: [
-          "Initial jewellery only made of G23 titanium or PTFE, with the manufacturer’s material certificate. Under EU law, jewellery for fresh piercings may release no more than 0.2 µg of nickel per cm² per week.",
+          "Initial jewelry only made of G23 titanium or PTFE, with the manufacturer’s material certificate. Under EU law, jewelry for fresh piercings may release no more than 0.2 µg of nickel per cm² per week.",
           "Disinfectants from the VAH list (German Association for Applied Hygiene) with proven efficacy.",
           "Cannulas, clamps and consumables from specialist suppliers of medical or studio supplies."
         ] },
         { typ: "ergaenzung", text: "Which suppliers have proven themselves will be added here by the Piercing Akademie from its own experience." }
       ],
       fragen: [
-        ["Which initial jewellery do you buy?", ["G23 titanium or PTFE with material certificate", "316L, because it is cheaper", "Zircon gold titanium", "303 steel"], "See module 6.", "S. 56"],
+        ["Which initial jewelry do you buy?", ["G23 titanium or PTFE with material certificate", "316L, because it is cheaper", "Zircon gold titanium", "303 steel"], "See module 6.", "S. 56"],
         ["Which disinfectants do you buy?", ["Products from the VAH list with proven efficacy", "Products with the highest possible alcohol content", "Household cleaners with chlorine", "Any products from the drugstore"], "See module 5.", "S. 34"]
       ]
     },
@@ -112,8 +112,8 @@ KURS.module.push({
       ],
       fragen: [
         ["What do you do with a piercing you have not safely mastered?", ["I turn it down", "I pierce it with a receiving tube", "I pierce it following a video", "I pierce it freehand"], "The client’s safety comes first.", "S. 91–93"],
-        ["What do you do with piercings marked “Do not perform”?", ["I never perform them", "I perform them only for regular clients", "I perform them with anaesthesia", "I perform them after written consent"], "Risk of serious harm.", "S. 103–110"],
-        ["Does the Academy’s certificate replace an official permit?", ["No, it is proof of participation and training", "Yes, in Niedersachsen", "Yes, together with the business registration", "Yes, it is state-recognised"], "The trade office and the local public health office decide.", "Akademie"],
+        ["What do you do with piercings marked “Do not perform”?", ["I never perform them", "I perform them only for regular clients", "I perform them with anesthesia", "I perform them after written consent"], "Risk of serious harm.", "S. 103–110"],
+        ["Does the Academy’s certificate replace an official permit?", ["No, it is proof of participation and training", "Yes, in Niedersachsen", "Yes, together with the business registration", "Yes, it is state-recognized"], "The trade office and the local public health office decide.", "Akademie"],
         ["When do you publish photos of clients’ piercings?", ["Only after written consent", "Immediately, if the face can’t be seen", "After verbal agreement", "After the withdrawal period has expired"], "See module 2.", "S. 1"]
       ]
     }
