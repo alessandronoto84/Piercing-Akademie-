@@ -28,8 +28,11 @@ ersetze('href="../assets/', 'href="/assets/');
 ersetze('src="../assets/', 'src="/assets/');
 ersetze('href="../index.html"', 'href="/"');
 ersetze('href="../online-kurs.html"', 'href="/online-kurs.html"');
-ersetze('<script src="inhalte/modul-01.js"></script>', '<script src="konto.js"></script>\n<script src="inhalte/modul-01.js"></script>');
-html = html.replace(/<p class="k-banner">[\s\S]*?<\/p>/, '<p class="k-banner">Fahrschule der Piercing Akademie</p>');
+// konto.js (window.PA_KONTO mit der Sprache des Kontos) muss vor dem Ladeskript stehen, das Sprache und Inhaltsdateien wählt
+ersetze("<script>\n/* Sprache wählen", '<script src="konto.js"></script>\n<script>\n/* Sprache wählen');
+// Banner und Titel übersetzt kurs.js über inhalte/ui.js (data-tr bzw. document.title)
+if (!/<p class="k-banner"[^>]*>[\s\S]*?<\/p>/.test(html)) throw new Error("Banner nicht gefunden in kurs-prototyp/index.html");
+html = html.replace(/<p class="k-banner"[^>]*>[\s\S]*?<\/p>/, '<p class="k-banner" data-tr>Fahrschule der Piercing Akademie</p>');
 html = html.replace(/<title>[^<]*<\/title>/, "<title>Fahrschule – Piercing Akademie</title>");
 html = html.replace("<head>", '<head>\n<meta name="robots" content="noindex, nofollow">');
 fs.writeFileSync(path.join(ZIEL, "kurs", "index.html"), html);

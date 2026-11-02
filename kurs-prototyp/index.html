@@ -12,41 +12,42 @@
 <link rel="stylesheet" href="kurs.css">
 </head>
 <body>
-<a class="skip" href="#kurs">Zum Kursinhalt springen</a>
-<p class="k-banner">Prototyp des Online-Kurses. Kein Login, keine Bezahlung; der Fortschritt wird nur in diesem Browser gespeichert. Inhalte nach dem Kursbuch „Die Piercing Akademie – Dein Weg zum Bodypiercer“.</p>
+<a class="skip" href="#kurs" data-tr>Zum Kursinhalt springen</a>
+<p class="k-banner" data-tr>Prototyp des Online-Kurses. Kein Login, keine Bezahlung; der Fortschritt wird nur in diesem Browser gespeichert. Inhalte nach dem Kursbuch „Die Piercing Akademie – Dein Weg zum Bodypiercer“.</p>
 <div class="wrap">
   <header>
-    <a class="brand" href="../index.html"><img src="../assets/favicon.png" alt="" width="34" height="34">Piercing Akademie</a>
-    <nav aria-label="Seitennavigation">
-      <a href="../online-kurs.html">Über den Online-Kurs</a>
-      <a href="#uebersicht">Kursübersicht</a>
+    <a class="brand" href="../index.html" data-website><img src="../assets/favicon.png" alt="" width="34" height="34">Piercing Akademie</a>
+    <nav aria-label="Seitennavigation" data-tr-aria>
+      <a href="../online-kurs.html" data-website data-tr>Über den Online-Kurs</a>
+      <a href="#uebersicht" data-tr>Kursübersicht</a>
+      <span class="sprachwahl k-sprachen" role="group" aria-label="Sprache" data-tr-aria><a href="?lang=de" data-lang="de" hreflang="de" lang="de">DE</a><a href="?lang=en" data-lang="en" hreflang="en" lang="en">EN</a><a href="?lang=es" data-lang="es" hreflang="es" lang="es">ES</a></span>
     </nav>
   </header>
 </div>
 <div class="k-layout">
-  <nav id="kurs-nav" aria-label="Module"></nav>
-  <main id="kurs" tabindex="-1"><noscript><p>Der Kurs-Prototyp braucht JavaScript.</p></noscript></main>
+  <nav id="kurs-nav" aria-label="Module" data-tr-aria></nav>
+  <main id="kurs" tabindex="-1"><noscript><p lang="de">Der Kurs-Prototyp braucht JavaScript.</p><p lang="en">The online course needs JavaScript.</p><p lang="es">El curso online necesita JavaScript.</p></noscript></main>
 </div>
-<script src="inhalte/modul-01.js"></script>
-<script src="inhalte/modul-02.js"></script>
-<script src="inhalte/modul-03.js"></script>
-<script src="inhalte/modul-04.js"></script>
-<script src="inhalte/modul-05.js"></script>
-<script src="inhalte/modul-06.js"></script>
-<script src="inhalte/modul-07.js"></script>
-<script src="inhalte/modul-08.js"></script>
-<script src="inhalte/modul-09.js"></script>
-<script src="inhalte/modul-10.js"></script>
-<script src="inhalte/modul-11.js"></script>
-<script src="inhalte/grafiken.js"></script>
-<script src="inhalte/bilder.js"></script>
-<script src="inhalte/bilder-frei.js"></script>
-<script src="inhalte/bilder-ki.js"></script>
-<script src="inhalte/glossar-checklisten.js"></script>
-<script src="inhalte/praxislabor.js"></script>
-<script src="inhalte/clips.js"></script>
-<script src="inhalte/fragen-generiert.js"></script>
-<script src="kurs.js"></script>
-<script src="bewegung.js"></script>
+<script>
+/* Sprache wählen und Inhalte laden. Reihenfolge: ?lang=de|en|es (wird gemerkt), gemerkte Wahl, Sprache des Kontos (PA_KONTO aus /kurs/konto.js),
+   Browsersprache, sonst Deutsch. Übersetzte Inhalte liegen in inhalte/en/ und inhalte/es/, alles andere immer in inhalte/. */
+(function () {
+  var SPRACHEN = ["de", "en", "es"], MERKER = "pa-kurs-sprache", s = null;
+  var gueltig = function (x) { x = String(x || "").toLowerCase().slice(0, 2); return SPRACHEN.indexOf(x) > -1 ? x : null; };
+  var m = /[?&]lang=([^&#]*)/.exec(location.search);
+  if (m && (s = gueltig(decodeURIComponent(m[1])))) { try { localStorage.setItem(MERKER, s); } catch (e) { /* Speicher gesperrt */ } }
+  if (!s) { try { s = gueltig(localStorage.getItem(MERKER)); } catch (e) { s = null; } }
+  if (!s && window.PA_KONTO) s = gueltig(window.PA_KONTO.sprache);
+  if (!s) s = gueltig(navigator.language || (navigator.languages || [])[0]);
+  s = s || "de";
+  window.KURS_SPRACHE = s;
+  document.documentElement.lang = s;
+  var DATEIEN = ["modul-01.js", "modul-02.js", "modul-03.js", "modul-04.js", "modul-05.js", "modul-06.js", "modul-07.js", "modul-08.js", "modul-09.js", "modul-10.js", "modul-11.js",
+    "grafiken.js", "grafiken-text.js", "bilder.js", "bilder-frei.js", "bilder-ki.js", "glossar-checklisten.js", "praxislabor.js", "clips.js", "fragen-generiert.js", "ui.js"];
+  var JE_SPRACHE = /^(modul-\d\d|glossar-checklisten|praxislabor|fragen-generiert)\.js$/;
+  var html = DATEIEN.map(function (d) { return '<script src="inhalte/' + (s !== "de" && JE_SPRACHE.test(d) ? s + "/" : "") + d + '"><\/script>'; }).join("\n");
+  document.write(html + '\n<script src="kurs.js"><\/script>\n<script src="bewegung.js"><\/script>');
+})();
+</script>
 </body>
 </html>
