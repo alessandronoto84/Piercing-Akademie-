@@ -1,6 +1,6 @@
 /* Piercing Akademie – gemeinsames Stylesheet für alle Seiten.
    Gestaltung (Überarbeitung 25.10.2026): Schwarz, Elfenbein und Titan-Gold. Dunkle Bänder („Nacht“) für Einstieg,
-   Pakete und Anmeldung, helle Flächen für Inhalte. Der Farbverlauf „Titan“ erinnert an eloxiertes Titan und wird
+   Pakete und Anmeldung, helle Flächen für Inhalte. Der Farbverlauf „Titan“ ist ein reiner Goldverlauf (nur zwei Markenfarben: Anthrazit und Gold) und wird
    nur sparsam für Hervorhebungen genutzt. Kontraste: Text mindestens 4,5:1 (siehe PROJEKT-DOKUMENTATION.md). */
 
 /* Schriften: lokal eingebunden (kein Abruf bei Google, siehe datenschutz.html). Lizenz: SIL OFL 1.1, siehe fonts/LICENSE-*.txt */
@@ -31,7 +31,7 @@
   --night-muted:#A6A09A;
   --night-line:#2E2D33;
   --error:#A4231B;
-  --titan:linear-gradient(100deg,#C9A464 0%,#E3A88C 28%,#B88AD8 55%,#7FA4EA 80%,#C9A464 100%);
+  --titan:linear-gradient(100deg,#C9A86A 0%,#F0DDB0 30%,#C9A86A 55%,#A9864E 80%,#C9A86A 100%);
   --schatten:0 24px 48px -28px rgba(23,22,26,.45);
   --radius:14px;
   --f-display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
@@ -105,6 +105,8 @@ header{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
 .brand{font-family:var(--f-body);font-weight:600;font-size:1.2rem;text-decoration:none;display:flex;align-items:center;gap:10px;letter-spacing:-.01em}
 .brand img{width:36px;height:36px;border-radius:9px;display:block;box-shadow:0 0 0 1px rgba(201,168,106,.35)}
 .brand{white-space:nowrap}
+.brand .brand-die,.brand .brand-akz{color:var(--accent)}
+.brand .brand-die{font-weight:500}
 @media (max-width:420px){.brand{font-size:1.05rem;gap:8px}.brand img{width:32px;height:32px;border-radius:9px}}
 @media (max-width:350px){.brand{font-size:.92rem;gap:6px}.brand img{width:28px;height:28px;border-radius:8px}}
 nav{display:flex;gap:8px 24px;flex-wrap:wrap;align-items:center}
@@ -123,7 +125,7 @@ nav a[aria-current="page"]{color:var(--ink);font-weight:600}
   position:relative;isolation:isolate;
 }
 .nacht::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
-  background:radial-gradient(60% 50% at 85% 10%,rgba(201,164,100,.16),transparent 70%),radial-gradient(40% 40% at 0% 100%,rgba(127,164,234,.10),transparent 70%)}
+  background:radial-gradient(60% 50% at 85% 10%,rgba(201,164,100,.16),transparent 70%),radial-gradient(40% 40% at 0% 100%,rgba(201,168,106,.06),transparent 70%)}
 .nacht nav a:hover{color:var(--ink)}
 
 /* Einstieg */
@@ -136,7 +138,7 @@ nav a[aria-current="page"]{color:var(--ink);font-weight:600}
 .hero-bild{position:relative;justify-self:end;width:min(100%,430px)}
 .hero-bild .foto{display:block;width:88%;margin-left:auto;aspect-ratio:354/473;object-fit:cover;border-radius:200px 200px var(--radius) var(--radius);filter:grayscale(1) contrast(1.05);
   border:1px solid transparent;background:var(--titan) border-box;padding:3px}
-.hero-bild .ring{position:absolute;z-index:1;right:0;top:18%;width:92px;height:92px;border-radius:50%;border:6px solid transparent;background:conic-gradient(from var(--winkel,0deg),#C9A464,#E3A88C,#B88AD8,#7FA4EA,#C9A464) border-box;-webkit-mask:linear-gradient(#000 0 0) padding-box exclude,linear-gradient(#000 0 0);mask:linear-gradient(#000 0 0) padding-box exclude,linear-gradient(#000 0 0)}
+.hero-bild .ring{position:absolute;z-index:1;right:0;top:18%;width:92px;height:92px;border-radius:50%;border:6px solid transparent;background:conic-gradient(from var(--winkel,0deg),#C9A86A,#F0DDB0,#A9864E,#E3C890,#C9A86A) border-box;-webkit-mask:linear-gradient(#000 0 0) padding-box exclude,linear-gradient(#000 0 0);mask:linear-gradient(#000 0 0) padding-box exclude,linear-gradient(#000 0 0)}
 .spec{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--schatten)}
 .spec .label{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .spec .spec-title{font-family:var(--f-display);font-weight:600;line-height:1.08;margin:10px 0 4px;font-size:1.45rem}
@@ -216,7 +218,7 @@ details .body ul,details .body ol{margin:8px 0 0;padding-left:1.1em}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:18px;min-width:0;position:relative;
   transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s,border-color .35s}
 .card:hover{transform:translateY(-6px);box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
-.card.top{border:2px solid transparent;background:linear-gradient(var(--surface),var(--surface)) padding-box,conic-gradient(from var(--winkel,0deg),#C9A464,#E3A88C,#B88AD8,#7FA4EA,#C9A464) border-box}
+.card.top{border:2px solid transparent;background:linear-gradient(var(--surface),var(--surface)) padding-box,conic-gradient(from var(--winkel,0deg),#C9A86A,#F0DDB0,#A9864E,#E3C890,#C9A86A) border-box}
 .card .badge{position:absolute;top:-13px;left:28px;background:var(--gold);color:var(--gold-ink);font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:999px;font-weight:500}
 .card h3{margin-top:6px;font-size:1.5rem}
 .card .price{font-family:var(--f-display);font-size:clamp(2.6rem,4vw,3.4rem);font-weight:800;line-height:1}
@@ -396,7 +398,7 @@ footer a{color:var(--muted)}
   .zahlen div:nth-child(3){padding-left:0}
   .zahlen div:nth-child(n+3){border-top:1px solid var(--line)}
   .weg{grid-template-columns:minmax(0,1fr);gap:28px}
-  .weg::before{left:27px;right:auto;top:28px;bottom:28px;width:2px;height:auto;background:linear-gradient(var(--gold),#7FA4EA);transform-origin:50% 0}
+  .weg::before{left:27px;right:auto;top:28px;bottom:28px;width:2px;height:auto;background:linear-gradient(var(--gold),#A9864E);transform-origin:50% 0}
   .weg li{padding:6px 0 0 76px;min-height:56px}
   .gal{grid-template-columns:repeat(2,minmax(0,1fr))}
   .pk{gap:28px}
@@ -583,7 +585,7 @@ footer nav[aria-label="Instagram"] a{color:var(--accent)}
 .auftakt-vorhang{position:absolute;left:0;right:0;height:50.5%;background:#0E0E11;transition:transform 1s cubic-bezier(.77,0,.18,1)}
 .auftakt-vorhang.oben{top:0}.auftakt-vorhang.unten{bottom:0}
 .auftakt-vorhang.oben::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 80% at 50% 100%,rgba(201,164,100,.10),transparent 70%)}
-.auftakt-vorhang.unten::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 80% at 50% 0%,rgba(127,164,234,.08),transparent 70%)}
+.auftakt-vorhang.unten::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 80% at 50% 0%,rgba(201,168,106,.06),transparent 70%)}
 .auftakt-buehne{position:relative;display:grid;justify-items:center;gap:22px;transition:transform .9s cubic-bezier(.7,0,.2,1),opacity .6s ease}
 .auftakt-ring{overflow:visible;filter:drop-shadow(0 0 14px rgba(201,168,106,.18));animation:auftaktGlimmen 1.4s 1.3s ease-in-out both}
 @keyframes auftaktGlimmen{0%{filter:drop-shadow(0 0 8px rgba(201,168,106,.15))}50%{filter:drop-shadow(0 0 26px rgba(201,168,106,.4))}100%{filter:drop-shadow(0 0 14px rgba(201,168,106,.22))}}
