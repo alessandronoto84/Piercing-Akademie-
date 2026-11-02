@@ -5,7 +5,7 @@
    2. Sanftes Einblenden der Inhalte beim Scrollen, hochzählende Zahlen, sich zeichnende Linie zwischen den Schritten.
    3. Paketkarten kippen leicht zur Maus (nur mit Maus, nicht bei „Bewegung reduzieren“).
    4. Überschriften steigen Wort für Wort auf, Fotos enthüllen sich, Karten kippen nach vorn, die Ablauf-Linie
-      wächst mit dem Scrollen, Preise zählen hoch, der Einstieg bekommt beim Wegscrollen Tiefe.
+      wächst mit dem Scrollen, Preise fallen von 10.000 auf den echten Preis, der Einstieg bekommt beim Wegscrollen Tiefe.
    Bei „Bewegung reduzieren“ (prefers-reduced-motion) bleibt alles ruhig; ohne JavaScript ist die Seite unverändert. */
 (function () {
   "use strict";
@@ -173,17 +173,18 @@
     }, { passive: true });
   }
 
-  // ---------- Preise zählen hoch, sobald die Karte erscheint ----------
+  // ---------- Preise fallen von 10.000 auf den echten Preis, sobald die Karte erscheint ----------
   [].forEach.call(document.querySelectorAll(".card .price"), function (pr) {
     var knoten = pr.firstChild;
     if (!knoten || knoten.nodeType !== 3) return;
+    if (pr.closest(".pk-einzeln")) return; // Buchpreise bleiben ruhig stehen
     var vorlage = knoten.textContent, m = vorlage.match(/\d[\d.,]*/);
     if (!m) return;
     // Nachkommastellen erkennen (19,90 / 19.90), Tausender (2.490 / 2,490) nicht; formatiert wird in der Seitensprache, am Ende steht wieder genau der Originaltext
     var roh = m[0], dez = /[.,]\d{2}$/.test(roh) ? 2 : 0;
     var ziel = dez ? Number(roh.slice(0, -3).replace(/[.,]/g, "") + "." + roh.slice(-2)) : Number(roh.replace(/[.,]/g, ""));
     var nf = new Intl.NumberFormat(document.documentElement.lang || "de", { minimumFractionDigits: dez, maximumFractionDigits: dez, useGrouping: "always" });
-    var karte = pr.closest(".card"), gezaehlt = false;
+    var karte = pr.closest(".card"), gezaehlt = false, START = 10000;
     var form = function (v) { return vorlage.replace(roh, nf.format(v)); };
     new IntersectionObserver(function (es, ob) {
       es.forEach(function (e) {
@@ -193,7 +194,8 @@
         (function schritt(t) {
           if (start === null) start = t;
           var x = Math.min(1, (t - start) / 1200), weich = 1 - Math.pow(1 - x, 3);
-          knoten.textContent = x < 1 ? form(dez ? ziel * weich : Math.round(ziel * weich)) : vorlage;
+          var v = START + (ziel - START) * weich;
+          knoten.textContent = x < 1 ? form(dez ? v : Math.round(v)) : vorlage;
           if (x < 1) window.requestAnimationFrame(schritt);
         })(performance.now());
       });
