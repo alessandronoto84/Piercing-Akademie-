@@ -60,7 +60,7 @@ ul.punkte li{margin:2px 0}
 
 function seite(art, titel, inhalt) {
   return `<!doctype html><html lang="de"><head><meta charset="utf-8"><title>${esc(titel)}</title><style>${CSS}</style></head><body>
-<div class="kopf"><div class="marke"><img src="${LOGO}" alt="">Piercing Akademie</div><div class="art">${esc(art)}</div></div>
+<div class="kopf"><div class="marke"><img src="${LOGO}" alt="">Die Piercing Akademie</div><div class="art">${esc(art)}</div></div>
 ${inhalt}
 <p class="fuss">Vorlage der Piercing Akademie, Lingen (Ems), Stand ${new Date().toLocaleDateString("de-DE", { month: "long", year: "numeric" })}. Grundlage: Kursbuch „Die Piercing Akademie – Dein Weg zum Bodypiercer“ und Online-Kurs. Vor dem Einsatz an das eigene Studio anpassen.</p>
 </body></html>`;

@@ -645,7 +645,7 @@
       (KONTO && !ausgestellt ? '<p class="fine">' + tr("Beim ersten Drucken wird die Bescheinigung mit diesem Namen ausgestellt und eine prüfbare Nummer vergeben. Danach lässt sich der Name nicht mehr ändern.") + "</p>" : "") +
       '<p><button type="button" class="btn" id="b-drucken">' + tr("Drucken oder als PDF speichern") + "</button></p></section>" + kitAngebot() +
       '<article class="k-urkunde" aria-label="' + tr("Bescheinigung") + '">' +
-        '<div class="k-urkunde-kopf"><img src="' + (document.querySelector(".brand img") || {}).src + '" alt="" width="44" height="44"><span>Piercing Akademie</span></div>' +
+        '<div class="k-urkunde-kopf"><img src="' + (document.querySelector(".brand img") || {}).src + '" alt="" width="44" height="44"><span>Die Piercing Akademie</span></div>' +
         '<p class="label">' + tr("Bescheinigung") + "</p><h2>" + tr("Online-Kurs erfolgreich abgeschlossen") + "</h2>" +
         '<p class="k-urkunde-name" id="b-ausgabe">' + (esc(name) || tr("Dein Name")) + "</p>" +
         "<p>" + tr("hat alle {n} Module des Online-Kurses der Piercing Akademie bearbeitet, jede Modulprüfung bestanden (Hygiene sowie Ablauf und Notfälle mit mindestens 85 %) und die Prüfungssimulation mit <strong>{r} von {g}</strong> richtigen Antworten abgeschlossen.", { n: MODULE.length, r: sim.richtig, g: sim.gesamt }) + "</p>" +

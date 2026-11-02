@@ -28,15 +28,15 @@ GEMEINSAM = [
 
 INDEX = [
     # Kopf
-    ('<title>Piercing-Kurs online und Praxistage in Lingen | Piercing Akademie</title>',
-     '<title>Online piercing course and practice days in Lingen | Piercing Akademie</title>',
-     '<title>Curso de piercing online y días de práctica en Lingen | Piercing Akademie</title>'),
+    ('<title>Piercing-Kurs online und Praxistage in Lingen | Die Piercing Akademie</title>',
+     '<title>Online piercing course and practice days in Lingen | Die Piercing Akademie</title>',
+     '<title>Curso de piercing online y días de práctica en Lingen | Die Piercing Akademie</title>'),
     ('content="Piercen lernen: elf Online-Module von Recht und Hygiene bis Wundheilung, dazu Praxistage im Studio in Lingen (Ems). Drei Pakete ab 249 €, Teilnahme ab 18 Jahren."',
      'content="Learn to pierce: eleven online modules from law and hygiene to wound healing, plus practice days in our studio in Lingen, Germany. Three packages from €249, participants must be 18 or older."',
      'content="Aprende a perforar: once módulos online, desde la normativa y la higiene hasta la cicatrización, y días de práctica en nuestro estudio de Lingen (Alemania). Tres paquetes desde 249 €, a partir de 18 años."'),
-    ('content="Piercing-Kurs online und Praxistage in Lingen | Piercing Akademie"',
-     'content="Online piercing course and practice days in Lingen | Piercing Akademie"',
-     'content="Curso de piercing online y días de práctica en Lingen | Piercing Akademie"'),
+    ('content="Piercing-Kurs online und Praxistage in Lingen | Die Piercing Akademie"',
+     'content="Online piercing course and practice days in Lingen | Die Piercing Akademie"',
+     'content="Curso de piercing online y días de práctica en Lingen | Die Piercing Akademie"'),
     ('content="Elf Online-Module von Recht und Hygiene bis Wundheilung, dazu Praxistage im Studio in Lingen (Ems). Drei Pakete ab 249 €."',
      'content="Eleven online modules from law and hygiene to wound healing, plus practice days in our studio in Lingen, Germany. Three packages from €249."',
      'content="Once módulos online, desde la normativa y la higiene hasta la cicatrización, y días de práctica en nuestro estudio de Lingen (Alemania). Tres paquetes desde 249 €."'),
@@ -367,11 +367,11 @@ INDEX = [
 ]
 
 ONLINE_KURS = [
-    ('<title>Online-Kurs Piercing lernen | Piercing Akademie</title>', '<title>Online piercing course | Piercing Akademie</title>', '<title>Curso de piercing online | Piercing Akademie</title>'),
+    ('<title>Online-Kurs Piercing lernen | Die Piercing Akademie</title>', '<title>Online piercing course | Piercing Akademie</title>', '<title>Curso de piercing online | Piercing Akademie</title>'),
     ('content="Piercing lernen online: 11 Module, 103 Lektionen und 575 Fragen nach dem Kursbuch der Piercing Akademie, mit anatomischen Grafiken und Diagrammen. Lernen im eigenen Tempo, ab 249 €, Praxistage in Lingen (Ems)."',
      'content="Learn piercing online: 11 modules, 103 lessons and 575 questions based on the Piercing Akademie course book, with anatomical graphics and diagrams. Learn at your own pace, from €249, practice days in Lingen, Germany."',
      'content="Aprende piercing online: 11 módulos, 103 lecciones y 575 preguntas basados en el libro de la Piercing Akademie, con gráficos anatómicos y diagramas. Aprende a tu ritmo, desde 249 €, días de práctica en Lingen (Alemania)."'),
-    ('content="Online-Kurs Piercing lernen | Piercing Akademie"', 'content="Online piercing course | Piercing Akademie"', 'content="Curso de piercing online | Piercing Akademie"'),
+    ('content="Online-Kurs Piercing lernen | Die Piercing Akademie"', 'content="Online piercing course | Die Piercing Akademie"', 'content="Curso de piercing online | Die Piercing Akademie"'),
     ('content="11 Module, 103 Lektionen und 575 Fragen nach dem Kursbuch der Piercing Akademie. Lernen im eigenen Tempo."',
      'content="11 modules, 103 lessons and 575 questions based on the Piercing Akademie course book. Learn at your own pace."',
      'content="11 módulos, 103 lecciones y 575 preguntas basados en el libro de la Piercing Akademie. Aprende a tu ritmo."'),
