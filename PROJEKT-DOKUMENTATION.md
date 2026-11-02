@@ -18,7 +18,7 @@ Statische Website ohne Build-System, ohne Server-Logik und ohne Datenbank. Alle 
 | `assets/main.js` | Anfrageformular: Paket-Vorauswahl, Validierung, E-Mail-Entwurf |
 | `assets/fonts/` | lokal eingebundene Schriften (SIL Open Font License, Lizenztexte liegen bei) |
 | `assets/favicon.png` | Logo als Browser-Symbol und Kopfzeilen-Logo (192 px, aus `assets/logo.svg` gerendert) |
-| `assets/logo.svg` | Überarbeitetes Hufeisen-Logo: Ring mit Verlauf (Gold, Rosé, Flieder, Blau) und zwei Goldkugeln auf dunkler Kachel; Marke „Die Piercing Akademie“ |
+| `assets/logo.svg` | Überarbeitetes Hufeisen-Logo nach dem alten Vorbild: Doppellinie und Kugelringe in Gold auf Anthrazit, nur zwei Farben; Marke „Die Piercing Akademie“ |
 
 **Warum eine Landingpage plus Rechtsseiten und keine acht Einzelseiten:** Der Inhalt (11 Module, 3 Pakete, ein Praxistag) passt gut auf eine gut gegliederte Seite. Wer von „Pakete“ zu „Anmeldung“ springt, muss dann nicht die Seite wechseln. Getrennte Seiten wie `kursinhalte.html` oder `pakete.html` würden heute nur Inhalte doppeln. Die Rechtstexte stehen dagegen auf eigenen Seiten, damit sie von überall direkt erreichbar sind.
 

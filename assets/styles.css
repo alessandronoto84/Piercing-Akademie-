@@ -102,8 +102,8 @@ section{padding-block:clamp(56px,9vw,112px)}
 
 /* Kopfzeile */
 header{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:22px;flex-wrap:wrap}
-.brand{font-family:var(--f-display);font-weight:800;font-size:1.25rem;text-decoration:none;display:flex;align-items:center;gap:10px;letter-spacing:-.01em}
-.brand img{width:36px;height:36px;border-radius:10px;display:block;box-shadow:0 0 0 1px rgba(255,255,255,.12)}
+.brand{font-family:var(--f-body);font-weight:600;font-size:1.2rem;text-decoration:none;display:flex;align-items:center;gap:10px;letter-spacing:-.01em}
+.brand img{width:36px;height:36px;border-radius:9px;display:block;box-shadow:0 0 0 1px rgba(201,168,106,.35)}
 .brand{white-space:nowrap}
 @media (max-width:420px){.brand{font-size:1.05rem;gap:8px}.brand img{width:32px;height:32px;border-radius:9px}}
 @media (max-width:350px){.brand{font-size:.92rem;gap:6px}.brand img{width:28px;height:28px;border-radius:8px}}
@@ -585,15 +585,15 @@ footer nav[aria-label="Instagram"] a{color:var(--accent)}
 .auftakt-vorhang.oben::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 80% at 50% 100%,rgba(201,164,100,.10),transparent 70%)}
 .auftakt-vorhang.unten::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 80% at 50% 0%,rgba(127,164,234,.08),transparent 70%)}
 .auftakt-buehne{position:relative;display:grid;justify-items:center;gap:22px;transition:transform .9s cubic-bezier(.7,0,.2,1),opacity .6s ease}
-.auftakt-ring{overflow:visible;filter:drop-shadow(0 0 18px rgba(201,164,100,.25));animation:auftaktGlimmen 1.4s 1.3s ease-in-out both}
-@keyframes auftaktGlimmen{0%{filter:drop-shadow(0 0 10px rgba(201,164,100,.2))}50%{filter:drop-shadow(0 0 34px rgba(227,168,140,.55))}100%{filter:drop-shadow(0 0 18px rgba(201,164,100,.3))}}
+.auftakt-ring{overflow:visible;filter:drop-shadow(0 0 14px rgba(201,168,106,.18));animation:auftaktGlimmen 1.4s 1.3s ease-in-out both}
+@keyframes auftaktGlimmen{0%{filter:drop-shadow(0 0 8px rgba(201,168,106,.15))}50%{filter:drop-shadow(0 0 26px rgba(201,168,106,.4))}100%{filter:drop-shadow(0 0 14px rgba(201,168,106,.22))}}
 .auftakt-ring .bogen{stroke-dasharray:100;stroke-dashoffset:100;animation:auftaktZeichnen 1s .15s cubic-bezier(.65,0,.35,1) forwards}
 .auftakt-ring .kugel{transform-box:fill-box;transform-origin:center;transform:scale(0);animation:auftaktKugel .5s cubic-bezier(.34,1.8,.5,1) forwards}
 .auftakt-ring .k1{animation-delay:.95s}.auftakt-ring .k2{animation-delay:1.1s}
 .auftakt-nadel{position:absolute;top:84px;left:50%;width:min(70vw,640px);height:1.5px;margin-left:calc(min(70vw,640px)/-2);background:linear-gradient(90deg,transparent,#E3C890 45%,#fff 50%,#E3C890 55%,transparent);transform:scaleX(0);opacity:0;animation:auftaktNadel .8s 1.15s cubic-bezier(.6,0,.2,1) forwards}
-.auftakt-schrift{display:grid;justify-items:center;gap:4px;font-family:var(--f-display);font-weight:800;text-transform:uppercase;letter-spacing:.32em;color:#EFEAE1;font-size:clamp(1.05rem,2.6vw,1.45rem);padding-left:.32em}
-.auftakt-schrift .z0{font-family:var(--f-mono,monospace);font-weight:500;font-size:.55em;letter-spacing:.6em;color:#8E8A84;margin-bottom:2px}
-.auftakt-schrift .z2{color:#D2B072}
+.auftakt-schrift{display:grid;justify-items:center;gap:4px;font-family:var(--f-body);font-weight:600;text-transform:uppercase;letter-spacing:.32em;color:#EFEAE1;font-size:clamp(1.05rem,2.6vw,1.45rem);padding-left:.32em}
+.auftakt-schrift .z0{font-weight:500;font-size:.55em;letter-spacing:.6em;color:#C9A86A;margin-bottom:2px}
+.auftakt-schrift .z2{color:#C9A86A}
 .auftakt-schrift span span{display:inline-block;opacity:0;transform:translateY(70%);animation:auftaktBuchstabe .55s calc(1.25s + var(--i) * .045s) cubic-bezier(.2,.7,.2,1) forwards}
 .auftakt-weiter{position:absolute;right:20px;bottom:20px;font:500 .8rem/1 var(--f-mono,monospace);letter-spacing:.12em;text-transform:uppercase;color:#8E8A84;background:none;border:1px solid #2E2D33;border-radius:999px;padding:10px 14px;cursor:pointer;opacity:0;animation:auftakt-ein .4s .6s forwards}
 .auftakt-weiter:hover{color:#EFEAE1;border-color:#5a5860}

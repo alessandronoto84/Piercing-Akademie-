@@ -1,5 +1,5 @@
 /* Die Piercing Akademie – Auftakt beim ersten Öffnen der Startseite:
-   der Hufeisen-Ring aus dem Logo zeichnet sich, die Kugeln setzen sich an die Enden, eine feine Linie sticht hindurch,
+   der Hufeisen-Ring aus dem Logo (Doppellinie in Gold) zeichnet sich, die Kugeln setzen sich an die Enden, eine feine Linie sticht hindurch,
    der Schriftzug baut sich auf, dann öffnet sich der Vorhang. Einmal pro Sitzung; mit Klick, Taste oder „Überspringen“ sofort weg.
    Bei „Bewegung reduzieren“ entfällt der Auftakt. Ohne JavaScript sieht man die Seite direkt. */
 (function () {
@@ -24,15 +24,12 @@
   el.innerHTML =
     '<div class="auftakt-vorhang oben"></div><div class="auftakt-vorhang unten"></div>' +
     '<div class="auftakt-buehne">' +
-      '<svg class="auftakt-ring" viewBox="0 0 200 200" width="168" height="168">' +
-        '<defs><linearGradient id="auftakt-titan" x1="0" y1="0" x2="1" y2="1">' +
-          '<stop offset="0" stop-color="#C9A464"/><stop offset=".35" stop-color="#E3A88C"/><stop offset=".65" stop-color="#B88AD8"/><stop offset="1" stop-color="#7FA4EA"/>' +
-        "</linearGradient>" +
-        '<radialGradient id="auftakt-gold" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#FFF3D6"/><stop offset=".45" stop-color="#D8B474"/><stop offset="1" stop-color="#8F6A2E"/></radialGradient></defs>' +
-        // offener Ring (Hufeisen) wie im Logo: Öffnung links, Goldkugeln oben links und unten links
-        '<path class="bogen" d="M 62 52 A 70 70 0 1 1 62 148" fill="none" stroke="url(#auftakt-titan)" stroke-width="15" stroke-linecap="round" pathLength="100"/>' +
-        '<circle class="kugel k1" cx="58" cy="48" r="17" fill="url(#auftakt-gold)"/>' +
-        '<circle class="kugel k2" cx="58" cy="152" r="17" fill="url(#auftakt-gold)"/>' +
+      '<svg class="auftakt-ring" viewBox="80 55 360 370" width="164" height="168">' +
+        // Hufeisen wie im Logo: Doppellinie in Gold, Öffnung links, Kugeln als Ringe
+        '<path class="bogen" d="M 127.1 154 A 150 150 0 1 1 127.1 326" fill="none" stroke="#C9A86A" stroke-width="40" pathLength="100"/>' +
+        '<path class="bogen" d="M 127.1 154 A 150 150 0 1 1 127.1 326" fill="none" stroke="#0E0E11" stroke-width="18" pathLength="100"/>' +
+        '<circle class="kugel k1" cx="127.1" cy="154" r="29" fill="#0E0E11" stroke="#C9A86A" stroke-width="11"/>' +
+        '<circle class="kugel k2" cx="127.1" cy="326" r="29" fill="#0E0E11" stroke="#C9A86A" stroke-width="11"/>' +
       "</svg>" +
       '<div class="auftakt-nadel"></div>' +
       '<div class="auftakt-schrift"><span class="z0">' + buchst(DIE, 0) + '</span><span class="z1">' + buchst(T[0], 3) + '</span><span class="z2">' + buchst(T[1], 11) + "</span></div>" +
