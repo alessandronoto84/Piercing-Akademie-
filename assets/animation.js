@@ -92,7 +92,7 @@
   var ziele = [].slice.call(document.querySelectorAll(auswahl)).filter(function (el, i, a) {
     if (el.classList.contains("weg")) return true; // die Linie zwischen den Schritten zeichnet sich selbst
     for (var p = el.parentElement; p; p = p.parentElement) if (a.indexOf(p) > -1 && !p.classList.contains("weg")) return false; // nicht doppelt animieren
-    return !el.closest(".hero");
+    return !el.closest(".hero") && !el.closest(".clip");
   });
   ziele.forEach(function (el) {
     var geschwister = el.parentElement ? [].slice.call(el.parentElement.children).filter(function (k) { return ziele.indexOf(k) > -1; }) : [];
@@ -135,7 +135,7 @@
   });
 
   // ---------- Fotos enthüllen sich mit einer Wischblende ----------
-  [].forEach.call(document.querySelectorAll("main section figure:not(.laufband):not(.filmband)"), function (f) {
+  [].forEach.call(document.querySelectorAll("main section figure:not(.laufband):not(.filmband):not(.clip)"), function (f) {
     if (f.closest(".hero") || !f.querySelector("img, video")) return;
     f.classList.add("enthuellen"); beobachter.observe(f);
   });
@@ -179,8 +179,12 @@
     if (!knoten || knoten.nodeType !== 3) return;
     var vorlage = knoten.textContent, m = vorlage.match(/\d[\d.,]*/);
     if (!m) return;
-    var trenner = (m[0].match(/[.,]/) || [""])[0], ziel = Number(m[0].replace(/[.,]/g, "")), karte = pr.closest(".card"), gezaehlt = false;
-    var form = function (v) { var z = String(v); if (trenner && v >= 1000) z = z.slice(0, -3) + trenner + z.slice(-3); return vorlage.replace(m[0], z); };
+    // Nachkommastellen erkennen (19,90 / 19.90), Tausender (2.490 / 2,490) nicht; formatiert wird in der Seitensprache, am Ende steht wieder genau der Originaltext
+    var roh = m[0], dez = /[.,]\d{2}$/.test(roh) ? 2 : 0;
+    var ziel = dez ? Number(roh.slice(0, -3).replace(/[.,]/g, "") + "." + roh.slice(-2)) : Number(roh.replace(/[.,]/g, ""));
+    var nf = new Intl.NumberFormat(document.documentElement.lang || "de", { minimumFractionDigits: dez, maximumFractionDigits: dez, useGrouping: "always" });
+    var karte = pr.closest(".card"), gezaehlt = false;
+    var form = function (v) { return vorlage.replace(roh, nf.format(v)); };
     new IntersectionObserver(function (es, ob) {
       es.forEach(function (e) {
         if (!e.isIntersecting || gezaehlt) return;
@@ -189,7 +193,7 @@
         (function schritt(t) {
           if (start === null) start = t;
           var x = Math.min(1, (t - start) / 1200), weich = 1 - Math.pow(1 - x, 3);
-          knoten.textContent = form(Math.round(ziel * weich));
+          knoten.textContent = x < 1 ? form(dez ? ziel * weich : Math.round(ziel * weich)) : vorlage;
           if (x < 1) window.requestAnimationFrame(schritt);
         })(performance.now());
       });
