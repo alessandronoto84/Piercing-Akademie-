@@ -85,7 +85,7 @@ window.KURS = window.KURS || { module: [] };
         ],
         fragen: [
           ["Where is the Rook placed?", ["Vertically in the antihelix", "Horizontally in the root of the helix", "In the Tragus", "In the inner Conch"], "Cartilage ridge around the cavum conchae.", "S. 80"],
-          ["Why are Rook and Daith pierced with a receiving tube?", ["No clamp fits in the inner ear", "Because they bleed particularly heavily", "Because they are pierced with a punch", "Because they need especially thick cannulas"], "The tube protects the surrounding tissue.", "S. 68"],
+          ["Why are Rook and Daith pierced with a receiving tube?", ["No clamp fits inside the ear there", "Because they bleed particularly heavily", "Because they are pierced with a punch", "Because they need especially thick cannulas"], "The tube protects the surrounding tissue.", "S. 68"],
           ["Are you allowed to advertise the Daith as a remedy for migraine?", ["No", "Yes, with “may help”", "Yes, if studies are cited", "Only verbally, not in writing"], "No health claims.", "S. 81"]
         ]
       },

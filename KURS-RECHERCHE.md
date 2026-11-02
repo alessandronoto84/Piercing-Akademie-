@@ -137,6 +137,8 @@ Diese beiden Module haben im Kursbuch kein eigenes Kapitel. Die folgenden Themen
 | 52–53 | Ersteinsatz ausschließlich G23 | G23-Titan oder PTFE (Buch nennt PTFE selbst als Ersteinsatz) |
 | 81 | Daith: „Auswölbung“, soll bei Migräne helfen | Durch die Helixwurzel (Crus helicis); Migräne-Wirkung nicht belegt, Werbung damit nach § 3 HWG unzulässig |
 | 89 | Augenbraue: Lähmungsgefahr | Innen treten vor allem Gefühlsnerven (N. supraorbitalis, N. supratrochlearis) aus; Taubheit statt Lähmung |
+| 33 | „Calciumhypo- und Natriumchlorid“ | Calcium- und Natriumhypochlorit (Natriumchlorid ist Kochsalz und wirkt nicht oxidativ); in der englischen und spanischen Übersetzung bereits so übertragen |
+| 44 | „Bacterius stearothermophilus“ | Geobacillus stearothermophilus (früher Bacillus stearothermophilus) |
 | Impressum | 740-tattoo@gmx.net | an die Website-Angaben angleichen (diepiercingakademie@gmail.com), bestätigt am 21.10.2026 |
 
 ## 9. Recherche über das Kursbuch hinaus (Grafiken und neue Lektionen, 24.10.2026)

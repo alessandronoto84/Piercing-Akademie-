@@ -85,7 +85,7 @@ KURS.module.push({
       inhalt: [
         { typ: "video", id: "instrumente", text: "Piercing clamp, IV cannula (“Braunüle”), receiving tube and ball grabber on a sterile drape.", schleife: true },
         { typ: "text", text: "Piercing clamps hold the area to be pierced so that the skin stays in position while you pierce. There are different clamps for different piercings, for example Snaptile, gauze clamp, septum forceps, tragus forceps or tongue forceps. Which one fits is stated in the respective data sheet (module 8)." },
-        { typ: "text", text: "Some piercings cannot be done with a clamp. For piercings in the inner ear, for example Rook and Daith, you use the receiving tube. It prevents the cannula from injuring the surrounding tissue." },
+        { typ: "text", text: "Some piercings cannot be done with a clamp. For piercings in the inner part of the ear, for example Rook and Daith, you use the receiving tube. It prevents the cannula from injuring the surrounding tissue." },
         { typ: "galerie", titel: "From the course book", bilder: [["piercingzange", "Piercing clamps"], ["nadelauffangrohr", "Receiving tube"]], text: "Course book pp. 65 and 68." },
         { typ: "praxis", text: "Some piercings, such as Helix or navel, can also be done freehand. That requires a steady hand; as a beginner, you are better off working with a clamp." }
       ],
