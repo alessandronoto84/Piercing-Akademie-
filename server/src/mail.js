@@ -7,6 +7,22 @@ const PAKETE = {
   es: { basis: "Básico", praxis: "Práctica", komplett: "Completo" }
 };
 
+// Anmeldecode in der Kauf-E-Mail: großer Code und Knopf, der die Anmeldeseite mit eingetragenem Code öffnet
+function anmeldeLink(env, email, s, code) {
+  const q = new URLSearchParams({ email, sprache: s });
+  if (code) q.set("code", code);
+  return env.DOMAIN + "/login.html?" + q.toString();
+}
+function codeBlock(code) {
+  return code ? { html: '<p style="font-size:30px;letter-spacing:6px;font-weight:bold;margin:8px 0">' + code + "</p>", text: code } : "";
+}
+const SO_ANMELDEN = {
+  de: (tage) => "So meldest du dich an: Klick auf den Knopf, dein Code ist dann schon eingetragen. Oder geh auf der Website auf „Teilnehmer-Login“ und gib deine E-Mail-Adresse und diesen Code ein. Der Code gilt " + tage + " Tage und nur für die erste Anmeldung. Später, zum Beispiel auf einem neuen Gerät, schicken wir dir auf der Anmeldeseite jederzeit einen neuen Code.",
+  en: (tage) => "How to log in: click the button and your code is filled in for you. Or go to “Student login” on the website and enter your email address and this code. The code is valid for " + tage + " days and only for your first login. Later, for example on a new device, the login page sends you a new code at any time.",
+  es: (tage) => "Cómo entrar: haz clic en el botón y tu código ya estará introducido. O ve a «Acceso alumnos» en la web y escribe tu correo electrónico y este código. El código vale " + tage + " días y solo para el primer acceso. Más adelante, por ejemplo en un dispositivo nuevo, la página de acceso te envía un código nuevo cuando quieras."
+};
+const DEIN_CODE = { de: "Dein Anmeldecode:", en: "Your login code:", es: "Tu código de acceso:" };
+
 function rahmen(titel, alle) {
   const absaetze = alle.filter((a) => a !== "" && a != null);
   const html = '<!doctype html><html><body style="font-family:Arial,sans-serif;color:#16161a;line-height:1.5;max-width:560px;margin:auto;padding:24px">' +
@@ -29,10 +45,10 @@ export function mailCode(code, sprache, minuten, link) {
   return { betreff: t[0] + ": " + code, ...r };
 }
 
-export function mailWillkommen({ env, email, name, paket, sprache, betrag, waehrung, gekauft, zustimmung, buchLink }) {
+export function mailWillkommen({ env, email, name, paket, sprache, betrag, waehrung, gekauft, zustimmung, buchLink, code, codeTage }) {
   const s = PAKETE[sprache] ? sprache : "de";
   const pfad = s === "de" ? "" : s + "/";
-  const login = env.DOMAIN + "/login.html?email=" + encodeURIComponent(email) + "&sprache=" + s;
+  const login = anmeldeLink(env, email, s, code);
   const agb = env.DOMAIN + "/" + pfad + "agb.html";
   const preis = (betrag / 100).toLocaleString(s === "en" ? "en-US" : s === "es" ? "es-ES" : "de-DE", { style: "currency", currency: (waehrung || "eur").toUpperCase() });
   const datum = new Date(gekauft).toLocaleDateString(s === "en" ? "en-US" : s === "es" ? "es-ES" : "de-DE");
@@ -44,8 +60,9 @@ export function mailWillkommen({ env, email, name, paket, sprache, betrag, waehr
       betreff: "Deine Buchung bei der Piercing Akademie – Zugang zum Online-Kurs",
       titel: "Willkommen in der Piercing Akademie" + (name ? ", " + name : "") + "!",
       a: ["Vielen Dank für deine Buchung des Pakets " + p + " zum Preis von " + preis + " am " + datum + ". Diese E-Mail ist deine Vertragsbestätigung.",
+        code ? DEIN_CODE[s] : "", codeBlock(code),
         { html: '<p><a href="' + esc(login) + '" style="display:inline-block;background:#C9A464;color:#111114;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:bold">Zur Fahrschule anmelden</a></p>', text: "Zur Fahrschule anmelden: " + login },
-        "So meldest du dich an: Gib deine E-Mail-Adresse ein, wir schicken dir einen Code. Dein Zugang ist persönlich, gilt 12 Monate und kann gleichzeitig auf höchstens zwei Geräten genutzt werden.",
+        (code ? SO_ANMELDEN.de(codeTage || 7) : "So meldest du dich an: Gib deine E-Mail-Adresse ein, wir schicken dir einen Code.") + " Dein Zugang ist persönlich, gilt 12 Monate und kann gleichzeitig auf höchstens zwei Geräten genutzt werden.",
         buchLink ? "Das Kursbuch ist in deinem Paket enthalten: Du liest es online in der Fahrschule unter „Kursbuch“, mit Suche und eigenen Notizen." : "",
         "Deine Zustimmung im Bestellvorgang: Du hast ausdrücklich verlangt, dass wir vor Ablauf der Widerrufsfrist mit der Bereitstellung des Online-Kurses beginnen, und bestätigt, dass du dadurch dein Widerrufsrecht für den Online-Kurs verlierst. Es erlischt mit der Freischaltung deines Zugangs, also mit deiner ersten Anmeldung (§ 356 Abs. 5 BGB)." + (zustimmung ? " (Deine Angabe: „" + zustimmung + "“)" : ""),
         mitPraxis ? "Für Praxistage und Coaching gilt die Widerrufsbelehrung in unseren AGB. Wir melden uns, um den Termin deines Praxistags zu vereinbaren." : "",
@@ -56,8 +73,9 @@ export function mailWillkommen({ env, email, name, paket, sprache, betrag, waehr
       betreff: "Your booking with the Piercing Akademie – access to the online course",
       titel: "Welcome to the Piercing Akademie" + (name ? ", " + name : "") + "!",
       a: ["Thank you for booking the " + p + " package for " + preis + " on " + datum + ". This email is your contract confirmation.",
+        code ? DEIN_CODE[s] : "", codeBlock(code),
         { html: '<p><a href="' + esc(login) + '" style="display:inline-block;background:#C9A464;color:#111114;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:bold">Log in to the course</a></p>', text: "Log in to the course: " + login },
-        "How to log in: enter your email address and we will send you a code. Your access is personal, valid for 12 months and can be used on at most two devices at the same time.",
+        (code ? SO_ANMELDEN.en(codeTage || 7) : "How to log in: enter your email address and we will send you a code.") + " Your access is personal, valid for 12 months and can be used on at most two devices at the same time.",
         buchLink ? "The course book is included in your package: you read it online in the course under “Course book”, translated into English with the German original pages, search and your own notes." : "",
         "Your consent during checkout: you expressly requested that we begin providing the online course before the end of the withdrawal period and acknowledged that you thereby lose your right of withdrawal for the online course. It expires when your access is activated, i.e. with your first login (Section 356 (5) German Civil Code)." + (zustimmung ? " (Your selection: “" + zustimmung + "”)" : ""),
         mitPraxis ? "The cancellation policy in our terms applies to practice days and coaching. We will contact you to arrange the date of your practice day." : "",
@@ -68,8 +86,9 @@ export function mailWillkommen({ env, email, name, paket, sprache, betrag, waehr
       betreff: "Tu reserva en la Piercing Akademie – acceso al curso online",
       titel: "¡Bienvenido/a a la Piercing Akademie" + (name ? ", " + name : "") + "!",
       a: ["Gracias por reservar el paquete " + p + " por " + preis + " el " + datum + ". Este correo es tu confirmación del contrato.",
+        code ? DEIN_CODE[s] : "", codeBlock(code),
         { html: '<p><a href="' + esc(login) + '" style="display:inline-block;background:#C9A464;color:#111114;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:bold">Entrar al curso</a></p>', text: "Entrar al curso: " + login },
-        "Cómo entrar: escribe tu correo electrónico y te enviamos un código. Tu acceso es personal, vale 12 meses y puede usarse como máximo en dos dispositivos a la vez.",
+        (code ? SO_ANMELDEN.es(codeTage || 7) : "Cómo entrar: escribe tu correo electrónico y te enviamos un código.") + " Tu acceso es personal, vale 12 meses y puede usarse como máximo en dos dispositivos a la vez.",
         buchLink ? "El libro del curso está incluido en tu paquete: lo lees online en el curso, en «Libro del curso», traducido al español, con las páginas originales en alemán, búsqueda y notas propias." : "",
         "Tu consentimiento durante la compra: solicitaste expresamente que empezáramos a prestar el curso online antes de que finalice el plazo de desistimiento y reconociste que con ello pierdes tu derecho de desistimiento respecto del curso online. Se extingue al activarse tu acceso, es decir, con tu primer inicio de sesión (art. 356, apdo. 5, del Código Civil alemán)." + (zustimmung ? " (Tu selección: «" + zustimmung + "»)" : ""),
         mitPraxis ? "Para los días de práctica y la mentoría se aplica la información sobre el desistimiento de nuestras condiciones. Te contactaremos para acordar la fecha de tu día de práctica." : "",
@@ -155,10 +174,10 @@ export function mailSetAkademie({ email, name, adresse }) {
 }
 
 // Kursbuch digital: Lesezugang in der Fahrschule (24 Monate) und Bestätigung (digitaler Inhalt, § 356 Abs. 5 BGB)
-export function mailBuch({ sprache, name, betrag, email, env }) {
+export function mailBuch({ sprache, name, betrag, email, env, code, codeTage }) {
   const s = PAKETE[sprache] ? sprache : "de";
   const agb = agbLink(env, s);
-  const login = env.DOMAIN + "/login.html?email=" + encodeURIComponent(email) + "&sprache=" + s;
+  const login = anmeldeLink(env, email, s, code);
   const knopf = (t) => ({ html: '<p><a href="' + esc(login) + '" style="display:inline-block;background:#C9A464;color:#111114;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:bold">' + esc(t) + "</a></p>", text: t + ": " + login });
   const T = {
     de: ["Dein Kursbuch digital", "Danke für deinen Kauf" + (name ? ", " + name : "") + "!", "Du hast das Kursbuch „Die Piercing Akademie – Dein Weg zum Bodypiercer“ digital zum Preis von " + euro(betrag, s) + " gekauft. Diese E-Mail ist deine Vertragsbestätigung.", "Kursbuch online lesen",
@@ -171,6 +190,9 @@ export function mailBuch({ sprache, name, betrag, email, env }) {
       "Cómo entrar: escribe tu correo electrónico y te enviamos un código. Puedes leer el libro online durante 24 meses, con búsqueda y notas propias en cada página. No hay archivo para descargar; cada página lleva tu correo electrónico. El acceso es personal e intransferible.",
       "Tu consentimiento durante la compra: solicitaste que empezáramos a facilitarlo antes de que finalice el plazo de desistimiento y reconociste que con ello se extingue tu derecho de desistimiento (art. 356, apdo. 5, del Código Civil alemán).", "Nuestras condiciones (la versión alemana es la vinculante): "]
   }[s];
-  const r = rahmen(T[1], [T[2], knopf(T[3]), T[4], T[5], { html: "<p>" + esc(T[6]) + '<a href="' + esc(agb) + '">' + esc(agb) + "</a></p>", text: T[6] + agb }]);
+  const lesen = { de: " Du liest das Buch 24 Monate lang online, mit Suche und eigenen Notizen zu jeder Seite. Eine Download-Datei gibt es nicht; jede Seite trägt deine E-Mail-Adresse. Der Zugang ist persönlich und nicht übertragbar.",
+    en: " You can read the book online for 24 months, with search and your own notes on every page. There is no download file; every page carries your email address. Your access is personal and not transferable.",
+    es: " Puedes leer el libro online durante 24 meses, con búsqueda y notas propias en cada página. No hay archivo para descargar; cada página lleva tu correo electrónico. El acceso es personal e intransferible." }[s];
+  const r = rahmen(T[1], [T[2], code ? DEIN_CODE[s] : "", codeBlock(code), knopf(T[3]), code ? SO_ANMELDEN[s](codeTage || 7) + lesen : T[4], T[5], { html: "<p>" + esc(T[6]) + '<a href="' + esc(agb) + '">' + esc(agb) + "</a></p>", text: T[6] + agb }]);
   return { betreff: T[0] + " – Piercing Akademie", ...r };
 }

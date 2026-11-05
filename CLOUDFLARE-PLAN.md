@@ -44,7 +44,7 @@ Außerdem:
 ## Stand (01.11.2026)
 Gebaut und lokal getestet (Ordner `server/`, 8 automatische Tests plus Browsertest):
 - Website, Login-Seite (`/login.html`, Deutsch/Englisch/Spanisch) und Fahrschule unter `/kurs/` hinter der Bezahlschranke: ohne Anmeldung kein Zugriff auf Seiten, Texte, Bilder, Clips oder Vorlagen.
-- Login per 6-stelligem Code (10 Minuten gültig, höchstens 5 Versuche, höchstens 5 Codes pro Stunde, nur einmal verwendbar), Sitzungs-Cookie HttpOnly.
+- Login per 6-stelligem Code, Sitzungs-Cookie HttpOnly. Ablauf (05.11.2026): Nach dem Kauf steht der erste Anmeldecode direkt in der Willkommens-E-Mail (7 Tage gültig, nur einmal), dazu ein Knopf, der die Anmeldeseite mit eingetragenem Code öffnet. Auf der Website führt „Teilnehmer-Login“ (Kopfzeile) zur Anmeldeseite mit E-Mail und Code; darunter „Neuen Code per E-Mail schicken“ (10 Minuten gültig). Höchstens 5 Versuche je Code, höchstens 5 neue Codes pro Stunde. Der Kopfzeilen-Knopf heißt jetzt „Kurs buchen“ (zu den Paketen) statt „Anmeldung“.
 - Höchstens 2 Geräte gleichzeitig; eine dritte Anmeldung beendet die älteste. Anmeldeprotokoll (Zeit, Gerätetyp, Land); bei 6 verschiedenen Geräten bzw. Ländern in 30 Tagen bekommst du eine Hinweis-E-Mail.
 - Wasserzeichen mit der E-Mail-Adresse auf jeder Kursseite und im Ausdruck.
 - Stripe-Webhook mit Signaturprüfung: legt den Zugang an (Paket aus den Link-Metadaten, Sprache aus der Website), keine Doppelanlage, SEPA erst nach Zahlungseingang; schickt Zugang und Vertragsbestätigung mit Zustimmungstext (§ 312f BGB) in der Sprache des Käufers.

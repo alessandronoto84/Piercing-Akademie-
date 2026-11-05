@@ -137,6 +137,8 @@ async function kurs(req, env, url, p) {
   if (!s) {
     const ziel = new URL("/login.html", url);
     ziel.searchParams.set("weiter", p + url.search);
+    const sp = url.searchParams.get("sprache");
+    if (["de", "en", "es"].includes(sp)) ziel.searchParams.set("sprache", sp);
     return Response.redirect(ziel.toString(), 302);
   }
   // Kontodaten und gespeicherter Fortschritt für die Fahrschule
@@ -197,6 +199,16 @@ async function api(req, env, url, ctx) {
 function gleicheHerkunft(req, url) {
   const o = req.headers.get("Origin");
   return !o || o === url.origin;
+}
+
+// Anmeldecode für die Willkommens-E-Mail nach dem Kauf: gilt ERSTCODE_TAGE Tage und nur einmal
+const ERSTCODE_TAGE = 7;
+async function erstcode(env, email) {
+  const code = zufallsCode();
+  const h = await sha256(email + ":" + code + ":" + (env.CODE_PFEFFER || ""));
+  await env.DB.prepare("INSERT INTO codes (email, code_hash, ablauf, versuche, angefordert) VALUES (?, ?, ?, 0, '[]') ON CONFLICT(email) DO UPDATE SET code_hash = excluded.code_hash, ablauf = excluded.ablauf, versuche = 0")
+    .bind(email, h, jetzt() + ERSTCODE_TAGE * 86400).run();
+  return code;
 }
 
 async function codeAnfordern(req, env, ctx) {
@@ -470,7 +482,8 @@ async function stripeWebhook(req, env, ctx) {
         gueltig_bis = excluded.gueltig_bis, stripe_session = excluded.stripe_session, betrag = excluded.betrag, zustimmung = excluded.zustimmung`)
     .bind(email, name, paket, sprache, gekauft, bis.toISOString(), sess.id, sess.amount_total || 0, zustimmungText).run();
 
-  const mail = mailWillkommen({ env, email, name, paket, sprache, betrag: sess.amount_total || 0, waehrung: sess.currency || "eur", gekauft, zustimmung: zustimmungText, buchLink: true });
+  const code = await erstcode(env, email);
+  const mail = mailWillkommen({ env, email, name, paket, sprache, betrag: sess.amount_total || 0, waehrung: sess.currency || "eur", gekauft, zustimmung: zustimmungText, buchLink: true, code, codeTage: ERSTCODE_TAGE });
   ctx.waitUntil(sende(env, email, mail));
   if (paket === "komplett") {
     const v = sess.shipping_details || (sess.collected_information && sess.collected_information.shipping_details) || {};
@@ -500,7 +513,8 @@ async function produktVerkauft(env, ctx, sess, meta, email) {
         VALUES (?, ?, 'buch', ?, ?, ?, ?, ?, 'Häkchen auf der Bestellseite', 0, 0)
         ON CONFLICT(email) DO UPDATE SET gueltig_bis = MAX(kunden.gueltig_bis, excluded.gueltig_bis) WHERE kunden.paket = 'buch'`)
       .bind(email, name, sprache, new Date().toISOString(), bis.toISOString(), sess.id, betrag).run();
-    ctx.waitUntil(sende(env, email, mailBuch({ sprache, name, betrag, email, env })));
+    const code = await erstcode(env, email);
+    ctx.waitUntil(sende(env, email, mailBuch({ sprache, name, betrag, email, env, code, codeTage: ERSTCODE_TAGE })));
   }
   return json({ ok: true });
 }
