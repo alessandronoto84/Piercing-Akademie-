@@ -301,8 +301,8 @@ KURS.module.push({
       titel: "Tratar correctamente el instrumental",
       seite: "S. 35",
       inhalt: [
-        { typ: "liste", titel: "Recuerda", punkte: [
         { typ: "foto", id: "pexels-15771809", text: "Los instrumentos usados se limpian, se desinfectan y después se reprocesan en el esterilizador." },
+        { typ: "liste", titel: "Recuerda", punkte: [
           "Los desinfectantes para superficies e instrumental también deberían ser eficaces contra los virus (virucidas).",
           "Al usarlos, presta especial atención al tiempo de actuación, la compatibilidad con los materiales y la concentración.",
           "Los desinfectantes se quedan en su envase original y en ningún caso se trasvasan ni se rellenan.",

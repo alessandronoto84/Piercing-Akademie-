@@ -11,8 +11,8 @@ KURS.module.push({
       titel: "Recepción y conversación con el cliente",
       seite: "S. 111",
       inhalt: [
-        { typ: "schritte", start: 1, punkte: [
         { typ: "foto", id: "pexels-4269203", text: "Una recepción amable en el mostrador es el comienzo de toda conversación con el cliente." },
+        { typ: "schritte", start: 1, punkte: [
           "El cliente entra al estudio de piercing.",
           "Saludo, conversación informal.",
           "Preguntar qué piercings desea y, si hace falta, quitarle el miedo.",
@@ -92,8 +92,8 @@ KURS.module.push({
       titel: "Cuidados posteriores y cierre",
       seite: "S. 113",
       inhalt: [
-        { typ: "schritte", start: 22, punkte: [
         { typ: "foto", id: "pexels-7579831", text: "En la conversación final se explican con calma los pasos de cuidado para las próximas semanas." },
+        { typ: "schritte", start: 22, punkte: [
           "Si procede, cubrir con un apósito (pezón, ombligo).",
           "En los piercings de lengua, dar un cubito de hielo.",
           "Entregar el producto de cuidado y explicar las instrucciones de cuidado de palabra.",

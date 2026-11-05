@@ -301,8 +301,8 @@ KURS.module.push({
       titel: "Handling instruments correctly",
       seite: "S. 35",
       inhalt: [
-        { typ: "liste", titel: "Remember", punkte: [
         { typ: "foto", id: "pexels-15771809", text: "Used instruments are cleaned, disinfected and then reprocessed in the steriliser." },
+        { typ: "liste", titel: "Remember", punkte: [
           "Disinfectants for surfaces and instruments should also be effective against viruses (virucidal).",
           "When using them, pay particular attention to contact time, material compatibility and concentration.",
           "Disinfectants stay in their original packaging and are never decanted or topped up.",

@@ -11,8 +11,8 @@ KURS.module.push({
       titel: "Reception and client consultation",
       seite: "S. 111",
       inhalt: [
-        { typ: "schritte", start: 1, punkte: [
         { typ: "foto", id: "pexels-4269203", text: "A friendly welcome at the counter is the start of every client conversation." },
+        { typ: "schritte", start: 1, punkte: [
           "The client enters the piercing studio.",
           "Greeting, small talk.",
           "Ask which piercings the client wants; ease any anxiety if needed.",
@@ -92,8 +92,8 @@ KURS.module.push({
       titel: "Aftercare and wrapping up",
       seite: "S. 113",
       inhalt: [
-        { typ: "schritte", start: 22, punkte: [
         { typ: "foto", id: "pexels-7579831", text: "In the closing talk, the aftercare steps for the coming weeks are explained calmly." },
+        { typ: "schritte", start: 22, punkte: [
           "If needed, cover with a bandage (nipple, navel).",
           "For tongue piercings, give the client an ice cube.",
           "Hand over the aftercare product and explain the aftercare instructions verbally.",

@@ -52,8 +52,8 @@ KURS.module.push({
       seite: "S. 36–39, 46–47",
       entwurf: true,
       inhalt: [
-        { typ: "liste", titel: "What you keep in writing", punkte: [
         { typ: "foto", id: "pexels-8376320", text: "Every work step under the hygiene plan is documented in writing." },
+        { typ: "liste", titel: "What you keep in writing", punkte: [
           "Framework hygiene plan with cleaning and disinfection plan (examples in the course book pp. 37–39; agree it with the local public health office)",
           "Sterile goods: every batch with sterilization date and batch number",
           "Autoclave test records: daily tests, six-monthly spore tests, annual device inspection",
@@ -89,8 +89,8 @@ KURS.module.push({
       titel: "Purchasing",
       seite: "S. 34, 56",
       inhalt: [
-        { typ: "liste", punkte: [
         { typ: "foto", id: "pexels-6612276", text: "Consumables and jewelry are mostly ordered online today." },
+        { typ: "liste", punkte: [
           "Initial jewelry only made of G23 titanium or PTFE, with the manufacturer’s material certificate. Under EU law, jewelry for fresh piercings may release no more than 0.2 µg of nickel per cm² per week.",
           "Disinfectants from the VAH list (German Association for Applied Hygiene) with proven efficacy.",
           "Cannulas, clamps and consumables from specialist suppliers of medical or studio supplies."
@@ -106,8 +106,8 @@ KURS.module.push({
       titel: "Rules for your studio",
       seite: "Modul 2 und 8",
       inhalt: [
-        { typ: "liste", punkte: [
         { typ: "foto", id: "pexels-13068359", text: "A tidy, bright studio makes clear rules visible to everyone." },
+        { typ: "liste", punkte: [
           "A written consent form before every piercing (module 2).",
           "Check age: under 18 only with the consent of the parents or legal guardians, better not at all.",
           "No health claims, and no advertising based on them.",

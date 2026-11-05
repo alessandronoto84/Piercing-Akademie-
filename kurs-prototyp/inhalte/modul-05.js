@@ -301,8 +301,8 @@ KURS.module.push({
       titel: "Instrumente richtig behandeln",
       seite: "S. 35",
       inhalt: [
-        { typ: "liste", titel: "Merke", punkte: [
         { typ: "foto", id: "pexels-15771809", text: "Benutzte Instrumente werden gereinigt, desinfiziert und anschließend im Sterilisator aufbereitet." },
+        { typ: "liste", titel: "Merke", punkte: [
           "Desinfektionsmittel für Flächen und Instrumente sollten auch gegen Viren wirksam sein (viruzid).",
           "Bei der Anwendung besonders auf Einwirkzeit, Materialverträglichkeit und Konzentration achten.",
           "Desinfektionsmittel bleiben in der Originalverpackung und werden in keinem Fall umgefüllt oder aufgefüllt.",

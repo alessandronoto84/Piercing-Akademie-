@@ -44,8 +44,8 @@ KURS.module.push({
       titel: "Wie Schmerz im Gewebe entsteht",
       seite: "S. 8–9",
       inhalt: [
-        { typ: "schritte", punkte: [
         { typ: "foto", id: "pexels-5624170", text: "Schmerz entsteht, wenn Gewebe gereizt oder verletzt wird und Nervenendigungen Signale senden." },
+        { typ: "schritte", punkte: [
           "Die Verletzung des Gewebes setzt ATP, Protonen, Sauerstoffradikale, Kalium und Arachidonsäure frei.",
           "Das Enzym Cyclooxygenase (COX-1 in den Endothelzellen, COX-2 in einwandernden Leukozyten) wandelt die Arachidonsäure in Prostaglandin E2 um. Kinine aus dem verletzten Endothel werden zu Bradykinin.",
           "Mastzellen setzen ihre Granula frei (Degranulation), unter anderem Histamin.",
@@ -136,8 +136,8 @@ KURS.module.push({
       titel: "Nebenwirkungen von Lidocain",
       seite: "S. 14",
       inhalt: [
-        { typ: "tabelle", kopf: ["Situation", "Mögliche Nebenwirkungen"], zeilen: [
         { typ: "foto", id: "pexels-13005383", text: "Juckreiz und Hautreizungen können Hinweise auf eine Unverträglichkeit sein." },
+        { typ: "tabelle", kopf: ["Situation", "Mögliche Nebenwirkungen"], zeilen: [
           ["Bei Einnahme", "Schwindel, Unruhe, Magen-Darm-Störungen, allergische Reaktionen, Temperaturanstieg"],
           ["Auf der Haut", "in seltenen Fällen Überempfindlichkeitsreaktionen"],
           ["An Schleimhäuten", "gelegentlich Schwellung im Rachen- und Kehlkopfbereich, sehr selten Heiserkeit"],
@@ -156,8 +156,8 @@ KURS.module.push({
       titel: "Wechselwirkungen von Lidocain",
       seite: "S. 14",
       inhalt: [
-        { typ: "liste", punkte: [
         { typ: "foto", id: "pexels-5452239", text: "Bei regelmäßiger Medikamenteneinnahme sind mögliche Wechselwirkungen zu bedenken." },
+        { typ: "liste", punkte: [
           "Mit Wirkstoffen, die Herzrhythmus oder Herzfrequenz beeinflussen (Antiarrhythmika, Betablocker, Kalziumkanalblocker), kann sich die Wirkung von Lidocain auf das Herz verstärken oder abschwächen.",
           "Andere Betäubungsmittel, blutdrucksenkende Betablocker (Propranolol, Metoprolol, Nadolol), Diltiazem, Verapamil, Cimetidin, Amiodaron, Fluvoxamin und gefäßverengende Stoffe wie Adrenalin oder Noradrenalin verstärken die Wirkung. Dabei steigt das Risiko für Nebenwirkungen.",
           "Zusammen mit Mutterkornalkaloiden oder Epinephrin kann der Blutdruck gefährlich abfallen.",
@@ -178,8 +178,8 @@ KURS.module.push({
       titel: "Lidocain sicher anwenden",
       seite: "S. 15",
       inhalt: [
-        { typ: "schritte", punkte: [
         { typ: "foto", id: "pexels-5563658", text: "Salben werden nur mit Handschuhen und in der vorgesehenen Menge aufgetragen." },
+        { typ: "schritte", punkte: [
           "Das Mittel darf nicht in die Augen oder auf verletzte Haut gelangen. Falls doch: sofort mit fließendem Wasser abspülen.",
           "Salbe vor dem Eingriff mit einem Wattestäbchen auftragen.",
           "Einige Minuten bis zur vollen Wirkung warten.",

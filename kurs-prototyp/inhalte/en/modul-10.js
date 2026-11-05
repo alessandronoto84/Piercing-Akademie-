@@ -24,8 +24,8 @@ KURS.module.push({
       titel: "The right aftercare products",
       seite: "S. 48",
       inhalt: [
-        { typ: "tabelle", kopf: ["Aftercare product", "Use"], zeilen: [
         { typ: "foto", id: "pexels-4202383", text: "Clean single-use cotton pads are among the basic supplies for piercing aftercare." },
+        { typ: "tabelle", kopf: ["Aftercare product", "Use"], zeilen: [
           ["Prontolind (polihexanide)", "Suitable for all piercings, including cartilage"],
           ["Octenisept (octenidine)", "Do not use on cartilage: in laboratory studies, octenidine damages cartilage cells"],
           ["Plain saline solution", "Suitable for all piercings"],
@@ -66,8 +66,8 @@ KURS.module.push({
       titel: "Lack of epithelialization and rebleeding",
       seite: "S. 50",
       inhalt: [
-        { typ: "tabelle", kopf: ["Problem", "What to do"], zeilen: [
         { typ: "foto", id: "pexels-5146534", text: "Sterile compresses and plasters are part of the care for after-bleeding." },
+        { typ: "tabelle", kopf: ["Problem", "What to do"], zeilen: [
           ["Lack of epithelialization", "See a doctor after 10 to 14 days. During epithelialization, epithelial cells migrate in from the wound edge and cover the wound; underneath, the granulation tissue matures into firm scar tissue. The wound gets smaller."],
           ["Rebleeding", "If bleeding keeps recurring, see a doctor. Possible causes according to the course book: diabetes, connective tissue weakness, bleeding disorder; also blood-thinning medication."]
         ] }

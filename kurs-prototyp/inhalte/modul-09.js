@@ -11,8 +11,8 @@ KURS.module.push({
       titel: "Empfang und Kundengespräch",
       seite: "S. 111",
       inhalt: [
-        { typ: "schritte", start: 1, punkte: [
         { typ: "foto", id: "pexels-4269203", text: "Ein freundlicher Empfang am Tresen ist der Beginn jedes Kundengesprächs." },
+        { typ: "schritte", start: 1, punkte: [
           "Der Kunde betritt das Piercingstudio.",
           "Begrüßung, Small Talk.",
           "Fragen, welche Piercings gewünscht sind, eventuell Angst nehmen.",
@@ -92,8 +92,8 @@ KURS.module.push({
       titel: "Nachsorge und Abschluss",
       seite: "S. 113",
       inhalt: [
-        { typ: "schritte", start: 22, punkte: [
         { typ: "foto", id: "pexels-7579831", text: "Im Abschlussgespräch werden die Pflegeschritte für die kommenden Wochen in Ruhe erklärt." },
+        { typ: "schritte", start: 22, punkte: [
           "Eventuell mit Pflaster abkleben (Brustwarze, Bauchnabel).",
           "Bei Zungenpiercings einen Eiswürfel geben.",
           "Pflegemittel mitgeben und Pflegehinweise mündlich erklären.",

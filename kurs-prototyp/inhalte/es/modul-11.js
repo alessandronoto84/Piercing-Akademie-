@@ -52,8 +52,8 @@ KURS.module.push({
       seite: "S. 36–39, 46–47",
       entwurf: true,
       inhalt: [
-        { typ: "liste", titel: "Lo que llevas por escrito", punkte: [
         { typ: "foto", id: "pexels-8376320", text: "Cada paso de trabajo según el plan de higiene se documenta por escrito." },
+        { typ: "liste", titel: "Lo que llevas por escrito", punkte: [
           "Plan marco de higiene con plan de limpieza y desinfección (ejemplos en el libro del curso págs. 37–39; acordarlo con la oficina local de salud pública)",
           "Material estéril: cada lote con fecha de esterilización y número de lote",
           "Registros de control del autoclave: pruebas diarias, pruebas de esporas semestrales, revisión anual del equipo",
@@ -89,8 +89,8 @@ KURS.module.push({
       titel: "Compras",
       seite: "S. 34, 56",
       inhalt: [
-        { typ: "liste", punkte: [
         { typ: "foto", id: "pexels-6612276", text: "Hoy en día, el material fungible y las joyas se piden casi siempre por internet." },
+        { typ: "liste", punkte: [
           "Joyas iniciales solo de titanio G23 o PTFE, con certificado de material del fabricante. Según la normativa de la UE, las joyas para piercings recién hechos pueden liberar como máximo 0,2 µg de níquel por cm² y semana.",
           "Desinfectantes de la lista VAH (Asociación alemana de Higiene Aplicada) con eficacia demostrada.",
           "Cánulas, pinzas y material fungible de proveedores especializados en material médico o para estudios."
@@ -106,8 +106,8 @@ KURS.module.push({
       titel: "Normas para tu estudio",
       seite: "Modul 2 und 8",
       inhalt: [
-        { typ: "liste", punkte: [
         { typ: "foto", id: "pexels-13068359", text: "Un estudio ordenado y luminoso hace visibles las reglas para todos." },
+        { typ: "liste", punkte: [
           "Antes de cada piercing, un formulario de consentimiento por escrito (módulo 2).",
           "Comprobar la edad: menores de 18 solo con el consentimiento de los padres o tutores legales; mejor, nunca.",
           "Ninguna promesa de curación, tampoco en la publicidad.",

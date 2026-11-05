@@ -52,8 +52,8 @@ KURS.module.push({
       seite: "S. 36–39, 46–47",
       entwurf: true,
       inhalt: [
-        { typ: "liste", titel: "Das führst du schriftlich", punkte: [
         { typ: "foto", id: "pexels-8376320", text: "Jeder Arbeitsschritt nach Hygieneplan wird schriftlich dokumentiert." },
+        { typ: "liste", titel: "Das führst du schriftlich", punkte: [
           "Rahmenhygieneplan mit Reinigungs- und Desinfektionsplan (Beispiele im Kursbuch S. 37–39, mit dem Gesundheitsamt abstimmen)",
           "Sterilgut: jede Charge mit Sterilisierdatum und Chargennummer",
           "Prüfprotokolle des Autoklaven: tägliche Tests, halbjährliche Sporenproben, jährliche Geräteprüfung",
@@ -89,8 +89,8 @@ KURS.module.push({
       titel: "Einkauf",
       seite: "S. 34, 56",
       inhalt: [
-        { typ: "liste", punkte: [
         { typ: "foto", id: "pexels-6612276", text: "Verbrauchsmaterial und Schmuck werden heute meist online bestellt." },
+        { typ: "liste", punkte: [
           "Ersteinsätze nur aus G23-Titan oder PTFE, mit Materialnachweis des Herstellers. Nach EU-Recht darf Schmuck für frische Piercings höchstens 0,2 µg Nickel pro cm² und Woche abgeben.",
           "Desinfektionsmittel aus der VAH-Liste mit nachgewiesener Wirksamkeit.",
           "Kanülen, Klemmen und Verbrauchsmaterial aus dem Fachhandel für medizinischen bzw. Studiobedarf."
@@ -106,8 +106,8 @@ KURS.module.push({
       titel: "Regeln für dein Studio",
       seite: "Modul 2 und 8",
       inhalt: [
-        { typ: "liste", punkte: [
         { typ: "foto", id: "pexels-13068359", text: "Ein aufgeräumtes, helles Studio macht klare Regeln für alle sichtbar." },
+        { typ: "liste", punkte: [
           "Vor jedem Piercing eine schriftliche Einverständniserklärung (Modul 2).",
           "Alter prüfen: unter 18 nur mit Einverständnis der Erziehungsberechtigten, besser gar nicht.",
           "Keine Heilversprechen und keine Werbung damit.",

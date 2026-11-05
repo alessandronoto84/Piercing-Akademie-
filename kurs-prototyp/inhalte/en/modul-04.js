@@ -44,8 +44,8 @@ KURS.module.push({
       titel: "How pain arises in the tissue",
       seite: "S. 8–9",
       inhalt: [
-        { typ: "schritte", punkte: [
         { typ: "foto", id: "pexels-5624170", text: "Pain arises when tissue is irritated or injured and nerve endings send signals." },
+        { typ: "schritte", punkte: [
           "The tissue injury releases ATP, protons, oxygen radicals, potassium and arachidonic acid.",
           "The enzyme cyclooxygenase (COX-1 in the endothelial cells, COX-2 in migrating leukocytes) converts the arachidonic acid into prostaglandin E2. Kinins from the injured endothelium become bradykinin.",
           "Mast cells release their granules (degranulation), including histamine.",
@@ -136,8 +136,8 @@ KURS.module.push({
       titel: "Side effects of lidocaine",
       seite: "S. 14",
       inhalt: [
-        { typ: "tabelle", kopf: ["Situation", "Possible side effects"], zeilen: [
         { typ: "foto", id: "pexels-13005383", text: "Itching and skin irritation can be signs of an intolerance." },
+        { typ: "tabelle", kopf: ["Situation", "Possible side effects"], zeilen: [
           ["If ingested", "Dizziness, restlessness, gastrointestinal disorders, allergic reactions, rise in temperature"],
           ["On the skin", "in rare cases hypersensitivity reactions"],
           ["On mucous membranes", "occasionally swelling in the throat and larynx area, very rarely hoarseness"],
@@ -156,8 +156,8 @@ KURS.module.push({
       titel: "Interactions of lidocaine",
       seite: "S. 14",
       inhalt: [
-        { typ: "liste", punkte: [
         { typ: "foto", id: "pexels-5452239", text: "If someone takes medication regularly, possible interactions must be considered." },
+        { typ: "liste", punkte: [
           "With active substances that affect heart rhythm or heart rate (antiarrhythmics, beta blockers, calcium channel blockers), the effect of lidocaine on the heart can be increased or reduced.",
           "Other anesthetics, blood-pressure-lowering beta blockers (propranolol, metoprolol, nadolol), diltiazem, verapamil, cimetidine, amiodarone, fluvoxamine and vasoconstricting substances such as adrenaline or noradrenaline increase the effect. This raises the risk of side effects.",
           "Together with ergot alkaloids or epinephrine, blood pressure can drop dangerously.",
@@ -178,8 +178,8 @@ KURS.module.push({
       titel: "Using lidocaine safely",
       seite: "S. 15",
       inhalt: [
-        { typ: "schritte", punkte: [
         { typ: "foto", id: "pexels-5563658", text: "Creams are applied only with gloves and in the intended amount." },
+        { typ: "schritte", punkte: [
           "The product must not get into the eyes or onto injured skin. If it does: rinse immediately with running water.",
           "Apply the ointment with a cotton swab before the procedure.",
           "Wait a few minutes until it takes full effect.",

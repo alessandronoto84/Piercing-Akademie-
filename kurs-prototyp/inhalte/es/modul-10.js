@@ -24,8 +24,8 @@ KURS.module.push({
       titel: "Los productos de cuidado adecuados",
       seite: "S. 48",
       inhalt: [
-        { typ: "tabelle", kopf: ["Producto de cuidado", "Uso"], zeilen: [
         { typ: "foto", id: "pexels-4202383", text: "Los discos de algodón desechables y limpios son parte del material básico para el cuidado del piercing." },
+        { typ: "tabelle", kopf: ["Producto de cuidado", "Uso"], zeilen: [
           ["Prontolind (polihexanida)", "Adecuado para todos los piercings, también para cartílago"],
           ["Octenisept (octenidina)", "No aplicar en cartílago: en estudios de laboratorio, la octenidina daña las células del cartílago"],
           ["Solución salina simple", "Adecuada para todos los piercings"],
@@ -66,8 +66,8 @@ KURS.module.push({
       titel: "Falta de epitelización y sangrado posterior",
       seite: "S. 50",
       inhalt: [
-        { typ: "tabelle", kopf: ["Trastorno", "Qué hacer"], zeilen: [
         { typ: "foto", id: "pexels-5146534", text: "Las compresas estériles y los apósitos forman parte de la atención en caso de sangrado posterior." },
+        { typ: "tabelle", kopf: ["Trastorno", "Qué hacer"], zeilen: [
           ["Falta de epitelización", "Acudir a un médico pasados entre 10 y 14 días. En la epitelización, las células epiteliales migran desde el borde de la herida y la cubren; debajo, el tejido de granulación madura hasta convertirse en tejido cicatricial firme. La herida se hace más pequeña."],
           ["Sangrado posterior", "Si el sangrado no para, acudir a un médico. Posibles causas según el libro del curso: diabetes, debilidad del tejido conjuntivo, trastorno de la coagulación (hemofilia); además, medicamentos anticoagulantes."]
         ] }

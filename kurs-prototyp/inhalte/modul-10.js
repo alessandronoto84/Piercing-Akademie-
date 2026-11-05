@@ -24,8 +24,8 @@ KURS.module.push({
       titel: "Die richtigen Pflegemittel",
       seite: "S. 48",
       inhalt: [
-        { typ: "tabelle", kopf: ["Pflegemittel", "Einsatz"], zeilen: [
         { typ: "foto", id: "pexels-4202383", text: "Saubere Einmal-Wattepads gehören zu den Grundmitteln der Piercingpflege." },
+        { typ: "tabelle", kopf: ["Pflegemittel", "Einsatz"], zeilen: [
           ["Prontolind (Polihexanid)", "Für alle Piercings geeignet, auch für Knorpel"],
           ["Octenisept (Octenidin)", "Nicht auf Knorpel anwenden: Octenidin schädigt in Laborstudien Knorpelzellen"],
           ["Einfache Kochsalzlösung", "Für alle Piercings geeignet"],
@@ -66,8 +66,8 @@ KURS.module.push({
       titel: "Fehlende Epithelisierung und Nachbluten",
       seite: "S. 50",
       inhalt: [
-        { typ: "tabelle", kopf: ["Störung", "Was tun"], zeilen: [
         { typ: "foto", id: "pexels-5146534", text: "Sterile Kompressen und Pflaster gehören zur Versorgung bei Nachbluten." },
+        { typ: "tabelle", kopf: ["Störung", "Was tun"], zeilen: [
           ["Fehlende Epithelisierung", "Nach 10 bis 14 Tagen einen Arzt aufsuchen. Bei der Epithelisierung wandern Epithelzellen vom Wundrand ein und decken die Wunde ab; darunter reift das Granulationsgewebe zu festem Narbengewebe. Die Wunde wird kleiner."],
           ["Nachbluten", "Bei ständigem Nachbluten einen Arzt aufsuchen. Mögliche Ursachen laut Kursbuch: Diabetes, Bindegewebsschwäche, Bluterkrankheit; außerdem blutverdünnende Medikamente."]
         ] }

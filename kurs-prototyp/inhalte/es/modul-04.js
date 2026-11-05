@@ -44,8 +44,8 @@ KURS.module.push({
       titel: "Cómo se origina el dolor en el tejido",
       seite: "S. 8–9",
       inhalt: [
-        { typ: "schritte", punkte: [
         { typ: "foto", id: "pexels-5624170", text: "El dolor surge cuando el tejido se irrita o se lesiona y las terminaciones nerviosas envían señales." },
+        { typ: "schritte", punkte: [
           "La lesión del tejido libera ATP, protones, radicales de oxígeno, potasio y ácido araquidónico.",
           "La enzima ciclooxigenasa (COX-1 en las células endoteliales, COX-2 en los leucocitos que migran al tejido) transforma el ácido araquidónico en prostaglandina E2. Las cininas del endotelio lesionado se convierten en bradicinina.",
           "Los mastocitos liberan sus gránulos (desgranulación), entre ellos histamina.",
@@ -136,8 +136,8 @@ KURS.module.push({
       titel: "Efectos secundarios de la lidocaína",
       seite: "S. 14",
       inhalt: [
-        { typ: "tabelle", kopf: ["Situación", "Posibles efectos secundarios"], zeilen: [
         { typ: "foto", id: "pexels-13005383", text: "El picor y la irritación de la piel pueden indicar una intolerancia." },
+        { typ: "tabelle", kopf: ["Situación", "Posibles efectos secundarios"], zeilen: [
           ["Si se ingiere", "Mareo, inquietud, trastornos gastrointestinales, reacciones alérgicas, aumento de la temperatura"],
           ["Sobre la piel", "en casos poco frecuentes, reacciones de hipersensibilidad"],
           ["En las mucosas", "ocasionalmente hinchazón en la zona de la faringe y la laringe, muy rara vez ronquera"],
@@ -156,8 +156,8 @@ KURS.module.push({
       titel: "Interacciones de la lidocaína",
       seite: "S. 14",
       inhalt: [
-        { typ: "liste", punkte: [
         { typ: "foto", id: "pexels-5452239", text: "Si se toman medicamentos con regularidad, hay que tener en cuenta posibles interacciones." },
+        { typ: "liste", punkte: [
           "Con principios activos que influyen en el ritmo o la frecuencia cardíaca (antiarrítmicos, betabloqueantes, bloqueantes de los canales de calcio), el efecto de la lidocaína sobre el corazón puede aumentar o disminuir.",
           "Otros anestésicos, los betabloqueantes antihipertensivos (propranolol, metoprolol, nadolol), diltiazem, verapamilo, cimetidina, amiodarona, fluvoxamina y sustancias vasoconstrictoras como la adrenalina o la noradrenalina potencian el efecto. Con ello aumenta el riesgo de efectos secundarios.",
           "Junto con alcaloides del cornezuelo o epinefrina, la tensión arterial puede bajar de forma peligrosa.",
@@ -178,8 +178,8 @@ KURS.module.push({
       titel: "Usar la lidocaína con seguridad",
       seite: "S. 15",
       inhalt: [
-        { typ: "schritte", punkte: [
         { typ: "foto", id: "pexels-5563658", text: "Las pomadas se aplican solo con guantes y en la cantidad prevista." },
+        { typ: "schritte", punkte: [
           "El producto no debe entrar en los ojos ni aplicarse sobre piel lesionada. Si ocurre: enjuagar de inmediato con agua corriente.",
           "Aplicar la pomada con un bastoncillo de algodón antes de la intervención.",
           "Esperar unos minutos hasta que haga pleno efecto.",
