@@ -74,7 +74,11 @@ CREATE TABLE IF NOT EXISTS bestellungen (
   sofort INTEGER,
   fassung TEXT,                     -- Fassung der Häkchen-Texte
   stripe_session TEXT,
-  bezahlt INTEGER
+  bezahlt INTEGER,
+  telefon TEXT,                     -- Praxis/Komplett: für das Ersttelefonat
+  praxis_termine TEXT,              -- JSON-Liste der Wunschtermine für die Praxistage (nur Samstage und Montage)
+  telefon_termin TEXT,              -- Wunschtag für das Ersttelefonat (ISO-Datum)
+  telefon_zeit TEXT                 -- vormittags | nachmittags | abends
 );
 -- Verkäufe von Einzelprodukten (Kursbuch digital): verhindert Doppelverarbeitung des Webhooks
 CREATE TABLE IF NOT EXISTS verkaeufe (

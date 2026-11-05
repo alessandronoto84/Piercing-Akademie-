@@ -622,3 +622,20 @@ header .sprachwahl{order:2}
 .auftakt-laeuft .hero *,.auftakt-laeuft .hero-bild{animation-play-state:paused!important}
 .auftakt-laeuft body{overflow:hidden}
 @media (prefers-reduced-motion:reduce){.auftakt{display:none}}
+
+/* Bestellseite: Wunschtermine im Kalender (nur erlaubte Tage sind wählbar) */
+.b-termine .b-label{font-weight:600;margin:0}
+.b-kalender{border:1px solid var(--line);border-radius:12px;padding:12px;max-width:380px;background:var(--surface,transparent)}
+.b-kal-kopf{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}
+.b-kal-kopf strong{text-transform:capitalize}
+.b-kal-kopf button{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:none;color:inherit;font-size:1.2rem;cursor:pointer}
+.b-kal-kopf button:disabled{opacity:.3;cursor:default}
+.b-kal-raster{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center}
+.b-kal-wt{font-family:var(--f-mono);font-size:.7rem;text-transform:uppercase;color:var(--muted);padding:2px 0}
+.b-kal-tag{aspect-ratio:1;display:flex;align-items:center;justify-content:center;border-radius:8px;font-size:.95rem;border:1px solid transparent;background:none;color:inherit;padding:0}
+button.b-kal-tag{border-color:var(--accent);color:var(--accent);font-weight:600;cursor:pointer}
+button.b-kal-tag:hover{background:var(--accent-soft)}
+button.b-kal-tag.an{background:var(--accent);color:var(--gold-ink,#111114)}
+.b-kal-tag.aus{color:var(--muted);opacity:.45}
+.b-kal-raster button:focus-visible,.b-kal-kopf button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.b-auswahl{font-size:.9rem;margin:6px 0 0;color:var(--muted)}

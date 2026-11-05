@@ -1,6 +1,6 @@
 # Startliste: Was vor dem Livegang noch fehlt
 
-Stand: 26.10.2026. Erledigtes steht unten. Details und Quellen: `KURS-RECHERCHE.md`, Technik: `PROJEKT-DOKUMENTATION.md`.
+Stand: 05.11.2026. Erledigtes steht unten. Details und Quellen: `KURS-RECHERCHE.md`, Technik: `PROJEKT-DOKUMENTATION.md`.
 
 ## 1. Was ich von dir brauche
 
@@ -10,7 +10,7 @@ Stand: 26.10.2026. Erledigtes steht unten. Details und Quellen: `KURS-RECHERCHE.
 | 3 | **Entscheidung Kursplattform** (z. B. elopage, Digistore24, Teachable oder eigene Lösung) | Login, Bezahlung, Freischaltung nach Kauf, Fortschritt auf dem Server, fälschungssichere Bescheinigung, gesperrter Prüfmodus. Ich übertrage die Inhalte dorthin. | du |
 | 4 | **Domain und Hosting** (z. B. piercingakademie.de; Hoster mit Sitz in der EU) | Seite online stellen; Datenschutzerklärung braucht Name, Sitz und Auftragsverarbeitungsvertrag des Hosters. | du |
 | 5 | **E-Mail-Adresse zur Domain** (z. B. info@piercingakademie.de) | Wirkt deutlich seriöser als Gmail; dann überall austauschen. | du |
-| 6 | ~~Anfrageformular~~ | Erledigt (01.11.2026): ausführlicheres Formular, Versand über unseren Cloudflare-Server; aktiv mit dem Livegang. | – |
+| 6 | ~~Anfrageformular~~ | Ersetzt (05.11.2026): Es wird nur noch direkt gebucht. Bei Praxis und Komplett wählt der Kunde auf der Bestellseite im Kalender Wunschtermine für den Praxistag (nur Samstag/Montag) und das Ersttelefonat und gibt seine Telefonnummer an; du bekommst nach der Zahlung eine E-Mail „Neue Buchung: bitte anrufen“. Für Fragen bleiben Telefon, E-Mail und Instagram. | – |
 | 7 | **Fachliche Freigabe** von Modul 11 („Studio starten“) und der Lektion Perichondritis | Beide sind noch als „Entwurf“ markiert. | du |
 | 8 | **Händlerliste für Modul 11** (Schmuck, Kanülen, Desinfektion) oder Streichung | Platzhalter „Welche Händler sich bewährt haben …“ | du |
 | 9 | **Echte Fotos und kurze Videos**: du im Studio, Arbeitsplatz, Autoklav, Praxistag | Echte Bilder wirken stärker als Symbolbilder. | du |
@@ -39,7 +39,17 @@ Stand: 26.10.2026. Erledigtes steht unten. Details und Quellen: `KURS-RECHERCHE.
 - FAQ ergänzen: „Darf ich danach selbstständig piercen?“, „Was brauche ich vom Gesundheitsamt?“, „Bekomme ich eine Rechnung?“ (nach Punkt 1 und 11).
 - Nach dem Livegang: Seite bei der Google Search Console anmelden, Ladezeit und Barrierefreiheit messen.
 
-## 3. Bereits erledigt (26.10.2026)
+## 3. Bereits erledigt
+
+**05.11.2026**
+- Testseite läuft: https://piercing-akademie-vorschau.alessandronoto84.workers.dev (Cloudflare holt den Code automatisch von GitHub, Stripe im Testmodus, Webhook eingerichtet, Login und Fahrschule hinter der Bezahlschranke).
+- Login: Anmeldecode steht in der Willkommens-E-Mail (7 Tage gültig), „Teilnehmer-Login“ in der Kopfzeile, Login-Seite mit E-Mail und Code.
+- Kursbuch (epubli-Fassung, 116 Seiten) im privaten Speicher, mit Suche; Übersetzung Englisch und Spanisch für alle Seiten.
+- Bezahlung: Karte, PayPal, SEPA, Klarna u. a.; immer in Euro (keine automatische Währungsumrechnung). Banküberweisung bewusst nicht.
+- Fahrschule: 46 lizenzfreie Fotos in den Lektionen, echte Titelbilder für Modul 1, 6 und 8, Schmuck-Clip aus echtem Foto.
+- Buchung mit Wunschterminen statt Anfrageformular (siehe Punkt 6).
+
+**26.10.2026**
 
 - Bildrechte geklärt: Kursbuch-Fotos (eigenes Buch der Akademie), Stockfotos und generierte Bilder sind freigegeben (Alessandro Noto, 26.10.2026). Die Fotos von Wikimedia Commons behalten ihren kurzen Urheber- und Lizenznachweis, weil die CC-Lizenzen das verlangen.
 - Hinweise „KI-generiert“ und „KI-Video“ unter Bildern und Video entfernt.

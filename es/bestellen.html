@@ -59,9 +59,40 @@
 
       <div class="b-summe">
         <p><span>Precio total</span> <strong id="b-summe">999 €</strong></p>
-        <p class="fine" data-fuer="kurs">Precio final, IVA incluido. Pago único, sin suscripción. Acceso al curso online durante 12 meses desde la activación. La fecha de los días de práctica y la mentoría la acordamos contigo después de la reserva. Los días de práctica y la mentoría se imparten en alemán o inglés.</p>
+        <p class="fine" data-fuer="kurs">Precio final, IVA incluido. Pago único, sin suscripción. Acceso al curso online durante 12 meses desde la activación. Elige abajo tu fecha preferida para el día de práctica; te llamaremos y la confirmaremos. Los días de práctica y la mentoría se imparten en alemán o inglés.</p>
         <p class="fine" data-fuer="digital" hidden>Precio final, IVA incluido. Recibes tu acceso por correo justo después del pago. Lees el libro online en el curso; no hay archivo para descargar y cada página lleva tu correo electrónico.</p>
       </div>
+
+      <fieldset class="b-termine" id="b-termine" hidden>
+        <legend class="form-title">Tus fechas preferidas</legend>
+        <p class="fine">Los días de práctica son los sábados y los lunes en Lingen. Elige tu fecha preferida y un día para nuestra primera llamada. Te llamaremos y confirmaremos la fecha.</p>
+        <div class="field">
+          <label for="b-telefon">Número de teléfono <span class="req">*</span></label>
+          <input id="b-telefon" name="telefon" type="tel" autocomplete="tel" inputmode="tel" maxlength="40" aria-describedby="b-telefon-hint">
+          <p class="hint" id="b-telefon-hint">Te llamaremos a este número para la primera llamada.</p>
+        </div>
+        <div class="field">
+          <p class="b-label" id="b-praxis-label"><span data-anzahl="1">Fecha preferida para tu día de práctica</span><span data-anzahl="2" hidden>Fechas preferidas para tus dos días de práctica</span> <span class="req">*</span></p>
+          <p class="hint"><span data-anzahl="1">Solo sábados o lunes, como mínimo dentro de una semana.</span><span data-anzahl="2" hidden>Elige dos días distintos, solo sábados o lunes.</span></p>
+          <div class="b-kalender" id="b-kal-praxis" data-tage="1,6" data-von="7" data-bis="183" role="group" aria-labelledby="b-praxis-label"></div>
+          <p class="b-auswahl" id="b-praxis-auswahl" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <p class="b-label" id="b-anruf-label">Día preferido para nuestra primera llamada <span class="req">*</span></p>
+          <p class="hint">De lunes a sábado, en las próximas ocho semanas.</p>
+          <div class="b-kalender" id="b-kal-anruf" data-tage="1,2,3,4,5,6" data-von="1" data-bis="60" role="group" aria-labelledby="b-anruf-label"></div>
+          <p class="b-auswahl" id="b-anruf-auswahl" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="b-telefon-zeit">Hora de la llamada <span class="req">*</span></label>
+          <select id="b-telefon-zeit" name="telefon_zeit">
+            <option value="">Elige una opción</option>
+            <option value="vormittags">por la mañana (9–12 h)</option>
+            <option value="nachmittags">por la tarde (12–17 h)</option>
+            <option value="abends">por la noche (17–20 h)</option>
+          </select>
+        </div>
+      </fieldset>
 
       <fieldset class="b-zustimmung">
         <legend class="form-title">2. Confirmar</legend>

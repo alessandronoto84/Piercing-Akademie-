@@ -270,7 +270,7 @@
           <li>Teilnahmebescheinigung</li>
           <li>Praxisaufgaben mit Materialliste und Kauflinks</li>
         </ul>
-        <a class="btn ghost" href="#kontakt" data-paket="basis">Basis wählen</a>
+        <a class="btn ghost" href="bestellen.html?paket=basis">Jetzt buchen</a>
       </article>
 
       <article class="card top" aria-labelledby="paket-praxis">
@@ -286,7 +286,7 @@
           <li>1 Praxistag in Lingen</li>
           <li>Echte Modelle</li>
         </ul>
-        <a class="btn" href="#kontakt" data-paket="praxis">Praxis wählen</a>
+        <a class="btn" href="bestellen.html?paket=praxis">Jetzt buchen</a>
       </article>
 
       <article class="card" aria-labelledby="paket-komplett">
@@ -303,11 +303,11 @@
           <li>Übungsmaterial für zu Hause, per Post</li>
           <li>12 Monate Support</li>
         </ul>
-        <a class="btn ghost" href="#kontakt" data-paket="komplett">Komplett wählen</a>
+        <a class="btn ghost" href="bestellen.html?paket=komplett">Jetzt buchen</a>
       </article>
     </div>
     <p class="fine pk-note">Alle Preise sind Endpreise in Euro inkl. MwSt. Teilnahme ab 18 Jahren. Der Online-Kurs startet sofort nach dem Kauf: Mit deiner Zustimmung im Bestellvorgang erlischt das Widerrufsrecht für den Online-Kurs mit der Freischaltung deines Zugangs (<a href="agb.html#widerruf">AGB und Widerruf</a>).</p>
-    <p class="fine pk-note" id="pk-zahlung" hidden>Im nächsten Schritt prüfst du deine Bestellung, bezahlt wird sicher über Stripe. Nach der Zahlung melden wir uns für den Zugang und den Termin deines Praxistags.</p>
+    <p class="fine pk-note" id="pk-zahlung">Im nächsten Schritt wählst du deine Wunschtermine und prüfst deine Bestellung, bezahlt wird sicher über Stripe. Nach der Zahlung bekommst du sofort deinen Zugang, und wir rufen dich zum vereinbarten Ersttelefonat an.</p>
 
     <p class="label einzeln-titel">Einzeln erhältlich</p>
     <div class="pk pk-einzeln">
@@ -322,7 +322,7 @@
           <li>120 Seiten, von Hygiene bis Datenblatt</li>
           <li>Online lesen, mit Suche und Notizen</li>
         </ul>
-        <a class="btn ghost" href="#kontakt" data-paket="buch">Kursbuch anfragen</a>
+        <a class="btn ghost" href="bestellen.html?paket=buch">Kursbuch kaufen</a>
       </article>
       <article class="card" aria-labelledby="produkt-softcover">
         <div>
@@ -466,123 +466,18 @@
   <div class="wrap">
     <div class="contact">
       <div>
-        <p class="label">Anfrage</p>
-        <h2 class="sec-title" id="kontakt-titel">Platz sichern</h2>
-        <p>Schick uns eine Anfrage. Den Termin für deinen Praxistag stimmen wir persönlich mit dir ab.</p>
+        <p class="label">Kontakt</p>
+        <h2 class="sec-title" id="kontakt-titel">Fragen vor der Buchung?</h2>
+        <p>Ruf uns an oder schreib uns. Gebucht wird direkt über die Pakete: Dort wählst du auch deinen Wunschtermin für den Praxistag und für unser Ersttelefonat.</p>
         <div class="kontaktweg">
           <a href="tel:+491738072405"><b>Telefon</b>+49&nbsp;173&nbsp;8072405</a>
           <a href="mailto:diepiercingakademie@gmail.com"><b>E-Mail</b>diepiercingakademie@gmail.com</a>
           <a href="https://www.instagram.com/diepiercingakademie/" rel="noopener" target="_blank"><b>Instagram</b>@diepiercingakademie</a>
         </div>
         <address>740 Piercing, Burgstraße 12, 49808 Lingen (Ems)</address>
-        <!-- KURSPLATTFORM: Sobald die echte Buchungs-URL feststeht, hier href eintragen und das Attribut hidden entfernen.
-             Keine Platzhalter-URL eintragen. Siehe PROJEKT-DOKUMENTATION.md, Abschnitt „Kursplattform“. -->
-        <a class="btn" href="#kontakt" id="zur-buchung" hidden>Zur Buchung auf der Kursplattform</a>
+        <a class="btn" href="#pakete">Zu den Paketen</a>
       </div>
 
-      <form class="form" id="anfrage" action="mailto:diepiercingakademie@gmail.com" method="post" enctype="text/plain" aria-labelledby="anfrage-titel">
-        <p class="form-title" id="anfrage-titel">Deine Anfrage</p>
-        <p class="fine">Pflichtfelder sind mit * markiert.</p>
-
-        <div class="field">
-          <label for="f-paket">Paket <span class="req">*</span></label>
-          <select id="f-paket" name="paket" required aria-describedby="f-paket-err">
-            <option value="">Bitte wählen</option>
-            <option value="basis">Basis – 249 €</option>
-            <option value="praxis">Praxis – 999 €</option>
-            <option value="komplett">Komplett – 2.490 €</option>
-            <option value="buch">Kursbuch digital – 19,90 €</option>
-            <option value="beratung">Noch unsicher – bitte beraten</option>
-          </select>
-          <p class="err" id="f-paket-err" hidden></p>
-        </div>
-
-        <div class="field">
-          <label for="f-name">Name <span class="req">*</span></label>
-          <input id="f-name" name="name" type="text" autocomplete="name" required maxlength="120" aria-describedby="f-name-err">
-          <p class="err" id="f-name-err" hidden></p>
-        </div>
-
-        <div class="field">
-          <label for="f-email">E-Mail <span class="req">*</span></label>
-          <input id="f-email" name="email" type="email" autocomplete="email" required maxlength="200" aria-describedby="f-email-err">
-          <p class="err" id="f-email-err" hidden></p>
-        </div>
-
-        <div class="field">
-          <label for="f-telefon">Telefon <span class="req">(optional)</span></label>
-          <input id="f-telefon" name="telefon" type="tel" autocomplete="tel" maxlength="40" pattern="[0-9 +\/\(\)\-]{6,40}" aria-describedby="f-telefon-hint f-telefon-err">
-          <p class="hint" id="f-telefon-hint">Falls du lieber angerufen werden möchtest.</p>
-          <p class="err" id="f-telefon-err" hidden></p>
-        </div>
-
-        <div class="field">
-          <label for="f-erfahrung">Arbeitest du schon in einem Studio? <span class="req">(optional)</span></label>
-          <select id="f-erfahrung" name="erfahrung">
-            <option value="">Bitte wählen</option>
-            <option value="tattoo">Ja, in einem Tattoostudio</option>
-            <option value="kosmetik">Ja, in einem Kosmetikstudio</option>
-            <option value="piercing">Ja, in einem Piercingstudio</option>
-            <option value="keins">Nein, noch in keinem Studio</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label for="f-zeitraum">Wunschzeitraum für den Praxistag <span class="req">(optional)</span></label>
-          <input id="f-zeitraum" name="zeitraum" type="text" maxlength="120" aria-describedby="f-zeitraum-hint">
-          <p class="hint" id="f-zeitraum-hint">Zum Beispiel „Mitte März, gern an einem Samstag“.</p>
-        </div>
-
-        <div class="field">
-          <label for="f-modelle">Bringst du eigene Modelle mit? <span class="req">(optional)</span></label>
-          <select id="f-modelle" name="modelle">
-            <option value="">Bitte wählen</option>
-            <option value="ja">Ja, ich bringe eigene Modelle mit</option>
-            <option value="nein">Nein, bitte Modelle für mich suchen</option>
-            <option value="unklar">Weiß ich noch nicht</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label for="f-quelle">Wie hast du von uns erfahren? <span class="req">(optional)</span></label>
-          <select id="f-quelle" name="quelle">
-            <option value="">Bitte wählen</option>
-            <option value="instagram">Instagram</option>
-            <option value="google">Google</option>
-            <option value="empfehlung">Empfehlung</option>
-            <option value="studio">Im Studio in Lingen</option>
-            <option value="sonstiges">Sonstiges</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label for="f-nachricht">Nachricht <span class="req">(optional)</span></label>
-          <textarea id="f-nachricht" name="nachricht" rows="4" maxlength="1500" aria-describedby="f-nachricht-hint"></textarea>
-          <p class="hint" id="f-nachricht-hint">Zum Beispiel deine Fragen.</p>
-        </div>
-
-        <div class="check">
-          <input id="f-volljaehrig" name="volljaehrig" type="checkbox" value="ja" required aria-describedby="f-volljaehrig-err">
-          <label for="f-volljaehrig">Ich bin mindestens 18 Jahre alt. <span class="req">*</span></label>
-          <p class="err" id="f-volljaehrig-err" hidden></p>
-        </div>
-
-        <div class="feld-falle" aria-hidden="true"><label for="f-website">Website</label><input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
-
-        <p class="fine">Deine Anfrage geht direkt an uns; wir melden uns innerhalb von zwei Werktagen. Klappt das Senden einmal nicht, öffnet sich stattdessen dein E-Mail-Programm mit der fertigen Nachricht. Mehr dazu in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
-
-        <button class="btn" type="submit">Anfrage senden</button>
-
-        <div class="status" id="anfrage-ok" role="status" tabindex="-1" hidden>
-          <p><strong>Danke, deine Anfrage ist bei uns angekommen.</strong> Wir melden uns innerhalb von zwei Werktagen bei dir.</p>
-        </div>
-
-        <div class="status" id="anfrage-status" role="status" tabindex="-1" hidden>
-          <p><strong>Dein E-Mail-Programm sollte sich jetzt geöffnet haben.</strong> Bitte sende die Nachricht dort ab. Erst dann erreicht uns deine Anfrage.</p>
-          <p>Hat sich nichts geöffnet? Kopiere den Text und schick ihn an diepiercingakademie@gmail.com oder ruf uns an: +49&nbsp;173&nbsp;8072405.</p>
-          <button class="btn ghost small" type="button" id="anfrage-kopieren">Text kopieren</button>
-        </div>
-      </form>
     </div>
   </div>
 </section>
@@ -603,7 +498,6 @@
   </footer>
 </div>
 
-<script src="assets/zahlung.js" defer></script>
 <script src="assets/main.js" defer></script>
 <script src="assets/animation.js" defer></script>
 <script src="assets/menue.js" defer></script>

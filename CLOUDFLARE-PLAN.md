@@ -61,10 +61,14 @@ Bis die Domains bei Cloudflare sind, läuft alles unter **https://piercing-akade
 
 **Veröffentlichen über Cloudflare Workers Builds** (Cloudflare holt den Code selbst von GitHub): Aus dieser Cloud-Umgebung klappt `wrangler deploy` nicht, weil der Netzwerk-Proxy beim Hochladen der Website-Dateien den Einmal-Schlüssel von Cloudflare durch den API-Token ersetzt (401). Einstellungen in Cloudflare: Pfad `server`, Build-Befehl `npm ci && node werkzeuge/oeffentlich.mjs`, Deploy-Befehl `npx wrangler deploy --env test`. Datenbank, Geheimnisse (`wrangler secret put … --env test`) und Stripe-Webhook richte ich weiter von hier aus ein.
 
+**Datenbank-Änderungen:** Neue Spalten kommen über Dateien in `server/migrationen/` (einmal je Datenbank anwenden, z. B. `npx wrangler d1 execute piercing-akademie-test --env test --remote --file=migrationen/2026-11-05-wunschtermine.sql`). Auf der Testdatenbank ist `2026-11-05-wunschtermine.sql` angewendet; für die spätere Live-Datenbank reicht `schema.sql` (enthält die Spalten schon).
+
+**Kursbuch-Übersetzungen** (`buch/text.en.json`, `buch/text.es.json`) liegen seit 05.11.2026 im R2-Speicher, übersetzt aus den Seitenbildern.
+
 ## Reihenfolge
 1. Fahrschule auf Englisch und Spanisch übersetzen.
 2. ~~Login, Datenbank und Webhook bauen und lokal testen~~ (erledigt).
-3. Mit Test-Schlüsseln auf Cloudflare veröffentlichen, Testkauf mit Testkarte.
+3. ~~Mit Test-Schlüsseln auf Cloudflare veröffentlichen~~ (erledigt, Testadresse); Testkauf mit Testkarte durch die Akademie.
 4. ~~Datenschutzerklärung um Cloudflare und Resend ergänzen~~ (erledigt; Auftragsverarbeitungsverträge bei der Einrichtung abschließen).
 5. Umschalten auf Live.
 

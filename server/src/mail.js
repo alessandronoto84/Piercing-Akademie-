@@ -23,6 +23,43 @@ const SO_ANMELDEN = {
 };
 const DEIN_CODE = { de: "Dein Anmeldecode:", en: "Your login code:", es: "Tu código de acceso:" };
 
+// Wunschtermine lesbar machen, z. B. „Samstag, 14.11.2026“
+const LOCALE = { de: "de-DE", en: "en-GB", es: "es-ES" };
+export function tagText(iso, s) {
+  return new Date(iso + "T12:00:00Z").toLocaleDateString(LOCALE[s] || "de-DE", { weekday: "long", day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
+}
+const ZEIT = { de: { vormittags: "vormittags", nachmittags: "nachmittags", abends: "abends" }, en: { vormittags: "in the morning", nachmittags: "in the afternoon", abends: "in the evening" }, es: { vormittags: "por la mañana", nachmittags: "por la tarde", abends: "por la noche" } };
+function wunschBlock(w, s) {
+  if (!w) return "";
+  const T = {
+    de: ["Deine Wunschtermine", "Praxistag", "Praxistage", "Ersttelefonat", "Telefon", "Das sind deine Wünsche. Wir rufen dich zum Ersttelefonat an und bestätigen dann den Termin für deinen Praxistag."],
+    en: ["Your preferred dates", "Practice day", "Practice days", "First phone call", "Phone", "These are your preferences. We will call you for the first phone call and then confirm the date of your practice day."],
+    es: ["Tus fechas preferidas", "Día de práctica", "Días de práctica", "Primera llamada", "Teléfono", "Son tus preferencias. Te llamaremos para la primera llamada y después confirmaremos la fecha de tu día de práctica."]
+  }[s];
+  const praxis = w.praxis.map((t) => tagText(t, s));
+  const zeilen = [(praxis.length > 1 ? T[2] : T[1]) + ": " + praxis.join(" · "), T[3] + ": " + tagText(w.telefonTermin, s) + ", " + ZEIT[s][w.telefonZeit] + " (" + T[4] + " " + w.telefon + ")"];
+  return { html: "<p><strong>" + esc(T[0]) + "</strong><br>" + zeilen.map(esc).join("<br>") + "</p><p>" + esc(T[5]) + "</p>", text: T[0] + "\n" + zeilen.join("\n") + "\n\n" + T[5] };
+}
+
+// An die Akademie: neue Buchung mit Praxistag, bitte anrufen
+export function mailTermineAkademie({ email, name, paket, sprache, wunsch }) {
+  const zeilen = [
+    "Paket: " + (PAKETE.de[paket] || paket),
+    "Name: " + (name || "–"),
+    "Telefon: " + wunsch.telefon,
+    "E-Mail: " + email,
+    "Sprache: " + ({ de: "Deutsch", en: "Englisch", es: "Spanisch" }[sprache] || sprache),
+    "Wunsch Ersttelefonat: " + tagText(wunsch.telefonTermin, "de") + ", " + ZEIT.de[wunsch.telefonZeit],
+    "Wunsch Praxistag" + (wunsch.praxis.length > 1 ? "e" : "") + ": " + wunsch.praxis.map((t) => tagText(t, "de")).join(" · ")
+  ];
+  const r = rahmen("Neue Buchung: bitte anrufen", [
+    "Neue Buchung mit Praxistag, bezahlt über Stripe. Bitte zum Ersttelefonat anrufen und den Praxistag bestätigen.",
+    { html: "<p>" + zeilen.map(esc).join("<br>") + '</p><p><a href="tel:' + esc(wunsch.telefon.replace(/[^0-9+]/g, "")) + '">Jetzt anrufen: ' + esc(wunsch.telefon) + "</a></p>", text: zeilen.join("\n") },
+    "Antworten an diese E-Mail gehen direkt an " + (name || email) + "."
+  ]);
+  return { betreff: "Neue Buchung " + (PAKETE.de[paket] || paket) + ": " + (name || email) + ", Wunsch-Praxistag " + wunsch.praxis.map((t) => t.split("-").reverse().join(".")).join(" + "), ...r };
+}
+
 function rahmen(titel, alle) {
   const absaetze = alle.filter((a) => a !== "" && a != null);
   const html = '<!doctype html><html><body style="font-family:Arial,sans-serif;color:#16161a;line-height:1.5;max-width:560px;margin:auto;padding:24px">' +
@@ -45,7 +82,7 @@ export function mailCode(code, sprache, minuten, link) {
   return { betreff: t[0] + ": " + code, ...r };
 }
 
-export function mailWillkommen({ env, email, name, paket, sprache, betrag, waehrung, gekauft, zustimmung, buchLink, code, codeTage }) {
+export function mailWillkommen({ env, email, name, paket, sprache, betrag, waehrung, gekauft, zustimmung, buchLink, code, codeTage, wunsch }) {
   const s = PAKETE[sprache] ? sprache : "de";
   const pfad = s === "de" ? "" : s + "/";
   const login = anmeldeLink(env, email, s, code);
@@ -65,6 +102,7 @@ export function mailWillkommen({ env, email, name, paket, sprache, betrag, waehr
         (code ? SO_ANMELDEN.de(codeTage || 7) : "So meldest du dich an: Gib deine E-Mail-Adresse ein, wir schicken dir einen Code.") + " Dein Zugang ist persönlich, gilt 12 Monate und kann gleichzeitig auf höchstens zwei Geräten genutzt werden.",
         buchLink ? "Das Kursbuch ist in deinem Paket enthalten: Du liest es online in der Fahrschule unter „Kursbuch“, mit Suche und eigenen Notizen." : "",
         "Deine Zustimmung im Bestellvorgang: Du hast ausdrücklich verlangt, dass wir vor Ablauf der Widerrufsfrist mit der Bereitstellung des Online-Kurses beginnen, und bestätigt, dass du dadurch dein Widerrufsrecht für den Online-Kurs verlierst. Es erlischt mit der Freischaltung deines Zugangs, also mit deiner ersten Anmeldung (§ 356 Abs. 5 BGB)." + (zustimmung ? " (Deine Angabe: „" + zustimmung + "“)" : ""),
+        wunschBlock(wunsch, s),
         mitPraxis ? "Für Praxistage und Coaching gilt die Widerrufsbelehrung in unseren AGB. Wir melden uns, um den Termin deines Praxistags zu vereinbaren." : "",
         mitSet ? "Dein Übungsset für zu Hause schicken wir an die Lieferadresse, die du bei der Bezahlung angegeben hast. Für das Übungsset gilt das Widerrufsrecht von 14 Tagen ab Erhalt; ausgenommen sind steril verpackte Teile (z. B. Kanülen), deren Versiegelung du nach der Lieferung entfernt hast." : "",
         { html: '<p>Unsere AGB mit Widerrufsbelehrung: <a href="' + esc(agb) + '">' + esc(agb) + "</a></p>", text: "Unsere AGB mit Widerrufsbelehrung: " + agb }]
@@ -78,6 +116,7 @@ export function mailWillkommen({ env, email, name, paket, sprache, betrag, waehr
         (code ? SO_ANMELDEN.en(codeTage || 7) : "How to log in: enter your email address and we will send you a code.") + " Your access is personal, valid for 12 months and can be used on at most two devices at the same time.",
         buchLink ? "The course book is included in your package: you read it online in the course under “Course book”, translated into English with the German original pages, search and your own notes." : "",
         "Your consent during checkout: you expressly requested that we begin providing the online course before the end of the withdrawal period and acknowledged that you thereby lose your right of withdrawal for the online course. It expires when your access is activated, i.e. with your first login (Section 356 (5) German Civil Code)." + (zustimmung ? " (Your selection: “" + zustimmung + "”)" : ""),
+        wunschBlock(wunsch, s),
         mitPraxis ? "The cancellation policy in our terms applies to practice days and coaching. We will contact you to arrange the date of your practice day." : "",
         mitSet ? "We will ship your practice set for home to the delivery address you entered at checkout. For the practice set, the 14-day right of withdrawal runs from receipt; it does not apply to sterile-packed items (e.g. cannulas) whose seal you have removed after delivery." : "",
         { html: '<p>Our terms and cancellation policy: <a href="' + esc(agb) + '">' + esc(agb) + "</a> (the German version is legally binding)</p>", text: "Our terms and cancellation policy: " + agb + " (the German version is legally binding)" }]
@@ -91,6 +130,7 @@ export function mailWillkommen({ env, email, name, paket, sprache, betrag, waehr
         (code ? SO_ANMELDEN.es(codeTage || 7) : "Cómo entrar: escribe tu correo electrónico y te enviamos un código.") + " Tu acceso es personal, vale 12 meses y puede usarse como máximo en dos dispositivos a la vez.",
         buchLink ? "El libro del curso está incluido en tu paquete: lo lees online en el curso, en «Libro del curso», traducido al español, con las páginas originales en alemán, búsqueda y notas propias." : "",
         "Tu consentimiento durante la compra: solicitaste expresamente que empezáramos a prestar el curso online antes de que finalice el plazo de desistimiento y reconociste que con ello pierdes tu derecho de desistimiento respecto del curso online. Se extingue al activarse tu acceso, es decir, con tu primer inicio de sesión (art. 356, apdo. 5, del Código Civil alemán)." + (zustimmung ? " (Tu selección: «" + zustimmung + "»)" : ""),
+        wunschBlock(wunsch, s),
         mitPraxis ? "Para los días de práctica y la mentoría se aplica la información sobre el desistimiento de nuestras condiciones. Te contactaremos para acordar la fecha de tu día de práctica." : "",
         mitSet ? "Te enviaremos tu set de práctica para casa a la dirección de entrega que indicaste al pagar. Para el set de práctica, el plazo de desistimiento de 14 días cuenta desde la recepción; se exceptúan los artículos en envase estéril (p. ej. cánulas) cuyo precinto hayas retirado tras la entrega." : "",
         { html: '<p>Nuestras condiciones e información sobre el desistimiento: <a href="' + esc(agb) + '">' + esc(agb) + "</a> (la versión alemana es la vinculante)</p>", text: "Nuestras condiciones e información sobre el desistimiento: " + agb + " (la versión alemana es la vinculante)" }]

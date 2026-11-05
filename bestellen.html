@@ -59,9 +59,40 @@
 
       <div class="b-summe">
         <p><span>Gesamtpreis</span> <strong id="b-summe">999 €</strong></p>
-        <p class="fine" data-fuer="kurs">Endpreis inkl. MwSt. Einmalzahlung, kein Abo. Zugang zum Online-Kurs 12 Monate ab Freischaltung. Den Termin für Praxistag und Coaching vereinbaren wir nach der Buchung mit dir.</p>
+        <p class="fine" data-fuer="kurs">Endpreis inkl. MwSt. Einmalzahlung, kein Abo. Zugang zum Online-Kurs 12 Monate ab Freischaltung. Deinen Wunschtermin für den Praxistag wählst du unten; wir rufen dich an und bestätigen ihn.</p>
         <p class="fine" data-fuer="digital" hidden>Endpreis inkl. MwSt. Deinen Zugang bekommst du direkt nach der Zahlung per E-Mail. Du liest das Buch online in der Fahrschule; eine Download-Datei gibt es nicht, jede Seite trägt deine E-Mail-Adresse.</p>
       </div>
+
+      <fieldset class="b-termine" id="b-termine" hidden>
+        <legend class="form-title">Deine Wunschtermine</legend>
+        <p class="fine">Praxistage finden samstags und montags in Lingen statt. Wähle deinen Wunschtermin und einen Tag für unser Ersttelefonat. Wir rufen dich an und bestätigen den Termin.</p>
+        <div class="field">
+          <label for="b-telefon">Telefonnummer <span class="req">*</span></label>
+          <input id="b-telefon" name="telefon" type="tel" autocomplete="tel" inputmode="tel" maxlength="40" aria-describedby="b-telefon-hint">
+          <p class="hint" id="b-telefon-hint">Unter dieser Nummer rufen wir dich zum Ersttelefonat an.</p>
+        </div>
+        <div class="field">
+          <p class="b-label" id="b-praxis-label"><span data-anzahl="1">Wunschtermin für deinen Praxistag</span><span data-anzahl="2" hidden>Wunschtermine für deine zwei Praxistage</span> <span class="req">*</span></p>
+          <p class="hint"><span data-anzahl="1">Nur samstags oder montags, frühestens in einer Woche.</span><span data-anzahl="2" hidden>Wähle zwei verschiedene Tage, nur samstags oder montags.</span></p>
+          <div class="b-kalender" id="b-kal-praxis" data-tage="1,6" data-von="7" data-bis="183" role="group" aria-labelledby="b-praxis-label"></div>
+          <p class="b-auswahl" id="b-praxis-auswahl" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <p class="b-label" id="b-anruf-label">Wunschtag für unser Ersttelefonat <span class="req">*</span></p>
+          <p class="hint">Montag bis Samstag, in den nächsten acht Wochen.</p>
+          <div class="b-kalender" id="b-kal-anruf" data-tage="1,2,3,4,5,6" data-von="1" data-bis="60" role="group" aria-labelledby="b-anruf-label"></div>
+          <p class="b-auswahl" id="b-anruf-auswahl" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="b-telefon-zeit">Uhrzeit für das Telefonat <span class="req">*</span></label>
+          <select id="b-telefon-zeit" name="telefon_zeit">
+            <option value="">Bitte wählen</option>
+            <option value="vormittags">vormittags (9–12 Uhr)</option>
+            <option value="nachmittags">nachmittags (12–17 Uhr)</option>
+            <option value="abends">abends (17–20 Uhr)</option>
+          </select>
+        </div>
+      </fieldset>
 
       <fieldset class="b-zustimmung">
         <legend class="form-title">2. Bestätigen</legend>

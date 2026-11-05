@@ -4,7 +4,7 @@
    - Login ohne Passwort: 6-stelliger Code per E-Mail an die beim Kauf angegebene Adresse
    - Stripe-Webhook: legt nach der Zahlung den Zugang an und schickt Zugang + Vertragsbestätigung (§ 312f BGB)
    - speichert Fortschritt und vergibt prüfbare Bescheinigungsnummern */
-import { mailCode, mailWillkommen, mailVerdacht, mailAnfrage, mailWiderrufEingang, mailWiderrufAkademie, mailSetAkademie, mailBuch, sende } from "./mail.js";
+import { mailCode, mailWillkommen, mailTermineAkademie, mailVerdacht, mailAnfrage, mailWiderrufEingang, mailWiderrufAkademie, mailSetAkademie, mailBuch, sende } from "./mail.js";
 
 const COOKIE = "pa_sitzung";
 const SITZUNG_TAGE = 30;
@@ -340,6 +340,29 @@ const BUCH_SEITEN_PRO_STUNDE = 300; // Bremse gegen massenhaftes Abrufen der Buc
 // Fassung der beiden Häkchen auf bestellen.html – bei jeder Textänderung dort hochzählen
 const ZUSTIMMUNG_FASSUNG = "2026-11-01";
 
+// Wunschtermine (Praxis/Komplett): Praxistage nur samstags und montags, frühestens 7 Tage, spätestens 6 Monate im Voraus;
+// Ersttelefonat montags bis samstags in den nächsten 60 Tagen. Es sind Wünsche: Die Akademie ruft an und bestätigt.
+const PRAXISTAGE = { praxis: 1, komplett: 2 };
+const TELEFON_ZEITEN = ["vormittags", "nachmittags", "abends"];
+function isoTag(d) { return d.toISOString().slice(0, 10); }
+function tagAb(heute, n) { const d = new Date(heute); d.setUTCDate(d.getUTCDate() + n); return isoTag(d); }
+function gueltigerTag(t, heute, von, bis, wochentage) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(String(t))) return false;
+  const d = new Date(t + "T12:00:00Z");
+  return !isNaN(d) && isoTag(d) === t && t >= tagAb(heute, von) && t <= tagAb(heute, bis) && wochentage.includes(d.getUTCDay());
+}
+export function terminePruefen(paket, d, heute = new Date()) {
+  const anzahl = PRAXISTAGE[paket];
+  if (!anzahl) return { ok: true, werte: {} };
+  const telefon = String(d.telefon || "").trim();
+  if (!/^[0-9 +\/()\-]{6,40}$/.test(telefon) || telefon.replace(/\D/g, "").length < 6) return { ok: false, feld: "telefon" };
+  const termine = Array.isArray(d.praxis_termine) ? d.praxis_termine.map(String) : [];
+  if (termine.length !== anzahl || new Set(termine).size !== anzahl || !termine.every((t) => gueltigerTag(t, heute, 7, 183, [1, 6]))) return { ok: false, feld: "praxis_termine" };
+  if (!gueltigerTag(d.telefon_termin, heute, 1, 60, [1, 2, 3, 4, 5, 6])) return { ok: false, feld: "telefon_termin" };
+  if (!TELEFON_ZEITEN.includes(d.telefon_zeit)) return { ok: false, feld: "telefon_zeit" };
+  return { ok: true, werte: { telefon, praxis_termine: JSON.stringify(termine.sort()), telefon_termin: d.telefon_termin, telefon_zeit: d.telefon_zeit } };
+}
+
 async function bestellen(req, env, url) {
   if (!env.STRIPE_SECRET_KEY) return json({ fehler: "nicht_eingerichtet" }, 503);
   const d = await req.json().catch(() => null);
@@ -350,6 +373,8 @@ async function bestellen(req, env, url) {
   const art = PAKETE[paket] ? "kurs" : PRODUKTE[paket].art;
   // AGB immer; sofortiger Beginn nur bei digitalen Leistungen (Online-Kurs, PDF), nicht bei Ware
   if (d.agb !== true || (art !== "ware" && d.sofort !== true)) return json({ fehler: "zustimmung" }, 400);
+  const termine = terminePruefen(paket, d);
+  if (!termine.ok) return json({ fehler: "termine", feld: termine.feld }, 400);
   const schluessel = await sha256("b:" + (req.headers.get("CF-Connecting-IP") || "lokal") + ":" + (env.CODE_PFEFFER || ""));
   const n = await env.DB.prepare("SELECT COUNT(*) AS n FROM anfragen WHERE schluessel = ? AND zeit > ?").bind(schluessel, jetzt() - 3600).first();
   if (n.n >= 10) return json({ fehler: "zu_oft" }, 429);
@@ -393,8 +418,8 @@ async function bestellen(req, env, url) {
     if (!r.ok || !sess.url) { console.error("Stripe", r.status, sess.error && sess.error.message); return json({ fehler: "stripe" }, 502); }
   }
   // Nachweis der Zustimmung (§ 356 Abs. 5 BGB): wann, welches Paket, welche Fassung der Häkchen
-  await env.DB.prepare("INSERT INTO bestellungen (id, zeit, paket, sprache, agb, sofort, fassung, stripe_session, bezahlt) VALUES (?, ?, ?, ?, 1, ?, ?, ?, 0)")
-    .bind(id, zeit, paket, sprache, art === "ware" ? 0 : 1, ZUSTIMMUNG_FASSUNG, sess.id).run();
+  await env.DB.prepare("INSERT INTO bestellungen (id, zeit, paket, sprache, agb, sofort, fassung, stripe_session, bezahlt, telefon, praxis_termine, telefon_termin, telefon_zeit) VALUES (?, ?, ?, ?, 1, ?, ?, ?, 0, ?, ?, ?, ?)")
+    .bind(id, zeit, paket, sprache, art === "ware" ? 0 : 1, ZUSTIMMUNG_FASSUNG, sess.id, termine.werte.telefon || null, termine.werte.praxis_termine || null, termine.werte.telefon_termin || null, termine.werte.telefon_zeit || null).run();
   const antwort = { url: sess.url };
   if (env.DEV === "1" && sess.dev_formular) antwort.dev_formular = sess.dev_formular;
   return json(antwort);
@@ -460,7 +485,7 @@ async function stripeWebhook(req, env, ctx) {
   const sprache = [meta.sprache, sess.client_reference_id, (sess.locale || "").slice(0, 2)].find((x) => ["de", "en", "es"].includes(x)) || "de";
   // Zustimmung zum sofortigen Beginn: von der Bestellseite (Tabelle bestellungen), sonst aus einem Feld eines Payment Links
   let zustimmungText = "";
-  const best = meta.bestellung ? await env.DB.prepare("SELECT zeit FROM bestellungen WHERE id = ? AND stripe_session = ?").bind(meta.bestellung, sess.id).first() : null;
+  const best = meta.bestellung ? await env.DB.prepare("SELECT * FROM bestellungen WHERE id = ? AND stripe_session = ?").bind(meta.bestellung, sess.id).first() : null;
   if (best) {
     await env.DB.prepare("UPDATE bestellungen SET bezahlt = 1 WHERE id = ?").bind(meta.bestellung).run();
     const wann = new Date(best.zeit).toLocaleString({ de: "de-DE", en: "en-US", es: "es-ES" }[sprache], { timeZone: "Europe/Berlin", dateStyle: "medium", timeStyle: "short" });
@@ -483,8 +508,12 @@ async function stripeWebhook(req, env, ctx) {
     .bind(email, name, paket, sprache, gekauft, bis.toISOString(), sess.id, sess.amount_total || 0, zustimmungText).run();
 
   const code = await erstcode(env, email);
-  const mail = mailWillkommen({ env, email, name, paket, sprache, betrag: sess.amount_total || 0, waehrung: sess.currency || "eur", gekauft, zustimmung: zustimmungText, buchLink: true, code, codeTage: ERSTCODE_TAGE });
+  const wunsch = best && best.praxis_termine ? { telefon: best.telefon, praxis: JSON.parse(best.praxis_termine), telefonTermin: best.telefon_termin, telefonZeit: best.telefon_zeit } : null;
+  const mail = mailWillkommen({ env, email, name, paket, sprache, betrag: sess.amount_total || 0, waehrung: sess.currency || "eur", gekauft, zustimmung: zustimmungText, buchLink: true, code, codeTage: ERSTCODE_TAGE, wunsch });
   ctx.waitUntil(sende(env, email, mail));
+  // Praxis/Komplett: Akademie bekommt Kontaktdaten und Wunschtermine zum Anrufen
+  const adminMail = String(env.ADMIN_EMAILS || "").split(",")[0].trim();
+  if (wunsch && adminMail) ctx.waitUntil(sende(env, adminMail, mailTermineAkademie({ email, name, paket, sprache, wunsch }), email));
   if (paket === "komplett") {
     const v = sess.shipping_details || (sess.collected_information && sess.collected_information.shipping_details) || {};
     const a = v.address || (sess.customer_details && sess.customer_details.address) || {};

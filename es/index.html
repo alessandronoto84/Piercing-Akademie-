@@ -270,7 +270,7 @@
           <li>Certificado de participación</li>
           <li>Tareas prácticas con lista de material y enlaces de compra</li>
         </ul>
-        <a class="btn ghost" href="#kontakt" data-paket="basis">Elegir Básico</a>
+        <a class="btn ghost" href="bestellen.html?paket=basis">Reservar ahora</a>
       </article>
 
       <article class="card top" aria-labelledby="paket-praxis">
@@ -286,7 +286,7 @@
           <li>1 día de práctica en Lingen (en alemán o inglés)</li>
           <li>Modelos reales</li>
         </ul>
-        <a class="btn" href="#kontakt" data-paket="praxis">Elegir Práctica</a>
+        <a class="btn" href="bestellen.html?paket=praxis">Reservar ahora</a>
       </article>
 
       <article class="card" aria-labelledby="paket-komplett">
@@ -303,11 +303,11 @@
           <li>Material de práctica para casa, por correo</li>
           <li>12 meses de soporte</li>
         </ul>
-        <a class="btn ghost" href="#kontakt" data-paket="komplett">Elegir Completo</a>
+        <a class="btn ghost" href="bestellen.html?paket=komplett">Reservar ahora</a>
       </article>
     </div>
     <p class="fine pk-note">Todos los precios son finales, en euros e IVA incluido. Participación a partir de 18 años. El curso online empieza en cuanto lo compras: con tu consentimiento durante la compra, el derecho de desistimiento del curso online se extingue al activarse tu acceso (<a href="agb.html#widerruf">condiciones y desistimiento</a>). Los días de práctica y la mentoría se imparten en alemán o inglés.</p>
-    <p class="fine pk-note" id="pk-zahlung" hidden>En el siguiente paso revisas tu pedido; el pago se realiza de forma segura con Stripe. Después del pago te contactamos para tu acceso y la fecha de tu día de práctica.</p>
+    <p class="fine pk-note" id="pk-zahlung">En el siguiente paso eliges tus fechas preferidas y revisas tu pedido; el pago se hace de forma segura con Stripe. Tras el pago recibes tu acceso enseguida y te llamamos para la primera llamada acordada.</p>
 
     <p class="label einzeln-titel">Disponible por separado</p>
     <div class="pk pk-einzeln">
@@ -322,7 +322,7 @@
           <li>120 páginas, de la higiene a las fichas técnicas</li>
           <li>Lectura online, con búsqueda y notas</li>
         </ul>
-        <a class="btn ghost" href="#kontakt" data-paket="buch">Consultar por el libro</a>
+        <a class="btn ghost" href="bestellen.html?paket=buch">Comprar el libro</a>
       </article>
       <article class="card" aria-labelledby="produkt-softcover">
         <div>
@@ -466,123 +466,18 @@
   <div class="wrap">
     <div class="contact">
       <div>
-        <p class="label">Consulta</p>
-        <h2 class="sec-title" id="kontakt-titel">Reserva tu plaza</h2>
-        <p>Envíanos una consulta. La fecha de tu día de práctica la acordamos contigo personalmente.</p>
+        <p class="label">Contacto</p>
+        <h2 class="sec-title" id="kontakt-titel">¿Preguntas antes de reservar?</h2>
+        <p>Llámanos o escríbenos. Se reserva directamente desde los paquetes: allí eliges también tu fecha preferida para el día de práctica y para nuestra primera llamada.</p>
         <div class="kontaktweg">
           <a href="tel:+491738072405"><b>Teléfono</b>+49&nbsp;173&nbsp;8072405</a>
           <a href="mailto:diepiercingakademie@gmail.com"><b>Correo</b>diepiercingakademie@gmail.com</a>
           <a href="https://www.instagram.com/diepiercingakademie/" rel="noopener" target="_blank"><b>Instagram</b>@diepiercingakademie</a>
         </div>
         <address>740 Piercing, Burgstraße 12, 49808 Lingen (Ems)</address>
-        <!-- KURSPLATTFORM: Sobald die echte Buchungs-URL feststeht, hier href eintragen und das Attribut hidden entfernen.
-             Keine Platzhalter-URL eintragen. Siehe PROJEKT-DOKUMENTATION.md, Abschnitt „Kursplattform“. -->
-        <a class="btn" href="#kontakt" id="zur-buchung" hidden>Reservar en la plataforma del curso</a>
+        <a class="btn" href="#pakete">Ver los paquetes</a>
       </div>
 
-      <form class="form" id="anfrage" action="mailto:diepiercingakademie@gmail.com" method="post" enctype="text/plain" aria-labelledby="anfrage-titel">
-        <p class="form-title" id="anfrage-titel">Tu consulta</p>
-        <p class="fine">Los campos obligatorios llevan *.</p>
-
-        <div class="field">
-          <label for="f-paket">Paquete <span class="req">*</span></label>
-          <select id="f-paket" name="paket" required aria-describedby="f-paket-err">
-            <option value="">Elige una opción</option>
-            <option value="basis">Básico – 249 €</option>
-            <option value="praxis">Práctica – 999 €</option>
-            <option value="komplett">Completo – 2.490 €</option>
-            <option value="buch">Libro del curso digital – 19,90 €</option>
-            <option value="beratung">Aún no lo sé – necesito consejo</option>
-          </select>
-          <p class="err" id="f-paket-err" hidden></p>
-        </div>
-
-        <div class="field">
-          <label for="f-name">Nombre <span class="req">*</span></label>
-          <input id="f-name" name="name" type="text" autocomplete="name" required maxlength="120" aria-describedby="f-name-err">
-          <p class="err" id="f-name-err" hidden></p>
-        </div>
-
-        <div class="field">
-          <label for="f-email">Correo electrónico <span class="req">*</span></label>
-          <input id="f-email" name="email" type="email" autocomplete="email" required maxlength="200" aria-describedby="f-email-err">
-          <p class="err" id="f-email-err" hidden></p>
-        </div>
-
-        <div class="field">
-          <label for="f-telefon">Teléfono <span class="req">(opcional)</span></label>
-          <input id="f-telefon" name="telefon" type="tel" autocomplete="tel" maxlength="40" pattern="[0-9 +\/\(\)\-]{6,40}" aria-describedby="f-telefon-hint f-telefon-err">
-          <p class="hint" id="f-telefon-hint">Si prefieres que te llamemos.</p>
-          <p class="err" id="f-telefon-err" hidden></p>
-        </div>
-
-        <div class="field">
-          <label for="f-erfahrung">¿Ya trabajas en un estudio? <span class="req">(opcional)</span></label>
-          <select id="f-erfahrung" name="erfahrung">
-            <option value="">Elige una opción</option>
-            <option value="tattoo">Sí, en un estudio de tatuaje</option>
-            <option value="kosmetik">Sí, en un centro de estética</option>
-            <option value="piercing">Sí, en un estudio de piercing</option>
-            <option value="keins">No, todavía en ningún estudio</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label for="f-zeitraum">Fechas preferidas para el día de práctica <span class="req">(opcional)</span></label>
-          <input id="f-zeitraum" name="zeitraum" type="text" maxlength="120" aria-describedby="f-zeitraum-hint">
-          <p class="hint" id="f-zeitraum-hint">Por ejemplo, «a mediados de marzo, mejor un sábado».</p>
-        </div>
-
-        <div class="field">
-          <label for="f-modelle">¿Traerás tus propios modelos? <span class="req">(opcional)</span></label>
-          <select id="f-modelle" name="modelle">
-            <option value="">Elige una opción</option>
-            <option value="ja">Sí, traeré mis propios modelos</option>
-            <option value="nein">No, por favor buscad modelos para mí</option>
-            <option value="unklar">Aún no lo sé</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label for="f-quelle">¿Cómo nos conociste? <span class="req">(opcional)</span></label>
-          <select id="f-quelle" name="quelle">
-            <option value="">Elige una opción</option>
-            <option value="instagram">Instagram</option>
-            <option value="google">Google</option>
-            <option value="empfehlung">Recomendación</option>
-            <option value="studio">En el estudio de Lingen</option>
-            <option value="sonstiges">Otro</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label for="f-nachricht">Mensaje <span class="req">(opcional)</span></label>
-          <textarea id="f-nachricht" name="nachricht" rows="4" maxlength="1500" aria-describedby="f-nachricht-hint"></textarea>
-          <p class="hint" id="f-nachricht-hint">Por ejemplo, tus preguntas.</p>
-        </div>
-
-        <div class="check">
-          <input id="f-volljaehrig" name="volljaehrig" type="checkbox" value="ja" required aria-describedby="f-volljaehrig-err">
-          <label for="f-volljaehrig">Tengo al menos 18 años. <span class="req">*</span></label>
-          <p class="err" id="f-volljaehrig-err" hidden></p>
-        </div>
-
-        <div class="feld-falle" aria-hidden="true"><label for="f-website">Website</label><input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
-
-        <p class="fine">Tu consulta nos llega directamente; respondemos en un plazo de dos días laborables. Si alguna vez falla el envío, se abrirá tu programa de correo con el mensaje preparado. Más información en la <a href="datenschutz.html">política de privacidad</a>.</p>
-
-        <button class="btn" type="submit">Enviar consulta</button>
-
-        <div class="status" id="anfrage-ok" role="status" tabindex="-1" hidden>
-          <p><strong>Gracias, hemos recibido tu consulta.</strong> Te responderemos en un plazo de dos días laborables.</p>
-        </div>
-
-        <div class="status" id="anfrage-status" role="status" tabindex="-1" hidden>
-          <p><strong>Ahora debería haberse abierto tu programa de correo.</strong> Envía el mensaje desde allí. Solo entonces nos llegará tu consulta.</p>
-          <p>¿No se ha abierto nada? Copia el texto y envíalo a diepiercingakademie@gmail.com o llámanos: +49&nbsp;173&nbsp;8072405.</p>
-          <button class="btn ghost small" type="button" id="anfrage-kopieren">Copiar texto</button>
-        </div>
-      </form>
     </div>
   </div>
 </section>
@@ -603,7 +498,6 @@
   </footer>
 </div>
 
-<script src="../assets/zahlung.js" defer></script>
 <script src="../assets/main.js" defer></script>
 <script src="../assets/animation.js" defer></script>
 <script src="../assets/menue.js" defer></script>

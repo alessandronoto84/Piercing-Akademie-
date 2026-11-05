@@ -9,6 +9,13 @@ const GEHEIM = process.env.WEBHOOK_SECRET || "whsec_lokaltest";
 const LAUF = "cs_test_" + Date.now();
 const KAEUFER = "test-" + Date.now() + "@example.com";
 
+// Gültige Wunschtermine für Praxis (1 Praxistag) und Komplett (2): nächste Samstage/Montage ab 8 Tagen, Telefonat übermorgen (kein Sonntag)
+function naechster(ab, wochentage) { const d = new Date(); d.setUTCDate(d.getUTCDate() + ab); while (!wochentage.includes(d.getUTCDay())) d.setUTCDate(d.getUTCDate() + 1); return d.toISOString().slice(0, 10); }
+function termine(anzahl) {
+  const erster = naechster(8, [1, 6]), zweiter = naechster(+((new Date(erster) - new Date()) / 86400000).toFixed(0) + 2, [1, 6]);
+  return { telefon: "+49 173 1234567", praxis_termine: anzahl === 2 ? [erster, zweiter] : [erster], telefon_termin: naechster(2, [1, 2, 3, 4, 5, 6]), telefon_zeit: "nachmittags" };
+}
+
 function get(pfad, cookie, opts = {}) {
   return fetch(BASIS + pfad, { redirect: "manual", headers: { ...(cookie ? { Cookie: cookie } : {}), ...(opts.headers || {}) } });
 }
@@ -148,7 +155,7 @@ test("Bestellseite: beide Häkchen Pflicht, Preis nur vom Server, Zustimmung lan
   assert.equal((await post("/api/bestellen", { paket: "praxis", sprache: "de", agb: true, sofort: false })).status, 400);
   assert.equal((await post("/api/bestellen", { paket: "gratis", sprache: "de", agb: true, sofort: true })).status, 400);
   assert.equal((await post("/api/bestellen", { paket: "praxis", agb: true, sofort: true }, null, { Origin: "https://boese.example" })).status, 403);
-  const r = await post("/api/bestellen", { paket: "praxis", sprache: "en", agb: true, sofort: true, preis: 1 });
+  const r = await post("/api/bestellen", { paket: "praxis", sprache: "en", agb: true, sofort: true, preis: 1, ...termine(1) });
   assert.equal(r.status, 200);
   const d = await r.json();
   assert.match(d.url, /^https:\/\/checkout\.stripe\.com\//);
@@ -172,7 +179,13 @@ test("Einzelprodukte: Kursbuch digital; Praxiskit gibt es nicht mehr, Komplett f
   // Praxiskit ist kein Produkt mehr (Material nur im Paket Komplett)
   assert.equal((await post("/api/bestellen", { paket: "kit", sprache: "de", agb: true, sofort: true })).status, 400);
   // Komplett: Übungsset wird verschickt, deshalb Lieferadresse
-  const ko = await post("/api/bestellen", { paket: "komplett", sprache: "de", agb: true, sofort: true });
+  // Wunschtermine sind bei Praxis/Komplett Pflicht: nur Samstag/Montag, Telefonnummer, Tag und Uhrzeit für das Telefonat
+  assert.equal((await post("/api/bestellen", { paket: "komplett", sprache: "de", agb: true, sofort: true })).status, 400);
+  assert.equal((await post("/api/bestellen", { paket: "komplett", sprache: "de", agb: true, sofort: true, ...termine(1) })).status, 400, "Komplett braucht zwei Praxistage");
+  const sonntag = naechster(10, [0]);
+  assert.equal((await post("/api/bestellen", { paket: "praxis", sprache: "de", agb: true, sofort: true, ...termine(1), praxis_termine: [sonntag] })).status, 400, "Sonntag ist kein Praxistag");
+  assert.equal((await post("/api/bestellen", { paket: "praxis", sprache: "de", agb: true, sofort: true, ...termine(1), telefon: "abc" })).status, 400, "Telefonnummer Pflicht");
+  const ko = await post("/api/bestellen", { paket: "komplett", sprache: "de", agb: true, sofort: true, ...termine(2) });
   assert.equal(ko.status, 200);
   const kof = new URLSearchParams((await ko.json()).dev_formular);
   assert.equal(kof.get("line_items[0][price_data][unit_amount]"), "249000");
