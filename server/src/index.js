@@ -4,7 +4,7 @@
    - Login ohne Passwort: 6-stelliger Code per E-Mail an die beim Kauf angegebene Adresse
    - Stripe-Webhook: legt nach der Zahlung den Zugang an und schickt Zugang + Vertragsbestätigung (§ 312f BGB)
    - speichert Fortschritt und vergibt prüfbare Bescheinigungsnummern */
-import { mailCode, mailWillkommen, mailTermineAkademie, mailAnfrageEingang, mailVerdacht, mailAnfrage, mailWiderrufEingang, mailWiderrufAkademie, mailSetAkademie, mailBuch, sende } from "./mail.js";
+import { mailCode, mailWillkommen, mailTermineAkademie, mailAnfrageEingang, mailZahlungslink, tagText, mailVerdacht, mailAnfrage, mailWiderrufEingang, mailWiderrufAkademie, mailSetAkademie, mailBuch, sende } from "./mail.js";
 
 const COOKIE = "pa_sitzung";
 const SITZUNG_TAGE = 30;
@@ -52,6 +52,8 @@ export async function aufraeumen(env) {
     env.DB.prepare("DELETE FROM verkaeufe WHERE zeit < ?").bind(new Date(Date.now() - 3 * 365 * 86400000).toISOString()),
     env.DB.prepare("DELETE FROM bestellungen WHERE bezahlt = 0 AND zeit < ?").bind(new Date(Date.now() - 30 * 86400000).toISOString()),
     env.DB.prepare("DELETE FROM bestellungen WHERE zeit < ?").bind(new Date(Date.now() - 3 * 365 * 86400000).toISOString()),
+    env.DB.prepare("DELETE FROM praxis_anfragen WHERE bezahlt = 0 AND zeit < ?").bind(new Date(Date.now() - 183 * 86400000).toISOString()),
+    env.DB.prepare("DELETE FROM praxis_anfragen WHERE zeit < ?").bind(new Date(Date.now() - 3 * 365 * 86400000).toISOString()),
     env.DB.prepare("DELETE FROM widerrufe WHERE eingang < ?").bind(new Date(Date.now() - 3 * 365 * 86400000).toISOString()),
     env.DB.prepare("DELETE FROM sitzungen WHERE zuletzt < ?").bind(t - SITZUNG_TAGE * 86400),
     env.DB.prepare("DELETE FROM codes WHERE ablauf < ?").bind(t - 3600), // letzte Anforderung über eine Stunde her
@@ -165,7 +167,9 @@ async function api(req, env, url, ctx) {
   const p = url.pathname;
   if (p === "/api/stripe" && req.method === "POST") return stripeWebhook(req, env, ctx);
   if (p === "/api/bestellen" && req.method === "GET") return json({ aktiv: !!env.STRIPE_SECRET_KEY }, 200, { "Cache-Control": "no-store" });
+  if (p === "/api/anfrage/info" && req.method === "GET") return anfrageInfo(env, url);
   if (req.method === "POST" && !gleicheHerkunft(req, url)) return json({ fehler: "herkunft" }, 403);
+  if (p === "/api/anfrage/bestaetigen") return anfrageBestaetigen(req, env, url, ctx);
   if (p === "/api/anfrage" && req.method === "POST") return anfrage(req, env, ctx);
   if (p === "/api/widerruf" && req.method === "POST") return widerruf(req, env, ctx);
   if (p === "/api/bestellen" && req.method === "POST") return bestellen(req, env, url);
@@ -293,10 +297,74 @@ async function anfrage(req, env, ctx) {
   const schluessel = await sha256((req.headers.get("CF-Connecting-IP") || "lokal") + ":" + (env.CODE_PFEFFER || ""));
   const n = await env.DB.prepare("SELECT COUNT(*) AS n FROM anfragen WHERE schluessel = ? AND zeit > ?").bind(schluessel, jetzt() - 3600).first();
   if (n.n >= 5) return json({ fehler: "zu_oft" }, 429);
-  await env.DB.prepare("INSERT INTO anfragen (zeit, schluessel) VALUES (?, ?)").bind(jetzt(), schluessel).run();
+  const id = zufall(12);
+  await env.DB.batch([
+    env.DB.prepare("INSERT INTO anfragen (zeit, schluessel) VALUES (?, ?)").bind(jetzt(), schluessel),
+    env.DB.prepare("INSERT INTO praxis_anfragen (id, zeit, paket, name, email, telefon, praxis_termine, telefon_termin, telefon_zeit, nachricht, sprache, bezahlt) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0)")
+      .bind(id, new Date().toISOString(), paket, a.name, a.email, termine.werte.telefon, termine.werte.praxis_termine, termine.werte.telefon_termin, termine.werte.telefon_zeit, a.nachricht, a.sprache)
+  ]);
   const admin = String(env.ADMIN_EMAILS || "").split(",")[0].trim();
-  ctx.waitUntil(Promise.all([sende(env, admin, mailAnfrage(a), a.email), sende(env, a.email, mailAnfrageEingang(a))]));
+  const bestaetigen = (env.DOMAIN || "") + "/api/anfrage/bestaetigen?" + new URLSearchParams({ id, t: await anfrageToken(env, "akademie", id) });
+  ctx.waitUntil(Promise.all([sende(env, admin, mailAnfrage(a, bestaetigen), a.email), sende(env, a.email, mailAnfrageEingang(a))]));
+  if (env.DEV === "1") return json({ ok: true, dev_bestaetigen: bestaetigen, dev_id: id });
   return json({ ok: true });
+}
+
+// ---------- Anfrage bestätigen und Zahlungslink schicken ----------
+// Links sind mit CODE_PFEFFER signiert: einer nur für die Akademie (Termin bestätigen), einer für den Kunden (bezahlen).
+async function anfrageToken(env, wer, id) { return (await sha256("anfrage:" + wer + ":" + id + ":" + (env.CODE_PFEFFER || ""))).slice(0, 32); }
+async function anfrageLaden(env, wer, id, t) {
+  if (!/^[a-f0-9]{24}$/.test(String(id || "")) || !t) return null;
+  if (!gleich(String(t), await anfrageToken(env, wer, id))) return null;
+  return env.DB.prepare("SELECT * FROM praxis_anfragen WHERE id = ?").bind(id).first();
+}
+function htmlSeite(titel, inhalt, status = 200) {
+  return new Response('<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>' + titel +
+    ' – Piercing Akademie</title><link rel="stylesheet" href="/assets/styles.css"></head><body><main class="wrap" style="padding-block:48px"><article class="legal"><p class="label">Piercing Akademie · intern</p><h1 class="sec-title">' + titel + "</h1>" + inhalt + "</article></main></body></html>",
+    { status, headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store", "X-Robots-Tag": "noindex" } });
+}
+async function anfrageBestaetigen(req, env, url, ctx) {
+  const id = url.searchParams.get("id"), t = url.searchParams.get("t");
+  const a = await anfrageLaden(env, "akademie", id, t);
+  if (!a) return htmlSeite("Link ungültig", "<p>Dieser Link ist ungültig oder die Anfrage wurde schon gelöscht.</p>", 404);
+  const e = (x) => String(x == null ? "" : x).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+  const wunsch = JSON.parse(a.praxis_termine || "[]"), anzahl = PRAXISTAGE[a.paket] || 1;
+  const vorher = a.bestaetigt_termine ? JSON.parse(a.bestaetigt_termine) : wunsch;
+  let meldung = "";
+  if (req.method === "POST") {
+    const form = await req.formData();
+    const tage = [];
+    for (let i = 1; i <= anzahl; i++) tage.push(String(form.get("termin" + i) || ""));
+    const heute = new Date();
+    if (new Set(tage).size !== anzahl || !tage.every((x) => gueltigerTag(x, heute, 0, 400, [0, 1, 2, 3, 4, 5, 6]))) {
+      meldung = '<p class="err">Bitte ' + (anzahl > 1 ? "zwei verschiedene Termine" : "einen Termin") + " ab heute eintragen.</p>";
+    } else {
+      tage.sort();
+      await env.DB.prepare("UPDATE praxis_anfragen SET bestaetigt_termine = ?, bestaetigt_am = ? WHERE id = ?").bind(JSON.stringify(tage), new Date().toISOString(), a.id).run();
+      const s = ["de", "en", "es"].includes(a.sprache) ? a.sprache : "de";
+      const link = (env.DOMAIN || "") + (s === "de" ? "" : "/" + s) + "/bestellen.html?" + new URLSearchParams({ anfrage: a.id, t: await anfrageToken(env, "kunde", a.id) });
+      const preis = PAKETE[a.paket].cent;
+      ctx.waitUntil(sende(env, a.email, mailZahlungslink({ name: a.name, paket: a.paket, sprache: s, termine: tage, link, betrag: preis })));
+      return htmlSeite("Zahlungslink verschickt", "<p>Die Bestätigung mit Zahlungslink ist an <strong>" + e(a.email) + "</strong> unterwegs.</p><p>Bestätigter Praxistag" + (anzahl > 1 ? "e" : "") + ": <strong>" +
+        tage.map((x) => e(tagText(x, "de"))).join(" · ") + "</strong></p><p>Sobald " + e(a.name) + " bezahlt hat, bekommst du eine E-Mail, und der Zugang zur Fahrschule wird automatisch freigeschaltet.</p>" +
+        (a.bezahlt ? "<p><strong>Hinweis:</strong> Diese Anfrage ist bereits bezahlt.</p>" : ""));
+    }
+  }
+  const felder = [];
+  for (let i = 1; i <= anzahl; i++) felder.push('<div class="field"><label for="termin' + i + '">Praxistag' + (anzahl > 1 ? " " + i : "") + '</label><input type="date" id="termin' + i + '" name="termin' + i + '" value="' + e(vorher[i - 1] || "") + '" required></div>');
+  const zeile = (k, v) => "<tr><td style=\"padding:4px 14px 4px 0;color:var(--muted)\">" + k + "</td><td><strong>" + v + "</strong></td></tr>";
+  return htmlSeite("Termin bestätigen", meldung +
+    "<table>" + zeile("Paket", e(PAKETE[a.paket] ? PAKETE[a.paket].name.de : a.paket)) + zeile("Name", e(a.name)) + zeile("Telefon", '<a href="tel:' + e(String(a.telefon).replace(/[^0-9+]/g, "")) + '">' + e(a.telefon) + "</a>") + zeile("E-Mail", e(a.email)) +
+    zeile("Wunsch Praxistag" + (anzahl > 1 ? "e" : ""), wunsch.map((x) => e(tagText(x, "de"))).join(" · ")) + zeile("Wunsch Ersttelefonat", e(tagText(a.telefon_termin, "de")) + ", " + e(a.telefon_zeit)) +
+    (a.nachricht ? zeile("Nachricht", e(a.nachricht)) : "") + zeile("Status", a.bezahlt ? "bezahlt" : a.bestaetigt_am ? "Zahlungslink verschickt am " + e(new Date(a.bestaetigt_am).toLocaleString("de-DE", { timeZone: "Europe/Berlin" })) : "offen") + "</table>" +
+    '<form class="form" method="post" style="margin-top:24px;max-width:420px"><p>Nach dem Telefonat: vereinbarten Termin eintragen (vorausgefüllt mit dem Wunsch) und absenden. ' + e(a.name) + " bekommt dann die Bestätigung mit einem Link zum Bezahlen.</p>" +
+    felder.join("") + '<button class="btn" type="submit">' + (a.bestaetigt_am ? "Erneut senden" : "Termin bestätigen und Zahlungslink schicken") + "</button></form>");
+}
+// Für die Bestellseite: Paket, Preis und bestätigte Termine einer Anfrage (nur mit dem Kunden-Link)
+async function anfrageInfo(env, url) {
+  const a = await anfrageLaden(env, "kunde", url.searchParams.get("anfrage"), url.searchParams.get("t"));
+  if (!a || !a.bestaetigt_termine) return json({ fehler: "ungueltig" }, 404);
+  return json({ paket: a.paket, cent: PAKETE[a.paket].cent, name: a.name, termine: JSON.parse(a.bestaetigt_termine), bezahlt: !!a.bezahlt });
 }
 
 // ---------- Elektronischer Widerruf (§ 356a BGB) ----------
@@ -374,8 +442,12 @@ async function bestellen(req, env, url) {
   // AGB immer; sofortiger Beginn nur bei digitalen Leistungen (Online-Kurs, PDF), nicht bei Ware
   if (d.agb !== true || (art !== "ware" && d.sofort !== true)) return json({ fehler: "zustimmung" }, 400);
   // Praxis und Komplett (mit Praxistag) gibt es nur auf Anfrage, nicht zum Direktkauf
-  if (PRAXISTAGE[paket]) return json({ fehler: "nur_anfrage" }, 400);
-  const termine = { werte: {} };
+  let anf = null;
+  if (PRAXISTAGE[paket]) {
+    anf = await anfrageLaden(env, "kunde", d.anfrage, d.t);
+    if (!anf || anf.paket !== paket || !anf.bestaetigt_termine) return json({ fehler: "nur_anfrage" }, 400);
+  }
+  const termine = { werte: anf ? { telefon: anf.telefon, praxis_termine: anf.bestaetigt_termine } : {} };
   const schluessel = await sha256("b:" + (req.headers.get("CF-Connecting-IP") || "lokal") + ":" + (env.CODE_PFEFFER || ""));
   const n = await env.DB.prepare("SELECT COUNT(*) AS n FROM anfragen WHERE schluessel = ? AND zeit > ?").bind(schluessel, jetzt() - 3600).first();
   if (n.n >= 10) return json({ fehler: "zu_oft" }, 429);
@@ -402,6 +474,7 @@ async function bestellen(req, env, url) {
   f.set("metadata[paket]", paket);
   f.set("metadata[sprache]", sprache);
   f.set("metadata[bestellung]", id);
+  if (anf) { f.set("metadata[anfrage]", anf.id); f.set("customer_email", anf.email); }
   f.set("payment_intent_data[metadata][bestellung]", id);
   f.set("success_url", basis + "/danke.html?bestellung={CHECKOUT_SESSION_ID}");
   f.set("cancel_url", basis + "/bestellen.html?paket=" + paket);
@@ -509,7 +582,9 @@ async function stripeWebhook(req, env, ctx) {
     .bind(email, name, paket, sprache, gekauft, bis.toISOString(), sess.id, sess.amount_total || 0, zustimmungText).run();
 
   const code = await erstcode(env, email);
-  const wunsch = best && best.praxis_termine ? { telefon: best.telefon, praxis: JSON.parse(best.praxis_termine), telefonTermin: best.telefon_termin, telefonZeit: best.telefon_zeit } : null;
+  // Praxis/Komplett über eine bestätigte Anfrage: Termine stehen fest (kein Ersttelefonat mehr offen)
+  const wunsch = best && best.praxis_termine ? { telefon: best.telefon, praxis: JSON.parse(best.praxis_termine), telefonTermin: best.telefon_termin, telefonZeit: best.telefon_zeit, bestaetigt: !best.telefon_termin } : null;
+  if (meta.anfrage) await env.DB.prepare("UPDATE praxis_anfragen SET bezahlt = 1 WHERE id = ?").bind(meta.anfrage).run();
   const mail = mailWillkommen({ env, email, name, paket, sprache, betrag: sess.amount_total || 0, waehrung: sess.currency || "eur", gekauft, zustimmung: zustimmungText, buchLink: true, code, codeTage: ERSTCODE_TAGE, wunsch });
   ctx.waitUntil(sende(env, email, mail));
   // Praxis/Komplett: Akademie bekommt Kontaktdaten und Wunschtermine zum Anrufen

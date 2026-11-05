@@ -238,3 +238,39 @@ test("Anfrage Praxis/Komplett: Kontaktdaten und Wunschtermine (Praxistag nur Sam
   assert.equal((await post("/api/anfrage", { ...basis, paket: "praxis", ...termine(1), volljaehrig: false })).status, 400, "18+ Pflicht");
   assert.equal((await post("/api/anfrage", { ...basis, paket: "komplett", ...termine(2) })).status, 200);
 });
+
+test("Anfrage → Termin bestätigen → Zahlungslink → Bestellung → Zahlung schaltet Praxis frei", async () => {
+  const email = "praxis-" + Date.now() + "@example.com";
+  const r = await (await post("/api/anfrage", { name: "Praxis Kunde", email, volljaehrig: true, sprache: "de", paket: "praxis", ...termine(1) })).json();
+  assert.ok(r.dev_bestaetigen && r.dev_id);
+  const link = new URL(r.dev_bestaetigen);
+  const seite = await get(link.pathname + link.search);
+  assert.equal(seite.status, 200);
+  assert.match(await seite.text(), /Termin bestätigen/);
+  assert.equal((await get(link.pathname + "?id=" + r.dev_id + "&t=falsch")).status, 404, "falsch signierter Link");
+  // vor der Bestätigung: kein Direktkauf, keine Info
+  const kt = crypto.createHash("sha256").update("anfrage:kunde:" + r.dev_id + ":" + (process.env.PFEFFER || "lokaltest")).digest("hex").slice(0, 32);
+  assert.equal((await get("/api/anfrage/info?anfrage=" + r.dev_id + "&t=" + kt)).status, 404);
+  assert.equal((await post("/api/bestellen", { paket: "praxis", sprache: "de", agb: true, sofort: true, anfrage: r.dev_id, t: kt })).status, 400);
+  // Akademie bestätigt einen (anderen) Termin
+  const tag = naechster(20, [1, 6]);
+  const best = await fetch(BASIS + link.pathname + link.search, { method: "POST", body: new URLSearchParams({ termin1: tag }), redirect: "manual" });
+  assert.equal(best.status, 200);
+  assert.match(await best.text(), /Zahlungslink verschickt/);
+  const info = await (await get("/api/anfrage/info?anfrage=" + r.dev_id + "&t=" + kt)).json();
+  assert.equal(info.paket, "praxis"); assert.deepEqual(info.termine, [tag]);
+  // Kunde bestellt: falsches Paket oder falscher Token abgelehnt, richtiges geht mit Metadaten
+  assert.equal((await post("/api/bestellen", { paket: "komplett", sprache: "de", agb: true, sofort: true, anfrage: r.dev_id, t: kt })).status, 400);
+  assert.equal((await post("/api/bestellen", { paket: "praxis", sprache: "de", agb: true, sofort: true, anfrage: r.dev_id, t: "x" + kt.slice(1) })).status, 400);
+  const b = await post("/api/bestellen", { paket: "praxis", sprache: "de", agb: true, sofort: true, anfrage: r.dev_id, t: kt });
+  assert.equal(b.status, 200);
+  const f = new URLSearchParams((await b.json()).dev_formular);
+  assert.equal(f.get("line_items[0][price_data][unit_amount]"), "99900");
+  assert.equal(f.get("metadata[anfrage]"), r.dev_id);
+  assert.equal(f.get("customer_email"), email);
+  // Zahlung: Zugang Praxis, Anfrage als bezahlt markiert
+  const sid = "cs_test_lokal_" + f.get("metadata[bestellung]");
+  assert.equal((await webhook(kauf(email, sid, { amount_total: 99900, metadata: { paket: "praxis", sprache: "de", bestellung: f.get("metadata[bestellung]"), anfrage: r.dev_id } }))).status, 200);
+  assert.ok((await (await post("/api/code", { email })).json()).dev_code, "Zugang freigeschaltet");
+  assert.equal((await (await get("/api/anfrage/info?anfrage=" + r.dev_id + "&t=" + kt)).json()).bezahlt, true);
+});

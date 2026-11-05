@@ -26,7 +26,39 @@
     form.querySelectorAll("[data-fuer]").forEach(function (el) { el.hidden = el.getAttribute("data-fuer") !== a; });
     var sofort = document.getElementById("b-sofort-feld"); if (sofort) sofort.hidden = a === "ware";
   }
-  var wunsch = new URLSearchParams(window.location.search).get("paket");
+  // Bestätigte Anfrage (Link aus der E-Mail „Dein Praxistag ist bestätigt“): nur dieses Paket, mit festem Termin
+  var Q = new URLSearchParams(window.location.search), ANFRAGE = Q.get("anfrage") && Q.get("t") ? { anfrage: Q.get("anfrage"), t: Q.get("t") } : null;
+  var LOCALE = { de: "de-DE", en: "en-GB", es: "es-ES" }[SPRACHE] || "de-DE";
+  var A = {
+    de: { praxis: "Praxis", komplett: "Komplett", inhalt: { praxis: "Online-Kurs und 1 Praxistag in Lingen", komplett: "Online-Kurs, 2 Praxistage, 1:1-Coaching und Übungsmaterial" }, tag: "Bestätigter Praxistag", tage: "Bestätigte Praxistage", widerruf: "Für Praxistag und Coaching gilt die Widerrufsbelehrung unverändert.", bezahlt: "Diese Buchung ist bereits bezahlt. Deinen Zugang findest du in deiner E-Mail.", ungueltig: "Dieser Link ist nicht mehr gültig. Bitte ruf uns an: +49 173 8072405." },
+    en: { praxis: "Practice", komplett: "Complete", inhalt: { praxis: "Online course and 1 practice day in Lingen", komplett: "Online course, 2 practice days, 1:1 coaching and practice materials" }, tag: "Confirmed practice day", tage: "Confirmed practice days", widerruf: "For practice days and coaching, the cancellation policy applies unchanged.", bezahlt: "This booking has already been paid. You will find your access in your email.", ungueltig: "This link is no longer valid. Please call us: +49 173 8072405." },
+    es: { praxis: "Práctica", komplett: "Completo", inhalt: { praxis: "Curso online y 1 día de práctica en Lingen", komplett: "Curso online, 2 días de práctica, mentoría 1:1 y material de práctica" }, tag: "Día de práctica confirmado", tage: "Días de práctica confirmados", widerruf: "Para los días de práctica y la mentoría, la información sobre el desistimiento se aplica sin cambios.", bezahlt: "Esta reserva ya está pagada. Encontrarás tu acceso en tu correo.", ungueltig: "Este enlace ya no es válido. Llámanos: +49 173 8072405." }
+  }[SPRACHE] || {};
+  function anfrageZeigen(info) {
+    var feld = form.querySelector(".b-pakete");
+    feld.querySelectorAll(".b-paket, .b-gruppe, .fine").forEach(function (el) { el.hidden = true; el.querySelectorAll("input").forEach(function (i) { i.checked = false; }); });
+    var tage = info.termine.map(function (t) { var x = t.split("-"); return new Date(+x[0], +x[1] - 1, +x[2]).toLocaleDateString(LOCALE, { weekday: "long", day: "numeric", month: "long", year: "numeric" }); });
+    var preis = (info.cent / 100).toLocaleString(LOCALE, { style: "currency", currency: "EUR", maximumFractionDigits: 0 });
+    var l = document.createElement("label"); l.className = "b-paket"; l.setAttribute("data-art", "kurs");
+    l.innerHTML = '<input type="radio" name="paket" checked><span><strong></strong> <span class="b-preis"></span><br><span class="b-inhalt"></span><br><span class="b-inhalt"><strong></strong></span></span>';
+    l.querySelector("input").value = info.paket;
+    l.querySelector("strong").textContent = A[info.paket] || info.paket;
+    l.querySelector(".b-preis").textContent = preis;
+    l.querySelectorAll(".b-inhalt")[0].textContent = (A.inhalt || {})[info.paket] || "";
+    l.querySelector(".b-inhalt strong").textContent = (tage.length > 1 ? A.tage : A.tag) + ": " + tage.join(" · ");
+    feld.insertBefore(l, feld.querySelector(".b-paket"));
+    var zust = document.getElementById("b-sofort-feld"), w = document.createElement("p");
+    w.className = "fine"; w.textContent = A.widerruf; if (zust) zust.parentNode.insertBefore(w, zust.nextSibling);
+    anzeigen();
+    if (info.bezahlt) { fehler.textContent = A.bezahlt; fehler.hidden = false; knopf.disabled = true; }
+  }
+  if (ANFRAGE && window.fetch) {
+    fetch("/api/anfrage/info?" + new URLSearchParams(ANFRAGE).toString())
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) { if (d && d.paket) anfrageZeigen(d); else { fehler.textContent = A.ungueltig; fehler.hidden = false; } })
+      .catch(function () {});
+  }
+  var wunsch = ANFRAGE ? null : Q.get("paket");
   var start = wunsch && form.querySelector('input[name=paket][value="' + wunsch.replace(/[^a-z]/g, "") + '"]');
   if (start) start.checked = true;
   anzeigen();
@@ -41,7 +73,7 @@
     if (!/^https?:$/.test(window.location.protocol) || window.PA_VORSCHAU) { geschlossen(); return; }
     knopf.disabled = true; knopf.textContent = T.warte;
     fetch("/api/bestellen", { method: "POST", headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ paket: gewaehlt(), sprache: SPRACHE, agb: agb, sofort: art() === "ware" ? false : sofort }) })
+      body: JSON.stringify(Object.assign({ paket: gewaehlt(), sprache: SPRACHE, agb: agb, sofort: art() === "ware" ? false : sofort }, ANFRAGE && /^(praxis|komplett)$/.test(gewaehlt()) ? ANFRAGE : {})) })
       .then(function (r) { return r.json().catch(function () { return {}; }).then(function (d) { return { status: r.status, d: d }; }); })
       .then(function (x) {
         if (x.status === 200 && x.d.url && /^https:\/\/checkout\.stripe\.com\//.test(x.d.url)) { window.location.href = x.d.url; return; }
@@ -51,5 +83,5 @@
       .catch(function () { knopf.disabled = false; knopf.textContent = KNOPF_TEXT; geschlossen(); });
   });
   // Zurück aus Stripe (Browser-Zurück): Knopf wieder freigeben
-  window.addEventListener("pageshow", function () { knopf.disabled = false; knopf.textContent = KNOPF_TEXT; });
+  window.addEventListener("pageshow", function () { if (fehler.hidden || !ANFRAGE) { knopf.disabled = false; } knopf.textContent = KNOPF_TEXT; });
 })();

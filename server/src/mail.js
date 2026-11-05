@@ -29,8 +29,14 @@ export function tagText(iso, s) {
   return new Date(iso + "T12:00:00Z").toLocaleDateString(LOCALE[s] || "de-DE", { weekday: "long", day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
 }
 const ZEIT = { de: { vormittags: "vormittags", nachmittags: "nachmittags", abends: "abends" }, en: { vormittags: "in the morning", nachmittags: "in the afternoon", abends: "in the evening" }, es: { vormittags: "por la mañana", nachmittags: "por la tarde", abends: "por la noche" } };
+function knopfHtml(link, text) { return { html: '<p><a href="' + esc(link) + '" style="display:inline-block;background:#C9A464;color:#111114;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:bold">' + esc(text) + "</a></p>", text: text + ": " + link }; }
 function wunschBlock(w, s) {
   if (!w) return "";
+  if (w.bestaetigt) {
+    const B = { de: ["Dein Praxistag", "Deine Praxistage", "Wir freuen uns auf dich in Lingen (Burgstraße 12, 49808 Lingen)."], en: ["Your practice day", "Your practice days", "We look forward to seeing you in Lingen (Burgstraße 12, 49808 Lingen, Germany)."], es: ["Tu día de práctica", "Tus días de práctica", "Te esperamos en Lingen (Burgstraße 12, 49808 Lingen, Alemania)."] }[s];
+    const z = w.praxis.map((t) => tagText(t, s)).join(" · ");
+    return { html: "<p><strong>" + esc(w.praxis.length > 1 ? B[1] : B[0]) + ":</strong> " + esc(z) + "</p><p>" + esc(B[2]) + "</p>", text: (w.praxis.length > 1 ? B[1] : B[0]) + ": " + z + "\n" + B[2] };
+  }
   const T = {
     de: ["Deine Wunschtermine", "Praxistag", "Praxistage", "Ersttelefonat", "Telefon", "Das sind deine Wünsche. Wir rufen dich zum Ersttelefonat an und bestätigen dann den Termin für deinen Praxistag."],
     en: ["Your preferred dates", "Practice day", "Practice days", "First phone call", "Phone", "These are your preferences. We will call you for the first phone call and then confirm the date of your practice day."],
@@ -43,6 +49,13 @@ function wunschBlock(w, s) {
 
 // An die Akademie: neue Buchung mit Praxistag, bitte anrufen
 export function mailTermineAkademie({ email, name, paket, sprache, wunsch }) {
+  if (wunsch.bestaetigt) {
+    const termine = wunsch.praxis.map((t) => tagText(t, "de")).join(" · ");
+    const r2 = rahmen("Bezahlt: " + (PAKETE.de[paket] || paket), ["Die Buchung über deine bestätigte Anfrage ist bezahlt. Der Zugang zur Fahrschule ist freigeschaltet, die Willkommens-E-Mail ist raus.",
+      { html: "<p>Name: <strong>" + esc(name || "–") + "</strong><br>E-Mail: " + esc(email) + "<br>Telefon: " + esc(wunsch.telefon || "–") + "<br>Praxistag" + (wunsch.praxis.length > 1 ? "e" : "") + ": <strong>" + esc(termine) + "</strong></p>",
+        text: "Name: " + (name || "–") + "\nE-Mail: " + email + "\nTelefon: " + (wunsch.telefon || "–") + "\nPraxistag(e): " + termine }]);
+    return { betreff: "Bezahlt: " + (PAKETE.de[paket] || paket) + " – " + (name || email) + ", Praxistag " + wunsch.praxis.map((t) => t.split("-").reverse().join(".")).join(" + "), ...r2 };
+  }
   const zeilen = [
     "Paket: " + (PAKETE.de[paket] || paket),
     "Name: " + (name || "–"),
@@ -149,7 +162,7 @@ export function mailVerdacht(email, anzahl) {
 }
 
 // Anfrage für Praxis/Komplett an die Akademie: Kontaktdaten und Wunschtermine, bitte anrufen
-export function mailAnfrage(a) {
+export function mailAnfrage(a, bestaetigen) {
   const w = a.wunsch;
   const zeilen = [["Paket", PAKETE.de[a.paket] || a.paket], ["Name", a.name], ["Telefon", w.telefon], ["E-Mail", a.email],
     ["Wunsch Ersttelefonat", tagText(w.telefonTermin, "de") + ", " + ZEIT.de[w.telefonZeit]],
@@ -160,9 +173,23 @@ export function mailAnfrage(a) {
     { html: tabelle, text: zeilen.map((z) => z[0] + ": " + z[1]).join("\n") },
     { html: '<p><a href="tel:' + esc(w.telefon.replace(/[^0-9+]/g, "")) + '">Jetzt anrufen: ' + esc(w.telefon) + "</a></p>", text: "Anrufen: " + w.telefon },
     a.nachricht ? { html: "<p><strong>Nachricht:</strong><br>" + esc(a.nachricht).replace(/\n/g, "<br>") + "</p>", text: "Nachricht:\n" + a.nachricht } : "",
-    "Nach dem Telefonat: Termin bestätigen und den Zahlungslink bzw. die Rechnung schicken. Antworten an diese E-Mail gehen direkt an " + a.email + "."
+    "Nach dem Telefonat: Termin bestätigen und den Zahlungslink schicken – mit einem Klick:",
+    bestaetigen ? knopfHtml(bestaetigen, "Termin bestätigen und Zahlungslink schicken") : "",
+    "Antworten an diese E-Mail gehen direkt an " + a.email + "."
   ]);
   return { betreff: "Anfrage " + (PAKETE.de[a.paket] || a.paket) + ": " + a.name + ", Wunsch-Praxistag " + w.praxis.map((t) => t.split("-").reverse().join(".")).join(" + "), ...r };
+}
+
+// Nach dem Telefonat: Termin bestätigt, Link zum Bezahlen (führt auf die Bestellseite mit dem Paket)
+export function mailZahlungslink({ name, paket, sprache, termine, link, betrag }) {
+  const s = PAKETE[sprache] ? sprache : "de";
+  const T = {
+    de: ["Dein Praxistag ist bestätigt", "Hallo " + name + ", danke für das nette Gespräch!", "Paket", "Preis", "Mit dem Knopf kommst du zur Bestellung. Dort bestätigst du die AGB und bezahlst sicher über Stripe. Danach bekommst du sofort deinen Zugang zum Online-Kurs.", "Jetzt buchen und bezahlen", "Fragen? Antworte einfach auf diese E-Mail oder ruf uns an: +49 173 8072405."],
+    en: ["Your practice day is confirmed", "Hello " + name + ", thank you for the nice conversation!", "Package", "Price", "The button takes you to the order page. There you confirm the terms and pay securely via Stripe. You then get access to the online course straight away.", "Book and pay now", "Questions? Just reply to this email or call us: +49 173 8072405."],
+    es: ["Tu día de práctica está confirmado", "Hola " + name + ", ¡gracias por la agradable conversación!", "Paquete", "Precio", "Con el botón llegas al pedido. Allí aceptas las condiciones y pagas de forma segura con Stripe. Después recibes al momento tu acceso al curso online.", "Reservar y pagar ahora", "¿Preguntas? Responde a este correo o llámanos: +49 173 8072405."]
+  }[s];
+  const r = rahmen(T[0], [T[1], T[2] + ": " + (PAKETE[s][paket] || paket) + " · " + T[3] + ": " + euro(betrag, s), wunschBlock({ praxis: termine, bestaetigt: true }, s), T[4], knopfHtml(link, T[5]), T[6]]);
+  return { betreff: T[0] + " – Piercing Akademie", ...r };
 }
 
 // Eingangsbestätigung an den Interessenten (kein Vertrag, nur Bestätigung der Wunschtermine)
