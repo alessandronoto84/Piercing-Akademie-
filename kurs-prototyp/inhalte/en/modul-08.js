@@ -17,6 +17,7 @@ window.KURS = window.KURS || { module: [] };
         seite: "S. 74",
         inhalt: [
           { typ: "text", text: "Every piercing has a data sheet with four details: where it is placed, which initial jewelry fits, which cannula size (or punch) you use and what you hold the area with (clamp, receiving tube or freehand)." },
+        { typ: "foto", id: "pexels-7651554", text: "Notes and checklists on a clipboard record the key details of a piercing." },
           { typ: "achtung", text: "Initial jewelry always needs an extra length of about 4 mm, because the fresh piercing channel can swell. During healing it must never be constricted by balls or discs." },
           { typ: "merke", text: "In the following lessons you learn each piercing individually. After each lesson, the course tests you on the data sheets: initial jewelry, cannula and clamp." }
         ],

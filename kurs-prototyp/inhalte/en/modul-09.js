@@ -12,6 +12,7 @@ KURS.module.push({
       seite: "S. 111",
       inhalt: [
         { typ: "schritte", start: 1, punkte: [
+        { typ: "foto", id: "pexels-4269203", text: "A friendly welcome at the counter is the start of every client conversation." },
           "The client enters the piercing studio.",
           "Greeting, small talk.",
           "Ask which piercings the client wants; ease any anxiety if needed.",
@@ -92,6 +93,7 @@ KURS.module.push({
       seite: "S. 113",
       inhalt: [
         { typ: "schritte", start: 22, punkte: [
+        { typ: "foto", id: "pexels-7579831", text: "In the closing talk, the aftercare steps for the coming weeks are explained calmly." },
           "If needed, cover with a bandage (nipple, navel).",
           "For tongue piercings, give the client an ice cube.",
           "Hand over the aftercare product and explain the aftercare instructions verbally.",
@@ -111,6 +113,7 @@ KURS.module.push({
       seite: "S. 26, 50, 113",
       inhalt: [
         { typ: "achtung", text: "If the client’s circulation drops during the procedure (always ask!), give them glucose (for example Dextro Energy) and something to drink. If necessary, have them lie down and let them rest." },
+        { typ: "foto", id: "pexels-5979732", text: "Dizziness and feeling unwell can be signs of circulatory problems." },
         { typ: "ergaenzung", text: "Proven approach for a circulatory collapse: lay the person flat and raise their legs so the blood flows back to the head. Give glucose and a drink only once the client can swallow safely again." },
         { typ: "liste", titel: "Be prepared", punkte: [
           "An up-to-date first aid kit hangs in the studio, clearly visible and quickly accessible.",

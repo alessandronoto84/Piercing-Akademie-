@@ -11,6 +11,7 @@ KURS.module.push({
       seite: "S. 16",
       inhalt: [
         { typ: "merke", text: "«La higiene es la ciencia de la prevención de las enfermedades y de la conservación y el fortalecimiento de la salud»." },
+        { typ: "foto", id: "pexels-7789603", text: "Una sala de tratamiento ordenada y fácil de limpiar es la base de toda medida de higiene." },
         { typ: "liste", titel: "Forman parte de las medidas de higiene", punkte: [
           "Guantes desechables (estériles), mascarilla desechable y gafas de protección",
           "Desinfectantes para superficies y equipos",
@@ -38,6 +39,7 @@ KURS.module.push({
       seite: "S. 17–18",
       inhalt: [
         { typ: "text", text: "La higiene de manos es una de las medidas más importantes para prevenir infecciones. En el trabajo diario, las manos del piercer están en contacto constante con clientes y objetos; así pueden transmitirse agentes patógenos." },
+        { typ: "foto", id: "pexels-7298694", text: "Uñas cortas y naturales sin esmalte y manos sin joyas son requisito para una higiene de manos eficaz." },
         { typ: "liste", titel: "Objetivos", punkte: ["Evitar la propagación de contaminación desde la piel", "Eliminar o destruir los microorganismos pasajeros (transitorios)", "Reducir la flora cutánea presente de forma permanente (residente)", "Eliminar la suciedad", "Proteger y cuidar las manos"] },
         { typ: "schritte", titel: "Requisitos para una higiene eficaz", punkte: [
           "Nada de joyas, relojes ni anillos en manos y antebrazos.",
@@ -79,6 +81,7 @@ KURS.module.push({
       seite: "S. 21",
       inhalt: [
         { typ: "text", text: "La desinfección quirúrgica de manos tiene como objetivo destruir la flora cutánea transitoria y reducir la flora cutánea residente. Se realiza antes de intervenciones quirúrgicas. Aunque el cirujano lleva guantes estériles, la desinfección evita la transmisión de gérmenes a través del puño del guante." },
+        { typ: "foto", id: "pexels-8538704", text: "Antes de desinfectar las manos se pone suficiente desinfectante en el hueco de la mano." },
         { typ: "text", text: "Requisito: uñas cortas y limadas en redondo, sin lesiones en el lecho ungueal. Si es necesario, hay cepillos de plástico desinfectados para las uñas." },
         { typ: "schritte", punkte: [
           "Poner el desinfectante en la mano seca y limpia; accionar el dispensador con el codo.",
@@ -100,6 +103,7 @@ KURS.module.push({
       seite: "S. 22",
       inhalt: [
         { typ: "text", text: "En la rutina se puede prescindir de la fase de lavado antes de la desinfección quirúrgica de manos. Con las manos visiblemente limpias, el lavado ya no es necesario en general, porque reduce el efecto de los desinfectantes a base de alcohol. Sin embargo, antes de empezar la jornada el lavado de manos sigue siendo obligatorio, porque el alcohol es poco eficaz contra las esporas bacterianas." },
+        { typ: "foto", id: "pexels-9145340", text: "Lavarse las manos elimina la suciedad, pero no sustituye a la desinfección." },
         { typ: "tabelle", kopf: ["Flora cutánea", "Qué es", "Objetivo"], zeilen: [
           ["Flora cutánea transitoria", "Colonización pasajera por organismos ajenos a la piel, entre ellos gérmenes patógenos", "Eliminarla en gran parte con el lavado, destruirla con la desinfección"],
           ["Flora cutánea residente", "Flora propia del cuerpo, protege contra gérmenes patógenos", "No destruirla, solo reducirla"]
@@ -119,6 +123,7 @@ KURS.module.push({
       seite: "S. 23–24",
       inhalt: [
         { typ: "text", text: "El lavado de manos consiste en lavar las manos con agua y jabón líquido. Antes y después del trabajo basta como medida de higiene; sin embargo, en la mayoría de las situaciones es preferible una desinfección higiénica de manos con un producto a base de alcohol." },
+        { typ: "foto", id: "pexels-545014", text: "Al lavarse las manos, todas las superficies se enjabonan bien con loción y se aclaran." },
         { typ: "liste", titel: "Cuándo lavar", punkte: ["antes de empezar y al terminar el trabajo", "cuando las manos están visiblemente sucias", "cuando las manos han estado expuestas a organismos formadores de esporas", "después de ir al baño", "con las manos sudadas o pegajosas"] },
         { typ: "schritte", titel: "En cinco pasos", punkte: ["Mojar las manos con agua tibia.", "Tomar jabón líquido del dispensador o de la bomba dosificadora y hacer espuma con agua.", "Si es necesario, limpiar bajo las uñas con un cepillo suave.", "Enjuagar las manos con cuidado hasta que no quede jabón.", "Secar a fondo con una toalla desechable."] },
         { typ: "liste", titel: "Evitar", punkte: ["agua demasiado caliente: elimina la capa grasa natural de la piel", "cepillado intenso: daña las capas superiores de la piel", "jabón alcalino (pastilla de jabón): altera el manto ácido protector de la piel", "lavado excesivamente largo", "enjuague insuficiente", "toallas desechables demasiado ásperas", "secado insuficiente"] }
@@ -137,6 +142,7 @@ KURS.module.push({
       seite: "S. 25",
       inhalt: [
         { typ: "text", text: "Incluso accionar correctamente un dispensador de desinfectante hay que aprenderlo. Al tocar dispensadores, botellas y lavamanos aumenta el riesgo de transmitir agentes patógenos. Por eso hay que evitar el contacto: el equipamiento del lavamanos debe poder usarse sin tocarlo con las manos." },
+        { typ: "foto", id: "pexels-3884109", text: "Un lavamanos con dispensadores de pared permite una higiene de manos sin tocar nada." },
         { typ: "liste", punkte: [
           "Lavamanos de fácil acceso con dispensadores",
           "Lavabo con agua fría y caliente (por ejemplo, grifo monomando)",
@@ -199,6 +205,7 @@ KURS.module.push({
       entwurf: true,
       inhalt: [
         { typ: "text", text: "Al perforar tienes contacto con sangre. A través de la sangre pueden transmitirse la hepatitis B, la hepatitis C y el VIH, sobre todo por un pinchazo con una cánula usada. Por eso te proteges por partida doble: trabajando de forma segura y vacunándote." },
+        { typ: "foto", id: "pexels-5207020", text: "La vacuna contra la hepatitis B forma parte de la protección frente a infecciones por contacto con sangre." },
         { typ: "liste", titel: "Prevención", punkte: [
           "Vacunarte contra la hepatitis B y hacer que un médico compruebe el éxito de la vacunación (título de anticuerpos). La guía de higiene para tatuajes y piercings recomienda la vacuna a todas las personas que perforan.",
           "Contra la hepatitis C y el VIH no hay vacuna. Aquí solo protegen los guantes, el trabajo seguro y el desecho inmediato de las agujas.",
@@ -251,6 +258,7 @@ KURS.module.push({
       seite: "S. 30–31",
       inhalt: [
         { typ: "liste", titel: "Requisitos de los desinfectantes", punkte: ["reducir el número de gérmenes de forma rápida y amplia", "alcanzar una profundidad de penetración suficiente", "actuar también en presencia de material orgánico", "tener solo una baja toxicidad sistémica", "ser tolerados por la piel, las mucosas y las heridas abiertas", "conservarse mucho tiempo y a la vez ser biodegradables", "desprender poco olor"] },
+        { typ: "foto", id: "pexels-4099258", text: "Los desinfectantes solo actúan si mojan toda la superficie y se dejan actuar el tiempo suficiente." },
         { typ: "text", text: "Los desinfectantes actúan desnaturalizando: alteran las estructuras proteicas de los microorganismos y las destruyen. Algunos dañan además las membranas lipídicas (por ejemplo, la envoltura de los virus) o los ácidos nucleicos. Los excipientes hacen que el principio activo llegue al lugar de acción." },
         { typ: "tabelle", kopf: ["Mecanismo de acción", "Ejemplo"], zeilen: [
           ["Desnaturalización de proteínas", "Productos con aldehídos o alcoholes"],
@@ -294,6 +302,7 @@ KURS.module.push({
       seite: "S. 35",
       inhalt: [
         { typ: "liste", titel: "Recuerda", punkte: [
+        { typ: "foto", id: "pexels-15771809", text: "Los instrumentos usados se limpian, se desinfectan y después se reprocesan en el esterilizador." },
           "Los desinfectantes para superficies e instrumental también deberían ser eficaces contra los virus (virucidas).",
           "Al usarlos, presta especial atención al tiempo de actuación, la compatibilidad con los materiales y la concentración.",
           "Los desinfectantes se quedan en su envase original y en ningún caso se trasvasan ni se rellenan.",
@@ -315,6 +324,7 @@ KURS.module.push({
       seite: "S. 36–39",
       inhalt: [
         { typ: "text", text: "La Ley alemana de Protección contra Infecciones (Infektionsschutzgesetz, IfSG), vigente desde 2001, obliga a los establecimientos comunitarios a fijar sus procedimientos internos de higiene contra infecciones en un plan marco de higiene. A este debe adjuntarse un plan de limpieza y desinfección. En él deben quedar reflejados cada paso de trabajo y todas las medidas de higiene." },
+        { typ: "foto", id: "pexels-8413090", text: "El plan de higiene fija por escrito quién limpia y desinfecta qué, cuándo y con qué." },
         { typ: "ergaenzung", text: "Más exactamente: los estudios de piercing no son establecimientos comunitarios en el sentido de la IfSG. Sin embargo, según el § 36 apdo. 2 IfSG pueden ser supervisados por la oficina local de salud pública (Gesundheitsamt), porque durante el trabajo pueden transmitirse patógenos a través de la sangre. El plan de higiene lo exigen las normativas de los estados federados y las oficinas de salud pública; en Niedersachsen (Baja Sajonia), el reglamento de higiene (Hygieneverordnung) (hoja informativa del NLGA: «Hygieneplan erstellen», es decir, elaborar un plan de higiene)." },
         { typ: "liste", titel: "El plan de ejemplo del libro del curso regula", punkte: [
           "Salas: lavamanos, zona de trabajo (limpiar en húmedo cada día laborable, desinfectar de inmediato si hay sangre), aseos",
@@ -410,6 +420,7 @@ KURS.module.push({
       seite: "S. 46–47",
       inhalt: [
         { typ: "text", text: "El envase de esterilización se marca con la fecha de esterilización y el número de lote. Se recomienda guardar el material estéril en cajones cerrados." },
+        { typ: "foto", id: "pexels-6629414", text: "El material estéril y los instrumentos se guardan protegidos, secos y ordenados en cajones cerrados." },
         { typ: "tabelle", kopf: ["Almacenamiento", "Estante abierto", "Cajón cerrado"], zeilen: [["Envase simple", "máx. 48 horas", "máx. 6 meses"], ["Envase doble", "máx. 48 horas", "máx. 5 años"]] },
         { typ: "ergaenzung", text: "Según la norma DIN 58953-8, los 5 años solo son válidos si el material estéril se guarda además en un envase de almacenamiento que lo proteja del polvo. En caso de duda: protegido en armario o cajón, como máximo 6 meses; en estante abierto, solo para uso inmediato." },
         { typ: "liste", titel: "Control de funcionamiento (según el libro del curso, prescrito por la Ley de Productos Sanitarios (MPG) y la mutua de accidentes laborales (Berufsgenossenschaft); la MPG ya no está vigente desde 2021; hoy rigen la Ley de aplicación del derecho de productos sanitarios (MPDG) y el Reglamento de operadores de productos sanitarios (MPBetreibV))", punkte: [

@@ -13,6 +13,7 @@ KURS.module.push({
       entwurf: true,
       inhalt: [
         { typ: "text", text: "In Germany there is no regulated training for piercers and no officially recognized quality seal. Whether, and under which conditions, you may offer piercings is decided by the local authorities. This course shows you what matters; it does not replace clarifying things with the authorities locally." },
+        { typ: "foto", id: "pexels-7821682", text: "Registering a business involves filling in several forms." },
         { typ: "schritte", punkte: [
           "Register your business with the responsible trade office (Gewerbeamt).",
           "Contact the local public health office (Gesundheitsamt): ask about the requirements for premises and hygiene, and ask for the framework hygiene plan for piercing studios (course book p. 36).",
@@ -52,6 +53,7 @@ KURS.module.push({
       entwurf: true,
       inhalt: [
         { typ: "liste", titel: "What you keep in writing", punkte: [
+        { typ: "foto", id: "pexels-8376320", text: "Every work step under the hygiene plan is documented in writing." },
           "Framework hygiene plan with cleaning and disinfection plan (examples in the course book pp. 37–39; agree it with the local public health office)",
           "Sterile goods: every batch with sterilization date and batch number",
           "Autoclave test records: daily tests, six-monthly spore tests, annual device inspection",
@@ -71,6 +73,7 @@ KURS.module.push({
       entwurf: true,
       inhalt: [
         { typ: "text", text: "Get advice on business or professional liability insurance for piercing before you pierce your first client." },
+        { typ: "foto", id: "pexels-7580852", text: "Insurance costs and prices need to be calculated carefully." },
         { typ: "liste", titel: "What belongs in your price calculation", punkte: [
           "Materials: jewelry, cannula, disposables, aftercare products",
           "Your working time, including consultation, consent form and reprocessing",
@@ -87,6 +90,7 @@ KURS.module.push({
       seite: "S. 34, 56",
       inhalt: [
         { typ: "liste", punkte: [
+        { typ: "foto", id: "pexels-6612276", text: "Consumables and jewelry are mostly ordered online today." },
           "Initial jewelry only made of G23 titanium or PTFE, with the manufacturer’s material certificate. Under EU law, jewelry for fresh piercings may release no more than 0.2 µg of nickel per cm² per week.",
           "Disinfectants from the VAH list (German Association for Applied Hygiene) with proven efficacy.",
           "Cannulas, clamps and consumables from specialist suppliers of medical or studio supplies."
@@ -103,6 +107,7 @@ KURS.module.push({
       seite: "Modul 2 und 8",
       inhalt: [
         { typ: "liste", punkte: [
+        { typ: "foto", id: "pexels-13068359", text: "A tidy, bright studio makes clear rules visible to everyone." },
           "A written consent form before every piercing (module 2).",
           "Check age: under 18 only with the consent of the parents or legal guardians, better not at all.",
           "No health claims, and no advertising based on them.",

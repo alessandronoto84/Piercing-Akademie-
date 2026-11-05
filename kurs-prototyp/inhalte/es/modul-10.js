@@ -12,6 +12,7 @@ KURS.module.push({
       seite: "S. 48",
       inhalt: [
         { typ: "text", text: "Después de perforar, es imprescindible que el propio cliente trate y cuide correctamente el piercing para que la cicatrización transcurra de la mejor manera posible. Por eso, en todos los casos debes explicarle al cliente cómo tratar y cuidar el piercing recién hecho." },
+        { typ: "foto", id: "pexels-5468634", text: "Una limpieza suave y cuidadosa forma parte de la rutina diaria de cuidado." },
         { typ: "merke", text: "Entrega al cliente en el momento el producto de cuidado adecuado y las instrucciones de cuidado por escrito." }
       ],
       fragen: [
@@ -24,6 +25,7 @@ KURS.module.push({
       seite: "S. 48",
       inhalt: [
         { typ: "tabelle", kopf: ["Producto de cuidado", "Uso"], zeilen: [
+        { typ: "foto", id: "pexels-4202383", text: "Los discos de algodón desechables y limpios son parte del material básico para el cuidado del piercing." },
           ["Prontolind (polihexanida)", "Adecuado para todos los piercings, también para cartílago"],
           ["Octenisept (octenidina)", "No aplicar en cartílago: en estudios de laboratorio, la octenidina daña las células del cartílago"],
           ["Solución salina simple", "Adecuada para todos los piercings"],
@@ -42,6 +44,7 @@ KURS.module.push({
       seite: "S. 49",
       inhalt: [
         { typ: "text", text: "Cada persona cicatriza de forma distinta, y algunas circunstancias influyen en el tiempo de cicatrización. Los tiempos siguientes son valores orientativos cuando el piercing cicatriza de forma óptima y sin complicaciones." },
+        { typ: "foto", id: "pexels-6408282", text: "Un calendario ayuda a controlar el tiempo de cicatrización de un piercing." },
         { typ: "tabelle", kopf: ["Piercing", "Tiempo de cicatrización"], zeilen: [
           ["Piercings de cartílago", "al menos 3 meses"], ["Lobe", "aprox. 2 meses"], ["Ombligo", "aprox. 4 a 6 meses"], ["Labret", "aprox. 1 a 2 meses"], ["Frenillo labial", "aprox. 1 mes"], ["Lengua", "aprox. 1 mes"], ["Pezón", "3 a 12 meses"], ["Ceja", "aprox. 1 mes"], ["Genital", "2 a 3 meses"]
         ] },
@@ -64,6 +67,7 @@ KURS.module.push({
       seite: "S. 50",
       inhalt: [
         { typ: "tabelle", kopf: ["Trastorno", "Qué hacer"], zeilen: [
+        { typ: "foto", id: "pexels-5146534", text: "Las compresas estériles y los apósitos forman parte de la atención en caso de sangrado posterior." },
           ["Falta de epitelización", "Acudir a un médico pasados entre 10 y 14 días. En la epitelización, las células epiteliales migran desde el borde de la herida y la cubren; debajo, el tejido de granulación madura hasta convertirse en tejido cicatricial firme. La herida se hace más pequeña."],
           ["Sangrado posterior", "Si el sangrado no para, acudir a un médico. Posibles causas según el libro del curso: diabetes, debilidad del tejido conjuntivo, trastorno de la coagulación (hemofilia); además, medicamentos anticoagulantes."]
         ] }

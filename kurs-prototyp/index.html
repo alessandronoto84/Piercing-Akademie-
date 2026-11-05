@@ -44,7 +44,7 @@
   window.KURS_SPRACHE = s;
   document.documentElement.lang = s;
   var DATEIEN = ["modul-01.js", "modul-02.js", "modul-03.js", "modul-04.js", "modul-05.js", "modul-06.js", "modul-07.js", "modul-08.js", "modul-09.js", "modul-10.js", "modul-11.js",
-    "grafiken.js", "grafiken-text.js", "bilder.js", "bilder-frei.js", "bilder-ki.js", "glossar-checklisten.js", "praxislabor.js", "clips.js", "fragen-generiert.js", "ui.js"];
+    "grafiken.js", "grafiken-text.js", "bilder.js", "bilder-frei.js", "bilder-pexels.js", "bilder-ki.js", "glossar-checklisten.js", "praxislabor.js", "clips.js", "fragen-generiert.js", "ui.js"];
   var JE_SPRACHE = /^(modul-\d\d|glossar-checklisten|praxislabor|fragen-generiert)\.js$/;
   var html = DATEIEN.map(function (d) { return '<script src="inhalte/' + (s !== "de" && JE_SPRACHE.test(d) ? s + "/" : "") + d + '"><\/script>'; }).join("\n");
   document.write(html + '\n<script src="kurs.js"><\/script>\n<script src="bewegung.js"><\/script>');

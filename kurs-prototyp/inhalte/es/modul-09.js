@@ -12,6 +12,7 @@ KURS.module.push({
       seite: "S. 111",
       inhalt: [
         { typ: "schritte", start: 1, punkte: [
+        { typ: "foto", id: "pexels-4269203", text: "Una recepción amable en el mostrador es el comienzo de toda conversación con el cliente." },
           "El cliente entra al estudio de piercing.",
           "Saludo, conversación informal.",
           "Preguntar qué piercings desea y, si hace falta, quitarle el miedo.",
@@ -92,6 +93,7 @@ KURS.module.push({
       seite: "S. 113",
       inhalt: [
         { typ: "schritte", start: 22, punkte: [
+        { typ: "foto", id: "pexels-7579831", text: "En la conversación final se explican con calma los pasos de cuidado para las próximas semanas." },
           "Si procede, cubrir con un apósito (pezón, ombligo).",
           "En los piercings de lengua, dar un cubito de hielo.",
           "Entregar el producto de cuidado y explicar las instrucciones de cuidado de palabra.",
@@ -111,6 +113,7 @@ KURS.module.push({
       seite: "S. 26, 50, 113",
       inhalt: [
         { typ: "achtung", text: "Si al cliente le baja la tensión durante el procedimiento (¡pregunta siempre!), dale glucosa (por ejemplo, Dextro Energy) y algo de beber. Si es necesario, túmbalo y déjalo descansar." },
+        { typ: "foto", id: "pexels-5979732", text: "El mareo y el malestar pueden ser señales de problemas circulatorios." },
         { typ: "ergaenzung", text: "Lo que da buen resultado en un colapso circulatorio: tumbar a la persona en horizontal y elevarle las piernas para que la sangre vuelva a la cabeza. La glucosa y la bebida, solo cuando el cliente vuelva a tragar con seguridad." },
         { typ: "liste", titel: "Estar preparado", punkte: [
           "En el estudio hay un botiquín de primeros auxilios actualizado, bien visible y de acceso rápido.",

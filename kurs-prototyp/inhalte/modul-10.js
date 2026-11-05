@@ -12,6 +12,7 @@ KURS.module.push({
       seite: "S. 48",
       inhalt: [
         { typ: "text", text: "Nach dem Stechen ist eine richtige Behandlung und Pflege durch den Kunden selbst unumgänglich, damit die Abheilung bestmöglich verläuft. Deshalb musst du den Kunden in jedem Fall darauf hinweisen, wie das neu gestochene Piercing behandelt und gepflegt wird." },
+        { typ: "foto", id: "pexels-5468634", text: "Sanfte, sorgfältige Reinigung gehört zur täglichen Pflegeroutine." },
         { typ: "merke", text: "Gib dem Kunden direkt das richtige Pflegemittel und die Pflegehinweise in schriftlicher Form mit." }
       ],
       fragen: [
@@ -24,6 +25,7 @@ KURS.module.push({
       seite: "S. 48",
       inhalt: [
         { typ: "tabelle", kopf: ["Pflegemittel", "Einsatz"], zeilen: [
+        { typ: "foto", id: "pexels-4202383", text: "Saubere Einmal-Wattepads gehören zu den Grundmitteln der Piercingpflege." },
           ["Prontolind (Polihexanid)", "Für alle Piercings geeignet, auch für Knorpel"],
           ["Octenisept (Octenidin)", "Nicht auf Knorpel anwenden: Octenidin schädigt in Laborstudien Knorpelzellen"],
           ["Einfache Kochsalzlösung", "Für alle Piercings geeignet"],
@@ -42,6 +44,7 @@ KURS.module.push({
       seite: "S. 49",
       inhalt: [
         { typ: "text", text: "Jeder Mensch heilt anders, und einige Umstände beeinflussen die Heilungszeit. Die folgenden Zeiten sind Richtwerte, wenn das Piercing optimal und ohne Komplikationen verheilt." },
+        { typ: "foto", id: "pexels-6408282", text: "Ein Kalender hilft, die Abheilzeit eines Piercings im Blick zu behalten." },
         { typ: "tabelle", kopf: ["Piercing", "Abheilzeit"], zeilen: [
           ["Knorpelpiercings", "mindestens 3 Monate"], ["Lobe", "ca. 2 Monate"], ["Bauchnabel", "ca. 4 bis 6 Monate"], ["Labret", "ca. 1 bis 2 Monate"], ["Lippenbändchen", "ca. 1 Monat"], ["Zunge", "ca. 1 Monat"], ["Brustwarze", "3 bis 12 Monate"], ["Augenbraue", "ca. 1 Monat"], ["Intim", "2 bis 3 Monate"]
         ] },
@@ -64,6 +67,7 @@ KURS.module.push({
       seite: "S. 50",
       inhalt: [
         { typ: "tabelle", kopf: ["Störung", "Was tun"], zeilen: [
+        { typ: "foto", id: "pexels-5146534", text: "Sterile Kompressen und Pflaster gehören zur Versorgung bei Nachbluten." },
           ["Fehlende Epithelisierung", "Nach 10 bis 14 Tagen einen Arzt aufsuchen. Bei der Epithelisierung wandern Epithelzellen vom Wundrand ein und decken die Wunde ab; darunter reift das Granulationsgewebe zu festem Narbengewebe. Die Wunde wird kleiner."],
           ["Nachbluten", "Bei ständigem Nachbluten einen Arzt aufsuchen. Mögliche Ursachen laut Kursbuch: Diabetes, Bindegewebsschwäche, Bluterkrankheit; außerdem blutverdünnende Medikamente."]
         ] }

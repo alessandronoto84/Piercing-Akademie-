@@ -14,6 +14,7 @@ KURS.module.push({
       seite: "S. 3",
       inhalt: [
         { typ: "text", text: "La palabra «piercing» significa simplemente agujero en la piel. Muchas personas la confunden con la joya. Pero lo que designa es la perforación en sí." },
+        { typ: "foto", id: "pexels-8066130", text: "Hoy en día, para muchas personas los piercings en la oreja y la nariz forman parte natural de su imagen personal." },
         { typ: "text", text: "El piercing es una forma de body modding o arte corporal. Aros, barras y otras joyas se colocan en distintas partes del cuerpo haciendo pasar la joya a través de la piel y del tejido graso o cartilaginoso que hay debajo." },
         { typ: "merke", text: "Los piercings son tan antiguos como la propia civilización humana." },
         { typ: "praxis", text: "Los clientes a menudo piden «un piercing» y se refieren a una joya concreta. En la conversación aclara siempre ambas cosas: la zona que se va a perforar y la joya que se va a colocar." }
@@ -30,6 +31,7 @@ KURS.module.push({
       seite: "S. 3",
       inhalt: [
         { typ: "text", text: "Las huellas más antiguas del piercing nos llevan al Neolítico africano. El libro del curso menciona hallazgos neolíticos de Argelia: allí, hace más de 7000 años, las personas ya habrían llevado colgantes de huesos de animales y dientes en los lóbulos de las orejas." },
+        { typ: "foto", id: "pexels-34642205", text: "Ya la máscara funeraria de Tutankamón muestra lóbulos perforados, una prueba de los piercings en la oreja en el antiguo Egipto." },
         { typ: "ergaenzung", text: "La prueba directa más antigua la describe un estudio de 2022 (revista Antiquity): en tumbas de Boncuklu Tarla, en el sureste de Turquía, había joyas de piedra, obsidiana y cobre todavía junto a las orejas y el mentón de los difuntos, aproximadamente entre el 10.000 y el 8.000 a. C. Para el dato del libro del curso sobre Argelia no hemos encontrado ninguna fuente independiente." },
         { typ: "text", text: "También en antiguas representaciones de faraones de Egipto (aproximadamente entre 1400 y 1300 a. C.) se encuentran indicios de joyas en las orejas. La famosa máscara de oro de Tutankamón muestra orificios en las orejas. A ello se suman espléndidos pendientes de oro hallados como ajuar funerario." },
         { typ: "tabelle", kopf: ["Hallazgo", "Antigüedad", "Qué muestra"], zeilen: [
@@ -51,6 +53,7 @@ KURS.module.push({
       seite: "S. 4, 85, 88",
       inhalt: [
         { typ: "text", text: "En Europa no se encuentran tantas huellas del piercing temprano. Como una de las pocas pruebas, el libro del curso menciona la máscara de bronce de la cultura de Hallstatt (Kleinklein, Estiria), de unos 2600 años de antigüedad, que mostraría varios orificios en ambas orejas. En la antigua Grecia y en Roma, en cambio, el ideal era un cuerpo intacto." },
+        { typ: "foto", id: "pexels-13013103", text: "En muchas culturas, por ejemplo en la India, las joyas en la nariz forman parte de la tradición desde hace siglos." },
         { typ: "liste", titel: "Historia de algunos piercings", punkte: [
           "Piercing nasal (Nostril): se practicó por primera vez hace unos 4000 años en Oriente Medio y en el siglo XVI se adoptó en la India. Allí se lleva preferentemente en la aleta izquierda de la nariz.",
           "Septum: uno de los piercings más antiguos, presente tradicionalmente en muchas culturas de todo el mundo. El nombre viene del latín «septum nasi»."
@@ -94,6 +97,7 @@ KURS.module.push({
       seite: "S. 5–6",
       inhalt: [
         { typ: "text", text: "Al perforar y durante el cuidado posterior hay que mantener una higiene suficiente; de lo contrario, el piercing puede inflamarse. La sala de piercing debe mantenerse limpia y estéril como un quirófano de hospital, y los instrumentos deben estar estériles." },
+        { typ: "foto", id: "pexels-4021257", text: "Los guantes desechables nuevos son un requisito básico para trabajar de forma higiénica en el estudio." },
         { typ: "ergaenzung", text: "En sentido estricto, una sala no se puede esterilizar. Lo que se quiere decir es: la sala está limpia y desinfectada de forma higiénicamente impecable, y todo lo que entra en contacto con el canal de la perforación es estéril." },
         { typ: "text", text: "Es obligatorio que informes al cliente sobre el cuidado correcto y los tiempos de cicatrización. Durante unas dos semanas, el propio cliente debe limpiar el piercing nuevo dos o tres veces al día con un producto adecuado, por ejemplo, solución salina, Prontolind u Octenisept." },
         { typ: "achtung", text: "Nunca recomiendes Octenisept en piercings de cartílago. Contiene octenidina, que en estudios de laboratorio daña las células del cartílago. Prontolind (principio activo polihexanida), en cambio, sí puedes recomendarlo también en piercings de cartílago." },
@@ -134,6 +138,7 @@ KURS.module.push({
       seite: "S. 6",
       inhalt: [
         { typ: "text", text: "Durante las 24 horas previas a la perforación, el cliente no debe consumir alcohol, drogas, cafeína ni medicamentos anticoagulantes (por ejemplo, aspirina/AAS). Estas sustancias pueden afectar a la circulación y a la coagulación de la sangre." },
+        { typ: "foto", id: "pexels-7581074", text: "Antes de perforar, el cliente está tumbado cómodamente y el profesional se prepara de forma higiénica." },
         { typ: "ergaenzung", text: "El AAS (aspirina) inhibe las plaquetas de forma permanente: tras una sola pastilla, el efecto dura unos 7 a 10 días, hasta que se forman plaquetas nuevas. Por tanto, una pausa de 24 horas no elimina el efecto. Quien haya tomado AAS en la semana anterior a la cita puede sangrar más." },
         { typ: "ergaenzung", text: "El cliente no debe dejar por su cuenta los anticoagulantes recetados por el médico (por ejemplo, Marcumar o Xarelto). Quien tome estos medicamentos debe consultar antes el piercing con su médico. En caso de duda, no se perfora." },
         { typ: "praxis", text: "Díselo ya al dar la cita. Así el cliente llega preparado y no tienes que mandar a nadie de vuelta a casa." }

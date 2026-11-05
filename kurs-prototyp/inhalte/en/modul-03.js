@@ -63,6 +63,7 @@ KURS.module.push({
       seite: "S. 89–92",
       inhalt: [
         { typ: "text", text: "In some places on the face, important vessels and nerves lie just beneath the skin. The course book names these zones explicitly." },
+        { typ: "foto", id: "pexels-3861592", text: "In the face, nerves and vessels lie close together, which makes certain zones risk areas." },
         { typ: "tabelle", kopf: ["Piercing", "Risk", "Rule"], zeilen: [
           ["Eyebrow", "On the inner side, nerves and vessels emerge (numbness, bleeding)", "Only pierce in the outer third of the eyebrow"],
           ["Cheek", "Important arteries and nerves, risk of disfigurement; dimples may remain", "Only by professional piercers; refuse as a beginner"],
@@ -117,6 +118,7 @@ KURS.module.push({
       seite: "S. 73, 90, 104",
       inhalt: [
         { typ: "text", text: "With a flashlight with green light, you can, for example, shine through the ear and thus recognize blood vessels. Never pierce through a blood vessel, otherwise the client may bleed heavily." },
+        { typ: "foto", id: "pexels-7479547", text: "Superficial blood vessels are often clearly visible and must be avoided when piercing." },
         { typ: "liste", titel: "Other places where you take particular care", punkte: [
           "Tongue: do not injure the frenulum of the tongue (p. 90).",
           "Penis: never pierce through the erectile tissue (corpora cavernosa). There is a risk of serious damage, up to the client bleeding to death (p. 104)."
@@ -163,6 +165,7 @@ KURS.module.push({
       seite: "S. 50",
       inhalt: [
         { typ: "text", text: "Smokers, alcoholics and diabetics are among the risk groups: they are more prone to complications during healing." },
+        { typ: "foto", id: "pexels-6823478", text: "Conditions such as diabetes can significantly delay wound healing after a piercing." },
         { typ: "text", text: "According to the course book, possible causes of constant re-bleeding are diabetes, connective tissue weakness or a bleeding disorder (hemophilia). In this case, a doctor should be consulted." },
         { typ: "ergaenzung", text: "Prolonged re-bleeding most often occurs when the client takes blood-thinning medication (for example ASA) or has a clotting disorder. Diabetes mainly delays wound healing and increases the risk of infection." },
         { typ: "praxis", text: "The consent form asks about illnesses and medication. Read this information before piercing, not afterwards, and address risk factors openly." }

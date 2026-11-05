@@ -11,6 +11,7 @@ KURS.module.push({
       seite: "S. 16",
       inhalt: [
         { typ: "merke", text: "„Die Hygiene ist die Lehre von der Verhütung von Krankheiten und der Erhaltung und Festigung der Gesundheit.“" },
+        { typ: "foto", id: "pexels-7789603", text: "Ein aufgeräumter, leicht zu reinigender Behandlungsraum ist die Grundlage jeder Hygienemaßnahme." },
         { typ: "liste", titel: "Das gehört zu den Hygienemaßnahmen", punkte: [
           "(Sterile) Einmalhandschuhe, Einmal-Mundschutz und Schutzbrille",
           "Flächen- und Gerätedesinfektionsmittel",
@@ -38,6 +39,7 @@ KURS.module.push({
       seite: "S. 17–18",
       inhalt: [
         { typ: "text", text: "Die Hygiene der Hände gehört zu den wichtigsten Maßnahmen bei der Verhütung von Infektionen. Im Arbeitsalltag sind die Hände des Piercers ständig in Kontakt mit Kunden und Gegenständen; so können Krankheitserreger übertragen werden." },
+        { typ: "foto", id: "pexels-7298694", text: "Natürliche, kurze Nägel ohne Lack und Hände ohne Schmuck sind Voraussetzung für eine wirksame Händehygiene." },
         { typ: "liste", titel: "Ziele", punkte: ["Schutz vor der Verbreitung von Kontaminationen der Haut", "Entfernen oder Abtöten vorübergehender (transienter) Mikroorganismen", "Reduktion der dauerhaft vorhandenen (residenten) Hautflora", "Entfernen von Verschmutzungen", "Schutz und Pflege der Hände"] },
         { typ: "schritte", titel: "Voraussetzungen für effektive Hygiene", punkte: [
           "An Händen und Unterarmen keine Schmuckstücke, Uhren oder Ringe.",
@@ -79,6 +81,7 @@ KURS.module.push({
       seite: "S. 21",
       inhalt: [
         { typ: "text", text: "Mit der chirurgischen Händedesinfektion soll die transiente Hautflora zerstört und die residente Hautflora reduziert werden. Sie wird vor operativen Eingriffen durchgeführt. Zwar trägt der Chirurg sterile Handschuhe, doch die Desinfektion verhindert die Übertragung von Keimen über den Handschuhschaft." },
+        { typ: "foto", id: "pexels-8538704", text: "Vor der Händedesinfektion wird ausreichend Desinfektionsmittel in die hohle Hand gegeben." },
         { typ: "text", text: "Voraussetzung: Fingernägel kurz und rund geschnitten, keine Nagelbettverletzung. Bei Bedarf gibt es desinfizierte Kunststoffbürsten für die Fingernägel." },
         { typ: "schritte", punkte: [
           "Desinfektionsmittel in die trockene, gereinigte Hand geben; den Spender mit dem Ellenbogen betätigen.",
@@ -100,6 +103,7 @@ KURS.module.push({
       seite: "S. 22",
       inhalt: [
         { typ: "text", text: "Im Routinefall kann auf die Waschphase vor der chirurgischen Händedesinfektion verzichtet werden. Bei optisch sauberen Händen ist Händewaschen nicht mehr generell erforderlich, denn es reduziert die Wirkung alkoholischer Desinfektionsmittel. Vor Dienstbeginn ist das Händewaschen jedoch weiterhin Pflicht, weil Alkohol nur unzureichend gegen Bakteriensporen wirkt." },
+        { typ: "foto", id: "pexels-9145340", text: "Händewaschen entfernt Schmutz, ersetzt aber nicht die Händedesinfektion." },
         { typ: "tabelle", kopf: ["Hautflora", "Was sie ist", "Ziel"], zeilen: [
           ["Transiente Hautflora", "Vorübergehende, hautfremde Besiedelung, unter anderem mit krankmachenden Keimen", "Durch Waschen weitgehend entfernen, durch Desinfektion abtöten"],
           ["Residente Hautflora", "Körpereigene Flora, schützt vor krankmachenden Keimen", "Nicht zerstören, nur reduzieren"]
@@ -119,6 +123,7 @@ KURS.module.push({
       seite: "S. 23–24",
       inhalt: [
         { typ: "text", text: "Unter einer Händewaschung versteht man das Waschen der Hände mit Wasser und Waschlotion. Vor und nach der Arbeit reicht sie als Hygienemaßnahme aus; in den meisten Situationen ist aber eine hygienische Händedesinfektion mit einem alkoholischen Mittel vorzuziehen." },
+        { typ: "foto", id: "pexels-545014", text: "Bei der Händewaschung werden alle Handflächen gründlich mit Waschlotion eingeschäumt und abgespült." },
         { typ: "liste", titel: "Wann waschen", punkte: ["vor Arbeitsbeginn und nach Arbeitsende", "wenn die Hände erkennbar verschmutzt sind", "wenn die Hände Sporenbildnern ausgesetzt waren", "nach dem Toilettengang", "bei verschwitzten oder klebrigen Händen"] },
         { typ: "schritte", titel: "In fünf Schritten", punkte: ["Hände mit lauwarmem Wasser befeuchten.", "Waschlotion aus Spender oder Dosierpumpe nehmen und mit Wasser aufschäumen.", "Falls erforderlich mit einer weichen Bürste unter den Fingernägeln reinigen.", "Hände sorgfältig abspülen, bis keine Waschlotion mehr dran ist.", "Mit einem Einmalhandtuch gründlich abtrocknen."] },
         { typ: "liste", titel: "Vermeiden", punkte: ["zu heißes Wasser: entfernt den hauteigenen Fettfilm", "intensives Bürsten: schädigt die oberen Hautschichten", "alkalische Seife (Seifenstück): stört den Säureschutzmantel der Haut", "übermäßig langes Waschen", "unzureichendes Abspülen", "zu harte Einmalhandtücher", "ungenügendes Abtrocknen"] }
@@ -137,6 +142,7 @@ KURS.module.push({
       seite: "S. 25",
       inhalt: [
         { typ: "text", text: "Auch das richtige Betätigen eines Desinfektionsmittel-Spenders muss gelernt sein. Beim Kontakt mit Spendern, Flaschen und Waschplätzen besteht vermehrt die Gefahr, Krankheitserreger zu übertragen. Deshalb sind Berührungen zu vermeiden: Die Waschplatz-Ausstattung muss ohne Handkontakt bedienbar sein." },
+        { typ: "foto", id: "pexels-3884109", text: "Ein Waschplatz mit Wandspendern ermöglicht eine Händehygiene, bei der die Hände nichts berühren müssen." },
         { typ: "liste", punkte: [
           "Leicht erreichbare Waschgelegenheit mit Spendern",
           "Waschbecken mit Kalt- und Warmwasser (zum Beispiel Einhebelmischbatterie)",
@@ -199,6 +205,7 @@ KURS.module.push({
       entwurf: true,
       inhalt: [
         { typ: "text", text: "Beim Piercen hast du Kontakt mit Blut. Über Blut können Hepatitis B, Hepatitis C und HIV übertragen werden, am häufigsten durch eine Stichverletzung mit einer benutzten Kanüle. Deshalb schützt du dich doppelt: durch sicheres Arbeiten und durch Impfung." },
+        { typ: "foto", id: "pexels-5207020", text: "Die Hepatitis-B-Impfung gehört zum Schutz vor Infektionen durch Blutkontakt." },
         { typ: "liste", titel: "Vorbeugen", punkte: [
           "Gegen Hepatitis B impfen lassen und den Impferfolg (Antikörper-Titer) beim Arzt kontrollieren lassen. Die Hygiene-Leitlinie für Tätowieren und Piercen empfiehlt die Impfung für alle, die stechen.",
           "Gegen Hepatitis C und HIV gibt es keine Impfung. Hier schützen nur Handschuhe, sicheres Arbeiten und der sofortige Nadelabwurf.",
@@ -251,6 +258,7 @@ KURS.module.push({
       seite: "S. 30–31",
       inhalt: [
         { typ: "liste", titel: "Anforderungen an Desinfektionsmittel", punkte: ["die Anzahl der Keime schnell und umfassend reduzieren", "eine ausreichende Eindringtiefe erreichen", "auch bei organischem Material wirken", "nur gering systemisch toxisch sein", "verträglich für Haut, Schleimhaut und offene Wunden sein", "lange haltbar und zugleich biologisch abbaubar sein", "die Geruchsbelastung gering halten"] },
+        { typ: "foto", id: "pexels-4099258", text: "Desinfektionsmittel wirken nur, wenn sie die Fläche vollständig benetzen und lange genug einwirken." },
         { typ: "text", text: "Desinfektionsmittel wirken denaturierend: Sie verändern die eiweißhaltigen Strukturen der Mikroorganismen und zerstören sie. Manche schädigen zusätzlich die Lipidmembranen (zum Beispiel die Hülle von Viren) oder die Nukleinsäuren. Hilfsstoffe sorgen dafür, dass der Wirkstoff an den Wirkungsort gelangt." },
         { typ: "tabelle", kopf: ["Wirkungsweise", "Beispiel"], zeilen: [
           ["Proteindenaturierung", "Mittel mit Aldehyden oder Alkoholen"],
@@ -294,6 +302,7 @@ KURS.module.push({
       seite: "S. 35",
       inhalt: [
         { typ: "liste", titel: "Merke", punkte: [
+        { typ: "foto", id: "pexels-15771809", text: "Benutzte Instrumente werden gereinigt, desinfiziert und anschließend im Sterilisator aufbereitet." },
           "Desinfektionsmittel für Flächen und Instrumente sollten auch gegen Viren wirksam sein (viruzid).",
           "Bei der Anwendung besonders auf Einwirkzeit, Materialverträglichkeit und Konzentration achten.",
           "Desinfektionsmittel bleiben in der Originalverpackung und werden in keinem Fall umgefüllt oder aufgefüllt.",
@@ -315,6 +324,7 @@ KURS.module.push({
       seite: "S. 36–39",
       inhalt: [
         { typ: "text", text: "Das seit 2001 geltende Infektionsschutzgesetz (IfSG) verpflichtet Gemeinschaftseinrichtungen, ihre innerbetrieblichen Verfahren zur Infektionshygiene in einem Rahmenhygieneplan festzulegen. Ihm ist ein Reinigungs- und Desinfektionsplan beizufügen. Jeder Arbeitsschritt und alle Hygienemaßnahmen müssen darin ersichtlich sein." },
+        { typ: "foto", id: "pexels-8413090", text: "Im Hygieneplan wird schriftlich festgelegt, wer was wann womit reinigt und desinfiziert." },
         { typ: "ergaenzung", text: "Genauer: Piercingstudios sind keine Gemeinschaftseinrichtungen im Sinne des IfSG. Sie können aber nach § 36 Abs. 2 IfSG vom Gesundheitsamt überwacht werden, weil bei der Arbeit Erreger über Blut übertragen werden können. Den Hygieneplan verlangen die Landesvorschriften und die Gesundheitsämter, in Niedersachsen die Hygieneverordnung (Merkblatt des NLGA: „Hygieneplan erstellen“)." },
         { typ: "liste", titel: "Der Beispielplan im Kursbuch regelt", punkte: [
           "Räume: Handwaschplatz, Arbeitsbereich (arbeitstäglich feucht reinigen, bei Blut sofort desinfizieren), Toiletten",
@@ -410,6 +420,7 @@ KURS.module.push({
       seite: "S. 46–47",
       inhalt: [
         { typ: "text", text: "Die Sterilisierverpackung wird mit dem Datum der Sterilisation und der Chargennummer versehen. Es empfiehlt sich, Sterilgut in geschlossenen Schubladen aufzubewahren." },
+        { typ: "foto", id: "pexels-6629414", text: "Sterilgut und Instrumente werden geschützt, trocken und übersichtlich in geschlossenen Schubladen gelagert." },
         { typ: "tabelle", kopf: ["Lagerung", "Offenes Regal", "Geschlossene Schublade"], zeilen: [["Einzeln verpackt", "max. 48 Stunden", "max. 6 Monate"], ["Doppelt verpackt", "max. 48 Stunden", "max. 5 Jahre"]] },
         { typ: "ergaenzung", text: "Nach der Norm DIN 58953-8 gelten die 5 Jahre nur, wenn das Sterilgut zusätzlich in einer staubschützenden Lagerverpackung liegt. Im Zweifel gilt: geschützt im Schrank oder in der Schublade höchstens 6 Monate, offen nur zum alsbaldigen Gebrauch." },
         { typ: "liste", titel: "Funktionskontrolle (laut Kursbuch vorgeschrieben durch Medizinproduktegesetz und Berufsgenossenschaft; das MPG gilt seit 2021 nicht mehr, heute Medizinprodukterecht-Durchführungsgesetz und Medizinprodukte-Betreiberverordnung)", punkte: [

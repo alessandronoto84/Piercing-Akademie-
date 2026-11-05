@@ -17,6 +17,7 @@ window.KURS = window.KURS || { module: [] };
         seite: "S. 74",
         inhalt: [
           { typ: "text", text: "Zu jedem Piercing gibt es ein Datenblatt mit vier Angaben: wo es sitzt, welcher Ersteinsatz passt, welche Kanülenstärke (oder Stanze) du nimmst und womit du die Stelle hältst (Klemme, Nadelauffangrohr oder freihand)." },
+        { typ: "foto", id: "pexels-7651554", text: "Notizen und Checklisten auf dem Klemmbrett halten die wichtigsten Angaben zu einem Piercing fest." },
           { typ: "achtung", text: "Der Ersteinsatz braucht stets eine Überlänge von etwa 4 mm, weil der frische Stichkanal anschwellen kann. Er darf während der Heilung nie durch Kugeln oder Plättchen eingeengt werden." },
           { typ: "merke", text: "In den folgenden Lektionen lernst du jedes Piercing einzeln. Nach jeder Lektion fragt der Kurs die Datenblätter ab: Ersteinsatz, Kanüle und Klemme." }
         ],

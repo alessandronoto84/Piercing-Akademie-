@@ -1,4 +1,5 @@
-/* KI-generierte Titelbilder der Module (Symbolbilder, keine Fachabbildungen), erzeugt mit FLUX.1 [schnell] und FLUX.2 [klein] 4B (Apache-2.0).
+/* Titelbilder der Module. Modul 1, 6 und 8 sind seit 05.11.2026 echte, lizenzfreie Fotos (Feld "quelle"), weil KI-Schmuck nicht echt wirkte;
+   die übrigen sind KI-generierte Symbolbilder (keine Fachabbildungen), erzeugt mit FLUX.1 [schnell] und FLUX.2 [klein] 4B (Apache-2.0).
    Jedes Bild wurde vor dem Einbau auf KI-Fehler geprüft. Bildbeschreibungen und verworfene Versuche: KURS-RECHERCHE.md, Abschnitt 12.
    kurs.js zeigt die Bilder auf den Modulkarten und im Modulkopf, ohne sichtbaren KI-Hinweis (Entscheidung der Akademie, 26.10.2026). */
 window.KURS = window.KURS || { module: [] };
@@ -7,8 +8,8 @@ KURS.titelbilder = {
 "src": "inhalte/bilder/1.webp",
 "w": 960,
 "h": 540,
-"alt": "Arbeitsplatz auf steriler Abdeckung: Hautmarker, Sterilbeutel, Schale mit Ringen, Barbell, Hufeisenringe und schwarze Handschuhe",
-"ki": "FLUX.2 [klein] 4B über Cloudflare Workers AI"
+"alt": "Piercer mit Einweghandschuhen sticht unter einer Arbeitsleuchte ein Nasenpiercing",
+"quelle": "Pexels (Foto 2177017)"
 },
 "2": {
 "src": "inhalte/bilder/2.webp",
@@ -42,8 +43,8 @@ KURS.titelbilder = {
 "src": "inhalte/bilder/6.webp",
 "w": 960,
 "h": 540,
-"alt": "Titanschmuck auf Stein: Barbell, Curved Barbell, Labret und Ball Closure Ring",
-"ki": "FLUX.2 [klein] 4B über Cloudflare Workers AI"
+"alt": "Augenbrauen-Piercing mit Barbell aus Titan",
+"quelle": "Wikimedia Commons, „Titanium Piercing.JPG“, CC0"
 },
 "7": {
 "src": "inhalte/bilder/7.webp",
@@ -56,8 +57,8 @@ KURS.titelbilder = {
 "src": "inhalte/bilder/8.webp",
 "w": 960,
 "h": 540,
-"alt": "Ohr mit vier Kugelsteckern: Lobe, Upper Lobe, Tragus und Helix",
-"ki": "FLUX.2 [klein] 4B über Cloudflare Workers AI"
+"alt": "Ohr mit mehreren Piercings an Helix, Ohrmuschel und Ohrläppchen",
+"quelle": "Pexels (Foto 32275806)"
 },
 "9": {
 "src": "inhalte/bilder/9.webp",

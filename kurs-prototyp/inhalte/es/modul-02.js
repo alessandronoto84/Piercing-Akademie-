@@ -11,6 +11,7 @@ KURS.module.push({
       seite: "S. 1",
       inhalt: [
         { typ: "text", text: "Al perforar, el piercer causa al cliente una lesión corporal deseada: la apertura (perforación) de la piel." },
+        { typ: "foto", id: "pexels-6077447", text: "Jurídicamente, todo piercing se considera una intervención en la integridad física." },
         { typ: "text", text: "Según la ley, determinados tratamientos médicos también son una lesión corporal. Solo dejan de ser antijurídicos si el cliente o paciente ha dado su consentimiento. Lo mismo vale para el piercing." },
         { typ: "merke", text: "Por eso, antes de cada piercing hay que obtener el consentimiento del cliente, también de amigos y conocidos y también de clientes a los que ya hayas perforado antes." },
         { typ: "praxis", text: "Convierte el formulario de consentimiento en una rutina fija, como la desinfección de manos. Así nunca se dará la situación de «con este no hace falta»." }
@@ -27,6 +28,7 @@ KURS.module.push({
       seite: "S. 1–2",
       inhalt: [
         { typ: "text", text: "En el derecho penal alemán, la lesión corporal se regula en la sección 17 del Código Penal alemán (StGB) (§§ 223 a 231). El tipo básico lo describe el § 223 StGB." },
+        { typ: "foto", id: "pexels-18298074", text: "Las bases penales de las intervenciones en el cuerpo están reguladas en el Código Penal alemán." },
         { typ: "liste", titel: "§ 223 StGB, tal como lo cita el libro del curso", punkte: [
           "Quien maltrate físicamente a otra persona o dañe su salud será castigado con pena privativa de libertad de hasta cinco años o con multa.",
           "La tentativa es punible."
@@ -51,6 +53,7 @@ KURS.module.push({
       seite: "S. 2",
       inhalt: [
         { typ: "text", text: "Cortar el pelo o el vello de forma antijurídica también constituye una lesión corporal. Por eso, el formulario de consentimiento debe incluir la indicación de que, si es necesario, se rasurará la zona del cuerpo que se va a perforar." },
+        { typ: "foto", id: "pexels-8815849", text: "Las cuestiones de responsabilidad e indemnización se regulan a menudo por contrato y mediante seguros." },
         { typ: "text", text: "Si falta el formulario de consentimiento por escrito, los clientes, sus familiares o terceros (por ejemplo, abogados) pueden reclamar una indemnización al piercer." },
         { typ: "ergaenzung", text: "En términos jurídicos exactos: el consentimiento también es válido de forma verbal. La forma escrita es tu prueba. Si en un litigio no puedes demostrar el consentimiento y la información dada, te arriesgas a pagar una indemnización por daños y perjuicios y por daño moral (§§ 823, 253 del Código Civil alemán, BGB). Los reclama el propio cliente, normalmente a través de un abogado, y en el caso de menores, los padres; también el seguro médico puede recuperar los gastos de tratamiento." },
         { typ: "praxis", text: "Guarda los formularios firmados de forma ordenada. En caso de litigio, ese papel es tu prueba más importante." }
@@ -67,6 +70,7 @@ KURS.module.push({
       seite: "S. 2, 114",
       inhalt: [
         { typ: "text", text: "Asegúrate sin falta de que el cliente haya cumplido los 18 años. Si el cliente es menor de 18, hay que obtener el consentimiento de los padres o de los tutores legales." },
+        { typ: "foto", id: "pexels-6957233", text: "Con menores de edad, hay que contar con los padres antes de plantearse un piercing." },
         { typ: "text", text: "Por eso, el formulario de consentimiento de ejemplo del libro del curso pide la fecha de nacimiento y el número del documento de identidad. En el caso de menores y de adultos bajo tutela legal, firma además la persona con la patria potestad o el tutor legal." },
         { typ: "ergaenzung", text: "En la Piercing Akademie rige lo siguiente: los participantes tienen al menos 18 años y todos los modelos del día de práctica son mayores de edad." }
       ],
@@ -84,6 +88,7 @@ KURS.module.push({
       seite: "S. 114",
       inhalt: [
         { typ: "text", text: "En las págs. 114–115, el libro del curso incluye un ejemplo de formulario de consentimiento. Está dividido en partes claras." },
+        { typ: "foto", id: "pexels-48148", text: "El cliente firma el consentimiento por escrito antes de la intervención." },
         { typ: "tabelle", kopf: ["Parte", "Contenido"], zeilen: [
           ["Datos personales", "Nombre y apellidos, calle, código postal y localidad, teléfono, confirmación «mayor de 18 años», fecha de nacimiento, número del documento de identidad"],
           ["Tutores legales", "En menores y personas bajo tutela: nombre, dirección, número del documento de identidad, fecha y firma"],
@@ -106,6 +111,7 @@ KURS.module.push({
       seite: "S. 115",
       inhalt: [
         { typ: "text", text: "Incluso con una ejecución correcta existe el riesgo de efectos secundarios no deseados. El formulario de ejemplo los enumera con detalle para que el cliente sepa a qué se expone." },
+        { typ: "foto", id: "pexels-3985299", text: "En la conversación informativa se hablan abiertamente los posibles riesgos y complicaciones." },
         { typ: "liste", titel: "Extracto de la lista", punkte: [
           "Dolor, sensaciones anómalas, problemas circulatorios hasta la pérdida del conocimiento",
           "Inflamaciones, infecciones, reacción de rechazo, alergias, sangrados",
@@ -129,6 +135,7 @@ KURS.module.push({
       seite: "S. 1, 115",
       inhalt: [
         { typ: "text", text: "Si quieres publicar imágenes de un piercing que has hecho, necesitas el permiso por escrito del cliente. El formulario de ejemplo incluye para ello una sección propia para la web, las redes sociales y los banners publicitarios." },
+        { typ: "foto", id: "pexels-13926637", text: "Quien hace fotos a sus clientes necesita su consentimiento expreso." },
         { typ: "text", text: "En el formulario también se recogen datos de salud. Son categorías especiales de datos en el sentido del art. 9 del RGPD (DSGVO). Su tratamiento requiere un consentimiento explícito, que puede revocarse en cualquier momento. Tras la revocación, las imágenes ya no pueden utilizarse." },
         { typ: "ergaenzung", text: "Para el consentimiento de fotos, la base jurídica adecuada es el art. 6, apdo. 1, letra a, RGPD (consentimiento), no el interés legítimo de la letra f. Haz que un profesional del derecho revise tu formulario antes de usarlo en el estudio." }
       ],
@@ -145,6 +152,7 @@ KURS.module.push({
       seite: "S. 81, 83",
       inhalt: [
         { typ: "text", text: "A algunos piercings se les atribuye un efecto curativo: el daith ayudaría contra la migraña, y el piercing para alergias se sitúa sobre un punto de acupuntura y aliviaría las alergias." },
+        { typ: "foto", id: "pexels-6963602", text: "La publicidad en redes sociales no puede contener promesas de curación." },
         { typ: "achtung", text: "Como piercer, tienes prohibido hacer promesas de curación o usarlas en tu publicidad." },
         { typ: "ergaenzung", text: "La base jurídica es la Ley alemana de Publicidad de Productos Terapéuticos (Heilmittelwerbegesetz, HWG): se aplica también a tratamientos y procedimientos cuando la publicidad promete un efecto contra enfermedades, y prohíbe las promesas engañosas (§ 3 HWG). No hay pruebas científicas de que el daith ayude contra la migraña; solo hay testimonios aislados." },
         { typ: "praxis", text: "Si un cliente pregunta expresamente por el «piercing para la migraña», dile con honestidad: algunas personas lo cuentan, pero no puedes prometerlo. Perforas el daith como piercing decorativo." }

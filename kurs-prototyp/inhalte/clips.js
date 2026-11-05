@@ -8,6 +8,6 @@ KURS.clips = {
 "anatomie-modelle": { w: 832, h: 480, hoch: false, webm: true, standbild: true, dauer: "0:07" },
 "autoklav": { w: 832, h: 480, hoch: false, webm: true, standbild: true, dauer: "0:07" },
 "instrumente": { w: 832, h: 480, hoch: false, webm: true, standbild: true, dauer: "0:07" },
-"schmuck-titan": { w: 832, h: 480, hoch: false, webm: true, standbild: true, dauer: "0:07" },
+"schmuck-titan": { w: 832, h: 480, hoch: false, webm: true, standbild: true, dauer: "0:08" },
 "studio-raum": { w: 832, h: 480, hoch: false, webm: true, standbild: true, dauer: "0:04" }
 };

@@ -63,6 +63,7 @@ KURS.module.push({
       seite: "S. 89–92",
       inhalt: [
         { typ: "text", text: "An einigen Stellen im Gesicht liegen wichtige Gefäße und Nerven dicht unter der Haut. Das Kursbuch nennt diese Zonen ausdrücklich." },
+        { typ: "foto", id: "pexels-3861592", text: "Im Gesicht liegen Nerven und Gefäße dicht beieinander, was bestimmte Zonen zu Risikobereichen macht." },
         { typ: "tabelle", kopf: ["Piercing", "Risiko", "Regel"], zeilen: [
           ["Augenbraue", "Innen treten Nerven und Gefäße aus (Taubheit, Blutung)", "Nur im äußeren Drittel der Augenbraue stechen"],
           ["Cheek (Wange)", "Wichtige Arterien und Nerven, Gefahr einer Verunstaltung; Grübchen können bleiben", "Nur durch professionelle Piercer; als Anfänger ablehnen"],
@@ -117,6 +118,7 @@ KURS.module.push({
       seite: "S. 73, 90, 104",
       inhalt: [
         { typ: "text", text: "Mit einer Taschenlampe mit grünem Licht kannst du zum Beispiel das Ohr durchleuchten und so Blutgefäße erkennen. Stich nie durch ein Blutgefäß, sonst kann der Kunde stark bluten." },
+        { typ: "foto", id: "pexels-7479547", text: "Oberflächliche Blutgefäße sind oft gut sichtbar und müssen beim Stechen gemieden werden." },
         { typ: "liste", titel: "Weitere Stellen, an denen du besonders aufpasst", punkte: [
           "Zunge: das Zungenbändchen nicht verletzen (S. 90).",
           "Penis: nie durch die Schwellkörper stechen. Es drohen ernsthafte Schäden bis zum Verbluten des Kunden (S. 104)."
@@ -163,6 +165,7 @@ KURS.module.push({
       seite: "S. 50",
       inhalt: [
         { typ: "text", text: "Raucher, Alkoholiker und Diabetiker gehören zu den Risikogruppen: Bei ihnen treten Komplikationen im Heilungsprozess schneller auf." },
+        { typ: "foto", id: "pexels-6823478", text: "Erkrankungen wie Diabetes können die Wundheilung nach einem Piercing deutlich verzögern." },
         { typ: "text", text: "Mögliche Ursachen für ständiges Nachbluten sind laut Kursbuch Diabetes, Bindegewebsschwäche oder eine Bluterkrankheit. In diesem Fall sollte ein Arzt aufgesucht werden." },
         { typ: "ergaenzung", text: "Am häufigsten blutet es länger nach, wenn der Kunde blutverdünnende Medikamente nimmt (zum Beispiel ASS) oder eine Gerinnungsstörung hat. Diabetes verzögert vor allem die Wundheilung und erhöht das Infektionsrisiko." },
         { typ: "praxis", text: "Die Einverständniserklärung fragt Krankheiten und Medikamente ab. Lies diese Angaben vor dem Stich, nicht erst danach, und sprich Risikofaktoren offen an." }

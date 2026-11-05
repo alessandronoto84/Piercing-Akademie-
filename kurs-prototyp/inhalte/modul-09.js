@@ -12,6 +12,7 @@ KURS.module.push({
       seite: "S. 111",
       inhalt: [
         { typ: "schritte", start: 1, punkte: [
+        { typ: "foto", id: "pexels-4269203", text: "Ein freundlicher Empfang am Tresen ist der Beginn jedes Kundengesprächs." },
           "Der Kunde betritt das Piercingstudio.",
           "Begrüßung, Small Talk.",
           "Fragen, welche Piercings gewünscht sind, eventuell Angst nehmen.",
@@ -92,6 +93,7 @@ KURS.module.push({
       seite: "S. 113",
       inhalt: [
         { typ: "schritte", start: 22, punkte: [
+        { typ: "foto", id: "pexels-7579831", text: "Im Abschlussgespräch werden die Pflegeschritte für die kommenden Wochen in Ruhe erklärt." },
           "Eventuell mit Pflaster abkleben (Brustwarze, Bauchnabel).",
           "Bei Zungenpiercings einen Eiswürfel geben.",
           "Pflegemittel mitgeben und Pflegehinweise mündlich erklären.",
@@ -111,6 +113,7 @@ KURS.module.push({
       seite: "S. 26, 50, 113",
       inhalt: [
         { typ: "achtung", text: "Bekommt der Kunde während des Vorgangs einen Kreislaufabfall (immer nachfragen!), gib ihm Traubenzucker (zum Beispiel Dextro Energy) und etwas zu trinken. Lege ihn gegebenenfalls hin und lass ihn ruhen." },
+        { typ: "foto", id: "pexels-5979732", text: "Schwindel und Unwohlsein können Anzeichen für Kreislaufprobleme sein." },
         { typ: "ergaenzung", text: "Bewährt bei einem Kreislaufkollaps: flach hinlegen und die Beine hochlagern, damit das Blut zum Kopf zurückfließt. Traubenzucker und Getränk erst, wenn der Kunde wieder sicher schlucken kann." },
         { typ: "liste", titel: "Vorbereitet sein", punkte: [
           "Ein aktueller Erste-Hilfe-Kasten hängt gut sichtbar und schnell erreichbar im Studio.",

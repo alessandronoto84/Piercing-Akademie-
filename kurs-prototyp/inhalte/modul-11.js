@@ -13,6 +13,7 @@ KURS.module.push({
       entwurf: true,
       inhalt: [
         { typ: "text", text: "In Deutschland gibt es für Piercer keine geregelte Ausbildung und kein offiziell anerkanntes Gütesiegel. Ob und unter welchen Auflagen du Piercings anbieten darfst, entscheiden die Behörden vor Ort. Dieser Kurs zeigt dir, worauf es ankommt; die Klärung vor Ort ersetzt er nicht." },
+        { typ: "foto", id: "pexels-7821682", text: "Für die Gewerbeanmeldung sind mehrere Formulare auszufüllen." },
         { typ: "schritte", punkte: [
           "Gewerbe beim zuständigen Gewerbeamt anmelden.",
           "Das örtliche Gesundheitsamt kontaktieren: Anforderungen an Räume und Hygiene erfragen und nach dem Rahmenhygieneplan für Piercingstudios fragen (Kursbuch S. 36).",
@@ -52,6 +53,7 @@ KURS.module.push({
       entwurf: true,
       inhalt: [
         { typ: "liste", titel: "Das führst du schriftlich", punkte: [
+        { typ: "foto", id: "pexels-8376320", text: "Jeder Arbeitsschritt nach Hygieneplan wird schriftlich dokumentiert." },
           "Rahmenhygieneplan mit Reinigungs- und Desinfektionsplan (Beispiele im Kursbuch S. 37–39, mit dem Gesundheitsamt abstimmen)",
           "Sterilgut: jede Charge mit Sterilisierdatum und Chargennummer",
           "Prüfprotokolle des Autoklaven: tägliche Tests, halbjährliche Sporenproben, jährliche Geräteprüfung",
@@ -71,6 +73,7 @@ KURS.module.push({
       entwurf: true,
       inhalt: [
         { typ: "text", text: "Lass dich zu einer Betriebs- bzw. Berufshaftpflicht für Piercing beraten, bevor du den ersten Kunden stichst." },
+        { typ: "foto", id: "pexels-7580852", text: "Versicherungskosten und Preise wollen sorgfältig kalkuliert sein." },
         { typ: "liste", titel: "In die Preiskalkulation gehören", punkte: [
           "Material: Schmuck, Kanüle, Einmalmaterial, Pflegemittel",
           "Deine Arbeitszeit, inklusive Beratung, Einverständniserklärung und Aufbereitung",
@@ -87,6 +90,7 @@ KURS.module.push({
       seite: "S. 34, 56",
       inhalt: [
         { typ: "liste", punkte: [
+        { typ: "foto", id: "pexels-6612276", text: "Verbrauchsmaterial und Schmuck werden heute meist online bestellt." },
           "Ersteinsätze nur aus G23-Titan oder PTFE, mit Materialnachweis des Herstellers. Nach EU-Recht darf Schmuck für frische Piercings höchstens 0,2 µg Nickel pro cm² und Woche abgeben.",
           "Desinfektionsmittel aus der VAH-Liste mit nachgewiesener Wirksamkeit.",
           "Kanülen, Klemmen und Verbrauchsmaterial aus dem Fachhandel für medizinischen bzw. Studiobedarf."
@@ -103,6 +107,7 @@ KURS.module.push({
       seite: "Modul 2 und 8",
       inhalt: [
         { typ: "liste", punkte: [
+        { typ: "foto", id: "pexels-13068359", text: "Ein aufgeräumtes, helles Studio macht klare Regeln für alle sichtbar." },
           "Vor jedem Piercing eine schriftliche Einverständniserklärung (Modul 2).",
           "Alter prüfen: unter 18 nur mit Einverständnis der Erziehungsberechtigten, besser gar nicht.",
           "Keine Heilversprechen und keine Werbung damit.",

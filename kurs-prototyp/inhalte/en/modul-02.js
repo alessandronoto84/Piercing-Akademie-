@@ -11,6 +11,7 @@ KURS.module.push({
       seite: "S. 1",
       inhalt: [
         { typ: "text", text: "When piercing, the piercer inflicts intended bodily harm on the client: the opening (piercing) of the skin." },
+        { typ: "foto", id: "pexels-6077447", text: "Legally, every piercing counts as an interference with physical integrity." },
         { typ: "text", text: "Under the law, certain medical treatments are also bodily harm. They are only lawful if the client or patient has consented. The same applies to piercing." },
         { typ: "merke", text: "That is why the client’s consent must be obtained before every piercing, including from friends and acquaintances and from clients you have pierced before." },
         { typ: "praxis", text: "Make the consent form a fixed routine, just like hand disinfection. That way you will never catch yourself thinking “we can skip it with him”." }
@@ -27,6 +28,7 @@ KURS.module.push({
       seite: "S. 1–2",
       inhalt: [
         { typ: "text", text: "In German criminal law, bodily harm is regulated in Chapter 17 of the German Criminal Code (StGB) (§§ 223 to 231). The basic offense is described in § 223 StGB." },
+        { typ: "foto", id: "pexels-18298074", text: "The criminal law basis for procedures on the body is set out in the German Criminal Code." },
         { typ: "liste", titel: "§ 223 StGB, as quoted in the course book", punkte: [
           "Whoever physically abuses another person or damages their health incurs a penalty of imprisonment for a term not exceeding five years or a fine.",
           "The attempt is punishable."
@@ -51,6 +53,7 @@ KURS.module.push({
       seite: "S. 2",
       inhalt: [
         { typ: "text", text: "Unlawfully cutting someone’s hair also constitutes bodily harm. That is why the consent form must include a note that the area to be pierced may be shaved if necessary." },
+        { typ: "foto", id: "pexels-8815849", text: "Questions of liability and damages are often settled by contract and through insurance." },
         { typ: "text", text: "If there is no written consent form, clients, their relatives or third parties (for example lawyers) can claim damages from the piercer." },
         { typ: "ergaenzung", text: "Strictly speaking, consent is also valid when given verbally. The written form is your proof. If, in a dispute, you cannot prove that the client consented and was properly informed, you face damages and compensation for pain and suffering (§§ 823, 253 of the German Civil Code, BGB). These are claimed by the client themselves, usually through a lawyer, or by the parents in the case of minors; the health insurer can also recover treatment costs." },
         { typ: "praxis", text: "File the signed forms carefully. In a dispute, the paper is your most important proof." }
@@ -67,6 +70,7 @@ KURS.module.push({
       seite: "S. 2, 114",
       inhalt: [
         { typ: "text", text: "Make absolutely sure that the client has reached the age of 18. If the client is under 18, the consent of the parents or legal guardians must be obtained." },
+        { typ: "foto", id: "pexels-6957233", text: "With minors, the parents must be involved before a piercing can be considered." },
         { typ: "text", text: "The sample consent form in the course book therefore asks for the date of birth and ID number. For minors and for adults under legal guardianship, the parent or guardian, or the court-appointed legal representative, also signs." },
         { typ: "ergaenzung", text: "At the Piercing Akademie, the rule is: participants are at least 18 years old, and all models on the practice day are adults." }
       ],
@@ -84,6 +88,7 @@ KURS.module.push({
       seite: "S. 114",
       inhalt: [
         { typ: "text", text: "On pp. 114–115, the course book contains a sample consent form. It is divided into clear sections." },
+        { typ: "foto", id: "pexels-48148", text: "The client signs the written consent form before the procedure." },
         { typ: "tabelle", kopf: ["Section", "Content"], zeilen: [
           ["Personal details", "First and last name, street, ZIP code and town, phone, confirmation “at least 18 years old”, date of birth, ID number"],
           ["Legal guardians", "For minors and persons under guardianship: name, address, ID number, date and signature"],
@@ -106,6 +111,7 @@ KURS.module.push({
       seite: "S. 115",
       inhalt: [
         { typ: "text", text: "Even when performed properly, there is a risk of unwanted side effects. The sample form lists them in detail so that the client knows what they are getting into." },
+        { typ: "foto", id: "pexels-3985299", text: "Possible risks and complications are discussed openly in the information talk." },
         { typ: "liste", titel: "Extract from the list", punkte: [
           "Pain, abnormal sensations, circulatory problems up to loss of consciousness",
           "Inflammation, infection, rejection, allergies, bleeding",
@@ -129,6 +135,7 @@ KURS.module.push({
       seite: "S. 1, 115",
       inhalt: [
         { typ: "text", text: "If you want to publish pictures of a piercing you have done, you need the client’s written permission. The sample form contains a separate section for this covering the website, social media and advertising banners." },
+        { typ: "foto", id: "pexels-13926637", text: "Anyone who takes photos of clients needs their explicit consent." },
         { typ: "text", text: "The form also collects health data. These are special categories of data within the meaning of Art. 9 of the GDPR (DSGVO). Processing them requires explicit consent, which can be withdrawn at any time. After withdrawal, the pictures may no longer be used." },
         { typ: "ergaenzung", text: "For photo consent, Art. 6 (1) (a) GDPR (consent) is the appropriate legal basis, not legitimate interest under point (f). Have your form checked by a legal professional before using it in the studio." }
       ],
@@ -145,6 +152,7 @@ KURS.module.push({
       seite: "S. 81, 83",
       inhalt: [
         { typ: "text", text: "Some piercings are said to have a healing effect: the daith is supposed to help with migraine, and the allergy piercing sits on an acupuncture point and is supposed to relieve allergies." },
+        { typ: "foto", id: "pexels-6963602", text: "Advertising on social media must not contain promises of healing." },
         { typ: "achtung", text: "As a piercer, you are prohibited from making health claims or using them in advertising." },
         { typ: "ergaenzung", text: "The legal basis is the German Therapeutic Products Advertising Act (Heilmittelwerbegesetz, HWG): it also applies to treatments and procedures if the advertising promises an effect against diseases, and it prohibits misleading promises (§ 3 HWG). There is no scientific evidence that a daith helps against migraine; there are only anecdotal reports." },
         { typ: "praxis", text: "If a client specifically asks for the “migraine piercing”, tell them honestly: some people report this, but you can’t promise it. You pierce the daith as a decorative piercing." }

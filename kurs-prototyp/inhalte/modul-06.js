@@ -54,6 +54,7 @@ KURS.module.push({
       seite: "S. 55",
       inhalt: [
         { typ: "text", text: "Es gibt unzählige Stähle. Als Schmuck verwenden Piercer nur drei: Komposition D Implantatstahl, Chirurgenstahl 316 LVM und, am häufigsten, Chirurgenstahl 316L. Diese Stähle erfüllen laut EU-Nickelrichtlinie alle Kriterien, um als Zweiteinsatz (nach vollständiger Abheilung) weltweit und zeitlich unbegrenzt getragen zu werden." },
+        { typ: "foto", id: "pexels-7787977", text: "Chirurgenstahl ist ein bewährter Werkstoff für Instrumente, als Schmuckmaterial aber nur eingeschränkt geeignet." },
         { typ: "text", text: "In der Medizin wird 316L zum Beispiel für Knochenschrauben, Körpernadeln, Knochenplatten, Nähte, Klammern und als Herzschrittmacherelektrode eingesetzt." },
         { typ: "achtung", text: "Chirurgenstahl 316L enthält 10 bis 14 Prozent Nickel und ist als Ersteinsatz ungeeignet. Als Zweiteinsatz ist er meistens bedenkenlos." }
       ],
@@ -153,7 +154,7 @@ KURS.module.push({
       titel: "Schmuckformen: Stäbe und Stecker",
       seite: "S. 61–62",
       inhalt: [
-        { typ: "video", id: "schmuck-titan", text: "Ersteinsätze aus Titan: gerader Barbell, Curved Barbell, Labret und Ball Closure Ring.", schleife: true },
+        { typ: "video", id: "schmuck-titan", text: "Augenbrauen-Piercing mit Barbell aus Titan: glatte, polierte Kugeln ohne Kanten.", schleife: true },
         { typ: "text", text: "Für verschiedene Bereiche des Körpers werden verschiedene Schmuckarten verwendet, beim Ersteinsatz wie beim Zweiteinsatz." },
         { typ: "tabelle", kopf: ["Schmuck", "Beschreibung", "Typischer Einsatz"], zeilen: [
           ["Curved Barbell (Banane)", "Leicht gebogener Stab mit Kugeln", "Bauchnabel, Augenbraue, Rook"],

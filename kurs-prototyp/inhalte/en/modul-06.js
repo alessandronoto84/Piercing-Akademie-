@@ -54,6 +54,7 @@ KURS.module.push({
       seite: "S. 55",
       inhalt: [
         { typ: "text", text: "There are countless types of steel. Piercers use only three for jewelry: Composition D implant steel, surgical steel 316 LVM and, most commonly, surgical steel 316L. According to the EU Nickel Directive, these steels meet all the criteria to be worn as second jewelry (after complete healing) worldwide and for an unlimited time." },
+        { typ: "foto", id: "pexels-7787977", text: "Surgical steel is a proven material for instruments, but only partly suitable for jewelry." },
         { typ: "text", text: "In medicine, 316L is used, for example, for bone screws, body needles, bone plates, sutures, staples and as a pacemaker electrode." },
         { typ: "achtung", text: "Surgical steel 316L contains 10 to 14 percent nickel and is unsuitable as initial jewelry. As second jewelry it is usually safe." }
       ],
@@ -153,7 +154,7 @@ KURS.module.push({
       titel: "Jewelry types: bars and studs",
       seite: "S. 61–62",
       inhalt: [
-        { typ: "video", id: "schmuck-titan", text: "Titanium initial jewelry: straight barbell, curved barbell, labret and ball closure ring.", schleife: true },
+        { typ: "video", id: "schmuck-titan", text: "Eyebrow piercing with a titanium barbell: smooth, polished balls without edges.", schleife: true },
         { typ: "text", text: "Different types of jewelry are used for different areas of the body, both as initial jewelry and as second jewelry." },
         { typ: "tabelle", kopf: ["Jewelry", "Description", "Typical use"], zeilen: [
           ["Curved barbell (banana)", "Slightly curved bar with balls", "Navel, eyebrow, Rook"],

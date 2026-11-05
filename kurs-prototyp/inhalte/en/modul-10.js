@@ -12,6 +12,7 @@ KURS.module.push({
       seite: "S. 48",
       inhalt: [
         { typ: "text", text: "After piercing, correct treatment and care by the client themselves is essential for healing to go as well as possible. That is why you must always tell the client how to treat and care for the freshly pierced piercing." },
+        { typ: "foto", id: "pexels-5468634", text: "Gentle, careful cleaning is part of the daily care routine." },
         { typ: "merke", text: "Give the client the right aftercare product and the aftercare instructions in writing to take home right away." }
       ],
       fragen: [
@@ -24,6 +25,7 @@ KURS.module.push({
       seite: "S. 48",
       inhalt: [
         { typ: "tabelle", kopf: ["Aftercare product", "Use"], zeilen: [
+        { typ: "foto", id: "pexels-4202383", text: "Clean single-use cotton pads are among the basic supplies for piercing aftercare." },
           ["Prontolind (polihexanide)", "Suitable for all piercings, including cartilage"],
           ["Octenisept (octenidine)", "Do not use on cartilage: in laboratory studies, octenidine damages cartilage cells"],
           ["Plain saline solution", "Suitable for all piercings"],
@@ -42,6 +44,7 @@ KURS.module.push({
       seite: "S. 49",
       inhalt: [
         { typ: "text", text: "Everyone heals differently, and a number of factors affect healing time. The following times are guide values for a piercing that heals optimally and without complications." },
+        { typ: "foto", id: "pexels-6408282", text: "A calendar helps keep track of a piercing's healing time." },
         { typ: "tabelle", kopf: ["Piercing", "Healing time"], zeilen: [
           ["Cartilage piercings", "at least 3 months"], ["Lobe", "approx. 2 months"], ["Navel", "approx. 4 to 6 months"], ["Labret", "approx. 1 to 2 months"], ["Lip frenulum", "approx. 1 month"], ["Tongue", "approx. 1 month"], ["Nipple", "3 to 12 months"], ["Eyebrow", "approx. 1 month"], ["Genital", "2 to 3 months"]
         ] },
@@ -64,6 +67,7 @@ KURS.module.push({
       seite: "S. 50",
       inhalt: [
         { typ: "tabelle", kopf: ["Problem", "What to do"], zeilen: [
+        { typ: "foto", id: "pexels-5146534", text: "Sterile compresses and plasters are part of the care for after-bleeding." },
           ["Lack of epithelialization", "See a doctor after 10 to 14 days. During epithelialization, epithelial cells migrate in from the wound edge and cover the wound; underneath, the granulation tissue matures into firm scar tissue. The wound gets smaller."],
           ["Rebleeding", "If bleeding keeps recurring, see a doctor. Possible causes according to the course book: diabetes, connective tissue weakness, bleeding disorder; also blood-thinning medication."]
         ] }

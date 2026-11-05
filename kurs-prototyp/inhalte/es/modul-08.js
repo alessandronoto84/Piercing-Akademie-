@@ -17,6 +17,7 @@ window.KURS = window.KURS || { module: [] };
         seite: "S. 74",
         inhalt: [
           { typ: "text", text: "Cada piercing tiene una ficha técnica con cuatro datos: dónde se ubica, qué joya inicial corresponde, qué calibre de cánula (o punch) usas y con qué sujetas la zona (pinza, tubo receptor o a mano alzada)." },
+        { typ: "foto", id: "pexels-7651554", text: "Las notas y listas de control en la carpeta recogen los datos más importantes de un piercing." },
           { typ: "achtung", text: "La joya inicial necesita siempre una longitud extra de unos 4 mm, porque el canal de la perforación recién hecho puede hincharse. Durante la cicatrización nunca debe quedar oprimido por bolas o discos." },
           { typ: "merke", text: "En las siguientes lecciones aprendes cada piercing por separado. Después de cada lección, el curso te pregunta por las fichas técnicas: joya inicial, cánula y pinza." }
         ],

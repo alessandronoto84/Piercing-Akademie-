@@ -11,6 +11,7 @@ KURS.module.push({
       seite: "S. 7",
       inhalt: [
         { typ: "text", text: "Esta pregunta te la harán muchas veces en el futuro. No tiene una respuesta clara: cada persona percibe el dolor de forma distinta, y no se sabe con exactitud cómo discurren las vías y terminaciones nerviosas. La experiencia muestra que algunos piercings son más dolorosos que otros, pero no existe una regla general." },
+        { typ: "foto", id: "pexels-3946829", text: "Muchos clientes llegan preguntándose cuánto dolerá la intervención." },
         { typ: "text", text: "El dolor es una percepción sensorial compleja, a menudo con un fuerte componente psicológico. El término técnico es algesia." },
         { typ: "praxis", text: "Responde con sinceridad y calma: «Es un momento breve e intenso, y cada persona lo siente de forma distinta». Quien no escucha falsas promesas confía más en ti." }
       ],
@@ -26,6 +27,7 @@ KURS.module.push({
       seite: "S. 7–8",
       inhalt: [
         { typ: "text", text: "Para percibir el dolor se necesitan receptores del dolor (nociceptores) y una transmisión sin alteraciones hacia el cerebro (sistema nervioso central). Los receptores del dolor son, en su mayoría, terminaciones nerviosas libres." },
+        { typ: "foto", id: "pexels-13765731", text: "Incluso un roce leve es percibido por los receptores de la piel y transmitido." },
         { typ: "tabelle", kopf: ["Estímulo", "Ejemplos"], zeilen: [["Térmico", "Calor, frío"], ["Mecánico", "Golpes, cortes, pinchazos, presión intensa"], ["Químico", "Ácidos, álcalis"]] },
         { typ: "merke", text: "Desde 2020, la International Association for the Study of Pain (IASP) define el dolor como «una experiencia sensorial y emocional desagradable asociada o similar a la asociada con un daño tisular real o potencial». El libro del curso cita la versión anterior, según la cual también cuenta como dolor aquel que la persona afectada describe como si su causa fuera un daño tisular." },
         { typ: "text", text: "En casos poco frecuentes, los clientes sienten dolor incluso antes de la perforación propiamente dicha, solo con que se les toque la piel. Por tanto, el dolor también puede sentirse sin daño físico, por ejemplo como dolor anticipatorio causado por el miedo." }
@@ -43,6 +45,7 @@ KURS.module.push({
       seite: "S. 8–9",
       inhalt: [
         { typ: "schritte", punkte: [
+        { typ: "foto", id: "pexels-5624170", text: "El dolor surge cuando el tejido se irrita o se lesiona y las terminaciones nerviosas envían señales." },
           "La lesión del tejido libera ATP, protones, radicales de oxígeno, potasio y ácido araquidónico.",
           "La enzima ciclooxigenasa (COX-1 en las células endoteliales, COX-2 en los leucocitos que migran al tejido) transforma el ácido araquidónico en prostaglandina E2. Las cininas del endotelio lesionado se convierten en bradicinina.",
           "Los mastocitos liberan sus gránulos (desgranulación), entre ellos histamina.",
@@ -89,6 +92,7 @@ KURS.module.push({
       seite: "S. 11–12",
       inhalt: [
         { typ: "text", text: "Durante la transmisión en la médula espinal, el cuerpo puede atenuar la percepción del dolor con sustancias propias (endorfinas). Algunos analgésicos, por ejemplo los opiáceos, actúan en este punto." },
+        { typ: "foto", id: "pexels-7582560", text: "La anestesia local inyectada corresponde a un médico y no está permitida en un estudio de piercing." },
         { typ: "achtung", text: "En el piercing es poco habitual, y en Alemania está prohibido, usar anestésicos que requieren receta médica, por ejemplo a base de opiáceos. La anestesia regional de la médula espinal, de plexos nerviosos o de nervios individuales solo puede realizarla un médico." },
         { typ: "tabelle", kopf: ["Procedimiento", "Efecto", "Quién"], zeilen: [
           ["Anestesia general", "Actúa sobre el cerebro", "Solo un médico especialista (anestesiólogo)"],
@@ -112,6 +116,7 @@ KURS.module.push({
       seite: "S. 13",
       inhalt: [
         { typ: "text", text: "Ante todo, el piercer con experiencia intenta quitarle el miedo al cliente y crear un ambiente tranquilo y armonioso. En el caso ideal, el cliente pierde el miedo y se le puede perforar sin anestesia." },
+        { typ: "foto", id: "pexels-6663469", text: "Las pomadas anestésicas se aplican sobre la piel y solo actúan en la superficie." },
         { typ: "tabelle", kopf: ["Producto", "Efecto", "Observación"], zeilen: [
           ["Espray de frío (p. ej., cloruro de etilo)", "El frío intenso y breve insensibiliza las terminaciones nerviosas durante poco tiempo", "Actúa de inmediato"],
           ["Pomada de lidocaína (Xylocaína)", "De farmacia, sin receta o con receta según el preparado; se absorbe bien a través de la mucosa (boca, zona íntima), también disponible en espray", "Permitida según la Academia, pero no recomendada"]
@@ -132,6 +137,7 @@ KURS.module.push({
       seite: "S. 14",
       inhalt: [
         { typ: "tabelle", kopf: ["Situación", "Posibles efectos secundarios"], zeilen: [
+        { typ: "foto", id: "pexels-13005383", text: "El picor y la irritación de la piel pueden indicar una intolerancia." },
           ["Si se ingiere", "Mareo, inquietud, trastornos gastrointestinales, reacciones alérgicas, aumento de la temperatura"],
           ["Sobre la piel", "en casos poco frecuentes, reacciones de hipersensibilidad"],
           ["En las mucosas", "ocasionalmente hinchazón en la zona de la faringe y la laringe, muy rara vez ronquera"],
@@ -151,6 +157,7 @@ KURS.module.push({
       seite: "S. 14",
       inhalt: [
         { typ: "liste", punkte: [
+        { typ: "foto", id: "pexels-5452239", text: "Si se toman medicamentos con regularidad, hay que tener en cuenta posibles interacciones." },
           "Con principios activos que influyen en el ritmo o la frecuencia cardíaca (antiarrítmicos, betabloqueantes, bloqueantes de los canales de calcio), el efecto de la lidocaína sobre el corazón puede aumentar o disminuir.",
           "Otros anestésicos, los betabloqueantes antihipertensivos (propranolol, metoprolol, nadolol), diltiazem, verapamilo, cimetidina, amiodarona, fluvoxamina y sustancias vasoconstrictoras como la adrenalina o la noradrenalina potencian el efecto. Con ello aumenta el riesgo de efectos secundarios.",
           "Junto con alcaloides del cornezuelo o epinefrina, la tensión arterial puede bajar de forma peligrosa.",
@@ -172,6 +179,7 @@ KURS.module.push({
       seite: "S. 15",
       inhalt: [
         { typ: "schritte", punkte: [
+        { typ: "foto", id: "pexels-5563658", text: "Las pomadas se aplican solo con guantes y en la cantidad prevista." },
           "El producto no debe entrar en los ojos ni aplicarse sobre piel lesionada. Si ocurre: enjuagar de inmediato con agua corriente.",
           "Aplicar la pomada con un bastoncillo de algodón antes de la intervención.",
           "Esperar unos minutos hasta que haga pleno efecto.",

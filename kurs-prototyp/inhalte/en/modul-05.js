@@ -11,6 +11,7 @@ KURS.module.push({
       seite: "S. 16",
       inhalt: [
         { typ: "merke", text: "“Hygiene is the science of preventing disease and of maintaining and strengthening health.”" },
+        { typ: "foto", id: "pexels-7789603", text: "A tidy treatment room that is easy to clean is the basis of every hygiene measure." },
         { typ: "liste", titel: "Hygiene measures include", punkte: [
           "(Sterile) disposable gloves, disposable face mask and safety goggles",
           "Surface and equipment disinfectants",
@@ -38,6 +39,7 @@ KURS.module.push({
       seite: "S. 17–18",
       inhalt: [
         { typ: "text", text: "Hand hygiene is one of the most important measures for preventing infections. In everyday work, the piercer’s hands are constantly in contact with clients and objects; this is how pathogens can be transmitted." },
+        { typ: "foto", id: "pexels-7298694", text: "Short natural nails without polish and hands without jewelry are a prerequisite for effective hand hygiene." },
         { typ: "liste", titel: "Aims", punkte: ["Preventing the spread of contamination from the skin", "Removing or killing temporary (transient) microorganisms", "Reducing the permanently present (resident) skin flora", "Removing dirt", "Protecting and caring for the hands"] },
         { typ: "schritte", titel: "Prerequisites for effective hygiene", punkte: [
           "No jewelry, watches or rings on hands and forearms.",
@@ -79,6 +81,7 @@ KURS.module.push({
       seite: "S. 21",
       inhalt: [
         { typ: "text", text: "The purpose of surgical hand disinfection is to destroy the transient skin flora and reduce the resident skin flora. It is carried out before surgical procedures. Although the surgeon wears sterile gloves, disinfection prevents germs from being transmitted via the glove cuff." },
+        { typ: "foto", id: "pexels-8538704", text: "Before hand disinfection, enough disinfectant is put into the cupped hand." },
         { typ: "text", text: "Prerequisite: fingernails cut short and round, no injuries to the nail bed. If needed, there are disinfected plastic brushes for the fingernails." },
         { typ: "schritte", punkte: [
           "Put disinfectant into the dry, clean hand; operate the dispenser with your elbow.",
@@ -100,6 +103,7 @@ KURS.module.push({
       seite: "S. 22",
       inhalt: [
         { typ: "text", text: "As a rule, the washing phase before surgical hand disinfection can be omitted. If hands look clean, hand washing is no longer generally necessary, because it reduces the effect of alcohol-based disinfectants. Before starting work, however, hand washing is still mandatory, because alcohol is not sufficiently effective against bacterial spores." },
+        { typ: "foto", id: "pexels-9145340", text: "Hand washing removes dirt but does not replace hand disinfection." },
         { typ: "tabelle", kopf: ["Skin flora", "What it is", "Aim"], zeilen: [
           ["Transient skin flora", "Temporary colonization by organisms foreign to the skin, including pathogens", "Largely remove by washing, kill by disinfection"],
           ["Resident skin flora", "The body’s own flora, protects against pathogens", "Do not destroy, only reduce"]
@@ -119,6 +123,7 @@ KURS.module.push({
       seite: "S. 23–24",
       inhalt: [
         { typ: "text", text: "Hand washing means washing the hands with water and liquid soap. Before and after work it is sufficient as a hygiene measure; in most situations, however, hygienic hand disinfection with an alcohol-based product is preferable." },
+        { typ: "foto", id: "pexels-545014", text: "When washing hands, all surfaces are lathered thoroughly with washing lotion and rinsed." },
         { typ: "liste", titel: "When to wash", punkte: ["before starting and after finishing work", "when the hands are visibly dirty", "when the hands have been exposed to spore-forming organisms", "after using the toilet", "if hands are sweaty or sticky"] },
         { typ: "schritte", titel: "In five steps", punkte: ["Wet your hands with lukewarm water.", "Take liquid soap from a dispenser or pump and lather it with water.", "If necessary, clean under the fingernails with a soft brush.", "Rinse your hands carefully until no liquid soap is left on them.", "Dry thoroughly with a disposable towel."] },
         { typ: "liste", titel: "Avoid", punkte: ["water that is too hot: removes the skin’s natural oily film", "intensive brushing: damages the upper layers of the skin", "alkaline soap (bar soap): disrupts the skin’s acid mantle", "washing for too long", "insufficient rinsing", "disposable towels that are too rough", "insufficient drying"] }
@@ -137,6 +142,7 @@ KURS.module.push({
       seite: "S. 25",
       inhalt: [
         { typ: "text", text: "Even operating a disinfectant dispenser correctly has to be learned. Contact with dispensers, bottles and wash stations carries an increased risk of transmitting pathogens. Touching should therefore be avoided: the wash station equipment must be operable without hand contact." },
+        { typ: "foto", id: "pexels-3884109", text: "A washing station with wall dispensers allows hand hygiene without the hands touching anything." },
         { typ: "liste", punkte: [
           "Easily accessible washing facility with dispensers",
           "Basin with cold and hot water (for example a single-lever mixer faucet)",
@@ -199,6 +205,7 @@ KURS.module.push({
       entwurf: true,
       inhalt: [
         { typ: "text", text: "When piercing, you come into contact with blood. Hepatitis B, hepatitis C and HIV can be transmitted through blood, most often through a needlestick injury with a used cannula. That’s why you protect yourself twice over: by working safely and by getting vaccinated." },
+        { typ: "foto", id: "pexels-5207020", text: "Hepatitis B vaccination is part of the protection against infections through blood contact." },
         { typ: "liste", titel: "Prevention", punkte: [
           "Get vaccinated against hepatitis B and have a doctor check that the vaccination has worked (antibody titer). The hygiene guideline for tattooing and piercing recommends the vaccination for everyone who pierces.",
           "There is no vaccination against hepatitis C and HIV. Here, only gloves, safe working and immediate sharps disposal protect you.",
@@ -251,6 +258,7 @@ KURS.module.push({
       seite: "S. 30–31",
       inhalt: [
         { typ: "liste", titel: "Requirements for disinfectants", punkte: ["reduce the number of germs quickly and comprehensively", "achieve sufficient penetration depth", "also work in the presence of organic material", "have only low systemic toxicity", "be tolerated by skin, mucous membranes and open wounds", "have a long shelf life and at the same time be biodegradable", "have little odor"] },
+        { typ: "foto", id: "pexels-4099258", text: "Disinfectants only work if they wet the surface completely and are left on long enough." },
         { typ: "text", text: "Disinfectants have a denaturing effect: they alter the protein structures of the microorganisms and destroy them. Some additionally damage the lipid membranes (for example the envelope of viruses) or the nucleic acids. Excipients ensure that the active substance reaches the site of action." },
         { typ: "tabelle", kopf: ["Mode of action", "Example"], zeilen: [
           ["Protein denaturation", "Products with aldehydes or alcohols"],
@@ -294,6 +302,7 @@ KURS.module.push({
       seite: "S. 35",
       inhalt: [
         { typ: "liste", titel: "Remember", punkte: [
+        { typ: "foto", id: "pexels-15771809", text: "Used instruments are cleaned, disinfected and then reprocessed in the steriliser." },
           "Disinfectants for surfaces and instruments should also be effective against viruses (virucidal).",
           "When using them, pay particular attention to contact time, material compatibility and concentration.",
           "Disinfectants stay in their original packaging and are never decanted or topped up.",
@@ -315,6 +324,7 @@ KURS.module.push({
       seite: "S. 36–39",
       inhalt: [
         { typ: "text", text: "The German Infection Protection Act (Infektionsschutzgesetz, IfSG), in force since 2001, obliges communal facilities to set out their internal infection hygiene procedures in a framework hygiene plan. A cleaning and disinfection plan must be attached to it. It must set out every work step and all hygiene measures." },
+        { typ: "foto", id: "pexels-8413090", text: "The hygiene plan sets out in writing who cleans and disinfects what, when and with what." },
         { typ: "ergaenzung", text: "More precisely: piercing studios are not communal facilities within the meaning of the IfSG. However, under § 36 (2) IfSG they can be monitored by the local public health office (Gesundheitsamt), because pathogens can be transmitted via blood during the work. The hygiene plan is required by state regulations and the public health offices; in Niedersachsen (Lower Saxony) by the state hygiene ordinance, the Hygieneverordnung (NLGA information sheet: “Hygieneplan erstellen”, i.e. creating a hygiene plan)." },
         { typ: "liste", titel: "The sample plan in the course book covers", punkte: [
           "Rooms: hand-wash station, work area (damp-clean every working day, disinfect immediately if there is blood), toilets",
@@ -410,6 +420,7 @@ KURS.module.push({
       seite: "S. 46–47",
       inhalt: [
         { typ: "text", text: "The sterilization packaging is marked with the date of sterilization and the batch number. It is advisable to store sterile goods in closed drawers." },
+        { typ: "foto", id: "pexels-6629414", text: "Sterile goods and instruments are stored protected, dry and well organised in closed drawers." },
         { typ: "tabelle", kopf: ["Storage", "Open shelf", "Closed drawer"], zeilen: [["Single-wrapped", "max. 48 hours", "max. 6 months"], ["Double-wrapped", "max. 48 hours", "max. 5 years"]] },
         { typ: "ergaenzung", text: "According to the standard DIN 58953-8, the 5 years only apply if the sterile goods are additionally kept in dust-protective storage packaging. If in doubt: protected in a cupboard or drawer for at most 6 months, on an open shelf only for immediate use." },
         { typ: "liste", titel: "Function checks (according to the course book prescribed by the Medical Devices Act (MPG) and the statutory accident insurance (Berufsgenossenschaft); the MPG has not applied since 2021, today: Medical Devices Law Implementation Act (MPDG) and Medical Devices Operator Ordinance (MPBetreibV))", punkte: [

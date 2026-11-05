@@ -11,6 +11,7 @@ KURS.module.push({
       seite: "S. 7",
       inhalt: [
         { typ: "text", text: "You will be asked this question a lot in the future. There is no clear answer to it: everyone perceives pain differently, and nobody knows exactly how the nerve pathways and nerve endings run. Experience shows that some piercings are more painful than others, but there is no rule of thumb." },
+        { typ: "foto", id: "pexels-3946829", text: "Many clients arrive wondering how painful the procedure will be." },
         { typ: "text", text: "Pain is a complex sensory perception, often with a strong psychological component. The technical term is algesia." },
         { typ: "praxis", text: "Answer honestly and calmly: “It’s a short, distinct moment, and everyone feels it differently.” Clients who don’t hear false promises trust you more." }
       ],
@@ -26,6 +27,7 @@ KURS.module.push({
       seite: "S. 7–8",
       inhalt: [
         { typ: "text", text: "The prerequisites for perceiving pain are pain receptors (nociceptors) and undisturbed transmission to the brain (central nervous system). Pain receptors are mostly free nerve endings." },
+        { typ: "foto", id: "pexels-13765731", text: "Even a light touch is detected by receptors in the skin and passed on." },
         { typ: "tabelle", kopf: ["Stimulus", "Examples"], zeilen: [["Thermal", "Heat, cold"], ["Mechanical", "Blows, cuts, punctures, strong pressure"], ["Chemical", "Acids, alkalis"]] },
         { typ: "merke", text: "Since 2020, the International Association for the Study of Pain (IASP) has defined pain as “an unpleasant sensory and emotional experience associated with, or resembling that associated with, actual or potential tissue damage”. The course book quotes the older version, under which pain also counts if those affected describe it as though tissue damage were the cause." },
         { typ: "text", text: "In rare cases, clients feel pain even before the actual piercing, just from the skin being touched. So pain can also be felt without any physical damage, for example as anticipatory pain caused by fear." }
@@ -43,6 +45,7 @@ KURS.module.push({
       seite: "S. 8–9",
       inhalt: [
         { typ: "schritte", punkte: [
+        { typ: "foto", id: "pexels-5624170", text: "Pain arises when tissue is irritated or injured and nerve endings send signals." },
           "The tissue injury releases ATP, protons, oxygen radicals, potassium and arachidonic acid.",
           "The enzyme cyclooxygenase (COX-1 in the endothelial cells, COX-2 in migrating leukocytes) converts the arachidonic acid into prostaglandin E2. Kinins from the injured endothelium become bradykinin.",
           "Mast cells release their granules (degranulation), including histamine.",
@@ -89,6 +92,7 @@ KURS.module.push({
       seite: "S. 11–12",
       inhalt: [
         { typ: "text", text: "While signals are being relayed in the spinal cord, the body can dampen the perception of pain with its own substances (endorphins). Some painkillers, for example opiates, act at this point." },
+        { typ: "foto", id: "pexels-7582560", text: "Local anaesthesia by injection belongs in a doctor's hands and is not permitted in a piercing studio." },
         { typ: "achtung", text: "In piercing it is unusual, and in Germany prohibited, to use prescription anesthetics, for example opiate-based ones. Regional anesthesia of the spinal cord, nerve plexuses or individual nerves may only be performed by a doctor." },
         { typ: "tabelle", kopf: ["Procedure", "Effect", "Who"], zeilen: [
           ["General anesthesia", "Affects the brain", "Only a specialist doctor (anesthesiologist)"],
@@ -112,6 +116,7 @@ KURS.module.push({
       seite: "S. 13",
       inhalt: [
         { typ: "text", text: "First and foremost, the experienced piercer tries to take away the client’s fear and create a calm, harmonious environment. Ideally, the client is then free of fear and can be pierced without anesthesia." },
+        { typ: "foto", id: "pexels-6663469", text: "Numbing creams are applied externally and only act on the surface." },
         { typ: "tabelle", kopf: ["Product", "Effect", "Note"], zeilen: [
           ["Ice spray (e.g. chloroethane)", "The intense, brief cold numbs the nerve endings for a short time", "Takes effect immediately"],
           ["Lidocaine ointment (Xylocaine)", "From the pharmacy, available over the counter or on prescription depending on the product; well absorbed through mucous membranes (mouth, intimate area), also available as a spray", "Permitted according to the Academy, but not recommended"]
@@ -132,6 +137,7 @@ KURS.module.push({
       seite: "S. 14",
       inhalt: [
         { typ: "tabelle", kopf: ["Situation", "Possible side effects"], zeilen: [
+        { typ: "foto", id: "pexels-13005383", text: "Itching and skin irritation can be signs of an intolerance." },
           ["If ingested", "Dizziness, restlessness, gastrointestinal disorders, allergic reactions, rise in temperature"],
           ["On the skin", "in rare cases hypersensitivity reactions"],
           ["On mucous membranes", "occasionally swelling in the throat and larynx area, very rarely hoarseness"],
@@ -151,6 +157,7 @@ KURS.module.push({
       seite: "S. 14",
       inhalt: [
         { typ: "liste", punkte: [
+        { typ: "foto", id: "pexels-5452239", text: "If someone takes medication regularly, possible interactions must be considered." },
           "With active substances that affect heart rhythm or heart rate (antiarrhythmics, beta blockers, calcium channel blockers), the effect of lidocaine on the heart can be increased or reduced.",
           "Other anesthetics, blood-pressure-lowering beta blockers (propranolol, metoprolol, nadolol), diltiazem, verapamil, cimetidine, amiodarone, fluvoxamine and vasoconstricting substances such as adrenaline or noradrenaline increase the effect. This raises the risk of side effects.",
           "Together with ergot alkaloids or epinephrine, blood pressure can drop dangerously.",
@@ -172,6 +179,7 @@ KURS.module.push({
       seite: "S. 15",
       inhalt: [
         { typ: "schritte", punkte: [
+        { typ: "foto", id: "pexels-5563658", text: "Creams are applied only with gloves and in the intended amount." },
           "The product must not get into the eyes or onto injured skin. If it does: rinse immediately with running water.",
           "Apply the ointment with a cotton swab before the procedure.",
           "Wait a few minutes until it takes full effect.",

@@ -11,6 +11,7 @@ KURS.module.push({
       seite: "S. 7",
       inhalt: [
         { typ: "text", text: "Diese Frage wird dir in Zukunft oft gestellt. Eine klare Antwort darauf gibt es nicht: Jeder Mensch hat ein anderes Schmerzempfinden, und man weiß nicht, wie die Nervenbahnen und -enden genau verlaufen. Manche Piercings sind erfahrungsgemäß schmerzhafter als andere, eine Faustregel gibt es aber nicht." },
+        { typ: "foto", id: "pexels-3946829", text: "Viele Kunden kommen mit der Frage, wie schmerzhaft der Eingriff wohl wird." },
         { typ: "text", text: "Schmerz ist eine komplexe Sinnesempfindung, oft mit starker seelischer Komponente. Der Fachbegriff ist Algesie." },
         { typ: "praxis", text: "Antworte ehrlich und ruhig: „Es ist ein kurzer, deutlicher Moment, jeder empfindet ihn anders.“ Wer keine falschen Versprechen hört, vertraut dir mehr." }
       ],
@@ -26,6 +27,7 @@ KURS.module.push({
       seite: "S. 7–8",
       inhalt: [
         { typ: "text", text: "Voraussetzung für das Empfinden von Schmerz sind Schmerzrezeptoren (Nozizeptoren) und die ungestörte Weiterleitung an das Gehirn (zentrales Nervensystem). Die Schmerzrezeptoren sind meist freie Nervenenden." },
+        { typ: "foto", id: "pexels-13765731", text: "Schon eine leichte Berührung wird von Rezeptoren in der Haut wahrgenommen und weitergeleitet." },
         { typ: "tabelle", kopf: ["Reiz", "Beispiele"], zeilen: [["Thermisch", "Hitze, Kälte"], ["Mechanisch", "Hiebe, Schnitte, Stiche, starker Druck"], ["Chemisch", "Säuren, Laugen"]] },
         { typ: "merke", text: "Die International Association for the Study of Pain (IASP) definiert Schmerz seit 2020 als „ein unangenehmes Sinnes- und Gefühlserlebnis, das mit einer tatsächlichen oder drohenden Gewebeschädigung verknüpft ist oder einer solchen ähnelt“. Das Kursbuch zitiert die ältere Fassung, nach der auch Schmerz zählt, den Betroffene so beschreiben, als wäre eine Gewebeschädigung die Ursache." },
         { typ: "text", text: "In seltenen Fällen spüren Kunden schon vor dem eigentlichen Stich Schmerz, allein bei der Berührung der Haut. Schmerz kann also auch ohne körperliche Schädigung empfunden werden, etwa als Erwartungsschmerz aus Angst." }
@@ -43,6 +45,7 @@ KURS.module.push({
       seite: "S. 8–9",
       inhalt: [
         { typ: "schritte", punkte: [
+        { typ: "foto", id: "pexels-5624170", text: "Schmerz entsteht, wenn Gewebe gereizt oder verletzt wird und Nervenendigungen Signale senden." },
           "Die Verletzung des Gewebes setzt ATP, Protonen, Sauerstoffradikale, Kalium und Arachidonsäure frei.",
           "Das Enzym Cyclooxygenase (COX-1 in den Endothelzellen, COX-2 in einwandernden Leukozyten) wandelt die Arachidonsäure in Prostaglandin E2 um. Kinine aus dem verletzten Endothel werden zu Bradykinin.",
           "Mastzellen setzen ihre Granula frei (Degranulation), unter anderem Histamin.",
@@ -89,6 +92,7 @@ KURS.module.push({
       seite: "S. 11–12",
       inhalt: [
         { typ: "text", text: "Während der Verschaltung im Rückenmark kann der Körper das Schmerzempfinden durch eigene Stoffe (Endorphine) dämpfen. Einige Schmerzmittel, zum Beispiel Opiate, setzen an dieser Stelle an." },
+        { typ: "foto", id: "pexels-7582560", text: "Örtliche Betäubung per Injektion gehört in ärztliche Hände und ist im Piercingstudio nicht erlaubt." },
         { typ: "achtung", text: "Beim Piercen ist es unüblich und in Deutschland verboten, verschreibungspflichtige Anästhetika, zum Beispiel auf Opiat-Basis, einzusetzen. Die Teilbetäubung von Rückenmark, Nervengeflechten oder einzelnen Nerven darf nur ein Arzt durchführen." },
         { typ: "tabelle", kopf: ["Verfahren", "Wirkung", "Wer"], zeilen: [
           ["Vollnarkose", "Beeinflusst das Gehirn", "Nur ein spezieller Arzt (Anästhesist)"],
@@ -112,6 +116,7 @@ KURS.module.push({
       seite: "S. 13",
       inhalt: [
         { typ: "text", text: "In erster Linie versucht der erfahrene Piercer, dem Kunden die Angst zu nehmen und eine ruhige, harmonische Umgebung zu schaffen. Im Idealfall ist der Kunde dann angstfrei und kann ohne Betäubung gepierct werden." },
+        { typ: "foto", id: "pexels-6663469", text: "Betäubende Salben werden äußerlich aufgetragen und wirken nur oberflächlich." },
         { typ: "tabelle", kopf: ["Mittel", "Wirkung", "Hinweis"], zeilen: [
           ["Eisspray (z. B. Chlorethyl)", "Die starke, kurzfristige Kälte betäubt die Nervenenden für kurze Zeit", "Wirkt direkt"],
           ["Lidocainsalbe (Xylocain)", "Aus der Apotheke, je nach Präparat rezeptfrei oder verschreibungspflichtig; über Schleimhaut (Mund, Intim) gut aufgenommen, auch als Spray erhältlich", "Laut Akademie erlaubt, aber nicht empfohlen"]
@@ -132,6 +137,7 @@ KURS.module.push({
       seite: "S. 14",
       inhalt: [
         { typ: "tabelle", kopf: ["Situation", "Mögliche Nebenwirkungen"], zeilen: [
+        { typ: "foto", id: "pexels-13005383", text: "Juckreiz und Hautreizungen können Hinweise auf eine Unverträglichkeit sein." },
           ["Bei Einnahme", "Schwindel, Unruhe, Magen-Darm-Störungen, allergische Reaktionen, Temperaturanstieg"],
           ["Auf der Haut", "in seltenen Fällen Überempfindlichkeitsreaktionen"],
           ["An Schleimhäuten", "gelegentlich Schwellung im Rachen- und Kehlkopfbereich, sehr selten Heiserkeit"],
@@ -151,6 +157,7 @@ KURS.module.push({
       seite: "S. 14",
       inhalt: [
         { typ: "liste", punkte: [
+        { typ: "foto", id: "pexels-5452239", text: "Bei regelmäßiger Medikamenteneinnahme sind mögliche Wechselwirkungen zu bedenken." },
           "Mit Wirkstoffen, die Herzrhythmus oder Herzfrequenz beeinflussen (Antiarrhythmika, Betablocker, Kalziumkanalblocker), kann sich die Wirkung von Lidocain auf das Herz verstärken oder abschwächen.",
           "Andere Betäubungsmittel, blutdrucksenkende Betablocker (Propranolol, Metoprolol, Nadolol), Diltiazem, Verapamil, Cimetidin, Amiodaron, Fluvoxamin und gefäßverengende Stoffe wie Adrenalin oder Noradrenalin verstärken die Wirkung. Dabei steigt das Risiko für Nebenwirkungen.",
           "Zusammen mit Mutterkornalkaloiden oder Epinephrin kann der Blutdruck gefährlich abfallen.",
@@ -172,6 +179,7 @@ KURS.module.push({
       seite: "S. 15",
       inhalt: [
         { typ: "schritte", punkte: [
+        { typ: "foto", id: "pexels-5563658", text: "Salben werden nur mit Handschuhen und in der vorgesehenen Menge aufgetragen." },
           "Das Mittel darf nicht in die Augen oder auf verletzte Haut gelangen. Falls doch: sofort mit fließendem Wasser abspülen.",
           "Salbe vor dem Eingriff mit einem Wattestäbchen auftragen.",
           "Einige Minuten bis zur vollen Wirkung warten.",

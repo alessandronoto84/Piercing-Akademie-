@@ -14,6 +14,7 @@ KURS.module.push({
       seite: "S. 3",
       inhalt: [
         { typ: "text", text: "Das Wort „Piercing“ bedeutet einfach Loch in der Haut. Viele setzen es fälschlich mit dem Schmuck gleich. Gemeint ist aber das Durchstechen selbst." },
+        { typ: "foto", id: "pexels-8066130", text: "Piercings an Ohr und Nase gehören heute für viele Menschen selbstverständlich zum persönlichen Erscheinungsbild." },
         { typ: "text", text: "Piercing ist eine Form von Bodymodding oder Körperkunst. Ringe, Stäbe und andere Schmuckstücke werden an verschiedenen Körperstellen angebracht, indem der Schmuck durch die Haut und das darunterliegende Fett- oder Knorpelgewebe geführt wird." },
         { typ: "merke", text: "Piercings sind so alt wie die menschliche Zivilisation selbst." },
         { typ: "praxis", text: "Kunden fragen oft nach „einem Piercing“ und meinen ein bestimmtes Schmuckstück. Kläre im Gespräch immer beides: die Stelle, die gestochen wird, und den Schmuck, der hinein soll." }
@@ -30,6 +31,7 @@ KURS.module.push({
       seite: "S. 3",
       inhalt: [
         { typ: "text", text: "Die frühesten Spuren des Piercings führen in die jüngere Steinzeit Afrikas. Das Kursbuch nennt neolithische Funde aus Algerien: Menschen sollen dort schon vor über 7000 Jahren Gehänge aus Tierknochen und Zähnen in den Ohrläppchen getragen haben." },
+        { typ: "foto", id: "pexels-34642205", text: "Schon die Totenmaske des Tutanchamun zeigt durchstochene Ohrläppchen, ein Beleg für Ohrpiercings im alten Ägypten." },
         { typ: "ergaenzung", text: "Den ältesten direkten Nachweis beschreibt eine Studie von 2022 (Fachzeitschrift Antiquity): In Gräbern von Boncuklu Tarla in der Südosttürkei lag Schmuck aus Stein, Obsidian und Kupfer noch an Ohr und Kinn der Toten, etwa 10.000 bis 8.000 v. Chr. Für die Algerien-Angabe des Kursbuchs haben wir keine unabhängige Quelle gefunden." },
         { typ: "text", text: "Auch auf alten Pharaonendarstellungen aus Ägypten (etwa 1400 bis 1300 v. Chr.) findet man Hinweise auf Ohrenschmuck. Die berühmte Goldmaske des Tutanchamun zeigt Ohrlöcher. Dazu kommen prächtige Goldohrringe, die als Grabbeigabe gefunden wurden." },
         { typ: "tabelle", kopf: ["Fund", "Alter", "Was er zeigt"], zeilen: [
@@ -51,6 +53,7 @@ KURS.module.push({
       seite: "S. 4, 85, 88",
       inhalt: [
         { typ: "text", text: "In Europa findet man nicht so viele Spuren des frühen Piercings. Als einen der wenigen Belege nennt das Kursbuch die etwa 2600 Jahre alte Bronzemaske aus der Hallstattkultur (Kleinklein, Steiermark), die mehrere Ohrlöcher auf beiden Seiten zeigen soll. Im antiken Griechenland und in Rom dagegen war ein unversehrter Körper das Idealbild." },
+        { typ: "foto", id: "pexels-13013103", text: "In vielen Kulturen, etwa in Indien, ist Nasenschmuck seit Jahrhunderten fester Bestandteil der Tradition." },
         { typ: "liste", titel: "Geschichte einzelner Piercings", punkte: [
           "Nasenpiercing (Nostril): erstmals vor etwa 4000 Jahren im Mittleren Osten, im 16. Jahrhundert nach Indien übernommen. Dort wird es vorzugsweise am linken Nasenflügel getragen.",
           "Septum: eines der ältesten Piercings, weltweit in vielen Kulturen traditionell vertreten. Der Name kommt vom lateinischen „Septum nasi“."
@@ -94,6 +97,7 @@ KURS.module.push({
       seite: "S. 5–6",
       inhalt: [
         { typ: "text", text: "Beim Piercen und in der Nachsorge muss auf ausreichende Hygiene geachtet werden, sonst kann sich das Piercing entzünden. Der Piercingraum ist wie ein OP-Raum im Krankenhaus sauber und steril zu halten, und die Instrumente müssen steril sein." },
+        { typ: "foto", id: "pexels-4021257", text: "Frische Einweghandschuhe sind eine Grundvoraussetzung für hygienisches Arbeiten im Studio." },
         { typ: "ergaenzung", text: "Genau genommen lässt sich ein Raum nicht sterilisieren. Gemeint ist: Der Raum ist hygienisch einwandfrei gereinigt und desinfiziert, und alles, was den Stichkanal berührt, ist steril." },
         { typ: "text", text: "Auf die richtige Pflege und die Abheilzeiten musst du den Kunden zwingend hinweisen. Das frische Piercing sollte etwa zwei Wochen lang zwei- bis dreimal am Tag vom Kunden selbst mit einem geeigneten Mittel gereinigt werden, zum Beispiel mit Kochsalzlösung, Prontolind oder Octenisept." },
         { typ: "achtung", text: "Octenisept niemals bei Knorpelpiercings empfehlen. Es enthält Octenidin, das in Laborstudien Knorpelzellen schädigt. Prontolind (Wirkstoff Polihexanid) darfst du dagegen auch bei Knorpelpiercings empfehlen." },
@@ -134,6 +138,7 @@ KURS.module.push({
       seite: "S. 6",
       inhalt: [
         { typ: "text", text: "24 Stunden vor dem Piercen darf der Kunde keinen Alkohol, keine Drogen, kein Koffein und keine blutverdünnenden Mittel (zum Beispiel Aspirin/ASS) zu sich nehmen. Diese Mittel können den Kreislauf und die Blutgerinnung beeinträchtigen." },
+        { typ: "foto", id: "pexels-7581074", text: "Bevor gestochen wird, liegt der Kunde bequem und die Fachkraft bereitet sich hygienisch vor." },
         { typ: "ergaenzung", text: "ASS (Aspirin) hemmt die Blutplättchen dauerhaft: Die Wirkung hält nach einer Tablette etwa 7 bis 10 Tage an, so lange, bis neue Blutplättchen gebildet sind. 24 Stunden Pause beseitigen die Wirkung also nicht. Wer in der Woche vor dem Termin ASS genommen hat, kann stärker bluten." },
         { typ: "ergaenzung", text: "Ärztlich verordnete Blutverdünner (zum Beispiel Marcumar oder Xarelto) darf der Kunde nicht eigenmächtig absetzen. Wer solche Medikamente nimmt, klärt das Piercing vorher mit seinem Arzt. Im Zweifel wird nicht gestochen." },
         { typ: "praxis", text: "Sag das schon bei der Terminvergabe. So kommt der Kunde vorbereitet und du musst niemanden wieder nach Hause schicken." }

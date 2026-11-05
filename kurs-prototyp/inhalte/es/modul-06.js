@@ -54,6 +54,7 @@ KURS.module.push({
       seite: "S. 55",
       inhalt: [
         { typ: "text", text: "Existen innumerables tipos de acero. Para joyería, los piercers solo usan tres: acero para implantes Composición D, acero quirúrgico 316 LVM y, el más frecuente, acero quirúrgico 316L. Según la Directiva europea sobre el níquel, estos aceros cumplen todos los criterios para llevarse como segunda joya (tras la cicatrización completa) en todo el mundo y por tiempo ilimitado." },
+        { typ: "foto", id: "pexels-7787977", text: "El acero quirúrgico es un material probado para instrumentos, pero solo es adecuado en parte para joyas." },
         { typ: "text", text: "En medicina, el 316L se utiliza, por ejemplo, en tornillos óseos, agujas, placas óseas, suturas, grapas y como electrodo de marcapasos." },
         { typ: "achtung", text: "El acero quirúrgico 316L contiene entre un 10 y un 14 por ciento de níquel y no es apto como joya inicial. Como segunda joya, por lo general no presenta problemas." }
       ],
@@ -153,7 +154,7 @@ KURS.module.push({
       titel: "Tipos de joyas: barras y labrets",
       seite: "S. 61–62",
       inhalt: [
-        { typ: "video", id: "schmuck-titan", text: "Joyas iniciales de titanio: barbell recto, barbell curvo, labret y BCR (aro de bola cautiva).", schleife: true },
+        { typ: "video", id: "schmuck-titan", text: "Piercing en la ceja con barbell de titanio: bolas lisas y pulidas, sin aristas.", schleife: true },
         { typ: "text", text: "Para las distintas zonas del cuerpo se usan distintos tipos de joyas, tanto como joya inicial como segunda joya." },
         { typ: "tabelle", kopf: ["Joya", "Descripción", "Uso típico"], zeilen: [
           ["Barbell curvo (banana)", "Barra ligeramente curvada con bolas", "Ombligo, ceja, Rook"],

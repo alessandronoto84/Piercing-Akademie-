@@ -11,6 +11,7 @@ KURS.module.push({
       seite: "S. 1",
       inhalt: [
         { typ: "text", text: "Beim Piercen fügt der Piercer dem Kunden eine gewollte Körperverletzung zu: das Öffnen (Durchstechen) der Haut." },
+        { typ: "foto", id: "pexels-6077447", text: "Rechtlich gilt jedes Piercing als Eingriff in die körperliche Unversehrtheit." },
         { typ: "text", text: "Auch bestimmte ärztliche Behandlungen sind laut Gesetz eine Körperverletzung. Sie sind nur dann nicht rechtswidrig, wenn der Kunde bzw. Patient eingewilligt hat. Für das Piercing gilt dasselbe." },
         { typ: "merke", text: "Deshalb muss vor jedem Piercing ein Einverständnis des Kunden eingeholt werden, auch von Freunden und Bekannten und auch von Kunden, die du schon einmal gepierct hast." },
         { typ: "praxis", text: "Mach die Einverständniserklärung zur festen Routine wie das Händedesinfizieren. Dann gibt es nie die Situation „bei dem geht das schon ohne“." }
@@ -27,6 +28,7 @@ KURS.module.push({
       seite: "S. 1–2",
       inhalt: [
         { typ: "text", text: "Im deutschen Strafrecht ist die Körperverletzung im 17. Abschnitt des StGB (§§ 223 bis 231) geregelt. Den Grundtatbestand beschreibt § 223 StGB." },
+        { typ: "foto", id: "pexels-18298074", text: "Die strafrechtlichen Grundlagen für Eingriffe am Körper sind im Strafgesetzbuch geregelt." },
         { typ: "liste", titel: "§ 223 StGB, wie im Kursbuch zitiert", punkte: [
           "Wer eine andere Person körperlich misshandelt oder an der Gesundheit schädigt, wird mit Freiheitsstrafe bis zu fünf Jahren oder mit Geldstrafe bestraft.",
           "Der Versuch ist strafbar."
@@ -51,6 +53,7 @@ KURS.module.push({
       seite: "S. 2",
       inhalt: [
         { typ: "text", text: "Auch das rechtswidrige Abschneiden von Haaren erfüllt den Tatbestand der Körperverletzung. Deshalb gehört in die Einwilligungserklärung der Hinweis, dass gegebenenfalls eine Rasur an der zu piercenden Körperstelle durchgeführt wird." },
+        { typ: "foto", id: "pexels-8815849", text: "Fragen der Haftung und des Schadensersatzes werden oft vertraglich und über Versicherungen geregelt." },
         { typ: "text", text: "Fehlt die schriftliche Einverständniserklärung, können Kunden, deren Angehörige oder Dritte (zum Beispiel Anwälte) Schadensersatz vom Piercer fordern." },
         { typ: "ergaenzung", text: "Rechtlich genau: Eine Einwilligung ist auch mündlich wirksam. Die Schriftform ist dein Beweis. Kannst du Einwilligung und Aufklärung im Streit nicht nachweisen, drohen Schadensersatz und Schmerzensgeld (§§ 823, 253 BGB). Geltend macht sie der Kunde selbst, meist über einen Anwalt, bei Minderjährigen die Eltern; auch die Krankenkasse kann sich Behandlungskosten zurückholen." },
         { typ: "praxis", text: "Bewahre die unterschriebenen Erklärungen geordnet auf. Im Streitfall ist das Papier dein wichtigster Nachweis." }
@@ -67,6 +70,7 @@ KURS.module.push({
       seite: "S. 2, 114",
       inhalt: [
         { typ: "text", text: "Achte dringend darauf, dass der Kunde das 18. Lebensjahr vollendet hat. Ist der Kunde unter 18, muss das Einverständnis der Eltern bzw. der Erziehungsberechtigten eingeholt werden." },
+        { typ: "foto", id: "pexels-6957233", text: "Bei Minderjährigen müssen die Eltern einbezogen werden, bevor ein Piercing infrage kommt." },
         { typ: "text", text: "Die Beispiel-Einverständniserklärung im Kursbuch fragt deshalb Geburtsdatum und Ausweisnummer ab. Bei Minderjährigen und bei Volljährigen unter gesetzlicher Betreuung unterschreibt zusätzlich die erziehungsberechtigte Person bzw. der rechtliche Betreuer." },
         { typ: "ergaenzung", text: "In der Piercing Akademie gilt: Teilnehmende sind mindestens 18 Jahre alt, und alle Modelle am Praxistag sind volljährig." }
       ],
@@ -84,6 +88,7 @@ KURS.module.push({
       seite: "S. 114",
       inhalt: [
         { typ: "text", text: "Das Kursbuch enthält auf S. 114–115 ein Beispiel für eine Einverständniserklärung. Sie ist in klare Teile gegliedert." },
+        { typ: "foto", id: "pexels-48148", text: "Die schriftliche Einverständniserklärung wird vor dem Eingriff vom Kunden unterschrieben." },
         { typ: "tabelle", kopf: ["Teil", "Inhalt"], zeilen: [
           ["Personalien", "Vor- und Nachname, Straße, PLZ und Ort, Telefon, Bestätigung „mindestens 18 Jahre alt“, Geburtsdatum, Ausweisnummer"],
           ["Erziehungsberechtigte", "Bei Minderjährigen und Betreuten: Name, Anschrift, Ausweisnummer, Datum und Unterschrift"],
@@ -106,6 +111,7 @@ KURS.module.push({
       seite: "S. 115",
       inhalt: [
         { typ: "text", text: "Auch bei sachgemäßer Ausführung besteht das Risiko unerwünschter Nebenerscheinungen. Die Beispiel-Erklärung listet sie ausführlich auf, damit der Kunde weiß, worauf er sich einlässt." },
+        { typ: "foto", id: "pexels-3985299", text: "Im Aufklärungsgespräch werden mögliche Risiken und Komplikationen offen besprochen." },
         { typ: "liste", titel: "Auszug aus der Liste", punkte: [
           "Schmerzen, Missempfindungen, Kreislaufprobleme bis zur Bewusstlosigkeit",
           "Entzündungen, Infektionen, Abstoßreaktion, Allergien, Blutungen",
@@ -129,6 +135,7 @@ KURS.module.push({
       seite: "S. 1, 115",
       inhalt: [
         { typ: "text", text: "Wenn du Bilder vom gestochenen Piercing veröffentlichen willst, brauchst du die schriftliche Erlaubnis des Kunden. Die Beispiel-Erklärung enthält dafür einen eigenen Abschnitt für Website, Social Media und Werbebanner." },
+        { typ: "foto", id: "pexels-13926637", text: "Wer Fotos von Kunden macht, braucht dafür deren ausdrückliche Einwilligung." },
         { typ: "text", text: "In der Erklärung werden auch Gesundheitsdaten erhoben. Das sind besondere Daten im Sinne von Art. 9 DSGVO. Ihre Verarbeitung braucht eine ausdrückliche Einwilligung, die jederzeit widerrufen werden kann. Nach einem Widerruf dürfen die Bilder nicht mehr verwendet werden." },
         { typ: "ergaenzung", text: "Für die Foto-Einwilligung ist Art. 6 Abs. 1 lit. a DSGVO (Einwilligung) die passende Rechtsgrundlage, nicht das berechtigte Interesse nach lit. f. Lass dein Formular vor dem Einsatz im Studio rechtlich prüfen." }
       ],
@@ -145,6 +152,7 @@ KURS.module.push({
       seite: "S. 81, 83",
       inhalt: [
         { typ: "text", text: "Einigen Piercings wird eine heilende Wirkung nachgesagt: Das Daith soll bei Migräne helfen, das Allergiepiercing sitzt auf einem Akupunkturpunkt und soll Allergien mildern." },
+        { typ: "foto", id: "pexels-6963602", text: "Werbung in sozialen Medien darf keine Heilversprechen enthalten." },
         { typ: "achtung", text: "Es ist verboten, als Piercer Heilversprechen zu geben oder damit zu werben." },
         { typ: "ergaenzung", text: "Rechtsgrundlage ist das Heilmittelwerbegesetz: Es gilt auch für Behandlungen und Verfahren, wenn die Werbung eine Wirkung gegen Krankheiten verspricht, und verbietet irreführende Versprechen (§ 3 HWG). Eine Wirkung des Daith gegen Migräne ist wissenschaftlich nicht belegt; es gibt nur Einzelberichte." },
         { typ: "praxis", text: "Fragt ein Kunde gezielt nach dem „Migräne-Piercing“, sagst du ehrlich: Manche berichten das, versprechen kannst du es nicht. Du stichst das Daith als Schmuckpiercing." }

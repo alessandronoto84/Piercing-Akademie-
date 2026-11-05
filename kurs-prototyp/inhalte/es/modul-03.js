@@ -63,6 +63,7 @@ KURS.module.push({
       seite: "S. 89–92",
       inhalt: [
         { typ: "text", text: "En algunas zonas de la cara hay vasos y nervios importantes justo debajo de la piel. El libro del curso menciona expresamente estas zonas." },
+        { typ: "foto", id: "pexels-3861592", text: "En la cara, nervios y vasos están muy juntos, lo que convierte ciertas zonas en zonas de riesgo." },
         { typ: "tabelle", kopf: ["Piercing", "Riesgo", "Regla"], zeilen: [
           ["Ceja", "En la parte interna salen nervios y vasos (entumecimiento, sangrado)", "Perforar solo en el tercio externo de la ceja"],
           ["Cheek (mejilla)", "Arterias y nervios importantes, riesgo de desfiguración; pueden quedar hoyuelos", "Solo por piercers profesionales; recházalo si eres principiante"],
@@ -117,6 +118,7 @@ KURS.module.push({
       seite: "S. 73, 90, 104",
       inhalt: [
         { typ: "text", text: "Con una linterna de luz verde puedes, por ejemplo, iluminar la oreja por transparencia y así reconocer los vasos sanguíneos. Nunca perfores a través de un vaso sanguíneo; de lo contrario, el cliente puede sangrar mucho." },
+        { typ: "foto", id: "pexels-7479547", text: "Los vasos sanguíneos superficiales suelen verse bien y hay que evitarlos al perforar." },
         { typ: "liste", titel: "Otras zonas en las que debes tener especial cuidado", punkte: [
           "Lengua: no lesionar el frenillo lingual (pág. 90).",
           "Pene: nunca perforar a través de los cuerpos cavernosos. Hay riesgo de daños graves, incluso de que el cliente muera desangrado (pág. 104)."
@@ -163,6 +165,7 @@ KURS.module.push({
       seite: "S. 50",
       inhalt: [
         { typ: "text", text: "Los fumadores, las personas con alcoholismo y los diabéticos forman parte de los grupos de riesgo: en ellos, las complicaciones en el proceso de cicatrización aparecen antes." },
+        { typ: "foto", id: "pexels-6823478", text: "Enfermedades como la diabetes pueden retrasar notablemente la cicatrización tras un piercing." },
         { typ: "text", text: "Según el libro del curso, las posibles causas de un sangrado persistente son la diabetes, la debilidad del tejido conjuntivo o una enfermedad hemorrágica (hemofilia). En ese caso, hay que acudir al médico." },
         { typ: "ergaenzung", text: "Lo más frecuente es que el sangrado se prolongue cuando el cliente toma medicamentos anticoagulantes (por ejemplo, AAS) o tiene un trastorno de la coagulación. La diabetes, sobre todo, retrasa la cicatrización y aumenta el riesgo de infección." },
         { typ: "praxis", text: "El formulario de consentimiento pregunta por enfermedades y medicamentos. Lee esos datos antes de perforar, no después, y habla abiertamente de los factores de riesgo." }

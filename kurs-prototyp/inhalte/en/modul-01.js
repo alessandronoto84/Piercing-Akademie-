@@ -14,6 +14,7 @@ KURS.module.push({
       seite: "S. 3",
       inhalt: [
         { typ: "text", text: "The word “piercing” simply means a hole in the skin. Many people wrongly equate it with the jewelry. What it actually refers to, however, is the act of piercing itself." },
+        { typ: "foto", id: "pexels-8066130", text: "For many people today, ear and nose piercings are a natural part of their personal style." },
         { typ: "text", text: "Piercing is a form of body modding or body art. Rings, bars and other pieces of jewelry are attached to various parts of the body by passing the jewelry through the skin and the underlying fatty or cartilage tissue." },
         { typ: "merke", text: "Piercings are as old as human civilization itself." },
         { typ: "praxis", text: "Clients often ask for “a piercing” and mean a particular piece of jewelry. Always clarify both in the consultation: the spot that will be pierced and the jewelry that is to go into it." }
@@ -30,6 +31,7 @@ KURS.module.push({
       seite: "S. 3",
       inhalt: [
         { typ: "text", text: "The earliest traces of piercing lead back to the Neolithic period in Africa. The course book cites Neolithic finds from Algeria: people there are said to have worn pendants made of animal bones and teeth in their earlobes more than 7000 years ago." },
+        { typ: "foto", id: "pexels-34642205", text: "Tutankhamun's death mask already shows pierced earlobes, evidence of ear piercing in ancient Egypt." },
         { typ: "ergaenzung", text: "The oldest direct evidence is described in a 2022 study (journal Antiquity): in graves at Boncuklu Tarla in south-eastern Turkey, jewelry made of stone, obsidian and copper was still in place at the ears and chins of the dead, around 10,000 to 8,000 BC. We have found no independent source for the course book’s statement about Algeria." },
         { typ: "text", text: "Old depictions of pharaohs from Egypt (around 1400 to 1300 BC) also show signs of ear jewelry. The famous gold mask of Tutankhamun shows pierced ears. In addition, magnificent gold earrings were found as grave goods." },
         { typ: "tabelle", kopf: ["Find", "Age", "What it shows"], zeilen: [
@@ -51,6 +53,7 @@ KURS.module.push({
       seite: "S. 4, 85, 88",
       inhalt: [
         { typ: "text", text: "Europe has comparatively few traces of early piercing. As one of the few pieces of evidence, the course book cites the bronze mask from the Hallstatt culture (Kleinklein, Styria), about 2600 years old, which is said to show several piercings in each ear. In ancient Greece and Rome, by contrast, an unblemished body was the ideal." },
+        { typ: "foto", id: "pexels-13013103", text: "In many cultures, such as in India, nose jewelry has been an established part of tradition for centuries." },
         { typ: "liste", titel: "History of individual piercings", punkte: [
           "Nose piercing (Nostril): first practiced about 4000 years ago in the Middle East, adopted in India in the 16th century. There it is preferably worn on the left side of the nose.",
           "Septum: one of the oldest piercings, traditionally found in many cultures worldwide. The name comes from the Latin “septum nasi”."
@@ -94,6 +97,7 @@ KURS.module.push({
       seite: "S. 5–6",
       inhalt: [
         { typ: "text", text: "Adequate hygiene must be ensured during piercing and aftercare, otherwise the piercing can become inflamed. The piercing room must be kept clean and sterile like an operating room in a hospital, and the instruments must be sterile." },
+        { typ: "foto", id: "pexels-4021257", text: "Fresh disposable gloves are a basic requirement for hygienic work in the studio." },
         { typ: "ergaenzung", text: "Strictly speaking, a room cannot be sterilized. What is meant is: the room is cleaned and disinfected to a flawless hygienic standard, and everything that touches the piercing channel is sterile." },
         { typ: "text", text: "You must always inform the client about proper aftercare and healing times. For about two weeks, the client should clean the fresh piercing themselves two to three times a day with a suitable product, for example saline solution, Prontolind or Octenisept." },
         { typ: "achtung", text: "Never recommend Octenisept for cartilage piercings. It contains octenidine, which damages cartilage cells in laboratory studies. Prontolind (active ingredient polihexanide), on the other hand, may also be recommended for cartilage piercings." },
@@ -134,6 +138,7 @@ KURS.module.push({
       seite: "S. 6",
       inhalt: [
         { typ: "text", text: "For 24 hours before the piercing, the client must not consume alcohol, drugs, caffeine or blood-thinning agents (for example aspirin/ASA). These substances can affect circulation and blood clotting." },
+        { typ: "foto", id: "pexels-7581074", text: "Before piercing, the client lies comfortably and the piercer prepares hygienically." },
         { typ: "ergaenzung", text: "ASA (aspirin) inhibits the platelets permanently: after one tablet, the effect lasts about 7 to 10 days, until new platelets have been formed. So a 24-hour break does not eliminate the effect. Anyone who has taken ASA in the week before the appointment may bleed more heavily." },
         { typ: "ergaenzung", text: "The client must not stop taking prescribed blood thinners (for example Marcumar or Xarelto) on their own. Anyone taking such medication must clear the piercing with their doctor beforehand. If in doubt, do not pierce." },
         { typ: "praxis", text: "Tell clients this when they book the appointment. That way the client arrives prepared and you don’t have to send anyone home again." }
