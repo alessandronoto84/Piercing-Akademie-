@@ -146,7 +146,7 @@ KURS.module.push({
       seite: "S. 35",
       inhalt: [
         { typ: "merke", text: "Everything that injures the skin or comes into contact with blood (needles, needle holders, clamps) must be sterile: either as sterile single-use material or sterilized in the autoclave." },
-        { typ: "foto", id: "pexels-305566", text: "Instruments on an open tray are clean, but not sterile." },
+        { typ: "foto", id: "pexels-7755181", text: "An instrument is only sterile as long as its sterile packaging is intact; it is opened only immediately before use." },
         { typ: "text", text: "Tools without direct skin contact, such as the ball grabber or scissors, are cleaned in the ultrasonic bath and disinfected in a disinfection bath. Used cannula needles go straight into the sharps container." }
       ],
       fragen: [

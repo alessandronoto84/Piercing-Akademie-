@@ -234,33 +234,33 @@ Object.assign(KURS.bilder = KURS.bilder || {}, {
 "quelle": "Pexels",
 "url": "https://www.pexels.com/photo/8413090/"
 },
-"pexels-6629414": {
-"src": "inhalte/bilder/pexels-6629414.webp",
+"pexels-4123838": {
+"src": "inhalte/bilder/pexels-4123838.webp",
 "w": 1000,
 "h": 666,
 "quelle": "Pexels",
-"url": "https://www.pexels.com/photo/6629414/"
+"url": "https://www.pexels.com/photo/4123838/"
 },
-"pexels-15771809": {
-"src": "inhalte/bilder/pexels-15771809.webp",
+"pexels-7755168": {
+"src": "inhalte/bilder/pexels-7755168.webp",
+"w": 1000,
+"h": 666,
+"quelle": "Pexels",
+"url": "https://www.pexels.com/photo/7755168/"
+},
+"pexels-5721556": {
+"src": "inhalte/bilder/pexels-5721556.webp",
 "w": 507,
 "h": 760,
 "quelle": "Pexels",
-"url": "https://www.pexels.com/photo/15771809/"
+"url": "https://www.pexels.com/photo/5721556/"
 },
-"pexels-7787977": {
-"src": "inhalte/bilder/pexels-7787977.webp",
+"pexels-7755181": {
+"src": "inhalte/bilder/pexels-7755181.webp",
 "w": 1000,
 "h": 666,
 "quelle": "Pexels",
-"url": "https://www.pexels.com/photo/7787977/"
-},
-"pexels-305566": {
-"src": "inhalte/bilder/pexels-305566.webp",
-"w": 1000,
-"h": 666,
-"quelle": "Pexels",
-"url": "https://www.pexels.com/photo/305566/"
+"url": "https://www.pexels.com/photo/7755181/"
 },
 "pexels-7651554": {
 "src": "inhalte/bilder/pexels-7651554.webp",

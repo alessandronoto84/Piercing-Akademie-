@@ -146,7 +146,7 @@ KURS.module.push({
       seite: "S. 35",
       inhalt: [
         { typ: "merke", text: "Alles, was die Haut verletzt oder mit Blut in Kontakt kommt (Nadeln, Nadelhalter, Klemmen), muss steril sein: als steriles Einwegmaterial oder im Autoklav sterilisiert." },
-        { typ: "foto", id: "pexels-305566", text: "Instrumente auf einer offenen Ablage sind sauber, aber nicht steril." },
+        { typ: "foto", id: "pexels-7755181", text: "Steril ist ein Instrument nur, solange die Sterilgutverpackung unversehrt ist; geöffnet wird sie erst unmittelbar vor der Anwendung." },
         { typ: "text", text: "Werkzeuge ohne direkten Hautkontakt, etwa Kugelgreifer oder Schere, werden im Ultraschallbad gereinigt und im Desinfektionsbad desinfiziert. Benutzte Kanülennadeln kommen sofort in den Nadelabwurfbehälter." }
       ],
       fragen: [

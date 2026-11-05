@@ -301,7 +301,7 @@ KURS.module.push({
       titel: "Tratar correctamente el instrumental",
       seite: "S. 35",
       inhalt: [
-        { typ: "foto", id: "pexels-15771809", text: "Los instrumentos usados se limpian, se desinfectan y después se reprocesan en el esterilizador." },
+        { typ: "foto", id: "pexels-7755168", text: "Al final del reprocesamiento, el instrumento limpio, desinfectado y esterilizado queda cerrado en su envase estéril." },
         { typ: "liste", titel: "Recuerda", punkte: [
           "Los desinfectantes para superficies e instrumental también deberían ser eficaces contra los virus (virucidas).",
           "Al usarlos, presta especial atención al tiempo de actuación, la compatibilidad con los materiales y la concentración.",
@@ -420,7 +420,7 @@ KURS.module.push({
       seite: "S. 46–47",
       inhalt: [
         { typ: "text", text: "El envase de esterilización se marca con la fecha de esterilización y el número de lote. Se recomienda guardar el material estéril en cajones cerrados." },
-        { typ: "foto", id: "pexels-6629414", text: "El material estéril y los instrumentos se guardan protegidos, secos y ordenados en cajones cerrados." },
+        { typ: "foto", id: "pexels-4123838", text: "Los artículos estériles de un solo uso permanecen en su envase original hasta usarse; antes de abrirlos se comprueban el envase y la fecha de caducidad." },
         { typ: "tabelle", kopf: ["Almacenamiento", "Estante abierto", "Cajón cerrado"], zeilen: [["Envase simple", "máx. 48 horas", "máx. 6 meses"], ["Envase doble", "máx. 48 horas", "máx. 5 años"]] },
         { typ: "ergaenzung", text: "Según la norma DIN 58953-8, los 5 años solo son válidos si el material estéril se guarda además en un envase de almacenamiento que lo proteja del polvo. En caso de duda: protegido en armario o cajón, como máximo 6 meses; en estante abierto, solo para uso inmediato." },
         { typ: "liste", titel: "Control de funcionamiento (según el libro del curso, prescrito por la Ley de Productos Sanitarios (MPG) y la mutua de accidentes laborales (Berufsgenossenschaft); la MPG ya no está vigente desde 2021; hoy rigen la Ley de aplicación del derecho de productos sanitarios (MPDG) y el Reglamento de operadores de productos sanitarios (MPBetreibV))", punkte: [

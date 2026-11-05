@@ -301,7 +301,7 @@ KURS.module.push({
       titel: "Handling instruments correctly",
       seite: "S. 35",
       inhalt: [
-        { typ: "foto", id: "pexels-15771809", text: "Used instruments are cleaned, disinfected and then reprocessed in the steriliser." },
+        { typ: "foto", id: "pexels-7755168", text: "At the end of reprocessing, the cleaned, disinfected and sterilised instrument lies sealed in its sterile packaging." },
         { typ: "liste", titel: "Remember", punkte: [
           "Disinfectants for surfaces and instruments should also be effective against viruses (virucidal).",
           "When using them, pay particular attention to contact time, material compatibility and concentration.",
@@ -420,7 +420,7 @@ KURS.module.push({
       seite: "S. 46–47",
       inhalt: [
         { typ: "text", text: "The sterilization packaging is marked with the date of sterilization and the batch number. It is advisable to store sterile goods in closed drawers." },
-        { typ: "foto", id: "pexels-6629414", text: "Sterile goods and instruments are stored protected, dry and well organised in closed drawers." },
+        { typ: "foto", id: "pexels-4123838", text: "Sterile single-use items stay in their original packaging until use; packaging and expiry date are checked before opening." },
         { typ: "tabelle", kopf: ["Storage", "Open shelf", "Closed drawer"], zeilen: [["Single-wrapped", "max. 48 hours", "max. 6 months"], ["Double-wrapped", "max. 48 hours", "max. 5 years"]] },
         { typ: "ergaenzung", text: "According to the standard DIN 58953-8, the 5 years only apply if the sterile goods are additionally kept in dust-protective storage packaging. If in doubt: protected in a cupboard or drawer for at most 6 months, on an open shelf only for immediate use." },
         { typ: "liste", titel: "Function checks (according to the course book prescribed by the Medical Devices Act (MPG) and the statutory accident insurance (Berufsgenossenschaft); the MPG has not applied since 2021, today: Medical Devices Law Implementation Act (MPDG) and Medical Devices Operator Ordinance (MPBetreibV))", punkte: [

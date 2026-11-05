@@ -301,7 +301,7 @@ KURS.module.push({
       titel: "Instrumente richtig behandeln",
       seite: "S. 35",
       inhalt: [
-        { typ: "foto", id: "pexels-15771809", text: "Benutzte Instrumente werden gereinigt, desinfiziert und anschließend im Sterilisator aufbereitet." },
+        { typ: "foto", id: "pexels-7755168", text: "Am Ende der Aufbereitung liegt das gereinigte, desinfizierte und sterilisierte Instrument verschlossen in der Sterilgutverpackung bereit." },
         { typ: "liste", titel: "Merke", punkte: [
           "Desinfektionsmittel für Flächen und Instrumente sollten auch gegen Viren wirksam sein (viruzid).",
           "Bei der Anwendung besonders auf Einwirkzeit, Materialverträglichkeit und Konzentration achten.",
@@ -420,7 +420,7 @@ KURS.module.push({
       seite: "S. 46–47",
       inhalt: [
         { typ: "text", text: "Die Sterilisierverpackung wird mit dem Datum der Sterilisation und der Chargennummer versehen. Es empfiehlt sich, Sterilgut in geschlossenen Schubladen aufzubewahren." },
-        { typ: "foto", id: "pexels-6629414", text: "Sterilgut und Instrumente werden geschützt, trocken und übersichtlich in geschlossenen Schubladen gelagert." },
+        { typ: "foto", id: "pexels-4123838", text: "Sterile Einmalartikel bleiben bis zur Verwendung originalverpackt; vor dem Öffnen werden Verpackung und Verfallsdatum geprüft." },
         { typ: "tabelle", kopf: ["Lagerung", "Offenes Regal", "Geschlossene Schublade"], zeilen: [["Einzeln verpackt", "max. 48 Stunden", "max. 6 Monate"], ["Doppelt verpackt", "max. 48 Stunden", "max. 5 Jahre"]] },
         { typ: "ergaenzung", text: "Nach der Norm DIN 58953-8 gelten die 5 Jahre nur, wenn das Sterilgut zusätzlich in einer staubschützenden Lagerverpackung liegt. Im Zweifel gilt: geschützt im Schrank oder in der Schublade höchstens 6 Monate, offen nur zum alsbaldigen Gebrauch." },
         { typ: "liste", titel: "Funktionskontrolle (laut Kursbuch vorgeschrieben durch Medizinproduktegesetz und Berufsgenossenschaft; das MPG gilt seit 2021 nicht mehr, heute Medizinprodukterecht-Durchführungsgesetz und Medizinprodukte-Betreiberverordnung)", punkte: [

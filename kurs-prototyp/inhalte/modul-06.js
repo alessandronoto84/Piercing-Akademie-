@@ -54,7 +54,7 @@ KURS.module.push({
       seite: "S. 55",
       inhalt: [
         { typ: "text", text: "Es gibt unzählige Stähle. Als Schmuck verwenden Piercer nur drei: Komposition D Implantatstahl, Chirurgenstahl 316 LVM und, am häufigsten, Chirurgenstahl 316L. Diese Stähle erfüllen laut EU-Nickelrichtlinie alle Kriterien, um als Zweiteinsatz (nach vollständiger Abheilung) weltweit und zeitlich unbegrenzt getragen zu werden." },
-        { typ: "foto", id: "pexels-7787977", text: "Chirurgenstahl ist ein bewährter Werkstoff für Instrumente, als Schmuckmaterial aber nur eingeschränkt geeignet." },
+        { typ: "foto", id: "pexels-5721556", text: "Instrumente aus Chirurgenstahl sind korrosionsbeständig und lassen sich wiederholt aufbereiten und sterilisieren." },
         { typ: "text", text: "In der Medizin wird 316L zum Beispiel für Knochenschrauben, Körpernadeln, Knochenplatten, Nähte, Klammern und als Herzschrittmacherelektrode eingesetzt." },
         { typ: "achtung", text: "Chirurgenstahl 316L enthält 10 bis 14 Prozent Nickel und ist als Ersteinsatz ungeeignet. Als Zweiteinsatz ist er meistens bedenkenlos." }
       ],
