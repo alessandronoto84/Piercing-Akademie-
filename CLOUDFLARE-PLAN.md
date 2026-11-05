@@ -31,13 +31,13 @@ Alle Schlüssel kommen in die **Umgebungseinstellungen** (Cloud-Umgebung → Edi
 
 | Variable | Wo anlegen | Rechte |
 |---|---|---|
-| `CLOUDFLARE_API_TOKEN` (neuer Token, der alte für Bilder bleibt) | Cloudflare → My Profile → API Tokens → Create Token → „Custom token“ | Account: Cloudflare Pages Bearbeiten, Workers Scripts Bearbeiten, D1 Bearbeiten; Zone (piercingakademie.de): DNS Bearbeiten |
+| `CLOUDFLARE_API_TOKEN` (neuer Token, der alte für Bilder bleibt) | Cloudflare → My Profile → API Tokens → Create Token → „Custom token“ | **Account:** Workers Scripts Bearbeiten, D1 Bearbeiten, Workers R2 Storage Bearbeiten, Account Settings Lesen. **Zone** (Zone Resources: „All zones from an account“, also .de, .com, .org …): Zone Lesen, DNS Bearbeiten, Workers Routes Bearbeiten, Single Redirect Bearbeiten |
 | `CLOUDFLARE_ACCOUNT_ID` | ist schon bekannt | – |
 | `STRIPE_SECRET_KEY` | Stripe → Entwickler → API-Schlüssel → **eingeschränkter Schlüssel**, zuerst im **Testmodus** (`rk_test_…`) | Checkout Sessions schreiben (Website-Bestellungen), Webhook-Endpunkte schreiben (nur zum Einrichten) |
 | `RESEND_API_KEY` | resend.com → API Keys | Sending access |
 
 Außerdem:
-1. **Domain** `piercingakademie.de` registrieren (falls noch nicht geschehen) und in Cloudflare hinzufügen, damit DNS dort liegt.
+1. **Domains** (gekauft: piercingakademie.de, .com, .org …) alle in Cloudflare hinzufügen (Free-Plan) und beim Anbieter die Nameserver auf die von Cloudflare umstellen. Hauptadresse ist piercingakademie.de; die anderen leite ich per Weiterleitung dorthin.
 2. Unter **Network access → Allowed domains** ergänzen: `api.stripe.com`, `api.resend.com` (dazu bleiben `api.cloudflare.com` und die Paketmanager).
 3. Neuen Chat starten, damit die Einstellungen greifen.
 
