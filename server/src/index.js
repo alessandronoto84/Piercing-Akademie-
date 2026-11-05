@@ -373,6 +373,9 @@ async function bestellen(req, env, url) {
   if (art === "ware" || paket === "komplett") VERSAND_LAENDER.forEach((l, i) => f.set("shipping_address_collection[allowed_countries][" + i + "]", l));
   f.set("metadata[art]", art);
   f.set("billing_address_collection", "required"); // Rechnungsadresse (Rechnung, Land für die Umsatzsteuer)
+  // Kundendatensatz bei Stripe anlegen: Voraussetzung für Banküberweisung (Stripe zeigt dem Kunden eine eigene Empfänger-IBAN).
+  // Überweisung und SEPA-Lastschrift sind erst nach einigen Tagen bezahlt; freigeschaltet wird dann über checkout.session.async_payment_succeeded.
+  f.set("customer_creation", "always");
   f.set("metadata[paket]", paket);
   f.set("metadata[sprache]", sprache);
   f.set("metadata[bestellung]", id);
