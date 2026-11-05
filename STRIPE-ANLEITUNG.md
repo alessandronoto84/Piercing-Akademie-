@@ -36,6 +36,11 @@ Stand: 01.11.2026. Website und Server sind fertig vorbereitet: Preiskarten, eige
 
 Oben rechts im Dashboard den **Testmodus** einschalten und Schlüssel und Webhook aus Abschnitt 3 zuerst im Testmodus anlegen. Mit der Testkarte `4242 4242 4242 4242` (beliebiges künftiges Datum, beliebige Prüfziffer) durchspielen. Wenn alles passt, dasselbe im Live-Modus anlegen.
 
+**Stand des Testkontos (05.11.2026, Sandbox „740 Piercing Sandbox“):** Der eingeschränkte Testschlüssel ist in den Umgebungseinstellungen hinterlegt und funktioniert. Getestet mit echten Stripe-Test-Bezahlseiten: alle vier Produkte (Basis 249 €, Praxis 999 €, Komplett 2.490 € mit Lieferadresse DE/AT, Kursbuch 19,90 €) in Deutsch, Englisch und Spanisch; danach der Webhook mit dem echten Sitzungsobjekt (Zugang angelegt, Doppelmeldung erkannt, Willkommens-E-Mail, Versand-E-Mail mit Adresse beim Paket Komplett).
+- **Nur Euro:** Stripe hatte „Adaptive Pricing“ an; Kunden mit ausländischer IP sahen z. B. 2.906,05 $ inkl. 4 % Umrechnungsgebühr. Der Server schaltet das jetzt pro Bestellung ab (`adaptive_pricing[enabled]=false`), alle sehen den Euro-Endpreis wie auf der Website und in den AGB.
+- **Zahlungsarten im Testkonto:** Karte (mit Apple/Google Pay), Klarna, Link, Amazon Pay, EPS, Bancontact. **PayPal und SEPA-Lastschrift fehlen noch**; wenn du sie willst, unter Einstellungen → Zahlungen → Zahlungsmethoden einschalten (im Test- und später im Live-Modus).
+- **Webhook** ist noch nicht angelegt: Er braucht die öffentliche Adresse `https://piercingakademie.de/api/stripe`, also erst nach dem Veröffentlichen auf Cloudflare. Das Signatur-Geheimnis kommt dann direkt per `wrangler secret put` in den Worker.
+
 ## 3. Schlüssel und Webhook
 
 Alle Schlüssel gehören in die **Umgebungseinstellungen** (Network secrets) bzw. später mit `wrangler secret put` in den Worker, **nie in den Chat**.

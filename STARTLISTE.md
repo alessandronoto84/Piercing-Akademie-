@@ -17,7 +17,7 @@ Stand: 26.10.2026. Erledigtes steht unten. Details und Quellen: `KURS-RECHERCHE.
 | 10 | **Stimmen von Teilnehmern** (3–5, mit Einwilligung) | Vertrauen; bis dahin bewusst kein Bewertungsbereich. | du |
 | 11 | ~~Rechnungsangaben~~ | Erledigt: Verkauf über dein Einzelunternehmen (740 Piercing); Preise bleiben „inkl. MwSt.“. | – |
 | 12 | **Berufshaftpflicht** für Kurs und Praxistage bestätigen | Absicherung der Praxistage mit Modellen. | Versicherung |
-| 13 | **Stripe: API-Schlüssel und Webhook** nach `STRIPE-ANLEITUNG.md` in den Umgebungseinstellungen hinterlegen (keine Bezahl-Links mehr nötig, die Bestellseite ist fertig) | Kaufknopf und Bestellseite auf der Website. | du |
+| 13 | **Stripe:** Testschlüssel ist hinterlegt und getestet (05.11.2026). Offen: PayPal und SEPA im Stripe-Dashboard einschalten, falls gewünscht; Webhook und Live-Schlüssel nach dem Veröffentlichen auf Cloudflare (Details in `STRIPE-ANLEITUNG.md`, Abschnitt 2) | Kaufknopf und Bestellseite auf der Website. | du, dann ich |
 | 14 | **Cloudflare-Zugänge** nach `CLOUDFLARE-PLAN.md` in den Umgebungseinstellungen hinterlegen (entschieden: eigene Lösung auf Cloudflare) | Login, Bezahlschranke und automatische Freischaltung. | du, dann ich |
 | 16 | **Umsatzsteuer bei Verkauf ins Ausland** mit dem Steuerberater klären | Online-Kurse an Privatkunden in anderen EU-Ländern: Umsatzsteuer des Kundenlandes, Meldung über das OSS-Verfahren (ab 10.000 € EU-Auslandsumsatz pro Jahr; Kleinunternehmer gesondert prüfen). | Steuerberater |
 | 15 | **Fotos und Clips aus dem Studio** nach `FOTO-VIDEO-ANLEITUNG.md` | Echte Aufnahmen statt KI-Bilder; Clip-Player in der Fahrschule ist fertig. | du |

@@ -340,6 +340,9 @@ async function bestellen(req, env, url) {
   f.set("client_reference_id", sprache);
   f.set("line_items[0][quantity]", "1");
   f.set("line_items[0][price_data][currency]", "eur");
+  // Immer in Euro abrechnen (Endpreise inkl. MwSt. wie auf Website und in den AGB); ohne das rechnet Stripe für
+  // ausländische Kunden in deren Währung um und schlägt rund 4 % Umrechnungsgebühr auf.
+  f.set("adaptive_pricing[enabled]", "false");
   const cent = (PAKETE[paket] || PRODUKTE[paket]).cent;
   f.set("line_items[0][price_data][unit_amount]", String(cent));
   f.set("line_items[0][price_data][product_data][name]", (PAKETE[paket] || PRODUKTE[paket]).name[sprache]);

@@ -177,6 +177,7 @@ test("Einzelprodukte: Kursbuch digital; Praxiskit gibt es nicht mehr, Komplett f
   const kof = new URLSearchParams((await ko.json()).dev_formular);
   assert.equal(kof.get("line_items[0][price_data][unit_amount]"), "249000");
   assert.equal(kof.get("shipping_address_collection[allowed_countries][0]"), "DE");
+  assert.equal(kof.get("adaptive_pricing[enabled]"), "false", "immer in Euro, keine Umrechnung durch Stripe");
   // Basis: keine Lieferadresse
   const ba = await post("/api/bestellen", { paket: "basis", sprache: "de", agb: true, sofort: true });
   assert.equal(new URLSearchParams((await ba.json()).dev_formular).get("shipping_address_collection[allowed_countries][0]"), null);
