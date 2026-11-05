@@ -148,16 +148,33 @@ export function mailVerdacht(email, anzahl) {
   return { betreff: "Piercing Akademie: Zugang " + email + " auffällig", ...r };
 }
 
+// Anfrage für Praxis/Komplett an die Akademie: Kontaktdaten und Wunschtermine, bitte anrufen
 export function mailAnfrage(a) {
-  const zeilen = [["Paket", a.paket], ["Name", a.name], ["E-Mail", a.email], ["Telefon", a.telefon || "–"], ["Arbeitet in einem Studio", a.erfahrung || "–"],
-    ["Wunschzeitraum Praxistag", a.zeitraum || "–"], ["Eigene Modelle", a.modelle || "–"], ["Erfahren über", a.quelle || "–"], ["Sprache der Website", a.sprache], ["Volljährig", "ja (bestätigt)"]];
+  const w = a.wunsch;
+  const zeilen = [["Paket", PAKETE.de[a.paket] || a.paket], ["Name", a.name], ["Telefon", w.telefon], ["E-Mail", a.email],
+    ["Wunsch Ersttelefonat", tagText(w.telefonTermin, "de") + ", " + ZEIT.de[w.telefonZeit]],
+    ["Wunsch Praxistag" + (w.praxis.length > 1 ? "e" : ""), w.praxis.map((t) => tagText(t, "de")).join(" · ")],
+    ["Sprache der Website", { de: "Deutsch", en: "Englisch", es: "Spanisch" }[a.sprache] || a.sprache], ["Volljährig", "ja (bestätigt)"]];
   const tabelle = '<table style="border-collapse:collapse">' + zeilen.map((z) => '<tr><td style="padding:4px 12px 4px 0;color:#666">' + esc(z[0]) + "</td><td style=\"padding:4px 0\"><strong>" + esc(z[1]) + "</strong></td></tr>").join("") + "</table>";
-  const r = rahmen("Neue Anfrage: " + a.paket, [
+  const r = rahmen("Neue Anfrage: " + (PAKETE.de[a.paket] || a.paket) + ", bitte anrufen", [
     { html: tabelle, text: zeilen.map((z) => z[0] + ": " + z[1]).join("\n") },
+    { html: '<p><a href="tel:' + esc(w.telefon.replace(/[^0-9+]/g, "")) + '">Jetzt anrufen: ' + esc(w.telefon) + "</a></p>", text: "Anrufen: " + w.telefon },
     a.nachricht ? { html: "<p><strong>Nachricht:</strong><br>" + esc(a.nachricht).replace(/\n/g, "<br>") + "</p>", text: "Nachricht:\n" + a.nachricht } : "",
-    "Antworten an diese E-Mail gehen direkt an " + a.email + "."
-  ].filter(Boolean));
-  return { betreff: "Anfrage Piercing Akademie – " + a.paket + " – " + a.name, ...r };
+    "Nach dem Telefonat: Termin bestätigen und den Zahlungslink bzw. die Rechnung schicken. Antworten an diese E-Mail gehen direkt an " + a.email + "."
+  ]);
+  return { betreff: "Anfrage " + (PAKETE.de[a.paket] || a.paket) + ": " + a.name + ", Wunsch-Praxistag " + w.praxis.map((t) => t.split("-").reverse().join(".")).join(" + "), ...r };
+}
+
+// Eingangsbestätigung an den Interessenten (kein Vertrag, nur Bestätigung der Wunschtermine)
+export function mailAnfrageEingang(a) {
+  const s = PAKETE[a.sprache] ? a.sprache : "de", w = a.wunsch;
+  const T = {
+    de: ["Deine Anfrage bei der Piercing Akademie", "Danke für deine Anfrage, " + a.name + "!", "Paket", "Die Buchung wird erst mit unserer Bestätigung verbindlich; bezahlt wird danach.", "Fragen? Antworte einfach auf diese E-Mail oder ruf uns an: +49 173 8072405."],
+    en: ["Your enquiry at the Piercing Akademie", "Thank you for your enquiry, " + a.name + "!", "Package", "The booking only becomes binding with our confirmation; payment follows afterwards.", "Questions? Just reply to this email or call us: +49 173 8072405."],
+    es: ["Tu consulta en la Piercing Akademie", "¡Gracias por tu consulta, " + a.name + "!", "Paquete", "La reserva solo es vinculante con nuestra confirmación; el pago se hace después.", "¿Preguntas? Responde a este correo o llámanos: +49 173 8072405."]
+  }[s];
+  const r = rahmen(T[1], [T[2] + ": " + (PAKETE[s][a.paket] || a.paket), wunschBlock(w, s), T[3], T[4]]);
+  return { betreff: T[0], ...r };
 }
 
 function zeitText(iso, s) {

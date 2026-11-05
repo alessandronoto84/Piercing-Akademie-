@@ -152,22 +152,22 @@ test("Elektronischer Widerruf: Pflichtfelder, Eingang, Spam-Falle", async () => 
 
 test("Bestellseite: beide Häkchen Pflicht, Preis nur vom Server, Zustimmung landet beim Kauf", async () => {
   assert.equal((await (await get("/api/bestellen")).json()).aktiv, true);
-  assert.equal((await post("/api/bestellen", { paket: "praxis", sprache: "de", agb: true, sofort: false })).status, 400);
+  assert.equal((await post("/api/bestellen", { paket: "basis", sprache: "de", agb: true, sofort: false })).status, 400);
   assert.equal((await post("/api/bestellen", { paket: "gratis", sprache: "de", agb: true, sofort: true })).status, 400);
-  assert.equal((await post("/api/bestellen", { paket: "praxis", agb: true, sofort: true }, null, { Origin: "https://boese.example" })).status, 403);
-  const r = await post("/api/bestellen", { paket: "praxis", sprache: "en", agb: true, sofort: true, preis: 1, ...termine(1) });
+  assert.equal((await post("/api/bestellen", { paket: "basis", agb: true, sofort: true }, null, { Origin: "https://boese.example" })).status, 403);
+  const r = await post("/api/bestellen", { paket: "basis", sprache: "en", agb: true, sofort: true, preis: 1 });
   assert.equal(r.status, 200);
   const d = await r.json();
   assert.match(d.url, /^https:\/\/checkout\.stripe\.com\//);
   const f = new URLSearchParams(d.dev_formular);
-  assert.equal(f.get("line_items[0][price_data][unit_amount]"), "99900");
-  assert.equal(f.get("metadata[paket]"), "praxis");
+  assert.equal(f.get("line_items[0][price_data][unit_amount]"), "24900");
+  assert.equal(f.get("metadata[paket]"), "basis");
   assert.equal(f.get("locale"), "en");
   assert.match(f.get("success_url"), /\/en\/danke\.html\?bestellung=\{CHECKOUT_SESSION_ID\}$/);
   // Webhook zu dieser Sitzung: Zustimmung kommt aus der Bestellung, nicht aus einem Payment-Link-Feld
   const sid = d.url.split("/").pop();
   const email = "bestellung-" + Date.now() + "@example.com";
-  const ev = kauf(email, sid, { amount_total: 99900, locale: "en", metadata: { paket: "praxis", sprache: "en", bestellung: f.get("metadata[bestellung]") }, custom_fields: [] });
+  const ev = kauf(email, sid, { amount_total: 24900, locale: "en", metadata: { paket: "basis", sprache: "en", bestellung: f.get("metadata[bestellung]") }, custom_fields: [] });
   assert.equal((await webhook(ev)).status, 200);
   const c = await (await post("/api/code", { email })).json();
   assert.ok(c.dev_code, "Käufer über die Bestellseite bekommt einen Code");
@@ -178,22 +178,14 @@ test("Bestellseite: beide Häkchen Pflicht, Preis nur vom Server, Zustimmung lan
 test("Einzelprodukte: Kursbuch digital; Praxiskit gibt es nicht mehr, Komplett fragt die Lieferadresse ab", async () => {
   // Praxiskit ist kein Produkt mehr (Material nur im Paket Komplett)
   assert.equal((await post("/api/bestellen", { paket: "kit", sprache: "de", agb: true, sofort: true })).status, 400);
-  // Komplett: Übungsset wird verschickt, deshalb Lieferadresse
-  // Wunschtermine sind bei Praxis/Komplett Pflicht: nur Samstag/Montag, Telefonnummer, Tag und Uhrzeit für das Telefonat
+  // Praxis und Komplett gibt es nur auf Anfrage, nicht zum Direktkauf
+  assert.equal((await post("/api/bestellen", { paket: "praxis", sprache: "de", agb: true, sofort: true })).status, 400);
   assert.equal((await post("/api/bestellen", { paket: "komplett", sprache: "de", agb: true, sofort: true })).status, 400);
-  assert.equal((await post("/api/bestellen", { paket: "komplett", sprache: "de", agb: true, sofort: true, ...termine(1) })).status, 400, "Komplett braucht zwei Praxistage");
-  const sonntag = naechster(10, [0]);
-  assert.equal((await post("/api/bestellen", { paket: "praxis", sprache: "de", agb: true, sofort: true, ...termine(1), praxis_termine: [sonntag] })).status, 400, "Sonntag ist kein Praxistag");
-  assert.equal((await post("/api/bestellen", { paket: "praxis", sprache: "de", agb: true, sofort: true, ...termine(1), telefon: "abc" })).status, 400, "Telefonnummer Pflicht");
-  const ko = await post("/api/bestellen", { paket: "komplett", sprache: "de", agb: true, sofort: true, ...termine(2) });
-  assert.equal(ko.status, 200);
-  const kof = new URLSearchParams((await ko.json()).dev_formular);
-  assert.equal(kof.get("line_items[0][price_data][unit_amount]"), "249000");
-  assert.equal(kof.get("shipping_address_collection[allowed_countries][0]"), "DE");
-  assert.equal(kof.get("adaptive_pricing[enabled]"), "false", "immer in Euro, keine Umrechnung durch Stripe");
   // Basis: keine Lieferadresse
   const ba = await post("/api/bestellen", { paket: "basis", sprache: "de", agb: true, sofort: true });
-  assert.equal(new URLSearchParams((await ba.json()).dev_formular).get("shipping_address_collection[allowed_countries][0]"), null);
+  const baf = new URLSearchParams((await ba.json()).dev_formular);
+  assert.equal(baf.get("shipping_address_collection[allowed_countries][0]"), null);
+  assert.equal(baf.get("adaptive_pricing[enabled]"), "false", "immer in Euro, keine Umrechnung durch Stripe");
   // Buch: digitaler Inhalt, Sofort-Häkchen Pflicht
   assert.equal((await post("/api/bestellen", { paket: "buch", sprache: "de", agb: true, sofort: false })).status, 400);
   const b = await post("/api/bestellen", { paket: "buch", sprache: "en", agb: true, sofort: true });
@@ -234,4 +226,15 @@ test("Einzelprodukte: Kursbuch digital; Praxiskit gibt es nicht mehr, Komplett f
   assert.equal((await get("/api/buch/seite?nr=88&sprache=en")).status, 401);
   assert.equal((await post("/api/bescheinigung", { name: "Leser" }, l.cookie)).status, 400);
   assert.equal((await get("/download/" + "0".repeat(48))).status, 404);
+});
+
+test("Anfrage Praxis/Komplett: Kontaktdaten und Wunschtermine (Praxistag nur Samstag/Montag) sind Pflicht", async () => {
+  const basis = { name: "Anfrage Test", email: "anfrage-" + Date.now() + "@example.com", volljaehrig: true, sprache: "de" };
+  assert.equal((await post("/api/anfrage", { ...basis, paket: "basis", ...termine(1) })).status, 400, "Basis wird direkt gebucht");
+  assert.equal((await post("/api/anfrage", { ...basis, paket: "praxis" })).status, 400, "ohne Termine");
+  assert.equal((await post("/api/anfrage", { ...basis, paket: "komplett", ...termine(1) })).status, 400, "Komplett braucht zwei Praxistage");
+  assert.equal((await post("/api/anfrage", { ...basis, paket: "praxis", ...termine(1), praxis_termine: [naechster(10, [0])] })).status, 400, "Sonntag ist kein Praxistag");
+  assert.equal((await post("/api/anfrage", { ...basis, paket: "praxis", ...termine(1), telefon: "abc" })).status, 400, "Telefonnummer Pflicht");
+  assert.equal((await post("/api/anfrage", { ...basis, paket: "praxis", ...termine(1), volljaehrig: false })).status, 400, "18+ Pflicht");
+  assert.equal((await post("/api/anfrage", { ...basis, paket: "komplett", ...termine(2) })).status, 200);
 });

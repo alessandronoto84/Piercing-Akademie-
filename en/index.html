@@ -286,7 +286,7 @@
           <li>1 practice day in Lingen (in German or English)</li>
           <li>Real models</li>
         </ul>
-        <a class="btn" href="bestellen.html?paket=praxis">Book now</a>
+        <a class="btn" href="#anfrage" data-paket="praxis">Send an enquiry</a>
       </article>
 
       <article class="card" aria-labelledby="paket-komplett">
@@ -303,11 +303,11 @@
           <li>Practice materials for home, by mail</li>
           <li>12 months of support</li>
         </ul>
-        <a class="btn ghost" href="bestellen.html?paket=komplett">Book now</a>
+        <a class="btn ghost" href="#anfrage" data-paket="komplett">Send an enquiry</a>
       </article>
     </div>
     <p class="fine pk-note">All prices are final prices in euros including VAT. Participants must be 18 or older. The online course starts immediately after purchase: with your consent during checkout, your right of withdrawal for the online course expires once your access is activated (<a href="agb.html#widerruf">terms and withdrawal</a>). Practice days and coaching take place in German or English.</p>
-    <p class="fine pk-note" id="pk-zahlung">In the next step you choose your preferred dates and check your order; payment is made securely via Stripe. After payment you get your access straight away, and we call you for the agreed first phone call.</p>
+    <p class="fine pk-note" id="pk-zahlung">You book Basic and the course book directly, payment is made securely via Stripe and your access arrives straight away. For Practice and Complete you send an enquiry with your preferred date: we call you, confirm the date and then send you the payment link.</p>
 
     <p class="label einzeln-titel">Available separately</p>
     <div class="pk pk-einzeln">
@@ -466,17 +466,82 @@
   <div class="wrap">
     <div class="contact">
       <div>
-        <p class="label">Contact</p>
-        <h2 class="sec-title" id="kontakt-titel">Questions before booking?</h2>
-        <p>Give us a call or write to us. You book directly via the packages, where you also choose your preferred date for the practice day and for our first phone call.</p>
+        <p class="label">Enquiry</p>
+        <h2 class="sec-title" id="kontakt-titel">Request a practice day</h2>
+        <p>Practice and Complete are booked on request: choose your preferred date for the practice day and a day for our first phone call. We call you, confirm the date and then send you the payment link.</p>
+        <p>You can <a href="bestellen.html">book and pay for</a> the online course and the course book directly.</p>
         <div class="kontaktweg">
           <a href="tel:+491738072405"><b>Phone</b>+49&nbsp;173&nbsp;8072405</a>
           <a href="mailto:diepiercingakademie@gmail.com"><b>Email</b>diepiercingakademie@gmail.com</a>
           <a href="https://www.instagram.com/diepiercingakademie/" rel="noopener" target="_blank"><b>Instagram</b>@diepiercingakademie</a>
         </div>
         <address>740 Piercing, Burgstraße 12, 49808 Lingen (Ems)</address>
-        <a class="btn" href="#pakete">To the packages</a>
       </div>
+
+      <form class="form" id="anfrage" novalidate aria-labelledby="anfrage-titel">
+        <p class="form-title" id="anfrage-titel">Your enquiry</p>
+        <p class="fine">Required fields are marked with *.</p>
+
+        <fieldset class="a-pakete">
+          <legend class="a-legende">Package <span class="req">*</span></legend>
+          <label class="b-paket"><input type="radio" name="paket" value="praxis" checked><span><strong>Practice</strong> <span class="b-preis">€999</span><br><span class="b-inhalt">Online course and 1 practice day in Lingen</span></span></label>
+          <label class="b-paket"><input type="radio" name="paket" value="komplett"><span><strong>Complete</strong> <span class="b-preis">€2,490</span><br><span class="b-inhalt">Online course, 2 practice days, 1:1 coaching and practice materials</span></span></label>
+        </fieldset>
+
+        <div class="field">
+          <label for="a-name">Name <span class="req">*</span></label>
+          <input id="a-name" name="name" type="text" autocomplete="name" required maxlength="120">
+        </div>
+        <div class="field">
+          <label for="a-email">Email <span class="req">*</span></label>
+          <input id="a-email" name="email" type="email" autocomplete="email" required maxlength="200">
+        </div>
+        <div class="field">
+          <label for="a-telefon">Phone number <span class="req">*</span></label>
+          <input id="a-telefon" name="telefon" type="tel" autocomplete="tel" inputmode="tel" required maxlength="40" aria-describedby="a-telefon-hint">
+          <p class="hint" id="a-telefon-hint">We will call you on this number for the first phone call.</p>
+        </div>
+
+        <div class="field">
+          <p class="b-label" id="a-praxis-label"><span data-anzahl="1">Preferred date for your practice day</span><span data-anzahl="2" hidden>Preferred dates for your two practice days</span> <span class="req">*</span></p>
+          <p class="hint"><span data-anzahl="1">Practice days are on Saturdays or Mondays, at least one week from now.</span><span data-anzahl="2" hidden>Choose two different days, Saturdays or Mondays only.</span></p>
+          <div class="b-kalender" id="a-kal-praxis" data-tage="1,6" data-von="7" data-bis="183" role="group" aria-labelledby="a-praxis-label"></div>
+          <p class="b-auswahl" id="a-praxis-auswahl" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <p class="b-label" id="a-anruf-label">Preferred day for our first phone call <span class="req">*</span></p>
+          <p class="hint">Monday to Saturday, within the next eight weeks.</p>
+          <div class="b-kalender" id="a-kal-anruf" data-tage="1,2,3,4,5,6" data-von="1" data-bis="60" role="group" aria-labelledby="a-anruf-label"></div>
+          <p class="b-auswahl" id="a-anruf-auswahl" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="a-zeit">Time for the call <span class="req">*</span></label>
+          <select id="a-zeit" name="telefon_zeit" required>
+            <option value="">Please choose</option>
+            <option value="vormittags">morning (9 am–12 pm)</option>
+            <option value="nachmittags">afternoon (12–5 pm)</option>
+            <option value="abends">evening (5–8 pm)</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="a-nachricht">Message <span class="req">(optional)</span></label>
+          <textarea id="a-nachricht" name="nachricht" rows="3" maxlength="1500"></textarea>
+        </div>
+        <div class="check">
+          <input id="a-volljaehrig" name="volljaehrig" type="checkbox" required>
+          <label for="a-volljaehrig">I am at least 18 years old. <span class="req">*</span></label>
+        </div>
+        <div class="feld-falle" aria-hidden="true"><label for="a-website">Website</label><input id="a-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+
+        <p class="fine">The enquiry is non-binding. The booking only becomes binding with our confirmation after the phone call. More in the <a href="datenschutz.html">privacy policy</a>.</p>
+        <p class="err" id="a-fehler" role="alert" hidden></p>
+        <button class="btn" type="submit" id="a-senden">Send enquiry</button>
+
+        <div class="status" id="a-ok" role="status" tabindex="-1" hidden>
+          <p><strong>Thank you, your enquiry has reached us.</strong> You will receive a confirmation by email shortly. We will call you at your preferred time.</p>
+        </div>
+      </form>
 
     </div>
   </div>
@@ -498,6 +563,7 @@
   </footer>
 </div>
 
+<script src="../assets/kalender.js" defer></script>
 <script src="../assets/main.js" defer></script>
 <script src="../assets/animation.js" defer></script>
 <script src="../assets/menue.js" defer></script>

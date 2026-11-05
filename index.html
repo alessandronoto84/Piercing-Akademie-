@@ -286,7 +286,7 @@
           <li>1 Praxistag in Lingen</li>
           <li>Echte Modelle</li>
         </ul>
-        <a class="btn" href="bestellen.html?paket=praxis">Jetzt buchen</a>
+        <a class="btn" href="#anfrage" data-paket="praxis">Jetzt anfragen</a>
       </article>
 
       <article class="card" aria-labelledby="paket-komplett">
@@ -303,11 +303,11 @@
           <li>Übungsmaterial für zu Hause, per Post</li>
           <li>12 Monate Support</li>
         </ul>
-        <a class="btn ghost" href="bestellen.html?paket=komplett">Jetzt buchen</a>
+        <a class="btn ghost" href="#anfrage" data-paket="komplett">Jetzt anfragen</a>
       </article>
     </div>
     <p class="fine pk-note">Alle Preise sind Endpreise in Euro inkl. MwSt. Teilnahme ab 18 Jahren. Der Online-Kurs startet sofort nach dem Kauf: Mit deiner Zustimmung im Bestellvorgang erlischt das Widerrufsrecht für den Online-Kurs mit der Freischaltung deines Zugangs (<a href="agb.html#widerruf">AGB und Widerruf</a>).</p>
-    <p class="fine pk-note" id="pk-zahlung">Im nächsten Schritt wählst du deine Wunschtermine und prüfst deine Bestellung, bezahlt wird sicher über Stripe. Nach der Zahlung bekommst du sofort deinen Zugang, und wir rufen dich zum vereinbarten Ersttelefonat an.</p>
+    <p class="fine pk-note" id="pk-zahlung">Basis und Kursbuch buchst du direkt, bezahlt wird sicher über Stripe, und dein Zugang kommt sofort. Praxis und Komplett fragst du mit Wunschtermin an: Wir rufen dich an, bestätigen den Termin und schicken dir dann den Zahlungslink.</p>
 
     <p class="label einzeln-titel">Einzeln erhältlich</p>
     <div class="pk pk-einzeln">
@@ -466,17 +466,82 @@
   <div class="wrap">
     <div class="contact">
       <div>
-        <p class="label">Kontakt</p>
-        <h2 class="sec-title" id="kontakt-titel">Fragen vor der Buchung?</h2>
-        <p>Ruf uns an oder schreib uns. Gebucht wird direkt über die Pakete: Dort wählst du auch deinen Wunschtermin für den Praxistag und für unser Ersttelefonat.</p>
+        <p class="label">Anfrage</p>
+        <h2 class="sec-title" id="kontakt-titel">Praxistag anfragen</h2>
+        <p>Praxis und Komplett buchst du auf Anfrage: Wähle deinen Wunschtermin für den Praxistag und einen Tag für unser Ersttelefonat. Wir rufen dich an, bestätigen den Termin und schicken dir danach den Zahlungslink.</p>
+        <p>Den Online-Kurs und das Kursbuch kannst du direkt <a href="bestellen.html">buchen und bezahlen</a>.</p>
         <div class="kontaktweg">
           <a href="tel:+491738072405"><b>Telefon</b>+49&nbsp;173&nbsp;8072405</a>
           <a href="mailto:diepiercingakademie@gmail.com"><b>E-Mail</b>diepiercingakademie@gmail.com</a>
           <a href="https://www.instagram.com/diepiercingakademie/" rel="noopener" target="_blank"><b>Instagram</b>@diepiercingakademie</a>
         </div>
         <address>740 Piercing, Burgstraße 12, 49808 Lingen (Ems)</address>
-        <a class="btn" href="#pakete">Zu den Paketen</a>
       </div>
+
+      <form class="form" id="anfrage" novalidate aria-labelledby="anfrage-titel">
+        <p class="form-title" id="anfrage-titel">Deine Anfrage</p>
+        <p class="fine">Pflichtfelder sind mit * markiert.</p>
+
+        <fieldset class="a-pakete">
+          <legend class="a-legende">Paket <span class="req">*</span></legend>
+          <label class="b-paket"><input type="radio" name="paket" value="praxis" checked><span><strong>Praxis</strong> <span class="b-preis">999 €</span><br><span class="b-inhalt">Online-Kurs und 1 Praxistag in Lingen</span></span></label>
+          <label class="b-paket"><input type="radio" name="paket" value="komplett"><span><strong>Komplett</strong> <span class="b-preis">2.490 €</span><br><span class="b-inhalt">Online-Kurs, 2 Praxistage, 1:1-Coaching und Übungsmaterial</span></span></label>
+        </fieldset>
+
+        <div class="field">
+          <label for="a-name">Name <span class="req">*</span></label>
+          <input id="a-name" name="name" type="text" autocomplete="name" required maxlength="120">
+        </div>
+        <div class="field">
+          <label for="a-email">E-Mail <span class="req">*</span></label>
+          <input id="a-email" name="email" type="email" autocomplete="email" required maxlength="200">
+        </div>
+        <div class="field">
+          <label for="a-telefon">Telefonnummer <span class="req">*</span></label>
+          <input id="a-telefon" name="telefon" type="tel" autocomplete="tel" inputmode="tel" required maxlength="40" aria-describedby="a-telefon-hint">
+          <p class="hint" id="a-telefon-hint">Unter dieser Nummer rufen wir dich zum Ersttelefonat an.</p>
+        </div>
+
+        <div class="field">
+          <p class="b-label" id="a-praxis-label"><span data-anzahl="1">Wunschtermin für deinen Praxistag</span><span data-anzahl="2" hidden>Wunschtermine für deine zwei Praxistage</span> <span class="req">*</span></p>
+          <p class="hint"><span data-anzahl="1">Praxistage sind samstags oder montags, frühestens in einer Woche.</span><span data-anzahl="2" hidden>Wähle zwei verschiedene Tage, nur samstags oder montags.</span></p>
+          <div class="b-kalender" id="a-kal-praxis" data-tage="1,6" data-von="7" data-bis="183" role="group" aria-labelledby="a-praxis-label"></div>
+          <p class="b-auswahl" id="a-praxis-auswahl" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <p class="b-label" id="a-anruf-label">Wunschtag für unser Ersttelefonat <span class="req">*</span></p>
+          <p class="hint">Montag bis Samstag, in den nächsten acht Wochen.</p>
+          <div class="b-kalender" id="a-kal-anruf" data-tage="1,2,3,4,5,6" data-von="1" data-bis="60" role="group" aria-labelledby="a-anruf-label"></div>
+          <p class="b-auswahl" id="a-anruf-auswahl" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="a-zeit">Uhrzeit für das Telefonat <span class="req">*</span></label>
+          <select id="a-zeit" name="telefon_zeit" required>
+            <option value="">Bitte wählen</option>
+            <option value="vormittags">vormittags (9–12 Uhr)</option>
+            <option value="nachmittags">nachmittags (12–17 Uhr)</option>
+            <option value="abends">abends (17–20 Uhr)</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="a-nachricht">Nachricht <span class="req">(optional)</span></label>
+          <textarea id="a-nachricht" name="nachricht" rows="3" maxlength="1500"></textarea>
+        </div>
+        <div class="check">
+          <input id="a-volljaehrig" name="volljaehrig" type="checkbox" required>
+          <label for="a-volljaehrig">Ich bin mindestens 18 Jahre alt. <span class="req">*</span></label>
+        </div>
+        <div class="feld-falle" aria-hidden="true"><label for="a-website">Website</label><input id="a-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+
+        <p class="fine">Die Anfrage ist unverbindlich. Verbindlich wird die Buchung erst mit unserer Bestätigung nach dem Telefonat. Mehr dazu in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+        <p class="err" id="a-fehler" role="alert" hidden></p>
+        <button class="btn" type="submit" id="a-senden">Anfrage senden</button>
+
+        <div class="status" id="a-ok" role="status" tabindex="-1" hidden>
+          <p><strong>Danke, deine Anfrage ist bei uns angekommen.</strong> Du bekommst gleich eine Bestätigung per E-Mail. Wir rufen dich zum gewünschten Termin an.</p>
+        </div>
+      </form>
 
     </div>
   </div>
@@ -498,6 +563,7 @@
   </footer>
 </div>
 
+<script src="assets/kalender.js" defer></script>
 <script src="assets/main.js" defer></script>
 <script src="assets/animation.js" defer></script>
 <script src="assets/menue.js" defer></script>

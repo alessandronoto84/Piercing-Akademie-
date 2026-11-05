@@ -4,7 +4,7 @@
    - Login ohne Passwort: 6-stelliger Code per E-Mail an die beim Kauf angegebene Adresse
    - Stripe-Webhook: legt nach der Zahlung den Zugang an und schickt Zugang + Vertragsbestätigung (§ 312f BGB)
    - speichert Fortschritt und vergibt prüfbare Bescheinigungsnummern */
-import { mailCode, mailWillkommen, mailTermineAkademie, mailVerdacht, mailAnfrage, mailWiderrufEingang, mailWiderrufAkademie, mailSetAkademie, mailBuch, sende } from "./mail.js";
+import { mailCode, mailWillkommen, mailTermineAkademie, mailAnfrageEingang, mailVerdacht, mailAnfrage, mailWiderrufEingang, mailWiderrufAkademie, mailSetAkademie, mailBuch, sende } from "./mail.js";
 
 const COOKIE = "pa_sitzung";
 const SITZUNG_TAGE = 30;
@@ -284,18 +284,18 @@ async function anfrage(req, env, ctx) {
   if (!d) return json({ fehler: "daten" }, 400);
   if (d.website) return json({ ok: true }); // Falle für Spam-Programme: unsichtbares Feld ausgefüllt
   const kurz = (v, n) => String(v || "").trim().slice(0, n);
-  const a = {
-    paket: kurz(d.paketText || d.paket, 80), name: kurz(d.name, 120), email: normal(d.email), telefon: kurz(d.telefon, 40),
-    erfahrung: kurz(d.erfahrung, 80), zeitraum: kurz(d.zeitraum, 120), modelle: kurz(d.modelle, 80), quelle: kurz(d.quelle, 80),
-    nachricht: kurz(d.nachricht, 1500), sprache: ["de", "en", "es"].includes(d.sprache) ? d.sprache : "de"
-  };
-  if (!a.paket || !a.name || !emailOk(a.email)) return json({ fehler: "pflichtfelder" }, 400);
+  const paket = PRAXISTAGE[d.paket] ? d.paket : null; // Anfragen gibt es nur für Praxis und Komplett
+  const a = { paket, name: kurz(d.name, 120), email: normal(d.email), nachricht: kurz(d.nachricht, 1500), sprache: ["de", "en", "es"].includes(d.sprache) ? d.sprache : "de" };
+  if (!paket || !a.name || !emailOk(a.email) || d.volljaehrig !== true) return json({ fehler: "pflichtfelder" }, 400);
+  const termine = terminePruefen(paket, d);
+  if (!termine.ok) return json({ fehler: "termine", feld: termine.feld }, 400);
+  a.wunsch = { telefon: termine.werte.telefon, praxis: JSON.parse(termine.werte.praxis_termine), telefonTermin: termine.werte.telefon_termin, telefonZeit: termine.werte.telefon_zeit };
   const schluessel = await sha256((req.headers.get("CF-Connecting-IP") || "lokal") + ":" + (env.CODE_PFEFFER || ""));
   const n = await env.DB.prepare("SELECT COUNT(*) AS n FROM anfragen WHERE schluessel = ? AND zeit > ?").bind(schluessel, jetzt() - 3600).first();
   if (n.n >= 5) return json({ fehler: "zu_oft" }, 429);
   await env.DB.prepare("INSERT INTO anfragen (zeit, schluessel) VALUES (?, ?)").bind(jetzt(), schluessel).run();
   const admin = String(env.ADMIN_EMAILS || "").split(",")[0].trim();
-  ctx.waitUntil(sende(env, admin, mailAnfrage(a), a.email));
+  ctx.waitUntil(Promise.all([sende(env, admin, mailAnfrage(a), a.email), sende(env, a.email, mailAnfrageEingang(a))]));
   return json({ ok: true });
 }
 
@@ -373,8 +373,9 @@ async function bestellen(req, env, url) {
   const art = PAKETE[paket] ? "kurs" : PRODUKTE[paket].art;
   // AGB immer; sofortiger Beginn nur bei digitalen Leistungen (Online-Kurs, PDF), nicht bei Ware
   if (d.agb !== true || (art !== "ware" && d.sofort !== true)) return json({ fehler: "zustimmung" }, 400);
-  const termine = terminePruefen(paket, d);
-  if (!termine.ok) return json({ fehler: "termine", feld: termine.feld }, 400);
+  // Praxis und Komplett (mit Praxistag) gibt es nur auf Anfrage, nicht zum Direktkauf
+  if (PRAXISTAGE[paket]) return json({ fehler: "nur_anfrage" }, 400);
+  const termine = { werte: {} };
   const schluessel = await sha256("b:" + (req.headers.get("CF-Connecting-IP") || "lokal") + ":" + (env.CODE_PFEFFER || ""));
   const n = await env.DB.prepare("SELECT COUNT(*) AS n FROM anfragen WHERE schluessel = ? AND zeit > ?").bind(schluessel, jetzt() - 3600).first();
   if (n.n >= 10) return json({ fehler: "zu_oft" }, 429);

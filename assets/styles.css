@@ -624,7 +624,7 @@ header .sprachwahl{order:2}
 @media (prefers-reduced-motion:reduce){.auftakt{display:none}}
 
 /* Bestellseite: Wunschtermine im Kalender (nur erlaubte Tage sind wählbar) */
-.b-termine .b-label{font-weight:600;margin:0}
+.b-label{font-weight:600;margin:0}
 .b-kalender{border:1px solid var(--line);border-radius:12px;padding:12px;max-width:380px;background:var(--surface,transparent)}
 .b-kal-kopf{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}
 .b-kal-kopf strong{text-transform:capitalize}
@@ -639,3 +639,7 @@ button.b-kal-tag.an{background:var(--accent);color:var(--gold-ink,#111114)}
 .b-kal-tag.aus{color:var(--muted);opacity:.45}
 .b-kal-raster button:focus-visible,.b-kal-kopf button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .b-auswahl{font-size:.9rem;margin:6px 0 0;color:var(--muted)}
+/* Anfrageformular: Paketwahl und Legende */
+.a-pakete{display:grid;gap:10px}
+.a-legende{font-weight:600;margin-bottom:6px;padding:0}
+#anfrage .b-kalender{max-width:100%}

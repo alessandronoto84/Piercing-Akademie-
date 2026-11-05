@@ -8,55 +8,22 @@
     <form class="form" id="bestell-formular" novalidate>
       <fieldset class="b-pakete">
         <legend class="form-title">1. Paquete o producto</legend>
-        <label class="b-paket" data-art="kurs"><input type="radio" name="paket" value="basis"><span><strong>Básico</strong> <span class="b-preis">249 €</span><br><span class="b-inhalt">Curso online con los 11 módulos, preguntas, listas de control, examen final, libro del curso, certificado de participación y tareas prácticas con lista de material para comprar por tu cuenta</span></span></label>
-        <label class="b-paket" data-art="kurs"><input type="radio" name="paket" value="praxis" checked><span><strong>Práctica</strong> <span class="b-preis">999 €</span><br><span class="b-inhalt">Todo lo de Básico, más 1 día de práctica en Lingen con modelos reales</span></span></label>
-        <label class="b-paket" data-art="kurs"><input type="radio" name="paket" value="komplett"><span><strong>Completo</strong> <span class="b-preis">2.490 €</span><br><span class="b-inhalt">Todo lo de Práctica, más mentoría 1:1, un segundo día de práctica, todo el material de práctica para casa por correo y 12 meses de soporte. La dirección de entrega la indicas en Stripe</span></span></label>
+        <label class="b-paket" data-art="kurs"><input type="radio" name="paket" value="basis" checked><span><strong>Básico</strong> <span class="b-preis">249 €</span><br><span class="b-inhalt">Curso online con los 11 módulos, preguntas, listas de control, examen final, libro del curso, certificado de participación y tareas prácticas con lista de material para comprar por tu cuenta</span></span></label>
         <p class="b-gruppe">Disponible por separado</p>
         <label class="b-paket" data-art="digital"><input type="radio" name="paket" value="buch"><span><strong>Libro del curso digital</strong> <span class="b-preis">19,90 €</span><br><span class="b-inhalt">«Die Piercing Akademie – Dein Weg zum Bodypiercer», 120 páginas, en español con las páginas originales en alemán, lectura online en el curso (24 meses), con búsqueda y notas propias. La edición impresa (en alemán) cuesta 39,99 € en <a href="https://www.amazon.de/dp/3818756686" rel="noopener" target="_blank">Amazon</a></span></span></label>
+        <p class="fine">Los paquetes Práctica y Completo con día de práctica son bajo consulta: <a href="index.html#anfrage">solicitar una fecha preferida</a>.</p>
       </fieldset>
 
       <div class="b-summe">
-        <p><span>Precio total</span> <strong id="b-summe">999 €</strong></p>
-        <p class="fine" data-fuer="kurs">Precio final, IVA incluido. Pago único, sin suscripción. Acceso al curso online durante 12 meses desde la activación. Elige abajo tu fecha preferida para el día de práctica; te llamaremos y la confirmaremos. Los días de práctica y la mentoría se imparten en alemán o inglés.</p>
+        <p><span>Precio total</span> <strong id="b-summe">249 €</strong></p>
+        <p class="fine" data-fuer="kurs">Precio final, IVA incluido. Pago único, sin suscripción. Acceso al curso online durante 12 meses desde la activación. Los días de práctica y la mentoría se imparten en alemán o inglés.</p>
         <p class="fine" data-fuer="digital" hidden>Precio final, IVA incluido. Recibes tu acceso por correo justo después del pago. Lees el libro online en el curso; no hay archivo para descargar y cada página lleva tu correo electrónico.</p>
       </div>
-
-      <fieldset class="b-termine" id="b-termine" hidden>
-        <legend class="form-title">Tus fechas preferidas</legend>
-        <p class="fine">Los días de práctica son los sábados y los lunes en Lingen. Elige tu fecha preferida y un día para nuestra primera llamada. Te llamaremos y confirmaremos la fecha.</p>
-        <div class="field">
-          <label for="b-telefon">Número de teléfono <span class="req">*</span></label>
-          <input id="b-telefon" name="telefon" type="tel" autocomplete="tel" inputmode="tel" maxlength="40" aria-describedby="b-telefon-hint">
-          <p class="hint" id="b-telefon-hint">Te llamaremos a este número para la primera llamada.</p>
-        </div>
-        <div class="field">
-          <p class="b-label" id="b-praxis-label"><span data-anzahl="1">Fecha preferida para tu día de práctica</span><span data-anzahl="2" hidden>Fechas preferidas para tus dos días de práctica</span> <span class="req">*</span></p>
-          <p class="hint"><span data-anzahl="1">Solo sábados o lunes, como mínimo dentro de una semana.</span><span data-anzahl="2" hidden>Elige dos días distintos, solo sábados o lunes.</span></p>
-          <div class="b-kalender" id="b-kal-praxis" data-tage="1,6" data-von="7" data-bis="183" role="group" aria-labelledby="b-praxis-label"></div>
-          <p class="b-auswahl" id="b-praxis-auswahl" aria-live="polite"></p>
-        </div>
-        <div class="field">
-          <p class="b-label" id="b-anruf-label">Día preferido para nuestra primera llamada <span class="req">*</span></p>
-          <p class="hint">De lunes a sábado, en las próximas ocho semanas.</p>
-          <div class="b-kalender" id="b-kal-anruf" data-tage="1,2,3,4,5,6" data-von="1" data-bis="60" role="group" aria-labelledby="b-anruf-label"></div>
-          <p class="b-auswahl" id="b-anruf-auswahl" aria-live="polite"></p>
-        </div>
-        <div class="field">
-          <label for="b-telefon-zeit">Hora de la llamada <span class="req">*</span></label>
-          <select id="b-telefon-zeit" name="telefon_zeit">
-            <option value="">Elige una opción</option>
-            <option value="vormittags">por la mañana (9–12 h)</option>
-            <option value="nachmittags">por la tarde (12–17 h)</option>
-            <option value="abends">por la noche (17–20 h)</option>
-          </select>
-        </div>
-      </fieldset>
 
       <fieldset class="b-zustimmung">
         <legend class="form-title">2. Confirmar</legend>
         <label class="check"><input type="checkbox" name="agb" id="b-agb"><span>Tengo al menos 18 años y acepto las <a href="agb.html" target="_blank" rel="noopener">condiciones generales</a>. He tomado conocimiento de la <a href="agb.html#widerruf" target="_blank" rel="noopener">información sobre el desistimiento</a> y de la <a href="datenschutz.html" target="_blank" rel="noopener">política de privacidad</a>. <span class="req">*</span></span></label>
         <label class="check" id="b-sofort-feld"><input type="checkbox" name="sofort" id="b-sofort"><span><span data-fuer="kurs">Solicito expresamente que empecéis a prestar el curso online antes de que finalice el plazo de desistimiento. Sé que con ello pierdo mi derecho de desistimiento respecto del curso online: se extingue al activarse mi acceso, es decir, con mi primer inicio de sesión.</span><span data-fuer="digital" hidden>Solicito expresamente que empecéis a facilitar el acceso de lectura al libro antes de que finalice el plazo de desistimiento. Sé que con ello pierdo mi derecho de desistimiento al respecto.</span> <span class="req">*</span></span></label>
-        <p class="fine" id="b-praxis-hinweis">Para los días de práctica y la mentoría, la información sobre el desistimiento se aplica sin cambios.</p>
       </fieldset>
 
       <p class="err" id="b-fehler" role="alert" hidden></p>

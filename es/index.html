@@ -286,7 +286,7 @@
           <li>1 día de práctica en Lingen (en alemán o inglés)</li>
           <li>Modelos reales</li>
         </ul>
-        <a class="btn" href="bestellen.html?paket=praxis">Reservar ahora</a>
+        <a class="btn" href="#anfrage" data-paket="praxis">Solicitar ahora</a>
       </article>
 
       <article class="card" aria-labelledby="paket-komplett">
@@ -303,11 +303,11 @@
           <li>Material de práctica para casa, por correo</li>
           <li>12 meses de soporte</li>
         </ul>
-        <a class="btn ghost" href="bestellen.html?paket=komplett">Reservar ahora</a>
+        <a class="btn ghost" href="#anfrage" data-paket="komplett">Solicitar ahora</a>
       </article>
     </div>
     <p class="fine pk-note">Todos los precios son finales, en euros e IVA incluido. Participación a partir de 18 años. El curso online empieza en cuanto lo compras: con tu consentimiento durante la compra, el derecho de desistimiento del curso online se extingue al activarse tu acceso (<a href="agb.html#widerruf">condiciones y desistimiento</a>). Los días de práctica y la mentoría se imparten en alemán o inglés.</p>
-    <p class="fine pk-note" id="pk-zahlung">En el siguiente paso eliges tus fechas preferidas y revisas tu pedido; el pago se hace de forma segura con Stripe. Tras el pago recibes tu acceso enseguida y te llamamos para la primera llamada acordada.</p>
+    <p class="fine pk-note" id="pk-zahlung">Básico y el libro del curso se reservan directamente, el pago se hace de forma segura con Stripe y recibes el acceso al momento. Práctica y Completo se solicitan con tu fecha preferida: te llamamos, confirmamos la fecha y después te enviamos el enlace de pago.</p>
 
     <p class="label einzeln-titel">Disponible por separado</p>
     <div class="pk pk-einzeln">
@@ -466,17 +466,82 @@
   <div class="wrap">
     <div class="contact">
       <div>
-        <p class="label">Contacto</p>
-        <h2 class="sec-title" id="kontakt-titel">¿Preguntas antes de reservar?</h2>
-        <p>Llámanos o escríbenos. Se reserva directamente desde los paquetes: allí eliges también tu fecha preferida para el día de práctica y para nuestra primera llamada.</p>
+        <p class="label">Consulta</p>
+        <h2 class="sec-title" id="kontakt-titel">Solicitar un día de práctica</h2>
+        <p>Práctica y Completo se reservan bajo consulta: elige tu fecha preferida para el día de práctica y un día para nuestra primera llamada. Te llamamos, confirmamos la fecha y después te enviamos el enlace de pago.</p>
+        <p>El curso online y el libro del curso se pueden <a href="bestellen.html">reservar y pagar</a> directamente.</p>
         <div class="kontaktweg">
           <a href="tel:+491738072405"><b>Teléfono</b>+49&nbsp;173&nbsp;8072405</a>
           <a href="mailto:diepiercingakademie@gmail.com"><b>Correo</b>diepiercingakademie@gmail.com</a>
           <a href="https://www.instagram.com/diepiercingakademie/" rel="noopener" target="_blank"><b>Instagram</b>@diepiercingakademie</a>
         </div>
         <address>740 Piercing, Burgstraße 12, 49808 Lingen (Ems)</address>
-        <a class="btn" href="#pakete">Ver los paquetes</a>
       </div>
+
+      <form class="form" id="anfrage" novalidate aria-labelledby="anfrage-titel">
+        <p class="form-title" id="anfrage-titel">Tu consulta</p>
+        <p class="fine">Los campos obligatorios están marcados con *.</p>
+
+        <fieldset class="a-pakete">
+          <legend class="a-legende">Paquete <span class="req">*</span></legend>
+          <label class="b-paket"><input type="radio" name="paket" value="praxis" checked><span><strong>Práctica</strong> <span class="b-preis">999 €</span><br><span class="b-inhalt">Curso online y 1 día de práctica en Lingen</span></span></label>
+          <label class="b-paket"><input type="radio" name="paket" value="komplett"><span><strong>Completo</strong> <span class="b-preis">2.490 €</span><br><span class="b-inhalt">Curso online, 2 días de práctica, mentoría 1:1 y material de práctica</span></span></label>
+        </fieldset>
+
+        <div class="field">
+          <label for="a-name">Nombre <span class="req">*</span></label>
+          <input id="a-name" name="name" type="text" autocomplete="name" required maxlength="120">
+        </div>
+        <div class="field">
+          <label for="a-email">Correo electrónico <span class="req">*</span></label>
+          <input id="a-email" name="email" type="email" autocomplete="email" required maxlength="200">
+        </div>
+        <div class="field">
+          <label for="a-telefon">Número de teléfono <span class="req">*</span></label>
+          <input id="a-telefon" name="telefon" type="tel" autocomplete="tel" inputmode="tel" required maxlength="40" aria-describedby="a-telefon-hint">
+          <p class="hint" id="a-telefon-hint">Te llamaremos a este número para la primera llamada.</p>
+        </div>
+
+        <div class="field">
+          <p class="b-label" id="a-praxis-label"><span data-anzahl="1">Fecha preferida para tu día de práctica</span><span data-anzahl="2" hidden>Fechas preferidas para tus dos días de práctica</span> <span class="req">*</span></p>
+          <p class="hint"><span data-anzahl="1">Los días de práctica son sábados o lunes, como mínimo dentro de una semana.</span><span data-anzahl="2" hidden>Elige dos días distintos, solo sábados o lunes.</span></p>
+          <div class="b-kalender" id="a-kal-praxis" data-tage="1,6" data-von="7" data-bis="183" role="group" aria-labelledby="a-praxis-label"></div>
+          <p class="b-auswahl" id="a-praxis-auswahl" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <p class="b-label" id="a-anruf-label">Día preferido para nuestra primera llamada <span class="req">*</span></p>
+          <p class="hint">De lunes a sábado, en las próximas ocho semanas.</p>
+          <div class="b-kalender" id="a-kal-anruf" data-tage="1,2,3,4,5,6" data-von="1" data-bis="60" role="group" aria-labelledby="a-anruf-label"></div>
+          <p class="b-auswahl" id="a-anruf-auswahl" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="a-zeit">Hora de la llamada <span class="req">*</span></label>
+          <select id="a-zeit" name="telefon_zeit" required>
+            <option value="">Elige una opción</option>
+            <option value="vormittags">por la mañana (9–12 h)</option>
+            <option value="nachmittags">por la tarde (12–17 h)</option>
+            <option value="abends">por la noche (17–20 h)</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="a-nachricht">Mensaje <span class="req">(opcional)</span></label>
+          <textarea id="a-nachricht" name="nachricht" rows="3" maxlength="1500"></textarea>
+        </div>
+        <div class="check">
+          <input id="a-volljaehrig" name="volljaehrig" type="checkbox" required>
+          <label for="a-volljaehrig">Tengo al menos 18 años. <span class="req">*</span></label>
+        </div>
+        <div class="feld-falle" aria-hidden="true"><label for="a-website">Website</label><input id="a-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+
+        <p class="fine">La consulta no es vinculante. La reserva solo es vinculante con nuestra confirmación tras la llamada. Más información en la <a href="datenschutz.html">política de privacidad</a>.</p>
+        <p class="err" id="a-fehler" role="alert" hidden></p>
+        <button class="btn" type="submit" id="a-senden">Enviar consulta</button>
+
+        <div class="status" id="a-ok" role="status" tabindex="-1" hidden>
+          <p><strong>Gracias, hemos recibido tu consulta.</strong> En breve recibirás una confirmación por correo electrónico. Te llamaremos en la fecha que elegiste.</p>
+        </div>
+      </form>
 
     </div>
   </div>
@@ -498,6 +563,7 @@
   </footer>
 </div>
 
+<script src="../assets/kalender.js" defer></script>
 <script src="../assets/main.js" defer></script>
 <script src="../assets/animation.js" defer></script>
 <script src="../assets/menue.js" defer></script>

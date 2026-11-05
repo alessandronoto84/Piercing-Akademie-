@@ -10,7 +10,7 @@ Stand: 05.11.2026. Erledigtes steht unten. Details und Quellen: `KURS-RECHERCHE.
 | 3 | **Entscheidung Kursplattform** (z. B. elopage, Digistore24, Teachable oder eigene Lösung) | Login, Bezahlung, Freischaltung nach Kauf, Fortschritt auf dem Server, fälschungssichere Bescheinigung, gesperrter Prüfmodus. Ich übertrage die Inhalte dorthin. | du |
 | 4 | **Domain und Hosting** (z. B. piercingakademie.de; Hoster mit Sitz in der EU) | Seite online stellen; Datenschutzerklärung braucht Name, Sitz und Auftragsverarbeitungsvertrag des Hosters. | du |
 | 5 | **E-Mail-Adresse zur Domain** (z. B. info@piercingakademie.de) | Wirkt deutlich seriöser als Gmail; dann überall austauschen. | du |
-| 6 | ~~Anfrageformular~~ | Ersetzt (05.11.2026): Es wird nur noch direkt gebucht. Bei Praxis und Komplett wählt der Kunde auf der Bestellseite im Kalender Wunschtermine für den Praxistag (nur Samstag/Montag) und das Ersttelefonat und gibt seine Telefonnummer an; du bekommst nach der Zahlung eine E-Mail „Neue Buchung: bitte anrufen“. Für Fragen bleiben Telefon, E-Mail und Instagram. | – |
+| 6 | **Praxis und Komplett nur auf Anfrage** (05.11.2026): Basis und Kursbuch werden direkt gebucht und bezahlt. Praxis und Komplett fragt man über das Formular auf der Startseite an: Name, E-Mail, Telefon, Wunschtermin(e) für den Praxistag im Kalender (nur Samstag/Montag), Wunschtag und Uhrzeit fürs Ersttelefonat. Du bekommst „Anfrage …: bitte anrufen“, der Interessent eine Eingangsbestätigung. **Nach dem Telefonat** schickst du den Zahlungslink: in Stripe unter Zahlungslinks einen Link für das Paket anlegen und dabei unter „Metadaten“ `paket` = `praxis` bzw. `komplett` eintragen (dann schaltet der Webhook den richtigen Zugang frei und schickt die Willkommens-E-Mail), oder eine Rechnung schreiben und den Zugang von mir freischalten lassen. | du |
 | 7 | **Fachliche Freigabe** von Modul 11 („Studio starten“) und der Lektion Perichondritis | Beide sind noch als „Entwurf“ markiert. | du |
 | 8 | **Händlerliste für Modul 11** (Schmuck, Kanülen, Desinfektion) oder Streichung | Platzhalter „Welche Händler sich bewährt haben …“ | du |
 | 9 | **Echte Fotos und kurze Videos**: du im Studio, Arbeitsplatz, Autoklav, Praxistag | Echte Bilder wirken stärker als Symbolbilder. | du |
@@ -47,7 +47,7 @@ Stand: 05.11.2026. Erledigtes steht unten. Details und Quellen: `KURS-RECHERCHE.
 - Kursbuch (epubli-Fassung, 116 Seiten) im privaten Speicher, mit Suche; Übersetzung Englisch und Spanisch für alle Seiten.
 - Bezahlung: Karte, PayPal, SEPA, Klarna u. a.; immer in Euro (keine automatische Währungsumrechnung). Banküberweisung bewusst nicht.
 - Fahrschule: 46 lizenzfreie Fotos in den Lektionen, echte Titelbilder für Modul 1, 6 und 8, Schmuck-Clip aus echtem Foto.
-- Buchung mit Wunschterminen statt Anfrageformular (siehe Punkt 6).
+- Basis und Kursbuch direkt buchen; Praxis und Komplett auf Anfrage mit Kalender für Wunschtermine (siehe Punkt 6).
 
 **26.10.2026**
 
