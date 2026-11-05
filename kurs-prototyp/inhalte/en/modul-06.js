@@ -54,7 +54,7 @@ KURS.module.push({
       seite: "S. 55",
       inhalt: [
         { typ: "text", text: "There are countless types of steel. Piercers use only three for jewelry: Composition D implant steel, surgical steel 316 LVM and, most commonly, surgical steel 316L. According to the EU Nickel Directive, these steels meet all the criteria to be worn as second jewelry (after complete healing) worldwide and for an unlimited time." },
-        { typ: "foto", id: "pexels-5721556", text: "Instruments made of surgical steel resist corrosion and can be reprocessed and sterilised repeatedly." },
+        { typ: "foto", id: "klemmzange", text: "Clamp made of surgical steel: proven for instruments because they can be sterilised again and again. Course book p. 66." },
         { typ: "text", text: "In medicine, 316L is used, for example, for bone screws, body needles, bone plates, sutures, staples and as a pacemaker electrode." },
         { typ: "achtung", text: "Surgical steel 316L contains 10 to 14 percent nickel and is unsuitable as initial jewelry. As second jewelry it is usually safe." }
       ],

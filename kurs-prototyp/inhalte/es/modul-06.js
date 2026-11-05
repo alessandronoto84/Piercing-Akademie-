@@ -54,7 +54,7 @@ KURS.module.push({
       seite: "S. 55",
       inhalt: [
         { typ: "text", text: "Existen innumerables tipos de acero. Para joyería, los piercers solo usan tres: acero para implantes Composición D, acero quirúrgico 316 LVM y, el más frecuente, acero quirúrgico 316L. Según la Directiva europea sobre el níquel, estos aceros cumplen todos los criterios para llevarse como segunda joya (tras la cicatrización completa) en todo el mundo y por tiempo ilimitado." },
-        { typ: "foto", id: "pexels-5721556", text: "Los instrumentos de acero quirúrgico resisten la corrosión y pueden reprocesarse y esterilizarse repetidamente." },
+        { typ: "foto", id: "klemmzange", text: "Pinza de acero quirúrgico: probada para instrumentos porque se puede esterilizar una y otra vez. Libro del curso p. 66." },
         { typ: "text", text: "En medicina, el 316L se utiliza, por ejemplo, en tornillos óseos, agujas, placas óseas, suturas, grapas y como electrodo de marcapasos." },
         { typ: "achtung", text: "El acero quirúrgico 316L contiene entre un 10 y un 14 por ciento de níquel y no es apto como joya inicial. Como segunda joya, por lo general no presenta problemas." }
       ],

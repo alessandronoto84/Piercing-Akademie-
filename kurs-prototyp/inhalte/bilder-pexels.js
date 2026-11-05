@@ -234,34 +234,6 @@ Object.assign(KURS.bilder = KURS.bilder || {}, {
 "quelle": "Pexels",
 "url": "https://www.pexels.com/photo/8413090/"
 },
-"pexels-4123838": {
-"src": "inhalte/bilder/pexels-4123838.webp",
-"w": 1000,
-"h": 666,
-"quelle": "Pexels",
-"url": "https://www.pexels.com/photo/4123838/"
-},
-"pexels-7755168": {
-"src": "inhalte/bilder/pexels-7755168.webp",
-"w": 1000,
-"h": 666,
-"quelle": "Pexels",
-"url": "https://www.pexels.com/photo/7755168/"
-},
-"pexels-5721556": {
-"src": "inhalte/bilder/pexels-5721556.webp",
-"w": 507,
-"h": 760,
-"quelle": "Pexels",
-"url": "https://www.pexels.com/photo/5721556/"
-},
-"pexels-7755181": {
-"src": "inhalte/bilder/pexels-7755181.webp",
-"w": 1000,
-"h": 666,
-"quelle": "Pexels",
-"url": "https://www.pexels.com/photo/7755181/"
-},
 "pexels-7651554": {
 "src": "inhalte/bilder/pexels-7651554.webp",
 "w": 1000,

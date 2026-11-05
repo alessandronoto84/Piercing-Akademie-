@@ -146,7 +146,7 @@ KURS.module.push({
       seite: "S. 35",
       inhalt: [
         { typ: "merke", text: "Todo lo que lesiona la piel o entra en contacto con sangre (agujas, portaagujas, pinzas) debe ser estéril: como material estéril de un solo uso o esterilizado en el autoclave." },
-        { typ: "foto", id: "pexels-7755181", text: "Un instrumento solo es estéril mientras su envase estéril esté intacto; se abre justo antes de usarlo." },
+        { typ: "foto", id: "instrumentenschale", text: "Los instrumentos en una bandeja abierta están limpios, pero no estériles. Solo son estériles dentro de una bolsa estéril intacta. Libro del curso p. 72." },
         { typ: "text", text: "Las herramientas sin contacto directo con la piel, como la pinza para bolas o las tijeras, se limpian en el baño de ultrasonidos y se desinfectan en un baño desinfectante. Las agujas de cánula usadas van de inmediato al contenedor para objetos punzantes." }
       ],
       fragen: [
