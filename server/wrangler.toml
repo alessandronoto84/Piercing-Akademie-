@@ -54,5 +54,5 @@ NICHT_INDEXIEREN = "1"
 
 [[env.test.d1_databases]]
 binding = "DB"
-database_name = "piercing-akademie-vorschau"
+database_name = "piercing-akademie-test"
 database_id = "d806822e-6830-4986-ba52-ac10047bf766"
