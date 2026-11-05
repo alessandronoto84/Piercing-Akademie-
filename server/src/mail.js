@@ -7,7 +7,8 @@ const PAKETE = {
   es: { basis: "Básico", praxis: "Práctica", komplett: "Completo" }
 };
 
-function rahmen(titel, absaetze) {
+function rahmen(titel, alle) {
+  const absaetze = alle.filter((a) => a !== "" && a != null);
   const html = '<!doctype html><html><body style="font-family:Arial,sans-serif;color:#16161a;line-height:1.5;max-width:560px;margin:auto;padding:24px">' +
     '<p style="font-weight:bold;font-size:18px">Piercing Akademie</p><h1 style="font-size:20px">' + esc(titel) + "</h1>" +
     absaetze.map((a) => (a.html ? a.html : "<p>" + esc(a) + "</p>")).join("") +
@@ -16,14 +17,15 @@ function rahmen(titel, absaetze) {
   return { html, text };
 }
 
-export function mailCode(code, sprache, minuten) {
+export function mailCode(code, sprache, minuten, link) {
   const T = {
-    de: ["Dein Anmeldecode", "Dein Code für die Fahrschule der Piercing Akademie:", "Er gilt " + minuten + " Minuten. Gib ihn nicht weiter: Der Zugang ist persönlich.", "Du hast keinen Code angefordert? Dann kannst du diese E-Mail ignorieren."],
-    en: ["Your login code", "Your code for the Piercing Akademie online course:", "It is valid for " + minuten + " minutes. Do not share it: your access is personal.", "Did not request a code? Then you can ignore this email."],
-    es: ["Tu código de acceso", "Tu código para el curso online de la Piercing Akademie:", "Es válido durante " + minuten + " minutos. No lo compartas: el acceso es personal.", "¿No has pedido ningún código? Entonces puedes ignorar este correo."]
+    de: ["Dein Anmeldecode", "Dein Code für die Fahrschule der Piercing Akademie:", "Jetzt anmelden", "Oder gib den Code auf der Anmeldeseite ein. Er gilt " + minuten + " Minuten. Gib ihn nicht weiter: Der Zugang ist persönlich.", "Du hast keinen Code angefordert? Dann kannst du diese E-Mail ignorieren."],
+    en: ["Your login code", "Your code for the Piercing Akademie online course:", "Log in now", "Or enter the code on the login page. It is valid for " + minuten + " minutes. Do not share it: your access is personal.", "Did not request a code? Then you can ignore this email."],
+    es: ["Tu código de acceso", "Tu código para el curso online de la Piercing Akademie:", "Entrar ahora", "O escribe el código en la página de acceso. Es válido durante " + minuten + " minutos. No lo compartas: el acceso es personal.", "¿No has pedido ningún código? Entonces puedes ignorar este correo."]
   };
   const t = T[sprache] || T.de;
-  const r = rahmen(t[0], [t[1], { html: '<p style="font-size:30px;letter-spacing:6px;font-weight:bold">' + code + "</p>", text: code }, t[2], t[3]]);
+  const knopf = link ? { html: '<p><a href="' + esc(link) + '" style="display:inline-block;background:#C9A464;color:#111114;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:bold">' + t[2] + "</a></p>", text: t[2] + ": " + link } : "";
+  const r = rahmen(t[0], [t[1], { html: '<p style="font-size:30px;letter-spacing:6px;font-weight:bold">' + code + "</p>", text: code }, knopf, t[3], t[4]]);
   return { betreff: t[0] + ": " + code, ...r };
 }
 

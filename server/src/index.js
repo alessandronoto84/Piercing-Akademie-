@@ -218,7 +218,10 @@ async function codeAnfordern(req, env, ctx) {
   const h = await sha256(email + ":" + code + ":" + (env.CODE_PFEFFER || ""));
   await env.DB.prepare("INSERT INTO codes (email, code_hash, ablauf, versuche, angefordert) VALUES (?, ?, ?, 0, ?) ON CONFLICT(email) DO UPDATE SET code_hash = excluded.code_hash, ablauf = excluded.ablauf, versuche = 0, angefordert = excluded.angefordert")
     .bind(email, h, jetzt() + CODE_MINUTEN * 60, JSON.stringify(liste)).run();
-  const mail = mailCode(code, sprache || k.sprache || "de", CODE_MINUTEN);
+  const sp = ["de", "en", "es"].includes(sprache) ? sprache : k.sprache || "de";
+  // Knopf in der E-Mail: öffnet die Anmeldeseite mit eingetragenem Code (angemeldet wird erst per Klick, damit E-Mail-Virenscanner den Code nicht verbrauchen)
+  const link = (env.DOMAIN || "") + "/login.html?" + new URLSearchParams({ email, code, sprache: sp }).toString();
+  const mail = mailCode(code, sp, CODE_MINUTEN, link);
   ctx.waitUntil(sende(env, email, mail));
   if (env.DEV === "1") return json({ ok: true, dev_code: code });
   return antwort;

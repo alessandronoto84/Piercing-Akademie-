@@ -36,7 +36,7 @@
       <input id="code" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" maxlength="6" required>
     </div>
     <button class="btn" type="submit" id="t-anmelden">Anmelden</button>
-    <button class="btn ghost small" type="button" id="t-zurueck">Andere E-Mail-Adresse</button>
+    <button class="btn ghost small" type="button" id="t-zurueck">Neuen Code oder andere E-Mail</button>
   </form>
 
   <p class="meldung" id="meldung" role="status" aria-live="polite"></p>
@@ -50,21 +50,21 @@
   if (["de", "en", "es"].indexOf(sprache) < 0) sprache = "de";
   document.documentElement.lang = sprache;
   var T = {
-    de: { titel: "Anmelden", text: "Gib die E-Mail-Adresse ein, mit der du den Kurs gekauft hast. Wir schicken dir einen Code.", email: "E-Mail-Adresse", senden: "Code schicken", code: "Code aus der E-Mail", anmelden: "Anmelden", zurueck: "Andere E-Mail-Adresse",
+    de: { titel: "Anmelden", text: "Gib die E-Mail-Adresse ein, mit der du den Kurs gekauft hast. Wir schicken dir einen Code.", email: "E-Mail-Adresse", senden: "Code schicken", code: "Code aus der E-Mail", anmelden: "Anmelden", zurueck: "Neuen Code oder andere E-Mail",
       hinweis: "Dein Zugang ist persönlich und kann gleichzeitig auf höchstens zwei Geräten genutzt werden. Eine Anmeldung auf einem weiteren Gerät beendet die älteste Anmeldung.",
       geschickt: "Falls zu dieser Adresse ein Kurszugang gehört, ist der Code unterwegs. Schau auch im Spam-Ordner nach.", emailFalsch: "Bitte gib eine gültige E-Mail-Adresse ein.",
       falsch: "Der Code stimmt nicht.", abgelaufen: "Der Code ist abgelaufen. Bitte fordere einen neuen an.", zuOft: "Zu viele Versuche. Bitte warte etwas und fordere dann einen neuen Code an.",
-      gesperrt: "Dieser Zugang ist gesperrt. Bitte melde dich bei der Piercing Akademie.", fehler: "Das hat nicht geklappt. Bitte versuch es noch einmal.", beendet: "Angemeldet. Die Anmeldung auf einem anderen Gerät wurde beendet.", ok: "Angemeldet." },
-    en: { titel: "Log in", text: "Enter the email address you used to buy the course. We will send you a code.", email: "Email address", senden: "Send code", code: "Code from the email", anmelden: "Log in", zurueck: "Use a different email address",
+      gesperrt: "Dieser Zugang ist gesperrt. Bitte melde dich bei der Piercing Akademie.", fehler: "Das hat nicht geklappt. Bitte versuch es noch einmal.", beendet: "Angemeldet. Die Anmeldung auf einem anderen Gerät wurde beendet.", ok: "Angemeldet.", schonGeschickt: "Wir haben dir schon einen Code geschickt. Schau in dein Postfach (auch in den Spam-Ordner) und gib ihn hier ein.", uebernommen: "Code übernommen. Klick auf „Anmelden“." },
+    en: { titel: "Log in", text: "Enter the email address you used to buy the course. We will send you a code.", email: "Email address", senden: "Send code", code: "Code from the email", anmelden: "Log in", zurueck: "New code or different email",
       hinweis: "Your access is personal and can be used on at most two devices at the same time. Logging in on a further device ends the oldest login.",
       geschickt: "If this address has course access, the code is on its way. Please also check your spam folder.", emailFalsch: "Please enter a valid email address.",
       falsch: "The code is not correct.", abgelaufen: "The code has expired. Please request a new one.", zuOft: "Too many attempts. Please wait a little and then request a new code.",
-      gesperrt: "This access has been blocked. Please contact the Piercing Akademie.", fehler: "That did not work. Please try again.", beendet: "Logged in. The login on another device has been ended.", ok: "Logged in." },
-    es: { titel: "Iniciar sesión", text: "Escribe el correo electrónico con el que compraste el curso. Te enviaremos un código.", email: "Correo electrónico", senden: "Enviar código", code: "Código del correo", anmelden: "Entrar", zurueck: "Usar otro correo",
+      gesperrt: "This access has been blocked. Please contact the Piercing Akademie.", fehler: "That did not work. Please try again.", beendet: "Logged in. The login on another device has been ended.", ok: "Logged in.", schonGeschickt: "We have already sent you a code. Check your inbox (and spam folder) and enter it here.", uebernommen: "Code filled in. Click “Log in”." },
+    es: { titel: "Iniciar sesión", text: "Escribe el correo electrónico con el que compraste el curso. Te enviaremos un código.", email: "Correo electrónico", senden: "Enviar código", code: "Código del correo", anmelden: "Entrar", zurueck: "Código nuevo u otro correo",
       hinweis: "Tu acceso es personal y puede usarse como máximo en dos dispositivos a la vez. Iniciar sesión en otro dispositivo cierra la sesión más antigua.",
       geschickt: "Si esta dirección tiene acceso al curso, el código está en camino. Revisa también la carpeta de spam.", emailFalsch: "Escribe un correo electrónico válido.",
       falsch: "El código no es correcto.", abgelaufen: "El código ha caducado. Solicita uno nuevo.", zuOft: "Demasiados intentos. Espera un poco y solicita un código nuevo.",
-      gesperrt: "Este acceso está bloqueado. Ponte en contacto con la Piercing Akademie.", fehler: "No ha funcionado. Inténtalo de nuevo.", beendet: "Sesión iniciada. Se ha cerrado la sesión en otro dispositivo.", ok: "Sesión iniciada." }
+      gesperrt: "Este acceso está bloqueado. Ponte en contacto con la Piercing Akademie.", fehler: "No ha funcionado. Inténtalo de nuevo.", beendet: "Sesión iniciada. Se ha cerrado la sesión en otro dispositivo.", ok: "Sesión iniciada.", schonGeschickt: "Ya te hemos enviado un código. Revisa tu correo (también la carpeta de spam) y escríbelo aquí.", uebernommen: "Código introducido. Haz clic en «Entrar»." }
   }[sprache];
   ["titel", "text", "email", "senden", "code", "anmelden", "zurueck", "hinweis"].forEach(function (k) { document.getElementById("t-" + k).textContent = T[k]; });
   document.title = T.titel + " – Piercing Akademie";
@@ -75,6 +75,28 @@
   if (!/^\/kurs(\/|$)/.test(weiter)) weiter = "/kurs/";
   if (q.get("email")) email.value = q.get("email");
   function zeige(text, fehler) { m.textContent = text; m.className = "meldung" + (fehler ? " fehler" : ""); }
+  // Angeforderten Code merken (10 Minuten), damit man nach dem Blick ins Postfach direkt beim Code-Feld landet
+  var MERK = "pa-code-angefordert";
+  function merke(adresse) { try { localStorage.setItem(MERK, JSON.stringify({ email: adresse, bis: Date.now() + 10 * 60000 })); } catch (e) {} }
+  function vergiss() { try { localStorage.removeItem(MERK); } catch (e) {} }
+  function gemerkt() { try { var g = JSON.parse(localStorage.getItem(MERK) || "null"); return g && g.bis > Date.now() ? g : null; } catch (e) { return null; } }
+  function codeFeld(text) { fE.hidden = true; fC.hidden = false; zeige(text); }
+  var qCode = (q.get("code") || "").replace(/\D/g, "");
+  if (q.get("email") && qCode.length === 6) {
+    // Knopf aus der Code-E-Mail: Code eintragen, angemeldet wird erst per Klick
+    code.value = qCode;
+    q.delete("code");
+    try { history.replaceState(null, "", location.pathname + "?" + q.toString()); } catch (e) {}
+    codeFeld(T.uebernommen);
+    document.getElementById("t-anmelden").focus();
+  } else {
+    var g = gemerkt();
+    if (g && (!email.value || email.value.trim().toLowerCase() === String(g.email).trim().toLowerCase())) {
+      email.value = g.email;
+      codeFeld(T.schonGeschickt);
+      code.focus();
+    }
+  }
   function post(pfad, daten) {
     return fetch(pfad, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(daten), credentials: "same-origin" })
       .then(function (r) { return r.json().then(function (j) { j.status = r.status; return j; }); });
@@ -86,13 +108,14 @@
       if (j.fehler === "zu_oft") { zeige(T.zuOft, true); return; }
       if (j.fehler) { zeige(T.emailFalsch, true); return; }
       if (j.dev_code) code.value = j.dev_code; // nur im lokalen Testbetrieb
+      merke(email.value.trim());
       fE.hidden = true; fC.hidden = false; zeige(T.geschickt); code.focus();
     }).catch(function () { zeige(T.fehler, true); });
   });
   fC.addEventListener("submit", function (e) {
     e.preventDefault();
     post("/api/anmelden", { email: email.value, code: code.value }).then(function (j) {
-      if (j.ok) { zeige(j.beendet ? T.beendet : T.ok); setTimeout(function () { location.href = weiter; }, j.beendet ? 1500 : 200); return; }
+      if (j.ok) { vergiss(); zeige(j.beendet ? T.beendet : T.ok); setTimeout(function () { location.href = weiter; }, j.beendet ? 1500 : 200); return; }
       zeige(T[{ falsch: "falsch", abgelaufen: "abgelaufen", zu_oft: "zuOft", gesperrt: "gesperrt" }[j.fehler] || "fehler"], true);
     }).catch(function () { zeige(T.fehler, true); });
   });
