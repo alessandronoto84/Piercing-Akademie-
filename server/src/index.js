@@ -15,6 +15,20 @@ const VERDACHT_GERAETE = 6; // verschiedene Geräte in 30 Tagen
 
 export default {
   async fetch(req, env, ctx) {
+    const res = await antworte(req, env, ctx);
+    if (env.NICHT_INDEXIEREN !== "1") return res;
+    // Testadresse: Suchmaschinen sollen sie nicht aufnehmen (sonst doppelte Inhalte neben piercingakademie.de)
+    const h = new Headers(res.headers);
+    h.set("X-Robots-Tag", "noindex, nofollow");
+    return new Response(res.body, { status: res.status, statusText: res.statusText, headers: h });
+  },
+  // Nächtliche Löschung nach den Fristen der Datenschutzerklärung
+  async scheduled(ev, env) {
+    await aufraeumen(env);
+  }
+};
+
+async function antworte(req, env, ctx) {
     const url = new URL(req.url);
     const p = url.pathname;
     try {
@@ -26,12 +40,7 @@ export default {
       console.error(e);
       return json({ fehler: "server" }, 500);
     }
-  },
-  // Nächtliche Löschung nach den Fristen der Datenschutzerklärung
-  async scheduled(ev, env) {
-    await aufraeumen(env);
-  }
-};
+}
 
 export async function aufraeumen(env) {
   const t = jetzt();

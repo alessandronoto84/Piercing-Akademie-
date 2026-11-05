@@ -35,3 +35,24 @@ database_id = "WIRD-BEIM-EINRICHTEN-ERSETZT"
 [[r2_buckets]]
 binding = "DATEIEN"
 bucket_name = "piercing-akademie-dateien"
+
+# ---------- Testadresse (vor dem Umzug der Domains): npx wrangler deploy --env test ----------
+# Eigene Datenbank, Stripe im Testmodus, kein Kursbuch (R2 noch nicht aktiv), für Suchmaschinen gesperrt.
+# Resend schickt ohne bestätigte Domain nur vom Absender onboarding@resend.dev und nur an die E-Mail des Resend-Kontos.
+[env.test]
+name = "piercing-akademie-test"
+workers_dev = true
+assets = { directory = "./public", binding = "ASSETS", not_found_handling = "404-page", html_handling = "none", run_worker_first = true }
+
+[env.test.vars]
+DOMAIN = "https://piercing-akademie-test.alessandronoto84.workers.dev"
+MAIL_ABSENDER = "Piercing Akademie <onboarding@resend.dev>"
+ADMIN_EMAILS = "diepiercingakademie@gmail.com"
+MAX_GERAETE = "2"
+ZUGANG_MONATE = "12"
+NICHT_INDEXIEREN = "1"
+
+[[env.test.d1_databases]]
+binding = "DB"
+database_name = "piercing-akademie-test"
+database_id = "d806822e-6830-4986-ba52-ac10047bf766"
