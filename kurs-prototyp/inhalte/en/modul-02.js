@@ -114,6 +114,7 @@ KURS.module.push({
           "Migration of the piercing channel up to rejection (growing out)",
           "For oral piercings: gum damage, periodontal disease, tooth displacement, tooth damage, speech problems"
         ] },
+        { typ: "foto", id: "frei-keloid", text: "Keloid on the earlobe: a raised, overgrown scar that extends beyond the original wound." },
         { typ: "merke", text: "By signing, the client undertakes to follow the aftercare instructions. They confirm that they have been informed, have had sufficient time to make their decision and are not under the influence of drugs, alcohol or medication." }
       ],
       fragen: [

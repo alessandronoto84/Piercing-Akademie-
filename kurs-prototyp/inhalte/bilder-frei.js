@@ -61,5 +61,15 @@ Object.assign(KURS.bilder = KURS.bilder || {}, {
 "lizenz": "CC BY 4.0",
 "url": "https://commons.wikimedia.org/w/index.php?curid=112338125",
 "lizenz_url": "https://creativecommons.org/licenses/by/4.0/"
+},
+"frei-keloid": {
+"src": "inhalte/bilder/frei-keloid.webp",
+"w": 640,
+"h": 558,
+"quelle": "Wikimedia Commons",
+"urheber": "Htirgan",
+"lizenz": "CC BY-SA 3.0",
+"url": "https://commons.wikimedia.org/w/index.php?curid=32795053",
+"lizenz_url": "https://creativecommons.org/licenses/by-sa/3.0/"
 }
 });

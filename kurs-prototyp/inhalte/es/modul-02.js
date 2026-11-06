@@ -114,6 +114,7 @@ KURS.module.push({
           "Migración del canal de la perforación hasta la expulsión de la joya",
           "En piercings bucales: daños en las encías, enfermedad periodontal, desplazamiento dental, daños dentales, problemas del habla"
         ] },
+        { typ: "foto", id: "frei-keloid", text: "Queloide en el lóbulo de la oreja: una cicatriz abultada y excesiva que crece más allá de la herida original." },
         { typ: "merke", text: "Con su firma, el cliente se compromete a seguir las instrucciones de cuidado. Confirma que ha sido informado, que ha tenido tiempo suficiente para tomar su decisión y que no está bajo los efectos de drogas, alcohol o medicamentos." }
       ],
       fragen: [

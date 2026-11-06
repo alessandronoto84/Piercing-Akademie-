@@ -114,6 +114,7 @@ KURS.module.push({
           "Herauswandern des Stichkanals bis zum Herauswachsen",
           "Bei Mundpiercings: Zahnfleischschäden, Parodontose, Zahnverschiebung, Zahnschäden, Sprachprobleme"
         ] },
+        { typ: "foto", id: "frei-keloid", text: "Keloid am Ohrläppchen: eine wulstige, überschießende Narbe, die über die ursprüngliche Wunde hinauswächst." },
         { typ: "merke", text: "Mit der Unterschrift verpflichtet sich der Kunde, die Pflegehinweise einzuhalten. Er bestätigt, aufgeklärt worden zu sein, ausreichend Zeit für seine Entscheidung gehabt zu haben und nicht unter Einfluss von Drogen, Alkohol oder Medikamenten zu stehen." }
       ],
       fragen: [
