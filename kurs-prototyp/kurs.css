@@ -406,3 +406,56 @@
 .k-sprachen a{text-decoration:none;min-width:2.2em;text-align:center}
 .k-sprachen a:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
 .k-material-liste li{margin-bottom:8px}.k-material-liste .k-meta{display:block}
+
+/* ---------- Gestaltung passend zur Website (dunkles Kopfband, Gold, runde Karten) ---------- */
+section.k-kopf,section.k-lektion,.k-layout section{padding-block:0}
+.k-kopf{padding:0 0 24px}
+.k-kopfband{padding-bottom:4px}
+.k-kopfband .k-banner{max-width:1160px;margin:0 auto;background:transparent;border-bottom:1px solid var(--line);border-radius:0;padding:8px 0;color:var(--muted);font-size:.74rem;letter-spacing:.02em;text-align:center}
+.k-kopf .label{color:var(--accent);letter-spacing:.14em}
+.k-kopf h1{letter-spacing:-.02em}
+.k-layout{padding-block:36px 72px}
+
+/* Modulliste links */
+#kurs-nav{gap:8px}
+.k-nav-liste{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);padding:6px;gap:2px;box-shadow:0 18px 40px -32px rgba(23,22,26,.45)}
+.k-nav-link{border-radius:10px;padding:8px 10px;transition:background .2s,color .2s}
+.k-nav-link:hover{background:var(--accent-soft)}
+.k-nav-link.aktiv{background:var(--accent-soft);box-shadow:inset 3px 0 0 var(--accent)}
+.k-nav-haupt{border-radius:10px}
+.k-nav-extras .k-nav-link{background:transparent}
+
+/* Karten, Kästen, Listen */
+.k-modulkarte{border-radius:var(--radius);padding:18px 18px 20px;transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s,border-color .3s;position:relative;overflow:hidden}
+.k-modulkarte::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--titan);transform:scaleX(0);transform-origin:0 50%;transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+.k-modulkarte:hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 24px 44px -30px rgba(23,22,26,.55)}
+.k-modulkarte:hover::after,.k-modulkarte.k-bestanden::after{transform:scaleX(1)}
+.k-modulkarte .label{color:var(--accent)}
+.k-lektion{border-radius:18px;box-shadow:0 22px 48px -38px rgba(23,22,26,.5);gap:16px}
+.k-box{border-radius:12px;padding:14px 18px}
+.k-merke{border-left:4px solid var(--accent)}
+.k-achtung{border-width:1.5px;background:color-mix(in srgb,var(--error) 6%,transparent)}
+.k-ergaenzung{border:1px solid var(--line);border-left:4px solid var(--muted);background:var(--bg)}
+.k-praxis{border-radius:12px}
+.k-datenblatt,.k-frage,.k-einzelfrage .k-rueckmeldung{border-radius:12px}
+.k-weiterlernen{border-radius:var(--radius);border-width:1.5px;background:linear-gradient(120deg,var(--surface),var(--accent-soft));padding:18px 22px}
+.k-fortschritt .k-balken{height:8px;border-radius:999px}
+.k-balken span{background:var(--titan);border-radius:999px}
+.k-lektionsliste{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);overflow:hidden}
+.k-lektionsliste li:last-child a{border-bottom:0}
+.k-lektionsliste a{padding:14px 16px;transition:background .2s}
+.k-lektionsliste a:hover{background:var(--accent-soft)}
+.k-tabelle{border:1px solid var(--line);border-radius:12px}
+.k-tabelle table{margin:0}
+
+/* Schritte, Phasen, Prinzip als runde Pillen */
+.k-prinzip li,.k-stepper a,.k-stepper li>span,.k-phasen li{border-radius:999px;padding:7px 14px}
+.k-stepper a.aktiv,.k-phasen li.aktiv{box-shadow:none;background:var(--accent-soft);border-color:var(--accent)}
+.k-sprachen a{min-width:0}
+
+@media (max-width:860px){
+  #kurs-nav{border-radius:var(--radius)}
+  .k-nav-liste{box-shadow:none}
+}
+@media (prefers-reduced-motion:reduce){.k-modulkarte,.k-modulkarte::after{transition:none}.k-modulkarte:hover{transform:none}}
+.k-praxis{margin-bottom:22px}.k-fortschritt{margin-top:4px}
