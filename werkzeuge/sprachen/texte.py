@@ -7,7 +7,6 @@ GEMEINSAM = [
     ('<p class="label">Aus den Lektionen</p>', '<p class="label">From the lessons</p>', '<p class="label">De las lecciones</p>'),
     ('<span class="label">Modul 05</span>Autoklav und Sterilgut', '<span class="label">Module 05</span>Autoclave and sterile goods', '<span class="label">Módulo 05</span>Autoclave y material estéril'),
     ('<span class="label">Modul 07</span>Klemme, Kanüle, Nadelauffangrohr', '<span class="label">Module 07</span>Clamp, cannula, receiving tube', '<span class="label">Módulo 07</span>Pinza, cánula, tubo receptor'),
-    ('<span class="label">Modul 11</span>Den Behandlungsraum planen', '<span class="label">Module 11</span>Planning the treatment room', '<span class="label">Módulo 11</span>Planificar la sala de tratamiento'),
     ('Zum Inhalt springen', 'Skip to content', 'Saltar al contenido'),
     ('aria-label="Seitennavigation"', 'aria-label="Site navigation"', 'aria-label="Navegación del sitio"'),
     ('>Kursinhalt</a>', '>Course content</a>', '>Contenido</a>'),
@@ -147,9 +146,6 @@ INDEX = [
      '<span class="label">All lessons</span><span><strong>How the online course works</strong>',
      '<span class="label">Todas las lecciones</span><span><strong>Así funciona el curso online</strong>'),
     # Pakete
-    ('<figcaption><span class="label">Material</span><strong>Ersteinsatz nur aus Titan G23 oder PTFE</strong></figcaption>',
-     '<figcaption><span class="label">Materials</span><strong>Initial jewelry only in G23 titanium or PTFE</strong></figcaption>',
-     '<figcaption><span class="label">Materiales</span><strong>Joya inicial solo de titanio G23 o PTFE</strong></figcaption>'),
     ('<p class="label">Pakete</p>', '<p class="label">Packages</p>', '<p class="label">Paquetes</p>'),
     ('<div class="note"><strong>Technik ersetzt keine Anleitung.</strong> Der Online-Kurs vermittelt das Wissen, gestochen wird erst hier, unter Aufsicht. Steche nach dem Online-Kurs niemanden allein.</div>',
      '<div class="note"><strong>Knowing the technique is not the same as supervised practice.</strong> The online course teaches the knowledge; you only pierce here, under supervision. Do not pierce anyone on your own after the online course.</div>',
