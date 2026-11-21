@@ -16,7 +16,7 @@ KURS.module.push({
       ],
       fragen: [
         ["¿Quién cuida el piercing recién hecho después de la perforación?", ["El propio cliente", "El piercer, en citas diarias", "El médico de cabecera", "Nadie, se cura solo"], "Por eso hay que darle instrucciones precisas.", "S. 48"],
-        ["¿Cuál es la mejor forma de transmitir las instrucciones de cuidado?", ["Por escrito, junto con el producto de cuidado", "Solo de palabra, para que el cliente escuche", "Por redes sociales", "Solo en la cita de control"], "Muy recomendable.", "S. 48"]
+        ["¿Cuál es la mejor forma de transmitir las instrucciones de cuidado?", ["De palabra y además por escrito, con el producto de cuidado", "Solo de palabra, para que el cliente escuche", "Solo por redes sociales", "Solo en la cita de control"], "Como en el procedimiento, pasos 24 y 25.", "S. 48"]
       ]
     },
     {
@@ -47,10 +47,10 @@ KURS.module.push({
         ] },
         { typ: "diagramm", titel: "Comparación de tiempos de cicatrización", einheit: "Meses, valores orientativos con cicatrización sin complicaciones", max: 12, schritt: 1,
           alt: "Gráfico de barras de los tiempos de cicatrización en meses: lengua, frenillo labial y ceja aprox. 1, labret 1 a 2, lobe aprox. 2, genital 2 a 3, cartílago al menos 3, ombligo 4 a 6, pezón 3 a 12 meses.",
-          text: "Oscuro: tiempo mínimo seguro; claro: rango. La mucosa cicatriza más rápido; el cartílago, el ombligo y el pezón son los que más tardan.",
+          text: "Oscuro: valor orientativo o límite inferior; claro: rango. Según el libro del curso, la lengua, el frenillo labial y la ceja cicatrizan más rápido; el cartílago, el ombligo y el pezón son los que más tardan.",
           zeilen: [["Lengua", 1, null, false, "aprox. 1"], ["Frenillo labial", 1, null, false, "aprox. 1"], ["Ceja", 1, null, false, "aprox. 1"], ["Labret", 1, 2, false, "1–2"], ["Lobe", 2, null, false, "aprox. 2"], ["Genital", 2, 3, false, "2–3"], ["Cartílago", 3, null, true, "al menos 3"], ["Ombligo", 4, 6, false, "4–6"], ["Pezón", 3, 12, false, "3–12"]] },
         { typ: "ergaenzung", text: "Otras fuentes indican a veces tiempos bastante más largos, por ejemplo cartílago 3 a 12 meses, ombligo 6 a 12 meses, ceja 6 a 8 semanas. Es mejor informar a tus clientes con prudencia: mejor esperar demasiado que cambiar demasiado pronto." },
-        { typ: "achtung", text: "La joya solo puede cambiarse cuando el piercing haya cicatrizado por completo; de lo contrario, existe riesgo de complicaciones como una infección." }
+        { typ: "achtung", text: "La joya solo puede cambiarse cuando el piercing haya cicatrizado por completo; de lo contrario, existe riesgo de complicaciones como una infección. Las excepciones son acortar la joya inicial (por ejemplo, en la lengua) y un cambio por complicaciones: solo lo hace el piercer, en condiciones estériles y con material apto como joya inicial." }
       ],
       fragen: [
         ["¿Los tiempos de cicatrización son garantías fijas?", ["No, son valores orientativos con cicatrización óptima", "Sí, para adultos sanos", "Sí, si se siguen los cuidados", "Solo con joyas de PTFE"], "Cada persona cicatriza de forma distinta.", "S. 49"],
@@ -82,17 +82,17 @@ KURS.module.push({
         { typ: "liste", punkte: [
           "El pus debe poder drenar; de lo contrario, existe riesgo de septicemia.",
           "Limpiar a diario.",
-          "La manzanilla, el aceite de árbol de té o la miel de manuka pueden ayudar (el aceite de árbol de té, solo diluido: puede provocar alergias de contacto).",
+          "Según el libro del curso, la manzanilla, el aceite de árbol de té o la miel de manuka pueden ayudar (el aceite de árbol de té, solo diluido: puede provocar alergias de contacto).",
           "La pomada «Tyrosur» de la farmacia puede ayudar mucho; recomiéndale al cliente que la compre."
         ] },
         { typ: "ergaenzung", text: "Si hay fiebre, enrojecimiento que se extiende o dolor intenso o creciente, envía al cliente de inmediato al médico." },
-        { typ: "merke", text: "Los fumadores, las personas con alcoholismo y los diabéticos pertenecen a los grupos de riesgo; en ellos las complicaciones aparecen antes." }
+        { typ: "merke", text: "Los fumadores, las personas con un consumo elevado de alcohol y los diabéticos pertenecen a los grupos de riesgo; en ellos las complicaciones aparecen antes." }
       ],
       fragen: [
         ["¿Cuál suele ser la causa de una inflamación?", ["Gérmenes o sustancias extrañas en la herida", "Demasiada longitud extra", "La solución salina", "Una joya inicial de PTFE"], "Por ejemplo, del pelo.", "S. 50"],
         ["¿Qué riesgo hay si el pus no puede drenar?", ["Una septicemia", "Una alergia al níquel", "Hipergranulación", "Una cicatrización más rápida"], "El pus debe poder drenar.", "S. 50"],
         ["¿Qué pomada de farmacia menciona el libro del curso?", ["Tyrosur", "Bepanthen", "Betaisodona", "Fucidine"], "Recomiéndale al cliente que la compre.", "S. 50"],
-        ["¿Qué puede ayudar en una inflamación?", ["Manzanilla, aceite de árbol de té diluido o miel de manuka y limpieza diaria", "Quitar la joya de inmediato y tapar el canal", "Cambiar la joya con frecuencia", "Octenisept en el cartílago"], "Son los remedios caseros que el libro del curso menciona para inflamaciones leves. Si hay fiebre o enrojecimiento que se extiende, el cliente va al médico.", "S. 50"],
+        ["¿Qué remedios caseros menciona el libro del curso para inflamaciones leves?", ["Manzanilla, aceite de árbol de té diluido o miel de manuka", "Pasta de dientes y zumo de limón", "Aceite de árbol de té sin diluir y alcohol", "Lavavajillas y agua caliente"], "Remedios caseros según el libro del curso, sin pruebas independientes. Lo importante es limpiar a diario. Si hay fiebre o enrojecimiento que se extiende, el cliente va al médico.", "S. 50"],
         ["Caso: un cliente llama; el piercing está muy enrojecido y tiene fiebre. ¿Qué haces?", ["Lo envío de inmediato al médico", "Le recomiendo aceite de árbol de té y esperar 3 días", "Cambio la joya por una de PTFE", "Le recomiendo Tyrosur y reposo"], "La fiebre indica que la inflamación se está extendiendo por el cuerpo. Esto debe ponerse de inmediato en manos de un médico, no tratarse con el botiquín de casa.", "Ergänzung"]
       ]
     },
@@ -135,7 +135,7 @@ KURS.module.push({
           "No hacer nada: puede desaparecer por sí sola; normalmente el cuerpo la elimina.",
           "Deshidratarla: la solución salina, la infusión de manzanilla, el agua oxigenada, el aceite de árbol de té o el aceite de eucalipto ayudan a hacerla retroceder (según el libro del curso; el agua oxigenada también daña el tejido sano y hoy apenas se recomienda para heridas).",
           "Disco para hipergranulación: un disco de plástico que se coloca sobre la joya.",
-          "Cambiar la forma o el material de la joya, por ejemplo sustituir un labret de titanio por un barbell de PTFE.",
+          "Cambiar la forma o el material de la joya, por ejemplo sustituir un labret de titanio por un barbell de PTFE. Solo lo hace el piercer, en condiciones estériles y con material de joya inicial.",
           "Si nada de esto ayuda: el cliente acude a un médico o dermatólogo, que extirpa la hipergranulación quirúrgicamente."
         ] }
       ],

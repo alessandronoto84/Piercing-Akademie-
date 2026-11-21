@@ -51,13 +51,13 @@ KURS.module.push({
       seite: "S. 2",
       inhalt: [
         { typ: "text", text: "Auch das rechtswidrige Abschneiden von Haaren erfüllt den Tatbestand der Körperverletzung. Deshalb gehört in die Einwilligungserklärung der Hinweis, dass gegebenenfalls eine Rasur an der zu piercenden Körperstelle durchgeführt wird." },
-        { typ: "text", text: "Fehlt die schriftliche Einverständniserklärung, können Kunden, deren Angehörige oder Dritte (zum Beispiel Anwälte) Schadensersatz vom Piercer fordern." },
+        { typ: "text", text: "Fehlt die schriftliche Einverständniserklärung, kann der Kunde (bei Minderjährigen die Eltern) Schadensersatz vom Piercer fordern, oft über einen Anwalt. Ohne Schriftstück kannst du die Einwilligung kaum beweisen. Das Kursbuch nennt hier „Kunden, deren Angehörige oder Dritte (zum Beispiel Anwälte)“; Anwälte vertreten aber nur, eigene Ansprüche haben sie nicht." },
         { typ: "ergaenzung", text: "Rechtlich genau: Eine Einwilligung ist auch mündlich wirksam. Die Schriftform ist dein Beweis. Kannst du Einwilligung und Aufklärung im Streit nicht nachweisen, drohen Schadensersatz und Schmerzensgeld (§§ 823, 253 BGB). Geltend macht sie der Kunde selbst, meist über einen Anwalt, bei Minderjährigen die Eltern; auch die Krankenkasse kann sich Behandlungskosten zurückholen." },
         { typ: "praxis", text: "Bewahre die unterschriebenen Erklärungen geordnet auf. Im Streitfall ist das Papier dein wichtigster Nachweis." }
       ],
       fragen: [
         ["Warum gehört die Rasur in die Einverständniserklärung?", ["Weil auch das rechtswidrige Abschneiden von Haaren eine Körperverletzung ist", "Weil die Rasur dem Kunden gesondert in Rechnung gestellt wird", "Weil das Gesundheitsamt jede Rasur schriftlich sehen will", "Weil Rasieren das Infektionsrisiko deutlich erhöht"], "Deshalb wird vermerkt, dass gegebenenfalls rasiert wird.", "S. 2"],
-        ["Was kann passieren, wenn die schriftliche Einverständniserklärung fehlt?", ["Kunden, Angehörige oder Dritte können Schadensersatz fordern", "Nur eine Verwarnung durch das Gesundheitsamt", "Das Piercing muss kostenlos wiederholt werden", "Nichts, denn das Piercing gilt dann als genehmigt"], "Deshalb immer schriftlich: Nur so lässt sich die Einwilligung beweisen.", "S. 2"],
+        ["Was kann passieren, wenn die schriftliche Einverständniserklärung fehlt?", ["Der Kunde kann Schadensersatz fordern, oft über einen Anwalt", "Nur eine Verwarnung durch das Gesundheitsamt", "Das Piercing muss kostenlos wiederholt werden", "Nichts, denn das Piercing gilt dann als genehmigt"], "Deshalb immer schriftlich: Nur so lässt sich die Einwilligung beweisen.", "S. 2"],
         ["Wer macht Schadensersatz nach einem misslungenen Piercing in der Regel geltend?", ["Der Kunde, oft über einen Anwalt, bei Minderjährigen die Eltern", "Nur das Gesundheitsamt", "Die Industrie- und Handelskammer", "Die Krankenkasse, nie der Kunde selbst"], "Anwälte vertreten den Kunden; eigene Ansprüche haben sie nicht.", "S. 2"],
         ["Fall: Vor einem Bauchnabelpiercing musst du rasieren. Was muss vorher geklärt sein?", ["Die Rasur ist in der unterschriebenen Einverständniserklärung erwähnt", "Der Kunde muss die Rasur mündlich erlauben, das genügt", "Rasieren ist Teil des Piercings und braucht keine Erwähnung", "Die Rasur darf nur der Kunde selbst durchführen"], "Rechtswidriges Haareschneiden ist eine Körperverletzung.", "S. 2"]
       ]
@@ -96,7 +96,7 @@ KURS.module.push({
       fragen: [
         ["Welche Personalien gehören in die Einverständniserklärung?", ["Name, Anschrift, Telefon, Geburtsdatum und Ausweisnummer", "Name, E-Mail-Adresse, Krankenkasse und Beruf", "Name und Unterschrift, mehr ist nicht nötig", "Name, Beruf, Familienstand und Arbeitgeber"], "Dazu die Bestätigung, mindestens 18 zu sein.", "S. 114"],
         ["Welche Gesundheitsangaben fragt die Erklärung ab?", ["Krankheiten, Allergien und Medikamente", "Nur Allergien", "Blutgruppe und Impfstatus", "Gewicht und Blutdruck"], "Dazu Essen, Trinken, Alkohol und Drogen.", "S. 114"],
-        ["Wie lange vorher soll laut Formular kein Alkohol und keine Drogen genommen worden sein?", ["Mindestens 2 Tage", "Mindestens 12 Stunden", "Mindestens 24 Stunden", "Mindestens 1 Woche"], "Das Muster-Formular ist bewusst strenger als die 24-Stunden-Regel aus Modul 01: Mit der Unterschrift bestätigt der Kunde zwei Tage ohne Alkohol und Drogen.", "S. 114"],
+        ["Wie lange vorher soll laut Formular kein Alkohol und keine Drogen genommen worden sein?", ["Mindestens 2 Tage", "Mindestens 12 Stunden", "Mindestens 24 Stunden", "Mindestens 1 Woche"], "Das Muster-Formular ist bewusst strenger als die 24-Stunden-Regel aus Modul 1: Mit der Unterschrift bestätigt der Kunde zwei Tage ohne Alkohol und Drogen.", "S. 114"],
         ["Welcher Teil wird vom Studio ausgefüllt?", ["Die Angaben zur Behandlung: Art, Körperstelle, Datum, Aufklärung", "Die Angaben zu Krankheiten, Allergien und Medikamenten", "Die Personalien des Kunden mit Ausweisnummer", "Der Abschnitt zur freiwilligen Foto-Einwilligung"], "„Von uns auszufüllen!“", "S. 114"],
         ["Was kann zur Ablehnung des Piercings führen?", ["Gesundheitliche Einschränkungen, chronische Erkrankungen, viele Medikamente", "Der Wunsch nach einem Knorpelpiercing statt eines Lobes", "Eine bekannte Nickelallergie bei Titan-Schmuck", "Ein früheres, gut verheiltes Piercing an derselben Stelle"], "Solche Angaben können die Heilung gefährden. Dann entscheidest du, ob du stichst, und lehnst im Zweifel ab.", "S. 114"]
       ]
@@ -130,7 +130,8 @@ KURS.module.push({
       seite: "S. 1, 115",
       inhalt: [
         { typ: "text", text: "Wenn du Bilder vom gestochenen Piercing veröffentlichen willst, brauchst du die schriftliche Erlaubnis des Kunden. Die Beispiel-Erklärung enthält dafür einen eigenen Abschnitt für Website, Social Media und Werbebanner." },
-        { typ: "text", text: "In der Erklärung werden auch Gesundheitsdaten erhoben. Das sind besondere Daten im Sinne von Art. 9 DSGVO. Ihre Verarbeitung braucht eine ausdrückliche Einwilligung, die jederzeit widerrufen werden kann. Nach einem Widerruf dürfen die Bilder nicht mehr verwendet werden." },
+        { typ: "text", text: "In der Erklärung werden auch Gesundheitsdaten erhoben. Das sind besondere Daten im Sinne von Art. 9 DSGVO. Ihre Verarbeitung braucht eine ausdrückliche Einwilligung des Kunden." },
+        { typ: "text", text: "Die Foto-Einwilligung kann der Kunde jederzeit mit Wirkung für die Zukunft widerrufen. Nach einem Widerruf dürfen die Bilder nicht mehr verwendet werden." },
         { typ: "ergaenzung", text: "Für die Foto-Einwilligung ist Art. 6 Abs. 1 lit. a DSGVO (Einwilligung) die passende Rechtsgrundlage, nicht das berechtigte Interesse nach lit. f. Lass dein Formular vor dem Einsatz im Studio rechtlich prüfen." }
       ],
       fragen: [

@@ -89,7 +89,7 @@ KURS.module.push({
       seite: "S. 11–12",
       inhalt: [
         { typ: "text", text: "Durante la transmisión en la médula espinal, el cuerpo puede atenuar la percepción del dolor con sustancias propias (endorfinas). Algunos analgésicos, por ejemplo los opiáceos, actúan en este punto." },
-        { typ: "achtung", text: "En el piercing es poco habitual, y en Alemania está prohibido, usar anestésicos que requieren receta médica, por ejemplo a base de opiáceos. La anestesia regional de la médula espinal, de plexos nerviosos o de nervios individuales solo puede realizarla un médico." },
+        { typ: "achtung", text: "En el piercing es poco habitual, y en Alemania está prohibido, usar anestésicos y analgésicos que requieren receta médica, por ejemplo opiáceos. La anestesia regional de la médula espinal, de plexos nerviosos o de nervios individuales solo puede realizarla un médico." },
         { typ: "tabelle", kopf: ["Procedimiento", "Efecto", "Quién"], zeilen: [
           ["Anestesia general", "Actúa sobre el cerebro", "Solo un médico especialista (anestesiólogo)"],
           ["Anestesia regional", "Inhibe durante un tiempo limitado partes de la médula espinal, plexos nerviosos o nervios individuales", "Solo un médico"],
@@ -100,7 +100,7 @@ KURS.module.push({
       ],
       fragen: [
         ["¿Qué sustancias propias del cuerpo atenúan el dolor en la médula espinal?", ["Endorfinas", "Histaminas", "Prostaglandinas", "Bradicininas"], "Aquí actúan los opiáceos.", "S. 11"],
-        ["¿Pueden los piercers usar anestésicos con receta a base de opiáceos?", ["No", "Sí, con consentimiento por escrito", "Solo en piercings íntimos", "Sí, si un médico los ha recetado"], "Poco habitual y prohibido en Alemania.", "S. 11"],
+        ["¿Pueden los piercers usar anestésicos o analgésicos con receta, como los opiáceos?", ["No", "Sí, con consentimiento por escrito", "Solo en piercings íntimos", "Sí, si un médico los ha recetado"], "Poco habitual y prohibido en Alemania.", "S. 11"],
         ["¿Qué anestesia solo puede realizar un médico?", ["La anestesia regional de nervios, plexos nerviosos o médula espinal", "El enfriamiento con espray de frío", "La aplicación de una pomada sin receta", "El enfriamiento con cubitos de hielo"], "Ver cap. 4.", "S. 11"],
         ["¿En qué se basa la anestesia local?", ["En actuar sobre el sistema nervioso periférico", "En actuar sobre el cerebro", "En bloquear la médula espinal", "En estrechar los vasos sanguíneos"], "Bloquea la transmisión en las terminaciones nerviosas.", "S. 11–12"],
         ["¿Por qué trabajas en una sala separada y tranquila?", ["Por la higiene y para protegerte de factores de estrés", "Porque lo exige la oficina de comercio", "Para poder trabajar más rápido", "Solo por el ruido del autoclave"], "El teléfono, el timbre y el ir y venir de personas molestan.", "S. 12"],
@@ -152,8 +152,8 @@ KURS.module.push({
       inhalt: [
         { typ: "liste", punkte: [
           "Con principios activos que influyen en el ritmo o la frecuencia cardíaca (antiarrítmicos, betabloqueantes, bloqueantes de los canales de calcio), el efecto de la lidocaína sobre el corazón puede aumentar o disminuir.",
-          "Otros anestésicos, los betabloqueantes antihipertensivos (propranolol, metoprolol, nadolol), diltiazem, verapamilo, cimetidina, amiodarona, fluvoxamina y sustancias vasoconstrictoras como la adrenalina o la noradrenalina potencian el efecto. Con ello aumenta el riesgo de efectos secundarios.",
-          "Junto con alcaloides del cornezuelo o epinefrina, la tensión arterial puede bajar de forma peligrosa.",
+          "Otros anestésicos, los betabloqueantes antihipertensivos (propranolol, metoprolol, nadolol), diltiazem, verapamilo, cimetidina, amiodarona, fluvoxamina y sustancias vasoconstrictoras como la adrenalina (epinefrina) o la noradrenalina potencian el efecto. Con ello aumenta el riesgo de efectos secundarios.",
+          "Según el libro del curso, junto con alcaloides del cornezuelo o epinefrina la tensión arterial puede bajar de forma peligrosa. Epinefrina es otro nombre de la adrenalina (ver el punto anterior): lo peligroso es la combinación con lidocaína. Los detalles figuran en el prospecto del preparado.",
           "Los sedantes (benzodiacepinas) y la aprindina potencian los efectos secundarios.",
           "Los antiepilépticos reducen el efecto; la lidocaína potencia los relajantes musculares."
         ] },
@@ -161,7 +161,7 @@ KURS.module.push({
       ],
       fragen: [
         ["¿Con qué medicamentos puede interactuar peligrosamente la lidocaína?", ["Con fármacos para el ritmo cardíaco, p. ej. betabloqueantes", "Con antibióticos como la penicilina o la amoxicilina", "Con suplementos de vitaminas y minerales", "Con la píldora anticonceptiva y otras hormonas"], "Sobre todo al aplicarla en la boca.", "S. 14"],
-        ["¿Qué puede provocar la lidocaína junto con alcaloides del cornezuelo o epinefrina?", ["Una bajada peligrosa de la tensión arterial", "Una anestesia más intensa sin riesgo", "Una reacción alérgica en la piel", "Una alergia al níquel"], "Así lo advierte el libro del curso.", "S. 14"],
+        ["¿Qué puede provocar la lidocaína junto con alcaloides del cornezuelo o epinefrina?", ["Una bajada peligrosa de la tensión arterial", "Una anestesia más intensa sin riesgo", "Una reacción alérgica en la piel", "Una alergia al níquel"], "Así lo advierte el libro del curso. La epinefrina es lo mismo que la adrenalina.", "S. 14"],
         ["¿Qué efecto tienen los antiepilépticos sobre la lidocaína?", ["Reducen el efecto", "Potencian mucho el efecto", "Solo potencian los efectos secundarios", "No influyen"], "En cambio, los relajantes musculares se potencian.", "S. 14"],
         ["¿Qué provocan los sedantes (benzodiacepinas) junto con la lidocaína?", ["Potencian los efectos secundarios", "Reducen el efecto", "Anulan la anestesia", "No influyen"], "Igual que la aprindina.", "S. 14"],
         ["Caso: Una clienta toma betabloqueantes y quiere pomada de lidocaína para un piercing de lengua. ¿Qué es correcto?", ["Renuncio a la lidocaína porque es posible una interacción", "Uso solo la mitad de la cantidad", "La aplico, porque la pomada no se absorbe en la boca", "Los betabloqueantes no importan con las pomadas"], "Hay que descartar interacciones, sobre todo en la boca.", "S. 13–14"]

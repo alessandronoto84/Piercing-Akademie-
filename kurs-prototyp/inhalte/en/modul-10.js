@@ -16,7 +16,7 @@ KURS.module.push({
       ],
       fragen: [
         ["Who cares for the fresh piercing after it has been done?", ["The client themselves", "The piercer, at daily appointments", "The family doctor", "No one, it heals by itself"], "That is why the client must be instructed precisely.", "S. 48"],
-        ["What is the best way to pass on aftercare instructions?", ["In writing, together with the aftercare product", "Only verbally, so the client listens", "Via social media", "Only at the check-up appointment"], "Highly recommended.", "S. 48"]
+        ["What is the best way to pass on aftercare instructions?", ["Verbally and also in writing, with the aftercare product", "Only verbally, so the client listens", "Only via social media", "Only at the check-up appointment"], "As in the procedure, steps 24 and 25.", "S. 48"]
       ]
     },
     {
@@ -47,10 +47,10 @@ KURS.module.push({
         ] },
         { typ: "diagramm", titel: "Healing times compared", einheit: "Months, guide values for complication-free healing", max: 12, schritt: 1,
           alt: "Bar chart of healing times in months: tongue, lip frenulum and eyebrow about 1, labret 1 to 2, lobe about 2, genital 2 to 3, cartilage at least 3, navel 4 to 6, nipple 3 to 12 months.",
-          text: "Dark: safe minimum time, light: range. Mucous membrane heals fastest; cartilage, navel and nipple take the longest.",
+          text: "Dark: guide value or lower limit, light: range. According to the course book, tongue, lip frenulum and eyebrow heal fastest; cartilage, navel and nipple take the longest.",
           zeilen: [["Tongue", 1, null, false, "approx. 1"], ["Lip frenulum", 1, null, false, "approx. 1"], ["Eyebrow", 1, null, false, "approx. 1"], ["Labret", 1, 2, false, "1–2"], ["Lobe", 2, null, false, "approx. 2"], ["Genital", 2, 3, false, "2–3"], ["Cartilage", 3, null, true, "at least 3"], ["Navel", 4, 6, false, "4–6"], ["Nipple", 3, 12, false, "3–12"]] },
         { typ: "ergaenzung", text: "Other sources sometimes give considerably longer times, for example cartilage 3 to 12 months, navel 6 to 12 months, eyebrow 6 to 8 weeks. When advising clients, err on the side of caution: better to wait too long than to change too early." },
-        { typ: "achtung", text: "The jewelry may only be changed once the piercing has fully healed; otherwise there is a risk of complications such as an infection." }
+        { typ: "achtung", text: "The jewelry may only be changed once the piercing has fully healed; otherwise there is a risk of complications such as an infection. Exceptions are shortening the initial jewelry (for example in the tongue) and a change because of complications: only the piercer does this, under sterile conditions and with material suitable as initial jewelry." }
       ],
       fragen: [
         ["Are the healing times fixed guarantees?", ["No, they are guide values for optimal healing", "Yes, for healthy adults", "Yes, if the aftercare is followed", "Only with PTFE jewelry"], "Everyone heals differently.", "S. 49"],
@@ -82,17 +82,17 @@ KURS.module.push({
         { typ: "liste", punkte: [
           "Pus must be able to drain, otherwise there is a risk of blood poisoning.",
           "Clean daily.",
-          "Chamomile, tea tree oil or manuka honey can help (tea tree oil only diluted: it can trigger contact allergies).",
+          "According to the course book, chamomile, tea tree oil or manuka honey can help (tea tree oil only diluted: it can trigger contact allergies).",
           "The ointment “Tyrosur” from the pharmacy can help a lot; encourage the client to buy it."
         ] },
         { typ: "ergaenzung", text: "If there is fever, spreading redness, or severe or increasing pain, send the client to a doctor immediately." },
-        { typ: "merke", text: "Smokers, people with alcohol dependence and diabetics are among the risk groups; complications occur more quickly in them." }
+        { typ: "merke", text: "Smokers, people who drink heavily and diabetics are among the risk groups; complications occur more quickly in them." }
       ],
       fragen: [
         ["What is usually the cause of inflammation?", ["Germs or foreign substances in the wound", "Too much extra length", "The saline solution", "Initial jewelry made of PTFE"], "For example from hair.", "S. 50"],
         ["What is the risk if pus cannot drain?", ["Blood poisoning", "A nickel allergy", "Hypergranulation", "Faster healing"], "Pus must be able to drain.", "S. 50"],
         ["Which pharmacy ointment does the course book mention?", ["Tyrosur", "Bepanthen", "Betaisodona", "Fucidine"], "Encourage the client to buy it.", "S. 50"],
-        ["What can help with inflammation?", ["Chamomile, diluted tea tree oil or manuka honey, and daily cleaning", "Removing the jewelry immediately and taping the channel shut", "Changing the jewelry frequently", "Octenisept on cartilage"], "These are the home remedies the course book mentions for mild inflammation. If there is fever or spreading redness, the client goes to a doctor.", "S. 50"],
+        ["Which home remedies does the course book mention for mild inflammation?", ["Chamomile, diluted tea tree oil or manuka honey", "Toothpaste and lemon juice", "Undiluted tea tree oil and alcohol", "Dish soap and hot water"], "Home remedies according to the course book, not independently proven. Daily cleaning is what matters. If there is fever or spreading redness, the client goes to a doctor.", "S. 50"],
         ["Case: A client calls; the piercing is very red and he has a fever. What do you do?", ["I send him to a doctor immediately", "I recommend tea tree oil and waiting 3 days", "I change the jewelry to PTFE", "I recommend Tyrosur and rest"], "Fever shows that the inflammation is spreading in the body. This belongs in a doctor’s hands immediately, not in the home medicine cabinet.", "Ergänzung"]
       ]
     },
@@ -135,7 +135,7 @@ KURS.module.push({
           "Do nothing: it may disappear on its own; the body usually rejects it.",
           "Dehydrate it: saline solution, chamomile tea, hydrogen peroxide, tea tree oil or eucalyptus oil help to push it back (according to the course book; hydrogen peroxide also damages healthy tissue and is hardly recommended for wounds today).",
           "Hypergranulation disc: a plastic disc that is slipped over the jewelry.",
-          "Change the shape or material of the jewelry, for example swap a titanium labret for a PTFE barbell.",
+          "Change the shape or material of the jewelry, for example swap a titanium labret for a PTFE barbell. Only the piercer does this, under sterile conditions and with initial-jewelry material.",
           "If none of this helps: the client goes to a doctor or dermatologist, who removes the hypergranulation surgically."
         ] }
       ],

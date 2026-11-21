@@ -13,7 +13,6 @@ KURS.module.push({
       seite: "Entwurf",
       entwurf: true,
       inhalt: [
-        { typ: "video", id: "anatomie-modelle", text: "Ear model and model of the skin layers: epidermis, dermis and subcutis with fatty tissue.", schleife: true },
         { typ: "text", text: "The skin is the largest organ of the human body. It consists of three layers, and a piercing channel passes through all three." },
         { typ: "tabelle", kopf: ["Layer", "Structure", "Relevance for piercing"], zeilen: [
           ["Epidermis (outer skin)", "Outermost, keratinized layer without its own blood vessels", "Protective barrier against germs. It is disinfected before piercing and grows back from the wound edge during healing."],
@@ -30,8 +29,8 @@ KURS.module.push({
         ["What is the outermost layer of the skin called?", ["Epidermis", "Dermis", "Subcutis", "Perichondrium"], "It is keratinized.", "Entwurf"],
         ["Which skin layer contains blood vessels and nerves?", ["Dermis", "Epidermis", "Only the subcutis", "The horny layer"], "The epidermis has no blood vessels of its own.", "Entwurf"],
         ["What does the subcutis mainly consist of?", ["Fatty tissue", "Cartilage", "Keratinocytes", "Muscle fibers"], "It provides cushioning.", "Entwurf"],
-        ["Which layers does a piercing channel pass through?", ["All three layers", "Only the epidermis and dermis", "Only the epidermis", "The dermis and subcutis; the epidermis is pushed aside"], "That is why it heals from the edge.", "Entwurf"],
-        ["What often runs together as a bundle in the dermis?", ["Artery, vein and nerve", "Hair root and sweat gland", "Fat lobules and cartilage", "Only capillaries"], "See the 3D skin block.", "Ergänzung"]
+        ["Which layers does a piercing channel pass through?", ["All three layers", "Only the epidermis and dermis", "Only the epidermis", "The dermis and subcutis; the epidermis is pushed aside"], "It passes through the epidermis, dermis and subcutis (or cartilage).", "Entwurf"],
+        ["What often runs together as a bundle in the dermis and subcutis?", ["Artery, vein and nerve", "Hair root and sweat gland", "Fat lobules and cartilage", "Only capillaries"], "See the 3D skin block.", "Ergänzung"]
       ]
     },
     {
@@ -51,7 +50,7 @@ KURS.module.push({
       fragen: [
         ["Why do cartilage piercings heal more slowly than a lobe?", ["Cartilage has no blood vessels of its own", "Cartilage has a particularly large number of nerves", "Cartilage is thinner than the earlobe", "Cartilage does not form granulation tissue"], "It is supplied via the perichondrium.", "Entwurf"],
         ["What healing time does the course book give for cartilage piercings?", ["At least 3 months", "About 4 to 6 weeks", "About 2 months", "1 to 2 months"], "For comparison: lobe approx. 2 months.", "S. 49"],
-        ["Which tissue heals fastest?", ["Mucous membrane", "Cartilage", "Soft tissue such as the earlobe", "Fatty tissue at the navel"], "Tongue and lip frenulum approx. 1 month.", "S. 49"],
+        ["According to the course book, which piercings heal fastest (approx. 1 month)?", ["Tongue, lip frenulum and eyebrow", "Lobe, helix and tragus", "Navel and nipple", "Conch, rook and daith"], "Cartilage needs at least 3 months, navel and nipple even longer.", "S. 49"],
         ["Which type of tissue does the helix belong to?", ["Cartilage", "Soft tissue", "Mucous membrane", "Fatty tissue"], "The rim of the ear is cartilage.", "S. 78"],
         ["What type of tissue does a tongue piercing go through?", ["Mucous membrane", "Cartilage", "Soft tissue without mucous membrane", "Connective tissue of the skin"], "Mucous membrane heals quickly.", "S. 49"],
         ["Why is octenidine off-limits for cartilage piercings?", ["It damages cartilage cells in laboratory studies", "It discolors the cartilage", "It has no antiseptic effect on cartilage", "It triggers nickel allergies on cartilage"], "Octenidine is in Octenisept; Prontolind contains polihexanide.", "S. 48"],
@@ -162,13 +161,13 @@ KURS.module.push({
       titel: "Who heals more slowly",
       seite: "S. 50",
       inhalt: [
-        { typ: "text", text: "Smokers, alcoholics and diabetics are among the risk groups: they are more prone to complications during healing." },
+        { typ: "text", text: "Smokers, people who drink heavily and diabetics are among the risk groups: they are more prone to complications during healing." },
         { typ: "text", text: "According to the course book, possible causes of constant re-bleeding are diabetes, connective tissue weakness or a bleeding disorder (hemophilia). In this case, a doctor should be consulted." },
         { typ: "ergaenzung", text: "Prolonged re-bleeding most often occurs when the client takes blood-thinning medication (for example ASA) or has a clotting disorder. Diabetes mainly delays wound healing and increases the risk of infection." },
         { typ: "praxis", text: "The consent form asks about illnesses and medication. Read this information before piercing, not afterwards, and address risk factors openly." }
       ],
       fragen: [
-        ["Which groups have a higher risk of healing complications?", ["Smokers, alcoholics and diabetics", "Athletes and people with dry skin", "People with hay fever", "People under 25"], "They are more prone to complications.", "S. 50"],
+        ["Which groups have a higher risk of healing complications?", ["Smokers, heavy drinkers and diabetics", "Athletes and people with dry skin", "People with hay fever", "People under 25"], "They are more prone to complications.", "S. 50"],
         ["Which causes of constant re-bleeding does the course book name?", ["Diabetes, connective tissue weakness or a bleeding disorder", "A nickel allergy or a contact allergy", "Jewelry that is too short, without extra length", "Daily aftercare with saline solution"], "Then see a doctor.", "S. 50"],
         ["Case: A client states that he has diabetes. What is correct?", ["I inform him about the higher healing risk before I pierce", "I only pierce with PTFE, then there is no risk", "Diabetes is irrelevant to piercing", "I double the extra length"], "Diabetics are one of the risk groups.", "S. 50"]
       ]

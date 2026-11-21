@@ -139,7 +139,7 @@ function erzeuge(L, UE) {
   // Antworten in Kurzform (bis zum Doppelpunkt bzw. ersten Satz), damit die richtige nicht auffällig die längste ist.
   const kurz = s => {
     s = s.replace(/\.$/, "").split(/(?<!\b(?:bzw|z|B|p|e|g|ej|S))\. (?=\p{Lu})/u)[0].split(": ")[0];
-    if (s.length <= 70) return s;
+    if (s.length <= 70 || s.split(", ").length < 3) return s; // nur Aufzählungen mit mehreren Kommas kürzen
     const teile = s.split(", "); let k = teile.shift();
     while (k.length < 25 && teile.length) k += ", " + teile.shift();
     return k;

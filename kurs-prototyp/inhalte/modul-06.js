@@ -13,7 +13,7 @@ KURS.module.push({
       inhalt: [
         { typ: "text", text: "Titan ist ein Hightech-Metall mit vielen besonderen Eigenschaften. Es wird für medizinische Implantate wie Knochenschrauben, künstliche Gelenke und Herzschrittmachergehäuse eingesetzt. Um eine Tonne Titan herzustellen, braucht man 16-mal mehr Energie als für eine Tonne Stahl." },
         { typ: "text", text: "Nicht jede Titanlegierung eignet sich für Bodypiercing. Für hochwertigen Piercingschmuck wird vor allem das Hightech-Titan „Ti6Al4V ELI, Titan der Güteklasse 23“ verwendet, kurz G23-Titan (das Kursbuch sagt „ausschließlich“; daneben gibt es auch implantattaugliches Reintitan, siehe Lektion „Woran du guten Ersteinsatz-Schmuck erkennst“). Es ist als Werkstoff für chirurgische Implantate genormt, wird weltweit für Implantate wie künstliche Gelenke verwendet und gilt als biokompatibel." },
-        { typ: "foto", id: "titan-schmuck", text: "Schmuck aus G23-Titan. Kursbuch S. 55." },
+        { typ: "foto", id: "titan-schmuck", text: "Schmuckbeispiele (Kugelreihenringe und gebogener Nasenstecker), keine typischen Ersteinsätze. Kursbuch S. 55." },
         { typ: "tabelle", kopf: ["Eigenschaft", "Bedeutung"], zeilen: [
           ["Wiegt nur die Hälfte von Stahl", "Angenehm zu tragen, auch bei langen Stäben"],
           ["Anodisierend färbbar", "Farbiger Schmuck ohne Beschichtung, durch stabile Oxidschichten"],
@@ -45,7 +45,7 @@ KURS.module.push({
       ],
       fragen: [
         ["Mit welchem Verfahren wird Blackline-Titan beschichtet?", ["PVD (Physical Vapor Deposition)", "Galvanisieren", "Anodisieren", "Pulverbeschichtung"], "Hauchdünn und abriebfest.", "S. 54"],
-        ["Welche Eigenschaften haben Blackline-Piercings?", ["Nahezu dauerhaft kratzbeständig, farbsicher und verträglich", "Sie werden durch Anodisieren schwarz", "Sie enthalten schwarzes Nickel", "Sie sind besonders für den Ersteinsatz empfohlen"], "Die PVD-Schicht ist sehr dünn und hart. Als Ersteinsatz bleibt die Akademie trotzdem bei G23-Titan oder PTFE.", "S. 54"],
+        ["Welche Eigenschaften haben Blackline-Piercings?", ["Laut Hersteller kratzbeständig, farbsicher und verträglich", "Sie werden durch Anodisieren schwarz", "Sie enthalten schwarzes Nickel", "Sie sind besonders für den Ersteinsatz empfohlen"], "Die PVD-Schicht ist sehr dünn und hart. Als Ersteinsatz bleibt die Akademie trotzdem bei G23-Titan oder PTFE.", "S. 54"],
         ["Was ist Zirkon-Gold-Titan?", ["Titan mit goldfarbener Beschichtung als Alternative zu Gold", "Massives Gold mit 14 Karat und Titankern", "Vergoldeter Chirurgenstahl 316L", "Eine Legierung aus Gold und Titan"], "Glatter, leichter, preiswerter.", "S. 54"]
       ]
     },
@@ -53,7 +53,7 @@ KURS.module.push({
       titel: "Chirurgenstahl",
       seite: "S. 55",
       inhalt: [
-        { typ: "text", text: "Es gibt unzählige Stähle. Als Schmuck verwenden Piercer nur drei: Komposition D Implantatstahl, Chirurgenstahl 316 LVM und, am häufigsten, Chirurgenstahl 316L. Diese Stähle erfüllen laut EU-Nickelrichtlinie alle Kriterien, um als Zweiteinsatz (nach vollständiger Abheilung) weltweit und zeitlich unbegrenzt getragen zu werden." },
+        { typ: "text", text: "Es gibt unzählige Stähle. Als Schmuck verwenden Piercer nur drei: Komposition D Implantatstahl, Chirurgenstahl 316 LVM und, am häufigsten, Chirurgenstahl 316L. Diese Stähle können die EU-Grenzwerte für Nickel (REACH) einhalten und sind dann als Zweiteinsatz (nach vollständiger Abheilung) geeignet." },
         { typ: "text", text: "In der Medizin wird 316L zum Beispiel für Knochenschrauben, Körpernadeln, Knochenplatten, Nähte, Klammern und als Herzschrittmacherelektrode eingesetzt." },
         { typ: "achtung", text: "Chirurgenstahl 316L enthält 10 bis 14 Prozent Nickel und ist als Ersteinsatz ungeeignet. Als Zweiteinsatz ist er meistens bedenkenlos." }
       ],
@@ -88,7 +88,7 @@ KURS.module.push({
       inhalt: [
         { typ: "text", text: "Kommt die Haut einer allergischen Person mit Nickel in Berührung, rötet sie sich, schwillt an, wird rau und trocken und juckt. Manchmal schuppen oder nässen diese sogenannten Kontaktekzeme oder schwellen schmerzhaft an. Der Ausschlag kann auf kleine Flächen begrenzt bleiben oder sich über breite Hautareale bis über den ganzen Körper ausbreiten." },
         { typ: "text", text: "Ekzeme können an allen Körperstellen auftreten, die mit Nickel in Berührung gekommen sind, etwa an Händen, Gesicht, Armen, Beinen, in der Mundschleimhaut oder an den Genitalien." },
-        { typ: "foto", id: "frei-metalle", text: "Metalle, die Kontaktallergien auslösen können, im Periodensystem markiert, darunter Nickel (Ni), Kobalt (Co) und Chrom (Cr)." },
+        { typ: "foto", id: "frei-metalle", text: "Metalle, die Kontaktallergien auslösen können, im Periodensystem markiert, darunter Nickel (Ni), Kobalt (Co) und Chrom (Cr). Auch Titan (Ti) ist markiert; Titanallergien sind aber sehr selten, entscheidend ist hier Nickel." },
         { typ: "merke", text: "Die Symptome zeigen sich erst rund 48 bis 72 Stunden nach dem Kontakt. Mediziner sprechen von einer Spättyp-Allergie. Das macht sie schwer zu erkennen." }
       ],
       fragen: [
@@ -153,7 +153,6 @@ KURS.module.push({
       titel: "Schmuckformen: Stäbe und Stecker",
       seite: "S. 61–62",
       inhalt: [
-        { typ: "video", id: "schmuck-titan", text: "Ersteinsätze aus Titan: gerader Barbell, Curved Barbell, Labret und Ball Closure Ring.", schleife: true },
         { typ: "text", text: "Für verschiedene Bereiche des Körpers werden verschiedene Schmuckarten verwendet, beim Ersteinsatz wie beim Zweiteinsatz." },
         { typ: "tabelle", kopf: ["Schmuck", "Beschreibung", "Typischer Einsatz"], zeilen: [
           ["Curved Barbell (Banane)", "Leicht gebogener Stab mit Kugeln", "Bauchnabel, Augenbraue, Rook"],
@@ -194,14 +193,14 @@ KURS.module.push({
       titel: "Überlänge beim Ersteinsatz",
       seite: "S. 74",
       inhalt: [
-        { typ: "achtung", text: "Der Ersteinsatz muss stets eine Überlänge von etwa 4 mm haben. Der frische Stichkanal kann anschwellen und darf während der Heilungsphase niemals durch Kugeln oder Plättchen verschlossen bzw. eingeengt werden." },
+        { typ: "achtung", text: "Der Ersteinsatz muss stets eine Überlänge von etwa 4 mm haben. Der frische Stichkanal kann anschwellen und darf während der Heilungsphase niemals durch Kugeln oder Plättchen verschlossen bzw. eingeengt werden. Das gilt für Stäbe; bei Ringen (zum Beispiel Helix, Septum, Prinz Albert) kommt es auf einen ausreichend großen Innendurchmesser an." },
         { typ: "grafik", id: "ueberlaenge" },
         { typ: "grafik", id: "lobe3d" },
         { typ: "praxis", text: "Miss die Stelle mit dem Messschieber und plane die Überlänge ein, bevor du den Ersteinsatz aus der Sterilverpackung nimmst. Nach der Abheilung kann ein kürzerer Zweiteinsatz folgen." }
       ],
       fragen: [
         ["Wie viel Überlänge braucht ein Ersteinsatz?", ["Etwa 4 mm", "Etwa 1 mm", "Etwa 8 mm", "Etwa 1 cm"], "Der frische Stichkanal kann anschwellen.", "S. 74"],
-        ["Warum darf der Ersteinsatz nicht zu kurz sein?", ["Weil Kugeln oder Plättchen sonst bei Schwellung einengen", "Weil er sonst leichter herausfällt", "Weil kurze Stäbe mehr Nickel abgeben", "Weil er sich sonst schlechter reinigen lässt"], "Grundregel aus Kap. 10.", "S. 74"],
+        ["Warum darf der Ersteinsatz nicht zu kurz sein?", ["Weil Kugeln oder Plättchen sonst bei Schwellung einengen", "Weil er sonst leichter herausfällt", "Weil kurze Stäbe mehr Nickel abgeben", "Weil er sich sonst schlechter reinigen lässt"], "Grundregel aus dem Kursbuch, Kap. 10 (S. 74).", "S. 74"],
         ["Womit misst du die Stelle für den Schmuck?", ["Mit dem Messschieber", "Mit dem Lineal auf der Haut", "Mit dem Nadelauffangrohr", "Mit dem Augenmaß und dem Hautmarker"], "Siehe Werkzeuge in Modul 7.", "S. 68"]
       ]
     }

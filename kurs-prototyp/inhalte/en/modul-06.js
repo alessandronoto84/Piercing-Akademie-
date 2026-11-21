@@ -13,7 +13,7 @@ KURS.module.push({
       inhalt: [
         { typ: "text", text: "Titanium is a high-tech metal with many special properties. It is used for medical implants such as bone screws, artificial joints and pacemaker housings. Producing one metric ton of titanium takes 16 times more energy than producing one metric ton of steel." },
         { typ: "text", text: "Not every titanium alloy is suitable for body piercing. High-quality piercing jewelry is mainly made from the high-tech titanium “Ti6Al4V ELI, grade 23 titanium”, G23 titanium for short (the course book says “exclusively”; there is also implant-grade commercially pure titanium, see the lesson “How to recognize good initial jewelry”). It is standardized as a material for surgical implants, is used worldwide for implants such as artificial joints and is considered biocompatible." },
-        { typ: "foto", id: "titan-schmuck", text: "Jewelry made of G23 titanium. Course book p. 55." },
+        { typ: "foto", id: "titan-schmuck", text: "Jewelry examples (beaded rings and a curved nose screw), not typical initial jewelry. Course book p. 55." },
         { typ: "tabelle", kopf: ["Property", "What it means"], zeilen: [
           ["Weighs only half as much as steel", "Comfortable to wear, even with long bars"],
           ["Can be colored by anodizing", "Colored jewelry without a coating, thanks to stable oxide layers"],
@@ -45,7 +45,7 @@ KURS.module.push({
       ],
       fragen: [
         ["Which process is used to coat Blackline titanium?", ["PVD (Physical Vapor Deposition)", "Electroplating", "Anodizing", "Powder coating"], "Wafer-thin and abrasion-resistant.", "S. 54"],
-        ["What properties do Blackline piercings have?", ["Almost permanently scratch-resistant, colorfast and well tolerated", "They are turned black by anodizing", "They contain black nickel", "They are especially recommended as initial jewelry"], "The PVD layer is very thin and hard. For initial jewelry, the Academy still sticks to G23 titanium or PTFE.", "S. 54"],
+        ["What properties do Blackline piercings have?", ["According to the manufacturer, scratch-resistant, colorfast and well tolerated", "They are turned black by anodizing", "They contain black nickel", "They are especially recommended as initial jewelry"], "The PVD layer is very thin and hard. For initial jewelry, the Academy still sticks to G23 titanium or PTFE.", "S. 54"],
         ["What is zircon gold titanium?", ["Titanium with a gold-colored coating, an alternative to gold", "Solid 14-carat gold with a titanium core", "Gold-plated 316L surgical steel", "An alloy of gold and titanium"], "Smoother, lighter, cheaper.", "S. 54"]
       ]
     },
@@ -53,7 +53,7 @@ KURS.module.push({
       titel: "Surgical steel",
       seite: "S. 55",
       inhalt: [
-        { typ: "text", text: "There are countless types of steel. Piercers use only three for jewelry: Composition D implant steel, surgical steel 316 LVM and, most commonly, surgical steel 316L. According to the EU Nickel Directive, these steels meet all the criteria to be worn as second jewelry (after complete healing) worldwide and for an unlimited time." },
+        { typ: "text", text: "There are countless types of steel. Piercers use only three for jewelry: Composition D implant steel, surgical steel 316 LVM and, most commonly, surgical steel 316L. These steels can meet the EU limits for nickel (REACH) and are then suitable as second jewelry (after complete healing)." },
         { typ: "text", text: "In medicine, 316L is used, for example, for bone screws, body needles, bone plates, sutures, staples and as a pacemaker electrode." },
         { typ: "achtung", text: "Surgical steel 316L contains 10 to 14 percent nickel and is unsuitable as initial jewelry. As second jewelry it is usually safe." }
       ],
@@ -88,7 +88,7 @@ KURS.module.push({
       inhalt: [
         { typ: "text", text: "When the skin of an allergic person comes into contact with nickel, it reddens, swells, becomes rough and dry and itches. Sometimes these so-called contact eczemas scale or weep, or swell painfully. The rash may stay limited to small areas or spread over large areas of skin, even over the whole body." },
         { typ: "text", text: "Eczema can appear on any part of the body that has come into contact with nickel, for example the hands, face, arms, legs, the oral mucosa or the genitals." },
-        { typ: "foto", id: "frei-metalle", text: "Metals that can trigger contact allergies, marked in the periodic table, including nickel (Ni), cobalt (Co) and chromium (Cr)." },
+        { typ: "foto", id: "frei-metalle", text: "Metals that can trigger contact allergies, marked in the periodic table, including nickel (Ni), cobalt (Co) and chromium (Cr). Titanium (Ti) is marked as well, but titanium allergies are very rare; what matters here is nickel." },
         { typ: "merke", text: "The symptoms only appear around 48 to 72 hours after contact. Doctors call this a delayed-type allergy. This makes it hard to recognize." }
       ],
       fragen: [
@@ -153,7 +153,6 @@ KURS.module.push({
       titel: "Jewelry types: bars and studs",
       seite: "S. 61–62",
       inhalt: [
-        { typ: "video", id: "schmuck-titan", text: "Titanium initial jewelry: straight barbell, curved barbell, labret and ball closure ring.", schleife: true },
         { typ: "text", text: "Different types of jewelry are used for different areas of the body, both as initial jewelry and as second jewelry." },
         { typ: "tabelle", kopf: ["Jewelry", "Description", "Typical use"], zeilen: [
           ["Curved barbell (banana)", "Slightly curved bar with balls", "Navel, eyebrow, Rook"],
@@ -194,14 +193,14 @@ KURS.module.push({
       titel: "Extra length of initial jewelry",
       seite: "S. 74",
       inhalt: [
-        { typ: "achtung", text: "Initial jewelry must always have an extra length of about 4 mm. The fresh piercing channel can swell and must never be closed off or constricted by balls or discs during the healing phase." },
+        { typ: "achtung", text: "Initial jewelry must always have an extra length of about 4 mm. The fresh piercing channel can swell and must never be closed off or constricted by balls or discs during the healing phase. This applies to bars; for rings (for example helix, septum, Prince Albert), what matters is a sufficiently large inner diameter." },
         { typ: "grafik", id: "ueberlaenge" },
         { typ: "grafik", id: "lobe3d" },
         { typ: "praxis", text: "Measure the area with the caliper and plan the extra length before you take the initial jewelry out of its sterile packaging. After healing, shorter second jewelry can follow." }
       ],
       fragen: [
         ["How much extra length does initial jewelry need?", ["About 4 mm", "About 1 mm", "About 8 mm", "About 1 cm"], "The fresh piercing channel can swell.", "S. 74"],
-        ["Why must initial jewelry not be too short?", ["Because otherwise balls or discs would constrict the swollen channel", "Because otherwise it would fall out more easily", "Because short bars release more nickel", "Because otherwise it would be harder to clean"], "Basic rule from ch. 10.", "S. 74"],
+        ["Why must initial jewelry not be too short?", ["Because otherwise balls or discs would constrict the swollen channel", "Because otherwise it would fall out more easily", "Because short bars release more nickel", "Because otherwise it would be harder to clean"], "Basic rule from the course book, ch. 10 (p. 74).", "S. 74"],
         ["What do you use to measure the area for the jewelry?", ["The caliper", "A ruler on the skin", "The receiving tube", "Your eye and the skin marker"], "See tools in module 7.", "S. 68"]
       ]
     }

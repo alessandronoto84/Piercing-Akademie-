@@ -13,7 +13,6 @@ KURS.module.push({
       seite: "Entwurf",
       entwurf: true,
       inhalt: [
-        { typ: "video", id: "anatomie-modelle", text: "Modelo de oreja y modelo de las capas de la piel: epidermis, dermis e hipodermis con tejido graso.", schleife: true },
         { typ: "text", text: "La piel es el órgano más grande del ser humano. Está formada por tres capas, y un canal de perforación atraviesa las tres." },
         { typ: "tabelle", kopf: ["Capa", "Estructura", "Importancia al perforar"], zeilen: [
           ["Epidermis", "Capa más externa, queratinizada, sin vasos sanguíneos propios", "Barrera protectora frente a los gérmenes. Se desinfecta antes de perforar y, durante la cicatrización, vuelve a crecer desde el borde de la herida."],
@@ -30,8 +29,8 @@ KURS.module.push({
         ["¿Cómo se llama la capa más externa de la piel?", ["Epidermis", "Dermis", "Hipodermis", "Pericondrio"], "Está queratinizada.", "Entwurf"],
         ["¿Qué capa de la piel contiene vasos sanguíneos y nervios?", ["La dermis", "La epidermis", "Solo la hipodermis", "La capa córnea"], "La epidermis no tiene vasos sanguíneos propios.", "Entwurf"],
         ["¿De qué está formada principalmente la hipodermis?", ["De tejido graso", "De cartílago", "De células córneas", "De fibras musculares"], "Amortigua.", "Entwurf"],
-        ["¿Qué capas atraviesa un canal de perforación?", ["Las tres capas", "Solo la epidermis y la dermis", "Solo la epidermis", "La dermis y la hipodermis; la epidermis se desplaza"], "Por eso cicatriza desde el borde.", "Entwurf"],
-        ["¿Qué suele encontrarse agrupado en un haz en la dermis?", ["Arteria, vena y nervio", "Raíz del pelo y glándula sudorípara", "Lóbulos de grasa y cartílago", "Solo capilares"], "Ver el bloque de piel en 3D.", "Ergänzung"]
+        ["¿Qué capas atraviesa un canal de perforación?", ["Las tres capas", "Solo la epidermis y la dermis", "Solo la epidermis", "La dermis y la hipodermis; la epidermis se desplaza"], "Atraviesa la epidermis, la dermis y la hipodermis (o el cartílago).", "Entwurf"],
+        ["¿Qué suele discurrir agrupado en un haz en la dermis y la hipodermis?", ["Arteria, vena y nervio", "Raíz del pelo y glándula sudorípara", "Lóbulos de grasa y cartílago", "Solo capilares"], "Ver el bloque de piel en 3D.", "Ergänzung"]
       ]
     },
     {
@@ -51,7 +50,7 @@ KURS.module.push({
       fragen: [
         ["¿Por qué los piercings de cartílago cicatrizan más despacio que un lobe?", ["El cartílago no tiene vasos sanguíneos propios", "El cartílago tiene una cantidad especialmente alta de nervios", "El cartílago es más fino que el lóbulo", "El cartílago no forma tejido de granulación"], "Se nutre a través del pericondrio.", "Entwurf"],
         ["¿Qué tiempo de cicatrización indica el libro del curso para los piercings de cartílago?", ["Al menos 3 meses", "Unas 4 a 6 semanas", "Unos 2 meses", "De 1 a 2 meses"], "Para comparar: lobe aprox. 2 meses.", "S. 49"],
-        ["¿Qué tejido cicatriza más rápido?", ["La mucosa", "El cartílago", "El tejido blando, como el lóbulo", "El tejido graso del ombligo"], "Lengua y frenillo labial aprox. 1 mes.", "S. 49"],
+        ["Según el libro del curso, ¿qué piercings cicatrizan más rápido (aprox. 1 mes)?", ["Lengua, frenillo labial y ceja", "Lobe, helix y tragus", "Ombligo y pezón", "Conch, rook y daith"], "El cartílago necesita al menos 3 meses; el ombligo y el pezón, aún más.", "S. 49"],
         ["¿A qué tipo de tejido pertenece el helix?", ["Cartílago", "Tejido blando", "Mucosa", "Tejido graso"], "El borde de la oreja es cartílago.", "S. 78"],
         ["¿A qué tipo de tejido pertenece el piercing de lengua?", ["Mucosa", "Cartílago", "Tejido blando sin mucosa", "Tejido conjuntivo de la piel"], "La mucosa cicatriza rápido.", "S. 49"],
         ["¿Por qué la octenidina está prohibida en piercings de cartílago?", ["Daña las células del cartílago en estudios de laboratorio", "Decolora el cartílago", "No tiene efecto antiséptico sobre el cartílago", "Provoca alergias al níquel en el cartílago"], "La octenidina está en Octenisept; Prontolind contiene polihexanida.", "S. 48"],
@@ -162,13 +161,13 @@ KURS.module.push({
       titel: "Quién cicatriza peor",
       seite: "S. 50",
       inhalt: [
-        { typ: "text", text: "Los fumadores, las personas con alcoholismo y los diabéticos forman parte de los grupos de riesgo: en ellos, las complicaciones en el proceso de cicatrización aparecen antes." },
+        { typ: "text", text: "Los fumadores, las personas con un consumo elevado de alcohol y los diabéticos forman parte de los grupos de riesgo: en ellos, las complicaciones en el proceso de cicatrización aparecen antes." },
         { typ: "text", text: "Según el libro del curso, las posibles causas de un sangrado persistente son la diabetes, la debilidad del tejido conjuntivo o una enfermedad hemorrágica (hemofilia). En ese caso, hay que acudir al médico." },
         { typ: "ergaenzung", text: "Lo más frecuente es que el sangrado se prolongue cuando el cliente toma medicamentos anticoagulantes (por ejemplo, AAS) o tiene un trastorno de la coagulación. La diabetes, sobre todo, retrasa la cicatrización y aumenta el riesgo de infección." },
         { typ: "praxis", text: "El formulario de consentimiento pregunta por enfermedades y medicamentos. Lee esos datos antes de perforar, no después, y habla abiertamente de los factores de riesgo." }
       ],
       fragen: [
-        ["¿Qué grupos tienen un mayor riesgo de complicaciones en la cicatrización?", ["Fumadores, personas con alcoholismo y diabéticos", "Deportistas y personas con piel seca", "Personas con fiebre del heno", "Menores de 25 años"], "En ellos, las complicaciones aparecen antes.", "S. 50"],
+        ["¿Qué grupos tienen un mayor riesgo de complicaciones en la cicatrización?", ["Fumadores, personas que beben mucho alcohol y diabéticos", "Deportistas y personas con piel seca", "Personas con fiebre del heno", "Personas menores de 25 años"], "En ellos, las complicaciones aparecen antes.", "S. 50"],
         ["¿Qué causas de sangrado persistente menciona el libro del curso?", ["Diabetes, debilidad del tejido conjuntivo o una enfermedad hemorrágica", "Una alergia al níquel o una alergia de contacto", "Una joya demasiado corta, sin longitud extra", "El cuidado diario con solución salina"], "En ese caso, acudir al médico.", "S. 50"],
         ["Caso: Un cliente indica que tiene diabetes. ¿Qué es lo correcto?", ["Le informo del mayor riesgo en la cicatrización antes de perforar", "Solo perforo con PTFE; así no hay riesgo", "La diabetes no influye en el piercing", "Duplico la longitud extra"], "Los diabéticos forman parte de los grupos de riesgo.", "S. 50"]
       ]

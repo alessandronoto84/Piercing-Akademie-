@@ -13,7 +13,7 @@ KURS.module.push({
       inhalt: [
         { typ: "text", text: "El titanio es un metal de alta tecnología con muchas propiedades especiales. Se utiliza en implantes médicos como tornillos óseos, articulaciones artificiales y carcasas de marcapasos. Para producir una tonelada de titanio se necesita 16 veces más energía que para una tonelada de acero." },
         { typ: "text", text: "No todas las aleaciones de titanio sirven para el body piercing. Para la joyería de piercing de alta calidad se utiliza sobre todo el titanio de alta tecnología «Ti6Al4V ELI, titanio de grado 23», abreviado titanio G23 (el libro del curso dice «exclusivamente»; también existe titanio puro apto para implantes, ver la lección «Cómo reconocer una buena joya inicial»). Está normalizado como material para implantes quirúrgicos, se usa en todo el mundo para implantes como articulaciones artificiales y se considera biocompatible." },
-        { typ: "foto", id: "titan-schmuck", text: "Joyas de titanio G23. Libro del curso pág. 55." },
+        { typ: "foto", id: "titan-schmuck", text: "Ejemplos de joyas (aros de bolitas y un nose screw curvado), no son joyas iniciales típicas. Libro del curso pág. 55." },
         { typ: "tabelle", kopf: ["Propiedad", "Qué significa"], zeilen: [
           ["Pesa solo la mitad que el acero", "Cómodo de llevar, incluso con barras largas"],
           ["Se puede colorear por anodizado", "Joyas de color sin recubrimiento, gracias a capas de óxido estables"],
@@ -45,7 +45,7 @@ KURS.module.push({
       ],
       fragen: [
         ["¿Con qué proceso se recubre el titanio Blackline?", ["PVD (Physical Vapor Deposition)", "Galvanizado", "Anodizado", "Pintura en polvo"], "Finísimo y resistente a la abrasión.", "S. 54"],
-        ["¿Qué propiedades tienen los piercings Blackline?", ["Resistentes a los arañazos de forma casi permanente, de color estable y bien tolerados", "Se vuelven negros por anodizado", "Contienen níquel negro", "Se recomiendan especialmente como joya inicial"], "La capa PVD es muy fina y dura. Aun así, para la joya inicial la Academia se mantiene en titanio G23 o PTFE.", "S. 54"],
+        ["¿Qué propiedades tienen los piercings Blackline?", ["Según el fabricante, resistentes a los arañazos, de color estable y bien tolerados", "Se vuelven negros por anodizado", "Contienen níquel negro", "Se recomiendan especialmente como joya inicial"], "La capa PVD es muy fina y dura. Aun así, para la joya inicial la Academia se mantiene en titanio G23 o PTFE.", "S. 54"],
         ["¿Qué es el titanio oro circonio?", ["Titanio con recubrimiento dorado, alternativa a las joyas de oro", "Oro macizo de 14 quilates con núcleo de titanio", "Acero quirúrgico 316L bañado en oro", "Una aleación de oro y titanio"], "Más liso, más ligero, más económico.", "S. 54"]
       ]
     },
@@ -53,7 +53,7 @@ KURS.module.push({
       titel: "Acero quirúrgico",
       seite: "S. 55",
       inhalt: [
-        { typ: "text", text: "Existen innumerables tipos de acero. Para joyería, los piercers solo usan tres: acero para implantes Composición D, acero quirúrgico 316 LVM y, el más frecuente, acero quirúrgico 316L. Según la Directiva europea sobre el níquel, estos aceros cumplen todos los criterios para llevarse como segunda joya (tras la cicatrización completa) en todo el mundo y por tiempo ilimitado." },
+        { typ: "text", text: "Existen innumerables tipos de acero. Para joyería, los piercers solo usan tres: acero para implantes Composición D, acero quirúrgico 316 LVM y, el más frecuente, acero quirúrgico 316L. Estos aceros pueden cumplir los límites de níquel de la UE (REACH) y entonces son aptos como segunda joya (tras la cicatrización completa)." },
         { typ: "text", text: "En medicina, el 316L se utiliza, por ejemplo, en tornillos óseos, agujas, placas óseas, suturas, grapas y como electrodo de marcapasos." },
         { typ: "achtung", text: "El acero quirúrgico 316L contiene entre un 10 y un 14 por ciento de níquel y no es apto como joya inicial. Como segunda joya, por lo general no presenta problemas." }
       ],
@@ -88,7 +88,7 @@ KURS.module.push({
       inhalt: [
         { typ: "text", text: "Cuando la piel de una persona alérgica entra en contacto con níquel, se enrojece, se hincha, se vuelve áspera y seca y pica. A veces estos llamados eccemas de contacto descaman o supuran, o se hinchan de forma dolorosa. La erupción puede limitarse a zonas pequeñas o extenderse por amplias áreas de piel, incluso por todo el cuerpo." },
         { typ: "text", text: "Los eccemas pueden aparecer en cualquier parte del cuerpo que haya estado en contacto con níquel, por ejemplo en manos, cara, brazos, piernas, en la mucosa bucal o en los genitales." },
-        { typ: "foto", id: "frei-metalle", text: "Metales que pueden provocar alergias de contacto, marcados en la tabla periódica, entre ellos níquel (Ni), cobalto (Co) y cromo (Cr)." },
+        { typ: "foto", id: "frei-metalle", text: "Metales que pueden provocar alergias de contacto, marcados en la tabla periódica, entre ellos níquel (Ni), cobalto (Co) y cromo (Cr). También está marcado el titanio (Ti), pero las alergias al titanio son muy raras; lo decisivo aquí es el níquel." },
         { typ: "merke", text: "Los síntomas no aparecen hasta unas 48 a 72 horas después del contacto. Los médicos hablan de una alergia de tipo retardado. Por eso es difícil de reconocer." }
       ],
       fragen: [
@@ -153,7 +153,6 @@ KURS.module.push({
       titel: "Tipos de joyas: barras y labrets",
       seite: "S. 61–62",
       inhalt: [
-        { typ: "video", id: "schmuck-titan", text: "Joyas iniciales de titanio: barbell recto, barbell curvo, labret y BCR (aro de bola cautiva).", schleife: true },
         { typ: "text", text: "Para las distintas zonas del cuerpo se usan distintos tipos de joyas, tanto como joya inicial como segunda joya." },
         { typ: "tabelle", kopf: ["Joya", "Descripción", "Uso típico"], zeilen: [
           ["Barbell curvo (banana)", "Barra ligeramente curvada con bolas", "Ombligo, ceja, Rook"],
@@ -194,14 +193,14 @@ KURS.module.push({
       titel: "Longitud extra de la joya inicial",
       seite: "S. 74",
       inhalt: [
-        { typ: "achtung", text: "La joya inicial debe tener siempre una longitud extra de unos 4 mm. El canal de la perforación recién hecho puede hincharse y nunca debe quedar cerrado ni oprimido por bolas o discos durante la fase de cicatrización." },
+        { typ: "achtung", text: "La joya inicial debe tener siempre una longitud extra de unos 4 mm. El canal de la perforación recién hecho puede hincharse y nunca debe quedar cerrado ni oprimido por bolas o discos durante la fase de cicatrización. Esto vale para las barras; en los aros (por ejemplo helix, septum, Príncipe Alberto) lo que importa es un diámetro interior suficientemente grande." },
         { typ: "grafik", id: "ueberlaenge" },
         { typ: "grafik", id: "lobe3d" },
         { typ: "praxis", text: "Mide la zona con el calibre y planifica la longitud extra antes de sacar la joya inicial de su envase estéril. Tras la cicatrización puede colocarse una segunda joya más corta." }
       ],
       fragen: [
         ["¿Cuánta longitud extra necesita una joya inicial?", ["Unos 4 mm", "Aproximadamente 1 mm", "Unos 8 mm", "Aproximadamente 1 cm"], "El canal recién hecho puede hincharse.", "S. 74"],
-        ["¿Por qué la joya inicial no debe ser demasiado corta?", ["Porque las bolas o discos oprimirían el canal hinchado", "Porque se caería con más facilidad", "Porque las barras cortas liberan más níquel", "Porque sería más difícil de limpiar"], "Regla básica del cap. 10.", "S. 74"],
+        ["¿Por qué la joya inicial no debe ser demasiado corta?", ["Porque las bolas o discos oprimirían el canal hinchado", "Porque se caería con más facilidad", "Porque las barras cortas liberan más níquel", "Porque sería más difícil de limpiar"], "Regla básica del libro del curso, cap. 10 (pág. 74).", "S. 74"],
         ["¿Con qué mides la zona para la joya?", ["Con el calibre", "Con una regla sobre la piel", "Con el tubo receptor", "A ojo y con el marcador cutáneo"], "Ver herramientas en el módulo 7.", "S. 68"]
       ]
     }

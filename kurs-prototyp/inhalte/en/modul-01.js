@@ -39,8 +39,8 @@ KURS.module.push({
         ] }
       ],
       fragen: [
-        ["How old are the oldest finds of ear jewelry mentioned in the course book?", ["Over 7000 years (Algeria)", "About 3300 years (Tutankhamun)", "About 2600 years (Hallstatt culture)", "About 4000 years (Middle East)"], "Neolithic finds from Algeria.", "S. 3"],
-        ["What were the oldest ear pendants from Algeria made of?", ["Animal bones and teeth", "Gold", "Bronze", "Shells and wood"], "The Neolithic finds from Algeria were made of animal bones and teeth; metal jewelry came much later.", "S. 3"],
+        ["How old is the oldest directly documented find of body jewelry at the ear and chin?", ["About 10,000 to 8,000 BC (Boncuklu Tarla, Turkey)", "About 1400 to 1300 BC (Egypt)", "About 2600 years (Hallstatt culture)", "About 500 BC (ancient Greece)"], "Study in the journal Antiquity, 2022.", "Ergänzung"],
+        ["What applies to the Algerian finds (over 7000 years old) mentioned in the course book?", ["No independent source for them was found", "They are the oldest documented finds worldwide", "They were made of gold and bronze", "They date from Roman times"], "According to the course book, ear pendants made of animal bones and teeth. Older finds from Boncuklu Tarla (Turkey) are reliably documented.", "Ergänzung"],
         ["From what period do the oldest known traces of piercing date?", ["The New Stone Age (Neolithic)", "The European Bronze Age", "The age of the pharaohs", "Ancient Greece"], "Neolithic means the New Stone Age.", "S. 3"],
         ["Which famous mask shows pierced ears?", ["The gold mask of Tutankhamun", "The gold mask of Agamemnon", "Napoleon’s death mask", "The mask of Pakal from Palenque"], "In addition, there were gold earrings as grave goods.", "S. 3"],
         ["From what period do the Egyptian depictions of pharaohs with ear jewelry date?", ["About 1400 to 1300 BC", "About 3000 to 2900 BC", "About 500 to 400 BC", "About AD 100 to 200"], "That is how the course book dates them.", "S. 3"]

@@ -1,6 +1,8 @@
 /* KI-generierte Titelbilder der Module (Symbolbilder, keine Fachabbildungen), erzeugt mit FLUX.1 [schnell] und FLUX.2 [klein] 4B (Apache-2.0).
    Jedes Bild wurde vor dem Einbau auf KI-Fehler geprüft. Bildbeschreibungen und verworfene Versuche: KURS-RECHERCHE.md, Abschnitt 12.
-   kurs.js zeigt die Bilder auf den Modulkarten und im Modulkopf, ohne sichtbaren KI-Hinweis (Entscheidung der Akademie, 26.10.2026). */
+   kurs.js zeigt die Bilder auf den Modulkarten und im Modulkopf, ohne sichtbaren KI-Hinweis (Entscheidung der Akademie, 26.10.2026).
+   Module 3 und 8 (21.11.2026, Prüfbericht K5): statt KI-Bild ein echtes Bild aus bilder-frei.js bzw. bilder.js („bild“ = Schlüssel,
+   „pos“ = Bildausschnitt als object-position); bei lizenzierten Bildern zeigt der Modulkopf den Bildnachweis. */
 window.KURS = window.KURS || { module: [] };
 KURS.titelbilder = {
 "1": {
@@ -18,11 +20,11 @@ KURS.titelbilder = {
 "ki": "FLUX.2 [klein] 4B über Cloudflare Workers AI"
 },
 "3": {
-"src": "inhalte/bilder/3.webp",
-"w": 960,
-"h": 540,
-"alt": "Anatomisches Ohrmodell und Modell der Hautschichten auf einem Tisch",
-"ki": "FLUX.2 [klein] 4B über Cloudflare Workers AI"
+"src": "inhalte/bilder/frei-haut-3d.webp",
+"w": 640,
+"h": 360,
+"alt": "Dreidimensionale Darstellung der Hautschichten: Oberhaut, Lederhaut und Unterhaut",
+"bild": "frei-haut-3d"
 },
 "4": {
 "src": "inhalte/bilder/4.webp",
@@ -53,11 +55,12 @@ KURS.titelbilder = {
 "ki": "FLUX.2 [klein] 4B über Cloudflare Workers AI"
 },
 "8": {
-"src": "inhalte/bilder/8.webp",
-"w": 960,
-"h": 540,
-"alt": "Ohr mit vier Kugelsteckern: Lobe, Upper Lobe, Tragus und Helix",
-"ki": "FLUX.2 [klein] 4B über Cloudflare Workers AI"
+"src": "inhalte/bilder/industrial.webp",
+"w": 379,
+"h": 480,
+"pos": "50% 12%",
+"alt": "Ohr mit Industrial-Piercing (Datenblattfoto aus dem Kursbuch, S. 84)",
+"bild": "industrial"
 },
 "9": {
 "src": "inhalte/bilder/9.webp",

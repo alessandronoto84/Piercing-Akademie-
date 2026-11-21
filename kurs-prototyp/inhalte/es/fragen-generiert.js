@@ -1046,7 +1046,7 @@ KURS.lektionsfragen = {
    "Procedimiento, paso 4: «Pedirle que rellene el formulario de consentimiento». ¿Qué viene después?",
    [
     "Mientras tanto, preparar el puesto de trabajo y dejar todos los instrumentos a mano",
-    "Desinfectar la zona con un antiséptico cutáneo (por ejemplo",
+    "Desinfectar la zona con un antiséptico cutáneo (por ejemplo, Kodan) sin borrar la marca y esperar el tiempo de actuación",
     "Examinar la zona y elegir la joya inicial adecuada (¡longitud extra!)",
     "Desinfectarse las manos y ponerse los guantes"
    ],
@@ -1057,7 +1057,7 @@ KURS.lektionsfragen = {
    "Procedimiento, paso 5: «Mientras tanto, preparar el puesto de trabajo y dejar todos los instrumentos a mano». ¿Qué viene después?",
    [
     "El cliente entra a la sala de piercing",
-    "Desinfectar la zona con un antiséptico cutáneo (por ejemplo",
+    "Desinfectar la zona con un antiséptico cutáneo (por ejemplo, Kodan) sin borrar la marca y esperar el tiempo de actuación",
     "Rasurar si hace falta (cuchilla desechable) y volver a desinfectar después",
     "Saludo, conversación informal"
    ],
@@ -1103,7 +1103,7 @@ KURS.lektionsfragen = {
     "Rasurar si hace falta (cuchilla desechable) y volver a desinfectar después",
     "Perforar, idealmente siempre hacia el lado visible; en el labret",
     "Colocar la pinza o el tubo receptor",
-    "Desinfectar la zona con un antiséptico cutáneo (por ejemplo"
+    "Desinfectar la zona con un antiséptico cutáneo (por ejemplo, Kodan) sin borrar la marca y esperar el tiempo de actuación"
    ],
    "Paso 8a: Rasurar si hace falta (cuchilla desechable) y volver a desinfectar después.",
    "Ergänzung"
@@ -1122,7 +1122,7 @@ KURS.lektionsfragen = {
   [
    "Procedimiento, paso 9: «Marcar los puntos de entrada y de salida de la cánula con el marcador desechable». ¿Qué viene después?",
    [
-    "Desinfectar la zona con un antiséptico cutáneo (por ejemplo",
+    "Desinfectar la zona con un antiséptico cutáneo (por ejemplo, Kodan) sin borrar la marca y esperar el tiempo de actuación",
     "Desinfectar la zona (toallita con alcohol)",
     "Recortar un poco la vaina de plástico con tijeras para que la joya entre mejor",
     "El cliente entra a la sala de piercing"
@@ -1160,7 +1160,7 @@ KURS.lektionsfragen = {
     "Perforar, idealmente siempre hacia el lado visible; en el labret",
     "Examinar la zona y elegir la joya inicial adecuada (¡longitud extra!)",
     "Tirar la aguja de acero de inmediato al contenedor para objetos punzantes",
-    "Desinfectar la zona con un antiséptico cutáneo (por ejemplo"
+    "Desinfectar la zona con un antiséptico cutáneo (por ejemplo, Kodan) sin borrar la marca y esperar el tiempo de actuación"
    ],
    "Paso 12: Perforar, idealmente siempre hacia el lado visible; en el labret, por ejemplo, donde va la bola. Cuanto más rápido se perfora, menos dolor.",
    "S. 112"
@@ -1285,7 +1285,7 @@ KURS.lektionsfragen = {
     "Si procede, cubrir con un apósito (pezón, ombligo)",
     "Entregar el producto de cuidado y explicar las instrucciones de cuidado de palabra",
     "En los piercings de lengua, dar un cubito de hielo",
-    "Si hay trastornos de la cicatrización"
+    "Si hay trastornos de la cicatrización, el cliente debe volver para recibir asesoramiento (ver módulo 10)"
    ],
    "Paso 22: Si procede, cubrir con un apósito (pezón, ombligo).",
    "S. 113"
@@ -1326,7 +1326,7 @@ KURS.lektionsfragen = {
   [
    "Procedimiento, paso 25: «Lo ideal es entregar las instrucciones de cuidado también por escrito». ¿Qué viene después?",
    [
-    "Si hay trastornos de la cicatrización",
+    "Si hay trastornos de la cicatrización, el cliente debe volver para recibir asesoramiento (ver módulo 10)",
     "Si procede, cubrir con un apósito (pezón, ombligo)",
     "En los piercings de lengua, dar un cubito de hielo",
     "Entregar el producto de cuidado y explicar las instrucciones de cuidado de palabra"

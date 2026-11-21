@@ -110,7 +110,7 @@ KURS.module.push({
           ["Mini-Seitenschneider", "Trennt Schmuck auf, wenn sich eine Kugel nicht mehr lösen lässt"]
         ] },
         { typ: "achtung", text: "Mit der Einführhilfe immer sehr vorsichtig vorgehen, um eine Verletzung zu vermeiden." },
-        { typ: "galerie", titel: "Die Hilfswerkzeuge", bilder: [["einfuehrhilfe", "Einführhilfe"], ["klemmzange", "Klemmzange"], ["schere", "Schere"], ["kugelgreifer", "Kugelgreifer"], ["messschieber", "Messschieber"], ["ringoeffnungszange", "Ringöffnungszange"], ["ringschliesszange", "Ringschließzange"], ["taschenlampe", "Taschenlampe (grünes Licht)"], ["seitenschneider", "Mini-Seitenschneider"]], text: "Kursbuch S. 66–69 und 73." }
+        { typ: "galerie", titel: "Die Hilfswerkzeuge", bilder: [["einfuehrhilfe", "Einführhilfe"], ["klemmzange", "Klemmzange"], ["schere", "Schere"], ["kugelgreifer", "Kugelgreifer"], ["messschieber", "Messschieber"], ["ringoeffnungszange", "Ringöffnungszange"], ["ringschliesszange", "Ringschließzange"], ["taschenlampe", "Taschenlampe (mit Grünlicht-Modus bzw. -Aufsatz)"], ["seitenschneider", "Mini-Seitenschneider"]], text: "Kursbuch S. 66–69 und 73." }
       ],
       fragen: [
         ["Wofür ist die Schere beim Piercen da?", ["Zum Kürzen des Kunststoffröhrchens nach dem Stich", "Zum Kürzen des Ersteinsatzes", "Zum Abschneiden von Haaren an der Stichstelle", "Zum Öffnen der Sterilverpackung"], "So lässt sich der Schmuck leichter einführen.", "S. 67"],

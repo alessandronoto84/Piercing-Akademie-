@@ -17,12 +17,12 @@ window.KURS = window.KURS || { module: [] };
         seite: "S. 74",
         inhalt: [
           { typ: "text", text: "Zu jedem Piercing gibt es ein Datenblatt mit vier Angaben: wo es sitzt, welcher Ersteinsatz passt, welche Kanülenstärke (oder Stanze) du nimmst und womit du die Stelle hältst (Klemme, Nadelauffangrohr oder freihand)." },
-          { typ: "achtung", text: "Der Ersteinsatz braucht stets eine Überlänge von etwa 4 mm, weil der frische Stichkanal anschwellen kann. Er darf während der Heilung nie durch Kugeln oder Plättchen eingeengt werden." },
+          { typ: "achtung", text: "Der Ersteinsatz braucht stets eine Überlänge von etwa 4 mm, weil der frische Stichkanal anschwellen kann. Er darf während der Heilung nie durch Kugeln oder Plättchen eingeengt werden. Das gilt für Stäbe; bei Ringen (zum Beispiel Helix, Septum, Prinz Albert) kommt es auf einen ausreichend großen Innendurchmesser an." },
           { typ: "merke", text: "In den folgenden Lektionen lernst du jedes Piercing einzeln. Nach jeder Lektion fragt der Kurs die Datenblätter ab: Ersteinsatz, Kanüle und Klemme." }
         ],
         fragen: [
           ["Welche Informationen enthält jedes Datenblatt?", ["Lage, Ersteinsatz, Kanüle und Klemme", "Lage, Preis und Abheilzeit", "Ersteinsatz, Pflegemittel und Preis", "Nur Kanüle und Klemme"], "So sind alle Datenblätter aufgebaut.", "S. 74"],
-          ["Wie viel Überlänge braucht der Ersteinsatz?", ["Etwa 4 mm", "Etwa 2 mm", "Etwa 6 mm", "Etwa 1 cm"], "Der frische Stichkanal kann anschwellen.", "S. 74"],
+          ["Fall: Der Stichkanal ist 8 mm lang. Wie lang wählst du den Stab des Ersteinsatzes?", ["Etwa 12 mm", "Genau 8 mm", "Etwa 9 mm", "Etwa 20 mm"], "Stichkanal plus etwa 4 mm Überlänge, weil der frische Stichkanal anschwellen kann.", "S. 74"],
           ["Was bedeutet „Freihand“ im Datenblatt?", ["Gestochen wird ohne Klemme oder Nadelauffangrohr", "Der Kunde hält die Stelle selbst", "Gestochen wird ohne Handschuhe", "Gestochen wird ohne Markierung"], "Statt Klemme oder Nadelauffangrohr.", "S. 74–110"]
         ]
       },
@@ -111,7 +111,7 @@ window.KURS = window.KURS || { module: [] };
         ],
         fragen: [
           ["Wie lang ist der Stichkanal beim Augenbrauenpiercing etwa?", ["8 mm", "4 mm", "12 mm", "2 cm"], "Datenblatt Augenbraue.", "S. 89"],
-          ["Wo darf das Augenbrauenpiercing gestochen werden?", ["Nur im äußeren Drittel", "Im inneren Drittel", "Im mittleren Drittel", "Überall bei oberflächlichem Stich"], "Innen treten Nerven und Gefäße aus; eine Verletzung kann Taubheit an Stirn und Oberlid verursachen.", "S. 89"],
+          ["Fall: Eine Kundin möchte das Augenbrauenpiercing ganz innen, nahe der Nasenwurzel. Was tust du?", ["Ich lehne ab und biete das äußere Drittel an", "Ich steche dort, aber besonders oberflächlich", "Ich steche dort mit einer dünneren Kanüle", "Ich steche dort, wenn sie dafür unterschreibt"], "Innen treten Nerven und Gefäße aus; eine Verletzung kann Taubheit an Stirn und Oberlid verursachen.", "S. 89"],
           ["Wie verhältst du dich als Anfänger beim Wunsch nach einem Bridge?", ["Ich lehne ab", "Ich steche es besonders oberflächlich", "Ich steche es besonders tief", "Ich steche es mit 14G"], "Als Anfänger ablehnen.", "S. 91"]
         ]
       },
@@ -133,13 +133,13 @@ window.KURS = window.KURS || { module: [] };
         seite: "S. 87, 90",
         inhalt: [
           db("Lippenbändchen (Smiley)", "Durch das Frenulum, das die Oberlippe in der Mitte mit dem Zahnfleisch verbindet; nur beim Lächeln sichtbar.", "Hufeisen, BCR", "18G", "Septum-Zange, Freihand", "", "S. 87"),
-          db("Zunge", "Vertikal in der Mitte der Zunge. Das Zungenbändchen nicht verletzen, von unten nach oben stechen, sofort mit Eiswürfel kühlen (Eiswürfel aus Kamillentee empfehlen), kein PTFE verwenden, auf mögliche Zahnschäden hinweisen.", "20 mm Barbell (nach 10 Tagen ggf. kürzer)", "16G", "Snaptile, Gazeklemme, Zungenklemme", "", "S. 90")
+          db("Zunge", "Vertikal in der Mitte der Zunge. Das Zungenbändchen nicht verletzen, von unten nach oben stechen, sofort mit Eiswürfel kühlen (Eiswürfel aus Kamillentee empfehlen), kein PTFE verwenden, auf mögliche Zahnschäden hinweisen.", "20 mm Barbell (nach 10 Tagen ggf. kürzer)", "16G", "Snaptile, Gazeklemme, Zungenklemme", "Kürzen nur durch den Piercer, steril und mit Ersteinsatz-Material (siehe Modul 10).", "S. 90")
         ],
         fragen: [
           ["Warum heißt das Lippenbändchen-Piercing auch Smiley?", ["Weil es nur beim Lächeln sichtbar ist", "Weil es ein Lächeln formt", "Weil es durch die Mundwinkel geht", "Weil es ein Labret mit Smiley-Kugel ist"], "Durch das Frenulum.", "S. 87"],
           ["In welche Richtung wird die Zunge gestochen?", ["Von unten nach oben", "Von oben nach unten", "Seitlich von links", "Schräg von vorn"], "Datenblatt Zunge.", "S. 90"],
           ["Womit kühlt der Kunde nach dem Zungenpiercing?", ["Mit Eiswürfeln, am besten aus Kamillentee", "Mit Eisspray direkt auf die Zunge", "Mit kalter Milch oder Joghurt", "Mit Lidocain-Spray aus der Apotheke"], "Sofort nach dem Stechen.", "S. 90"],
-          ["Wann kann der Barbell beim Zungenpiercing gekürzt werden?", ["Nach etwa 10 Tagen", "Nach 2 Tagen", "Nach 3 Monaten", "Nie, die Länge bleibt"], "Ersteinsatz 20 mm Barbell.", "S. 90"]
+          ["Wann kann der Barbell beim Zungenpiercing gekürzt werden?", ["Nach etwa 10 Tagen", "Nach 2 Tagen", "Nach 3 Monaten", "Nie, die Länge bleibt"], "Ersteinsatz 20 mm Barbell. Gekürzt wird nur durch den Piercer, steril.", "S. 90"]
         ]
       },
       {
@@ -150,15 +150,15 @@ window.KURS = window.KURS || { module: [] };
           db("Cheek", "Wangenpiercing, oft an der Stelle eines Grübchens. Hier verlaufen wichtige Arterien und Nerven; es droht eine Verunstaltung, durchs Piercen entstandene Grübchen können dauerhaft bleiben.", "Barbell, Labret", "18G", "Snaptile, Gazeklemme", "Nur durch professionelle Piercer. Als Anfänger ablehnen.", "S. 92")
         ],
         fragen: [
-          ["Warum lehnen Anfänger das Cheek ab?", ["Dort verlaufen wichtige Arterien und Nerven", "Weil es nur mit Punch geht", "Weil es mit 14G gestochen wird", "Weil es keine Klemme gibt"], "Gefahr einer Verunstaltung.", "S. 92"],
-          ["Was kann beim Cheek dauerhaft bleiben?", ["Durchs Piercen entstandene Grübchen", "Ein Einfallen der Lippe", "Eine Taubheit der Zunge", "Ein Herauswachsen des Labrets"], "Datenblatt Cheek.", "S. 92"]
+          ["Was droht laut Datenblatt bei einem Cheek-Piercing?", ["Eine Verunstaltung des Gesichts", "Ein Verlust des Geschmackssinns", "Eine Lähmung der Zunge", "Ein Einriss des Lippenrots"], "Dort verlaufen wichtige Arterien und Nerven; Anfänger lehnen das Cheek ab.", "S. 92"],
+          ["Fall: Ein Kunde wünscht sich Cheek-Piercings, du bist noch Anfänger. Was tust du?", ["Ich lehne ab und verweise an einen erfahrenen Piercer", "Ich steche sie mit der 18G-Kanüle", "Ich steche sie freihand ohne Klemme", "Ich steche zuerst nur eine Seite"], "Datenblatt Cheek: nur durch professionelle Piercer.", "S. 92"]
         ]
       },
       {
         titel: "Bauchnabel",
         seite: "S. 94",
         inhalt: [
-          db("Bauchnabel", "Vertikal oberhalb oder unterhalb des Nabels, etwa 1 cm Stichkanallänge. Im Liegen stechen: Das erleichtert die Arbeit und beugt Kreislaufproblemen vor. Mit sterilem Pflaster abkleben und Pflaster für die nächsten 3 Tage empfehlen.", "Banane, BCR", "16G", "Snaptile, Freihand", "", "S. 94")
+          db("Bauchnabel", "Vertikal oberhalb oder unterhalb des Nabels, etwa 1 cm Stichkanallänge. Im Liegen stechen: Das erleichtert die Arbeit und beugt Kreislaufproblemen vor. Die Markierung vorher im Stehen kontrollieren, weil sich der Nabel im Liegen verschiebt (Ergänzung der Akademie). Mit sterilem Pflaster abkleben und Pflaster für die nächsten 3 Tage empfehlen.", "Banane, BCR", "16G", "Snaptile, Freihand", "", "S. 94")
         ],
         fragen: [
           ["Wie wird ein Bauchnabelpiercing gestochen?", ["Im Liegen, um Kreislaufproblemen vorzubeugen", "Im Stehen, damit der Nabel richtig sitzt", "Im Sitzen", "Im Stehen, danach im Liegen kontrollieren"], "Erleichtert auch die Arbeit.", "S. 94"],
@@ -194,7 +194,7 @@ window.KURS = window.KURS || { module: [] };
         inhalt: [
           { typ: "text", text: "Diese Lektion behandelt die Intimpiercings beim Mann aus dem Kursbuch ohne Abbildungen." },
           db("Frenulum", "Etwas unterhalb des Vorhautbändchens, damit das Bändchen nicht ausreißt. Heilt meist in vier bis acht Wochen; bei beschnittenen Männern nur möglich, wenn genug Bändchen vorhanden ist.", "Banane, Barbell", "16G, 18G", "Nadelauffangrohr, Freihand, Gazeklemme", "", "S. 97"),
-          db("Prinz Albert", "Von der Harnröhre bis zur Unterseite des Penis. Die Nadel zuerst etwas in die Kanüle zurückziehen, richtig platzieren, dann durch Vorschieben der Nadel stechen. Die Kunststoffkanüle darf nicht abknicken.", "BCR", "14G", "Freihand", "Standard der Akademie: 14G-Kanüle (im Kursbuch 14G oder 16G).", "S. 98"),
+          db("Prinz Albert", "Von der Harnröhre bis zur Unterseite des Penis. Die Nadel zuerst etwas in die Kanüle zurückziehen, richtig platzieren, dann durch Vorschieben der Nadel stechen. Der Kunststoffüberzug darf nicht abknicken.", "BCR", "14G", "Freihand", "Standard der Akademie: 14G-Kanüle (im Kursbuch 14G oder 16G).", "S. 98"),
           db("Dydoe", "Durch den Rand der Eichel, überwiegend bei beschnittenen Männern.", "Banane, Barbell", "16G, 18G", "Freihand", "", "S. 99"),
           db("Pubic", "Am Penisansatz, meist waagerecht genau an der Übergangsstelle. Oberflächenpiercing, neigt zum Herauswachsen; Schambehaarung vorher entfernen.", "BCR, Barbell, Bar, Banane", "16G, 18G", "Freihand, Gazeklemme", "", "S. 100"),
           db("Hafada", "Auch Scrotal. In der Haut des Hodensacks, nicht sehr tief; geringe Gefahr des Herauswachsens.", "BCR, Banane", "16G, 18G", "Freihand, Snaptile, Gazeklemme", "", "S. 101"),

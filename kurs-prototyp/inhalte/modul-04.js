@@ -89,7 +89,7 @@ KURS.module.push({
       seite: "S. 11–12",
       inhalt: [
         { typ: "text", text: "Während der Verschaltung im Rückenmark kann der Körper das Schmerzempfinden durch eigene Stoffe (Endorphine) dämpfen. Einige Schmerzmittel, zum Beispiel Opiate, setzen an dieser Stelle an." },
-        { typ: "achtung", text: "Beim Piercen ist es unüblich und in Deutschland verboten, verschreibungspflichtige Anästhetika, zum Beispiel auf Opiat-Basis, einzusetzen. Die Teilbetäubung von Rückenmark, Nervengeflechten oder einzelnen Nerven darf nur ein Arzt durchführen." },
+        { typ: "achtung", text: "Beim Piercen ist es unüblich und in Deutschland verboten, verschreibungspflichtige Betäubungs- und Schmerzmittel, zum Beispiel Opiate, einzusetzen. Die Teilbetäubung von Rückenmark, Nervengeflechten oder einzelnen Nerven darf nur ein Arzt durchführen." },
         { typ: "tabelle", kopf: ["Verfahren", "Wirkung", "Wer"], zeilen: [
           ["Vollnarkose", "Beeinflusst das Gehirn", "Nur ein spezieller Arzt (Anästhesist)"],
           ["Teilbetäubung", "Hemmt für begrenzte Zeit Teile des Rückenmarks, Nervengeflechte oder einzelne Nerven", "Nur ein Arzt"],
@@ -100,7 +100,7 @@ KURS.module.push({
       ],
       fragen: [
         ["Welche körpereigenen Stoffe dämpfen den Schmerz im Rückenmark?", ["Endorphine", "Histamine", "Prostaglandine", "Bradykinine"], "Opiate setzen hier an.", "S. 11"],
-        ["Dürfen Piercer verschreibungspflichtige Anästhetika auf Opiat-Basis einsetzen?", ["Nein", "Ja, mit schriftlicher Einwilligung", "Nur bei Intimpiercings", "Ja, wenn ein Arzt sie verschrieben hat"], "Unüblich und in Deutschland verboten.", "S. 11"],
+        ["Dürfen Piercer verschreibungspflichtige Betäubungs- oder Schmerzmittel wie Opiate einsetzen?", ["Nein", "Ja, mit schriftlicher Einwilligung", "Nur bei Intimpiercings", "Ja, wenn ein Arzt sie verschrieben hat"], "Unüblich und in Deutschland verboten.", "S. 11"],
         ["Welche Betäubung darf nur ein Arzt durchführen?", ["Die Teilbetäubung von Nerven, Nervengeflechten oder Rückenmark", "Das Kühlen mit Eisspray", "Das Auftragen einer rezeptfreien Salbe", "Das Kühlen mit Eiswürfeln"], "Siehe Kap. 4.", "S. 11"],
         ["Worauf beruht die Lokalanästhesie?", ["Auf der Beeinflussung des peripheren Nervensystems", "Auf der Beeinflussung des Gehirns", "Auf der Blockade des Rückenmarks", "Auf der Verengung der Blutgefäße"], "Sie blockiert die Weiterleitung an den Nervenenden.", "S. 11–12"],
         ["Warum arbeitest du in einem abgegrenzten, ruhigen Raum?", ["Wegen der Hygiene und zum Schutz vor Stressfaktoren", "Weil das Gewerbeamt es vorschreibt", "Damit du schneller arbeiten kannst", "Nur wegen der Lautstärke des Autoklavs"], "Telefon, Klingel und Publikumsverkehr stören.", "S. 12"],
@@ -152,8 +152,8 @@ KURS.module.push({
       inhalt: [
         { typ: "liste", punkte: [
           "Mit Wirkstoffen, die Herzrhythmus oder Herzfrequenz beeinflussen (Antiarrhythmika, Betablocker, Kalziumkanalblocker), kann sich die Wirkung von Lidocain auf das Herz verstärken oder abschwächen.",
-          "Andere Betäubungsmittel, blutdrucksenkende Betablocker (Propranolol, Metoprolol, Nadolol), Diltiazem, Verapamil, Cimetidin, Amiodaron, Fluvoxamin und gefäßverengende Stoffe wie Adrenalin oder Noradrenalin verstärken die Wirkung. Dabei steigt das Risiko für Nebenwirkungen.",
-          "Zusammen mit Mutterkornalkaloiden oder Epinephrin kann der Blutdruck gefährlich abfallen.",
+          "Andere Betäubungsmittel, blutdrucksenkende Betablocker (Propranolol, Metoprolol, Nadolol), Diltiazem, Verapamil, Cimetidin, Amiodaron, Fluvoxamin und gefäßverengende Stoffe wie Adrenalin (Epinephrin) oder Noradrenalin verstärken die Wirkung. Dabei steigt das Risiko für Nebenwirkungen.",
+          "Laut Kursbuch kann der Blutdruck zusammen mit Mutterkornalkaloiden oder Epinephrin gefährlich abfallen. Epinephrin ist ein anderer Name für Adrenalin (siehe Punkt davor): Gefährlich ist die Kombination mit Lidocain. Einzelheiten stehen in der Gebrauchsinformation des Präparats.",
           "Beruhigungsmittel (Benzodiazepine) und Aprindin verstärken die Nebenwirkungen.",
           "Antiepileptika schwächen die Wirkung ab; Muskelrelaxanzien werden durch Lidocain verstärkt."
         ] },
@@ -161,7 +161,7 @@ KURS.module.push({
       ],
       fragen: [
         ["Mit welchen Medikamenten kann Lidocain gefährlich wechselwirken?", ["Mit Mitteln für den Herzrhythmus, z. B. Betablockern", "Mit Antibiotika wie Penicillin oder Amoxicillin", "Mit Vitamin- und Mineralstoffpräparaten", "Mit der Antibabypille und anderen Hormonen"], "Besonders bei Anwendung im Mund.", "S. 14"],
-        ["Was kann Lidocain zusammen mit Mutterkornalkaloiden oder Epinephrin auslösen?", ["Einen gefährlichen Blutdruckabfall", "Eine Verstärkung der Betäubung ohne Risiko", "Eine allergische Hautreaktion", "Eine Nickelallergie"], "So warnt das Kursbuch.", "S. 14"],
+        ["Was kann Lidocain zusammen mit Mutterkornalkaloiden oder Epinephrin auslösen?", ["Einen gefährlichen Blutdruckabfall", "Eine Verstärkung der Betäubung ohne Risiko", "Eine allergische Hautreaktion", "Eine Nickelallergie"], "So warnt das Kursbuch. Epinephrin ist dasselbe wie Adrenalin.", "S. 14"],
         ["Was bewirken Antiepileptika bei Lidocain?", ["Sie schwächen die Wirkung ab", "Sie verstärken die Wirkung stark", "Sie verstärken nur die Nebenwirkungen", "Sie haben keinen Einfluss"], "Muskelrelaxanzien werden dagegen verstärkt.", "S. 14"],
         ["Was bewirken Beruhigungsmittel (Benzodiazepine) zusammen mit Lidocain?", ["Sie verstärken die Nebenwirkungen", "Sie schwächen die Wirkung ab", "Sie heben die Betäubung auf", "Sie haben keinen Einfluss"], "Ebenso Aprindin.", "S. 14"],
         ["Fall: Eine Kundin nimmt Betablocker und wünscht Lidocainsalbe für ein Zungenpiercing. Was ist richtig?", ["Ich verzichte auf Lidocain, weil eine Wechselwirkung möglich ist", "Ich nehme nur die halbe Menge", "Ich trage es auf, weil Salbe im Mund nicht aufgenommen wird", "Betablocker spielen bei Salben keine Rolle"], "Wechselwirkungen müssen ausgeschlossen werden, besonders im Mund.", "S. 13–14"]

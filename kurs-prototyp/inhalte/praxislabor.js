@@ -1,7 +1,7 @@
 /* Praxislabor: Übungsaufgaben am Silikon-Übungsmodell mit Selbstkontrolle.
-   Grundlage: Ablauf aus Modul 09 (Schritte 1–26, Kursbuch S. 111–112), Checklisten aus Modul 05 und die Übung aus Modul 08
+   Grundlage: Ablauf aus Modul 9 (Schritte 1–26, Kursbuch S. 111–112), Checklisten aus Modul 5 und die Übung aus Modul 8
    („Übe am Silikon-Ohr: Stelle anzeichnen, Klemme setzen, Kanüle ansetzen (ohne zu stechen)“).
-   Gestochen wird hier nie: Das bleibt dem Praxistag unter Anleitung vorbehalten.
+   Bei den Trockenübungen wird nicht gestochen; ins Silikonohr sticht nur, wer das Übungsset (Paket Komplett) hat (siehe labor.stich); in Menschen nie.
    Format: { id, titel, modul (Bezug), material: [...], schritte: [...], kontrolle: [...] } */
 window.KURS = window.KURS || { module: [] };
 window.KURS.labor = {
@@ -39,7 +39,7 @@ window.KURS.labor = {
       material: ["Händedesinfektionsmittel", "Einmalhandschuhe in deiner Größe"],
       schritte: [
         "Nägel kurz, kein Nagellack, kein Schmuck an Händen und Unterarmen.",
-        "Hände desinfizieren, wie in Modul 05 beschrieben; die Einwirkzeit steht auf dem Desinfektionsmittel.",
+        "Hände desinfizieren, wie in Modul 5 beschrieben; die Einwirkzeit steht auf dem Desinfektionsmittel.",
         "Warten, bis die Hände vollständig trocken sind.",
         "Handschuhe anziehen, ohne die Außenseite mit der bloßen Hand mehr als nötig zu berühren.",
         "Handschuhe ausziehen, ohne die Außenseite mit der Haut zu berühren, und entsorgen. Danach Hände desinfizieren."
@@ -73,15 +73,15 @@ window.KURS.labor = {
       id: "anzeichnen-modell",
       titel: "Anzeichnen am Übungsmodell",
       modul: 8,
-      material: ["Silikon-Übungsmodell", "Einmal-Hautmarker", "Datenblätter aus Modul 08"],
+      material: ["Silikon-Übungsmodell", "Einmal-Hautmarker", "Datenblätter aus Modul 8"],
       schritte: [
-        "Datenblatt für Lobe, Helix und Tragus in Modul 08 lesen.",
+        "Datenblatt für Lobe, Helix und Tragus in Modul 8 lesen.",
         "Ein- und Austrittsstelle für jedes dieser Piercings am Modell markieren (Ablauf Schritt 9).",
         "Bei Lobe beidseitig: Ohrläppchen links und rechts auf gleicher Höhe markieren und von vorn kontrollieren, zum Beispiel mit einem Foto.",
         "Jemanden die Markierung ansehen lassen, als wäre er der Kunde (Schritt 10), und bei Bedarf korrigieren."
       ],
       kontrolle: [
-        "Jede Markierung passt zum Datenblatt in Modul 08.",
+        "Jede Markierung passt zum Datenblatt in Modul 8.",
         "Bei Lobe beidseitig sind beide Punkte auf dem Foto von vorn auf gleicher Höhe.",
         "Ich habe die Markierung zeigen lassen und erklärt, warum sie dort sitzt.",
         "Ich weiß, was ich tue, wenn die Markierung dem Kunden nicht gefällt."
@@ -96,7 +96,7 @@ window.KURS.labor = {
         "Handschuhe anziehen (Aufgabe 2).",
         "Klemme an der Markierung ansetzen (Ablauf Schritt 11), sodass Ein- und Austrittspunkt in der Öffnung liegen.",
         "Kanüle mit Schutzkappe an der Eintrittsstelle ansetzen, Richtung Austrittspunkt, von der sichtbaren Seite aus (Schritt 12). Nicht stechen.",
-        "Laut sagen, was als Nächstes käme: Schritte 13 bis 19 aus Modul 09.",
+        "Laut sagen, was als Nächstes käme: Schritte 13 bis 19 aus Modul 9.",
         "Klemme lösen, Kanüle mit Schutzkappe ablegen. Fünfmal wiederholen, auch an anderen Stellen."
       ],
       kontrolle: [
@@ -113,7 +113,7 @@ window.KURS.labor = {
       material: ["Übungsvorlage (Seite 2) oder ein leeres Blatt"],
       schritte: [
         "Alle 26 Schritte des Ablaufs aus Modul 9 mit den Ergänzungen der Akademie (7a, 8a, 9a, 13a) aus dem Gedächtnis aufschreiben.",
-        "Mit Modul 09 vergleichen und Fehlendes rot ergänzen.",
+        "Mit Modul 9 vergleichen und Fehlendes rot ergänzen.",
         "Am nächsten Tag wiederholen, bis alles ohne Rot stimmt.",
         "Die Pflegehinweise (Schritte 24 und 25) einer anderen Person laut erklären, als wäre sie dein Kunde."
       ],
@@ -127,10 +127,10 @@ window.KURS.labor = {
       id: "notfall",
       titel: "Notfall durchspielen",
       modul: 9,
-      material: ["Checkliste „Nach einer Nadelstichverletzung“", "Modul 09, Lektion „Kreislaufprobleme und Notfälle“"],
+      material: ["Checkliste „Nach einer Nadelstichverletzung“", "Modul 9, Lektion „Kreislaufprobleme und Notfälle“"],
       schritte: [
         "Mit einer zweiten Person durchspielen: Der „Kunde“ wird während der Vorbereitung blass und sagt, ihm sei schwindelig. Was tust du, Schritt für Schritt?",
-        "Danach mit der Lektion „Kreislaufprobleme und Notfälle“ in Modul 09 vergleichen.",
+        "Danach mit der Lektion „Kreislaufprobleme und Notfälle“ in Modul 9 vergleichen.",
         "Die Checkliste „Nach einer Nadelstichverletzung“ aus dem Gedächtnis aufsagen und vergleichen."
       ],
       kontrolle: [
@@ -142,7 +142,7 @@ window.KURS.labor = {
   ]
 };
 
-/* Praxisaufgaben für die Module 01–04, 06, 10 und 11 (Trockenübungen, ohne Stechen). Grundlage: die jeweiligen Lektionen.
+/* Praxisaufgaben für die Module 1–4, 6, 10 und 11 (Trockenübungen, ohne Stechen). Grundlage: die jeweiligen Lektionen.
    Die Modulseite zeigt alle Aufgaben mit passendem „modul“; das Praxislabor zeigt sie nach Modulen sortiert. */
 window.KURS.labor.aufgaben = window.KURS.labor.aufgaben.concat([
   {
@@ -178,7 +178,7 @@ window.KURS.labor.aufgaben = window.KURS.labor.aufgaben.concat([
     "schritte": [
       "Leg die Kanüle (Schutzkappe bleibt drauf) und den Übungsschmuck vor dich.",
       "Erkläre deinem Zuhörer in höchstens einer Minute, warum im Studio mit einer sterilen Einmalkanüle gestochen wird und nicht mit der Ohrlochpistole. Nimm dich dabei mit dem Handy auf.",
-      "Hör dir die Aufnahme an und vergleiche sie mit den Lektionen „Die Gründe“ und „Pistole oder Kanüle: was im Gewebe passiert“.",
+      "Hör dir die Aufnahme an und vergleiche sie mit der Lektion „Warum keine Ohrlochpistole“ (Modul 1).",
       "Wiederhole die Erklärung, bis du alles ohne Zettel sagen kannst."
     ],
     "kontrolle": [
@@ -221,11 +221,11 @@ window.KURS.labor.aufgaben = window.KURS.labor.aufgaben.concat([
     "schritte": [
       "Markiere am Silikon-Übungsohr mit dem Hautmarker die Stellen für Lobe, Helix, Tragus, Conch, Rook und Daith und beschrifte sie.",
       "Schreib zu jeder Stelle die Gewebeart dazu: Weichgewebe oder Knorpel.",
-      "Vergleiche deine Markierungen mit den Piercing-Arten in Modul 08.",
+      "Vergleiche deine Markierungen mit den Piercing-Arten in Modul 8.",
       "Leuchte mit der Taschenlampe von hinten durch dein eigenes Ohr und such die Blutgefäße."
     ],
     "kontrolle": [
-      "Alle sechs Stellen sind richtig markiert (mit Modul 08 verglichen).",
+      "Alle sechs Stellen sind richtig markiert (mit Modul 8 verglichen).",
       "Ich weiß: Das Lobe ist Weichgewebe, die anderen fünf Stellen liegen im Knorpel.",
       "Ich habe an meinem Ohr Blutgefäße erkannt."
     ]
@@ -236,7 +236,7 @@ window.KURS.labor.aufgaben = window.KURS.labor.aufgaben.concat([
     "modul": 4,
     "material": [
       "eine zweite Person als „Kunde“",
-      "deine Liste mit den Fragen zur Verträglichkeit von Lidocain (Übung aus Modul 04)"
+      "deine Liste mit den Fragen zur Verträglichkeit von Lidocain (Übung aus Modul 4)"
     ],
     "schritte": [
       "Dein „Kunde“ ist nervös und fragt: „Tut das weh?“ Antworte ehrlich und erkläre ruhig, was gleich passiert.",
@@ -338,7 +338,7 @@ window.KURS.labor.einkauf = {
       "imSet": true
     },
     {
-      "name": "Venenverweilkanülen 18G und 16G, steril",
+      "name": "Venenverweilkanülen 18G und 16G, steril (für alle Stichübungen mindestens 8 × 18G und 2 × 16G)",
       "wofuer": "Kanüle handhaben (Trockenübung mit Schutzkappe)",
       "module": [
         1,
@@ -366,6 +366,42 @@ window.KURS.labor.einkauf = {
       "imSet": true
     },
     {
+      "name": "Schere (für den Kunststoffüberzug)",
+      "wofuer": "Überzug nach dem Stich kürzen",
+      "module": [
+        7,
+        9
+      ],
+      "imSet": true
+    },
+    {
+      "name": "Klemmzange",
+      "wofuer": "Schmuck halten, während die Kugel aufgedreht wird",
+      "module": [
+        7,
+        9
+      ],
+      "imSet": true
+    },
+    {
+      "name": "Kugelgreifer",
+      "wofuer": "Kugeln greifen und aufschrauben",
+      "module": [
+        7,
+        9
+      ],
+      "imSet": true
+    },
+    {
+      "name": "Ringöffnungs- und Ringschließzange",
+      "wofuer": "Klemmkugelringe öffnen und schließen",
+      "module": [
+        6,
+        7
+      ],
+      "imSet": true
+    },
+    {
       "name": "Einmal-Hautmarker",
       "wofuer": "Stellen anzeichnen",
       "module": [
@@ -384,7 +420,7 @@ window.KURS.labor.einkauf = {
       "imSet": true
     },
     {
-      "name": "Übungsschmuck: Labret, Klemmkugelring (BCR), Barbell 38 mm",
+      "name": "Übungsschmuck: drei Labrets, Klemmkugelring (BCR), Barbell 38 mm",
       "wofuer": "Schmuck bestimmen, messen und einsetzen",
       "module": [
         1,
@@ -442,20 +478,20 @@ window.KURS.labor.einkauf = {
 
 /* Stichübungen am Silikonohr: selbst gestochen wird nur im Paket Komplett (Übungsset der Akademie).
    Alle anderen sehen dieselben Übungen als „Zuschauen“: Clip und Ablauf, ohne Selbstkontrolle.
-   Gestochen wird ausschließlich ins Silikon. Ablauf nach Kursbuch S. 111–112 (Schritte 9–19), Werte aus den Datenblättern (Modul 08).
+   Gestochen wird ausschließlich ins Silikon. Ablauf nach Kursbuch S. 111–112 (Schritte 9–19), Werte aus den Datenblättern (Modul 8).
    clip: Id eines Clips in inhalte/clips.js. Fehlt der Clip noch, sehen Teilnehmer nichts; im Prüfmodus erscheint ein Hinweis.
    Drehliste für die Clips: CLIPS-PRAXISLABOR.md im Hauptordner. */
 window.KURS.labor.stich = {
   pakete: ["komplett"],
-  einleitung: "Mit deinem Übungsset stichst du jetzt selbst: ins Silikonohr, nach dem Ablauf aus Modul 09 und den Datenblättern aus Modul 08. Schau dir zuerst den Clip an, dann übst du. Bring dein gestochenes Silikonohr und das Übungsprotokoll zum Praxistag mit: Dort schauen wir uns deine Stichkanäle gemeinsam an.",
-  zuschauen: "In diesen Clips siehst du, wie gestochen wird: am Silikonohr, Schritt für Schritt nach dem Ablauf aus Modul 09 und den Datenblättern aus Modul 08. Schau genau hin und sprich die Schritte mit. Selbst stechen lernst du am Praxistag unter Anleitung; im Paket Komplett übst du vorher zu Hause mit dem Übungsset.",
+  einleitung: "Mit deinem Übungsset stichst du jetzt selbst: ins Silikonohr, nach dem Ablauf aus Modul 9 und den Datenblättern aus Modul 8. Schau dir zuerst den Clip an, dann übst du. Bring dein gestochenes Silikonohr und das Übungsprotokoll zum Praxistag mit: Dort schauen wir uns deine Stichkanäle gemeinsam an.",
+  zuschauen: "In diesen Clips siehst du, wie gestochen wird: am Silikonohr, Schritt für Schritt nach dem Ablauf aus Modul 9 und den Datenblättern aus Modul 8. Schau genau hin und sprich die Schritte mit. Selbst stechen lernst du am Praxistag unter Anleitung; im Paket Komplett übst du vorher zu Hause mit dem Übungsset.",
   sicherheit: [
     "Gestochen wird nur ins Silikonohr. Nie in dich, in andere Menschen oder in Tiere, auch nicht „nur zum Ausprobieren“.",
     "Kanülen nie zurück in die Schutzkappe stecken. Die Stahlnadel kommt direkt nach dem Herausziehen in den Nadelabwurfbehälter; der volle Behälter wird fest verschlossen im Restmüll entsorgt.",
     "Arbeite mit Handschuhen auf einer Einmalunterlage, ohne Ablenkung und außer Reichweite von Kindern. Kanülen und Abwurfbehälter bewahrst du verschlossen auf.",
-    "Stichst du dich doch einmal, gilt die Checkliste „Nach einer Nadelstichverletzung“ aus Modul 05."
+    "Stichst du dich doch einmal, gilt die Checkliste „Nach einer Nadelstichverletzung“ aus Modul 5."
   ],
-  set: ["Silikonohr", "Venenverweilkanülen 18G und 16G", "kleiner Nadelabwurfbehälter", "Klemme (Snaptile oder Gazeklemme)", "Einmal-Hautmarker", "Einmalhandschuhe und Einmalunterlage", "Übungsschmuck: Labret, Klemmkugelring (BCR), Barbell 38 mm", "Schere für den Kunststoffüberzug"],
+  set: ["Silikonohr", "Venenverweilkanülen: mindestens 8 × 18G und 2 × 16G", "kleiner Nadelabwurfbehälter", "Klemme (Snaptile oder Gazeklemme)", "Einmal-Hautmarker", "Einmalhandschuhe und Einmalunterlage", "Übungsschmuck: drei Labrets, Klemmkugelring (BCR), Barbell 38 mm", "Schere für den Kunststoffüberzug", "Klemmzange", "Kugelgreifer", "Ringöffnungs- und Ringschließzange"],
   aufgaben: [
     {
       id: "stich-kanuele",
@@ -527,7 +563,7 @@ window.KURS.labor.stich = {
       clipText: "Helix am Silikonohr stechen und einen Klemmkugelring einsetzen und schließen.",
       material: ["Silikonohr", "18G-Kanüle", "Klemme", "Hautmarker", "Schere", "Klemmkugelring (BCR)", "Ringöffnungs- und Ringschließzange"],
       schritte: [
-        "Stelle an der Ohrkante anzeichnen (Datenblatt Helix, Modul 08) und mit der Klemme fixieren.",
+        "Stelle an der Ohrkante anzeichnen (Datenblatt Helix, Modul 8) und mit der Klemme fixieren.",
         "Stechen, Nadel heraus und entsorgen, Überzug kürzen.",
         "Ring mit der Ringöffnungszange vorsichtig öffnen, ein Ende in den Überzug stecken und durch den Stichkanal schieben.",
         "Röhrchen abziehen, Kugel einsetzen und den Ring mit der Ringschließzange so schließen, dass die Kugel fest einrastet."
@@ -584,7 +620,7 @@ window.KURS.labor.stich = {
       clipText: "Der komplette Ablauf am Silikonohr, vom Arbeitsplatz bis zu den Pflegehinweisen, in normaler Geschwindigkeit.",
       material: ["Übungsset komplett", "eine zweite Person als „Kunde“", "Einverständniserklärung und Pflegehinweise (Vorlagen)"],
       schritte: [
-        "Spiele den Ablauf aus Modul 09 von Schritt 4 bis 25 durch: Die zweite Person füllt die Einverständniserklärung aus, du bereitest den Arbeitsplatz vor.",
+        "Spiele den Ablauf aus Modul 9 von Schritt 4 bis 25 durch: Die zweite Person füllt die Einverständniserklärung aus, du bereitest den Arbeitsplatz vor.",
         "Gestochen wird ins Silikonohr, das neben der Person liegt; alles andere (Gespräch, Markierung zeigen, Pflegehinweise) machst du mit ihr.",
         "Lass die Person auf die Uhr schauen und am Ende sagen, was ihr aufgefallen ist."
       ],

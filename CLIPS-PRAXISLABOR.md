@@ -33,4 +33,6 @@ Technik-Clips werden **nicht** per KI erzeugt, sondern von dir im Studio gefilmt
 
 ## Übungsset für das Paket Komplett (Empfehlung, bitte bestätigen oder ändern)
 
-Silikonohr · Venenverweilkanülen 18G und 16G · kleiner Nadelabwurfbehälter · Klemme (Snaptile oder Gazeklemme) · Einmal-Hautmarker · Einmalhandschuhe und Einmalunterlage · Übungsschmuck: Labret, Klemmkugelring (BCR), Barbell 38 mm · Schere. Die Liste steht in `kurs-prototyp/inhalte/praxislabor.js` (`KURS.labor.stich.set`) und lässt sich dort anpassen.
+Silikonohr · Venenverweilkanülen: mindestens 8 × 18G und 2 × 16G · kleiner Nadelabwurfbehälter · Klemme (Snaptile oder Gazeklemme) · Einmal-Hautmarker · Einmalhandschuhe und Einmalunterlage · Übungsschmuck: drei Labrets, Klemmkugelring (BCR), Barbell 38 mm · Schere · Klemmzange · Kugelgreifer · Ringöffnungs- und Ringschließzange.
+
+Ergänzt am 21.11.2026 (Prüfbericht F14): Klemmzange, Kugelgreifer, Ringöffnungs- und Ringschließzange sowie genug Kanülen und Labrets, weil die Stichübungen (Lobe dreimal, Upper Lobe mit drei Labrets, Helix mit BCR, Schmuck sichern) sie verlangen. Bitte bestätigen oder ändern. Die Liste steht in `kurs-prototyp/inhalte/praxislabor.js` (`KURS.labor.stich.set`) und lässt sich dort anpassen.

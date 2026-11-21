@@ -51,13 +51,13 @@ KURS.module.push({
       seite: "S. 2",
       inhalt: [
         { typ: "text", text: "Unlawfully cutting someone’s hair also constitutes bodily harm. That is why the consent form must include a note that the area to be pierced may be shaved if necessary." },
-        { typ: "text", text: "If there is no written consent form, clients, their relatives or third parties (for example lawyers) can claim damages from the piercer." },
+        { typ: "text", text: "If there is no written consent form, the client (or the parents, for minors) can claim damages from the piercer, often through a lawyer. Without a document, you can hardly prove consent. The course book says “clients, their relatives or third parties (for example lawyers)” here; lawyers only represent the client, however, and have no claims of their own." },
         { typ: "ergaenzung", text: "Strictly speaking, consent is also valid when given verbally. The written form is your proof. If, in a dispute, you cannot prove that the client consented and was properly informed, you face damages and compensation for pain and suffering (§§ 823, 253 of the German Civil Code, BGB). These are claimed by the client themselves, usually through a lawyer, or by the parents in the case of minors; the health insurer can also recover treatment costs." },
         { typ: "praxis", text: "File the signed forms carefully. In a dispute, the paper is your most important proof." }
       ],
       fragen: [
         ["Why does shaving belong in the consent form?", ["Because unlawfully cutting hair is also bodily harm", "Because shaving is billed to the client separately", "Because the public health office wants every shave in writing", "Because shaving clearly increases the risk of infection"], "That is why it is noted that shaving may be carried out.", "S. 2"],
-        ["What can happen if there is no written consent form?", ["Clients, relatives or third parties can claim damages", "Only a warning from the Gesundheitsamt", "The piercing must be redone free of charge", "Nothing, because the piercing is then deemed approved"], "That is why it must always be in writing: only then can consent be proven.", "S. 2"],
+        ["What can happen if there is no written consent form?", ["The client can claim damages, often through a lawyer", "Only a warning from the Gesundheitsamt", "The piercing must be redone free of charge", "Nothing, because the piercing is then deemed approved"], "That is why it must always be in writing: only then can consent be proven.", "S. 2"],
         ["Who usually claims damages after a failed piercing?", ["The client, often through a lawyer, or the parents for minors", "Only the Gesundheitsamt", "The Chamber of Industry and Commerce (IHK)", "The health insurer, never the client themselves"], "Lawyers represent the client; they have no claims of their own.", "S. 2"],
         ["Case: You have to shave before a navel piercing. What must be clarified beforehand?", ["Shaving is mentioned in the signed consent form", "The client must allow shaving verbally, that is enough", "Shaving is part of the piercing and needs no mention", "Only the client may do the shaving"], "Unlawfully cutting hair is bodily harm.", "S. 2"]
       ]
@@ -96,7 +96,7 @@ KURS.module.push({
       fragen: [
         ["Which personal details belong in the consent form?", ["Name, address, phone, date of birth and ID number", "Name, e-mail address, health insurer and occupation", "Name and signature; nothing else is needed", "Name, occupation, marital status and employer"], "Plus the confirmation of being at least 18.", "S. 114"],
         ["Which health information does the form ask for?", ["Illnesses, allergies and medication", "Only allergies", "Blood group and vaccination status", "Weight and blood pressure"], "Plus eating, drinking, alcohol and drugs.", "S. 114"],
-        ["According to the form, for how long beforehand must no alcohol and no drugs have been taken?", ["At least 2 days", "At least 12 hours", "At least 24 hours", "At least 1 week"], "The sample form is deliberately stricter than the 24-hour rule from module 01: with their signature, the client confirms two days without alcohol and drugs.", "S. 114"],
+        ["According to the form, for how long beforehand must no alcohol and no drugs have been taken?", ["At least 2 days", "At least 12 hours", "At least 24 hours", "At least 1 week"], "The sample form is deliberately stricter than the 24-hour rule from module 1: with their signature, the client confirms two days without alcohol and drugs.", "S. 114"],
         ["Which section is filled in by the studio?", ["The treatment details: type, body area, date, risk information", "The information on illnesses, allergies and medication", "The client’s personal details with ID number", "The section on voluntary photo consent"], "“To be filled in by us!”", "S. 114"],
         ["What can lead to the piercing being refused?", ["Health restrictions, chronic illnesses, heavy use of medication", "The wish for a cartilage piercing instead of a lobe", "A known nickel allergy with titanium jewelry", "An earlier, well-healed piercing in the same spot"], "Such information can put healing at risk. Then you decide whether to pierce and, if in doubt, refuse.", "S. 114"]
       ]
@@ -130,7 +130,8 @@ KURS.module.push({
       seite: "S. 1, 115",
       inhalt: [
         { typ: "text", text: "If you want to publish pictures of a piercing you have done, you need the client’s written permission. The sample form contains a separate section for this covering the website, social media and advertising banners." },
-        { typ: "text", text: "The form also collects health data. These are special categories of data within the meaning of Art. 9 of the GDPR (DSGVO). Processing them requires explicit consent, which can be withdrawn at any time. After withdrawal, the pictures may no longer be used." },
+        { typ: "text", text: "The form also collects health data. These are special categories of data within the meaning of Art. 9 of the GDPR (DSGVO). Processing them requires the client’s explicit consent." },
+        { typ: "text", text: "The client can withdraw photo consent at any time with effect for the future. After withdrawal, the pictures may no longer be used." },
         { typ: "ergaenzung", text: "For photo consent, Art. 6 (1) (a) GDPR (consent) is the appropriate legal basis, not legitimate interest under point (f). Have your form checked by a legal professional before using it in the studio." }
       ],
       fragen: [

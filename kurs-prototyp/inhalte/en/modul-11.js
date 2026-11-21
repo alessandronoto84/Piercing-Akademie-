@@ -30,12 +30,11 @@ KURS.module.push({
       titel: "Planning the premises",
       seite: "S. 25–26, 38",
       inhalt: [
-        { typ: "video", id: "studio-raum", text: "Treatment room with a wipeable couch, hand sink and autoclave.", schleife: true },
         { typ: "liste", punkte: [
           "Workstation separated from the waiting area structurally or at least by a partition wall; ideally a separate room.",
           "Hand sink with running water and dispensers for disinfectant, liquid soap and disposable towels, operable without hand contact and without splashes reaching the workstation.",
           "Couch and furniture with smooth, wipeable surfaces.",
-          "Separate toilet with hand sink, dispensers, trash can and sanitary disposal bin.",
+          "Separate toilet with hand sink, dispensers, trash can with a lid and sanitary disposal bin.",
           "First aid kit and emergency numbers clearly visible."
         ] },
         { typ: "grafik", id: "studio3d" },

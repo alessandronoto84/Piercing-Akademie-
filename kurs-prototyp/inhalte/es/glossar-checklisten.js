@@ -37,7 +37,7 @@ KURS.glossar = [
   ["Lesión corporal (Körperverletzung)", "Jurídicamente, todo piercing es una lesión corporal deseada (§ 223 StGB, Código Penal alemán), permitida solo con consentimiento.", 2],
   ["Labret stud", "Pieza con una placa en un lado y una rosca para una bola en el otro.", 6],
   ["Pomada de lidocaína (Xylocaína)", "Anestésico local de farmacia, según el preparado sin receta o con receta; según la Academia, permitido pero no recomendado.", 4],
-  ["N. facialis", "Nervio facial; controla la mímica y se ramifica delante de la oreja en ramas hacia la frente, la mejilla, la boca y el mentón.", 3],
+  ["N. facialis", "Nervio facial; sale del cráneo por debajo de la oreja, controla la mímica y se ramifica delante de la oreja en ramas hacia la frente, la mejilla, la boca y el mentón.", 3],
   ["N. supraorbitalis", "Nervio supraorbitario, nervio sensitivo de la frente; sale del hueso aproximadamente en el límite entre el tercio interno y el tercio medio de la ceja (más o menos por encima de la pupila).", 3],
   ["Contenedor para objetos punzantes", "Recipiente con cierre en el que se depositan de inmediato las agujas usadas.", 5],
   ["Tubo receptor (receiving tube)", "Tubo que recibe la cánula donde no cabe ninguna pinza, por ejemplo en rook y daith.", 7],
@@ -87,6 +87,8 @@ KURS.checklisten = [
     "Material estéril revisado: envase intacto, indicador virado, plazo de almacenamiento respetado",
     "Cánula, pinza o tubo receptor, joya inicial con longitud extra preparados",
     "Toallitas con alcohol, marcador cutáneo desechable, cuchilla de afeitar desechable, guantes, mascarilla",
+    "Antiséptico cutáneo (por ejemplo, Kodan) y tiritas",
+    "Tijeras, pinza para bolas y pinza de sujeción en envase estéril",
     "Contenedor para objetos punzantes al alcance",
     "Producto de cuidado e instrucciones de cuidado por escrito para entregar"
   ] },
@@ -103,10 +105,12 @@ KURS.checklisten = [
   { titel: "Reprocesar los instrumentos", modul: 5, punkte: [
     "Autoprotección: gafas de protección, guantes, mascarilla",
     "Baño de ultrasonidos con detergente para instrumental, tiempo y temperatura según el fabricante, sin superar unos 45 °C (si no, los restos de sangre se quedan adheridos)",
+    "Desinfectar y aclarar a fondo (producto y tiempo de actuación según el fabricante)",
     "Secar a fondo",
     "Empaquetar en bolsas de esterilización con tira indicadora",
     "Esterilizar en el autoclave (tiempo de subida, tiempo de compensación, fase de esterilización, fase de secado)",
     "Sacar solo cuando esté completamente seco",
+    "Liberar el lote: comprobar el indicador y los datos del proceso, documentar la liberación",
     "Etiquetar con fecha y número de lote, almacenar protegido"
   ] },
   { titel: "Instrucciones de cuidado para el cliente", modul: 10, punkte: [

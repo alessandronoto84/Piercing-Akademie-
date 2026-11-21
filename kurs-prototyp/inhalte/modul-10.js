@@ -16,7 +16,7 @@ KURS.module.push({
       ],
       fragen: [
         ["Wer pflegt das frische Piercing nach dem Stechen?", ["Der Kunde selbst", "Der Piercer bei täglichen Terminen", "Der Hausarzt", "Niemand, es heilt von selbst"], "Deshalb muss er genau angeleitet werden.", "S. 48"],
-        ["Wie gibst du Pflegehinweise am besten weiter?", ["Schriftlich, zusammen mit dem Pflegemittel", "Nur mündlich, damit der Kunde zuhört", "Per Social Media", "Erst beim Nachkontrolltermin"], "Sehr zu empfehlen.", "S. 48"]
+        ["Wie gibst du Pflegehinweise am besten weiter?", ["Mündlich und zusätzlich schriftlich, mit dem Pflegemittel", "Nur mündlich, damit der Kunde zuhört", "Nur per Social Media", "Erst beim Nachkontrolltermin"], "Wie im Ablauf, Schritte 24 und 25.", "S. 48"]
       ]
     },
     {
@@ -47,10 +47,10 @@ KURS.module.push({
         ] },
         { typ: "diagramm", titel: "Abheilzeiten im Vergleich", einheit: "Monate, Richtwerte bei komplikationsfreier Heilung", max: 12, schritt: 1,
           alt: "Balkendiagramm der Abheilzeiten in Monaten: Zunge, Lippenbändchen und Augenbraue etwa 1, Labret 1 bis 2, Lobe etwa 2, Intim 2 bis 3, Knorpel mindestens 3, Bauchnabel 4 bis 6, Brustwarze 3 bis 12 Monate.",
-          text: "Dunkel: sichere Mindestzeit, hell: Spanne. Schleimhaut heilt am schnellsten, Knorpel, Bauchnabel und Brustwarze brauchen am längsten.",
+          text: "Dunkel: Richtwert bzw. Untergrenze, hell: Spanne. Zunge, Lippenbändchen und Augenbraue heilen laut Kursbuch am schnellsten; Knorpel, Bauchnabel und Brustwarze brauchen am längsten.",
           zeilen: [["Zunge", 1, null, false, "ca. 1"], ["Lippenbändchen", 1, null, false, "ca. 1"], ["Augenbraue", 1, null, false, "ca. 1"], ["Labret", 1, 2, false, "1–2"], ["Lobe", 2, null, false, "ca. 2"], ["Intim", 2, 3, false, "2–3"], ["Knorpel", 3, null, true, "mindestens 3"], ["Bauchnabel", 4, 6, false, "4–6"], ["Brustwarze", 3, 12, false, "3–12"]] },
         { typ: "ergaenzung", text: "Andere Quellen nennen teils deutlich längere Zeiten, zum Beispiel Knorpel 3 bis 12 Monate, Bauchnabel 6 bis 12 Monate, Augenbraue 6 bis 8 Wochen. Kläre deine Kunden lieber vorsichtig auf: Lieber zu lange warten als zu früh wechseln." },
-        { typ: "achtung", text: "Erst nach vollständiger Ausheilung darf der Schmuck gewechselt werden, sonst besteht die Gefahr von Komplikationen wie einer Infektion." }
+        { typ: "achtung", text: "Erst nach vollständiger Ausheilung darf der Schmuck gewechselt werden, sonst besteht die Gefahr von Komplikationen wie einer Infektion. Ausnahmen sind das Kürzen des Ersteinsatzes (zum Beispiel bei der Zunge) und ein Wechsel wegen Komplikationen: Das macht nur der Piercer, steril und mit Material, das als Ersteinsatz geeignet ist." }
       ],
       fragen: [
         ["Sind die Abheilzeiten feste Garantien?", ["Nein, es sind Richtwerte bei optimaler Heilung", "Ja, für gesunde Erwachsene", "Ja, wenn die Pflege eingehalten wird", "Nur bei PTFE-Schmuck"], "Jeder Mensch heilt anders.", "S. 49"],
@@ -82,17 +82,17 @@ KURS.module.push({
         { typ: "liste", punkte: [
           "Eiter muss abfließen können, sonst besteht die Gefahr einer Blutvergiftung.",
           "Täglich reinigen.",
-          "Kamille, Teebaumöl oder Manukahonig können helfen (Teebaumöl nur verdünnt: Es kann Kontaktallergien auslösen).",
+          "Laut Kursbuch können Kamille, Teebaumöl oder Manukahonig helfen (Teebaumöl nur verdünnt: Es kann Kontaktallergien auslösen).",
           "Die Salbe „Tyrosur“ aus der Apotheke kann sehr helfen; lege dem Kunden nahe, sie zu kaufen."
         ] },
         { typ: "ergaenzung", text: "Bei Fieber, sich ausbreitender Rötung, starken oder zunehmenden Schmerzen schickst du den Kunden sofort zum Arzt." },
-        { typ: "merke", text: "Raucher, Alkoholiker und Diabetiker gehören zu den Risikogruppen; bei ihnen treten Komplikationen schneller auf." }
+        { typ: "merke", text: "Raucher, Menschen mit hohem Alkoholkonsum und Diabetiker gehören zu den Risikogruppen; bei ihnen treten Komplikationen schneller auf." }
       ],
       fragen: [
         ["Was ist meist die Ursache einer Entzündung?", ["Keime oder Fremdstoffe in der Wunde", "Zu viel Überlänge", "Die Kochsalzlösung", "Ein Ersteinsatz aus PTFE"], "Zum Beispiel von den Haaren.", "S. 50"],
         ["Was droht, wenn Eiter nicht abfließen kann?", ["Eine Blutvergiftung", "Eine Nickelallergie", "Wildes Fleisch", "Eine schnellere Heilung"], "Eiter muss abfließen können.", "S. 50"],
         ["Welche Salbe aus der Apotheke nennt das Kursbuch?", ["Tyrosur", "Bepanthen", "Betaisodona", "Fucidine"], "Lege dem Kunden nahe, sie zu kaufen.", "S. 50"],
-        ["Was kann bei einer Entzündung helfen?", ["Kamille, verdünntes Teebaumöl oder Manukahonig und tägliches Reinigen", "Den Schmuck sofort herausnehmen und den Kanal zukleben", "Häufiger Schmuckwechsel", "Octenisept auf Knorpel"], "Das sind die Hausmittel, die das Kursbuch bei leichten Entzündungen nennt. Bei Fieber oder sich ausbreitender Rötung geht der Kunde zum Arzt.", "S. 50"],
+        ["Welche Hausmittel nennt das Kursbuch bei leichten Entzündungen?", ["Kamille, verdünntes Teebaumöl oder Manukahonig", "Zahnpasta und Zitronensaft", "Unverdünntes Teebaumöl und Alkohol", "Spülmittel und heißes Wasser"], "Hausmittel laut Kursbuch, nicht unabhängig belegt. Wichtig ist das tägliche Reinigen. Bei Fieber oder sich ausbreitender Rötung geht der Kunde zum Arzt.", "S. 50"],
         ["Fall: Ein Kunde ruft an, das Piercing ist stark gerötet, und er hat Fieber. Was tust du?", ["Ich schicke ihn sofort zum Arzt", "Ich empfehle Teebaumöl und 3 Tage abwarten", "Ich wechsle den Schmuck auf PTFE", "Ich empfehle Tyrosur und Ruhe"], "Fieber zeigt, dass sich die Entzündung im Körper ausbreitet. Das gehört sofort in ärztliche Hände, nicht in die Hausapotheke.", "Ergänzung"]
       ]
     },
@@ -135,7 +135,7 @@ KURS.module.push({
           "Nichts tun: Es kann von selbst verschwinden; meist stößt der Körper es ab.",
           "Dehydrieren: Kochsalzlösung, Kamillentee, Wasserstoffperoxid, Teebaumöl oder Eukalyptusöl helfen, es zurückzudrängen (laut Kursbuch; Wasserstoffperoxid schädigt auch gesundes Gewebe, heute wird es für Wunden kaum noch empfohlen).",
           "Wildfleischdisk: eine Kunststoffscheibe, die auf den Schmuck gestülpt wird.",
-          "Schmuckform oder Material ändern, zum Beispiel ein Titan-Labret gegen einen PTFE-Barbell tauschen.",
+          "Schmuckform oder Material ändern, zum Beispiel ein Titan-Labret gegen einen PTFE-Barbell tauschen. Das macht nur der Piercer, steril und mit Ersteinsatz-Material.",
           "Hilft nichts davon: Der Kunde geht zum Arzt oder Dermatologen, der das wilde Fleisch chirurgisch entfernt."
         ] }
       ],

@@ -39,8 +39,8 @@ KURS.module.push({
         ] }
       ],
       fragen: [
-        ["Wie alt sind die ältesten im Kursbuch genannten Funde von Ohrschmuck?", ["Über 7000 Jahre (Algerien)", "Etwa 3300 Jahre (Tutanchamun)", "Etwa 2600 Jahre (Hallstattkultur)", "Etwa 4000 Jahre (Mittlerer Osten)"], "Neolithische Funde aus Algerien.", "S. 3"],
-        ["Woraus bestanden die ältesten Ohrgehänge aus Algerien?", ["Aus Tierknochen und Zähnen", "Aus Gold", "Aus Bronze", "Aus Muscheln und Holz"], "Die jungsteinzeitlichen Funde aus Algerien waren aus Tierknochen und Zähnen; Metallschmuck kam erst viel später.", "S. 3"],
+        ["Wie alt ist der älteste direkt belegte Fund von Körperschmuck an Ohr und Kinn?", ["Etwa 10.000 bis 8.000 v. Chr. (Boncuklu Tarla, Türkei)", "Etwa 1400 bis 1300 v. Chr. (Ägypten)", "Etwa 2600 Jahre (Hallstattkultur)", "Etwa 500 v. Chr. (griechische Antike)"], "Studie in der Fachzeitschrift Antiquity, 2022.", "Ergänzung"],
+        ["Was gilt für die Algerien-Funde (über 7000 Jahre), die das Kursbuch nennt?", ["Eine unabhängige Quelle dafür wurde nicht gefunden", "Sie sind die ältesten belegten Funde weltweit", "Sie bestanden aus Gold und Bronze", "Sie stammen aus der Römerzeit"], "Laut Kursbuch Ohrgehänge aus Tierknochen und Zähnen. Sicher belegt sind ältere Funde aus Boncuklu Tarla (Türkei).", "Ergänzung"],
         ["Aus welcher Zeit stammen die ältesten bekannten Piercing-Spuren?", ["Aus der Jungsteinzeit (Neolithikum)", "Aus der Bronzezeit Europas", "Aus der Zeit der Pharaonen", "Aus der griechischen Antike"], "Neolithikum bedeutet jüngere Steinzeit.", "S. 3"],
         ["Welche berühmte Maske zeigt Ohrlöcher?", ["Die Goldmaske des Tutanchamun", "Die Goldmaske des Agamemnon", "Die Totenmaske Napoleons", "Die Maske des Pakal aus Palenque"], "Dazu kamen Goldohrringe als Grabbeigabe.", "S. 3"],
         ["Aus welcher Zeit stammen die ägyptischen Pharaonendarstellungen mit Ohrenschmuck?", ["Etwa 1400 bis 1300 v. Chr.", "Etwa 3000 bis 2900 v. Chr.", "Etwa 500 bis 400 v. Chr.", "Etwa 100 bis 200 n. Chr."], "So datiert sie das Kursbuch.", "S. 3"]

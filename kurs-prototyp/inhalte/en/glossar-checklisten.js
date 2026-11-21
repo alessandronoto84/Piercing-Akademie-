@@ -37,7 +37,7 @@ KURS.glossar = [
   ["Bodily harm (Körperverletzung)", "Legally, every piercing is intentional bodily harm (§ 223 StGB, German Criminal Code), permitted only with consent.", 2],
   ["Labret stud", "Stud with a disc on one side and a thread for a ball on the other.", 6],
   ["Lidocaine ointment (Xylocaine)", "Local anesthetic from the pharmacy, available without prescription or prescription-only depending on the product; according to the Academy permitted, but not recommended.", 4],
-  ["N. facialis", "Facial nerve; controls facial expressions and fans out in front of the ear into branches to the forehead, cheek, mouth and chin.", 3],
+  ["N. facialis", "Facial nerve; exits the skull below the ear, controls facial expressions and fans out in front of the ear into branches to the forehead, cheek, mouth and chin.", 3],
   ["N. supraorbitalis", "Supraorbital nerve, the sensory nerve of the forehead; exits the bone at about the border between the inner and middle third of the eyebrow (roughly above the pupil).", 3],
   ["Sharps container", "Sealable container into which used needles go immediately.", 5],
   ["Receiving tube", "Tube that catches the cannula where no forceps fit, e.g. for rook and daith.", 7],
@@ -87,6 +87,8 @@ KURS.checklisten = [
     "Sterile goods checked: packaging undamaged, indicator changed color, storage period not exceeded",
     "Cannula, clamp or receiving tube, initial jewelry with extra length laid out",
     "Alcohol swabs, single-use skin marker, disposable razor, gloves, face mask",
+    "Skin antiseptic (for example Kodan) and plasters",
+    "Scissors, ball grabber and holding pliers in sterile packaging",
     "Sharps container within reach",
     "Aftercare product and written aftercare instructions to hand to the client"
   ] },
@@ -103,10 +105,12 @@ KURS.checklisten = [
   { titel: "Reprocessing instruments", modul: 5, punkte: [
     "Self-protection: safety goggles, gloves, face mask",
     "Ultrasonic bath with instrument cleaning agent, time and temperature as specified by the manufacturer, not above about 45 °C (otherwise blood residues bake on)",
+    "Disinfect and rinse thoroughly (product and contact time as specified by the manufacturer)",
     "Dry thoroughly",
     "Pack in sterilization pouches with indicator strips",
     "Sterilize in the autoclave (heat-up time, equilibration time, sterilization phase, drying phase)",
     "Remove only when completely dry",
+    "Release the batch: check the indicator and process data, document the release",
     "Label with date and batch number, store protected"
   ] },
   { titel: "Aftercare instructions for the client", modul: 10, punkte: [

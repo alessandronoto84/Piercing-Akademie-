@@ -55,6 +55,7 @@
 .k-lektion p,.k-lektion li{max-width:42em}
 .k-lektion ul,.k-lektion ol{margin:0;padding-left:1.2em;display:grid;gap:6px}
 .k-schritte li::marker{font-family:var(--f-mono);color:var(--accent)}
+.k-schritte:has(.k-zusatz){padding-left:2.8em}
 .k-schritte li.k-zusatz{list-style:none;position:relative}
 .k-schritte li.k-zusatz .k-nr{position:absolute;right:100%;margin-right:.4em;font-family:var(--f-mono);color:var(--accent);white-space:nowrap}
 .k-zusatz-label{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);border:1px dashed var(--muted);border-radius:3px;padding:0 4px;margin-right:4px}

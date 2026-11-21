@@ -1046,7 +1046,7 @@ KURS.lektionsfragen = {
    "Procedure, step 4: “Have the client fill in the consent form”. What comes next?",
    [
     "Meanwhile, prepare the workstation and lay out all instruments ready to hand",
-    "Disinfect the area with a skin antiseptic (for example Kodan) without wiping off the marking",
+    "Disinfect the area with a skin antiseptic (for example Kodan) without wiping off the marking, and wait for the contact time",
     "Examine the area and choose suitable initial jewelry (extra length!)",
     "Disinfect your hands and put on gloves"
    ],
@@ -1057,7 +1057,7 @@ KURS.lektionsfragen = {
    "Procedure, step 5: “Meanwhile, prepare the workstation and lay out all instruments ready to hand”. What comes next?",
    [
     "The client enters the piercing room",
-    "Disinfect the area with a skin antiseptic (for example Kodan) without wiping off the marking",
+    "Disinfect the area with a skin antiseptic (for example Kodan) without wiping off the marking, and wait for the contact time",
     "Shave if necessary (disposable razor) and disinfect again afterwards",
     "Greeting, small talk"
    ],
@@ -1103,7 +1103,7 @@ KURS.lektionsfragen = {
     "Shave if necessary (disposable razor) and disinfect again afterwards",
     "Pierce, ideally always into the visible side – with a labret",
     "Apply the clamp or receiving tube",
-    "Disinfect the area with a skin antiseptic (for example Kodan) without wiping off the marking"
+    "Disinfect the area with a skin antiseptic (for example Kodan) without wiping off the marking, and wait for the contact time"
    ],
    "Step 8a: Shave if necessary (disposable razor) and disinfect again afterwards.",
    "Ergänzung"
@@ -1122,7 +1122,7 @@ KURS.lektionsfragen = {
   [
    "Procedure, step 9: “Mark the entry and exit points of the cannula with the single-use marker”. What comes next?",
    [
-    "Disinfect the area with a skin antiseptic (for example Kodan) without wiping off the marking",
+    "Disinfect the area with a skin antiseptic (for example Kodan) without wiping off the marking, and wait for the contact time",
     "Disinfect the area (alcohol swab)",
     "Trim the plastic sheath slightly with scissors so the jewelry goes in more easily",
     "The client enters the piercing room"
@@ -1160,7 +1160,7 @@ KURS.lektionsfragen = {
     "Pierce, ideally always into the visible side – with a labret",
     "Examine the area and choose suitable initial jewelry (extra length!)",
     "Drop the steel needle straight into the sharps container",
-    "Disinfect the area with a skin antiseptic (for example Kodan) without wiping off the marking"
+    "Disinfect the area with a skin antiseptic (for example Kodan) without wiping off the marking, and wait for the contact time"
    ],
    "Step 12: Pierce, ideally always into the visible side – with a labret, for example, where the ball will sit. The faster you pierce, the less pain.",
    "S. 112"
@@ -1285,7 +1285,7 @@ KURS.lektionsfragen = {
     "If needed, cover with a bandage (nipple, navel)",
     "Hand over the aftercare product and explain the aftercare instructions verbally",
     "For tongue piercings, give the client an ice cube",
-    "If wound healing problems occur"
+    "If wound healing problems occur, the client should come back for advice (see module 10)"
    ],
    "Step 22: If needed, cover with a bandage (nipple, navel).",
    "S. 113"
@@ -1326,7 +1326,7 @@ KURS.lektionsfragen = {
   [
    "Procedure, step 25: “Ideally, also hand over the aftercare instructions in writing”. What comes next?",
    [
-    "If wound healing problems occur",
+    "If wound healing problems occur, the client should come back for advice (see module 10)",
     "If needed, cover with a bandage (nipple, navel)",
     "For tongue piercings, give the client an ice cube",
     "Hand over the aftercare product and explain the aftercare instructions verbally"

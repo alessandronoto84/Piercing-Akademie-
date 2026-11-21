@@ -13,7 +13,6 @@ KURS.module.push({
       seite: "Entwurf",
       entwurf: true,
       inhalt: [
-        { typ: "video", id: "anatomie-modelle", text: "Ohrmodell und Modell der Hautschichten: Oberhaut, Lederhaut und Unterhaut mit Fettgewebe.", schleife: true },
         { typ: "text", text: "Die Haut ist das größte Organ des Menschen. Sie besteht aus drei Schichten, und ein Stichkanal führt durch alle drei." },
         { typ: "tabelle", kopf: ["Schicht", "Aufbau", "Bedeutung beim Piercen"], zeilen: [
           ["Oberhaut (Epidermis)", "Äußerste, verhornte Schicht ohne eigene Blutgefäße", "Schutzbarriere gegen Keime. Sie wird vor dem Stich desinfiziert und wächst bei der Heilung vom Wundrand her nach."],
@@ -30,8 +29,8 @@ KURS.module.push({
         ["Wie heißt die äußerste Hautschicht?", ["Oberhaut (Epidermis)", "Lederhaut (Dermis)", "Unterhaut (Subcutis)", "Knorpelhaut (Perichondrium)"], "Sie ist verhornt.", "Entwurf"],
         ["Welche Hautschicht enthält Blutgefäße und Nerven?", ["Lederhaut (Dermis)", "Oberhaut (Epidermis)", "Nur die Unterhaut (Subcutis)", "Die Hornschicht"], "Die Oberhaut hat keine eigenen Blutgefäße.", "Entwurf"],
         ["Woraus besteht die Unterhaut vor allem?", ["Aus Fettgewebe", "Aus Knorpel", "Aus Hornzellen", "Aus Muskelfasern"], "Sie polstert.", "Entwurf"],
-        ["Durch welche Schichten führt ein Stichkanal?", ["Durch alle drei Schichten", "Nur durch Ober- und Lederhaut", "Nur durch die Oberhaut", "Durch Lederhaut und Unterhaut, die Oberhaut wird verdrängt"], "Deshalb heilt er vom Rand her.", "Entwurf"],
-        ["Was liegt in der Lederhaut oft als Bündel zusammen?", ["Arterie, Vene und Nerv", "Haarwurzel und Schweißdrüse", "Fettläppchen und Knorpel", "Nur Kapillaren"], "Siehe 3D-Hautblock.", "Ergänzung"]
+        ["Durch welche Schichten führt ein Stichkanal?", ["Durch alle drei Schichten", "Nur durch Ober- und Lederhaut", "Nur durch die Oberhaut", "Durch Lederhaut und Unterhaut, die Oberhaut wird verdrängt"], "Er durchquert Oberhaut, Lederhaut und Unterhaut (bzw. Knorpel).", "Entwurf"],
+        ["Was verläuft in Lederhaut und Unterhaut oft als Bündel zusammen?", ["Arterie, Vene und Nerv", "Haarwurzel und Schweißdrüse", "Fettläppchen und Knorpel", "Nur Kapillaren"], "Siehe 3D-Hautblock.", "Ergänzung"]
       ]
     },
     {
@@ -51,7 +50,7 @@ KURS.module.push({
       fragen: [
         ["Warum heilen Knorpelpiercings langsamer als ein Lobe?", ["Knorpel hat keine eigenen Blutgefäße", "Knorpel hat besonders viele Nerven", "Knorpel ist dünner als das Ohrläppchen", "Knorpel bildet kein Granulationsgewebe"], "Er wird über die Knorpelhaut versorgt.", "Entwurf"],
         ["Welche Abheilzeit nennt das Kursbuch für Knorpelpiercings?", ["Mindestens 3 Monate", "Etwa 4 bis 6 Wochen", "Etwa 2 Monate", "1 bis 2 Monate"], "Zum Vergleich: Lobe ca. 2 Monate.", "S. 49"],
-        ["Welches Gewebe heilt am schnellsten?", ["Schleimhaut", "Knorpel", "Weichgewebe wie das Ohrläppchen", "Fettgewebe am Bauchnabel"], "Zunge und Lippenbändchen ca. 1 Monat.", "S. 49"],
+        ["Welche Piercings heilen laut Kursbuch am schnellsten (ca. 1 Monat)?", ["Zunge, Lippenbändchen und Augenbraue", "Lobe, Helix und Tragus", "Bauchnabel und Brustwarze", "Conch, Rook und Daith"], "Knorpel braucht mindestens 3 Monate, Bauchnabel und Brustwarze noch länger.", "S. 49"],
         ["Zu welcher Gewebeart gehört der Helix?", ["Knorpel", "Weichgewebe", "Schleimhaut", "Fettgewebe"], "Die Ohrkante ist Knorpel.", "S. 78"],
         ["Zu welcher Gewebeart gehört das Zungenpiercing?", ["Schleimhaut", "Knorpel", "Weichgewebe ohne Schleimhaut", "Bindegewebe der Haut"], "Schleimhaut heilt schnell.", "S. 49"],
         ["Warum ist Octenidin bei Knorpelpiercings tabu?", ["Es schädigt in Laborstudien Knorpelzellen", "Es verfärbt den Knorpel", "Es wirkt auf Knorpel nicht antiseptisch", "Es löst am Knorpel Nickelallergien aus"], "Octenidin steckt in Octenisept; Prontolind enthält Polihexanid.", "S. 48"],
@@ -162,13 +161,13 @@ KURS.module.push({
       titel: "Wer schlechter heilt",
       seite: "S. 50",
       inhalt: [
-        { typ: "text", text: "Raucher, Alkoholiker und Diabetiker gehören zu den Risikogruppen: Bei ihnen treten Komplikationen im Heilungsprozess schneller auf." },
+        { typ: "text", text: "Raucher, Menschen mit hohem Alkoholkonsum und Diabetiker gehören zu den Risikogruppen: Bei ihnen treten Komplikationen im Heilungsprozess schneller auf." },
         { typ: "text", text: "Mögliche Ursachen für ständiges Nachbluten sind laut Kursbuch Diabetes, Bindegewebsschwäche oder eine Bluterkrankheit. In diesem Fall sollte ein Arzt aufgesucht werden." },
         { typ: "ergaenzung", text: "Am häufigsten blutet es länger nach, wenn der Kunde blutverdünnende Medikamente nimmt (zum Beispiel ASS) oder eine Gerinnungsstörung hat. Diabetes verzögert vor allem die Wundheilung und erhöht das Infektionsrisiko." },
         { typ: "praxis", text: "Die Einverständniserklärung fragt Krankheiten und Medikamente ab. Lies diese Angaben vor dem Stich, nicht erst danach, und sprich Risikofaktoren offen an." }
       ],
       fragen: [
-        ["Welche Gruppen haben ein höheres Risiko für Heilungskomplikationen?", ["Raucher, Alkoholiker und Diabetiker", "Sportler und Menschen mit trockener Haut", "Menschen mit Heuschnupfen", "Menschen unter 25 Jahren"], "Bei ihnen treten Komplikationen schneller auf.", "S. 50"],
+        ["Welche Gruppen haben ein höheres Risiko für Heilungskomplikationen?", ["Raucher, Menschen mit hohem Alkoholkonsum, Diabetiker", "Sportler und Menschen mit trockener Haut", "Menschen mit Heuschnupfen", "Menschen unter 25 Jahren"], "Bei ihnen treten Komplikationen schneller auf.", "S. 50"],
         ["Welche Ursachen für ständiges Nachbluten nennt das Kursbuch?", ["Diabetes, Bindegewebsschwäche oder eine Bluterkrankheit", "Eine Nickelallergie oder eine Kontaktallergie", "Zu kurzer Schmuck ohne Überlänge", "Die tägliche Pflege mit Kochsalzlösung"], "Dann einen Arzt aufsuchen.", "S. 50"],
         ["Fall: Ein Kunde gibt Diabetes an. Was ist richtig?", ["Ich kläre ihn über das höhere Heilungsrisiko auf, bevor ich steche", "Ich steche nur mit PTFE, dann gibt es kein Risiko", "Diabetes spielt beim Piercen keine Rolle", "Ich verdopple die Überlänge"], "Diabetiker zählen zu den Risikogruppen.", "S. 50"]
       ]

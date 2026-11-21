@@ -37,7 +37,7 @@ KURS.glossar = [
   ["Körperverletzung", "Rechtlich ist jedes Piercing eine gewollte Körperverletzung (§ 223 StGB), erlaubt nur mit Einwilligung.", 2],
   ["Labret Stud", "Stecker mit Platte auf einer Seite und Gewinde für eine Kugel auf der anderen.", 6],
   ["Lidocainsalbe (Xylocain)", "Örtliches Betäubungsmittel aus der Apotheke, je nach Präparat rezeptfrei oder verschreibungspflichtig; laut Akademie erlaubt, aber nicht empfohlen.", 4],
-  ["N. facialis", "Gesichtsnerv; steuert die Mimik und fächert sich vor dem Ohr in Äste zu Stirn, Wange, Mund und Kinn auf.", 3],
+  ["N. facialis", "Gesichtsnerv; tritt unter dem Ohr aus dem Schädel, steuert die Mimik und fächert sich vor dem Ohr in Äste zu Stirn, Wange, Mund und Kinn auf.", 3],
   ["N. supraorbitalis", "Gefühlsnerv der Stirn; tritt etwa an der Grenze vom inneren zum mittleren Drittel der Augenbraue (ungefähr über der Pupille) aus dem Knochen.", 3],
   ["Nadelabwurfbehälter", "Verschließbarer Behälter, in den benutzte Nadeln sofort kommen.", 5],
   ["Nadelauffangrohr (Receiving Tube)", "Rohr, das die Kanüle auffängt, wo keine Zange passt, z. B. bei Rook und Daith.", 7],
@@ -87,6 +87,8 @@ KURS.checklisten = [
     "Sterilgut geprüft: Verpackung unbeschädigt, Indikator umgeschlagen, Lagerfrist eingehalten",
     "Kanüle, Klemme oder Nadelauffangrohr, Ersteinsatz mit Überlänge bereitgelegt",
     "Alkoholtupfer, Einmal-Hautmarker, Einmalrasierer, Handschuhe, Mundschutz",
+    "Hautantiseptikum (zum Beispiel Kodan) und Pflaster",
+    "Schere, Kugelgreifer und Klemmzange steril verpackt",
     "Nadelabwurfbehälter in Reichweite",
     "Pflegemittel und schriftliche Pflegehinweise zum Mitgeben"
   ] },
@@ -103,10 +105,12 @@ KURS.checklisten = [
   { titel: "Instrumente aufbereiten", modul: 5, punkte: [
     "Selbstschutz: Schutzbrille, Handschuhe, Mundschutz",
     "Ultraschallbad mit Instrumenten-Reinigungsmittel, Zeit und Temperatur nach Herstellerangabe, nicht über etwa 45 °C (sonst brennen Blutreste ein)",
+    "Desinfizieren und gründlich spülen (Mittel und Einwirkzeit nach Herstellerangabe)",
     "Gründlich trocknen",
     "In Sterilisationsbeutel mit Indikatorstreifen verpacken",
     "Im Autoklav sterilisieren (Steigzeit, Ausgleichszeit, Sterilisationsphase, Trockenphase)",
     "Nur vollständig trocken entnehmen",
+    "Charge freigeben: Indikator und Prozessdaten prüfen, Freigabe dokumentieren",
     "Mit Datum und Chargennummer beschriften, geschützt lagern"
   ] },
   { titel: "Pflegehinweise für den Kunden", modul: 10, punkte: [

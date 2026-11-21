@@ -92,7 +92,7 @@ function pflegeblatt() {
 <li>Vor jedem Berühren die Hände gründlich waschen. Den Schmuck nicht unnötig drehen oder bewegen.</li>
 <li>Etwa 2 Wochen lang 2- bis 3-mal täglich mit dem mitgegebenen Pflegemittel reinigen.</li>
 <li>Geeignet: Kochsalzlösung oder Prontolind, im Mundbereich Chlorhexamed (nur wenige Tage bis etwa 2 Wochen).</li>
-<li>Octenisept nie bei Knorpelpiercings (Ohrmuschel, Helix, Tragus, Conch, Rook, Daith).</li>
+<li>Octenisept nie bei Knorpelpiercings: alle Ohr- und Nasenknorpel (z. B. Helix, Tragus, Anti-Tragus, Conch, Rook, Daith, Snug, Industrial, Nasenflügel).</li>
 <li>Nicht auf dem frischen Piercing schlafen, Druck und Reibung vermeiden (Kleidung, Haare, Kopfhörer, Telefon).</li>
 <li>In der Heilungszeit Schwimmbad, Badesee, Sauna und Solarium möglichst meiden.</li>
 <li>Nach Zungen- und Lippenpiercings: Eiswürfel (zum Beispiel aus Kamillentee) gegen die Schwellung; in der Heilungszeit möglichst nicht rauchen und keinen Alkohol trinken.</li>
@@ -218,12 +218,13 @@ function uebungsvorlage() {
   pts.forEach(([dx, y], i) => { b += punkt(45 + dx, y) + `<text x="${45 + dx - 4}" y="${y + 1}" font-size="2.6">${i + 1}</text>`; });
   const svg = (w, h, inhalt) => `<svg width="${w}mm" height="${h}mm" viewBox="0 0 ${w} ${h}" font-family="I, Arial, sans-serif" fill="#16161a">${inhalt}</svg>`;
   const L = KURS.labor;
-  const zeilen = (von, bis) => { let r = ""; for (let i = von; i <= bis; i++) r += `<tr><td style="width:9mm">${i}</td><td></td></tr>`; return r; };
+  const ZUSATZ = ["7a", "8a", "9a", "13a"]; // Ergänzungen der Akademie zum Ablauf (Modul 9)
+  const zeilen = (von, bis) => { let r = ""; for (let i = von; i <= bis; i++) { r += `<tr><td style="width:9mm">${i}</td><td></td></tr>`; if (ZUSATZ.includes(i + "a")) r += `<tr><td style="width:9mm">${i}a</td><td></td></tr>`; } return r; };
   return seite("Praxislabor · Übungsvorlage", "Übungsvorlage Praxislabor", `
 <h1>Übungsvorlage Praxislabor</h1>
 <p class="lead">In Originalgröße drucken (100 %, nicht „an Seite anpassen“). Prüfe zuerst die Kontrollstrecke mit dem Lineal.</p>
 ${svg(178, 10, mass)}
-<div class="hinweis warn">Im Praxislabor wird nie gestochen. Gestochen wird erst am Praxistag unter Anleitung.</div>
+<div class="hinweis warn">Bei den Trockenübungen wird nicht gestochen. Ins Silikonohr stichst du nur mit dem Übungsset (Paket Komplett); in Menschen nie.</div>
 <h2>Übung A: Abstände übertragen</h2>
 <p>Links ist das Punktpaar vorgegeben. Miss den Abstand und setze rechts den zweiten Punkt auf die Linie. Erst danach nachmessen und die Abweichung eintragen. Ziel: höchstens 1 mm.</p>
 ${svg(178, 70, a)}
@@ -237,7 +238,7 @@ ${svg(178, 60, b)}
 ${L.aufgaben.map((x, i) => `<tr><td>Trocken ${i + 1}: ${esc(x.titel)}</td><td></td><td></td><td>☐</td><td></td></tr>`).join("")}${(L.stich ? L.stich.aufgaben : []).map((x, i) => `<tr><td>Stich ${i + 1}: ${esc(x.titel)}</td><td></td><td></td><td>☐</td><td></td></tr>`).join("")}
 </table>
 <h2>Trockenübung 6: Der Ablauf aus dem Gedächtnis</h2>
-<p>Schreib alle 26 Schritte auf, ohne nachzuschauen. Dann mit Modul 09 vergleichen und Fehlendes in Rot ergänzen.</p>
+<p>Schreib alle 26 Schritte und die Ergänzungen der Akademie (7a, 8a, 9a, 13a) auf, ohne nachzuschauen. Dann mit Modul 9 vergleichen und Fehlendes in Rot ergänzen.</p>
 <div class="zwei"><table>${zeilen(1, 13)}</table><table>${zeilen(14, 26)}</table></div>
 `);
 }

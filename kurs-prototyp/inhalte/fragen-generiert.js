@@ -1114,7 +1114,7 @@ KURS.lektionsfragen = {
     "Ein- und Austrittsstelle der Kanüle mit dem Einmalstift markieren",
     "Einverständniserklärung ausfüllen lassen",
     "Währenddessen den Arbeitsplatz vorbereiten und alle Instrumente parat legen",
-    "Kunststoffüberzug mit der Schere leicht kürzen"
+    "Kunststoffüberzug mit der Schere leicht kürzen, damit der Schmuck besser hineingeht"
    ],
    "Schritt 9: Ein- und Austrittsstelle der Kanüle mit dem Einmalstift markieren.",
    "S. 111"
@@ -1124,7 +1124,7 @@ KURS.lektionsfragen = {
    [
     "Die Stelle mit Hautantiseptikum (zum Beispiel Kodan) desinfizieren",
     "Die Stelle desinfizieren (Alkoholtupfer)",
-    "Kunststoffüberzug mit der Schere leicht kürzen",
+    "Kunststoffüberzug mit der Schere leicht kürzen, damit der Schmuck besser hineingeht",
     "Der Kunde betritt den Piercingraum"
    ],
    "Schritt 9a: Die Stelle mit Hautantiseptikum (zum Beispiel Kodan) desinfizieren, die Markierung nicht abwischen, Einwirkzeit abwarten.",
@@ -1171,7 +1171,7 @@ KURS.lektionsfragen = {
     "Kanüle herausziehen; der Kunststoffüberzug bleibt im Stichkanal",
     "Röhrchen vorsichtig vom Schmuck abziehen",
     "Die Stelle desinfizieren (Alkoholtupfer)",
-    "Kunststoffüberzug mit der Schere leicht kürzen"
+    "Kunststoffüberzug mit der Schere leicht kürzen, damit der Schmuck besser hineingeht"
    ],
    "Schritt 13: Kanüle herausziehen; der Kunststoffüberzug bleibt im Stichkanal.",
    "S. 112"
@@ -1182,7 +1182,7 @@ KURS.lektionsfragen = {
     "Die Stahlnadel sofort in den Nadelabwurfbehälter werfen",
     "Durch den Stichkanal drücken",
     "Stechen, im Idealfall immer in die sichtbare Seite",
-    "Kunststoffüberzug mit der Schere leicht kürzen"
+    "Kunststoffüberzug mit der Schere leicht kürzen, damit der Schmuck besser hineingeht"
    ],
    "Schritt 13a: Die Stahlnadel sofort in den Nadelabwurfbehälter werfen.",
    "Ergänzung"
@@ -1190,7 +1190,7 @@ KURS.lektionsfragen = {
   [
    "Ablauf, Schritt 13a: „Die Stahlnadel sofort in den Nadelabwurfbehälter werfen“. Was kommt als Nächstes?",
    [
-    "Kunststoffüberzug mit der Schere leicht kürzen",
+    "Kunststoffüberzug mit der Schere leicht kürzen, damit der Schmuck besser hineingeht",
     "Ein- und Austrittsstelle der Kanüle mit dem Einmalstift markieren",
     "Kanüle herausziehen; der Kunststoffüberzug bleibt im Stichkanal",
     "Stechen, im Idealfall immer in die sichtbare Seite"
@@ -1239,7 +1239,7 @@ KURS.lektionsfragen = {
     "Kugel greifen",
     "Schmuck mit der Klemmzange festhalten und die Kugel fest aufdrehen",
     "Die Stahlnadel sofort in den Nadelabwurfbehälter werfen",
-    "Kunststoffüberzug mit der Schere leicht kürzen"
+    "Kunststoffüberzug mit der Schere leicht kürzen, damit der Schmuck besser hineingeht"
    ],
    "Schritt 18: Kugel greifen.",
    "S. 112"
@@ -1249,7 +1249,7 @@ KURS.lektionsfragen = {
    [
     "Schmuck mit der Klemmzange festhalten und die Kugel fest aufdrehen",
     "Nochmals mit Kodan einsprühen",
-    "Kunststoffüberzug mit der Schere leicht kürzen",
+    "Kunststoffüberzug mit der Schere leicht kürzen, damit der Schmuck besser hineingeht",
     "Pflegemittel mitgeben und Pflegehinweise mündlich erklären"
    ],
    "Schritt 19: Schmuck mit der Klemmzange festhalten und die Kugel fest aufdrehen.",

@@ -1,7 +1,7 @@
 /* Practice lab: exercises on the silicone practice model with self-check.
-   Basis: procedure from module 09 (steps 1–26, course book pp. 111–112), checklists from module 05 and the exercise from module 08
+   Basis: procedure from module 9 (steps 1–26, course book pp. 111–112), checklists from module 5 and the exercise from module 8
    (“Practice on the silicone ear: mark the area, apply the clamp, position the cannula (without piercing)”).
-   No piercing is ever done here: that is reserved for the practice day under supervision.
+   No piercing in the dry exercises; only those with the practice kit (Complete package) pierce the silicone ear (see labor.stich); never a person.
    Format: { id, titel, modul (reference), material: [...], schritte: [...], kontrolle: [...] } */
 window.KURS = window.KURS || { module: [] };
 window.KURS.labor = {
@@ -39,7 +39,7 @@ window.KURS.labor = {
       material: ["Hand disinfectant", "Disposable gloves in your size"],
       schritte: [
         "Nails short, no nail polish, no jewelry on hands and forearms.",
-        "Disinfect your hands as described in module 05; the contact time is stated on the disinfectant.",
+        "Disinfect your hands as described in module 5; the contact time is stated on the disinfectant.",
         "Wait until your hands are completely dry.",
         "Put on the gloves without touching the outside with your bare hand more than necessary.",
         "Take off the gloves without the outside touching your skin, and dispose of them. Then disinfect your hands."
@@ -73,15 +73,15 @@ window.KURS.labor = {
       id: "anzeichnen-modell",
       titel: "Marking on the practice model",
       modul: 8,
-      material: ["Silicone practice model", "Single-use skin marker", "Data sheets from module 08"],
+      material: ["Silicone practice model", "Single-use skin marker", "Data sheets from module 8"],
       schritte: [
-        "Read the data sheets for lobe, helix and tragus in module 08.",
+        "Read the data sheets for lobe, helix and tragus in module 8.",
         "Mark the entry and exit points for each of these piercings on the model (procedure step 9).",
         "For lobes on both sides: mark the left and right earlobes at the same height and check from the front, for example with a photo.",
         "Have someone look at the marking as if they were the client (step 10), and correct it if needed."
       ],
       kontrolle: [
-        "Every marking matches the data sheet in module 08.",
+        "Every marking matches the data sheet in module 8.",
         "For lobes on both sides, both points are at the same height in the photo from the front.",
         "I showed the marking and explained why it is placed there.",
         "I know what to do if the client doesn’t like the marking."
@@ -96,7 +96,7 @@ window.KURS.labor = {
         "Put on gloves (exercise 2).",
         "Apply the clamp at the marking (procedure step 11) so that the entry and exit points lie in the opening.",
         "Position the cannula with its protective cap at the entry point, pointing toward the exit point, from the visible side (step 12). Do not pierce.",
-        "Say out loud what would come next: steps 13 to 19 from module 09.",
+        "Say out loud what would come next: steps 13 to 19 from module 9.",
         "Release the clamp, put down the capped cannula. Repeat five times, also at other locations."
       ],
       kontrolle: [
@@ -113,7 +113,7 @@ window.KURS.labor = {
       material: ["Practice template (page 2) or a blank sheet"],
       schritte: [
         "Write down all 26 steps of the procedure from module 9, including the Academy additions (7a, 8a, 9a, 13a), from memory.",
-        "Compare with module 09 and add anything missing in red.",
+        "Compare with module 9 and add anything missing in red.",
         "Repeat the next day until everything is correct without red.",
         "Explain the aftercare instructions (steps 24 and 25) out loud to another person as if they were your client."
       ],
@@ -127,10 +127,10 @@ window.KURS.labor = {
       id: "notfall",
       titel: "Role-playing an emergency",
       modul: 9,
-      material: ["Checklist “After a needlestick injury”", "Module 09, lesson “Circulatory problems and emergencies”"],
+      material: ["Checklist “After a needlestick injury”", "Module 9, lesson “Circulatory problems and emergencies”"],
       schritte: [
         "Role-play with a second person: during the preparation the “client” turns pale and says they feel dizzy. What do you do, step by step?",
-        "Afterwards, compare with the lesson “Circulatory problems and emergencies” in module 09.",
+        "Afterwards, compare with the lesson “Circulatory problems and emergencies” in module 9.",
         "Recite the checklist “After a needlestick injury” from memory and compare."
       ],
       kontrolle: [
@@ -142,7 +142,7 @@ window.KURS.labor = {
   ]
 };
 
-/* Praxisaufgaben für die Module 01–04, 06, 10 und 11 (Trockenübungen, ohne Stechen). Grundlage: die jeweiligen Lektionen.
+/* Praxisaufgaben für die Module 1–4, 6, 10 und 11 (Trockenübungen, ohne Stechen). Grundlage: die jeweiligen Lektionen.
    Die Modulseite zeigt alle Aufgaben mit passendem „modul“; das Praxislabor zeigt sie nach Modulen sortiert. */
 window.KURS.labor.aufgaben = window.KURS.labor.aufgaben.concat([
   {
@@ -178,7 +178,7 @@ window.KURS.labor.aufgaben = window.KURS.labor.aufgaben.concat([
     "schritte": [
       "Place the cannula (keep the protective cap on) and the practice jewelry in front of you.",
       "In no more than one minute, explain to your listener why studios pierce with a sterile single-use cannula and not with an ear piercing gun. Record yourself on your phone.",
-      "Listen to the recording and compare it with the lessons “The reasons” and “Gun or cannula: what happens in the tissue”.",
+      "Listen to the recording and compare it with the lesson “Why no ear-piercing gun” (module 1).",
       "Repeat the explanation until you can say everything without notes."
     ],
     "kontrolle": [
@@ -221,11 +221,11 @@ window.KURS.labor.aufgaben = window.KURS.labor.aufgaben.concat([
     "schritte": [
       "Using the skin marker, mark the spots for lobe, helix, tragus, conch, rook and daith on the silicone practice ear and label them.",
       "Write down the tissue type for each spot: soft tissue or cartilage.",
-      "Compare your marks with the piercing types in module 08.",
+      "Compare your marks with the piercing types in module 8.",
       "Shine the flashlight through your own ear from behind and look for the blood vessels."
     ],
     "kontrolle": [
-      "All six spots are marked correctly (checked against module 08).",
+      "All six spots are marked correctly (checked against module 8).",
       "I know: the lobe is soft tissue; the other five spots are in cartilage.",
       "I spotted blood vessels in my own ear."
     ]
@@ -236,7 +236,7 @@ window.KURS.labor.aufgaben = window.KURS.labor.aufgaben.concat([
     "modul": 4,
     "material": [
       "a second person as “client”",
-      "your list of questions on lidocaine tolerance (exercise from module 04)"
+      "your list of questions on lidocaine tolerance (exercise from module 4)"
     ],
     "schritte": [
       "Your “client” is nervous and asks: “Does it hurt?” Answer honestly and calmly explain what is about to happen.",
@@ -338,7 +338,7 @@ window.KURS.labor.einkauf = {
       "imSet": true
     },
     {
-      "name": "IV cannulas 18G and 16G, sterile",
+      "name": "IV cannulas 18G and 16G, sterile (for all piercing exercises at least 8 × 18G and 2 × 16G)",
       "wofuer": "Handling the cannula (dry exercise with the cap on)",
       "module": [
         1,
@@ -366,6 +366,42 @@ window.KURS.labor.einkauf = {
       "imSet": true
     },
     {
+      "name": "Scissors (for the plastic sheath)",
+      "wofuer": "Shorten the sheath after piercing",
+      "module": [
+        7,
+        9
+      ],
+      "imSet": true
+    },
+    {
+      "name": "Holding pliers",
+      "wofuer": "Hold the jewelry while the ball is screwed on",
+      "module": [
+        7,
+        9
+      ],
+      "imSet": true
+    },
+    {
+      "name": "Ball grabber",
+      "wofuer": "Pick up balls and screw them on",
+      "module": [
+        7,
+        9
+      ],
+      "imSet": true
+    },
+    {
+      "name": "Ring opening and ring closing pliers",
+      "wofuer": "Open and close ball closure rings",
+      "module": [
+        6,
+        7
+      ],
+      "imSet": true
+    },
+    {
       "name": "Single-use skin marker",
       "wofuer": "Marking the spots",
       "module": [
@@ -384,7 +420,7 @@ window.KURS.labor.einkauf = {
       "imSet": true
     },
     {
-      "name": "Practice jewelry: labret, ball closure ring (BCR), barbell 38 mm",
+      "name": "Practice jewelry: three labrets, ball closure ring (BCR), barbell 38 mm",
       "wofuer": "Identifying, measuring and inserting jewelry",
       "module": [
         1,
@@ -442,20 +478,20 @@ window.KURS.labor.einkauf = {
 
 /* Piercing exercises on the silicone ear: you only pierce yourself with the Complete package (the Academy’s practice set).
    Everyone else sees the same exercises as “watch only”: clip and procedure, without self-check.
-   Piercing is done exclusively into silicone. Procedure according to course book pp. 111–112 (steps 9–19), values from the data sheets (module 08).
+   Piercing is done exclusively into silicone. Procedure according to course book pp. 111–112 (steps 9–19), values from the data sheets (module 8).
    clip: id of a clip in inhalte/clips.js. If the clip is still missing, participants see nothing; in review mode a notice appears.
    Shot list for the clips: CLIPS-PRAXISLABOR.md in the main folder. */
 window.KURS.labor.stich = {
   pakete: ["komplett"],
-  einleitung: "With your practice set, you now pierce yourself: into the silicone ear, following the procedure from module 09 and the data sheets from module 08. Watch the clip first, then practice. Bring your pierced silicone ear and the practice log with you to the practice day: we’ll look at your piercing channels together there.",
-  zuschauen: "In these clips you see how piercing is done: on the silicone ear, step by step, following the procedure from module 09 and the data sheets from module 08. Watch closely and say the steps along with the clip. You learn to pierce yourself on the practice day under supervision; with the Complete package, you practice at home beforehand with the practice set.",
+  einleitung: "With your practice set, you now pierce yourself: into the silicone ear, following the procedure from module 9 and the data sheets from module 8. Watch the clip first, then practice. Bring your pierced silicone ear and the practice log with you to the practice day: we’ll look at your piercing channels together there.",
+  zuschauen: "In these clips you see how piercing is done: on the silicone ear, step by step, following the procedure from module 9 and the data sheets from module 8. Watch closely and say the steps along with the clip. You learn to pierce yourself on the practice day under supervision; with the Complete package, you practice at home beforehand with the practice set.",
   sicherheit: [
     "Only pierce the silicone ear. Never yourself, other people or animals, not even “just to try it out”.",
     "Never put cannulas back into the protective cap. The steel needle goes straight into the sharps container after you pull it out; the full container is closed tightly and disposed of with regular trash.",
     "Work with gloves on a disposable underpad, without distractions and out of reach of children. Keep cannulas and the sharps container locked away.",
-    "If you do prick yourself, the checklist “After a needlestick injury” from module 05 applies."
+    "If you do prick yourself, the checklist “After a needlestick injury” from module 5 applies."
   ],
-  set: ["Silicone ear", "IV cannulas 18G and 16G", "Small sharps container", "Clamp (Snaptile or gauze clamp)", "Single-use skin marker", "Disposable gloves and disposable underpad", "Practice jewelry: labret, ball closure ring (BCR), barbell 38 mm", "Scissors for the plastic sheath"],
+  set: ["Silicone ear", "IV cannulas: at least 8 × 18G and 2 × 16G", "Small sharps container", "Clamp (Snaptile or gauze clamp)", "Single-use skin marker", "Disposable gloves and disposable underpad", "Practice jewelry: three labrets, ball closure ring (BCR), barbell 38 mm", "Scissors for the plastic sheath", "Holding pliers", "Ball grabber", "Ring opening and ring closing pliers"],
   aufgaben: [
     {
       id: "stich-kanuele",
@@ -527,7 +563,7 @@ window.KURS.labor.stich = {
       clipText: "Pierce a helix on the silicone ear, insert a ball closure ring and close it.",
       material: ["Silicone ear", "18G cannula", "Clamp", "Skin marker", "Scissors", "Ball closure ring (BCR)", "Ring opening pliers and ring closing pliers"],
       schritte: [
-        "Mark the spot on the rim of the ear (helix data sheet, module 08) and fix it with the clamp.",
+        "Mark the spot on the rim of the ear (helix data sheet, module 8) and fix it with the clamp.",
         "Pierce, take the needle out and dispose of it, trim the sheath.",
         "Carefully open the ring with the ring opening pliers, insert one end into the sheath and push it through the piercing channel.",
         "Pull off the tube, insert the ball and close the ring with the ring closing pliers so that the ball snaps firmly into place."
@@ -584,7 +620,7 @@ window.KURS.labor.stich = {
       clipText: "The complete procedure on the silicone ear, from the workstation to the aftercare instructions, at normal speed.",
       material: ["Complete practice set", "A second person as the “client”", "Consent form and aftercare instructions (templates)"],
       schritte: [
-        "Go through the procedure from module 09 from step 4 to 25: the second person fills in the consent form while you prepare the workstation.",
+        "Go through the procedure from module 9 from step 4 to 25: the second person fills in the consent form while you prepare the workstation.",
         "The piercing is done into the silicone ear lying next to the person; you do everything else with them (conversation, showing the marking, aftercare instructions).",
         "Have the person keep an eye on the clock and say at the end what they noticed."
       ],

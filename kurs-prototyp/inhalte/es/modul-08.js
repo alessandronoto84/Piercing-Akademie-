@@ -17,12 +17,12 @@ window.KURS = window.KURS || { module: [] };
         seite: "S. 74",
         inhalt: [
           { typ: "text", text: "Cada piercing tiene una ficha técnica con cuatro datos: dónde se ubica, qué joya inicial corresponde, qué calibre de cánula (o punch) usas y con qué sujetas la zona (pinza, tubo receptor o a mano alzada)." },
-          { typ: "achtung", text: "La joya inicial necesita siempre una longitud extra de unos 4 mm, porque el canal de la perforación recién hecho puede hincharse. Durante la cicatrización nunca debe quedar oprimido por bolas o discos." },
+          { typ: "achtung", text: "La joya inicial necesita siempre una longitud extra de unos 4 mm, porque el canal de la perforación recién hecho puede hincharse. Durante la cicatrización nunca debe quedar oprimido por bolas o discos. Esto vale para las barras; en los aros (por ejemplo helix, septum, Príncipe Alberto) lo que importa es un diámetro interior suficientemente grande." },
           { typ: "merke", text: "En las siguientes lecciones aprendes cada piercing por separado. Después de cada lección, el curso te pregunta por las fichas técnicas: joya inicial, cánula y pinza." }
         ],
         fragen: [
           ["¿Qué información contiene cada ficha técnica?", ["Ubicación, joya inicial, cánula y pinza", "Ubicación, precio y tiempo de cicatrización", "Joya inicial, producto de cuidado y precio", "Solo cánula y pinza"], "Así están estructuradas todas las fichas técnicas.", "S. 74"],
-          ["¿Cuánta longitud extra necesita la joya inicial?", ["Unos 4 mm", "Unos 2 mm", "Unos 6 mm", "Aproximadamente 1 cm"], "El canal recién hecho puede hincharse.", "S. 74"],
+          ["Caso: el canal mide 8 mm. ¿Qué longitud eliges para la barra de la joya inicial?", ["Unos 12 mm", "Exactamente 8 mm", "Unos 9 mm", "Unos 20 mm"], "Longitud del canal más unos 4 mm de longitud extra, porque el canal recién hecho puede hincharse.", "S. 74"],
           ["¿Qué significa «a mano alzada» en la ficha técnica?", ["Se perfora sin pinza ni tubo receptor", "El cliente sujeta la zona él mismo", "Se perfora sin guantes", "Se perfora sin marcar"], "En lugar de pinza o tubo receptor.", "S. 74–110"]
         ]
       },
@@ -111,7 +111,7 @@ window.KURS = window.KURS || { module: [] };
         ],
         fragen: [
           ["¿Cuánto mide aproximadamente el canal en el piercing de ceja?", ["8 mm", "4 mm", "12 mm", "2 cm"], "Ficha técnica de la ceja.", "S. 89"],
-          ["¿Dónde se puede perforar la ceja?", ["Solo en el tercio externo", "En el tercio interno", "En el tercio medio", "En cualquier punto si es superficial"], "En la parte interna emergen nervios y vasos; lesionarlos puede causar insensibilidad en la frente y el párpado superior.", "S. 89"],
+          ["Caso: una clienta quiere el piercing de ceja en la parte más interna, cerca de la raíz de la nariz. ¿Qué haces?", ["Lo rechazo y le ofrezco el tercio externo", "Perforo ahí, pero de forma muy superficial", "Perforo ahí con una cánula más fina", "Perforo ahí si firma por ello"], "En la parte interna emergen nervios y vasos; lesionarlos puede causar insensibilidad en la frente y el párpado superior.", "S. 89"],
           ["Como principiante, ¿qué haces si te piden un Bridge?", ["Lo rechazo", "Lo perforo de forma muy superficial", "Lo perforo a mucha profundidad", "Lo perforo con 14G"], "Rechazarlo como principiante.", "S. 91"]
         ]
       },
@@ -133,13 +133,13 @@ window.KURS = window.KURS || { module: [] };
         seite: "S. 87, 90",
         inhalt: [
           db("Frenillo labial (Smiley)", "A través del frenillo que une el centro del labio superior con la encía; solo se ve al sonreír.", "herradura (circular barbell), BCR", "18G", "pinza para septum, a mano alzada", "", "S. 87"),
-          db("Lengua", "En vertical en el centro de la lengua. No lesionar el frenillo lingual, perforar de abajo hacia arriba, enfriar de inmediato con cubitos de hielo (recomendar cubitos de manzanilla), no usar PTFE, advertir de posibles daños dentales.", "barbell de 20 mm (más corto tras 10 días si es necesario)", "16G", "Snaptile, pinza de gasa, pinza para lengua", "", "S. 90")
+          db("Lengua", "En vertical en el centro de la lengua. No lesionar el frenillo lingual, perforar de abajo hacia arriba, enfriar de inmediato con cubitos de hielo (recomendar cubitos de manzanilla), no usar PTFE, advertir de posibles daños dentales.", "barbell de 20 mm (más corto tras 10 días si es necesario)", "16G", "Snaptile, pinza de gasa, pinza para lengua", "Solo el piercer lo acorta, en condiciones estériles y con material de joya inicial (ver módulo 10).", "S. 90")
         ],
         fragen: [
           ["¿Por qué el piercing del frenillo labial se llama también Smiley?", ["Porque solo se ve al sonreír", "Porque forma una sonrisa", "Porque pasa por las comisuras", "Porque es un labret con bola sonriente"], "A través del frenillo.", "S. 87"],
           ["¿En qué dirección se perfora la lengua?", ["De abajo hacia arriba", "De arriba hacia abajo", "De lado, desde la izquierda", "En diagonal desde delante"], "Ficha técnica de la lengua.", "S. 90"],
           ["¿Con qué se enfría el cliente tras el piercing de lengua?", ["Con cubitos de hielo, mejor de manzanilla", "Con espray de frío directamente en la lengua", "Con leche fría o yogur", "Con espray de lidocaína de la farmacia"], "Justo después de perforar.", "S. 90"],
-          ["¿Cuándo se puede acortar el barbell del piercing de lengua?", ["Tras unos 10 días", "Tras 2 días", "Tras 3 meses", "Nunca, la longitud se mantiene"], "Joya inicial: barbell de 20 mm.", "S. 90"]
+          ["¿Cuándo se puede acortar el barbell del piercing de lengua?", ["Tras unos 10 días", "Tras 2 días", "Tras 3 meses", "Nunca, la longitud se mantiene"], "Joya inicial: barbell de 20 mm. Solo el piercer lo acorta, en condiciones estériles.", "S. 90"]
         ]
       },
       {
@@ -150,15 +150,15 @@ window.KURS = window.KURS || { module: [] };
           db("Cheek", "Piercing de mejilla, a menudo en el lugar de un hoyuelo. Por aquí pasan arterias y nervios importantes; existe riesgo de desfiguración, y los hoyuelos causados por la perforación pueden quedar para siempre.", "barbell, labret", "18G", "Snaptile, pinza de gasa", "Solo para piercers profesionales. Recházalo si eres principiante.", "S. 92")
         ],
         fragen: [
-          ["¿Por qué los principiantes rechazan el Cheek?", ["Por ahí pasan arterias y nervios importantes", "Porque solo se puede hacer con punch", "Porque se perfora con 14G", "Porque no existe pinza para él"], "Riesgo de desfiguración.", "S. 92"],
-          ["¿Qué puede quedar para siempre tras un Cheek?", ["Hoyuelos causados por la perforación", "Un hundimiento del labio", "Insensibilidad en la lengua", "Que el labret se salga"], "Ficha técnica del Cheek.", "S. 92"]
+          ["Según la ficha técnica, ¿qué riesgo tiene un piercing Cheek?", ["Una desfiguración de la cara", "La pérdida del sentido del gusto", "Una parálisis de la lengua", "Un desgarro del bermellón del labio"], "Por ahí pasan arterias y nervios importantes; los principiantes rechazan el Cheek.", "S. 92"],
+          ["Caso: un cliente quiere piercings Cheek y tú todavía eres principiante. ¿Qué haces?", ["Lo rechazo y lo remito a un piercer con experiencia", "Los perforo con la cánula de 18G", "Los perforo a mano alzada, sin pinza", "Perforo primero solo un lado"], "Ficha técnica del Cheek: solo para piercers profesionales.", "S. 92"]
         ]
       },
       {
         titel: "Ombligo",
         seite: "S. 94",
         inhalt: [
-          db("Ombligo", "En vertical por encima o por debajo del ombligo, canal de aproximadamente 1 cm de longitud. Perforar con el cliente tumbado: facilita el trabajo y previene problemas circulatorios. Cubrir con un apósito estéril y recomendar apósitos durante los 3 días siguientes.", "barbell curvo (banana), BCR", "16G", "Snaptile, a mano alzada", "", "S. 94")
+          db("Ombligo", "En vertical por encima o por debajo del ombligo, canal de aproximadamente 1 cm de longitud. Perforar con el cliente tumbado: facilita el trabajo y previene problemas circulatorios. Comprobar antes la marca con el cliente de pie, porque el ombligo se desplaza al tumbarse (nota de la Academia). Cubrir con un apósito estéril y recomendar apósitos durante los 3 días siguientes.", "barbell curvo (banana), BCR", "16G", "Snaptile, a mano alzada", "", "S. 94")
         ],
         fragen: [
           ["¿Cómo se perfora un piercing de ombligo?", ["Tumbado, para prevenir problemas circulatorios", "De pie, para que el ombligo quede bien", "Sentado", "De pie y luego se revisa tumbado"], "También facilita el trabajo.", "S. 94"],
@@ -194,7 +194,7 @@ window.KURS = window.KURS || { module: [] };
         inhalt: [
           { typ: "text", text: "Esta lección trata los piercings íntimos masculinos del libro del curso, sin imágenes." },
           db("Frenulum", "Un poco por debajo del frenillo del prepucio, para que el frenillo no se desgarre. Suele cicatrizar en un plazo de cuatro a ocho semanas; en hombres circuncidados solo es posible si queda suficiente frenillo.", "barbell curvo (banana), barbell", "16G, 18G", "tubo receptor, a mano alzada, pinza de gasa", "", "S. 97"),
-          db("Príncipe Alberto", "Desde la uretra hasta la parte inferior del pene. Primero retirar un poco la aguja dentro de la cánula, colocarla correctamente y perforar empujando la aguja hacia delante. La cánula de plástico no debe doblarse.", "BCR", "14G", "a mano alzada", "Estándar de la Academia: cánula 14G (en el libro del curso: 14G o 16G).", "S. 98"),
+          db("Príncipe Alberto", "Desde la uretra hasta la parte inferior del pene. Primero retirar un poco la aguja dentro de la cánula, colocarla correctamente y perforar empujando la aguja hacia delante. La vaina de plástico no debe doblarse.", "BCR", "14G", "a mano alzada", "Estándar de la Academia: cánula 14G (en el libro del curso: 14G o 16G).", "S. 98"),
           db("Dydoe", "A través del borde del glande, principalmente en hombres circuncidados.", "barbell curvo (banana), barbell", "16G, 18G", "a mano alzada", "", "S. 99"),
           db("Pubic", "En la base del pene, normalmente en horizontal, justo en la zona de transición. Piercing de superficie, tiende a salirse; eliminar antes el vello púbico.", "BCR, barbell, barra de superficie, barbell curvo (banana)", "16G, 18G", "a mano alzada, pinza de gasa", "", "S. 100"),
           db("Hafada", "También llamado escrotal. En la piel del escroto, no muy profundo; bajo riesgo de que se salga.", "BCR, barbell curvo (banana)", "16G, 18G", "a mano alzada, Snaptile, pinza de gasa", "", "S. 101"),

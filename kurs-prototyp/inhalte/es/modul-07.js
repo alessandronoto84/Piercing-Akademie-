@@ -110,7 +110,7 @@ KURS.module.push({
           ["Alicate de corte mini", "Corta la joya cuando una bola ya no se puede desenroscar"]
         ] },
         { typ: "achtung", text: "Con el cónico de inserción, procede siempre con mucho cuidado para evitar lesiones." },
-        { typ: "galerie", titel: "Las herramientas auxiliares", bilder: [["einfuehrhilfe", "Cónico de inserción"], ["klemmzange", "Pinza de sujeción"], ["schere", "Tijeras"], ["kugelgreifer", "Pinza para bolas"], ["messschieber", "Calibre"], ["ringoeffnungszange", "Pinza para abrir aros"], ["ringschliesszange", "Pinza para cerrar aros"], ["taschenlampe", "Linterna (luz verde)"], ["seitenschneider", "Alicate de corte mini"]], text: "Libro del curso págs. 66–69 y 73." }
+        { typ: "galerie", titel: "Las herramientas auxiliares", bilder: [["einfuehrhilfe", "Cónico de inserción"], ["klemmzange", "Pinza de sujeción"], ["schere", "Tijeras"], ["kugelgreifer", "Pinza para bolas"], ["messschieber", "Calibre"], ["ringoeffnungszange", "Pinza para abrir aros"], ["ringschliesszange", "Pinza para cerrar aros"], ["taschenlampe", "Linterna (con modo o accesorio de luz verde)"], ["seitenschneider", "Alicate de corte mini"]], text: "Libro del curso págs. 66–69 y 73." }
       ],
       fragen: [
         ["¿Para qué sirven las tijeras al perforar?", ["Para acortar el tubito de plástico tras la perforación", "Para acortar la joya inicial", "Para cortar el vello en la zona de perforación", "Para abrir el envase estéril"], "Así la joya entra con más facilidad.", "S. 67"],

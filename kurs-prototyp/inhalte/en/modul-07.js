@@ -110,7 +110,7 @@ KURS.module.push({
           ["Mini side cutter", "Cuts through jewelry when a ball can no longer be loosened"]
         ] },
         { typ: "achtung", text: "Always proceed very carefully with the insertion taper to avoid injury." },
-        { typ: "galerie", titel: "The auxiliary tools", bilder: [["einfuehrhilfe", "Insertion taper"], ["klemmzange", "Holding pliers"], ["schere", "Scissors"], ["kugelgreifer", "Ball grabber"], ["messschieber", "Caliper"], ["ringoeffnungszange", "Ring opening pliers"], ["ringschliesszange", "Ring closing pliers"], ["taschenlampe", "Flashlight (green light)"], ["seitenschneider", "Mini side cutter"]], text: "Course book pp. 66–69 and 73." }
+        { typ: "galerie", titel: "The auxiliary tools", bilder: [["einfuehrhilfe", "Insertion taper"], ["klemmzange", "Holding pliers"], ["schere", "Scissors"], ["kugelgreifer", "Ball grabber"], ["messschieber", "Caliper"], ["ringoeffnungszange", "Ring opening pliers"], ["ringschliesszange", "Ring closing pliers"], ["taschenlampe", "Flashlight (with green-light mode or attachment)"], ["seitenschneider", "Mini side cutter"]], text: "Course book pp. 66–69 and 73." }
       ],
       fragen: [
         ["What are the scissors for when piercing?", ["For shortening the plastic tube after piercing", "For shortening the initial jewelry", "For cutting hair at the piercing site", "For opening the sterile packaging"], "This makes it easier to insert the jewelry.", "S. 67"],

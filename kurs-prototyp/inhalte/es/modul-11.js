@@ -30,12 +30,11 @@ KURS.module.push({
       titel: "Planificar los locales",
       seite: "S. 25–26, 38",
       inhalt: [
-        { typ: "video", id: "studio-raum", text: "Sala de tratamiento con camilla lavable, lavamanos y autoclave.", schleife: true },
         { typ: "liste", punkte: [
           "Puesto de trabajo separado de la sala de espera mediante obra o, como mínimo, con un tabique; lo ideal es una sala propia.",
           "Lavamanos con agua corriente y dispensadores de desinfectante, jabón líquido y toallas desechables, que se pueda usar sin contacto de las manos y sin salpicar el puesto de trabajo.",
           "Camilla y muebles con superficie lisa y lavable.",
-          "Aseo independiente con lavamanos, dispensadores, papelera y contenedor higiénico.",
+          "Aseo independiente con lavamanos, dispensadores, papelera con tapa y contenedor higiénico.",
           "Botiquín de primeros auxilios y números de emergencia bien visibles."
         ] },
         { typ: "grafik", id: "studio3d" },

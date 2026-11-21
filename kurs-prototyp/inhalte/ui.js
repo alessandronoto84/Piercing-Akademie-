@@ -25,6 +25,11 @@ en: {
 "Angemeldet als {email}. Dein Zugang ist persönlich und gilt bis {datum}.": "Logged in as {email}. Your access is personal and valid until {datum}.",
 // Bausteine
 "Ergänzung der Akademie": "Academy note",
+"Angabe der Akademie": "Academy standard",
+"Siehe Modul {a}": "See module {a}",
+"Siehe Module {a} und {b}": "See modules {a} and {b}",
+"Alle {n} Fragen des Moduls in zufälliger Reihenfolge. Bestanden ab {b} richtigen Antworten": "All {n} questions of the module in random order. Pass mark: {b} correct answers",
+"Alle {m} Fragen dieses Moduls in zufälliger Reihenfolge. Bestanden ab {b} richtigen Antworten.": "All {m} questions of this module in random order. Pass mark: {b} correct answers.",
 "Im Kursbuch nachlesen": "Read up in the course book",
 "Merke": "Remember",
 "Achtung": "Caution",
@@ -294,12 +299,12 @@ en: {
 // Titelbilder der Module (inhalte/bilder-ki.js)
 "Arbeitsplatz auf steriler Abdeckung: Hautmarker, Sterilbeutel, Schale mit Ringen, Barbell, Hufeisenringe und schwarze Handschuhe": "Workstation on a sterile drape: skin marker, sterile pouches, tray with rings, barbell, horseshoe rings and black gloves",
 "Klemmbrett mit leerem Einverständnisformular und Unterschriftszeile, Kugelschreiber und Ausweisheft": "Clipboard with a blank consent form and signature line, ballpoint pen and ID booklet",
-"Anatomisches Ohrmodell und Modell der Hautschichten auf einem Tisch": "Anatomical ear model and model of the skin layers on a table",
+"Dreidimensionale Darstellung der Hautschichten: Oberhaut, Lederhaut und Unterhaut": "Three-dimensional illustration of the skin layers: epidermis, dermis and subcutis",
 "Schale mit Eiswürfeln, Kältespray und Salbentube auf blauer Abdeckung": "Bowl of ice cubes, cooling spray and a tube of ointment on a blue drape",
 "Autoklav mit geöffneter Tür, daneben verpacktes Sterilgut mit Indikatorstreifen": "Autoclave with open door, next to it packed sterile goods with indicator strips",
 "Titanschmuck auf Stein: Barbell, Curved Barbell, Labret und Ball Closure Ring": "Titanium jewelry on stone: barbell, curved barbell, labret and ball closure ring",
 "Piercingzange, Braunüle, Nadelauffangrohr und Kugelgreifer auf steriler Abdeckung": "Piercing clamp, IV cannula (“Braunüle”), receiving tube and ball grabber on a sterile drape",
-"Ohr mit vier Kugelsteckern: Lobe, Upper Lobe, Tragus und Helix": "Ear with four ball studs: Lobe, Upper Lobe, Tragus and Helix",
+"Ohr mit Industrial-Piercing (Datenblattfoto aus dem Kursbuch, S. 84)": "Ear with an Industrial piercing (data sheet photo from the course book, p. 84)",
 "Erste-Hilfe-Set, Glas Wasser, Traubenzucker und Checkliste": "First aid kit, glass of water, glucose tablets and checklist",
 "Pflegespray, sterile Kompressen, Kamillentee und Pflegehinweise": "Aftercare spray, sterile compresses, chamomile tea and aftercare instructions",
 "Eingerichteter Behandlungsraum mit Liege, Handwaschbecken und Autoklav": "Furnished treatment room with couch, hand basin and autoclave"
@@ -325,6 +330,11 @@ es: {
 "Angemeldet als {email}. Dein Zugang ist persönlich und gilt bis {datum}.": "Sesión iniciada como {email}. Tu acceso es personal y válido hasta el {datum}.",
 // Bausteine
 "Ergänzung der Akademie": "Nota de la Academia",
+"Angabe der Akademie": "Estándar de la Academia",
+"Siehe Modul {a}": "Ver módulo {a}",
+"Siehe Module {a} und {b}": "Ver módulos {a} y {b}",
+"Alle {n} Fragen des Moduls in zufälliger Reihenfolge. Bestanden ab {b} richtigen Antworten": "Las {n} preguntas del módulo en orden aleatorio. Se aprueba con {b} respuestas correctas",
+"Alle {m} Fragen dieses Moduls in zufälliger Reihenfolge. Bestanden ab {b} richtigen Antworten.": "Las {m} preguntas de este módulo en orden aleatorio. Se aprueba con {b} respuestas correctas.",
 "Im Kursbuch nachlesen": "Consultar en el libro del curso",
 "Merke": "Recuerda",
 "Achtung": "Atención",
@@ -594,12 +604,12 @@ es: {
 // Titelbilder der Module (inhalte/bilder-ki.js)
 "Arbeitsplatz auf steriler Abdeckung: Hautmarker, Sterilbeutel, Schale mit Ringen, Barbell, Hufeisenringe und schwarze Handschuhe": "Puesto de trabajo sobre un paño estéril: marcador cutáneo, bolsas estériles, bandeja con aros, barbell, herraduras y guantes negros",
 "Klemmbrett mit leerem Einverständnisformular und Unterschriftszeile, Kugelschreiber und Ausweisheft": "Portapapeles con un formulario de consentimiento en blanco y línea para la firma, bolígrafo y documento de identidad",
-"Anatomisches Ohrmodell und Modell der Hautschichten auf einem Tisch": "Modelo anatómico de oreja y modelo de las capas de la piel sobre una mesa",
+"Dreidimensionale Darstellung der Hautschichten: Oberhaut, Lederhaut und Unterhaut": "Representación tridimensional de las capas de la piel: epidermis, dermis e hipodermis",
 "Schale mit Eiswürfeln, Kältespray und Salbentube auf blauer Abdeckung": "Cuenco con cubitos de hielo, espray de frío y tubo de pomada sobre un paño azul",
 "Autoklav mit geöffneter Tür, daneben verpacktes Sterilgut mit Indikatorstreifen": "Autoclave con la puerta abierta y, al lado, material estéril empaquetado con tiras indicadoras",
 "Titanschmuck auf Stein: Barbell, Curved Barbell, Labret und Ball Closure Ring": "Joyas de titanio sobre piedra: barbell, barbell curvo, labret y BCR (aro de bola cautiva)",
 "Piercingzange, Braunüle, Nadelauffangrohr und Kugelgreifer auf steriler Abdeckung": "Pinza de piercing, cánula intravenosa («Braunüle»), tubo receptor y pinza para bolas sobre un paño estéril",
-"Ohr mit vier Kugelsteckern: Lobe, Upper Lobe, Tragus und Helix": "Oreja con cuatro pendientes de bola: Lobe, Upper Lobe, Tragus y Helix",
+"Ohr mit Industrial-Piercing (Datenblattfoto aus dem Kursbuch, S. 84)": "Oreja con piercing Industrial (foto de la ficha técnica del libro del curso, pág. 84)",
 "Erste-Hilfe-Set, Glas Wasser, Traubenzucker und Checkliste": "Botiquín de primeros auxilios, vaso de agua, glucosa y lista de control",
 "Pflegespray, sterile Kompressen, Kamillentee und Pflegehinweise": "Espray de cuidado, compresas estériles, infusión de manzanilla e instrucciones de cuidado",
 "Eingerichteter Behandlungsraum mit Liege, Handwaschbecken und Autoklav": "Sala de tratamiento equipada con camilla, lavamanos y autoclave"

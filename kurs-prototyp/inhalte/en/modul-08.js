@@ -17,12 +17,12 @@ window.KURS = window.KURS || { module: [] };
         seite: "S. 74",
         inhalt: [
           { typ: "text", text: "Every piercing has a data sheet with four details: where it is placed, which initial jewelry fits, which cannula size (or punch) you use and what you hold the area with (clamp, receiving tube or freehand)." },
-          { typ: "achtung", text: "Initial jewelry always needs an extra length of about 4 mm, because the fresh piercing channel can swell. During healing it must never be constricted by balls or discs." },
+          { typ: "achtung", text: "Initial jewelry always needs an extra length of about 4 mm, because the fresh piercing channel can swell. During healing it must never be constricted by balls or discs. This applies to bars; for rings (for example helix, septum, Prince Albert), what matters is a sufficiently large inner diameter." },
           { typ: "merke", text: "In the following lessons you learn each piercing individually. After each lesson, the course tests you on the data sheets: initial jewelry, cannula and clamp." }
         ],
         fragen: [
           ["What information does every data sheet contain?", ["Placement, initial jewelry, cannula and clamp", "Placement, price and healing time", "Initial jewelry, aftercare product and price", "Only cannula and clamp"], "All data sheets are structured this way.", "S. 74"],
-          ["How much extra length does initial jewelry need?", ["About 4 mm", "About 2 mm", "About 6 mm", "About 1 cm"], "The fresh piercing channel can swell.", "S. 74"],
+          ["Case: The piercing channel is 8 mm long. How long do you choose the bar of the initial jewelry?", ["About 12 mm", "Exactly 8 mm", "About 9 mm", "About 20 mm"], "Channel length plus about 4 mm extra length, because the fresh channel can swell.", "S. 74"],
           ["What does “freehand” mean in the data sheet?", ["You pierce without a clamp or receiving tube", "The client holds the area themselves", "You pierce without gloves", "You pierce without marking"], "Instead of a clamp or receiving tube.", "S. 74–110"]
         ]
       },
@@ -111,7 +111,7 @@ window.KURS = window.KURS || { module: [] };
         ],
         fragen: [
           ["About how long is the piercing channel in an eyebrow piercing?", ["8 mm", "4 mm", "12 mm", "2 cm"], "Eyebrow data sheet.", "S. 89"],
-          ["Where can the eyebrow piercing be placed?", ["Only in the outer third", "In the inner third", "In the middle third", "Anywhere, if pierced shallowly"], "Nerves and vessels emerge on the inner side; injuring them can cause numbness of the forehead and upper eyelid.", "S. 89"],
+          ["Case: A client wants her eyebrow piercing right on the inside, near the bridge of the nose. What do you do?", ["I decline and offer the outer third instead", "I pierce there, but especially shallowly", "I pierce there with a thinner cannula", "I pierce there if she signs for it"], "Nerves and vessels emerge on the inner side; injuring them can cause numbness of the forehead and upper eyelid.", "S. 89"],
           ["As a beginner, how do you respond to a request for a Bridge?", ["I turn it down", "I pierce it especially shallowly", "I pierce it especially deep", "I pierce it with 14G"], "Turn it down as a beginner.", "S. 91"]
         ]
       },
@@ -133,13 +133,13 @@ window.KURS = window.KURS || { module: [] };
         seite: "S. 87, 90",
         inhalt: [
           db("Lip frenulum (Smiley)", "Through the frenulum that connects the middle of the upper lip to the gum; only visible when smiling.", "horseshoe (circular barbell), BCR", "18G", "septum forceps, freehand", "", "S. 87"),
-          db("Tongue", "Vertically in the middle of the tongue. Do not injure the tongue frenulum, pierce from below upwards, cool with ice cubes immediately (recommend ice cubes made from chamomile tea), do not use PTFE, point out possible dental damage.", "20 mm barbell (shorter after 10 days if needed)", "16G", "Snaptile, gauze clamp, tongue forceps", "", "S. 90")
+          db("Tongue", "Vertically in the middle of the tongue. Do not injure the tongue frenulum, pierce from below upwards, cool with ice cubes immediately (recommend ice cubes made from chamomile tea), do not use PTFE, point out possible dental damage.", "20 mm barbell (shorter after 10 days if needed)", "16G", "Snaptile, gauze clamp, tongue forceps", "Only the piercer shortens it, under sterile conditions and with initial-jewelry material (see module 10).", "S. 90")
         ],
         fragen: [
           ["Why is the lip frenulum piercing also called Smiley?", ["Because it is only visible when smiling", "Because it forms a smile", "Because it goes through the corners of the mouth", "Because it is a labret with a smiley ball"], "Through the frenulum.", "S. 87"],
           ["In which direction is the tongue pierced?", ["From below upwards", "From above downwards", "Sideways from the left", "Diagonally from the front"], "Tongue data sheet.", "S. 90"],
           ["What does the client use to cool the area after a tongue piercing?", ["Ice cubes, ideally made from chamomile tea", "Cold spray directly on the tongue", "Cold milk or yogurt", "Lidocaine spray from the pharmacy"], "Immediately after piercing.", "S. 90"],
-          ["When can the barbell in a tongue piercing be shortened?", ["After about 10 days", "After 2 days", "After 3 months", "Never, the length stays the same"], "Initial jewelry 20 mm barbell.", "S. 90"]
+          ["When can the barbell in a tongue piercing be shortened?", ["After about 10 days", "After 2 days", "After 3 months", "Never, the length stays the same"], "Initial jewelry 20 mm barbell. Only the piercer shortens it, under sterile conditions.", "S. 90"]
         ]
       },
       {
@@ -150,15 +150,15 @@ window.KURS = window.KURS || { module: [] };
           db("Cheek", "Cheek piercing, often at the site of a dimple. Important arteries and nerves run here; there is a risk of disfigurement, and dimples created by the piercing can remain permanently.", "barbell, labret", "18G", "Snaptile, gauze clamp", "Only by professional piercers. Turn it down as a beginner.", "S. 92")
         ],
         fragen: [
-          ["Why do beginners turn down the Cheek?", ["Important arteries and nerves run there", "Because it can only be done with a punch", "Because it is pierced with 14G", "Because there is no clamp for it"], "Risk of disfigurement.", "S. 92"],
-          ["What can remain permanently after a Cheek?", ["Dimples created by the piercing", "Sinking of the lip", "Numbness of the tongue", "The labret growing out"], "Cheek data sheet.", "S. 92"]
+          ["According to the data sheet, what is the risk with a Cheek piercing?", ["Disfigurement of the face", "Loss of the sense of taste", "Paralysis of the tongue", "A tear in the red of the lip"], "Important arteries and nerves run there; beginners turn the Cheek down.", "S. 92"],
+          ["Case: A client wants Cheek piercings and you are still a beginner. What do you do?", ["I decline and refer him to an experienced piercer", "I pierce them with the 18G cannula", "I pierce them freehand without a clamp", "I pierce only one side first"], "Cheek data sheet: only by professional piercers.", "S. 92"]
         ]
       },
       {
         titel: "Navel",
         seite: "S. 94",
         inhalt: [
-          db("Navel", "Vertically above or below the navel, piercing channel about 1 cm long. Pierce with the client lying down: this makes the work easier and prevents circulatory problems. Cover with a sterile bandage and recommend bandages for the next 3 days.", "curved barbell (banana), BCR", "16G", "Snaptile, freehand", "", "S. 94")
+          db("Navel", "Vertically above or below the navel, piercing channel about 1 cm long. Pierce with the client lying down: this makes the work easier and prevents circulatory problems. Check the marking beforehand while the client is standing, because the navel shifts when lying down (Academy note). Cover with a sterile bandage and recommend bandages for the next 3 days.", "curved barbell (banana), BCR", "16G", "Snaptile, freehand", "", "S. 94")
         ],
         fragen: [
           ["How is a navel piercing done?", ["Lying down, to prevent circulatory problems", "Standing, so the navel is positioned correctly", "Sitting", "Standing, then checked lying down"], "It also makes the work easier.", "S. 94"],
@@ -194,7 +194,7 @@ window.KURS = window.KURS || { module: [] };
         inhalt: [
           { typ: "text", text: "This lesson covers the male intimate piercings from the course book, without images." },
           db("Frenulum", "Slightly below the frenulum of the foreskin, so the frenulum does not tear. Usually heals in four to eight weeks; in circumcised men only possible if there is enough frenulum left.", "curved barbell (banana), barbell", "16G, 18G", "receiving tube, freehand, gauze clamp", "", "S. 97"),
-          db("Prince Albert", "From the urethra to the underside of the penis. First pull the needle back slightly into the cannula, position correctly, then pierce by pushing the needle forward. The plastic cannula must not kink.", "BCR", "14G", "freehand", "Academy standard: 14G cannula (course book: 14G or 16G).", "S. 98"),
+          db("Prince Albert", "From the urethra to the underside of the penis. First pull the needle back slightly into the cannula, position correctly, then pierce by pushing the needle forward. The plastic sheath must not kink.", "BCR", "14G", "freehand", "Academy standard: 14G cannula (course book: 14G or 16G).", "S. 98"),
           db("Dydoe", "Through the rim of the glans, mostly in circumcised men.", "curved barbell (banana), barbell", "16G, 18G", "freehand", "", "S. 99"),
           db("Pubic", "At the base of the penis, usually horizontally, exactly at the transition. Surface piercing, tends to grow out; remove pubic hair beforehand.", "BCR, barbell, surface bar, curved barbell (banana)", "16G, 18G", "freehand, gauze clamp", "", "S. 100"),
           db("Hafada", "Also called scrotal. In the skin of the scrotum, not very deep; low risk of growing out.", "BCR, curved barbell (banana)", "16G, 18G", "freehand, Snaptile, gauze clamp", "", "S. 101"),

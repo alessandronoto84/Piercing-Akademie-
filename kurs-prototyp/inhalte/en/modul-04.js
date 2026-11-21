@@ -89,7 +89,7 @@ KURS.module.push({
       seite: "S. 11–12",
       inhalt: [
         { typ: "text", text: "While signals are being relayed in the spinal cord, the body can dampen the perception of pain with its own substances (endorphins). Some painkillers, for example opiates, act at this point." },
-        { typ: "achtung", text: "In piercing it is unusual, and in Germany prohibited, to use prescription anesthetics, for example opiate-based ones. Regional anesthesia of the spinal cord, nerve plexuses or individual nerves may only be performed by a doctor." },
+        { typ: "achtung", text: "In piercing it is unusual, and in Germany prohibited, to use prescription anesthetics and painkillers, for example opiates. Regional anesthesia of the spinal cord, nerve plexuses or individual nerves may only be performed by a doctor." },
         { typ: "tabelle", kopf: ["Procedure", "Effect", "Who"], zeilen: [
           ["General anesthesia", "Affects the brain", "Only a specialist doctor (anesthesiologist)"],
           ["Regional anesthesia", "Inhibits parts of the spinal cord, nerve plexuses or individual nerves for a limited time", "Only a doctor"],
@@ -100,7 +100,7 @@ KURS.module.push({
       ],
       fragen: [
         ["Which of the body’s own substances dampen pain in the spinal cord?", ["Endorphins", "Histamines", "Prostaglandins", "Bradykinins"], "Opiates act here.", "S. 11"],
-        ["Are piercers allowed to use opiate-based prescription anesthetics?", ["No", "Yes, with written consent", "Only for intimate piercings", "Yes, if a doctor has prescribed them"], "Unusual and prohibited in Germany.", "S. 11"],
+        ["Are piercers allowed to use prescription anesthetics or painkillers such as opiates?", ["No", "Yes, with written consent", "Only for intimate piercings", "Yes, if a doctor has prescribed them"], "Unusual and prohibited in Germany.", "S. 11"],
         ["Which anesthesia may only be performed by a doctor?", ["Regional anesthesia of nerves, nerve plexuses or spinal cord", "Cooling with ice spray", "Applying an over-the-counter ointment", "Cooling with ice cubes"], "See ch. 4.", "S. 11"],
         ["What is local anesthesia based on?", ["On acting on the peripheral nervous system", "On acting on the brain", "On blocking the spinal cord", "On constricting the blood vessels"], "It blocks transmission at the nerve endings.", "S. 11–12"],
         ["Why do you work in a separate, quiet room?", ["For hygiene and to protect against stress factors", "Because the trade office requires it", "So that you can work faster", "Only because of how loud the autoclave is"], "Telephone, doorbell and people coming and going are disruptive.", "S. 12"],
@@ -152,8 +152,8 @@ KURS.module.push({
       inhalt: [
         { typ: "liste", punkte: [
           "With active substances that affect heart rhythm or heart rate (antiarrhythmics, beta blockers, calcium channel blockers), the effect of lidocaine on the heart can be increased or reduced.",
-          "Other anesthetics, blood-pressure-lowering beta blockers (propranolol, metoprolol, nadolol), diltiazem, verapamil, cimetidine, amiodarone, fluvoxamine and vasoconstricting substances such as adrenaline or noradrenaline increase the effect. This raises the risk of side effects.",
-          "Together with ergot alkaloids or epinephrine, blood pressure can drop dangerously.",
+          "Other anesthetics, blood-pressure-lowering beta blockers (propranolol, metoprolol, nadolol), diltiazem, verapamil, cimetidine, amiodarone, fluvoxamine and vasoconstricting substances such as adrenaline (epinephrine) or noradrenaline increase the effect. This raises the risk of side effects.",
+          "According to the course book, blood pressure can drop dangerously together with ergot alkaloids or epinephrine. Epinephrine is another name for adrenaline (see the previous point): the danger lies in the combination with lidocaine. Details are given in the product’s package leaflet.",
           "Sedatives (benzodiazepines) and aprindine increase the side effects.",
           "Antiepileptics reduce the effect; muscle relaxants are enhanced by lidocaine."
         ] },
@@ -161,7 +161,7 @@ KURS.module.push({
       ],
       fragen: [
         ["Which medicines can lidocaine interact with dangerously?", ["With heart rhythm medicines, e.g. beta blockers", "With antibiotics such as penicillin or amoxicillin", "With vitamin and mineral supplements", "With the contraceptive pill and other hormones"], "Especially when used in the mouth.", "S. 14"],
-        ["What can lidocaine cause together with ergot alkaloids or epinephrine?", ["A dangerous drop in blood pressure", "Stronger numbing without risk", "An allergic skin reaction", "A nickel allergy"], "This is the course book’s warning.", "S. 14"],
+        ["What can lidocaine cause together with ergot alkaloids or epinephrine?", ["A dangerous drop in blood pressure", "Stronger numbing without risk", "An allergic skin reaction", "A nickel allergy"], "This is the course book’s warning. Epinephrine is the same as adrenaline.", "S. 14"],
         ["How do antiepileptics affect lidocaine?", ["They reduce the effect", "They greatly increase the effect", "They only increase the side effects", "They have no influence"], "Muscle relaxants, on the other hand, are enhanced.", "S. 14"],
         ["What do sedatives (benzodiazepines) do together with lidocaine?", ["They increase the side effects", "They reduce the effect", "They cancel the numbing", "They have no influence"], "The same goes for aprindine.", "S. 14"],
         ["Case: A client takes beta blockers and wants lidocaine ointment for a tongue piercing. What is correct?", ["I do without lidocaine because an interaction is possible", "I only use half the amount", "I apply it, because ointment isn’t absorbed in the mouth", "Beta blockers don’t matter with ointments"], "Interactions must be ruled out, especially in the mouth.", "S. 13–14"]

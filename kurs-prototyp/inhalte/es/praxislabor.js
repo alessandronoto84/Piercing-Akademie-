@@ -1,7 +1,7 @@
 /* Laboratorio de práctica: ejercicios en el modelo de práctica de silicona con autocontrol.
-   Base: procedimiento del módulo 09 (pasos 1–26, libro del curso págs. 111–112), listas de control del módulo 05 y el ejercicio del módulo 08
+   Base: procedimiento del módulo 9 (pasos 1–26, libro del curso págs. 111–112), listas de control del módulo 5 y el ejercicio del módulo 8
    («Practica en la oreja de silicona: marcar la zona, colocar la pinza, posicionar la cánula (sin perforar)»).
-   Aquí nunca se perfora: eso queda reservado para el día de práctica bajo supervisión.
+   En los ejercicios en seco no se perfora; solo quien tiene el kit de práctica (paquete Completo) perfora la oreja de silicona (ver labor.stich); nunca a personas.
    Formato: { id, titel, modul (referencia), material: [...], schritte: [...], kontrolle: [...] } */
 window.KURS = window.KURS || { module: [] };
 window.KURS.labor = {
@@ -39,7 +39,7 @@ window.KURS.labor = {
       material: ["Desinfectante de manos", "Guantes desechables de tu talla"],
       schritte: [
         "Uñas cortas, sin esmalte, ninguna joya en manos y antebrazos.",
-        "Desinfectar las manos como se describe en el módulo 05; el tiempo de actuación figura en el desinfectante.",
+        "Desinfectar las manos como se describe en el módulo 5; el tiempo de actuación figura en el desinfectante.",
         "Esperar a que las manos estén completamente secas.",
         "Ponerse los guantes sin tocar el exterior con la mano desnuda más de lo necesario.",
         "Quitarse los guantes sin que el exterior toque la piel y desecharlos. Después, desinfectarse las manos."
@@ -73,15 +73,15 @@ window.KURS.labor = {
       id: "anzeichnen-modell",
       titel: "Marcar en el modelo de práctica",
       modul: 8,
-      material: ["Modelo de práctica de silicona", "Marcador cutáneo desechable", "Fichas técnicas del módulo 08"],
+      material: ["Modelo de práctica de silicona", "Marcador cutáneo desechable", "Fichas técnicas del módulo 8"],
       schritte: [
-        "Leer las fichas técnicas de lobe, helix y tragus en el módulo 08.",
+        "Leer las fichas técnicas de lobe, helix y tragus en el módulo 8.",
         "Marcar en el modelo los puntos de entrada y de salida de cada uno de estos piercings (procedimiento, paso 9).",
         "En lobe en ambos lados: marcar los lóbulos izquierdo y derecho a la misma altura y comprobarlo de frente, por ejemplo con una foto.",
         "Pedir a alguien que mire la marca como si fuera el cliente (paso 10) y corregirla si hace falta."
       ],
       kontrolle: [
-        "Cada marca coincide con la ficha técnica del módulo 08.",
+        "Cada marca coincide con la ficha técnica del módulo 8.",
         "En lobe en ambos lados, los dos puntos están a la misma altura en la foto de frente.",
         "He mostrado la marca y he explicado por qué está ahí.",
         "Sé qué hacer si al cliente no le gusta la marca."
@@ -96,7 +96,7 @@ window.KURS.labor = {
         "Ponerse los guantes (ejercicio 2).",
         "Colocar la pinza en la marca (procedimiento, paso 11) de modo que los puntos de entrada y de salida queden en la abertura.",
         "Posicionar la cánula con capuchón en el punto de entrada, en dirección al punto de salida, desde el lado visible (paso 12). No perforar.",
-        "Decir en voz alta lo que vendría a continuación: pasos 13 a 19 del módulo 09.",
+        "Decir en voz alta lo que vendría a continuación: pasos 13 a 19 del módulo 9.",
         "Soltar la pinza, dejar la cánula con capuchón. Repetir cinco veces, también en otras zonas."
       ],
       kontrolle: [
@@ -113,7 +113,7 @@ window.KURS.labor = {
       material: ["Plantilla de práctica (página 2) o una hoja en blanco"],
       schritte: [
         "Escribe de memoria los 26 pasos del procedimiento del módulo 9, con los añadidos de la Academia (7a, 8a, 9a, 13a).",
-        "Compararlos con el módulo 09 y completar en rojo lo que falte.",
+        "Compararlos con el módulo 9 y completar en rojo lo que falte.",
         "Repetirlo al día siguiente hasta que todo esté bien sin rojo.",
         "Explicar en voz alta las instrucciones de cuidado (pasos 24 y 25) a otra persona como si fuera tu cliente."
       ],
@@ -127,10 +127,10 @@ window.KURS.labor = {
       id: "notfall",
       titel: "Simular una emergencia",
       modul: 9,
-      material: ["Lista de control «Tras un pinchazo con aguja»", "Módulo 09, lección «Problemas circulatorios y emergencias»"],
+      material: ["Lista de control «Tras un pinchazo con aguja»", "Módulo 9, lección «Problemas circulatorios y emergencias»"],
       schritte: [
         "Simularlo con una segunda persona: durante la preparación, el «cliente» se pone pálido y dice que se marea. ¿Qué haces, paso a paso?",
-        "Después, compararlo con la lección «Problemas circulatorios y emergencias» del módulo 09.",
+        "Después, compararlo con la lección «Problemas circulatorios y emergencias» del módulo 9.",
         "Recitar de memoria la lista de control «Tras un pinchazo con aguja» y comparar."
       ],
       kontrolle: [
@@ -142,7 +142,7 @@ window.KURS.labor = {
   ]
 };
 
-/* Praxisaufgaben für die Module 01–04, 06, 10 und 11 (Trockenübungen, ohne Stechen). Grundlage: die jeweiligen Lektionen.
+/* Praxisaufgaben für die Module 1–4, 6, 10 und 11 (Trockenübungen, ohne Stechen). Grundlage: die jeweiligen Lektionen.
    Die Modulseite zeigt alle Aufgaben mit passendem „modul“; das Praxislabor zeigt sie nach Modulen sortiert. */
 window.KURS.labor.aufgaben = window.KURS.labor.aufgaben.concat([
   {
@@ -178,7 +178,7 @@ window.KURS.labor.aufgaben = window.KURS.labor.aufgaben.concat([
     "schritte": [
       "Coloca delante de ti la cánula (con el capuchón puesto) y la joya de práctica.",
       "Explica a quien te escucha, en un minuto como máximo, por qué en el estudio se perfora con una cánula estéril de un solo uso y no con la pistola de perforar orejas. Grábate con el móvil.",
-      "Escucha la grabación y compárala con las lecciones «Los motivos» y «Pistola o cánula: qué ocurre en el tejido».",
+      "Escucha la grabación y compárala con la lección «Por qué no la pistola de perforar orejas» (módulo 1).",
       "Repite la explicación hasta que puedas decirlo todo sin notas."
     ],
     "kontrolle": [
@@ -221,11 +221,11 @@ window.KURS.labor.aufgaben = window.KURS.labor.aufgaben.concat([
     "schritte": [
       "Con el marcador, marca en la oreja de silicona los puntos de lobe, helix, tragus, conch, rook y daith, y ponles nombre.",
       "Escribe junto a cada punto el tipo de tejido: tejido blando o cartílago.",
-      "Compara tus marcas con los tipos de piercing del módulo 08.",
+      "Compara tus marcas con los tipos de piercing del módulo 8.",
       "Ilumina tu propia oreja desde atrás con la linterna y busca los vasos sanguíneos."
     ],
     "kontrolle": [
-      "Los seis puntos están bien marcados (comparados con el módulo 08).",
+      "Los seis puntos están bien marcados (comparados con el módulo 8).",
       "Lo sé: el lobe es tejido blando; los otros cinco puntos están en cartílago.",
       "He reconocido vasos sanguíneos en mi oreja."
     ]
@@ -236,7 +236,7 @@ window.KURS.labor.aufgaben = window.KURS.labor.aufgaben.concat([
     "modul": 4,
     "material": [
       "una segunda persona como «cliente»",
-      "tu lista de preguntas sobre la tolerancia a la lidocaína (ejercicio del módulo 04)"
+      "tu lista de preguntas sobre la tolerancia a la lidocaína (ejercicio del módulo 4)"
     ],
     "schritte": [
       "Tu «cliente» está nervioso y pregunta: «¿Duele?». Responde con sinceridad y explica con calma lo que va a pasar.",
@@ -338,7 +338,7 @@ window.KURS.labor.einkauf = {
       "imSet": true
     },
     {
-      "name": "Cánulas intravenosas 18G y 16G, estériles",
+      "name": "Cánulas intravenosas 18G y 16G, estériles (para todos los ejercicios de perforación, al menos 8 × 18G y 2 × 16G)",
       "wofuer": "Manejar la cánula (ejercicio en seco con el capuchón puesto)",
       "module": [
         1,
@@ -366,6 +366,42 @@ window.KURS.labor.einkauf = {
       "imSet": true
     },
     {
+      "name": "Tijeras (para la vaina de plástico)",
+      "wofuer": "Acortar la vaina tras la perforación",
+      "module": [
+        7,
+        9
+      ],
+      "imSet": true
+    },
+    {
+      "name": "Pinza de sujeción",
+      "wofuer": "Sujetar la joya mientras se enrosca la bola",
+      "module": [
+        7,
+        9
+      ],
+      "imSet": true
+    },
+    {
+      "name": "Pinza para bolas",
+      "wofuer": "Coger las bolas y enroscarlas",
+      "module": [
+        7,
+        9
+      ],
+      "imSet": true
+    },
+    {
+      "name": "Pinzas para abrir y cerrar aros",
+      "wofuer": "Abrir y cerrar aros de bola cautiva",
+      "module": [
+        6,
+        7
+      ],
+      "imSet": true
+    },
+    {
       "name": "Marcador cutáneo desechable",
       "wofuer": "Marcar los puntos",
       "module": [
@@ -384,7 +420,7 @@ window.KURS.labor.einkauf = {
       "imSet": true
     },
     {
-      "name": "Joyas de práctica: labret, BCR (aro de bola cautiva), barbell de 38 mm",
+      "name": "Joyas de práctica: tres labrets, BCR (aro de bola cautiva), barbell de 38 mm",
       "wofuer": "Identificar, medir y colocar joyas",
       "module": [
         1,
@@ -442,20 +478,20 @@ window.KURS.labor.einkauf = {
 
 /* Ejercicios de perforación en la oreja de silicona: solo se perfora uno mismo con el paquete Completo (kit de práctica de la Academia).
    Todos los demás ven los mismos ejercicios en modo «solo mirar»: clip y procedimiento, sin autocontrol.
-   Se perfora exclusivamente en silicona. Procedimiento según el libro del curso págs. 111–112 (pasos 9–19), valores de las fichas técnicas (módulo 08).
+   Se perfora exclusivamente en silicona. Procedimiento según el libro del curso págs. 111–112 (pasos 9–19), valores de las fichas técnicas (módulo 8).
    clip: id de un clip en inhalte/clips.js. Si el clip todavía falta, los participantes no ven nada; en el modo de revisión aparece un aviso.
    Lista de rodaje de los clips: CLIPS-PRAXISLABOR.md en la carpeta principal. */
 window.KURS.labor.stich = {
   pakete: ["komplett"],
-  einleitung: "Con tu kit de práctica, ahora perforas tú mismo: en la oreja de silicona, siguiendo el procedimiento del módulo 09 y las fichas técnicas del módulo 08. Mira primero el clip y después practica. Lleva tu oreja de silicona perforada y el registro de práctica al día de práctica: allí revisaremos juntos tus canales de perforación.",
-  zuschauen: "En estos clips ves cómo se perfora: en la oreja de silicona, paso a paso, siguiendo el procedimiento del módulo 09 y las fichas técnicas del módulo 08. Fíjate bien y repite los pasos en voz alta. A perforar tú mismo aprendes el día de práctica bajo supervisión; con el paquete Completo practicas antes en casa con el kit de práctica.",
+  einleitung: "Con tu kit de práctica, ahora perforas tú mismo: en la oreja de silicona, siguiendo el procedimiento del módulo 9 y las fichas técnicas del módulo 8. Mira primero el clip y después practica. Lleva tu oreja de silicona perforada y el registro de práctica al día de práctica: allí revisaremos juntos tus canales de perforación.",
+  zuschauen: "En estos clips ves cómo se perfora: en la oreja de silicona, paso a paso, siguiendo el procedimiento del módulo 9 y las fichas técnicas del módulo 8. Fíjate bien y repite los pasos en voz alta. A perforar tú mismo aprendes el día de práctica bajo supervisión; con el paquete Completo practicas antes en casa con el kit de práctica.",
   sicherheit: [
     "Solo se perfora en la oreja de silicona. Nunca en ti, en otras personas ni en animales, ni siquiera «solo para probar».",
     "Nunca vuelvas a meter las cánulas en el capuchón protector. La aguja de acero va directamente al contenedor para objetos punzantes después de retirarla; el contenedor lleno se cierra bien y se desecha con los residuos generales.",
     "Trabaja con guantes sobre un empapador desechable, sin distracciones y fuera del alcance de los niños. Guarda las cánulas y el contenedor bajo llave.",
-    "Si a pesar de todo te pinchas, se aplica la lista de control «Tras un pinchazo con aguja» del módulo 05."
+    "Si a pesar de todo te pinchas, se aplica la lista de control «Tras un pinchazo con aguja» del módulo 5."
   ],
-  set: ["Oreja de silicona", "Cánulas intravenosas 18G y 16G", "Contenedor pequeño para objetos punzantes", "Pinza (Snaptile o pinza de gasa)", "Marcador cutáneo desechable", "Guantes desechables y empapador desechable", "Joyas de práctica: labret, BCR (aro de bola cautiva), barbell de 38 mm", "Tijeras para la vaina de plástico"],
+  set: ["Oreja de silicona", "Cánulas intravenosas: al menos 8 × 18G y 2 × 16G", "Contenedor pequeño para objetos punzantes", "Pinza (Snaptile o pinza de gasa)", "Marcador cutáneo desechable", "Guantes desechables y empapador desechable", "Joyas de práctica: tres labrets, BCR (aro de bola cautiva), barbell de 38 mm", "Tijeras para la vaina de plástico", "Pinza de sujeción", "Pinza para bolas", "Pinzas para abrir y cerrar aros"],
   aufgaben: [
     {
       id: "stich-kanuele",
@@ -527,7 +563,7 @@ window.KURS.labor.stich = {
       clipText: "Perforar un helix en la oreja de silicona, colocar un aro de bola cautiva y cerrarlo.",
       material: ["Oreja de silicona", "Cánula 18G", "Pinza", "Marcador cutáneo", "Tijeras", "BCR (aro de bola cautiva)", "Pinza para abrir aros y pinza para cerrar aros"],
       schritte: [
-        "Marcar el punto en el borde de la oreja (ficha técnica Helix, módulo 08) y fijarlo con la pinza.",
+        "Marcar el punto en el borde de la oreja (ficha técnica Helix, módulo 8) y fijarlo con la pinza.",
         "Perforar, retirar la aguja y desecharla, recortar la vaina.",
         "Abrir el aro con cuidado con la pinza para abrir aros, introducir un extremo en la vaina y empujarlo a través del canal de la perforación.",
         "Retirar el tubito, colocar la bola y cerrar el aro con la pinza para cerrar aros de modo que la bola encaje firmemente."
@@ -584,7 +620,7 @@ window.KURS.labor.stich = {
       clipText: "El procedimiento completo en la oreja de silicona, desde el puesto de trabajo hasta las instrucciones de cuidado, a velocidad normal.",
       material: ["Kit de práctica completo", "Una segunda persona como «cliente»", "Formulario de consentimiento e instrucciones de cuidado (plantillas)"],
       schritte: [
-        "Recorre el procedimiento del módulo 09 del paso 4 al 25: la segunda persona rellena el formulario de consentimiento y tú preparas el puesto de trabajo.",
+        "Recorre el procedimiento del módulo 9 del paso 4 al 25: la segunda persona rellena el formulario de consentimiento y tú preparas el puesto de trabajo.",
         "Se perfora en la oreja de silicona colocada junto a la persona; todo lo demás (conversación, mostrar la marca, instrucciones de cuidado) lo haces con ella.",
         "Pide a la persona que controle el reloj y que al final diga qué le ha llamado la atención."
       ],

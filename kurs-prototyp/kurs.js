@@ -170,7 +170,15 @@
 
   // ---------- Hilfsfunktionen ----------
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;" }[c]; }); }
-  function seitenLabel(s) { return s === "Entwurf" ? tr("Ergänzung der Akademie") : seiteText(s); }
+  // Quellenangabe einer Lektion oder Frage: Buchseite („S. 74“), Ergänzung der Akademie („Entwurf“, „Ergänzung“), Angabe der Akademie oder Modulverweis
+  function seitenLabel(s) {
+    s = String(s == null ? "" : s);
+    if (s === "Entwurf" || s === "Ergänzung") return tr("Ergänzung der Akademie");
+    if (s === "Akademie") return tr("Angabe der Akademie");
+    var m = /^Modul (\d+)(?: und (\d+))?$/.exec(s);
+    if (m) return m[2] ? tr("Siehe Module {a} und {b}", { a: m[1], b: m[2] }) : tr("Siehe Modul {a}", { a: m[1] });
+    return seiteText(s);
+  }
   // „S. 74“, „S. 11–12“, „S. 16, 39“ → Link in den Kursbuch-Leser (erste genannte Seite)
   // Anzeige über seitenLabel: „p. 74“ (en), „pág. 74“ (es); der Link bleibt #buch-74
   function buchNr(t) { var m = /(?:\bS|\bpp?|\bpágs?)\.\s*(\d+)/.exec(t || ""); return m ? +m[1] : null; }
@@ -282,9 +290,10 @@
   function titelbild(m, klein) {
     var b = (KURS.titelbilder || {})[m.nr];
     if (!b) return klein ? '<span class="k-titelbild k-klein k-leer" aria-hidden="true"><span>' + zwei(m.nr) + "</span></span>" : "";
-    var img = '<img src="' + b.src + '" width="' + b.w + '" height="' + b.h + '" alt="' + (klein ? "" : esc(tr(b.alt))) + '" loading="lazy" decoding="async">';
+    var img = '<img src="' + b.src + '" width="' + b.w + '" height="' + b.h + '" alt="' + (klein ? "" : esc(tr(b.alt))) + '"' + (b.pos ? ' style="object-position:' + esc(b.pos) + '"' : "") + ' loading="lazy" decoding="async">';
     if (klein) return '<span class="k-titelbild k-klein">' + img + "</span>";
-    return '<figure class="k-titelbild">' + img + "</figure>";
+    var quelle = b.bild && BILDER[b.bild];
+    return '<figure class="k-titelbild">' + img + (quelle && quelle.lizenz ? "<figcaption>" + nachweis(quelle) + "</figcaption>" : "") + "</figure>";
   }
   // "Lippenbändchen (Smiley)" -> "lippenbaendchen-smiley"
   function kurzname(n) {
@@ -406,10 +415,10 @@
     m.lektionen.forEach(function (l, i) {
       var st = lektionErledigt(m, i) ? "erledigt" : lektionOffen(m, i) ? "offen" : "gesperrt";
       html += '<li class="k-' + st + '"><a href="#lektion-' + m.nr + "-" + i + '"' + (st === "gesperrt" ? ' aria-disabled="true"' : "") + '><span class="n">' + (i + 1) + "</span><span><strong>" + esc(l.titel) + "</strong>" +
-        '<span class="k-meta">' + tr("{n} Fragen", { n: l.alleFragen.length }) + (l.seite && l.seite !== "Entwurf" ? " · " + tr("Kursbuch") + " " + esc(seiteText(l.seite)) : "") + (l.entwurf && stand.vorschau ? " · " + tr("Entwurf") : "") + '</span></span><span class="k-status">' + (st === "erledigt" ? "✓" : st === "gesperrt" ? tr("gesperrt") : tr("offen")) + "</span></a></li>";
+        '<span class="k-meta">' + tr("{n} Fragen", { n: l.alleFragen.length }) + (l.seite ? " · " + (buchNr(l.seite) != null ? tr("Kursbuch") + " " + esc(seiteText(l.seite)) : esc(seitenLabel(l.seite))) : "") + (l.entwurf && stand.vorschau ? " · " + tr("Entwurf") : "") + '</span></span><span class="k-status">' + (st === "erledigt" ? "✓" : st === "gesperrt" ? tr("gesperrt") : tr("offen")) + "</span></a></li>";
     });
     html += "</ol>" +
-      '<section class="k-lektion"><h2>' + tr("Modulprüfung") + "</h2><p>" + tr("{n} zufällige Fragen aus allen {m} Fragen dieses Moduls. Bestanden ab {b} richtigen Antworten.", { n: Math.min(FRAGEN_JE_PRUEFUNG, m.pool.length), m: m.pool.length, b: benoetigt(Math.min(FRAGEN_JE_PRUEFUNG, m.pool.length)) }) +
+      '<section class="k-lektion"><h2>' + tr("Modulprüfung") + "</h2><p>" + (m.pool.length > FRAGEN_JE_PRUEFUNG ? tr("{n} zufällige Fragen aus allen {m} Fragen dieses Moduls. Bestanden ab {b} richtigen Antworten.", { n: FRAGEN_JE_PRUEFUNG, m: m.pool.length, b: benoetigt(FRAGEN_JE_PRUEFUNG) }) : tr("Alle {m} Fragen dieses Moduls in zufälliger Reihenfolge. Bestanden ab {b} richtigen Antworten.", { m: m.pool.length, b: benoetigt(m.pool.length) })) +
       (stand.bestanden[m.nr] ? " <strong>" + tr("Bestanden ({n} von {m}).", { n: stand.bestanden[m.nr].richtig, m: stand.bestanden[m.nr].gesamt }) + "</strong>" : "") + "</p>" +
       (pruefungOffen(m) ? '<p><a class="btn" href="#pruefung-' + m.nr + '">' + tr("Modulprüfung starten") + "</a></p>" : '<p class="fine">' + tr("Die Prüfung öffnet sich, wenn du alle Lektionen des Moduls erledigt hast.") + "</p>") + "</section>" +
       '<section class="k-lektion"><h2>' + tr("Übungen zum Modul") + "</h2><p>" + tr("Aufgaben für die Praxis. Abgehakt wird nur für dich.") + '</p><ul class="k-aufgaben">' +
@@ -439,7 +448,7 @@
       l.alleFragen.map(function (f) {
         return "<li><p><strong>" + esc(f.frage) + '</strong></p><ul><li class="k-richtig">✓ ' + esc(f.antworten[0]) + "</li>" +
           f.antworten.slice(1).map(function (a) { return '<li class="k-falsch-antw">✕ ' + esc(a) + "</li>"; }).join("") + "</ul>" +
-          (f.erklaerung ? '<p class="fine">' + esc(f.erklaerung) + (f.seite ? " · " + esc(f.seite === "Entwurf" ? tr("Entwurf") : seiteText(f.seite)) : "") + "</p>" : "") + "</li>";
+          (f.erklaerung ? '<p class="fine">' + esc(f.erklaerung) + (f.seite ? " · " + esc(f.seite === "Entwurf" ? tr("Entwurf") : seitenLabel(f.seite)) : "") + "</p>" : "") + "</li>";
       }).join("") + "</ol></details>";
   }
   function blaettern(m, i) {
@@ -456,7 +465,7 @@
       return;
     }
     var html = '<section class="k-kopf"><p class="label"><a href="#modul-' + m.nr + '">' + tr("Modul {nr}", { nr: zwei(m.nr) }) + " · " + esc(m.titel) + "</a> · " + tr("Lektion {n} von {m}", { n: i + 1, m: m.lektionen.length }) + (l.entwurf && stand.vorschau ? " · " + tr("Entwurf") : "") + "</p><h1>" + esc(l.titel) + "</h1>" +
-      (l.seite ? '<p class="fine">' + (l.seite === "Entwurf" ? tr("Ergänzung der Akademie") : tr("Im Kursbuch nachlesen:") + " " + buchLink(l.seite)) + "</p>" : "") + "</section>" +
+      (l.seite ? '<p class="fine">' + (buchNr(l.seite) == null ? esc(seitenLabel(l.seite)) : tr("Im Kursbuch nachlesen:") + " " + buchLink(l.seite)) + "</p>" : "") + "</section>" +
       '<ol class="k-phasen" aria-label="' + tr("Ablauf der Lektion") + '"><li class="aktiv" id="phase-1"><span class="n">1</span>' + tr("Erklärung") + '</li><li id="phase-2"><span class="n">2</span>' + tr("Fragen ({n})", { n: l.alleFragen.length }) + '</li><li id="phase-3"><span class="n">3</span>' + tr("Geschafft") + "</li></ol>" +
       '<article class="k-lektion" id="erklaerung">' + l.inhalt.map(block).join("") + "</article>" +
       '<div class="k-weiter" id="start-bereich"><button type="button" class="btn" id="fragen-start">' + tr("Erklärung gelesen: Fragen starten") + "</button>" + (lektionErledigt(m, i) ? ' <span class="fine">' + tr("Diese Lektion hast du schon abgeschlossen. Du kannst die Fragen zur Wiederholung noch einmal beantworten.") + "</span>" : "") + "</div>" +
@@ -566,7 +575,7 @@
     }
     var fragen = mischen(m.pool).slice(0, FRAGEN_JE_PRUEFUNG).map(gemischt);
     app.innerHTML = '<section class="k-kopf"><p class="label"><a href="#modul-' + m.nr + '">' + tr("Modul {nr}", { nr: zwei(m.nr) }) + " · " + esc(m.titel) + "</a></p><h1>" + tr("Modulprüfung") + "</h1></section>" +
-      pruefungsFormular(fragen, tr("{n} Fragen", { n: fragen.length }), tr("Zufällig aus {n} Fragen gezogen. Bestanden ab {b} richtigen Antworten", { n: m.pool.length, b: benoetigt(fragen.length, quote(m.nr)) }) + (STRENG[m.nr] ? " (" + tr("{p}: {thema} ist sicherheitsrelevant, deshalb gilt hier eine höhere Hürde", { p: prozent(quote(m.nr)), thema: tr(STRENG[m.nr].kurz) }) + ")" : "") + ". " + tr("Jede neue Prüfung stellt andere Fragen."));
+      pruefungsFormular(fragen, tr("{n} Fragen", { n: fragen.length }), (m.pool.length > FRAGEN_JE_PRUEFUNG ? tr("Zufällig aus {n} Fragen gezogen. Bestanden ab {b} richtigen Antworten", { n: m.pool.length, b: benoetigt(fragen.length, quote(m.nr)) }) : tr("Alle {n} Fragen des Moduls in zufälliger Reihenfolge. Bestanden ab {b} richtigen Antworten", { n: m.pool.length, b: benoetigt(fragen.length, quote(m.nr)) })) + (STRENG[m.nr] ? " (" + tr("{p}: {thema} ist sicherheitsrelevant, deshalb gilt hier eine höhere Hürde", { p: prozent(quote(m.nr)), thema: tr(STRENG[m.nr].kurz) }) + ")" : "") + "." + (m.pool.length > FRAGEN_JE_PRUEFUNG ? " " + tr("Jede neue Prüfung stellt andere Fragen.") : ""));
     bindePruefung(app.querySelector("form.k-test"), fragen, function (richtig, gesamt) {
       var ok = richtig >= benoetigt(gesamt, quote(m.nr));
       if (ok) { stand.bestanden[m.nr] = { richtig: richtig, gesamt: gesamt }; speichern(); }

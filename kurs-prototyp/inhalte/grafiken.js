@@ -91,7 +91,7 @@ window.KURS = window.KURS || { module: [] };
     }).join("");
   }
   var POS = [
-    ["Industrial", [[180, 68], [354, 157]]], ["Helix", [[279, 87]]], ["Rook", [[204, 141], [196, 177]]], ["Daith", [[195, 209], [170, 248]]],
+    ["Industrial", [[180, 68], [354, 157]]], ["Helix", [[279, 87]]], ["Rook", [[204, 141], [196, 177]]], ["Daith", [[170, 221], [180, 247]]],
     ["Tragus", [[137, 270]]], ["Conch", [[238, 258]]], ["Snug", [[260, 268], [287, 286]]], ["Anti-Tragus", [[204, 313], [221, 337]]],
     ["Upper Lobe", [[236, 340], [213, 363]], true], ["Lobe", [[182, 378]], true]
   ];
@@ -163,7 +163,7 @@ window.KURS = window.KURS || { module: [] };
 
   // Gesicht von vorn (Cheek-Datenblatt): Foto 349 × 480. Eingezeichnet auf der Bildseite rechts, Lage schematisch.
   G.wange = { w: 381, h: 700,
-    alt: "Foto eines Gesichts von vorn mit Cheek-Piercings. Auf einer Gesichtshälfte sind eingezeichnet: die Äste des Gesichtsnervs vor dem Ohr, die Ohrspeicheldrüse, der Speichelgang quer über die Wange und die Gesichtsarterie vom Unterkiefer zum Mundwinkel. Das Cheek-Piercing liegt mitten in diesem Bereich.",
+    alt: "Foto eines Gesichts von vorn mit Cheek-Piercings. Auf einer Gesichtshälfte sind eingezeichnet: die Äste des Gesichtsnervs vor dem Ohr, die Ohrspeicheldrüse, der Speichelgang bis zum Vorderrand des Kaumuskels und die Gesichtsarterie vom Unterkiefer zum Mundwinkel. Das Cheek-Piercing liegt mitten in diesem Bereich.",
     text: "Gesicht von vorn (Foto aus dem Kursbuch, Strukturen schematisch eingezeichnet, Lage individuell verschieden). Durch die Wange laufen Äste des Gesichtsnervs, der Speichelgang der Ohrspeicheldrüse und die Gesichtsarterie. Deshalb gehört das Cheek in erfahrene Hände.",
     svg: "" };
   Object.defineProperty(G.wange, "svg", { get: function () {
@@ -176,16 +176,16 @@ window.KURS = window.KURS || { module: [] };
       '<g class="auf-foto">',
       e(pt(324, 302)[0], pt(324, 302)[1], 15, 40, "f-druese-foto"),
       aeste.map(function (a) { return p("M" + stamm[0] + " " + stamm[1] + " Q" + q(a[0][0], a[0][1]) + " " + q(a[1][0], a[1][1]), "nerv b2") + c(pt(a[1][0], a[1][1])[0], pt(a[1][0], a[1][1])[1], 2.5, "fnerv"); }).join(""),
-      p("M" + q(316, 292) + " C" + q(296, 296) + " " + q(274, 298) + " " + q(258, 312), "gang b3"),
+      p("M" + q(316, 292) + " C" + q(304, 294) + " " + q(292, 296) + " " + q(283, 304), "gang b3"),
       p("M" + q(276, 446) + " C" + q(266, 404) + " " + q(254, 370) + " " + q(240, 352) + " C" + q(224, 330) + " " + q(212, 304) + " " + q(204, 266), "blut b25"),
       c(cheek[0], cheek[1], 20, "f-risk"),
       "</g>",
       nrPunkt(pt(300, 214)[0], pt(300, 214)[1], 1), nrPunkt(pt(334, 340)[0], pt(334, 340)[1], 2), nrPunkt(pt(270, 282)[0], pt(270, 282)[1], 3),
-      nrPunkt(pt(244, 392)[0], pt(244, 392)[1], 4), nrPunkt(cheek[0] + 20, cheek[1] + 20, 5),
+      nrPunkt(pt(271, 428)[0], pt(271, 428)[1], 4), nrPunkt(cheek[0] + 20, cheek[1] + 20, 5),
       fotoLegende([
-        ["N. facialis (Gesichtsnerv)", "tritt vor dem Ohr aus und steuert die Mimik"],
+        ["N. facialis (Gesichtsnerv)", "tritt unter dem Ohr aus, fächert vor dem Ohr auf"],
         ["Ohrspeicheldrüse", "liegt vor und unter dem Ohr"],
-        ["Ductus parotideus", "Speichelgang, ca. 2 cm unter dem Jochbogen"],
+        ["Ductus parotideus", "Speichelgang, biegt am Kaumuskel nach innen"],
         ["A. facialis (Gesichtsarterie)", "vom Unterkiefer zum Mundwinkel"],
         ["Cheek-Piercing", "liegt mitten in diesem Bereich"]
       ], X, Y + 480 + 26)
@@ -242,26 +242,26 @@ window.KURS = window.KURS || { module: [] };
       return s + t(484, y + 14, rest[0], "tb") + t(484, y + 30, rest[1], "tm");
     }
     G.keimreduktion = { w: 620, h: 190,
-      alt: "Vergleich der Keimreduktion: Desinfektion verringert die Keimzahl um fünf Zehnerpotenzen, von einer Million auf zehn; Sterilisation um sechs Zehnerpotenzen, von einer Million auf einen und tötet auch Sporen.",
-      text: "Jedes Feld steht für eine Zehnerpotenz. Aus einer Million Keimen bleiben nach einer Desinfektion etwa zehn übrig, nach einer Sterilisation theoretisch einer – und auch Bakteriensporen sind abgetötet.",
+      alt: "Vergleich der Keimreduktion: Desinfektion verringert die Keimzahl um fünf Zehnerpotenzen, von einer Million auf zehn. Nach einer Sterilisation liegt die Wahrscheinlichkeit, dass noch ein Keim überlebt, höchstens bei 1 zu 1 Million; sie tötet auch Sporen.",
+      text: "Jedes Feld steht für eine Zehnerpotenz. Aus einer Million Keimen bleiben nach einer Desinfektion etwa zehn übrig. Steril heißt mehr: Die Wahrscheinlichkeit, dass auf einem Gegenstand noch ein Keim überlebt, liegt höchstens bei 1 zu 1 Million (SAL 10⁻⁶). Dafür braucht es deutlich mehr als sechs Zehnerpotenzen, und auch Bakteriensporen sind abgetötet.",
       svg: [
         t(150, 24, "Ausgangslage: 1.000.000 Keime", "tm"),
-        reihe(40, 5, "Desinfektion", "Faktor 10⁵", ["→ 10 Keime", "Sporen nicht sicher erfasst"]),
-        reihe(100, 6, "Sterilisation", "Faktor 10⁶", ["→ 1 Keim", "auch Sporen tot"]),
+        reihe(40, 5, "Desinfektion", "Faktor 10⁵", ["→ 10 Keime", "Sporen nicht sicher"]),
+        reihe(100, 6, "Sterilisation", "SAL 10⁻⁶", ["≤ 1 : 1 Mio.", "auch Sporen tot"]),
         t(10, 172, "Haut lässt sich nur desinfizieren, nie sterilisieren.", "tm")
       ].join("") };
   })();
 
   // ---------- Modul 5: Instrumentenkreislauf ----------
   G.kreislauf = { w: 640, h: 250,
-    alt: "Kreislauf der Instrumentenaufbereitung: benutzt, reinigen im Ultraschallbad, trocknen, verpacken, sterilisieren im Autoklav, lagern mit Datum und Charge, steril öffnen am Arbeitsplatz. Unreine und reine Seite sind getrennt.",
+    alt: "Kreislauf der Instrumentenaufbereitung: benutzt, reinigen im Ultraschallbad (Zeit und Temperatur nach Herstellerangabe), desinfizieren, spülen und trocknen, verpacken, sterilisieren im Autoklav, lagern mit Datum und Charge, steril öffnen am Arbeitsplatz. Unreine und reine Seite sind getrennt.",
     text: "Der Weg eines Instruments durch dein Studio. Unreine und reine Seite kreuzen sich nicht: Was benutzt ist, kommt erst nach dem Autoklav wieder in die Nähe von Sterilgut. Kanülen und Einmalmaterial kommen sofort in den Abwurf und werden nie aufbereitet.",
     svg: [
       r(4, 4, 300, 242, "f-unrein", 12), r(336, 4, 300, 242, "f-rein", 12),
       t(16, 24, "unreine Seite", "tm"), t(624, 24, "reine Seite", "tm", "end"),
       box(30, 44, 120, 50, "1 Benutzt", "z. B. Klemme"),
-      box(170, 44, 120, 50, "2 Reinigen", "Ultraschall, 30 min"),
-      box(170, 160, 120, 50, "3 Trocknen", "gegen Flecken, Rost"),
+      box(170, 44, 120, 50, "2 Ultraschall", "nach Hersteller"),
+      box(170, 160, 120, 50, "3 Desinfizieren", "spülen, trocknen"),
       box(350, 160, 120, 50, "4 Verpacken", "Beutel, Indikator"),
       box(490, 160, 130, 50, "5 Autoklav", "vier Phasen"),
       box(490, 44, 130, 50, "6 Lagern", "Datum, Charge"),
@@ -470,7 +470,7 @@ window.KURS = window.KURS || { module: [] };
       t(500, 146, "Labret Stud", "tb", "middle") + t(500, 162, "Labret, Tragus, Conch,", "tm", "middle") + t(500, 176, "Lobe, Nostril", "tm", "middle") };
 
   G.ringe = { w: 640, h: 200,
-    alt: G.ringe.alt, text: "Ringe unterscheiden sich vor allem darin, wie sie schließen (schattierte Darstellung). Die blaue Markierung zeigt jeweils den Verschluss.",
+    alt: G.ringe.alt, text: "Ringe unterscheiden sich vor allem darin, wie sie schließen (schattierte Darstellung). Die gestrichelte Markierung zeigt jeweils den Verschluss.",
     svg: "<defs>" + metallDefs("ri") + "</defs>" +
       e(80, 132, 48, 6, "schatten") + roehre("M80 34 A42 42 0 1 0 116 54 A42 42 0 0 0 80 34", 7) + p("M80 34 A42 42 0 0 1 116 54", "a b2 dash") +
       t(80, 156, "Segmentring", "tb", "middle") + t(80, 172, "Segment mit Zange", "tm", "middle") +
@@ -507,7 +507,7 @@ window.KURS = window.KURS || { module: [] };
     [[190, 250], [240, 270], [290, 248], [340, 275], [390, 252], [425, 285], [210, 295], [320, 300]].forEach(function (q) { fett += e(q[0], q[1], 22, 15, "sd f-sub-l"); });
     G.haut3d = { w: 720, h: 350,
       alt: "Dreidimensionaler, aufgeschnittener Hautblock mit Oberhaut, Lederhaut und Unterhaut. Eine Kanüle sticht von oben durch alle Schichten; in der Lederhaut liegen Arterie, Vene, Nerv und Haarwurzeln.",
-      text: "Haut als aufgeschnittener Block (schematisch). Die Kanüle durchquert Oberhaut, Lederhaut und Unterhaut. Arterie, Vene und Nerv laufen in der Lederhaut gemeinsam – im Querschnitt siehst du sie als Bündel.",
+      text: "Haut als aufgeschnittener Block (schematisch). Die Kanüle durchquert Oberhaut, Lederhaut und Unterhaut. Arterie, Vene und Nerv laufen in Lederhaut und Unterhaut oft gemeinsam – im Querschnitt siehst du sie als Bündel.",
       svg: "<defs>" + metallDefs("hb") +
         '<linearGradient id="hbtop" x1="0" y1="1" x2="1" y2="0"><stop offset="0" class="st-epi"/><stop offset="1" class="st-epi-h"/></linearGradient>' +
         '<linearGradient id="hbder" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="st-derm-h"/><stop offset="1" class="st-derm"/></linearGradient>' +
