@@ -16,18 +16,18 @@ KURS.module.push({
           "Desinfectantes para superficies y equipos",
           "Lavado de manos a fondo con jabón suave para la piel y secado con toallas desechables",
           "Desinfección de manos con un producto específico (al menos 30 segundos) desde un dispensador adecuado",
-          "Aislamiento",
           "Herramientas estériles o desechables que entran en contacto con la piel (pinzas, agujas, joyas iniciales)",
-          "Limpieza de los instrumentos sin contacto con la piel (pinzas, tijeras, pinzas para bolas) con desinfectantes adecuados",
+          "Limpieza y desinfección de los objetos sin contacto con el campo estéril (según el libro del curso, también pinzas, tijeras y pinzas para bolas; ver la nota de la Academia)",
           "Lavado del instrumental médico separado de la sala de intervención",
           "Lavar la ropa de trabajo con regularidad con agua muy caliente y detergente",
           "Limpiar el suelo y las superficies de trabajo con productos adecuados"
-        ] }
+        ] },
+        { typ: "ergaenzung", text: "Estériles (esterilizados en envase individual o material estéril de un solo uso) deben ser todos los instrumentos que tocan la piel, la mucosa, el canal de la perforación, la cánula o la vaina de plástico, o la joya inicial: pinzas, tubo receptor, tijeras, pinza para bolas, pinza de sujeción, pinzas para abrir y cerrar aros, cónico de inserción. Solo los objetos sin contacto con el campo estéril (por ejemplo, la linterna o un calibre usado fuera del campo estéril) se limpian y se desinfectan. El libro del curso cuenta la pinza, las tijeras y la pinza para bolas entre las herramientas sin contacto con la piel. Pero las tijeras acortan la vaina dentro del canal recién perforado, la pinza para bolas sujeta la bola de la joya inicial y la pinza de sujeción, la propia joya inicial." }
       ],
       fragen: [
         ["¿Cómo define la higiene el libro del curso?", ["La ciencia de la prevención de enfermedades y la conservación de la salud", "El conjunto de todas las medidas de desinfección", "La ciencia de los agentes patógenos", "El trabajo libre de gérmenes en el quirófano"], "Cita al inicio del cap. 5.", "S. 16"],
         ["¿Durante cuánto tiempo, como mínimo, te desinfectas las manos?", ["30 segundos", "10 segundos", "90 segundos", "3 minutos"], "Al menos 30 segundos o según las indicaciones del fabricante.", "S. 16"],
-        ["¿Qué herramientas deben ser estériles o desechables?", ["Las que tocan la piel, como pinzas, agujas y joyas iniciales", "Solo las agujas; las pinzas se desinfectan", "Pinzas para bolas, tijeras y pinzas sin contacto con la piel", "Solo las joyas iniciales"], "Las herramientas sin contacto con la piel se desinfectan.", "S. 16"],
+        ["¿Qué herramientas deben ser estériles o desechables?", ["Todo lo que toca la piel, el canal o la joya inicial, también las tijeras", "Solo las agujas; las pinzas se desinfectan", "Solo las joyas iniciales; todo lo demás se desinfecta", "Solo los instrumentos con sangre visible"], "Es decir, también pinzas, pinzas para bolas y pinza de sujeción. Según el libro del curso, pinzas, tijeras y pinzas para bolas solo se desinfectan; pero tocan la vaina, la bola o la joya inicial.", "Ergänzung"],
         ["¿Dónde se lava el instrumental médico?", ["Separado de la sala de intervención", "En el lavamanos de la zona de trabajo", "Directamente en la bandeja de instrumental", "En el baño de ultrasonidos junto a la camilla"], "Lista de medidas de higiene.", "S. 16"],
         ["¿Con qué se lava la ropa de trabajo?", ["Con agua muy caliente y detergente", "A 40 °C con desinfectante para la ropa", "A 60 °C sin detergente", "En frío con desinfectante"], "Si está manchada, al menos a 90 °C.", "S. 16, 39"],
         ["¿Con qué te secas las manos después de lavarlas?", ["Con toallas desechables", "Con una toalla de tela cambiada a diario", "Con el secador de manos", "Dejándolas secar al aire"], "Las toallas de tela se usan varias veces y propagan gérmenes; las desechables, no.", "S. 16"]
@@ -212,7 +212,7 @@ KURS.module.push({
           "Acude de inmediato a un médico; en caso de accidente laboral, a un médico autorizado por la mutua de accidentes (Durchgangsarzt, D-Arzt). Un tratamiento preventivo contra el VIH funciona mejor si se inicia en las primeras horas.",
           "Documenta el incidente: cuándo, con qué, con qué cliente. El médico aclara si el cliente está dispuesto a hacerse un análisis de sangre."
         ] },
-        { typ: "ergaenzung", text: "Fundamento: la guía S1 sobre requisitos de higiene en tatuajes y piercings y las recomendaciones de las aseguradoras de accidentes. En el módulo 11, averigua con qué mutua de accidentes laborales (Berufsgenossenschaft) estás asegurado." }
+        { typ: "ergaenzung", text: "Fundamento: la guía S1 sobre requisitos de higiene en tatuajes y piercings y las recomendaciones de las aseguradoras de accidentes. Antes de abrir tu estudio, averigua con qué mutua de accidentes laborales (Berufsgenossenschaft) estás asegurado." }
       ],
       fragen: [
         ["¿Contra qué enfermedad transmisible por la sangre existe una vacuna?", ["Hepatitis B", "Hepatitis C", "VIH", "Contra las tres"], "Haz que un médico compruebe el éxito de la vacunación.", "Ergänzung"],
@@ -231,7 +231,7 @@ KURS.module.push({
         { typ: "text", text: "Desinfección significa en sentido figurado «liberar de gérmenes»: llevar material muerto o vivo a un estado en el que ya no pueda causar infecciones. Técnicamente se distingue entre desinfección y esterilización." },
         { typ: "tabelle", kopf: ["Término", "Reducción de gérmenes", "Significado"], zeilen: [
           ["Desinfección", "Factor 10⁵ (1 : 100.000)", "De 100.000 gérmenes capaces de reproducirse, sobrevive como máximo uno."],
-          ["Esterilización", "Factor 10⁶ (1 : 1.000.000)", "También destruye las esporas bacterianas."]
+          ["Esterilización", "según el libro del curso, factor 10⁶ (1 : 1.000.000)", "Más exactamente: la probabilidad de que sobreviva un solo germen en un objeto es como máximo de 1 : 1.000.000 (SAL 10⁻⁶). Para ello hace falta una reducción de bastante más de 6 potencias de diez. También destruye las esporas bacterianas."]
         ] },
         { typ: "grafik", id: "keimreduktion" },
         { typ: "text", text: "La antisepsia (del griego, literalmente «contra la putrefacción») designa todas las medidas para reducir los gérmenes infecciosos y, con ello, evitar una infección: la desinfección de superficies, materiales, objetos y heridas." },
@@ -239,8 +239,8 @@ KURS.module.push({
         { typ: "merke", text: "En las superficies del cuerpo nunca se puede alcanzar una ausencia total de gérmenes, ya que la piel y las mucosas no se pueden esterilizar." }
       ],
       fragen: [
-        ["¿Qué reducción de gérmenes logra una esterilización?", ["Factor 10⁶", "Factor 10⁵", "Factor 10⁴", "Factor 10³"], "La desinfección logra 10⁵.", "S. 28"],
-        ["¿Qué reducción de gérmenes logra una desinfección?", ["Factor 10⁵", "Factor 10⁶", "Factor 10³", "Factor 10²"], "De 100.000 gérmenes sobrevive como máximo uno.", "S. 28"],
+        ["¿Qué significa el «1 : 1.000.000» en la esterilización?", ["Como máximo 1 entre 1 millón de probabilidad de que sobreviva un germen", "De un millón de gérmenes queda exactamente uno", "Un objeto es estéril tras un millón de ciclos", "Se permiten un millón de gérmenes por cm²"], "Sterility Assurance Level 10⁻⁶. El libro del curso habla de un factor 10⁶; la desinfección logra 10⁵.", "S. 28"],
+        ["¿Qué reducción de gérmenes logra una desinfección?", ["Factor 10⁵", "Factor 10⁶", "Factor 10³", "Factor 10²"], "Como máximo sobrevive uno de cada 100.000 gérmenes. La esterilización va más allá y destruye también las esporas.", "S. 28"],
         ["¿Qué lista informa, entre otras cosas, sobre la eficacia virucida?", ["La lista de desinfectantes del IHO", "La Rote Liste", "La lista de productos sanitarios", "La lista REACH"], "En las desinfecciones ordenadas, productos de la lista del RKI.", "S. 28"],
         ["¿Qué significa literalmente antisepsia?", ["Contra la putrefacción", "Contra los gérmenes", "Sin gérmenes", "Contra la inflamación"], "Del griego.", "S. 29"],
         ["¿Se pueden esterilizar la piel y las mucosas?", ["No, allí nunca se alcanza una ausencia total de gérmenes", "Sí, con un antiséptico cutáneo a base de alcohol", "Sí, tras la desinfección quirúrgica de manos", "Sí, con octenidina"], "Idea clave sobre la antisepsia.", "S. 29"]
@@ -299,15 +299,16 @@ KURS.module.push({
           "Los desinfectantes se quedan en su envase original y en ningún caso se trasvasan ni se rellenan.",
           "Los dispensadores necesitan una ventana a través de la cual se vea la etiqueta."
         ] },
-        { typ: "achtung", text: "Si no se usan materiales estériles desechables, todos los instrumentos y herramientas que provocan una lesión en la piel o un contacto directo con la sangre deben esterilizarse en el autoclave antes y después del tratamiento. Entre ellos están, sobre todo, las agujas, los portaagujas y las pinzas. Solo el autoclave destruye también las esporas bacterianas." },
-        { typ: "text", text: "Lo ideal es embolsar y guardar los aparatos que se van a esterilizar por separado en bolsas de esterilización. Si se guardan sin envolver en contenedores, también hay que esterilizar el contenedor. Las herramientas sin contacto directo con la piel (pinza para bolas, pinza, tijeras) se limpian en un baño de ultrasonidos y se desinfectan en un baño desinfectante. No mezcles metales distintos en el proceso." }
+        { typ: "achtung", text: "Las cánulas y agujas son siempre material estéril de un solo uso y van al contenedor para objetos punzantes justo después de perforar; nunca se reprocesan. Los instrumentos reutilizables que tocan la piel, el canal, la vaina o la joya inicial (pinzas, portaagujas, tijeras, pinza para bolas, pinza de sujeción) se reprocesan después de cada tratamiento, se esterilizan en el autoclave y se guardan en envase estéril, salvo que uses material estéril de un solo uso. Solo el autoclave destruye también las esporas bacterianas." },
+        { typ: "text", text: "Lo ideal es embolsar y guardar los aparatos que se van a esterilizar por separado en bolsas de esterilización. Si se guardan sin envolver en contenedores, también hay que esterilizar el contenedor. Antes de esterilizarlos, los instrumentos se limpian en un baño de ultrasonidos y se desinfectan; no mezcles metales distintos en el proceso. Solo los objetos sin contacto con el campo estéril, como la linterna o el calibre, se limitan a limpiarse y desinfectarse." },
+        { typ: "ergaenzung", text: "El libro del curso (pág. 35) dice que los instrumentos que provocan lesión en la piel o contacto con sangre se esterilizan «antes y después del tratamiento», «sobre todo agujas, portaagujas y pinzas», y que la pinza para bolas, la pinza y las tijeras solo se desinfectan. La Academia aclara: las cánulas son productos de un solo uso y nunca se reprocesan, y todo lo que toca el canal, la vaina, la bola o la joya inicial debe ser estéril." }
       ],
       fragen: [
         ["¿Qué significa «virucida»?", ["Eficaz contra los virus", "Eficaz contra los hongos", "Eficaz contra las esporas bacterianas", "Eficaz contra las bacterias"], "Los productos para superficies e instrumental deberían ser virucidas.", "S. 35"],
         ["¿Se puede trasvasar el desinfectante?", ["No, se queda en el envase original", "Sí, a pulverizadores etiquetados", "Sí, si no se diluye", "Sí, a dispensadores sin ventana"], "Dispensadores con ventana para ver la etiqueta.", "S. 35"],
-        ["¿Qué debe esterilizarse en el autoclave si no se usa material estéril desechable?", ["Todo lo que provoca lesión en la piel o contacto con sangre, p. ej. agujas y pinzas", "Solo las tijeras y las pinzas para bolas", "Solo la bandeja de instrumental", "Solo las joyas iniciales"], "Antes y después del tratamiento.", "S. 35"],
+        ["¿Qué debe esterilizarse en el autoclave si no se usa material estéril desechable?", ["Los instrumentos reutilizables como pinzas, tijeras y pinzas para bolas", "También las cánulas usadas, para poder reutilizarlas", "Solo la bandeja de instrumental y las superficies de apoyo", "Solo los instrumentos con sangre visible"], "Reprocesar después de cada tratamiento y guardar en envase estéril. Las cánulas son material de un solo uso y nunca se reprocesan.", "Ergänzung"],
         ["¿Qué destruye solo la esterilización, pero no la desinfección?", ["Las esporas bacterianas", "Los virus con envoltura", "Los hongos", "Los gérmenes cutáneos transitorios"], "Recuadro pág. 35.", "S. 35"],
-        ["¿Cómo se reprocesan las herramientas sin contacto directo con la piel?", ["Se limpian en baño de ultrasonidos y se desinfectan en baño desinfectante", "Solo se pasa un paño", "Siempre se esterilizan en el autoclave", "Se lavan en el lavavajillas"], "No mezclar metales distintos.", "S. 35"]
+        ["¿Cómo se reprocesan los objetos sin contacto con el campo estéril?", ["Se limpian y desinfectan, p. ej. la linterna o el calibre", "No se reprocesan, porque nunca tocan al cliente", "Se tiran después de cada cliente", "Solo se enjuagan un momento con agua corriente"], "Las tijeras, la pinza para bolas y la pinza de sujeción no son de este grupo: tocan la vaina, la bola o la joya inicial y deben ser estériles. No mezclar metales distintos.", "Ergänzung"]
       ]
     },
     {

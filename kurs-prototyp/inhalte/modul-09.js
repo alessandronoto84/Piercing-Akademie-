@@ -33,29 +33,36 @@ KURS.module.push({
           "Währenddessen den Arbeitsplatz vorbereiten und alle Instrumente parat legen.",
           "Der Kunde betritt den Piercingraum: für eine angenehme Atmosphäre sorgen, dem Kunden die Angst nehmen.",
           "Die Stelle begutachten und den passenden Ersteinsatz wählen (Überlänge!).",
+          { nr: "7a", text: "Hände desinfizieren und Handschuhe anziehen." },
           "Die Stelle desinfizieren (Alkoholtupfer).",
+          { nr: "8a", text: "Bei Bedarf rasieren (Einmalrasierer) und danach erneut desinfizieren." },
           "Ein- und Austrittsstelle der Kanüle mit dem Einmalstift markieren.",
+          { nr: "9a", text: "Die Stelle mit Hautantiseptikum (zum Beispiel Kodan) desinfizieren, die Markierung nicht abwischen, Einwirkzeit abwarten." },
           "Den Kunden schauen lassen, ob es so passt."
         ] },
-        { typ: "merke", text: "Schritt 10 ist dein Sicherheitsnetz: Der Kunde sieht die Markierung, bevor gestochen wird. Was jetzt nicht passt, lässt sich noch ändern." }
+        { typ: "merke", text: "Schritt 10 ist dein Sicherheitsnetz: Der Kunde sieht die Markierung, bevor gestochen wird. Was jetzt nicht passt, lässt sich noch ändern." },
+        { typ: "achtung", text: "Die 26 Schritte im Kursbuch nennen weder Händedesinfektion und Handschuhe noch Rasur, Hautantiseptik nach dem Anzeichnen oder den sofortigen Nadelabwurf. Diese Schritte (7a, 8a, 9a und 13a) hat die Akademie ergänzt. Sie sind Pflicht, auch wenn sie nicht nummeriert im Buch stehen." }
       ],
       fragen: [
         ["Wann bereitest du Arbeitsplatz und Instrumente vor?", ["Während der Kunde die Einverständniserklärung ausfüllt", "Bevor der Kunde das Studio betritt, für den ganzen Tag", "Nach dem Anzeichnen", "Wenn der Kunde schon auf der Liege liegt"], "Schritt 5.", "S. 111"],
         ["Worauf achtest du beim Wählen des Ersteinsatzes?", ["Auf die Überlänge", "Auf eine möglichst große Kugel", "Auf ein möglichst kurzes Modell", "Auf ein Außengewinde"], "Schritt 7.", "S. 111"],
         ["Womit desinfizierst du die Stelle in Schritt 8?", ["Mit einem Alkoholtupfer", "Mit Kochsalzlösung", "Mit Kodan erst nach dem Stich", "Mit Chlorhexamed"], "Ablauf Schritt 8.", "S. 111"],
         ["Womit markierst du Ein- und Austrittsstelle?", ["Mit dem Einmalstift", "Mit einem desinfizierten Kugelschreiber", "Mit der Kanülenspitze", "Mit einem Kajalstift"], "Schritt 9.", "S. 111"],
-        ["Warum lässt du den Kunden nach dem Anzeichnen schauen?", ["Damit er prüft, ob es so passt", "Damit er sich an die Nadel gewöhnt", "Damit die Desinfektion einwirkt", "Damit er die Pflegehinweise sieht"], "Schritt 10.", "S. 111"]
+        ["Warum lässt du den Kunden nach dem Anzeichnen schauen?", ["Damit er prüft, ob es so passt", "Damit er sich an die Nadel gewöhnt", "Damit die Desinfektion einwirkt", "Damit er die Pflegehinweise sieht"], "Schritt 10.", "S. 111"],
+        ["Was tust du, bevor du die Stelle desinfizierst und anzeichnest?", ["Hände desinfizieren und Handschuhe anziehen", "Den Kunden die Pflegehinweise unterschreiben lassen", "Die Kanüle schon aus der Verpackung nehmen", "Die Stelle mit Kochsalzlösung abwaschen"], "Schritt 7a, Ergänzung der Akademie.", "Ergänzung"],
+        ["Was tust du nach dem Anzeichnen, bevor gestochen wird?", ["Mit Hautantiseptikum desinfizieren, ohne die Markierung abzuwischen", "Die Markierung mit Alkohol nachziehen, damit sie hält", "Sofort stechen, solange die Markierung frisch ist", "Die Stelle mit einem Pflaster abdecken"], "Schritt 9a, Ergänzung der Akademie: Einwirkzeit abwarten.", "Ergänzung"]
       ]
     },
     {
       titel: "Der Stich",
       seite: "S. 112",
       inhalt: [
-        { typ: "foto", id: "stechen", text: "Stechen am Ohr mit Handschuhen und Kanüle. Kursbuch S. 111." },
+        { typ: "foto", id: "stechen", text: "Arbeit mit Handschuhen und Klemme am Ohr. Kursbuch S. 111." },
         { typ: "schritte", start: 11, punkte: [
           "Klemme bzw. Nadelauffangrohr anlegen.",
           "Stechen, im Idealfall immer in die sichtbare Seite, beim Labret zum Beispiel dort, wo die Kugel sitzt. Je schneller gestochen wird, desto weniger Schmerzen.",
           "Kanüle herausziehen; der Kunststoffüberzug bleibt im Stichkanal.",
+          { nr: "13a", text: "Die Stahlnadel sofort in den Nadelabwurfbehälter werfen." },
           "Kunststoffüberzug mit der Schere leicht kürzen, damit der Schmuck besser hineingeht.",
           "Ersteinsatz in den Kunststoffüberzug stecken.",
           "Durch den Stichkanal drücken, nicht ziehen, sonst kann der Schmuck abrutschen. Das ist schmerzhaft: den Kunden dabei ausatmen lassen."
@@ -110,8 +117,8 @@ KURS.module.push({
       titel: "Kreislaufprobleme und Notfälle",
       seite: "S. 26, 50, 113",
       inhalt: [
-        { typ: "achtung", text: "Bekommt der Kunde während des Vorgangs einen Kreislaufabfall (immer nachfragen!), gib ihm Traubenzucker (zum Beispiel Dextro Energy) und etwas zu trinken. Lege ihn gegebenenfalls hin und lass ihn ruhen." },
-        { typ: "ergaenzung", text: "Bewährt bei einem Kreislaufkollaps: flach hinlegen und die Beine hochlagern, damit das Blut zum Kopf zurückfließt. Traubenzucker und Getränk erst, wenn der Kunde wieder sicher schlucken kann." },
+        { typ: "achtung", text: "Bekommt der Kunde während des Vorgangs einen Kreislaufabfall (immer nachfragen!): sofort abbrechen, flach hinlegen und die Beine hochlagern. Erst wenn der Kunde wieder klar ist und sicher schlucken kann, gibst du ihm Traubenzucker (zum Beispiel Dextro Energy) und etwas zu trinken. Bei Bewusstlosigkeit sofort 112." },
+        { typ: "ergaenzung", text: "Laut Kursbuch gibst du bei einem Kreislaufabfall zuerst Traubenzucker und etwas zu trinken und legst den Kunden gegebenenfalls hin. Die Reihenfolge oben ist sicherer: Wer ohnmächtig zu werden droht, kann stürzen oder sich verschlucken. Flach liegend mit hochgelagerten Beinen fließt das Blut zum Kopf zurück." },
         { typ: "liste", titel: "Vorbereitet sein", punkte: [
           "Ein aktueller Erste-Hilfe-Kasten hängt gut sichtbar und schnell erreichbar im Studio.",
           "Notfallnummern (Notarzt, Hausarzt, Feuerwehr) sind ausgehängt.",
@@ -125,7 +132,7 @@ KURS.module.push({
         ["Wie erkennst du rechtzeitig einen Kreislaufabfall?", ["Ich frage während des Vorgangs immer nach", "Ich messe vorher den Blutdruck", "Ich achte nur auf Schweiß", "Gar nicht, der Kunde meldet sich"], "„Immer fragen!“", "S. 113"],
         ["Welche Notfallnummern sollten aushängen?", ["Notarzt, Hausarzt, Feuerwehr", "Polizei und Gesundheitsamt", "Nur die 110", "Gesundheitsamt und Gewerbeamt"], "Kap. 5.4.", "S. 26"],
         ["Welche Nummer wählst du bei Bewusstlosigkeit?", ["112", "110", "116 117", "Die Nummer des Hausarztes"], "112 erreicht in ganz Europa Rettungsdienst und Feuerwehr. 110 ist die Polizei, 116 117 der ärztliche Bereitschaftsdienst.", "Ergänzung"],
-        ["Fall: Beim Stechen wird die Kundin blass und ihr wird schwindelig. Was tust du?", ["Abbrechen, hinlegen, Beine hoch, später Traubenzucker und Getränk", "Schnell zu Ende stechen", "Sie aufstehen und herumlaufen lassen", "Eisspray auf die Stelle sprühen"], "Kreislaufabfall, siehe S. 113.", "S. 113"]
+        ["Fall: Beim Stechen wird die Kundin blass und ihr wird schwindelig. Was tust du?", ["Abbrechen, hinlegen, Beine hoch, später Traubenzucker", "Schnell zu Ende stechen, dann ausruhen lassen", "Sie aufstehen und ein paar Schritte gehen lassen", "Sofort Traubenzucker und ein Glas Wasser geben"], "Kreislaufabfall, siehe S. 113.", "S. 113"]
       ]
     }
   ],

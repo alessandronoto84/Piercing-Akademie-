@@ -33,29 +33,36 @@ KURS.module.push({
           "Mientras tanto, preparar el puesto de trabajo y dejar todos los instrumentos a mano.",
           "El cliente entra a la sala de piercing: crear un ambiente agradable y quitarle el miedo.",
           "Examinar la zona y elegir la joya inicial adecuada (¡longitud extra!).",
+          { nr: "7a", text: "Desinfectarse las manos y ponerse los guantes." },
           "Desinfectar la zona (toallita con alcohol).",
+          { nr: "8a", text: "Rasurar si hace falta (cuchilla desechable) y volver a desinfectar después." },
           "Marcar los puntos de entrada y de salida de la cánula con el marcador desechable.",
+          { nr: "9a", text: "Desinfectar la zona con un antiséptico cutáneo (por ejemplo, Kodan) sin borrar la marca y esperar el tiempo de actuación." },
           "Dejar que el cliente compruebe si le parece bien."
         ] },
-        { typ: "merke", text: "El paso 10 es tu red de seguridad: el cliente ve la marca antes de que se perfore. Lo que ahora no encaje todavía se puede cambiar." }
+        { typ: "merke", text: "El paso 10 es tu red de seguridad: el cliente ve la marca antes de que se perfore. Lo que ahora no encaje todavía se puede cambiar." },
+        { typ: "achtung", text: "Los 26 pasos del libro del curso no mencionan ni la desinfección de manos y los guantes, ni el rasurado, la antisepsia de la piel después de marcar o la eliminación inmediata de la aguja. La Academia ha añadido estos pasos (7a, 8a, 9a y 13a). Son obligatorios, aunque en el libro no tengan número." }
       ],
       fragen: [
         ["¿Cuándo preparas el puesto de trabajo y los instrumentos?", ["Mientras el cliente rellena el formulario de consentimiento", "Antes de que el cliente entre al estudio, para todo el día", "Después de marcar", "Cuando el cliente ya está tumbado en la camilla"], "Paso 5.", "S. 111"],
         ["¿En qué te fijas al elegir la joya inicial?", ["En la longitud extra", "En una bola lo más grande posible", "En un modelo lo más corto posible", "En una rosca externa"], "Paso 7.", "S. 111"],
         ["¿Con qué desinfectas la zona en el paso 8?", ["Con una toallita con alcohol", "Con solución salina", "Con Kodan, solo después de perforar", "Con Chlorhexamed"], "Procedimiento, paso 8.", "S. 111"],
         ["¿Con qué marcas los puntos de entrada y de salida?", ["Con el marcador desechable", "Con un bolígrafo desinfectado", "Con la punta de la cánula", "Con un lápiz kohl"], "Paso 9.", "S. 111"],
-        ["¿Por qué dejas que el cliente mire después de marcar?", ["Para que compruebe si le parece bien", "Para que se acostumbre a la aguja", "Para que el desinfectante haga efecto", "Para que vea las instrucciones de cuidado"], "Paso 10.", "S. 111"]
+        ["¿Por qué dejas que el cliente mire después de marcar?", ["Para que compruebe si le parece bien", "Para que se acostumbre a la aguja", "Para que el desinfectante haga efecto", "Para que vea las instrucciones de cuidado"], "Paso 10.", "S. 111"],
+        ["¿Qué haces antes de desinfectar y marcar la zona?", ["Desinfectarme las manos y ponerme los guantes", "Hacer que el cliente firme las instrucciones de cuidado", "Sacar ya la cánula de su envase", "Lavar la zona con solución salina"], "Paso 7a, añadido por la Academia.", "Ergänzung"],
+        ["¿Qué haces después de marcar y antes de perforar?", ["Desinfectar con antiséptico cutáneo sin borrar la marca", "Repasar la marca con alcohol para que dure", "Perforar enseguida, mientras la marca está fresca", "Tapar la zona con una tirita"], "Paso 9a, añadido por la Academia: esperar el tiempo de actuación.", "Ergänzung"]
       ]
     },
     {
       titel: "La perforación",
       seite: "S. 112",
       inhalt: [
-        { typ: "foto", id: "stechen", text: "Perforación en la oreja con guantes y cánula. Libro del curso pág. 111." },
+        { typ: "foto", id: "stechen", text: "Trabajo en la oreja con guantes y pinza. Libro del curso pág. 111." },
         { typ: "schritte", start: 11, punkte: [
           "Colocar la pinza o el tubo receptor.",
           "Perforar, idealmente siempre hacia el lado visible; en el labret, por ejemplo, donde va la bola. Cuanto más rápido se perfora, menos dolor.",
           "Retirar la cánula; la vaina de plástico se queda en el canal de la perforación.",
+          { nr: "13a", text: "Tirar la aguja de acero de inmediato al contenedor para objetos punzantes." },
           "Recortar un poco la vaina de plástico con tijeras para que la joya entre mejor.",
           "Introducir la joya inicial en la vaina de plástico.",
           "Empujarla a través del canal de la perforación, no tirar de ella; si no, la joya puede salirse. Es doloroso: pide al cliente que exhale mientras tanto."
@@ -110,8 +117,8 @@ KURS.module.push({
       titel: "Problemas circulatorios y emergencias",
       seite: "S. 26, 50, 113",
       inhalt: [
-        { typ: "achtung", text: "Si al cliente le baja la tensión durante el procedimiento (¡pregunta siempre!), dale glucosa (por ejemplo, Dextro Energy) y algo de beber. Si es necesario, túmbalo y déjalo descansar." },
-        { typ: "ergaenzung", text: "Lo que da buen resultado en un colapso circulatorio: tumbar a la persona en horizontal y elevarle las piernas para que la sangre vuelva a la cabeza. La glucosa y la bebida, solo cuando el cliente vuelva a tragar con seguridad." },
+        { typ: "achtung", text: "Si al cliente le baja la tensión durante el procedimiento (¡pregunta siempre!): interrumpe de inmediato, túmbalo en horizontal y elévale las piernas. Solo cuando vuelva a estar despejado y pueda tragar con seguridad, dale glucosa (por ejemplo, Dextro Energy) y algo de beber. Si pierde el conocimiento, llama de inmediato al 112." },
+        { typ: "ergaenzung", text: "Según el libro del curso, ante una bajada de tensión primero das glucosa y algo de beber y, si es necesario, tumbas al cliente. El orden de arriba es más seguro: quien está a punto de desmayarse puede caerse o atragantarse. Tumbado en horizontal con las piernas elevadas, la sangre vuelve a la cabeza." },
         { typ: "liste", titel: "Estar preparado", punkte: [
           "En el estudio hay un botiquín de primeros auxilios actualizado, bien visible y de acceso rápido.",
           "Los números de emergencia (médico de urgencias, médico de cabecera, bomberos) están expuestos.",
@@ -125,7 +132,7 @@ KURS.module.push({
         ["¿Cómo detectas a tiempo una bajada de tensión?", ["Pregunto siempre durante el procedimiento", "Mido la tensión antes", "Solo me fijo en el sudor", "No lo hago, el cliente ya avisará"], "«¡Pregunta siempre!»", "S. 113"],
         ["¿Qué números de emergencia deben estar expuestos?", ["Médico de urgencias, médico de cabecera, bomberos", "Policía y oficina local de salud pública", "Solo la policía (110)", "Oficina local de salud pública y oficina de comercio"], "Cap. 5.4.", "S. 26"],
         ["¿Qué número marcas en caso de pérdida de conciencia?", ["112", "110", "116 117", "El número del médico de cabecera"], "El 112 comunica en toda Europa con los servicios de emergencias y los bomberos. El 110 es la policía y el 116 117 el servicio médico de guardia (en Alemania).", "Ergänzung"],
-        ["Caso: mientras perforas, la clienta se pone pálida y se marea. ¿Qué haces?", ["Interrumpir, tumbarla, piernas en alto, después glucosa y bebida", "Terminar de perforar rápido", "Hacer que se levante y camine", "Rociar espray de frío en la zona"], "Bajada de tensión, ver pág. 113.", "S. 113"]
+        ["Caso: mientras perforas, la clienta se pone pálida y se marea. ¿Qué haces?", ["Interrumpir, tumbarla, piernas en alto, glucosa después", "Terminar rápido de perforar y dejar que descanse", "Hacer que se levante y dé unos pasos", "Darle enseguida glucosa y un vaso de agua"], "Bajada de tensión, ver pág. 113.", "S. 113"]
       ]
     }
   ],

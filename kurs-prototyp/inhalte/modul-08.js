@@ -85,7 +85,7 @@ window.KURS = window.KURS || { module: [] };
         ],
         fragen: [
           ["Wo sitzt der Rook?", ["Senkrecht in der Antihelix", "Waagerecht in der Helixwurzel", "Im Tragus", "In der inneren Conch"], "Knorpelsteg um das Cavum conchae.", "S. 80"],
-          ["Warum werden Rook und Daith mit Nadelauffangrohr gestochen?", ["Im Innenohr passt keine Zange", "Weil sie besonders stark bluten", "Weil sie mit Punch gestochen werden", "Weil sie besonders dicke Kanülen brauchen"], "Das Rohr schützt das umliegende Gewebe.", "S. 68"],
+          ["Warum werden Rook und Daith mit Nadelauffangrohr gestochen?", ["In der inneren Ohrmuschel passt keine Zange", "Weil sie besonders stark bluten", "Weil sie mit Punch gestochen werden", "Weil sie besonders dicke Kanülen brauchen"], "Das Rohr schützt das umliegende Gewebe.", "S. 68"],
           ["Darfst du das Daith als Mittel gegen Migräne bewerben?", ["Nein", "Ja, mit „kann helfen“", "Ja, wenn Studien zitiert werden", "Nur mündlich, nicht schriftlich"], "Keine Heilversprechen.", "S. 81"]
         ]
       },

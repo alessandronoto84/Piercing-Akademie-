@@ -33,29 +33,36 @@ KURS.module.push({
           "Meanwhile, prepare the workstation and lay out all instruments ready to hand.",
           "The client enters the piercing room: create a pleasant atmosphere and ease the client’s anxiety.",
           "Examine the area and choose suitable initial jewelry (extra length!).",
+          { nr: "7a", text: "Disinfect your hands and put on gloves." },
           "Disinfect the area (alcohol swab).",
+          { nr: "8a", text: "Shave if necessary (disposable razor) and disinfect again afterwards." },
           "Mark the entry and exit points of the cannula with the single-use marker.",
+          { nr: "9a", text: "Disinfect the area with a skin antiseptic (for example Kodan) without wiping off the marking, and wait for the contact time." },
           "Let the client check whether it looks right."
         ] },
-        { typ: "merke", text: "Step 10 is your safety net: the client sees the marking before the piercing is done. Anything that isn’t right can still be changed now." }
+        { typ: "merke", text: "Step 10 is your safety net: the client sees the marking before the piercing is done. Anything that isn’t right can still be changed now." },
+        { typ: "achtung", text: "The 26 steps in the course book mention neither hand disinfection and gloves nor shaving, skin antisepsis after marking or disposing of the needle immediately. The Academy has added these steps (7a, 8a, 9a and 13a). They are mandatory, even though they are not numbered in the book." }
       ],
       fragen: [
         ["When do you prepare the workstation and instruments?", ["While the client fills in the consent form", "Before the client enters the studio, for the whole day", "After marking", "When the client is already lying on the couch"], "Step 5.", "S. 111"],
         ["What do you pay attention to when choosing the initial jewelry?", ["Extra length", "The largest possible ball", "The shortest possible model", "External threading"], "Step 7.", "S. 111"],
         ["What do you use to disinfect the area in step 8?", ["An alcohol swab", "Saline solution", "Kodan, only after piercing", "Chlorhexamed"], "Procedure, step 8.", "S. 111"],
         ["What do you use to mark the entry and exit points?", ["The single-use marker", "A disinfected ballpoint pen", "The tip of the cannula", "A kohl pencil"], "Step 9.", "S. 111"],
-        ["Why do you let the client look after marking?", ["So the client can check whether it looks right", "So the client gets used to the needle", "So the disinfectant can take effect", "So the client sees the aftercare instructions"], "Step 10.", "S. 111"]
+        ["Why do you let the client look after marking?", ["So the client can check whether it looks right", "So the client gets used to the needle", "So the disinfectant can take effect", "So the client sees the aftercare instructions"], "Step 10.", "S. 111"],
+        ["What do you do before disinfecting and marking the area?", ["Disinfect your hands and put on gloves", "Have the client sign the aftercare instructions", "Take the cannula out of its packaging already", "Wash the area with saline solution"], "Step 7a, an Academy addition.", "Ergänzung"],
+        ["What do you do after marking, before piercing?", ["Disinfect with skin antiseptic without wiping off the marking", "Trace the marking again with alcohol so it lasts", "Pierce right away while the marking is fresh", "Cover the area with a plaster"], "Step 9a, an Academy addition: wait for the contact time.", "Ergänzung"]
       ]
     },
     {
       titel: "The piercing",
       seite: "S. 112",
       inhalt: [
-        { typ: "foto", id: "stechen", text: "Piercing the ear with gloves and a cannula. Course book p. 111." },
+        { typ: "foto", id: "stechen", text: "Working on the ear with gloves and a clamp. Course book p. 111." },
         { typ: "schritte", start: 11, punkte: [
           "Apply the clamp or receiving tube.",
           "Pierce, ideally always into the visible side – with a labret, for example, where the ball will sit. The faster you pierce, the less pain.",
           "Pull out the cannula; the plastic sheath stays in the piercing channel.",
+          { nr: "13a", text: "Drop the steel needle straight into the sharps container." },
           "Trim the plastic sheath slightly with scissors so the jewelry goes in more easily.",
           "Insert the initial jewelry into the plastic sheath.",
           "Push it through the piercing channel, don’t pull, or the jewelry may slip off. This is painful: have the client breathe out while you do it."
@@ -110,8 +117,8 @@ KURS.module.push({
       titel: "Circulatory problems and emergencies",
       seite: "S. 26, 50, 113",
       inhalt: [
-        { typ: "achtung", text: "If the client’s circulation drops during the procedure (always ask!), give them glucose (for example Dextro Energy) and something to drink. If necessary, have them lie down and let them rest." },
-        { typ: "ergaenzung", text: "Proven approach for a circulatory collapse: lay the person flat and raise their legs so the blood flows back to the head. Give glucose and a drink only once the client can swallow safely again." },
+        { typ: "achtung", text: "If the client’s circulation drops during the procedure (always ask!): stop immediately, lay them flat and raise their legs. Only once the client is clear-headed again and can swallow safely, give them glucose (for example Dextro Energy) and something to drink. If they lose consciousness, call 112 immediately." },
+        { typ: "ergaenzung", text: "According to the course book, you first give glucose and something to drink when circulation drops and have the client lie down if necessary. The order above is safer: someone who is about to faint can fall or choke. Lying flat with the legs raised, the blood flows back to the head." },
         { typ: "liste", titel: "Be prepared", punkte: [
           "An up-to-date first aid kit hangs in the studio, clearly visible and quickly accessible.",
           "Emergency numbers (emergency doctor, family doctor, fire brigade) are posted.",
@@ -125,7 +132,7 @@ KURS.module.push({
         ["How do you spot a drop in circulation in time?", ["I always ask during the procedure", "I measure blood pressure beforehand", "I only watch for sweating", "I don’t – the client will say something"], "“Always ask!”", "S. 113"],
         ["Which emergency numbers should be posted?", ["Emergency doctor, family doctor, fire brigade", "Police and local public health office", "Only the police (110)", "Local public health office and trade office"], "Ch. 5.4.", "S. 26"],
         ["Which number do you call in case of unconsciousness?", ["112", "110", "116 117", "The family doctor’s number"], "112 reaches the ambulance service and fire brigade throughout Europe. 110 is the police, 116 117 the out-of-hours medical service (in Germany).", "Ergänzung"],
-        ["Case: While you are piercing, the client turns pale and feels dizzy. What do you do?", ["Stop, lay her down, legs up, later glucose and a drink", "Quickly finish the piercing", "Let her stand up and walk around", "Spray ice spray on the area"], "Drop in circulation, see p. 113.", "S. 113"]
+        ["Case: While you are piercing, the client turns pale and feels dizzy. What do you do?", ["Stop, lay her down, legs up, glucose later", "Quickly finish piercing, then let her rest", "Let her stand up and walk a few steps", "Give her glucose and a glass of water right away"], "Drop in circulation, see p. 113.", "S. 113"]
       ]
     }
   ],

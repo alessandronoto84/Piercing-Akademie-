@@ -112,13 +112,13 @@ window.KURS.labor = {
       modul: 9,
       material: ["Plantilla de práctica (página 2) o una hoja en blanco"],
       schritte: [
-        "Escribir de memoria los 26 pasos del procedimiento del módulo 09.",
+        "Escribe de memoria los 26 pasos del procedimiento del módulo 9, con los añadidos de la Academia (7a, 8a, 9a, 13a).",
         "Compararlos con el módulo 09 y completar en rojo lo que falte.",
         "Repetirlo al día siguiente hasta que todo esté bien sin rojo.",
         "Explicar en voz alta las instrucciones de cuidado (pasos 24 y 25) a otra persona como si fuera tu cliente."
       ],
       kontrolle: [
-        "Los 26 pasos son correctos y están en el orden correcto.",
+        "Los 26 pasos y los cuatro añadidos son correctos y están en el orden correcto.",
         "Puedo explicar por qué la joya se empuja a través del canal de la perforación y no se tira de ella (paso 16).",
         "He explicado las instrucciones de cuidado sin chuleta."
       ]
@@ -150,7 +150,7 @@ window.KURS.labor.aufgaben = window.KURS.labor.aufgaben.concat([
     "titel": "Nombrar y clasificar las herramientas: estéril o limpio",
     "modul": 7,
     "material": [
-      "tu material de práctica: cánulas con capuchón, pinza, marcador cutáneo, guantes desechables, empapador desechable",
+      "tu material de práctica: cánulas con capuchón, pinza, tijeras, pinza para bolas, pinza de sujeción, marcador cutáneo, calibre, guantes desechables, empapador desechable (lo que tengas)",
       "una hoja con dos columnas: «tiene que estar estéril» y «tiene que estar limpio y desinfectado»"
     ],
     "schritte": [
@@ -162,7 +162,7 @@ window.KURS.labor.aufgaben = window.KURS.labor.aufgaben.concat([
     "kontrolle": [
       "He nombrado bien cada pieza.",
       "He asignado a cada cánula el grosor de joya correcto.",
-      "Mi clasificación estéril/limpio coincide con la lección."
+      "Mi clasificación coincide con la lección: todo lo que toca la piel, el canal, la vaina, la bola o la joya inicial (también tijeras, pinza para bolas y pinza de sujeción) está en «tiene que estar estéril»."
     ]
   },
   {
@@ -488,7 +488,7 @@ window.KURS.labor.stich = {
         "Marcar los puntos de entrada y de salida en el lóbulo (paso 9) y comprobar la marca (paso 10).",
         "Colocar la pinza; la marca queda en la ventana (paso 11).",
         "Perforar con decisión hacia el lado visible, es decir, desde delante, donde después irá la bola (paso 12).",
-        "Retirar la aguja de acero y desecharla; la vaina de plástico se queda en el canal de la perforación (paso 13).",
+        "Retirar la aguja de acero y desecharla; la vaina de plástico se queda en el canal de la perforación (pasos 13 y 13a).",
         "Recortar un poco la vaina con las tijeras e introducir el labret en ella (pasos 14 y 15).",
         "Empujar el labret a través del canal de la perforación, no tirar (paso 16). Retirar con cuidado el tubito (paso 17).",
         "Tomar la bola, sujetar la joya con la pinza de sujeción y enroscar la bola firmemente (pasos 18 y 19).",

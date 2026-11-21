@@ -145,12 +145,13 @@ KURS.module.push({
       titel: "¿Estéril o solo limpio?",
       seite: "S. 35",
       inhalt: [
-        { typ: "merke", text: "Todo lo que lesiona la piel o entra en contacto con sangre (agujas, portaagujas, pinzas) debe ser estéril: como material estéril de un solo uso o esterilizado en el autoclave." },
-        { typ: "text", text: "Las herramientas sin contacto directo con la piel, como la pinza para bolas o las tijeras, se limpian en el baño de ultrasonidos y se desinfectan en un baño desinfectante. Las agujas de cánula usadas van de inmediato al contenedor para objetos punzantes." }
+        { typ: "merke", text: "Debe ser estéril todo lo que lesiona la piel, entra en contacto con sangre o toca el canal, la vaina de plástico, la bola o la joya inicial: pinzas, tubo receptor, tijeras, pinza para bolas, pinza de sujeción, pinzas para abrir y cerrar aros, cónico de inserción. Las cánulas son material estéril de un solo uso; los instrumentos reutilizables se reprocesan después de cada cliente y se esterilizan en el autoclave." },
+        { typ: "text", text: "Solo los objetos sin contacto con el campo estéril, como la linterna o un calibre usado fuera del campo estéril, se limpian y se desinfectan. Las agujas de cánula usadas van de inmediato al contenedor para objetos punzantes." },
+        { typ: "ergaenzung", text: "Según el libro del curso (pág. 35), la pinza para bolas, la pinza y las tijeras, como herramientas sin contacto directo con la piel, solo se desinfectan. La Academia exige instrumental estéril: las tijeras acortan la vaina dentro del canal recién perforado, la pinza para bolas sujeta la bola que va en la joya inicial y la pinza de sujeción sujeta la joya inicial." }
       ],
       fragen: [
-        ["¿Qué debe ser estéril?", ["Todo lo que lesiona la piel o toca sangre, p. ej. agujas y pinzas", "Solo las cánulas", "También la pinza para bolas y las tijeras", "Solo las joyas iniciales"], "Las herramientas sin contacto con la piel se desinfectan.", "S. 35"],
-        ["¿Cómo se reprocesa una pinza para bolas?", ["Se limpia en el baño de ultrasonidos y se desinfecta", "Es material desechable", "Solo se limpia con alcohol", "No necesita reprocesamiento"], "Sin contacto directo con la piel.", "S. 35"],
+        ["¿Qué debe ser estéril?", ["Todo lo que toca la piel, el canal o la joya inicial", "Solo las cánulas; todo lo demás se desinfecta", "Solo agujas y pinzas, no tijeras ni pinza para bolas", "Solo las joyas iniciales y sus bolas"], "Es decir, también las tijeras, la pinza para bolas y la pinza de sujeción. Solo se desinfectan los objetos sin contacto con el campo estéril.", "Ergänzung"],
+        ["¿Cómo se reprocesa una pinza para bolas?", ["Se limpia, se desinfecta y se esteriliza en el autoclave", "Solo se limpia en el baño de ultrasonidos y se desinfecta", "Solo se limpia con una toallita de alcohol", "No necesita reprocesamiento"], "Sujeta la bola que va en la joya inicial. Según el libro del curso basta con desinfectarla; la Academia exige que sea estéril.", "Ergänzung"],
         ["¿Adónde va una aguja de cánula usada?", ["Al contenedor para objetos punzantes", "A la bandeja de instrumental para reprocesarla", "Al cubo de basura con pedal", "A su capuchón y luego a la basura"], "Justo después de la perforación.", "S. 27"]
       ]
     }

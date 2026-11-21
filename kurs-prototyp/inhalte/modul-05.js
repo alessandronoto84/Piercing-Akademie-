@@ -16,18 +16,18 @@ KURS.module.push({
           "Flächen- und Gerätedesinfektionsmittel",
           "Ausgiebiges Händewaschen mit hautfreundlicher Seife und Abtrocknen mit Einmalhandtüchern",
           "Händedesinfektion mit speziellem Mittel (mindestens 30 Sekunden) aus einem geeigneten Spender",
-          "Isolierung",
           "Sterile bzw. Einweg-Werkzeuge mit Hautkontakt (Zangen, Nadeln, Ersteinsätze)",
-          "Reinigung von Instrumenten ohne Hautkontakt (Klemmen, Scheren, Kugelgreifer) mit geeigneten Desinfektionsmitteln",
+          "Reinigung und Desinfektion von Gegenständen ohne Kontakt zum Sterilfeld (laut Kursbuch auch Klemmen, Scheren und Kugelgreifer; siehe Ergänzung)",
           "Spülen von medizinischen Instrumenten getrennt vom OP",
           "Arbeitskleidung regelmäßig mit kochheißem Wasser und Waschmittel waschen",
           "Fußboden und Arbeitsflächen mit geeigneten Mitteln reinigen"
-        ] }
+        ] },
+        { typ: "ergaenzung", text: "Steril (einzeln verpackt sterilisiert oder steriles Einwegmaterial) sind alle Instrumente, die Haut, Schleimhaut, Stichkanal, Kanüle bzw. Kunststoffüberzug oder den Ersteinsatz berühren: Klemmen, Nadelauffangrohr, Schere, Kugelgreifer, Klemmzange, Ringöffnungs- und Ringschließzange, Einführhilfe. Nur Gegenstände ohne Kontakt zum Sterilfeld (zum Beispiel Taschenlampe, Messschieber außerhalb des Sterilfelds) werden gereinigt und desinfiziert. Das Kursbuch zählt Klemme, Schere und Kugelgreifer zu den Werkzeugen ohne Hautkontakt. Die Schere kürzt aber den Überzug im frischen Stichkanal, der Kugelgreifer hält die Kugel für den Ersteinsatz und die Klemmzange den Ersteinsatz selbst." }
       ],
       fragen: [
         ["Wie definiert das Kursbuch Hygiene?", ["Die Lehre von der Verhütung von Krankheiten und der Erhaltung der Gesundheit", "Die Gesamtheit aller Desinfektionsmaßnahmen", "Die Lehre von den Krankheitserregern", "Das keimfreie Arbeiten im OP"], "Zitat am Beginn von Kap. 5.", "S. 16"],
         ["Wie lange desinfizierst du die Hände mindestens?", ["30 Sekunden", "10 Sekunden", "90 Sekunden", "3 Minuten"], "Mindestens 30 Sekunden bzw. nach Herstellerangabe.", "S. 16"],
-        ["Welche Werkzeuge müssen steril bzw. Einwegmaterial sein?", ["Werkzeuge mit Hautkontakt wie Zangen, Nadeln und Ersteinsätze", "Nur die Nadeln, Zangen werden desinfiziert", "Kugelgreifer, Scheren und Klemmen ohne Hautkontakt", "Nur die Ersteinsätze"], "Werkzeuge ohne Hautkontakt werden desinfiziert.", "S. 16"],
+        ["Welche Werkzeuge müssen steril bzw. Einwegmaterial sein?", ["Alles, was Haut, Stichkanal oder Ersteinsatz berührt, auch Schere", "Nur die Nadeln; Zangen und Klemmen werden desinfiziert", "Nur die Ersteinsätze, alles andere wird desinfiziert", "Nur Instrumente, an denen sichtbar Blut klebt"], "Also auch Klemmen, Kugelgreifer und Klemmzange. Laut Kursbuch werden Klemmen, Scheren und Kugelgreifer nur desinfiziert; sie berühren aber Überzug, Kugel oder Ersteinsatz.", "Ergänzung"],
         ["Wo werden medizinische Instrumente gespült?", ["Getrennt vom OP", "Am Handwaschbecken im Arbeitsbereich", "Direkt in der Instrumentenschale", "Im Ultraschallbad neben der Liege"], "Liste der Hygienemaßnahmen.", "S. 16"],
         ["Womit wird die Arbeitskleidung gewaschen?", ["Mit kochheißem Wasser und Waschmittel", "Bei 40 °C mit Hygienespüler", "Bei 60 °C ohne Waschmittel", "Kalt mit Desinfektionsmittel"], "Bei Verunreinigung mindestens 90 °C.", "S. 16, 39"],
         ["Womit trocknest du die Hände nach dem Waschen?", ["Mit Einmalhandtüchern", "Mit einem täglich gewechselten Stoffhandtuch", "Mit dem Händetrockner", "Lufttrocknen lassen"], "Stoffhandtücher werden mehrfach benutzt und verbreiten Keime, Einmalhandtücher nicht.", "S. 16"]
@@ -82,7 +82,7 @@ KURS.module.push({
         { typ: "text", text: "Voraussetzung: Fingernägel kurz und rund geschnitten, keine Nagelbettverletzung. Bei Bedarf gibt es desinfizierte Kunststoffbürsten für die Fingernägel." },
         { typ: "schritte", punkte: [
           "Desinfektionsmittel in die trockene, gereinigte Hand geben; den Spender mit dem Ellenbogen betätigen.",
-          "Hände und Unterarme bis zum Ellenbogen einreiben; alle Handflächen müssen benetzt sein.",
+          "Hände und Unterarme bis zum Ellenbogen einreiben; alle Hautflächen müssen benetzt sein.",
           "Über die vom Hersteller empfohlene Einwirkzeit einreiben und feucht halten.",
           "Hände während und nach dem Einreiben über Ellenbogenniveau halten. Vor dem Anlegen der OP-Handschuhe müssen sie trocken sein."
         ] }
@@ -212,7 +212,7 @@ KURS.module.push({
           "Sofort einen Arzt aufsuchen, bei einem Arbeitsunfall einen Durchgangsarzt (D-Arzt). Eine vorbeugende Behandlung gegen HIV wirkt am besten, wenn sie innerhalb weniger Stunden beginnt.",
           "Den Vorfall dokumentieren: wann, womit, bei welchem Kunden. Ob der Kunde zu einem Bluttest bereit ist, klärt der Arzt."
         ] },
-        { typ: "ergaenzung", text: "Grundlage: S1-Leitlinie zu Hygieneanforderungen beim Tätowieren und Piercen und die Empfehlungen der Unfallversicherungsträger. Kläre in Modul 11, bei welcher Berufsgenossenschaft du versichert bist." }
+        { typ: "ergaenzung", text: "Grundlage: S1-Leitlinie zu Hygieneanforderungen beim Tätowieren und Piercen und die Empfehlungen der Unfallversicherungsträger. Kläre vor dem Start deines Studios, bei welcher Berufsgenossenschaft du versichert bist." }
       ],
       fragen: [
         ["Gegen welche durch Blut übertragbare Krankheit gibt es eine Impfung?", ["Hepatitis B", "Hepatitis C", "HIV", "Gegen alle drei"], "Impferfolg beim Arzt kontrollieren lassen.", "Ergänzung"],
@@ -231,7 +231,7 @@ KURS.module.push({
         { typ: "text", text: "Desinfektion bedeutet im übertragenen Sinn „keimfrei machen“: totes oder lebendes Material in einen Zustand versetzen, in dem es nicht mehr infizieren kann. Technisch unterscheidet man Desinfektion und Sterilisation." },
         { typ: "tabelle", kopf: ["Begriff", "Keimreduktion", "Bedeutung"], zeilen: [
           ["Desinfektion", "Faktor 10⁵ (1 : 100.000)", "Von 100.000 vermehrungsfähigen Keimen überlebt höchstens einer."],
-          ["Sterilisation", "Faktor 10⁶ (1 : 1.000.000)", "Tötet auch Bakteriensporen ab."]
+          ["Sterilisation", "laut Kursbuch Faktor 10⁶ (1 : 1.000.000)", "Genauer: Die Wahrscheinlichkeit, dass auf einem Gegenstand noch ein Keim überlebt, liegt höchstens bei 1 : 1.000.000 (SAL 10⁻⁶). Dafür ist eine Reduktion um deutlich mehr als 6 Zehnerpotenzen nötig. Tötet auch Bakteriensporen ab."]
         ] },
         { typ: "grafik", id: "keimreduktion" },
         { typ: "text", text: "Antisepsis (griechisch, wörtlich „gegen Fäulnis“) bezeichnet alle Maßnahmen zur Verminderung infektiöser Keime und damit zur Verhinderung einer Infektion: die Desinfektion von Oberflächen, Materialien, Gegenständen und Wunden." },
@@ -239,8 +239,8 @@ KURS.module.push({
         { typ: "merke", text: "Eine vollkommene Keimfreiheit ist auf Körperoberflächen nie zu erreichen, da Haut und Schleimhaut nicht sterilisiert werden können." }
       ],
       fragen: [
-        ["Welche Keimreduktion erreicht eine Sterilisation?", ["Faktor 10⁶", "Faktor 10⁵", "Faktor 10⁴", "Faktor 10³"], "Desinfektion erreicht 10⁵.", "S. 28"],
-        ["Welche Keimreduktion erreicht eine Desinfektion?", ["Faktor 10⁵", "Faktor 10⁶", "Faktor 10³", "Faktor 10²"], "Von 100.000 Keimen überlebt höchstens einer.", "S. 28"],
+        ["Was bedeutet das „1 : 1.000.000“ bei der Sterilisation?", ["Höchstens 1 : 1 Million Wahrscheinlichkeit, dass ein Keim überlebt", "Aus einer Million Keimen bleibt genau einer übrig", "Ein Gegenstand ist nach einer Million Zyklen steril", "Eine Million Keime pro cm² sind erlaubt"], "Sterility Assurance Level 10⁻⁶. Das Kursbuch spricht von Faktor 10⁶; die Desinfektion erreicht 10⁵.", "S. 28"],
+        ["Welche Keimreduktion erreicht eine Desinfektion?", ["Faktor 10⁵", "Faktor 10⁶", "Faktor 10³", "Faktor 10²"], "Von 100.000 Keimen überlebt höchstens einer. Sterilisation geht weiter und tötet auch Sporen.", "S. 28"],
         ["Welche Liste gibt unter anderem Auskunft über die Viruswirksamkeit?", ["Die IHO-Desinfektionsmittelliste", "Die Rote Liste", "Die Liste der Medizinprodukte", "Die REACH-Liste"], "Bei Entseuchungen RKI-gelistete Produkte.", "S. 28"],
         ["Was bedeutet Antisepsis wörtlich?", ["Gegen Fäulnis", "Gegen Keime", "Ohne Keime", "Gegen Entzündung"], "Aus dem Griechischen.", "S. 29"],
         ["Lassen sich Haut und Schleimhaut sterilisieren?", ["Nein, vollkommene Keimfreiheit ist dort nie erreichbar", "Ja, mit alkoholischem Hautantiseptikum", "Ja, nach chirurgischer Händedesinfektion", "Ja, mit Octenidin"], "Merksatz zur Antisepsis.", "S. 29"]
@@ -299,15 +299,16 @@ KURS.module.push({
           "Desinfektionsmittel bleiben in der Originalverpackung und werden in keinem Fall umgefüllt oder aufgefüllt.",
           "Spender brauchen ein Sichtfenster, durch das das Etikett erkennbar ist."
         ] },
-        { typ: "achtung", text: "Werden keine sterilen Einwegmaterialien verwendet, müssen alle Instrumente und Werkzeuge, die zu einer Hautverletzung bzw. direktem Blutkontakt führen, vor und nach der Behandlung im Autoklav sterilisiert werden. Dazu zählen in erster Linie Nadeln, Nadelhalter und Klemmen. Nur der Autoklav tötet auch Bakteriensporen ab." },
-        { typ: "text", text: "Die zu sterilisierenden Geräte werden idealerweise einzeln in Sterilisationsbeuteln verpackt und aufbewahrt. Bei unverpackter Aufbewahrung in Containern ist auch der Container zu sterilisieren. Werkzeuge ohne direkten Hautkontakt (Kugelgreifer, Klemme, Schere) werden in einem Ultraschallbad gereinigt und in einem Desinfektionsbad desinfiziert. Verschiedene Metalle dabei nicht mischen." }
+        { typ: "achtung", text: "Kanülen und Nadeln sind immer steriles Einwegmaterial und kommen sofort nach dem Stich in den Nadelabwurfbehälter; sie werden nie aufbereitet. Wiederverwendbare Instrumente, die Haut, Stichkanal, Überzug oder Ersteinsatz berühren (Klemmen, Nadelhalter, Schere, Kugelgreifer, Klemmzange), werden nach jeder Behandlung aufbereitet, im Autoklav sterilisiert und steril verpackt gelagert, sofern du kein steriles Einwegmaterial verwendest. Nur der Autoklav tötet auch Bakteriensporen ab." },
+        { typ: "text", text: "Die zu sterilisierenden Geräte werden idealerweise einzeln in Sterilisationsbeuteln verpackt und aufbewahrt. Bei unverpackter Aufbewahrung in Containern ist auch der Container zu sterilisieren. Vor dem Sterilisieren werden die Instrumente im Ultraschallbad gereinigt und desinfiziert; verschiedene Metalle dabei nicht mischen. Nur Gegenstände ohne Kontakt zum Sterilfeld, etwa Taschenlampe oder Messschieber, werden lediglich gereinigt und desinfiziert." },
+        { typ: "ergaenzung", text: "Im Kursbuch (S. 35) steht, dass Instrumente mit Hautverletzung oder Blutkontakt „vor und nach der Behandlung“ sterilisiert werden, „in erster Linie Nadeln, Nadelhalter und Klemmen“, und dass Kugelgreifer, Klemme und Schere nur desinfiziert werden. Die Akademie stellt klar: Kanülen sind Einmalprodukte und werden nie aufbereitet, und alles, was Stichkanal, Überzug, Kugel oder Ersteinsatz berührt, muss steril sein." }
       ],
       fragen: [
         ["Was bedeutet „viruzid“?", ["Wirksam gegen Viren", "Wirksam gegen Pilze", "Wirksam gegen Bakteriensporen", "Wirksam gegen Bakterien"], "Mittel für Flächen und Instrumente sollten viruzid sein.", "S. 35"],
         ["Darf Desinfektionsmittel umgefüllt werden?", ["Nein, es bleibt in der Originalverpackung", "Ja, in beschriftete Sprühflaschen", "Ja, wenn es nicht verdünnt wird", "Ja, in Spender ohne Sichtfenster"], "Spender mit Sichtfenster für das Etikett.", "S. 35"],
-        ["Was muss im Autoklav sterilisiert werden, wenn kein steriles Einwegmaterial verwendet wird?", ["Alles, was zu Hautverletzung oder Blutkontakt führt, z. B. Nadeln und Klemmen", "Nur Scheren und Kugelgreifer", "Nur die Instrumentenschale", "Nur die Ersteinsätze"], "Vor und nach der Behandlung.", "S. 35"],
+        ["Was muss im Autoklav sterilisiert werden, wenn kein steriles Einwegmaterial verwendet wird?", ["Wiederverwendbare Instrumente wie Klemmen, Schere und Kugelgreifer", "Auch benutzte Kanülen, damit sie wieder verwendet werden können", "Nur die Instrumentenschale und die Ablageflächen", "Nur Instrumente, an denen sichtbar Blut klebt"], "Nach jeder Behandlung aufbereiten und steril verpackt lagern. Kanülen sind Einmalmaterial und werden nie aufbereitet.", "Ergänzung"],
         ["Was tötet nur die Sterilisation, nicht aber die Desinfektion?", ["Bakteriensporen", "Behüllte Viren", "Pilze", "Transiente Hautkeime"], "Merkkasten S. 35.", "S. 35"],
-        ["Wie werden Werkzeuge ohne direkten Hautkontakt aufbereitet?", ["Im Ultraschallbad gereinigt und im Desinfektionsbad desinfiziert", "Nur mit einem Tuch abgewischt", "Immer im Autoklav sterilisiert", "In der Spülmaschine gewaschen"], "Verschiedene Metalle nicht mischen.", "S. 35"]
+        ["Wie werden Gegenstände ohne Kontakt zum Sterilfeld aufbereitet?", ["Gereinigt und desinfiziert, z. B. Taschenlampe oder Messschieber", "Gar nicht, weil sie den Kunden nie berühren", "Sie werden nach jedem Kunden weggeworfen", "Nur kurz unter fließendem Wasser abgespült"], "Schere, Kugelgreifer und Klemmzange gehören nicht dazu: Sie berühren Überzug, Kugel oder Ersteinsatz und müssen steril sein. Verschiedene Metalle nicht mischen.", "Ergänzung"]
       ]
     },
     {

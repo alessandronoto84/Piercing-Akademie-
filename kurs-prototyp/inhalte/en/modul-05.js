@@ -16,18 +16,18 @@ KURS.module.push({
           "Surface and equipment disinfectants",
           "Thorough hand washing with skin-friendly soap and drying with disposable towels",
           "Hand disinfection with a special product (at least 30 seconds) from a suitable dispenser",
-          "Isolation",
           "Sterile or single-use tools that come into contact with the skin (forceps, needles, initial jewelry)",
-          "Cleaning instruments that do not come into contact with the skin (clamps, scissors, ball grabbers) with suitable disinfectants",
+          "Cleaning and disinfecting items without contact with the sterile field (according to the course book also clamps, scissors and ball grabbers; see the Academy note)",
           "Rinsing medical instruments separately from the procedure room",
           "Washing work clothes regularly on a very hot wash with detergent",
           "Cleaning the floor and work surfaces with suitable products"
-        ] }
+        ] },
+        { typ: "ergaenzung", text: "Sterile (individually packed and sterilized, or sterile single-use material) means every instrument that touches skin, mucosa, the piercing channel, the cannula or plastic sheath, or the initial jewelry: clamps, receiving tube, scissors, ball grabber, holding pliers, ring opening and ring closing pliers, insertion taper. Only items with no contact with the sterile field (for example a flashlight, or a caliper used outside the sterile field) are cleaned and disinfected. The course book counts the clamp, scissors and ball grabber as tools without skin contact. But the scissors shorten the sheath in the fresh channel, the ball grabber holds the ball for the initial jewelry, and the holding pliers hold the initial jewelry itself." }
       ],
       fragen: [
         ["How does the course book define hygiene?", ["The science of preventing disease and maintaining health", "All disinfection measures taken together", "The science of pathogens", "Germ-free working in the operating room"], "Quotation at the start of ch. 5.", "S. 16"],
         ["What is the minimum time for disinfecting your hands?", ["30 seconds", "10 seconds", "90 seconds", "3 minutes"], "At least 30 seconds or as specified by the manufacturer.", "S. 16"],
-        ["Which tools must be sterile or single-use?", ["Tools with skin contact such as forceps, needles and initial jewelry", "Only the needles; forceps are disinfected", "Ball grabbers, scissors and clamps without skin contact", "Only the initial jewelry"], "Tools without skin contact are disinfected.", "S. 16"],
+        ["Which tools must be sterile or single-use?", ["Everything that touches skin, channel or initial jewelry, incl. scissors", "Only the needles; forceps and clamps are disinfected", "Only the initial jewelry; everything else is disinfected", "Only instruments with visible blood on them"], "So clamps, ball grabbers and holding pliers too. According to the course book, clamps, scissors and ball grabbers are only disinfected; but they touch the sheath, the ball or the initial jewelry.", "Ergänzung"],
         ["Where are medical instruments rinsed?", ["Separately from the procedure room", "At the hand-wash basin in the work area", "Directly in the instrument tray", "In the ultrasonic bath next to the couch"], "List of hygiene measures.", "S. 16"],
         ["What are work clothes washed with?", ["A very hot wash with detergent", "At 40 °C with a laundry sanitizer", "At 60 °C without detergent", "Cold with disinfectant"], "If soiled, at least 90 °C.", "S. 16, 39"],
         ["What do you dry your hands with after washing?", ["Disposable towels", "A cloth towel changed daily", "The hand dryer", "Let them air-dry"], "Cloth towels are used several times and spread germs; disposable towels don’t.", "S. 16"]
@@ -212,7 +212,7 @@ KURS.module.push({
           "See a doctor immediately; after an accident at work, a doctor authorized by the accident insurance (Durchgangsarzt, D-Arzt). Preventive treatment against HIV works best if it starts within a few hours.",
           "Document the incident: when, with what, with which client. The doctor will find out whether the client is willing to have a blood test."
         ] },
-        { typ: "ergaenzung", text: "Based on: the S1 guideline on hygiene requirements for tattooing and piercing and the recommendations of the accident insurance institutions. In module 11, find out which statutory accident insurance (Berufsgenossenschaft) you are insured with." }
+        { typ: "ergaenzung", text: "Based on: the S1 guideline on hygiene requirements for tattooing and piercing and the recommendations of the accident insurance institutions. Before you open your studio, find out which statutory accident insurance (Berufsgenossenschaft) you are insured with." }
       ],
       fragen: [
         ["Against which blood-borne disease is there a vaccination?", ["Hepatitis B", "Hepatitis C", "HIV", "Against all three"], "Have a doctor check that the vaccination has worked.", "Ergänzung"],
@@ -231,7 +231,7 @@ KURS.module.push({
         { typ: "text", text: "Figuratively, disinfection means “making germ-free”: putting dead or living material into a state in which it can no longer cause infection. Technically, a distinction is made between disinfection and sterilization." },
         { typ: "tabelle", kopf: ["Term", "Germ reduction", "Meaning"], zeilen: [
           ["Disinfection", "Factor 10⁵ (1 : 100,000)", "Of 100,000 germs capable of reproducing, at most one survives."],
-          ["Sterilization", "Factor 10⁶ (1 : 1,000,000)", "Also kills bacterial spores."]
+          ["Sterilization", "according to the course book, factor 10⁶ (1 : 1,000,000)", "More precisely: the probability that a single germ survives on an item is at most 1 : 1,000,000 (SAL 10⁻⁶). This requires a reduction of well over 6 powers of ten. Also kills bacterial spores."]
         ] },
         { typ: "grafik", id: "keimreduktion" },
         { typ: "text", text: "Antisepsis (Greek, literally “against putrefaction”) refers to all measures that reduce infectious germs and thus prevent infection: the disinfection of surfaces, materials, objects and wounds." },
@@ -239,8 +239,8 @@ KURS.module.push({
         { typ: "merke", text: "Complete freedom from germs can never be achieved on body surfaces, because skin and mucous membranes cannot be sterilized." }
       ],
       fragen: [
-        ["What germ reduction does sterilization achieve?", ["Factor 10⁶", "Factor 10⁵", "Factor 10⁴", "Factor 10³"], "Disinfection achieves 10⁵.", "S. 28"],
-        ["What germ reduction does disinfection achieve?", ["Factor 10⁵", "Factor 10⁶", "Factor 10³", "Factor 10²"], "Of 100,000 germs, at most one survives.", "S. 28"],
+        ["What does the “1 : 1,000,000” mean for sterilization?", ["At most a 1 in a million chance that a germ survives", "Exactly one germ out of a million is left over", "An item is sterile after a million cycles", "A million germs per cm² are allowed"], "Sterility Assurance Level 10⁻⁶. The course book speaks of a factor of 10⁶; disinfection achieves 10⁵.", "S. 28"],
+        ["What germ reduction does disinfection achieve?", ["Factor 10⁵", "Factor 10⁶", "Factor 10³", "Factor 10²"], "At most one in 100,000 germs survives. Sterilization goes further and also kills spores.", "S. 28"],
         ["Which list, among others, provides information on virucidal efficacy?", ["The IHO disinfectant list", "The Rote Liste", "The list of medical devices", "The REACH list"], "For officially ordered disinfection, RKI-listed products.", "S. 28"],
         ["What does antisepsis literally mean?", ["Against putrefaction", "Against germs", "Without germs", "Against inflammation"], "From Greek.", "S. 29"],
         ["Can skin and mucous membranes be sterilized?", ["No, complete freedom from germs is never achievable there", "Yes, with an alcohol-based skin antiseptic", "Yes, after surgical hand disinfection", "Yes, with octenidine"], "Key point on antisepsis.", "S. 29"]
@@ -299,15 +299,16 @@ KURS.module.push({
           "Disinfectants stay in their original packaging and are never decanted or topped up.",
           "Dispensers need a viewing window through which the label can be seen."
         ] },
-        { typ: "achtung", text: "If no sterile single-use materials are used, all instruments and tools that lead to a skin injury or direct blood contact must be sterilized in the autoclave before and after the treatment. This primarily includes needles, needle holders and clamps. Only the autoclave also kills bacterial spores." },
-        { typ: "text", text: "Ideally, the devices to be sterilized are packed and stored individually in sterilization pouches. If they are stored unwrapped in containers, the container must also be sterilized. Tools without direct skin contact (ball grabber, clamp, scissors) are cleaned in an ultrasonic bath and disinfected in a disinfectant bath. Do not mix different metals in the process." }
+        { typ: "achtung", text: "Cannulas and needles are always sterile single-use material and go into the sharps container right after piercing; they are never reprocessed. Reusable instruments that touch skin, the piercing channel, the sheath or the initial jewelry (clamps, needle holders, scissors, ball grabber, holding pliers) are reprocessed after every treatment, sterilized in the autoclave and stored in sterile packaging, unless you use sterile single-use material. Only the autoclave also kills bacterial spores." },
+        { typ: "text", text: "Ideally, the devices to be sterilized are packed and stored individually in sterilization pouches. If they are stored unwrapped in containers, the container must also be sterilized. Before sterilization, the instruments are cleaned in an ultrasonic bath and disinfected; do not mix different metals in the process. Only items without contact with the sterile field, such as a flashlight or caliper, are merely cleaned and disinfected." },
+        { typ: "ergaenzung", text: "The course book (p. 35) says that instruments causing skin injury or blood contact are sterilized “before and after the treatment”, “primarily needles, needle holders and clamps”, and that the ball grabber, clamp and scissors are only disinfected. The Academy clarifies: cannulas are single-use products and are never reprocessed, and everything that touches the piercing channel, sheath, ball or initial jewelry must be sterile." }
       ],
       fragen: [
         ["What does “virucidal” mean?", ["Effective against viruses", "Effective against fungi", "Effective against bacterial spores", "Effective against bacteria"], "Products for surfaces and instruments should be virucidal.", "S. 35"],
         ["Can disinfectant be decanted into other containers?", ["No, it stays in the original packaging", "Yes, into labeled spray bottles", "Yes, if it is not diluted", "Yes, into dispensers without a viewing window"], "Dispensers with a viewing window for the label.", "S. 35"],
-        ["What must be sterilized in the autoclave if no sterile single-use material is used?", ["Everything that leads to skin injury or blood contact, e.g. needles and clamps", "Only scissors and ball grabbers", "Only the instrument tray", "Only the initial jewelry"], "Before and after the treatment.", "S. 35"],
+        ["What must be sterilized in the autoclave if no sterile single-use material is used?", ["Reusable instruments such as clamps, scissors and ball grabbers", "Used cannulas too, so that they can be reused", "Only the instrument tray and the storage surfaces", "Only instruments with visible blood on them"], "Reprocess after every treatment and store in sterile packaging. Cannulas are single-use material and are never reprocessed.", "Ergänzung"],
         ["What does only sterilization kill, but not disinfection?", ["Bacterial spores", "Enveloped viruses", "Fungi", "Transient skin germs"], "Key box p. 35.", "S. 35"],
-        ["How are tools without direct skin contact reprocessed?", ["Cleaned in an ultrasonic bath and disinfected in a disinfectant bath", "Just wiped with a cloth", "Always sterilized in the autoclave", "Washed in the dishwasher"], "Do not mix different metals.", "S. 35"]
+        ["How are items without contact with the sterile field reprocessed?", ["Cleaned and disinfected, e.g. a flashlight or caliper", "Not at all, because they never touch the client", "They are thrown away after every client", "Just briefly rinsed under running water"], "Scissors, ball grabber and holding pliers are not among them: they touch the sheath, ball or initial jewelry and must be sterile. Do not mix different metals.", "Ergänzung"]
       ]
     },
     {

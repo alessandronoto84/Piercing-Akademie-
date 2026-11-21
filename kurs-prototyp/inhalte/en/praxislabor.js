@@ -112,13 +112,13 @@ window.KURS.labor = {
       modul: 9,
       material: ["Practice template (page 2) or a blank sheet"],
       schritte: [
-        "Write down all 26 steps of the procedure from module 09 from memory.",
+        "Write down all 26 steps of the procedure from module 9, including the Academy additions (7a, 8a, 9a, 13a), from memory.",
         "Compare with module 09 and add anything missing in red.",
         "Repeat the next day until everything is correct without red.",
         "Explain the aftercare instructions (steps 24 and 25) out loud to another person as if they were your client."
       ],
       kontrolle: [
-        "All 26 steps are correct, in the right order.",
+        "All 26 steps and the four additions are correct and in the right order.",
         "I can explain why the jewelry is pushed, not pulled, through the piercing channel (step 16).",
         "I explained the aftercare instructions without a cheat sheet."
       ]
@@ -150,7 +150,7 @@ window.KURS.labor.aufgaben = window.KURS.labor.aufgaben.concat([
     "titel": "Name and sort your tools: sterile or clean",
     "modul": 7,
     "material": [
-      "your practice materials: cannulas with protective caps, clamp, skin marker, disposable gloves, disposable underpad",
+      "your practice materials: cannulas with protective caps, clamp, scissors, ball grabber, holding pliers, skin marker, caliper, disposable gloves, disposable underpad (as far as available)",
       "a sheet with two columns: “must be sterile” and “must be clean and disinfected”"
     ],
     "schritte": [
@@ -162,7 +162,7 @@ window.KURS.labor.aufgaben = window.KURS.labor.aufgaben.concat([
     "kontrolle": [
       "I named every item correctly.",
       "I matched each cannula to the right jewelry gauge.",
-      "My sterile/clean sorting matches the lesson."
+      "My sorting matches the lesson: everything that touches skin, the piercing channel, the sheath, the ball or the initial jewelry (including scissors, ball grabber and holding pliers) is listed under “must be sterile”."
     ]
   },
   {
@@ -488,7 +488,7 @@ window.KURS.labor.stich = {
         "Mark the entry and exit points on the earlobe (step 9) and check the marking (step 10).",
         "Apply the clamp, with the marking in the window (step 11).",
         "Pierce swiftly into the visible side, i.e. from the front, where the ball will later sit (step 12).",
-        "Pull out the steel needle and dispose of it; the plastic sheath stays in the piercing channel (step 13).",
+        "Pull out the steel needle and dispose of it; the plastic sheath stays in the piercing channel (steps 13 and 13a).",
         "Trim the sheath slightly with the scissors and insert the labret into it (steps 14 and 15).",
         "Push the labret through the piercing channel, don’t pull (step 16). Carefully pull off the tube (step 17).",
         "Pick up the ball, hold the jewelry with the holding pliers and screw the ball on firmly (steps 18 and 19).",

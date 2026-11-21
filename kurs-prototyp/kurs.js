@@ -175,6 +175,15 @@
   // Anzeige über seitenLabel: „p. 74“ (en), „pág. 74“ (es); der Link bleibt #buch-74
   function buchNr(t) { var m = /(?:\bS|\bpp?|\bpágs?)\.\s*(\d+)/.exec(t || ""); return m ? +m[1] : null; }
   function buchLink(t) { var n = buchNr(t), z = seitenLabel(t); return n == null ? esc(z) : '<a href="#buch-' + n + '" class="k-buchlink" title="' + esc(tr("Im Kursbuch nachlesen")) + '">' + esc(z) + "</a>"; }
+  // Schritte: Texte oder { nr: "7a", text: "…" } (Unterschritt als Ergänzung der Akademie, z. B. im Ablauf aus Modul 9).
+  // Sind Unterschritte dabei, bekommen die übrigen Schritte ihre Nummer fest (value), damit die Buchnummerierung bleibt.
+  function schrittListe(b) {
+    var mitZusatz = b.punkte.some(function (p) { return typeof p !== "string"; }), nr = (b.start || 1) - 1;
+    return b.punkte.map(function (p) {
+      if (typeof p === "string") { nr++; return "<li" + (mitZusatz ? ' value="' + nr + '"' : "") + ">" + esc(p) + "</li>"; }
+      return '<li class="k-zusatz"><span class="k-nr">' + esc(p.nr) + '.</span> <span class="k-zusatz-label">' + tr("Ergänzung der Akademie") + "</span> " + esc(p.text) + "</li>";
+    }).join("");
+  }
   function zwei(n) { return (n < 10 ? "0" : "") + n; }
   function mischen(liste) { var a = liste.slice(); for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
   function simulationsUmfang() { return MODULE.reduce(function (s, m) { return s + Math.min(m.pool.length, STRENG[m.nr] ? STRENG[m.nr].simFragen : SIMULATION_JE_MODUL); }, 0); }
@@ -197,7 +206,7 @@
       case "praxis": return '<div class="k-box k-praxis"><strong>' + tr("Aus der Praxis") + '</strong><p>' + esc(b.text) + "</p></div>";
       case "ergaenzung": return '<div class="k-box k-ergaenzung"><strong>' + tr("Ergänzung der Akademie") + '</strong><p>' + esc(b.text) + "</p></div>";
       case "liste": return (b.titel ? "<h4>" + esc(b.titel) + "</h4>" : "") + "<ul>" + b.punkte.map(function (p) { return "<li>" + esc(p) + "</li>"; }).join("") + "</ul>";
-      case "schritte": return (b.titel ? "<h4>" + esc(b.titel) + "</h4>" : "") + '<ol class="k-schritte"' + (b.start ? ' start="' + b.start + '"' : "") + ">" + b.punkte.map(function (p) { return "<li>" + esc(p) + "</li>"; }).join("") + "</ol>";
+      case "schritte": return (b.titel ? "<h4>" + esc(b.titel) + "</h4>" : "") + '<ol class="k-schritte"' + (b.start ? ' start="' + b.start + '"' : "") + ">" + schrittListe(b) + "</ol>";
       case "tabelle":
         return '<div class="k-tabelle"><table><thead><tr>' + b.kopf.map(function (k) { return '<th scope="col">' + esc(k) + "</th>"; }).join("") + "</tr></thead><tbody>" +
           b.zeilen.map(function (z) { return "<tr>" + z.map(function (c, i) { return i === 0 ? '<th scope="row">' + esc(c) + "</th>" : "<td>" + esc(c) + "</td>"; }).join("") + "</tr>"; }).join("") + "</tbody></table></div>";

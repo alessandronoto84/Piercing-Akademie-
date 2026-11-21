@@ -71,8 +71,9 @@ const T = {
     abheilErkl: "Valores orientativos para una cicatrización sin complicaciones; cada persona cicatriza de forma distinta."
   }
 };
+// „das Tragus-Piercing“, „das Upper-Lobe-Piercing“ (im Modultext heißt es „der Tragus“, deshalb nie „das Tragus“)
 function artikelDe(n) {
-  return /^(Lippenbändchen|Septum|Industrial|Allergiepiercing|Snug|Conch|Daith|Labret|Eskimo|Cheek|Surface|Frenulum|Pubic|Guiche|Christina|Upper Lobe|Lobe|Tragus|Anti-Tragus|Helix|Rook|Bridge|Hafada|Dydoe|Prinz Albert)/.test(n) ? "das " + n
+  return /^(Lippenbändchen|Septum|Industrial|Allergiepiercing|Snug|Conch|Daith|Labret|Eskimo|Cheek|Surface|Frenulum|Pubic|Guiche|Christina|Upper Lobe|Lobe|Tragus|Anti-Tragus|Helix|Rook|Bridge|Hafada|Dydoe|Prinz Albert)/.test(n) ? "das " + (/piercing/i.test(n) ? n : n.replace(/ /g, "-") + "-Piercing")
     : ({ Zunge: "das Zungenpiercing", Augenbraue: "das Augenbrauenpiercing", Bauchnabel: "das Bauchnabelpiercing", Brustwarze: "das Brustwarzenpiercing", "Nase (Nostril)": "das Nostril", Klitorisvorhaut: "das Klitorisvorhautpiercing", Schamlippe: "das Schamlippenpiercing" })[n] || "das Piercing „" + n + "“";
 }
 
@@ -92,12 +93,13 @@ function erzeuge(L, UE) {
   let seed = 7; // gleiche Zufallsfolge in jeder Sprache → gleiche Auswahl
   const zufall = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
   const mische = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(zufall() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
-  const auswahl = (liste, universum) => { const richtig = liste[Math.floor(zufall() * liste.length)]; const falsch = mische(universum.filter(x => !liste.includes(x))).slice(0, 3); return falsch.length >= 3 ? { richtig, falsch } : null; };
+  // ausschluss: alles, was im Datenblatt irgendwo als richtig vorkommt, ist nie Ablenker
+  const auswahl = (liste, universum, ausschluss = liste) => { if (!liste.length) return null; const richtig = liste[Math.floor(zufall() * liste.length)]; const falsch = mische(universum.filter(x => !liste.includes(x) && !ausschluss.includes(x))).slice(0, 3); return falsch.length >= 3 ? { richtig, falsch } : null; };
   const disjunkt = (a, b) => { const tl = s => s.split(",").map(x => x.trim().toLowerCase()); return !tl(a).some(x => tl(b).includes(x)); };
   function falsche(richtig, kandidaten, pruefe = disjunkt, n = 3) {
     const pool = [...new Set(kandidaten)].filter(k => k !== richtig && k !== "–" && pruefe(richtig, k)), out = [];
     while (pool.length && out.length < n) out.push(pool.splice(Math.floor(zufall() * pool.length), 1)[0]);
-    return out.length >= 2 ? out : null;
+    return out.length >= n ? out : null; // immer vier Antworten
   }
   const modulDe = nr => DE.module.find(m => m.nr === nr), modulUe = nr => UE.module.find(m => m.nr === nr);
   const fragen = {}, schon = new Set();
@@ -112,9 +114,10 @@ function erzeuge(L, UE) {
   bloecke(8, "datenblatt", (d, u, li) => {
     if (/NICHT DURCHFÜHREN/.test(d.hinweis)) { neu(8, li, t.nicht(u.name), t.nichtAntw[0], t.nichtAntw.slice(1), u.hinweis, d.seite); return; }
     const info = t.info(u.name, u.ersteinsatz, u.kanuele, u.klemme);
-    const sm = auswahl(schmuckVon(d.ersteinsatz), SCHMUCK);
+    // „Welcher Schmuck … für das Labret? → Labret“ wäre trivial: gleichnamigen Schmuck nicht als richtige Antwort nehmen
+    const sm = auswahl(schmuckVon(d.ersteinsatz).filter(x => !d.name.includes(x)), SCHMUCK, schmuckVon(d.ersteinsatz));
     if (sm) neu(8, li, t.schmuck(u.name), t.schmuckText[sm.richtig], sm.falsch.map(x => t.schmuckText[x]), info, d.seite);
-    const ka = auswahl(kanuelenVon(d.kanuele), KANUELEN);
+    const ka = auswahl(kanuelenVon(d.kanuele), KANUELEN, KANUELEN.filter(k => (d.kanuele + " " + d.hinweis + " " + d.beschreibung).includes(k)));
     if (ka) neu(8, li, t.kanuele(u.name), t.kanueleText(ka.richtig), ka.falsch.map(t.kanueleText), info, d.seite);
     const spezial = instrumenteVon(d.klemme).filter(x => SPEZIAL.includes(x));
     if (spezial.length) { const ins = auswahl(spezial.concat(instrumenteVon(d.klemme)), INSTRUMENTE); if (ins) neu(8, li, t.instrument(u.name), t.instrumentText[spezial[0]], ins.falsch.map(x => t.instrumentText[x]), info, d.seite); }
@@ -132,14 +135,26 @@ function erzeuge(L, UE) {
     }
   });
 
-  // Modul 9: Reihenfolge der 26 Ablaufschritte, Ablenker aus der Nähe
+  // Modul 9: Reihenfolge der 26 Ablaufschritte samt Unterschritten der Akademie (7a, 8a, 9a, 13a), Ablenker aus der Nähe.
+  // Antworten in Kurzform (bis zum Doppelpunkt bzw. ersten Satz), damit die richtige nicht auffällig die längste ist.
+  const kurz = s => {
+    s = s.replace(/\.$/, "").split(/(?<!\b(?:bzw|z|B|p|e|g|ej|S))\. (?=\p{Lu})/u)[0].split(": ")[0];
+    if (s.length <= 70) return s;
+    const teile = s.split(", "); let k = teile.shift();
+    while (k.length < 25 && teile.length) k += ", " + teile.shift();
+    return k;
+  };
   const schritte = [];
-  bloecke(9, "schritte", (b, u, li) => b.punkte.forEach((p, i) => schritte.push({ nr: (b.start || 1) + i, text: u.punkte[i].replace(/\.$/, ""), li })));
-  schritte.sort((a, b) => a.nr - b.nr);
+  bloecke(9, "schritte", (b, u, li) => { let nr = (b.start || 1) - 1; b.punkte.forEach((p, i) => {
+    const up = u.punkte[i], zusatz = typeof p !== "string", text = (zusatz ? up.text : up).replace(/\.$/, "");
+    if (!zusatz) nr++;
+    schritte.push({ nr: zusatz ? p.nr : nr, pos: nr + (zusatz ? 0.5 : 0), zusatz, text, kurz: kurz(text), li });
+  }); });
+  schritte.sort((a, b) => a.pos - b.pos);
   for (let i = 0; i < schritte.length - 1; i++) {
     const a = schritte[i], b = schritte[i + 1];
-    const nah = schritte.filter(s => s.nr !== a.nr && s.nr !== b.nr && Math.abs(s.nr - b.nr) <= 5).map(s => s.text);
-    neu(9, b.li, t.ablauf(a.nr, a.text), b.text, mische(nah).slice(0, 3), t.ablaufErkl(b.nr, b.text), b.nr <= 10 ? "S. 111" : b.nr <= 21 ? "S. 112" : "S. 113");
+    const nah = schritte.filter(s => s !== a && s !== b && Math.abs(s.pos - b.pos) <= 5).map(s => s.kurz);
+    neu(9, b.li, t.ablauf(a.nr, a.text), b.kurz, mische(nah).slice(0, 3), t.ablaufErkl(b.nr, b.text), b.zusatz ? "Ergänzung" : b.nr <= 10 ? "S. 111" : b.nr <= 21 ? "S. 112" : "S. 113");
   }
 
   // Modul 10: Abheilzeiten (Überschneidung anhand der deutschen Werte, Anzeige übersetzt)

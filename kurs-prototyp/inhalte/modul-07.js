@@ -85,7 +85,7 @@ KURS.module.push({
       inhalt: [
         { typ: "video", id: "instrumente", text: "Piercingzange, Braunüle, Nadelauffangrohr und Kugelgreifer auf steriler Abdeckung.", schleife: true },
         { typ: "text", text: "Piercing-Zangen bzw. Klemmen halten die zu piercende Stelle, damit die Haut beim Stechen in Position bleibt. Für verschiedene Piercings gibt es verschiedene Zangen, zum Beispiel Snaptile, Gazeklemme, Septum-Zange, Traguszange oder Zungenklemme. Welche passt, steht im jeweiligen Datenblatt (Modul 8)." },
-        { typ: "text", text: "Einige Piercings lassen sich nicht mit einer Zange stechen. Bei Piercings im Innenohr, zum Beispiel Rook und Daith, nutzt man das Nadelauffangrohr (Receiving Tube). Es verhindert, dass die Kanüle das umliegende Gewebe verletzt." },
+        { typ: "text", text: "Einige Piercings lassen sich nicht mit einer Zange stechen. Bei Piercings in der inneren Ohrmuschel, zum Beispiel Rook und Daith, nutzt man das Nadelauffangrohr (Receiving Tube). Es verhindert, dass die Kanüle das umliegende Gewebe verletzt." },
         { typ: "galerie", titel: "Aus dem Kursbuch", bilder: [["piercingzange", "Piercing-Zangen und Klemmen"], ["nadelauffangrohr", "Nadelauffangrohr"]], text: "Kursbuch S. 65 und 68." },
         { typ: "praxis", text: "Manche Piercings, etwa Helix oder Bauchnabel, können auch freihand gestochen werden. Das setzt eine sichere Hand voraus; als Anfänger arbeitest du besser mit Klemme." }
       ],
@@ -145,12 +145,13 @@ KURS.module.push({
       titel: "Steril oder nur sauber?",
       seite: "S. 35",
       inhalt: [
-        { typ: "merke", text: "Alles, was die Haut verletzt oder mit Blut in Kontakt kommt (Nadeln, Nadelhalter, Klemmen), muss steril sein: als steriles Einwegmaterial oder im Autoklav sterilisiert." },
-        { typ: "text", text: "Werkzeuge ohne direkten Hautkontakt, etwa Kugelgreifer oder Schere, werden im Ultraschallbad gereinigt und im Desinfektionsbad desinfiziert. Benutzte Kanülennadeln kommen sofort in den Nadelabwurfbehälter." }
+        { typ: "merke", text: "Steril sein muss alles, was die Haut verletzt, mit Blut in Kontakt kommt oder Stichkanal, Kunststoffüberzug, Kugel oder Ersteinsatz berührt: Klemmen, Nadelauffangrohr, Schere, Kugelgreifer, Klemmzange, Ringöffnungs- und Ringschließzange, Einführhilfe. Kanülen sind steriles Einwegmaterial; wiederverwendbare Instrumente werden nach jedem Kunden aufbereitet und im Autoklav sterilisiert." },
+        { typ: "text", text: "Nur Gegenstände ohne Kontakt zum Sterilfeld, etwa die Taschenlampe oder der Messschieber außerhalb des Sterilfelds, werden gereinigt und desinfiziert. Benutzte Kanülennadeln kommen sofort in den Nadelabwurfbehälter." },
+        { typ: "ergaenzung", text: "Laut Kursbuch (S. 35) werden Kugelgreifer, Klemme und Schere als Werkzeuge ohne direkten Hautkontakt nur desinfiziert. Die Akademie verlangt für sie steriles Material: Die Schere kürzt den Überzug im frischen Stichkanal, der Kugelgreifer hält die Kugel, die auf den Ersteinsatz kommt, und die Klemmzange hält den Ersteinsatz." }
       ],
       fragen: [
-        ["Was muss steril sein?", ["Alles mit Hautverletzung oder Blutkontakt, z. B. Nadeln und Klemmen", "Nur die Kanülen", "Auch Kugelgreifer und Schere", "Nur die Ersteinsätze"], "Werkzeuge ohne Hautkontakt werden desinfiziert.", "S. 35"],
-        ["Wie wird ein Kugelgreifer aufbereitet?", ["Im Ultraschallbad gereinigt und desinfiziert", "Er ist Einwegmaterial", "Er wird nur mit Alkohol abgewischt", "Er muss nicht aufbereitet werden"], "Kein direkter Hautkontakt.", "S. 35"],
+        ["Was muss steril sein?", ["Alles, was Haut, Stichkanal oder Ersteinsatz berührt", "Nur die Kanülen, alles andere wird desinfiziert", "Nur Nadeln und Klemmen, nicht Schere und Kugelgreifer", "Nur die Ersteinsätze und ihre Kugeln"], "Also auch Schere, Kugelgreifer und Klemmzange. Nur Gegenstände ohne Kontakt zum Sterilfeld werden desinfiziert.", "Ergänzung"],
+        ["Wie wird ein Kugelgreifer aufbereitet?", ["Gereinigt, desinfiziert und im Autoklav sterilisiert", "Nur im Ultraschallbad gereinigt und desinfiziert", "Nur mit einem Alkoholtupfer abgewischt", "Er muss nicht aufbereitet werden"], "Er hält die Kugel, die auf den Ersteinsatz kommt. Laut Kursbuch genügt Desinfizieren; die Akademie verlangt steril.", "Ergänzung"],
         ["Wohin kommt eine benutzte Kanülennadel?", ["In den Nadelabwurfbehälter", "In die Instrumentenschale zur Aufbereitung", "In den Trittmülleimer", "In die Schutzkappe und dann in den Müll"], "Direkt nach dem Stich.", "S. 27"]
       ]
     }

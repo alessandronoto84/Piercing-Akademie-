@@ -112,13 +112,13 @@ window.KURS.labor = {
       modul: 9,
       material: ["Übungsvorlage (Seite 2) oder ein leeres Blatt"],
       schritte: [
-        "Alle 26 Schritte des Ablaufs aus Modul 09 aus dem Gedächtnis aufschreiben.",
+        "Alle 26 Schritte des Ablaufs aus Modul 9 mit den Ergänzungen der Akademie (7a, 8a, 9a, 13a) aus dem Gedächtnis aufschreiben.",
         "Mit Modul 09 vergleichen und Fehlendes rot ergänzen.",
         "Am nächsten Tag wiederholen, bis alles ohne Rot stimmt.",
         "Die Pflegehinweise (Schritte 24 und 25) einer anderen Person laut erklären, als wäre sie dein Kunde."
       ],
       kontrolle: [
-        "Alle 26 Schritte stimmen, in der richtigen Reihenfolge.",
+        "Alle 26 Schritte und die vier Ergänzungen stimmen, in der richtigen Reihenfolge.",
         "Ich kann erklären, warum der Schmuck durch den Stichkanal gedrückt und nicht gezogen wird (Schritt 16).",
         "Ich habe die Pflegehinweise ohne Spickzettel erklärt."
       ]
@@ -150,7 +150,7 @@ window.KURS.labor.aufgaben = window.KURS.labor.aufgaben.concat([
     "titel": "Werkzeug benennen und sortieren: steril oder sauber",
     "modul": 7,
     "material": [
-      "dein Übungsmaterial: Kanülen mit Schutzkappe, Klemme, Hautmarker, Einmalhandschuhe, Einmalunterlage",
+      "dein Übungsmaterial: Kanülen mit Schutzkappe, Klemme, Schere, Kugelgreifer, Klemmzange, Hautmarker, Messschieber, Einmalhandschuhe, Einmalunterlage (soweit vorhanden)",
       "Zettel mit zwei Spalten: „muss steril sein“ und „muss sauber und desinfiziert sein“"
     ],
     "schritte": [
@@ -162,7 +162,7 @@ window.KURS.labor.aufgaben = window.KURS.labor.aufgaben.concat([
     "kontrolle": [
       "Ich konnte jedes Teil richtig benennen.",
       "Ich habe jeder Kanüle die passende Schmuckstärke zugeordnet.",
-      "Meine Einteilung steril oder sauber stimmt mit der Lektion überein."
+      "Meine Einteilung stimmt mit der Lektion überein: Alles, was Haut, Stichkanal, Überzug, Kugel oder Ersteinsatz berührt (auch Schere, Kugelgreifer und Klemmzange), steht unter „muss steril sein“."
     ]
   },
   {
@@ -488,7 +488,7 @@ window.KURS.labor.stich = {
         "Ein- und Austrittsstelle am Ohrläppchen markieren (Schritt 9) und die Markierung prüfen (Schritt 10).",
         "Klemme anlegen, die Markierung liegt im Fenster (Schritt 11).",
         "Zügig in die sichtbare Seite stechen, also von vorn, wo später die Kugel sitzt (Schritt 12).",
-        "Stahlnadel herausziehen und entsorgen; der Kunststoffüberzug bleibt im Stichkanal (Schritt 13).",
+        "Stahlnadel herausziehen und entsorgen; der Kunststoffüberzug bleibt im Stichkanal (Schritte 13 und 13a).",
         "Überzug mit der Schere leicht kürzen und den Labret hineinstecken (Schritte 14 und 15).",
         "Den Labret durch den Stichkanal drücken, nicht ziehen (Schritt 16). Röhrchen vorsichtig abziehen (Schritt 17).",
         "Kugel greifen, Schmuck mit der Klemmzange halten und die Kugel fest aufdrehen (Schritte 18 und 19).",

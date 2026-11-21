@@ -145,12 +145,13 @@ KURS.module.push({
       titel: "Sterile or just clean?",
       seite: "S. 35",
       inhalt: [
-        { typ: "merke", text: "Everything that injures the skin or comes into contact with blood (needles, needle holders, clamps) must be sterile: either as sterile single-use material or sterilized in the autoclave." },
-        { typ: "text", text: "Tools without direct skin contact, such as the ball grabber or scissors, are cleaned in the ultrasonic bath and disinfected in a disinfection bath. Used cannula needles go straight into the sharps container." }
+        { typ: "merke", text: "Everything that injures the skin, comes into contact with blood or touches the piercing channel, plastic sheath, ball or initial jewelry must be sterile: clamps, receiving tube, scissors, ball grabber, holding pliers, ring opening and ring closing pliers, insertion taper. Cannulas are sterile single-use material; reusable instruments are reprocessed after every client and sterilized in the autoclave." },
+        { typ: "text", text: "Only items without contact with the sterile field, such as the flashlight or a caliper used outside the sterile field, are cleaned and disinfected. Used cannula needles go straight into the sharps container." },
+        { typ: "ergaenzung", text: "According to the course book (p. 35), the ball grabber, clamp and scissors are only disinfected as tools without direct skin contact. The Academy requires sterile instruments here: the scissors shorten the sheath in the fresh channel, the ball grabber holds the ball that goes onto the initial jewelry, and the holding pliers hold the initial jewelry." }
       ],
       fragen: [
-        ["What must be sterile?", ["Everything that injures skin or touches blood, e.g. needles and clamps", "Only the cannulas", "Also ball grabbers and scissors", "Only the initial jewelry"], "Tools without skin contact are disinfected.", "S. 35"],
-        ["How is a ball grabber reprocessed?", ["Cleaned in the ultrasonic bath and disinfected", "It is single-use material", "It is only wiped with alcohol", "It does not need reprocessing"], "No direct skin contact.", "S. 35"],
+        ["What must be sterile?", ["Everything that touches skin, piercing channel or initial jewelry", "Only the cannulas; everything else is disinfected", "Only needles and clamps, not scissors and ball grabber", "Only the initial jewelry and its balls"], "So scissors, ball grabber and holding pliers too. Only items without contact with the sterile field are disinfected.", "Ergänzung"],
+        ["How is a ball grabber reprocessed?", ["Cleaned, disinfected and sterilized in the autoclave", "Only cleaned in the ultrasonic bath and disinfected", "Only wiped with an alcohol swab", "It does not need reprocessing"], "It holds the ball that goes onto the initial jewelry. According to the course book, disinfection is enough; the Academy requires it to be sterile.", "Ergänzung"],
         ["Where does a used cannula needle go?", ["Into the sharps container", "Into the instrument tray for reprocessing", "Into the step trash can", "Into its protective cap, then into the trash"], "Right after piercing.", "S. 27"]
       ]
     }
