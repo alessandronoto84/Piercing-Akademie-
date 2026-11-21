@@ -61,7 +61,7 @@ KURS.module.push({
       ],
       fragen: [
         ["What do you document for every batch of sterile goods?", ["Sterilization date and batch number", "Only the sterilization date", "The client’s name", "The temperature of the ultrasonic bath"], "This way every batch can be traced.", "S. 46"],
-        ["What belongs in your studio’s documentation?", ["Hygiene plan, sterile goods batches, autoclave tests and consent forms", "Only the consent forms", "Only invoices and the cash book", "Only the autoclave tests"], "If in doubt, the local public health office and the insurer will want to see everything without gaps.", "Entwurf"],
+        ["What belongs in your studio’s documentation?", ["Hygiene plan, sterile goods batches, autoclave tests, consent forms", "Only the clients’ consent forms", "Only invoices, the cash book and tax records", "Only the autoclave test reports"], "If in doubt, the local public health office and the insurer will want to see everything without gaps.", "Entwurf"],
         ["To whom do you present the autoclave tests on request?", ["The local authorities", "The clients", "The manufacturer", "The health insurance fund"], "See module 5.", "S. 47"]
       ]
     },
@@ -79,7 +79,7 @@ KURS.module.push({
       ],
       fragen: [
         ["What should you sort out before your first client?", ["Business or professional liability insurance", "Legal expenses insurance is enough", "Home contents insurance", "Nothing, the consent form is enough"], "Get advice.", "Entwurf"],
-        ["What belongs in the price calculation?", ["Materials, working time including consultation and reprocessing, running costs", "Only jewelry and cannula", "Only the working time with the client", "Only rent and insurance"], "Only then does your price also cover consultation, reprocessing and running costs.", "Entwurf"]
+        ["What belongs in the price calculation?", ["Materials, working time with consultation and reprocessing, running costs", "Only jewelry and cannula; the rest is profit", "Only the pure working time with the client", "Only the studio’s rent and insurance"], "Only then does your price also cover consultation, reprocessing and running costs.", "Entwurf"]
       ]
     },
     {

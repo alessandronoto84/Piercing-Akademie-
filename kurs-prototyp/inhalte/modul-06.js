@@ -46,7 +46,7 @@ KURS.module.push({
       fragen: [
         ["Mit welchem Verfahren wird Blackline-Titan beschichtet?", ["PVD (Physical Vapor Deposition)", "Galvanisieren", "Anodisieren", "Pulverbeschichtung"], "Hauchdünn und abriebfest.", "S. 54"],
         ["Welche Eigenschaften haben Blackline-Piercings?", ["Nahezu dauerhaft kratzbeständig, farbsicher und verträglich", "Sie werden durch Anodisieren schwarz", "Sie enthalten schwarzes Nickel", "Sie sind besonders für den Ersteinsatz empfohlen"], "Die PVD-Schicht ist sehr dünn und hart. Als Ersteinsatz bleibt die Akademie trotzdem bei G23-Titan oder PTFE.", "S. 54"],
-        ["Was ist Zirkon-Gold-Titan?", ["Titan mit goldfarbener Beschichtung als Alternative zu Goldschmuck", "Massives 14-Karat-Gold", "Vergoldeter Chirurgenstahl", "Eine Gold-Titan-Legierung"], "Glatter, leichter, preiswerter.", "S. 54"]
+        ["Was ist Zirkon-Gold-Titan?", ["Titan mit goldfarbener Beschichtung als Alternative zu Gold", "Massives Gold mit 14 Karat und Titankern", "Vergoldeter Chirurgenstahl 316L", "Eine Legierung aus Gold und Titan"], "Glatter, leichter, preiswerter.", "S. 54"]
       ]
     },
     {
@@ -59,9 +59,9 @@ KURS.module.push({
       ],
       fragen: [
         ["Wie viel Nickel enthält Chirurgenstahl 316L?", ["10 bis 14 Prozent", "0 Prozent", "2 bis 4 Prozent", "18 bis 20 Prozent"], "Deshalb kein Ersteinsatz.", "S. 55"],
-        ["Welche drei Stähle verwenden Piercer als Schmuck?", ["Komposition D Implantatstahl, 316 LVM und 316L", "303er, 304er und 316L", "316L, 316 LVM und 303er", "Nur 316L"], "Am häufigsten 316L.", "S. 55"],
+        ["Welche drei Stähle verwenden Piercer als Schmuck?", ["Komposition D Implantatstahl, 316 LVM und 316L", "303er, 304er und 316L", "316L, 316 LVM und 303er", "Nur 316L in drei Qualitäten"], "Am häufigsten 316L.", "S. 55"],
         ["Wofür ist Chirurgenstahl 316L geeignet?", ["Als Zweiteinsatz nach vollständiger Abheilung", "Als Ersteinsatz bei Nickelallergikern", "Als Ersteinsatz bei Knorpelpiercings", "Nur für Werkzeuge, nicht für Schmuck"], "Als Zweiteinsatz meist bedenkenlos.", "S. 55"],
-        ["Wofür wird 316L in der Medizin eingesetzt?", ["Zum Beispiel für Knochenschrauben und Herzschrittmacherelektroden", "Nur für Einwegskalpelle", "Für Kontaktlinsen", "Für künstliche Herzklappen aus Titan"], "Dazu Nadeln, Platten, Nähte, Klammern.", "S. 55"]
+        ["Wofür wird 316L in der Medizin eingesetzt?", ["Zum Beispiel für Knochenschrauben und Schrittmacherelektroden", "Nur für Einwegskalpelle und Kanülen", "Für Kontaktlinsen und Brillengestelle", "Für künstliche Herzklappen aus Titan"], "Dazu Nadeln, Platten, Nähte, Klammern.", "S. 55"]
       ]
     },
     {
@@ -164,7 +164,7 @@ KURS.module.push({
       ],
       fragen: [
         ["Wie heißt der leicht gebogene Stab mit Kugeln?", ["Curved Barbell (Banane)", "Circular Barbell", "Labret Stud", "Threaded Ring"], "Meist für Bauchnabel, Augenbraue, Rook.", "S. 61"],
-        ["Was ist ein Barbell?", ["Ein gerader Metallstift mit Gewinde und verschraubbaren Kugeln", "Ein gebogener Stab mit Kugeln", "Ein Stecker mit Platte", "Ein offener Ring mit Gewinde"], "Engl. Hantel.", "S. 61"],
+        ["Was ist ein Barbell?", ["Ein gerader Stab mit Gewinde und verschraubbaren Kugeln", "Ein gebogener Stab mit zwei Kugeln", "Ein Stecker mit flacher Platte auf einer Seite", "Ein offener Ring mit Gewinde an beiden Enden"], "Engl. Hantel.", "S. 61"],
         ["Was hat ein Labret Stud an einem Ende?", ["Eine Platte", "Eine Kugel mit Einbuchtungen", "Ein Scharnier", "Ein Segment"], "Am anderen Ende ein Gewinde.", "S. 62"],
         ["Bei welchen Piercings wird ein Labret-Stecker auch getragen?", ["Zum Beispiel Tragus und Conch", "Vor allem beim Industrial", "Vor allem beim Bauchnabel", "Vor allem beim Septum"], "Nicht nur beim Labret.", "S. 62"]
       ]

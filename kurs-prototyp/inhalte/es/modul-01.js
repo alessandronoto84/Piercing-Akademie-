@@ -82,7 +82,7 @@ KURS.module.push({
       ],
       fragen: [
         ["¿Con qué se perforan hoy los piercings de forma profesional?", ["Con una cánula intravenosa («Braunüle»)", "Con una pistola de perforar orejas con cartucho desechable", "Con una aguja de piercing maciza sin vaina", "Con un punch de biopsia en cada piercing"], "La aguja está dentro de una vaina de plástico.", "S. 5"],
-        ["¿Qué es una «Braunüle»?", ["Una cánula intravenosa: aguja de acero en una vaina de plástico", "Una pinza de piercing con ventana", "Un tubo receptor", "Una jeringa estéril desechable"], "Así llama el libro del curso a la cánula.", "S. 5"],
+        ["¿Qué es una «Braunüle»?", ["Una cánula intravenosa: aguja de acero en una vaina de plástico", "Una pinza de piercing con ventana para sujetar el tejido", "Un tubo receptor para Rook y Daith", "Una jeringa estéril desechable con aguja de acero"], "Así llama el libro del curso a la cánula.", "S. 5"],
         ["¿Qué ocurre con la aguja tras la perforación?", ["Se retira y se desecha de inmediato en el contenedor para objetos punzantes", "Se queda en la vaina de plástico hasta que la joya está colocada", "Se vuelve a poner en su capuchón y se desecha más tarde", "Se desinfecta y se usa para la segunda perforación"], "Eliminación correcta en el contenedor para objetos punzantes.", "S. 5"],
         ["¿Qué queda en el canal de la perforación tras perforar?", ["La vaina de plástico (el tubito)", "La aguja de acero", "La aguja junto con la vaina", "El tubo receptor"], "En el tubito se introduce la joya.", "S. 5"],
         ["¿Cómo introduces la joya en el canal de la perforación?", ["La empujo a través del tubito", "La arrastro tirando detrás del tubito", "La enrosco sin tubito", "La introduzco sobre la aguja de acero aún colocada"], "Empujar, no tirar.", "S. 5"],
@@ -123,7 +123,7 @@ KURS.module.push({
         { typ: "praxis", text: "Si llega un cliente con un agujero hecho con pistola que no cicatriza, explícale de forma objetiva por qué el método no es adecuado y asesóralo sobre el cuidado. No hace falta hablar mal de colegas; bastan los hechos." }
       ],
       fragen: [
-        ["¿Por qué la pistola de perforar orejas no tiene cabida en el estudio?", ["El tejido puede desgarrarse, no se puede esterilizar del todo y esparce gérmenes", "Está expresamente prohibida en Alemania", "Solo funciona en el lóbulo", "Solo se puede cargar con joyas de acero"], "A esto se suman joyas iniciales inadecuadas.", "S. 6"],
+        ["¿Por qué la pistola de perforar orejas no tiene cabida en el estudio?", ["El tejido puede desgarrarse y no se puede esterilizar del todo", "Está expresamente prohibida por ley en Alemania", "Solo funciona en el lóbulo, no en el cartílago", "Solo se puede cargar con joyas de acero"], "A esto se suman joyas iniciales inadecuadas.", "S. 6"],
         ["¿Qué puede ocurrirle al cartílago al disparar?", ["Puede astillarse", "Puede deformarse y ablandarse", "Se calcifica en el punto de perforación", "Forma de inmediato hipergranulación"], "El tejido cutáneo puede desgarrarse y el cartílago, astillarse.", "S. 6"],
         ["¿Qué ocurre con los gérmenes al disparar con la pistola?", ["Salen despedidos por la sala", "Mueren por el calor de la fricción", "Se quedan en el cartucho desechable", "Quedan sellados por el pendiente"], "Además, la pistola no se puede esterilizar por completo.", "S. 6"],
         ["¿Qué es cierto sobre las joyas iniciales de la pistola de perforar orejas?", ["Según el material, van de inadecuadas a peligrosas", "Siempre cumplen la norma ASTM F136", "Siempre tienen 4 mm de longitud extra", "Son de PTFE"], "Los pendientes de pistola suelen ser de material inadecuado y no tienen longitud extra; según el material, de inadecuados a peligrosos.", "S. 6"]
@@ -142,7 +142,7 @@ KURS.module.push({
         ["¿Qué debe evitar el cliente durante las 24 horas previas a la perforación?", ["Alcohol, drogas, cafeína y medicamentos anticoagulantes", "Alcohol y deporte; la cafeína está permitida", "Solo alcohol y drogas", "Alimentos sólidos y bebidas"], "Estas sustancias influyen en la circulación y la coagulación.", "S. 6"],
         ["¿Cuál de estos es un anticoagulante?", ["Aspirina (AAS)", "Paracetamol", "Magnesio", "Vitamina C"], "Los anticoagulantes afectan a la coagulación.", "S. 6"],
         ["¿Cuánto tiempo antes de la perforación debe el cliente renunciar a la cafeína?", ["24 horas", "2 horas", "48 horas", "1 semana"], "Igual que al alcohol, las drogas y los anticoagulantes.", "S. 6"],
-        ["Caso: Un cliente toma a diario un anticoagulante recetado por su médico. ¿Qué haces?", ["Que consulte antes el piercing con su médico; en caso de duda, no perforo", "Que deje el medicamento 24 horas antes", "Perforo con una cánula más fina", "Perforo y después presiono durante más tiempo"], "Nunca dejar por cuenta propia un medicamento recetado.", "Ergänzung"]
+        ["Caso: Un cliente toma a diario un anticoagulante recetado por su médico. ¿Qué haces?", ["Que consulte antes el piercing con su médico; en caso de duda, no perforo", "Que deje el medicamento sin más 24 horas antes de la cita", "Perforo con una cánula más fina para que sangre menos", "Perforo como siempre y después presiono un poco más de tiempo"], "Nunca dejar por cuenta propia un medicamento recetado.", "Ergänzung"]
       ]
     }
   ],

@@ -46,7 +46,7 @@ KURS.module.push({
       fragen: [
         ["Which process is used to coat Blackline titanium?", ["PVD (Physical Vapor Deposition)", "Electroplating", "Anodizing", "Powder coating"], "Wafer-thin and abrasion-resistant.", "S. 54"],
         ["What properties do Blackline piercings have?", ["Almost permanently scratch-resistant, colorfast and well tolerated", "They are turned black by anodizing", "They contain black nickel", "They are especially recommended as initial jewelry"], "The PVD layer is very thin and hard. For initial jewelry, the Academy still sticks to G23 titanium or PTFE.", "S. 54"],
-        ["What is zircon gold titanium?", ["Titanium with a gold-colored coating, an alternative to gold", "Solid 14-carat gold", "Gold-plated surgical steel", "A gold-titanium alloy"], "Smoother, lighter, cheaper.", "S. 54"]
+        ["What is zircon gold titanium?", ["Titanium with a gold-colored coating, an alternative to gold", "Solid 14-carat gold with a titanium core", "Gold-plated 316L surgical steel", "An alloy of gold and titanium"], "Smoother, lighter, cheaper.", "S. 54"]
       ]
     },
     {
@@ -59,9 +59,9 @@ KURS.module.push({
       ],
       fragen: [
         ["How much nickel does surgical steel 316L contain?", ["10 to 14 percent", "0 percent", "2 to 4 percent", "18 to 20 percent"], "That is why it is not used as initial jewelry.", "S. 55"],
-        ["Which three steels do piercers use for jewelry?", ["Composition D implant steel, 316 LVM and 316L", "303, 304 and 316L", "316L, 316 LVM and 303", "Only 316L"], "Most commonly 316L.", "S. 55"],
+        ["Which three steels do piercers use for jewelry?", ["Composition D implant steel, 316 LVM and 316L", "303, 304 and 316L", "316L, 316 LVM and 303", "Only 316L, in three grades"], "Most commonly 316L.", "S. 55"],
         ["What is surgical steel 316L suitable for?", ["As second jewelry after complete healing", "As initial jewelry for people with nickel allergy", "As initial jewelry in cartilage piercings", "Only for tools, not for jewelry"], "As second jewelry it is usually safe.", "S. 55"],
-        ["What is 316L used for in medicine?", ["For example, bone screws and pacemaker electrodes", "Only for disposable scalpels", "For contact lenses", "For artificial heart valves made of titanium"], "Also needles, plates, sutures, staples.", "S. 55"]
+        ["What is 316L used for in medicine?", ["For example, bone screws and pacemaker electrodes", "Only for disposable scalpels and cannulas", "For contact lenses and eyeglass frames", "For artificial heart valves made of titanium"], "Also needles, plates, sutures, staples.", "S. 55"]
       ]
     },
     {
@@ -164,7 +164,7 @@ KURS.module.push({
       ],
       fragen: [
         ["What is the slightly curved bar with balls called?", ["Curved barbell (banana)", "Circular barbell", "Labret stud", "Threaded ring"], "Mostly for navel, eyebrow, Rook.", "S. 61"],
-        ["What is a barbell?", ["A straight threaded metal bar with screw-on balls", "A curved bar with balls", "A stud with a disc", "An open ring with a thread"], "Named after the weightlifting bar.", "S. 61"],
+        ["What is a barbell?", ["A straight threaded bar with screw-on balls", "A curved bar with two balls", "A stud with a flat disc on one side", "An open ring threaded at both ends"], "Named after the weightlifting bar.", "S. 61"],
         ["What does a labret stud have at one end?", ["A disc", "A ball with dimples", "A hinge", "A segment"], "A thread at the other end.", "S. 62"],
         ["In which piercings is a labret stud also worn?", ["For example, Tragus and Conch", "Mainly in the Industrial", "Mainly in the navel", "Mainly in the Septum"], "Not only in the Labret.", "S. 62"]
       ]

@@ -73,7 +73,7 @@ window.KURS = window.KURS || { module: [] };
         ],
         fragen: [
           ["Wo sitzt das Conch?", ["In der inneren oder äußeren Ohrmuschel", "In der Helixwurzel", "Im Knorpelsteg der Antihelix", "Am Gehöreingang"], "Datenblatt Conch.", "S. 79"],
-          ["Wann ist ein Snug möglich?", ["Nur wenn der Bereich der Ohrmuschel ausreichend ausgeprägt ist", "Bei jedem Ohr", "Nur bei Kunden ohne Helix-Piercing", "Nur mit Biopsiestanze"], "Datenblatt Snug.", "S. 82"]
+          ["Wann ist ein Snug möglich?", ["Nur wenn dieser Bereich der Ohrmuschel ausgeprägt genug ist", "Bei jedem Ohr, die Form spielt keine Rolle", "Nur bei Kunden ohne Helix-Piercing", "Nur mit Biopsiestanze statt Kanüle"], "Datenblatt Snug.", "S. 82"]
         ]
       },
       {
@@ -98,7 +98,7 @@ window.KURS = window.KURS || { module: [] };
         ],
         fragen: [
           ["Wodurch wird das Nostril gestochen?", ["Durch den Nasenflügel", "Durch die Nasenscheidewand", "Durch den Nasenrücken", "Durch die Nasenspitze"], "Datenblatt Nostril.", "S. 85"],
-          ["Durch welches Gewebe wird das Septum gestochen?", ["Durch das Bindegewebe unterhalb des Nasenscheidewandknorpels", "Durch den Nasenscheidewandknorpel", "Durch das Nasenbein", "Durch den Nasenflügel"], "Dehnbar für größeren Schmuck.", "S. 88"]
+          ["Durch welches Gewebe wird das Septum gestochen?", ["Durch das Bindegewebe unterhalb des Scheidewandknorpels", "Mitten durch den Knorpel der Nasenscheidewand", "Durch das Nasenbein oberhalb des Knorpels", "Durch den Nasenflügel von außen nach innen"], "Dehnbar für größeren Schmuck.", "S. 88"]
         ]
       },
       {
@@ -138,7 +138,7 @@ window.KURS = window.KURS || { module: [] };
         fragen: [
           ["Warum heißt das Lippenbändchen-Piercing auch Smiley?", ["Weil es nur beim Lächeln sichtbar ist", "Weil es ein Lächeln formt", "Weil es durch die Mundwinkel geht", "Weil es ein Labret mit Smiley-Kugel ist"], "Durch das Frenulum.", "S. 87"],
           ["In welche Richtung wird die Zunge gestochen?", ["Von unten nach oben", "Von oben nach unten", "Seitlich von links", "Schräg von vorn"], "Datenblatt Zunge.", "S. 90"],
-          ["Womit kühlt der Kunde nach dem Zungenpiercing?", ["Mit Eiswürfeln, am besten aus Kamillentee", "Mit Eisspray", "Mit kalter Milch", "Mit Lidocain-Spray"], "Sofort nach dem Stechen.", "S. 90"],
+          ["Womit kühlt der Kunde nach dem Zungenpiercing?", ["Mit Eiswürfeln, am besten aus Kamillentee", "Mit Eisspray direkt auf die Zunge", "Mit kalter Milch oder Joghurt", "Mit Lidocain-Spray aus der Apotheke"], "Sofort nach dem Stechen.", "S. 90"],
           ["Wann kann der Barbell beim Zungenpiercing gekürzt werden?", ["Nach etwa 10 Tagen", "Nach 2 Tagen", "Nach 3 Monaten", "Nie, die Länge bleibt"], "Ersteinsatz 20 mm Barbell.", "S. 90"]
         ]
       },

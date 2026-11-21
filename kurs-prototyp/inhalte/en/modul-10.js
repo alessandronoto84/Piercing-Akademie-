@@ -69,7 +69,7 @@ KURS.module.push({
         ] }
       ],
       fragen: [
-        ["What can cause persistent rebleeding?", ["Diabetes, connective tissue weakness or a bleeding disorder", "A nickel allergy", "Aftercare with saline solution", "Too much extra length"], "In that case, see a doctor.", "S. 50"],
+        ["What can cause persistent rebleeding?", ["Diabetes, connective tissue weakness or a bleeding disorder", "A nickel allergy or contact allergy", "Daily aftercare with saline solution", "Too much extra length on the initial jewelry"], "In that case, see a doctor.", "S. 50"],
         ["What happens during epithelialization?", ["Cells migrate in from the wound edge, the wound gets smaller", "Granulation tissue grows out of the channel", "The cartilage regenerates", "The inflammatory phase begins"], "Regeneration phase.", "S. 50"]
       ]
     },
@@ -119,7 +119,7 @@ KURS.module.push({
       ],
       fragen: [
         ["What is perichondritis?", ["An inflammation of the perichondrium, usually on the auricle", "A nickel allergy on cartilage", "Hypergranulation on a cartilage piercing", "An inflammation of the earlobe"], "The most dangerous complication of cartilage piercings.", "Ergänzung"],
-        ["Which part of the ear is usually spared in perichondritis?", ["The earlobe, because it contains no cartilage", "The helix", "The tragus", "The conch"], "A typical identifying sign.", "Ergänzung"],
+        ["Which part of the ear is usually spared in perichondritis?", ["The earlobe, because it contains no cartilage", "The helix, because it has a good blood supply", "The tragus, because it sits in front of the ear canal", "The conch, because it is protected in the middle"], "A typical identifying sign.", "Ergänzung"],
         ["Which pathogen most often causes perichondritis after an ear piercing?", ["Pseudomonas aeruginosa", "Staphylococcus epidermidis from the skin flora", "Candida albicans", "Herpes viruses"], "It lives in moist environments.", "Ergänzung"],
         ["What do you do if you suspect perichondritis?", ["Send the client to a doctor immediately", "Treat it with Tyrosur and wait a week", "Remove the jewelry yourself", "Recommend cooling and saline solution"], "Ideally to an ENT specialist.", "Ergänzung"],
         ["What is the risk if perichondritis is not treated?", ["Permanent deformity (cauliflower ear)", "Just a scar at the piercing channel", "The jewelry growing out", "A nickel allergy"], "The cartilage can be destroyed.", "Ergänzung"],
@@ -140,9 +140,9 @@ KURS.module.push({
         ] }
       ],
       fragen: [
-        ["What causes hypergranulation?", ["Persistent irritation of the wound, e.g. through pressure or friction", "A nickel allergy", "Pseudomonas", "Too much extra length"], "Red, flesh-like mass.", "S. 51"],
+        ["What causes hypergranulation?", ["Persistent irritation of the wound, e.g. pressure or friction", "A nickel allergy to the initial jewelry", "An infection with Pseudomonas", "Too much extra length on the jewelry"], "Red, flesh-like mass.", "S. 51"],
         ["What is the first approach to hypergranulation?", ["Do nothing; the body often rejects it", "Treat it immediately with a hypergranulation disc", "Send the client to a dermatologist", "Remove the jewelry"], "Approach 1 of 5.", "S. 51"],
-        ["What is a hypergranulation disc?", ["A plastic disc that is slipped over the jewelry", "A bandage with silver ions", "An ointment", "A special titanium ball"], "Approach 3 of 5.", "S. 51"],
+        ["What is a hypergranulation disc?", ["A plastic disc that is slipped over the jewelry", "A bandage with silver ions for the wound", "An ointment against granulation tissue", "A special flat titanium ball"], "Approach 3 of 5.", "S. 51"],
         ["Which change of jewelry can help?", ["For example, swapping a titanium labret for a PTFE barbell", "A shorter bar without extra length", "A heavier steel ring", "Thinner jewelry with external threading"], "Approach 4 of 5.", "S. 51"],
         ["Who removes hypergranulation if nothing helps?", ["A doctor or dermatologist, surgically", "The piercer with sterile scissors", "The client with hydrogen peroxide", "The client themselves with tweezers"], "Approach 5 of 5.", "S. 51"]
       ]

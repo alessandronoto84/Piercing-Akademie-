@@ -32,7 +32,7 @@ KURS.module.push({
       ],
       fragen: [
         ["Wie heißen die Schmerzrezeptoren?", ["Nozizeptoren", "Mechanorezeptoren", "Thermorezeptoren", "Mastzellen"], "Meist freie Nervenenden.", "S. 7–8"],
-        ["Was ist die Voraussetzung für das Empfinden von Schmerz?", ["Schmerzrezeptoren und ungestörte Weiterleitung ans Gehirn", "Nur eine offene Wunde", "Eine Entzündung im Gewebe", "Ausgeschüttete Endorphine"], "Nozizeptoren und zentrales Nervensystem.", "S. 7"],
+        ["Was ist die Voraussetzung für das Empfinden von Schmerz?", ["Schmerzrezeptoren und ungestörte Weiterleitung ans Gehirn", "Nur eine offene Wunde mit sichtbarer Blutung", "Eine bereits bestehende Entzündung im Gewebe", "Vom Körper ausgeschüttete Endorphine"], "Nozizeptoren und zentrales Nervensystem.", "S. 7"],
         ["Ein Stich ist welche Art von Reiz?", ["Mechanisch", "Thermisch", "Chemisch", "Elektrisch"], "Wie Hiebe, Schnitte und starker Druck.", "S. 8"],
         ["Welche Organisation liefert die zitierte Schmerzdefinition?", ["International Association for the Study of Pain (IASP)", "Weltgesundheitsorganisation (WHO)", "Robert Koch-Institut (RKI)", "Deutsche Schmerzgesellschaft"], "Die IASP-Definition.", "S. 7"],
         ["Kann Schmerz auch ohne körperliche Schädigung empfunden werden?", ["Ja, manche Kunden spüren schon bei Berührung Schmerz", "Nein, Schmerz setzt immer eine Gewebeschädigung voraus", "Nur bei Kindern", "Nur nach einer Betäubung"], "Etwa als Erwartungsschmerz aus Angst.", "S. 7"]
@@ -78,7 +78,7 @@ KURS.module.push({
         ["Welche Nervenfasern leiten Schmerz schnell (etwa 20 m/s)?", ["A-Delta-Fasern", "C-Fasern", "Motorische Fasern", "Vegetative Fasern"], "C-Fasern leiten bis etwa 2,5 m/s.", "S. 10"],
         ["Welche Fasern sind für die ungenaue Lokalisation verantwortlich?", ["C-Fasern", "A-Delta-Fasern", "Motorische Fasern", "Die Fasern des Vorderseitenstrangs"], "Sie sind langsam und älter.", "S. 10"],
         ["Was löst der Reflex im Rückenmark aus?", ["Eine Fluchtbewegung, bevor der Schmerz bewusst wird", "Die bewusste Bewertung des Schmerzes", "Eine lokale Betäubung", "Die Ausschüttung von Histamin"], "Wie bei der heißen Herdplatte.", "S. 10"],
-        ["Über welchen Weg gelangt die Schmerzinformation ins Gehirn?", ["Über den Vorderseitenstrang (Tractus spinothalamicus)", "Über die Pyramidenbahn", "Über das Blut als Botenstoff", "Über den Sehnerv"], "Siehe Kap. 3.2.", "S. 10"],
+        ["Über welchen Weg gelangt die Schmerzinformation ins Gehirn?", ["Über den Vorderseitenstrang (Tractus spinothalamicus)", "Über die Pyramidenbahn (Tractus corticospinalis)", "Über das Blut als Botenstoff", "Über den Sehnerv (N. opticus)"], "Siehe Kap. 3.2.", "S. 10"],
         ["Wo wird Schmerz emotional bewertet?", ["Im limbischen System", "Im Rückenmark", "Im Thalamus allein", "Im Kleinhirn"], "Bewusst wird er in der Großhirnrinde.", "S. 10"],
         ["Was ist der sensible Homunculus?", ["Die Abbildung jedes Hautareals im sensiblen Cortex", "Ein Reflexbogen im Rückenmark", "Ein Schmerzrezeptor in der Haut", "Ein Teil des limbischen Systems"], "Lokalisation ist ein Lernprozess.", "S. 10"],
         ["Wo wird die Schmerzinformation auf dem Weg zur Großhirnrinde umgeschaltet?", ["Im Thalamus", "Im Kleinhirn", "Im Nozizeptor", "In der Hypophyse"], "Ergänzung zum Kursbuch, siehe Grafik.", "Ergänzung"]
@@ -124,7 +124,7 @@ KURS.module.push({
         ["Welches Kältespray nennt das Kursbuch als Beispiel?", ["Chlorethyl", "Lidocain", "Benzocain", "Menthol"], "Viele Sport-Kältesprays enthalten heute andere Treibgase; das Prinzip ist dieselbe starke Kälte.", "S. 13"],
         ["Wo bekommt man Lidocainsalbe (Xylocain)?", ["In der Apotheke", "Nur im Großhandel für Ärzte", "Im Drogeriemarkt", "Im Piercing-Fachhandel"], "Lidocainsalbe ist ein Arzneimittel und nur in der Apotheke erhältlich.", "S. 13"],
         ["Wie steht die Piercing Akademie zur Lidocainsalbe?", ["Erlaubt, aber nicht empfohlen", "Empfohlen bei allen Knorpelpiercings", "Verboten", "Pflicht bei Intimpiercings"], "Die Akademie setzt auf eine ruhige Atmosphäre statt Betäubung, denn Lidocain bringt Neben- und Wechselwirkungen mit sich.", "Akademie"],
-        ["Was musst du vor dem Einsatz von Lidocain tun?", ["Den Kunden schriftlich und mündlich nach der Verträglichkeit fragen", "Nur die Einwirkzeit abwarten", "Die Stelle vorher mit Eisspray kühlen", "Den Hausarzt des Kunden anrufen"], "Dazu Nebenwirkungen und Wechselwirkungen beachten.", "S. 13"]
+        ["Was musst du vor dem Einsatz von Lidocain tun?", ["Den Kunden schriftlich und mündlich nach der Verträglichkeit fragen", "Nur die Einwirkzeit abwarten, mehr ist nicht nötig", "Die Stelle vorher zusätzlich mit Eisspray kühlen", "Vorher den Hausarzt des Kunden anrufen"], "Dazu Nebenwirkungen und Wechselwirkungen beachten.", "S. 13"]
       ]
     },
     {
@@ -140,7 +140,7 @@ KURS.module.push({
         ] }
       ],
       fragen: [
-        ["Welche Nebenwirkungen zeigen sich bei mäßiger Überdosierung?", ["Kribbeln, Taubheit, metallischer Geschmack, Schwindel, Ohrensausen", "Hautausschlag am ganzen Körper", "Hoher Blutdruck und Herzrasen", "Starke Müdigkeit über mehrere Tage"], "Bei starker Überdosierung Einfluss auf Gehirn und Kreislauf.", "S. 14"],
+        ["Welche Nebenwirkungen zeigen sich bei mäßiger Überdosierung?", ["Kribbeln, Taubheit, metallischer Geschmack, Schwindel", "Hautausschlag am ganzen Körper mit Juckreiz", "Hoher Blutdruck, Herzrasen und Kopfschmerz", "Starke Müdigkeit über mehrere Tage"], "Dazu Ohrensausen. Bei starker Überdosierung Einfluss auf Gehirn und Kreislauf.", "S. 14"],
         ["Was kann Lidocain an Schleimhäuten gelegentlich auslösen?", ["Eine Schwellung im Rachen- und Kehlkopfbereich", "Eine Verfärbung der Schleimhaut", "Eine Blutung", "Eine Nickelallergie"], "Sehr selten Heiserkeit.", "S. 14"],
         ["Was bewirkt eine starke Überdosierung?", ["Einfluss auf Hirntätigkeit und Kreislauf", "Nur ein leichtes Kribbeln", "Eine längere Betäubung ohne Risiko", "Eine schnellere Wundheilung"], "Deshalb genau dosieren.", "S. 14"],
         ["Welche Reaktion ist bei Anwendung auf der Haut selten möglich?", ["Überempfindlichkeitsreaktionen", "Ohrensausen", "Schwellung im Kehlkopf", "Temperaturanstieg"], "In seltenen Fällen.", "S. 14"]
@@ -160,7 +160,7 @@ KURS.module.push({
         { typ: "praxis", text: "Du musst diese Liste nicht auswendig können. Du musst aber wissen, dass es sie gibt, und bei jedem Kunden, der Medikamente angibt, auf Lidocain verzichten, wenn du die Verträglichkeit nicht sicher klären kannst." }
       ],
       fragen: [
-        ["Mit welchen Medikamenten kann Lidocain gefährlich wechselwirken?", ["Mit Mitteln, die den Herzrhythmus beeinflussen, z. B. Betablockern", "Mit Antibiotika wie Penicillin", "Mit Vitaminpräparaten", "Mit der Antibabypille"], "Besonders bei Anwendung im Mund.", "S. 14"],
+        ["Mit welchen Medikamenten kann Lidocain gefährlich wechselwirken?", ["Mit Mitteln für den Herzrhythmus, z. B. Betablockern", "Mit Antibiotika wie Penicillin oder Amoxicillin", "Mit Vitamin- und Mineralstoffpräparaten", "Mit der Antibabypille und anderen Hormonen"], "Besonders bei Anwendung im Mund.", "S. 14"],
         ["Was kann Lidocain zusammen mit Mutterkornalkaloiden oder Epinephrin auslösen?", ["Einen gefährlichen Blutdruckabfall", "Eine Verstärkung der Betäubung ohne Risiko", "Eine allergische Hautreaktion", "Eine Nickelallergie"], "So warnt das Kursbuch.", "S. 14"],
         ["Was bewirken Antiepileptika bei Lidocain?", ["Sie schwächen die Wirkung ab", "Sie verstärken die Wirkung stark", "Sie verstärken nur die Nebenwirkungen", "Sie haben keinen Einfluss"], "Muskelrelaxanzien werden dagegen verstärkt.", "S. 14"],
         ["Was bewirken Beruhigungsmittel (Benzodiazepine) zusammen mit Lidocain?", ["Sie verstärken die Nebenwirkungen", "Sie schwächen die Wirkung ab", "Sie heben die Betäubung auf", "Sie haben keinen Einfluss"], "Ebenso Aprindin.", "S. 14"],

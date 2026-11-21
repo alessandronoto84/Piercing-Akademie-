@@ -169,7 +169,7 @@ KURS.module.push({
       ],
       fragen: [
         ["¿Qué grupos tienen un mayor riesgo de complicaciones en la cicatrización?", ["Fumadores, personas con alcoholismo y diabéticos", "Deportistas y personas con piel seca", "Personas con fiebre del heno", "Menores de 25 años"], "En ellos, las complicaciones aparecen antes.", "S. 50"],
-        ["¿Qué causas de sangrado persistente menciona el libro del curso?", ["Diabetes, debilidad del tejido conjuntivo o una enfermedad hemorrágica", "Una alergia al níquel", "Una joya demasiado corta", "El cuidado con solución salina"], "En ese caso, acudir al médico.", "S. 50"],
+        ["¿Qué causas de sangrado persistente menciona el libro del curso?", ["Diabetes, debilidad del tejido conjuntivo o una enfermedad hemorrágica", "Una alergia al níquel o una alergia de contacto", "Una joya demasiado corta, sin longitud extra", "El cuidado diario con solución salina"], "En ese caso, acudir al médico.", "S. 50"],
         ["Caso: Un cliente indica que tiene diabetes. ¿Qué es lo correcto?", ["Le informo del mayor riesgo en la cicatrización antes de perforar", "Solo perforo con PTFE; así no hay riesgo", "La diabetes no influye en el piercing", "Duplico la longitud extra"], "Los diabéticos forman parte de los grupos de riesgo.", "S. 50"]
       ]
     }

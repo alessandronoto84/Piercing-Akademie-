@@ -61,7 +61,7 @@ KURS.module.push({
       ],
       fragen: [
         ["Was dokumentierst du für jede Sterilgut-Charge?", ["Sterilisierdatum und Chargennummer", "Nur das Sterilisierdatum", "Den Namen des Kunden", "Die Temperatur des Ultraschallbads"], "So lässt sich jede Charge nachverfolgen.", "S. 46"],
-        ["Was gehört in die Dokumentation deines Studios?", ["Hygieneplan, Sterilgut-Chargen, Autoklav-Prüfungen und Einverständniserklärungen", "Nur die Einverständniserklärungen", "Nur Rechnungen und Kassenbuch", "Nur die Autoklav-Prüfungen"], "Gesundheitsamt und Versicherung wollen im Zweifel alles lückenlos sehen.", "Entwurf"],
+        ["Was gehört in die Dokumentation deines Studios?", ["Hygieneplan, Sterilgut-Chargen, Autoklav-Prüfungen, Einverständniserklärungen", "Nur die Einverständniserklärungen der Kunden", "Nur Rechnungen, Kassenbuch und Steuerunterlagen", "Nur die Prüfprotokolle des Autoklaven"], "Gesundheitsamt und Versicherung wollen im Zweifel alles lückenlos sehen.", "Entwurf"],
         ["Wem legst du die Prüfungen des Autoklavs auf Verlangen vor?", ["Den örtlichen Behörden", "Den Kunden", "Dem Hersteller", "Der Krankenkasse"], "Siehe Modul 5.", "S. 47"]
       ]
     },
@@ -79,7 +79,7 @@ KURS.module.push({
       ],
       fragen: [
         ["Was solltest du vor dem ersten Kunden klären?", ["Eine Betriebs- bzw. Berufshaftpflicht", "Eine Rechtsschutzversicherung genügt", "Eine Hausratversicherung", "Nichts, die Einverständniserklärung reicht"], "Lass dich beraten.", "Entwurf"],
-        ["Was gehört in die Preiskalkulation?", ["Material, Arbeitszeit inklusive Beratung und Aufbereitung, laufende Kosten", "Nur Schmuck und Kanüle", "Nur die Arbeitszeit am Kunden", "Nur Miete und Versicherung"], "Nur so deckt dein Preis auch Beratung, Aufbereitung und laufende Kosten.", "Entwurf"]
+        ["Was gehört in die Preiskalkulation?", ["Material, Arbeitszeit mit Beratung und Aufbereitung, laufende Kosten", "Nur Schmuck und Kanüle, der Rest ist Gewinn", "Nur die reine Arbeitszeit am Kunden", "Nur Miete und Versicherung des Studios"], "Nur so deckt dein Preis auch Beratung, Aufbereitung und laufende Kosten.", "Entwurf"]
       ]
     },
     {

@@ -69,7 +69,7 @@ KURS.module.push({
         ] }
       ],
       fragen: [
-        ["Was kann ständiges Nachbluten verursachen?", ["Diabetes, Bindegewebsschwäche oder eine Bluterkrankheit", "Eine Nickelallergie", "Die Pflege mit Kochsalzlösung", "Zu viel Überlänge"], "Dann einen Arzt aufsuchen.", "S. 50"],
+        ["Was kann ständiges Nachbluten verursachen?", ["Diabetes, Bindegewebsschwäche oder eine Bluterkrankheit", "Eine Nickelallergie oder Kontaktallergie", "Die tägliche Pflege mit Kochsalzlösung", "Zu viel Überlänge beim Ersteinsatz"], "Dann einen Arzt aufsuchen.", "S. 50"],
         ["Was passiert bei der Epithelisierung?", ["Zellen wandern vom Wundrand ein, die Wunde wird kleiner", "Granulationsgewebe wuchert aus dem Kanal", "Der Knorpel bildet sich neu", "Die Entzündungsphase beginnt"], "Regenerationsphase.", "S. 50"]
       ]
     },
@@ -119,7 +119,7 @@ KURS.module.push({
       ],
       fragen: [
         ["Was ist eine Perichondritis?", ["Eine Entzündung der Knorpelhaut, meist an der Ohrmuschel", "Eine Nickelallergie am Knorpel", "Wildes Fleisch am Knorpelpiercing", "Eine Entzündung des Ohrläppchens"], "Gefährlichste Komplikation von Knorpelpiercings.", "Ergänzung"],
-        ["Welcher Teil des Ohrs bleibt bei einer Perichondritis meist ausgespart?", ["Das Ohrläppchen, weil es keinen Knorpel enthält", "Der Helix", "Der Tragus", "Die Conch"], "Typisches Erkennungszeichen.", "Ergänzung"],
+        ["Welcher Teil des Ohrs bleibt bei einer Perichondritis meist ausgespart?", ["Das Ohrläppchen, weil es keinen Knorpel enthält", "Der Helix, weil er gut durchblutet ist", "Der Tragus, weil er vor dem Gehörgang liegt", "Die Conch, weil sie geschützt in der Mitte liegt"], "Typisches Erkennungszeichen.", "Ergänzung"],
         ["Welcher Erreger verursacht eine Perichondritis nach Ohrpiercing am häufigsten?", ["Pseudomonas aeruginosa", "Staphylococcus epidermidis aus der Hautflora", "Candida albicans", "Herpesviren"], "Er lebt in feuchter Umgebung.", "Ergänzung"],
         ["Was tust du bei Verdacht auf eine Perichondritis?", ["Den Kunden sofort zum Arzt schicken", "Mit Tyrosur behandeln und eine Woche warten", "Den Schmuck selbst entfernen", "Kühlen und Kochsalzlösung empfehlen"], "Am besten zum HNO-Arzt.", "Ergänzung"],
         ["Was droht, wenn eine Perichondritis nicht behandelt wird?", ["Eine bleibende Verformung (Blumenkohlohr)", "Nur eine Narbe am Stichkanal", "Ein Herauswachsen des Schmucks", "Eine Nickelallergie"], "Der Knorpel kann zerstört werden.", "Ergänzung"],
@@ -140,9 +140,9 @@ KURS.module.push({
         ] }
       ],
       fragen: [
-        ["Wodurch entsteht wildes Fleisch?", ["Durch dauerhafte Reizung der Wunde, etwa durch Druck oder Reibung", "Durch eine Nickelallergie", "Durch Pseudomonas", "Durch zu viel Überlänge"], "Rote, fleischähnliche Masse.", "S. 51"],
+        ["Wodurch entsteht wildes Fleisch?", ["Durch dauerhafte Reizung der Wunde, etwa Druck oder Reibung", "Durch eine Nickelallergie auf den Ersteinsatz", "Durch eine Infektion mit Pseudomonas", "Durch zu viel Überlänge am Schmuck"], "Rote, fleischähnliche Masse.", "S. 51"],
         ["Was ist der erste Weg bei wildem Fleisch?", ["Nichts tun, oft stößt der Körper es ab", "Sofort mit der Wildfleischdisk behandeln", "Zum Dermatologen schicken", "Den Schmuck entfernen"], "Weg 1 von 5.", "S. 51"],
-        ["Was ist eine Wildfleischdisk?", ["Eine Kunststoffscheibe, die auf den Schmuck gestülpt wird", "Ein Pflaster mit Silberionen", "Eine Salbe", "Eine spezielle Kugel aus Titan"], "Weg 3 von 5.", "S. 51"],
+        ["Was ist eine Wildfleischdisk?", ["Eine Kunststoffscheibe, die auf den Schmuck gestülpt wird", "Ein Pflaster mit Silberionen für die Wunde", "Eine Salbe gegen Granulationsgewebe", "Eine spezielle flache Kugel aus Titan"], "Weg 3 von 5.", "S. 51"],
         ["Welcher Schmuckwechsel kann helfen?", ["Zum Beispiel ein Titan-Labret gegen einen PTFE-Barbell tauschen", "Ein kürzerer Stab ohne Überlänge", "Ein schwererer Stahlring", "Ein dünnerer Schmuck mit Außengewinde"], "Weg 4 von 5.", "S. 51"],
         ["Wer entfernt wildes Fleisch, wenn nichts hilft?", ["Ein Arzt bzw. Dermatologe, chirurgisch", "Der Piercer mit der sterilen Schere", "Der Kunde mit Wasserstoffperoxid", "Der Kunde selbst mit einer Pinzette"], "Weg 5 von 5.", "S. 51"]
       ]

@@ -91,7 +91,7 @@ KURS.module.push({
       ],
       fragen: [
         ["What is a piercing clamp for?", ["It holds the area so the skin stays in position while piercing", "It holds the jewelry while the ball is screwed on", "It catches the cannula for Rook and Daith", "It spreads ball closure rings"], "There are many clamps for different piercings.", "S. 65"],
-        ["What do you use a receiving tube for?", ["For areas such as Rook and Daith where no clamp fits", "For shortening the cannula", "For stretching the piercing channel", "For storing used needles"], "It protects the surrounding tissue.", "S. 68"],
+        ["What do you use a receiving tube for?", ["For areas such as Rook and Daith where no clamp fits", "For shortening the plastic sheath after piercing", "For carefully stretching the piercing channel", "For storing used needles"], "It protects the surrounding tissue.", "S. 68"],
         ["Where can you find out which clamp suits a piercing?", ["In the piercing’s data sheet", "On the cannula packaging", "In the framework hygiene plan", "In the consent form"], "See module 8.", "S. 74–110"]
       ]
     },

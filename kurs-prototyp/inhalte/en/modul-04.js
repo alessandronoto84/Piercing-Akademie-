@@ -32,7 +32,7 @@ KURS.module.push({
       ],
       fragen: [
         ["What are pain receptors called?", ["Nociceptors", "Mechanoreceptors", "Thermoreceptors", "Mast cells"], "Mostly free nerve endings.", "S. 7–8"],
-        ["What is the prerequisite for perceiving pain?", ["Pain receptors and undisturbed transmission to the brain", "Only an open wound", "Inflammation in the tissue", "Released endorphins"], "Nociceptors and central nervous system.", "S. 7"],
+        ["What is the prerequisite for perceiving pain?", ["Pain receptors and undisturbed transmission to the brain", "Only an open wound with visible bleeding", "An already existing inflammation in the tissue", "Endorphins released by the body"], "Nociceptors and central nervous system.", "S. 7"],
         ["What kind of stimulus is a puncture?", ["Mechanical", "Thermal", "Chemical", "Electrical"], "Like blows, cuts and strong pressure.", "S. 8"],
         ["Which organization provides the quoted definition of pain?", ["International Association for the Study of Pain (IASP)", "World Health Organization (WHO)", "Robert Koch Institute (RKI)", "German Pain Society"], "The IASP definition.", "S. 7"],
         ["Can pain be felt without physical damage?", ["Yes, some clients feel pain just from being touched", "No, pain always requires tissue damage", "Only in children", "Only after anesthesia"], "For example as anticipatory pain caused by fear.", "S. 7"]
@@ -78,7 +78,7 @@ KURS.module.push({
         ["Which nerve fibers conduct pain quickly (about 20 m/s)?", ["A-delta fibers", "C fibers", "Motor fibers", "Autonomic fibers"], "C fibers conduct at up to about 2.5 m/s.", "S. 10"],
         ["Which fibers are responsible for poor localization?", ["C fibers", "A-delta fibers", "Motor fibers", "The fibers of the anterolateral tract"], "They are slow and older.", "S. 10"],
         ["What does the reflex in the spinal cord trigger?", ["An escape movement before the pain becomes conscious", "The conscious evaluation of the pain", "Local anesthesia", "The release of histamine"], "As with the hot stove.", "S. 10"],
-        ["Which pathway carries pain information to the brain?", ["The anterolateral tract (spinothalamic tract)", "The pyramidal tract", "The blood, as a messenger substance", "The optic nerve"], "See ch. 3.2.", "S. 10"],
+        ["Which pathway carries pain information to the brain?", ["The anterolateral tract (spinothalamic tract)", "The pyramidal tract (corticospinal tract)", "The blood, as a messenger substance", "The optic nerve"], "See ch. 3.2.", "S. 10"],
         ["Where is pain evaluated emotionally?", ["In the limbic system", "In the spinal cord", "In the thalamus alone", "In the cerebellum"], "It becomes conscious in the cerebral cortex.", "S. 10"],
         ["What is the sensory homunculus?", ["The mapping of every skin area in the sensory cortex", "A reflex arc in the spinal cord", "A pain receptor in the skin", "A part of the limbic system"], "Localization is a learning process.", "S. 10"],
         ["Where is pain information relayed on its way to the cerebral cortex?", ["In the thalamus", "In the cerebellum", "In the nociceptor", "In the pituitary gland"], "Not in the course book; see the diagram.", "Ergänzung"]
@@ -124,7 +124,7 @@ KURS.module.push({
         ["Which cold spray does the course book give as an example?", ["Chloroethane", "Lidocaine", "Benzocaine", "Menthol"], "Many sports cold sprays now contain other propellants; the principle is the same intense cold.", "S. 13"],
         ["Where can you get lidocaine ointment (Xylocaine)?", ["At the pharmacy", "Only from wholesalers for doctors", "At the drugstore", "From specialist piercing suppliers"], "Lidocaine ointment is a medicinal product and only available at the pharmacy.", "S. 13"],
         ["What is the Piercing Akademie’s position on lidocaine ointment?", ["Permitted, but not recommended", "Recommended for all cartilage piercings", "Prohibited", "Mandatory for intimate piercings"], "The Academy relies on a calm atmosphere instead of anesthesia, because lidocaine carries a risk of side effects and interactions.", "Akademie"],
-        ["What must you do before using lidocaine?", ["Ask the client about tolerance in writing and verbally", "Just wait for it to take effect", "Cool the spot with ice spray first", "Call the client’s family doctor"], "Also consider side effects and interactions.", "S. 13"]
+        ["What must you do before using lidocaine?", ["Ask the client about tolerance in writing and verbally", "Just wait for it to take effect; nothing else is needed", "Additionally cool the spot with ice spray first", "Call the client’s family doctor beforehand"], "Also consider side effects and interactions.", "S. 13"]
       ]
     },
     {
@@ -140,7 +140,7 @@ KURS.module.push({
         ] }
       ],
       fragen: [
-        ["Which side effects occur with a moderate overdose?", ["Tingling, numbness, metallic taste, dizziness, ringing in the ears", "A rash all over the body", "High blood pressure and racing heart", "Severe tiredness lasting several days"], "With a severe overdose, effects on brain and circulation.", "S. 14"],
+        ["Which side effects occur with a moderate overdose?", ["Tingling, numbness, metallic taste, dizziness", "A rash all over the body with itching", "High blood pressure, racing heart and headache", "Severe tiredness lasting several days"], "Also ringing in the ears. With a severe overdose, effects on brain and circulation.", "S. 14"],
         ["What can lidocaine occasionally cause on mucous membranes?", ["Swelling in the throat and larynx area", "Discoloration of the mucous membrane", "Bleeding", "A nickel allergy"], "Very rarely hoarseness.", "S. 14"],
         ["What does a severe overdose cause?", ["Effects on brain activity and circulation", "Only slight tingling", "Longer numbness without risk", "Faster wound healing"], "That’s why the dose must be exact.", "S. 14"],
         ["Which reaction can occur in rare cases when it is applied to the skin?", ["Hypersensitivity reactions", "Ringing in the ears", "Swelling of the larynx", "Rise in temperature"], "In rare cases.", "S. 14"]
@@ -160,7 +160,7 @@ KURS.module.push({
         { typ: "praxis", text: "You don’t have to know this list by heart. But you do have to know that it exists, and for every client who reports taking medication, you must do without lidocaine if you cannot reliably clarify tolerance." }
       ],
       fragen: [
-        ["Which medicines can lidocaine interact with dangerously?", ["With products that affect heart rhythm, e.g. beta blockers", "With antibiotics such as penicillin", "With vitamin supplements", "With the contraceptive pill"], "Especially when used in the mouth.", "S. 14"],
+        ["Which medicines can lidocaine interact with dangerously?", ["With heart rhythm medicines, e.g. beta blockers", "With antibiotics such as penicillin or amoxicillin", "With vitamin and mineral supplements", "With the contraceptive pill and other hormones"], "Especially when used in the mouth.", "S. 14"],
         ["What can lidocaine cause together with ergot alkaloids or epinephrine?", ["A dangerous drop in blood pressure", "Stronger numbing without risk", "An allergic skin reaction", "A nickel allergy"], "This is the course book’s warning.", "S. 14"],
         ["How do antiepileptics affect lidocaine?", ["They reduce the effect", "They greatly increase the effect", "They only increase the side effects", "They have no influence"], "Muscle relaxants, on the other hand, are enhanced.", "S. 14"],
         ["What do sedatives (benzodiazepines) do together with lidocaine?", ["They increase the side effects", "They reduce the effect", "They cancel the numbing", "They have no influence"], "The same goes for aprindine.", "S. 14"],

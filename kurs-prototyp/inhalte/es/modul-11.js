@@ -61,7 +61,7 @@ KURS.module.push({
       ],
       fragen: [
         ["¿Qué documentas en cada lote de material estéril?", ["Fecha de esterilización y número de lote", "Solo la fecha de esterilización", "El nombre del cliente", "La temperatura del baño de ultrasonidos"], "Así se puede rastrear cada lote.", "S. 46"],
-        ["¿Qué forma parte de la documentación de tu estudio?", ["Plan de higiene, lotes de material estéril, controles del autoclave y formularios de consentimiento", "Solo los formularios de consentimiento", "Solo facturas y libro de caja", "Solo los controles del autoclave"], "En caso de duda, la oficina local de salud pública y la aseguradora querrán verlo todo sin lagunas.", "Entwurf"],
+        ["¿Qué forma parte de la documentación de tu estudio?", ["Plan de higiene, lotes de material estéril, controles del autoclave, consentimientos", "Solo los formularios de consentimiento de los clientes", "Solo facturas, libro de caja y documentos fiscales", "Solo los informes de control del autoclave"], "En caso de duda, la oficina local de salud pública y la aseguradora querrán verlo todo sin lagunas.", "Entwurf"],
         ["¿A quién presentas los controles del autoclave si te lo piden?", ["A las autoridades locales", "A los clientes", "Al fabricante", "Al seguro médico"], "Ver módulo 5.", "S. 47"]
       ]
     },
@@ -79,7 +79,7 @@ KURS.module.push({
       ],
       fragen: [
         ["¿Qué deberías resolver antes del primer cliente?", ["Un seguro de responsabilidad civil empresarial o profesional", "Basta con un seguro de defensa jurídica", "Un seguro de hogar", "Nada, basta con el formulario de consentimiento"], "Pide asesoramiento.", "Entwurf"],
-        ["¿Qué se incluye en el cálculo del precio?", ["Material, tiempo de trabajo con asesoramiento y reprocesamiento, costes fijos", "Solo la joya y la cánula", "Solo el tiempo de trabajo con el cliente", "Solo el alquiler y el seguro"], "Solo así tu precio cubre también el asesoramiento, el reprocesamiento y los costes fijos.", "Entwurf"]
+        ["¿Qué se incluye en el cálculo del precio?", ["Material, tiempo de trabajo con asesoramiento y reprocesamiento, costes fijos", "Solo la joya y la cánula; el resto es beneficio", "Solo el tiempo de trabajo con el cliente", "Solo el alquiler y el seguro del estudio"], "Solo así tu precio cubre también el asesoramiento, el reprocesamiento y los costes fijos.", "Entwurf"]
       ]
     },
     {

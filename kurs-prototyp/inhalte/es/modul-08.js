@@ -73,7 +73,7 @@ window.KURS = window.KURS || { module: [] };
         ],
         fragen: [
           ["¿Dónde se ubica el Conch?", ["En la concha interna o externa", "En la raíz del hélix", "En el pliegue de cartílago del antihélix", "En la entrada del oído"], "Ficha técnica del Conch.", "S. 79"],
-          ["¿Cuándo es posible un Snug?", ["Solo si esa zona del pabellón está suficientemente pronunciada", "En cualquier oreja", "Solo en clientes sin piercing Helix", "Solo con punch de biopsia"], "Ficha técnica del Snug.", "S. 82"]
+          ["¿Cuándo es posible un Snug?", ["Solo si esa zona del pabellón está suficientemente pronunciada", "En cualquier oreja; la forma no importa", "Solo en clientes sin piercing Helix", "Solo con punch de biopsia en lugar de cánula"], "Ficha técnica del Snug.", "S. 82"]
         ]
       },
       {
@@ -98,7 +98,7 @@ window.KURS = window.KURS || { module: [] };
         ],
         fragen: [
           ["¿Por dónde se perfora el Nostril?", ["Por el ala de la nariz", "Por el tabique nasal", "Por el dorso de la nariz", "Por la punta de la nariz"], "Ficha técnica del Nostril.", "S. 85"],
-          ["¿Por qué tejido se perfora el Septum?", ["Por el tejido conjuntivo bajo el cartílago del tabique", "Por el cartílago del tabique", "Por el hueso nasal", "Por el ala de la nariz"], "Se puede dilatar para joyas más grandes.", "S. 88"]
+          ["¿Por qué tejido se perfora el Septum?", ["Por el tejido conjuntivo bajo el cartílago del tabique", "Por el centro del cartílago del tabique", "Por el hueso nasal, por encima del cartílago", "Por el ala de la nariz, de fuera hacia dentro"], "Se puede dilatar para joyas más grandes.", "S. 88"]
         ]
       },
       {
@@ -138,7 +138,7 @@ window.KURS = window.KURS || { module: [] };
         fragen: [
           ["¿Por qué el piercing del frenillo labial se llama también Smiley?", ["Porque solo se ve al sonreír", "Porque forma una sonrisa", "Porque pasa por las comisuras", "Porque es un labret con bola sonriente"], "A través del frenillo.", "S. 87"],
           ["¿En qué dirección se perfora la lengua?", ["De abajo hacia arriba", "De arriba hacia abajo", "De lado, desde la izquierda", "En diagonal desde delante"], "Ficha técnica de la lengua.", "S. 90"],
-          ["¿Con qué se enfría el cliente tras el piercing de lengua?", ["Con cubitos de hielo, mejor de manzanilla", "Con espray de frío", "Con leche fría", "Con espray de lidocaína"], "Justo después de perforar.", "S. 90"],
+          ["¿Con qué se enfría el cliente tras el piercing de lengua?", ["Con cubitos de hielo, mejor de manzanilla", "Con espray de frío directamente en la lengua", "Con leche fría o yogur", "Con espray de lidocaína de la farmacia"], "Justo después de perforar.", "S. 90"],
           ["¿Cuándo se puede acortar el barbell del piercing de lengua?", ["Tras unos 10 días", "Tras 2 días", "Tras 3 meses", "Nunca, la longitud se mantiene"], "Joya inicial: barbell de 20 mm.", "S. 90"]
         ]
       },

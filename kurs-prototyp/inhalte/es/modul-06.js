@@ -46,7 +46,7 @@ KURS.module.push({
       fragen: [
         ["¿Con qué proceso se recubre el titanio Blackline?", ["PVD (Physical Vapor Deposition)", "Galvanizado", "Anodizado", "Pintura en polvo"], "Finísimo y resistente a la abrasión.", "S. 54"],
         ["¿Qué propiedades tienen los piercings Blackline?", ["Resistentes a los arañazos de forma casi permanente, de color estable y bien tolerados", "Se vuelven negros por anodizado", "Contienen níquel negro", "Se recomiendan especialmente como joya inicial"], "La capa PVD es muy fina y dura. Aun así, para la joya inicial la Academia se mantiene en titanio G23 o PTFE.", "S. 54"],
-        ["¿Qué es el titanio oro circonio?", ["Titanio con recubrimiento dorado, alternativa a las joyas de oro", "Oro macizo de 14 quilates", "Acero quirúrgico bañado en oro", "Una aleación de oro y titanio"], "Más liso, más ligero, más económico.", "S. 54"]
+        ["¿Qué es el titanio oro circonio?", ["Titanio con recubrimiento dorado, alternativa a las joyas de oro", "Oro macizo de 14 quilates con núcleo de titanio", "Acero quirúrgico 316L bañado en oro", "Una aleación de oro y titanio"], "Más liso, más ligero, más económico.", "S. 54"]
       ]
     },
     {
@@ -59,9 +59,9 @@ KURS.module.push({
       ],
       fragen: [
         ["¿Cuánto níquel contiene el acero quirúrgico 316L?", ["Entre un 10 y un 14 por ciento", "0 por ciento", "Entre un 2 y un 4 por ciento", "Entre un 18 y un 20 por ciento"], "Por eso no se usa como joya inicial.", "S. 55"],
-        ["¿Qué tres aceros usan los piercers para joyería?", ["Acero para implantes Composición D, 316 LVM y 316L", "303, 304 y 316L", "316L, 316 LVM y 303", "Solo 316L"], "El más frecuente es el 316L.", "S. 55"],
+        ["¿Qué tres aceros usan los piercers para joyería?", ["Acero para implantes Composición D, 316 LVM y 316L", "303, 304 y 316L", "316L, 316 LVM y 303", "Solo 316L, en tres calidades"], "El más frecuente es el 316L.", "S. 55"],
         ["¿Para qué es apto el acero quirúrgico 316L?", ["Como segunda joya tras la cicatrización completa", "Como joya inicial para personas alérgicas al níquel", "Como joya inicial en piercings de cartílago", "Solo para herramientas, no para joyas"], "Como segunda joya, por lo general sin problemas.", "S. 55"],
-        ["¿Para qué se usa el 316L en medicina?", ["Por ejemplo, para tornillos óseos y electrodos de marcapasos", "Solo para bisturís desechables", "Para lentes de contacto", "Para válvulas cardíacas artificiales de titanio"], "También agujas, placas, suturas, grapas.", "S. 55"]
+        ["¿Para qué se usa el 316L en medicina?", ["Por ejemplo, para tornillos óseos y electrodos de marcapasos", "Solo para bisturís desechables y cánulas", "Para lentes de contacto y monturas de gafas", "Para válvulas cardíacas artificiales de titanio"], "También agujas, placas, suturas, grapas.", "S. 55"]
       ]
     },
     {
@@ -164,7 +164,7 @@ KURS.module.push({
       ],
       fragen: [
         ["¿Cómo se llama la barra ligeramente curvada con bolas?", ["Barbell curvo (banana)", "Circular barbell", "Labret stud", "Threaded ring"], "Sobre todo para ombligo, ceja, Rook.", "S. 61"],
-        ["¿Qué es un barbell?", ["Una barra metálica recta con rosca y bolas enroscables", "Una barra curvada con bolas", "Un labret con disco", "Un aro abierto con rosca"], "Del inglés «barbell», barra de pesas.", "S. 61"],
+        ["¿Qué es un barbell?", ["Una barra recta con rosca y bolas enroscables", "Una barra curvada con dos bolas", "Un pendiente con disco plano en un extremo", "Un aro abierto con rosca en ambos extremos"], "Del inglés «barbell», barra de pesas.", "S. 61"],
         ["¿Qué tiene un labret stud en un extremo?", ["Un disco", "Una bola con hendiduras", "Una bisagra", "Un segmento"], "En el otro extremo, una rosca.", "S. 62"],
         ["¿En qué piercings se lleva también un labret?", ["Por ejemplo, Tragus y Conch", "Sobre todo en el Industrial", "Sobre todo en el ombligo", "Sobre todo en el Septum"], "No solo en el Labret.", "S. 62"]
       ]

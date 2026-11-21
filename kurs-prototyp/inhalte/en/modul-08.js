@@ -73,7 +73,7 @@ window.KURS = window.KURS || { module: [] };
         ],
         fragen: [
           ["Where is the Conch placed?", ["In the inner or outer concha", "In the root of the helix", "In the cartilage ridge of the antihelix", "At the ear canal entrance"], "Conch data sheet.", "S. 79"],
-          ["When is a Snug possible?", ["Only if this area of the ear is sufficiently pronounced", "On every ear", "Only for clients without a Helix piercing", "Only with a biopsy punch"], "Snug data sheet.", "S. 82"]
+          ["When is a Snug possible?", ["Only if this area of the ear is sufficiently pronounced", "On every ear; the shape does not matter", "Only for clients without a Helix piercing", "Only with a biopsy punch instead of a cannula"], "Snug data sheet.", "S. 82"]
         ]
       },
       {
@@ -98,7 +98,7 @@ window.KURS = window.KURS || { module: [] };
         ],
         fragen: [
           ["What is the Nostril pierced through?", ["The side of the nose (nasal ala)", "The nasal septum", "The bridge of the nose", "The tip of the nose"], "Nostril data sheet.", "S. 85"],
-          ["Through which tissue is the Septum pierced?", ["The connective tissue below the septal cartilage", "The septal cartilage", "The nasal bone", "The side of the nose"], "Can be stretched for larger jewelry.", "S. 88"]
+          ["Through which tissue is the Septum pierced?", ["The connective tissue below the septal cartilage", "Right through the septal cartilage", "The nasal bone above the cartilage", "The side of the nose, from outside in"], "Can be stretched for larger jewelry.", "S. 88"]
         ]
       },
       {
@@ -138,7 +138,7 @@ window.KURS = window.KURS || { module: [] };
         fragen: [
           ["Why is the lip frenulum piercing also called Smiley?", ["Because it is only visible when smiling", "Because it forms a smile", "Because it goes through the corners of the mouth", "Because it is a labret with a smiley ball"], "Through the frenulum.", "S. 87"],
           ["In which direction is the tongue pierced?", ["From below upwards", "From above downwards", "Sideways from the left", "Diagonally from the front"], "Tongue data sheet.", "S. 90"],
-          ["What does the client use to cool the area after a tongue piercing?", ["Ice cubes, ideally made from chamomile tea", "Cold spray", "Cold milk", "Lidocaine spray"], "Immediately after piercing.", "S. 90"],
+          ["What does the client use to cool the area after a tongue piercing?", ["Ice cubes, ideally made from chamomile tea", "Cold spray directly on the tongue", "Cold milk or yogurt", "Lidocaine spray from the pharmacy"], "Immediately after piercing.", "S. 90"],
           ["When can the barbell in a tongue piercing be shortened?", ["After about 10 days", "After 2 days", "After 3 months", "Never, the length stays the same"], "Initial jewelry 20 mm barbell.", "S. 90"]
         ]
       },

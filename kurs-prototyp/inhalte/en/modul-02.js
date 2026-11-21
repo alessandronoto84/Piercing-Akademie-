@@ -41,7 +41,7 @@ KURS.module.push({
         ["Where is bodily harm regulated in German criminal law?", ["In Chapter 17 of the StGB, §§ 223 to 231", "In the German Civil Code (BGB), §§ 823 ff.", "In the Infection Protection Act", "In the Non-Medical Practitioners Act"], "The basic offense is § 223 StGB.", "S. 1"],
         ["What is the maximum penalty under § 223 StGB?", ["Imprisonment of up to 5 years or a fine", "Imprisonment of up to 10 years", "Imprisonment of up to 2 years or a fine", "Only a fine"], "That is how the course book quotes it.", "S. 2"],
         ["Is the mere attempt at bodily harm punishable?", ["Yes", "No, only the completed act", "Only for dangerous bodily harm", "Only if permanent damage is likely"], "§ 223 (2) StGB.", "S. 2"],
-        ["What is physical abuse?", ["Malicious, inappropriate treatment that impairs well-being or integrity to more than an insignificant degree", "Only an injury that leaves visible marks", "Any touch without consent, even without impairment", "Only an injury that requires medical treatment"], "Definition according to the course book.", "S. 2"],
+        ["What is physical abuse?", ["Malicious, inappropriate treatment that impairs well-being to more than an insignificant degree", "Only an injury that leaves visible marks such as bruises or scars", "Any touch without consent, even if it causes no impairment", "Only an injury that afterwards requires medical treatment"], "Definition according to the course book.", "S. 2"],
         ["What counts as damage to health?", ["Causing or aggravating a pathological condition, even temporarily", "Only permanent damage", "Only harm requiring a hospital stay", "Only a condition that causes pain"], "A temporary condition is also sufficient.", "S. 2"],
         ["Does it matter whether the victim feels pain?", ["No, it is irrelevant", "Yes, no pain means no bodily harm", "Only for damage to health", "Only for minors"], "That is what the course book says.", "S. 2"]
       ]
@@ -56,7 +56,7 @@ KURS.module.push({
         { typ: "praxis", text: "File the signed forms carefully. In a dispute, the paper is your most important proof." }
       ],
       fragen: [
-        ["Why does shaving belong in the consent form?", ["Because unlawfully cutting hair is also bodily harm", "Because shaving is billed separately", "Because the local public health office requires it", "Because shaving increases the risk of infection"], "That is why it is noted that shaving may be carried out.", "S. 2"],
+        ["Why does shaving belong in the consent form?", ["Because unlawfully cutting hair is also bodily harm", "Because shaving is billed to the client separately", "Because the public health office wants every shave in writing", "Because shaving clearly increases the risk of infection"], "That is why it is noted that shaving may be carried out.", "S. 2"],
         ["What can happen if there is no written consent form?", ["Clients, relatives or third parties can claim damages", "Only a warning from the Gesundheitsamt", "The piercing must be redone free of charge", "Nothing, because the piercing is then deemed approved"], "That is why it must always be in writing: only then can consent be proven.", "S. 2"],
         ["Who usually claims damages after a failed piercing?", ["The client, often through a lawyer, or the parents for minors", "Only the Gesundheitsamt", "The Chamber of Industry and Commerce (IHK)", "The health insurer, never the client themselves"], "Lawyers represent the client; they have no claims of their own.", "S. 2"],
         ["Case: You have to shave before a navel piercing. What must be clarified beforehand?", ["Shaving is mentioned in the signed consent form", "The client must allow shaving verbally, that is enough", "Shaving is part of the piercing and needs no mention", "Only the client may do the shaving"], "Unlawfully cutting hair is bodily harm.", "S. 2"]
@@ -72,7 +72,7 @@ KURS.module.push({
       ],
       fragen: [
         ["From what age may clients be pierced without their parents’ consent?", ["From their 18th birthday", "From age 16", "From age 16 for ear piercings", "From age 14 with ID"], "This must be strictly observed.", "S. 2"],
-        ["According to the course book, what applies to clients under 18?", ["The consent of the parents or legal guardians must be obtained", "From 16, their own signature is enough", "A copy of the student ID is enough", "The same applies as for adults"], "See ch. 1.", "S. 2"],
+        ["According to the course book, what applies to clients under 18?", ["The consent of the parents or legal guardians is obtained", "From age 16, the client’s own signature is enough", "A copy of the student ID is enough as proof", "The same rules apply as for adult clients"], "See ch. 1.", "S. 2"],
         ["Who also signs for adults under legal guardianship?", ["The court-appointed legal representative", "An adult family member", "The family doctor", "Nobody, adults sign alone"], "That is what the sample form provides for.", "S. 114"],
         ["Why does the form ask for the ID number?", ["For identification and as proof of age", "For billing the health insurer", "Because the trade office requires it", "To contact the client later"], "Personal details with date of birth and ID number.", "S. 114"],
         ["How old must models be on the Academy’s practice day?", ["Of legal age (18+)", "At least 16 with parental signature", "At least 21", "At least 14 for earlobes"], "Academy rule.", "Akademie"],
@@ -94,11 +94,11 @@ KURS.module.push({
         { typ: "merke", text: "False information can lead to health risks. Health restrictions, chronic illnesses or heavy use of medication can lead to the piercing being refused." }
       ],
       fragen: [
-        ["Which personal details belong in the consent form?", ["Name, address, phone, date of birth and ID number", "Name, e-mail and health insurer", "Name and signature are enough", "Name, occupation and marital status"], "Plus the confirmation of being at least 18.", "S. 114"],
+        ["Which personal details belong in the consent form?", ["Name, address, phone, date of birth and ID number", "Name, e-mail address, health insurer and occupation", "Name and signature; nothing else is needed", "Name, occupation, marital status and employer"], "Plus the confirmation of being at least 18.", "S. 114"],
         ["Which health information does the form ask for?", ["Illnesses, allergies and medication", "Only allergies", "Blood group and vaccination status", "Weight and blood pressure"], "Plus eating, drinking, alcohol and drugs.", "S. 114"],
         ["According to the form, for how long beforehand must no alcohol and no drugs have been taken?", ["At least 2 days", "At least 12 hours", "At least 24 hours", "At least 1 week"], "The sample form is deliberately stricter than the 24-hour rule from module 01: with their signature, the client confirms two days without alcohol and drugs.", "S. 114"],
-        ["Which section is filled in by the studio?", ["Treatment information: type, body area, date, risk information, aftercare instructions", "The information on illnesses and medication", "The client’s personal details", "The section on photo consent"], "“To be filled in by us!”", "S. 114"],
-        ["What can lead to the piercing being refused?", ["Health restrictions, chronic illnesses or heavy use of medication", "The wish for a cartilage piercing", "A known nickel allergy", "A previous piercing in the same spot"], "Such information can put healing at risk. Then you decide whether to pierce and, if in doubt, refuse.", "S. 114"]
+        ["Which section is filled in by the studio?", ["The treatment details: type, body area, date, risk information", "The information on illnesses, allergies and medication", "The client’s personal details with ID number", "The section on voluntary photo consent"], "“To be filled in by us!”", "S. 114"],
+        ["What can lead to the piercing being refused?", ["Health restrictions, chronic illnesses, heavy use of medication", "The wish for a cartilage piercing instead of a lobe", "A known nickel allergy with titanium jewelry", "An earlier, well-healed piercing in the same spot"], "Such information can put healing at risk. Then you decide whether to pierce and, if in doubt, refuse.", "S. 114"]
       ]
     },
     {
@@ -119,10 +119,10 @@ KURS.module.push({
       ],
       fragen: [
         ["Is there a risk of complications even when the piercing is performed properly?", ["Yes", "No, only if the piercer makes mistakes", "Only for intimate piercings", "Only for clients with pre-existing conditions"], "That is why clients are informed about it.", "S. 115"],
-        ["Which complications from the list in the consent form mainly affect oral piercings?", ["Tooth and gum damage, tooth displacement, speech problems", "Permanent loss of taste", "Jaw fracture", "Tonsillitis"], "Also periodontal disease and tooth displacement.", "S. 115"],
+        ["Which complications from the list in the consent form mainly affect oral piercings?", ["Tooth and gum damage, tooth displacement, speech problems", "Permanent loss of taste on the whole tongue", "Jaw fracture caused by pressure from the jewelry", "Tonsillitis and a sore throat"], "Also periodontal disease and tooth displacement.", "S. 115"],
         ["Which of these are possible complications?", ["Hypergranulation, keloid formation and growing out", "Only slight redness in the first few days", "Only allergies to titanium", "Only complications due to aftercare mistakes by the client"], "The list is detailed.", "S. 115"],
         ["What does the client undertake to do by signing?", ["To follow the aftercare instructions", "Not to sue the studio in case of complications", "To come for a check-up after 3 days", "To change the jewelry only at the studio"], "That is what the text of the form says.", "S. 115"],
-        ["What else does the client confirm?", ["That they were informed, had enough time to think and are not under the influence of alcohol, drugs or medication", "That they waive all claims against the studio", "That they guarantee to observe the healing time", "That they will come for a check-up after one week"], "See the consent form.", "S. 115"]
+        ["What else does the client confirm?", ["That they were informed, had time to think and are sober", "That they waive all claims against the studio", "That they guarantee to observe the healing time", "That they will come for a check-up after one week"], "Sober here means: not under the influence of alcohol, drugs or medication. See the consent form.", "S. 115"]
       ]
     },
     {

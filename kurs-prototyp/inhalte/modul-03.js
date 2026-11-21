@@ -169,7 +169,7 @@ KURS.module.push({
       ],
       fragen: [
         ["Welche Gruppen haben ein höheres Risiko für Heilungskomplikationen?", ["Raucher, Alkoholiker und Diabetiker", "Sportler und Menschen mit trockener Haut", "Menschen mit Heuschnupfen", "Menschen unter 25 Jahren"], "Bei ihnen treten Komplikationen schneller auf.", "S. 50"],
-        ["Welche Ursachen für ständiges Nachbluten nennt das Kursbuch?", ["Diabetes, Bindegewebsschwäche oder eine Bluterkrankheit", "Eine Nickelallergie", "Zu kurzer Schmuck", "Die Pflege mit Kochsalzlösung"], "Dann einen Arzt aufsuchen.", "S. 50"],
+        ["Welche Ursachen für ständiges Nachbluten nennt das Kursbuch?", ["Diabetes, Bindegewebsschwäche oder eine Bluterkrankheit", "Eine Nickelallergie oder eine Kontaktallergie", "Zu kurzer Schmuck ohne Überlänge", "Die tägliche Pflege mit Kochsalzlösung"], "Dann einen Arzt aufsuchen.", "S. 50"],
         ["Fall: Ein Kunde gibt Diabetes an. Was ist richtig?", ["Ich kläre ihn über das höhere Heilungsrisiko auf, bevor ich steche", "Ich steche nur mit PTFE, dann gibt es kein Risiko", "Diabetes spielt beim Piercen keine Rolle", "Ich verdopple die Überlänge"], "Diabetiker zählen zu den Risikogruppen.", "S. 50"]
       ]
     }

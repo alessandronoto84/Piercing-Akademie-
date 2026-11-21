@@ -82,7 +82,7 @@ KURS.module.push({
       ],
       fragen: [
         ["What are piercings professionally done with today?", ["With an IV cannula (“Braunüle”)", "With an ear-piercing gun with a disposable cartridge", "With a solid piercing needle without a sheath", "With a biopsy punch for every piercing"], "The needle sits inside a plastic sheath.", "S. 5"],
-        ["What is a “Braunüle”?", ["An IV cannula: a steel needle in a plastic sheath", "A piercing clamp with a window", "A receiving tube", "A sterile disposable syringe"], "That is what the course book calls the cannula.", "S. 5"],
+        ["What is a “Braunüle”?", ["An IV cannula: a steel needle in a plastic sheath", "A piercing clamp with a window for holding tissue", "A receiving tube for Rook and Daith", "A sterile disposable syringe with a steel needle"], "That is what the course book calls the cannula.", "S. 5"],
         ["What happens to the needle after piercing?", ["It is pulled out and immediately disposed of in the sharps container", "It stays in the plastic sheath until the jewelry is in place", "It is put back into its protective cap and disposed of later", "It is disinfected and used for the second piercing"], "Proper disposal in the sharps container.", "S. 5"],
         ["What remains in the piercing channel after piercing?", ["The plastic sheath (the tube)", "The steel needle", "The needle together with the sheath", "The receiving tube"], "The jewelry is inserted into the tube.", "S. 5"],
         ["How do you get the jewelry into the piercing channel?", ["I push it through the tube", "I pull it along behind the tube", "I twist it in without the tube", "I insert it over the steel needle still in place"], "Push, don’t pull.", "S. 5"],
@@ -123,7 +123,7 @@ KURS.module.push({
         { typ: "praxis", text: "If a client comes to you with a gun-pierced earlobe that won’t heal, explain objectively why the method is unsuitable and advise them on aftercare. There is no need to badmouth colleagues; the facts are enough." }
       ],
       fragen: [
-        ["Why does the ear-piercing gun have no place in the studio?", ["Tissue can tear, it cannot be fully sterilized and it spreads germs", "It is expressly prohibited in Germany", "It only works on the earlobe", "It can only be loaded with steel jewelry"], "On top of that, the initial jewelry is unsuitable.", "S. 6"],
+        ["Why does the ear-piercing gun have no place in the studio?", ["Tissue can tear, and it cannot be fully sterilized", "It is expressly prohibited by law in Germany", "It only works on the earlobe, not on cartilage", "It can only be loaded with steel jewelry"], "On top of that, the initial jewelry is unsuitable.", "S. 6"],
         ["What can happen to cartilage when a gun is used?", ["It can shatter", "It can deform and become softer", "It calcifies at the piercing site", "It immediately forms hypergranulation"], "Skin tissue can tear, cartilage can shatter.", "S. 6"],
         ["What happens to germs when the gun is fired?", ["They are spread through the room", "They are killed by the frictional heat", "They stay on the disposable cartridge", "They are sealed in by the ear stud"], "In addition, the gun cannot be fully sterilized.", "S. 6"],
         ["What is true of the initial jewelry used in ear-piercing guns?", ["Depending on the material, it ranges from unsuitable to dangerous", "It always meets the ASTM F136 standard", "It always has 4 mm of extra length", "It is made of PTFE"], "Gun studs are often made of unsuitable material and have no extra length; depending on the material, unsuitable to dangerous.", "S. 6"]
@@ -142,7 +142,7 @@ KURS.module.push({
         ["What should the client avoid for 24 hours before the piercing?", ["Alcohol, drugs, caffeine and blood-thinning agents", "Alcohol and sport; caffeine is allowed", "Only alcohol and drugs", "Solid food and drinks"], "These substances affect circulation and blood clotting.", "S. 6"],
         ["Which of these is a blood thinner?", ["Aspirin (ASA)", "Paracetamol", "Magnesium", "Vitamin C"], "Blood thinners impair clotting.", "S. 6"],
         ["How long before the piercing should the client avoid caffeine?", ["24 hours", "2 hours", "48 hours", "1 week"], "Likewise alcohol, drugs and blood thinners.", "S. 6"],
-        ["Case: A client takes a blood thinner prescribed by his doctor every day. What do you do?", ["He clears the piercing with his doctor first; if in doubt, I don’t pierce", "He stops taking it 24 hours beforehand", "I pierce with a thinner cannula", "I pierce and apply pressure for longer afterwards"], "Never stop prescribed medication on your own.", "Ergänzung"]
+        ["Case: A client takes a blood thinner prescribed by his doctor every day. What do you do?", ["He clears the piercing with his doctor first; if in doubt, I don’t pierce", "He simply stops taking it 24 hours before the appointment", "I pierce with a thinner cannula so it bleeds less", "I pierce as usual and apply pressure a little longer afterwards"], "Never stop prescribed medication on your own.", "Ergänzung"]
       ]
     }
   ],

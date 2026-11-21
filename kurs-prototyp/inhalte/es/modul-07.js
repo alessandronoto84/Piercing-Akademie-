@@ -91,7 +91,7 @@ KURS.module.push({
       ],
       fragen: [
         ["¿Para qué sirve una pinza de piercing?", ["Sujeta la zona para que la piel se mantenga en posición al perforar", "Sujeta la joya mientras se enrosca la bola", "Recibe la cánula en Rook y Daith", "Abre los aros de bola cautiva"], "Hay muchas pinzas para distintos piercings.", "S. 65"],
-        ["¿Para qué usas un tubo receptor?", ["Para zonas como Rook y Daith, donde no cabe una pinza", "Para acortar la cánula", "Para dilatar el canal de la perforación", "Para guardar agujas usadas"], "Protege el tejido circundante.", "S. 68"],
+        ["¿Para qué usas un tubo receptor?", ["Para zonas como Rook y Daith, donde no cabe una pinza", "Para acortar la vaina de plástico tras la perforación", "Para dilatar con cuidado el canal de la perforación", "Para guardar agujas usadas"], "Protege el tejido circundante.", "S. 68"],
         ["¿Dónde se indica qué pinza corresponde a un piercing?", ["En la ficha técnica del piercing", "En el envase de la cánula", "En el plan marco de higiene", "En el formulario de consentimiento"], "Ver módulo 8.", "S. 74–110"]
       ]
     },

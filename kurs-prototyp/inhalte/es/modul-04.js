@@ -32,7 +32,7 @@ KURS.module.push({
       ],
       fragen: [
         ["¿Cómo se llaman los receptores del dolor?", ["Nociceptores", "Mecanorreceptores", "Termorreceptores", "Mastocitos"], "En su mayoría, terminaciones nerviosas libres.", "S. 7–8"],
-        ["¿Qué se necesita para percibir el dolor?", ["Receptores del dolor y una transmisión sin alteraciones al cerebro", "Solo una herida abierta", "Una inflamación en el tejido", "Endorfinas liberadas"], "Nociceptores y sistema nervioso central.", "S. 7"],
+        ["¿Qué se necesita para percibir el dolor?", ["Receptores del dolor y una transmisión sin alteraciones al cerebro", "Solo una herida abierta con sangrado visible", "Una inflamación ya existente en el tejido", "Endorfinas liberadas por el cuerpo"], "Nociceptores y sistema nervioso central.", "S. 7"],
         ["¿Qué tipo de estímulo es un pinchazo?", ["Mecánico", "Térmico", "Químico", "Eléctrico"], "Como los golpes, los cortes y la presión intensa.", "S. 8"],
         ["¿Qué organización aporta la definición de dolor citada?", ["International Association for the Study of Pain (IASP)", "Organización Mundial de la Salud (OMS)", "Instituto Robert Koch (RKI)", "Sociedad Alemana del Dolor"], "La definición de la IASP.", "S. 7"],
         ["¿Puede sentirse dolor sin daño físico?", ["Sí, algunos clientes sienten dolor solo con el contacto", "No, el dolor siempre requiere un daño tisular", "Solo en niños", "Solo después de una anestesia"], "Por ejemplo, como dolor anticipatorio causado por el miedo.", "S. 7"]
@@ -78,7 +78,7 @@ KURS.module.push({
         ["¿Qué fibras nerviosas conducen el dolor rápidamente (unos 20 m/s)?", ["Fibras A-delta", "Fibras C", "Fibras motoras", "Fibras vegetativas"], "Las fibras C conducen hasta unos 2,5 m/s.", "S. 10"],
         ["¿Qué fibras son responsables de la localización imprecisa?", ["Fibras C", "Fibras A-delta", "Fibras motoras", "Las fibras del cordón anterolateral"], "Son lentas y más antiguas.", "S. 10"],
         ["¿Qué desencadena el reflejo en la médula espinal?", ["Un movimiento de huida antes de que el dolor sea consciente", "La valoración consciente del dolor", "Una anestesia local", "La liberación de histamina"], "Como con la placa de cocina caliente.", "S. 10"],
-        ["¿Por qué vía llega la información del dolor al cerebro?", ["Por el cordón anterolateral (tracto espinotalámico)", "Por la vía piramidal", "Por la sangre, como mensajero químico", "Por el nervio óptico"], "Ver cap. 3.2.", "S. 10"],
+        ["¿Por qué vía llega la información del dolor al cerebro?", ["Por el cordón anterolateral (tracto espinotalámico)", "Por la vía piramidal (tracto corticoespinal)", "Por la sangre, como mensajero químico", "Por el nervio óptico (N. opticus)"], "Ver cap. 3.2.", "S. 10"],
         ["¿Dónde se valora emocionalmente el dolor?", ["En el sistema límbico", "En la médula espinal", "Solo en el tálamo", "En el cerebelo"], "Se vuelve consciente en la corteza cerebral.", "S. 10"],
         ["¿Qué es el homúnculo sensitivo?", ["La representación de cada zona de la piel en la corteza sensitiva", "Un arco reflejo de la médula espinal", "Un receptor del dolor de la piel", "Una parte del sistema límbico"], "La localización es un proceso de aprendizaje.", "S. 10"],
         ["¿Dónde se retransmite la información del dolor en su camino a la corteza cerebral?", ["En el tálamo", "En el cerebelo", "En el nociceptor", "En la hipófisis"], "Complemento al libro del curso, ver gráfico.", "Ergänzung"]
@@ -124,7 +124,7 @@ KURS.module.push({
         ["¿Qué espray de frío menciona el libro del curso como ejemplo?", ["Cloruro de etilo", "Lidocaína", "Benzocaína", "Mentol"], "Hoy muchos espráis de frío deportivos contienen otros propelentes; el principio es el mismo frío intenso.", "S. 13"],
         ["¿Dónde se consigue la pomada de lidocaína (Xylocaína)?", ["En la farmacia", "Solo en mayoristas para médicos", "En la droguería", "En tiendas especializadas en piercing"], "La pomada de lidocaína es un medicamento y solo se vende en farmacias.", "S. 13"],
         ["¿Qué postura tiene la Piercing Akademie sobre la pomada de lidocaína?", ["Permitida, pero no recomendada", "Recomendada en todos los piercings de cartílago", "Prohibida", "Obligatoria en piercings íntimos"], "La Academia apuesta por un ambiente tranquilo en lugar de anestesia, porque la lidocaína conlleva efectos secundarios e interacciones.", "Akademie"],
-        ["¿Qué debes hacer antes de usar lidocaína?", ["Preguntar al cliente por escrito y oralmente sobre la tolerancia", "Solo esperar el tiempo de actuación", "Enfriar antes la zona con espray de frío", "Llamar al médico de cabecera del cliente"], "Además, ten en cuenta efectos secundarios e interacciones.", "S. 13"]
+        ["¿Qué debes hacer antes de usar lidocaína?", ["Preguntar al cliente por escrito y oralmente sobre la tolerancia", "Solo esperar el tiempo de actuación; no hace falta más", "Enfriar además la zona antes con espray de frío", "Llamar antes al médico de cabecera del cliente"], "Además, ten en cuenta efectos secundarios e interacciones.", "S. 13"]
       ]
     },
     {
@@ -140,7 +140,7 @@ KURS.module.push({
         ] }
       ],
       fragen: [
-        ["¿Qué efectos secundarios aparecen con una sobredosis moderada?", ["Hormigueo, entumecimiento, sabor metálico, mareo, zumbido en los oídos", "Erupción cutánea en todo el cuerpo", "Tensión arterial alta y taquicardia", "Cansancio intenso durante varios días"], "Con una sobredosis grave, efectos sobre el cerebro y la circulación.", "S. 14"],
+        ["¿Qué efectos secundarios aparecen con una sobredosis moderada?", ["Hormigueo, entumecimiento, sabor metálico, mareo", "Erupción cutánea con picor en todo el cuerpo", "Tensión alta, taquicardia y dolor de cabeza", "Cansancio intenso durante varios días"], "Además, zumbido en los oídos. Con una sobredosis grave, efectos sobre el cerebro y la circulación.", "S. 14"],
         ["¿Qué puede provocar ocasionalmente la lidocaína en las mucosas?", ["Hinchazón en la zona de la faringe y la laringe", "Una decoloración de la mucosa", "Un sangrado", "Una alergia al níquel"], "Muy rara vez, ronquera.", "S. 14"],
         ["¿Qué provoca una sobredosis grave?", ["Efectos sobre la actividad cerebral y la circulación", "Solo un ligero hormigueo", "Una anestesia más larga sin riesgo", "Una cicatrización más rápida"], "Por eso hay que dosificar con exactitud.", "S. 14"],
         ["¿Qué reacción es posible, aunque rara, al aplicarla sobre la piel?", ["Reacciones de hipersensibilidad", "Zumbido en los oídos", "Hinchazón de la laringe", "Aumento de la temperatura"], "En casos poco frecuentes.", "S. 14"]
@@ -160,7 +160,7 @@ KURS.module.push({
         { typ: "praxis", text: "No tienes que saberte esta lista de memoria. Pero sí tienes que saber que existe y, con cada cliente que indique que toma medicamentos, renunciar a la lidocaína si no puedes aclarar con seguridad la tolerancia." }
       ],
       fragen: [
-        ["¿Con qué medicamentos puede interactuar peligrosamente la lidocaína?", ["Con fármacos que influyen en el ritmo cardíaco, p. ej. betabloqueantes", "Con antibióticos como la penicilina", "Con suplementos vitamínicos", "Con la píldora anticonceptiva"], "Sobre todo al aplicarla en la boca.", "S. 14"],
+        ["¿Con qué medicamentos puede interactuar peligrosamente la lidocaína?", ["Con fármacos para el ritmo cardíaco, p. ej. betabloqueantes", "Con antibióticos como la penicilina o la amoxicilina", "Con suplementos de vitaminas y minerales", "Con la píldora anticonceptiva y otras hormonas"], "Sobre todo al aplicarla en la boca.", "S. 14"],
         ["¿Qué puede provocar la lidocaína junto con alcaloides del cornezuelo o epinefrina?", ["Una bajada peligrosa de la tensión arterial", "Una anestesia más intensa sin riesgo", "Una reacción alérgica en la piel", "Una alergia al níquel"], "Así lo advierte el libro del curso.", "S. 14"],
         ["¿Qué efecto tienen los antiepilépticos sobre la lidocaína?", ["Reducen el efecto", "Potencian mucho el efecto", "Solo potencian los efectos secundarios", "No influyen"], "En cambio, los relajantes musculares se potencian.", "S. 14"],
         ["¿Qué provocan los sedantes (benzodiacepinas) junto con la lidocaína?", ["Potencian los efectos secundarios", "Reducen el efecto", "Anulan la anestesia", "No influyen"], "Igual que la aprindina.", "S. 14"],

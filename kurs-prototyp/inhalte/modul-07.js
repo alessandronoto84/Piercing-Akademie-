@@ -91,7 +91,7 @@ KURS.module.push({
       ],
       fragen: [
         ["Wozu dient eine Piercing-Zange bzw. Klemme?", ["Sie hält die Stelle, damit die Haut beim Stechen in Position bleibt", "Sie hält den Schmuck beim Aufdrehen der Kugel", "Sie fängt die Kanüle bei Rook und Daith auf", "Sie spreizt Klemmkugelringe"], "Es gibt viele Zangen für verschiedene Piercings.", "S. 65"],
-        ["Wofür nutzt du ein Nadelauffangrohr?", ["Für Stellen wie Rook und Daith, an denen keine Zange passt", "Zum Kürzen der Kanüle", "Zum Dehnen des Stichkanals", "Zum Aufbewahren benutzter Nadeln"], "Es schützt das umliegende Gewebe.", "S. 68"],
+        ["Wofür nutzt du ein Nadelauffangrohr?", ["Für Stellen wie Rook und Daith, an denen keine Zange passt", "Zum Kürzen des Kunststoffüberzugs nach dem Stich", "Zum vorsichtigen Dehnen des Stichkanals", "Zum Aufbewahren benutzter Nadeln"], "Es schützt das umliegende Gewebe.", "S. 68"],
         ["Wo steht, welche Klemme zu einem Piercing passt?", ["Im Datenblatt des Piercings", "Auf der Verpackung der Kanüle", "Im Rahmenhygieneplan", "In der Einverständniserklärung"], "Siehe Modul 8.", "S. 74–110"]
       ]
     },

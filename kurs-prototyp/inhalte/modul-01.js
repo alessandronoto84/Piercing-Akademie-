@@ -82,7 +82,7 @@ KURS.module.push({
       ],
       fragen: [
         ["Womit werden Piercings heute professionell gestochen?", ["Mit einer Venenverweilkanüle (Braunüle)", "Mit einer Ohrlochpistole mit Einweg-Kartusche", "Mit einer massiven Piercingnadel ohne Überzug", "Mit einer Biopsiestanze bei jedem Piercing"], "Die Nadel steckt in einem Kunststoffüberzug.", "S. 5"],
-        ["Was ist eine Braunüle?", ["Eine Venenverweilkanüle: Stahlnadel im Kunststoffüberzug", "Eine Piercingzange mit Fenster", "Ein Nadelauffangrohr", "Eine sterile Einweg-Spritze"], "So nennt das Kursbuch die Kanüle.", "S. 5"],
+        ["Was ist eine Braunüle?", ["Eine Venenverweilkanüle: Stahlnadel im Kunststoffüberzug", "Eine Piercingzange mit Fenster zum Fixieren", "Ein Nadelauffangrohr für Rook und Daith", "Eine sterile Einwegspritze mit Stahlnadel"], "So nennt das Kursbuch die Kanüle.", "S. 5"],
         ["Was passiert mit der Nadel nach dem Stich?", ["Sie wird herausgezogen und sofort im Nadelabwurfbehälter entsorgt", "Sie bleibt im Kunststoffüberzug, bis der Schmuck sitzt", "Sie wird in die Schutzkappe gesteckt und später entsorgt", "Sie wird desinfiziert und für den Zweitstich verwendet"], "Fachgerechte Entsorgung im Nadelauffangbehälter.", "S. 5"],
         ["Was bleibt nach dem Stich im Stichkanal?", ["Der Kunststoffüberzug (das Röhrchen)", "Die Stahlnadel", "Die Nadel samt Überzug", "Das Nadelauffangrohr"], "In das Röhrchen wird der Schmuck eingeführt.", "S. 5"],
         ["Wie bringst du den Schmuck in den Stichkanal?", ["Ich schiebe ihn durch das Röhrchen", "Ich ziehe ihn am Röhrchen hinterher", "Ich drehe ihn ohne Röhrchen hinein", "Ich führe ihn über die liegende Stahlnadel ein"], "Schieben, nicht ziehen.", "S. 5"],
@@ -123,7 +123,7 @@ KURS.module.push({
         { typ: "praxis", text: "Kommt ein Kunde mit einem geschossenen Ohrloch, das nicht heilt, erklärst du ihm sachlich, warum die Methode ungeeignet ist, und berätst ihn zur Pflege. Schlechtreden von Kollegen ist dabei nicht nötig, die Fakten reichen." }
       ],
       fragen: [
-        ["Warum gehört die Ohrlochpistole nicht ins Studio?", ["Gewebe kann einreißen, sie ist nicht vollständig sterilisierbar und verteilt Keime", "Sie ist in Deutschland ausdrücklich verboten", "Sie funktioniert nur am Ohrläppchen", "Sie lässt sich nur mit Stahlschmuck laden"], "Dazu kommen ungeeignete Ersteinsätze.", "S. 6"],
+        ["Warum gehört die Ohrlochpistole nicht ins Studio?", ["Gewebe kann einreißen, und sie ist nicht vollständig sterilisierbar", "Sie ist in Deutschland ausdrücklich gesetzlich verboten", "Sie funktioniert nur am Ohrläppchen, nicht am Knorpel", "Sie lässt sich nur mit Schmuck aus Stahl laden"], "Dazu kommen ungeeignete Ersteinsätze.", "S. 6"],
         ["Was kann mit Knorpel beim Schießen passieren?", ["Er kann splittern", "Er kann sich verformen und weicher werden", "Er verkalkt an der Stichstelle", "Er bildet sofort wildes Fleisch"], "Hautgewebe kann einreißen, Knorpel splittern.", "S. 6"],
         ["Was passiert mit Keimen beim Schießen mit der Pistole?", ["Sie fliegen durch den Raum", "Sie werden durch die Reibungswärme abgetötet", "Sie bleiben auf der Einweg-Kartusche", "Sie werden durch den Ohrstecker abgedichtet"], "Die Pistole ist zudem nicht vollständig sterilisierbar.", "S. 6"],
         ["Was gilt für die Ersteinsätze der Ohrlochpistole?", ["Sie sind je nach Material ungeeignet bis gefährlich", "Sie entsprechen immer der Norm ASTM F136", "Sie haben immer 4 mm Überlänge", "Sie sind aus PTFE"], "Pistolen-Stecker sind oft aus ungeeignetem Material und ohne Überlänge; je nach Material ungeeignet bis gefährlich.", "S. 6"]
@@ -142,7 +142,7 @@ KURS.module.push({
         ["Was soll der Kunde 24 Stunden vor dem Piercen meiden?", ["Alkohol, Drogen, Koffein und blutverdünnende Mittel", "Alkohol und Sport, Koffein ist erlaubt", "Nur Alkohol und Drogen", "Feste Nahrung und Getränke"], "Diese Mittel beeinflussen Kreislauf und Blutgerinnung.", "S. 6"],
         ["Welches Mittel zählt zu den Blutverdünnern?", ["Aspirin (ASS)", "Paracetamol", "Magnesium", "Vitamin C"], "Blutverdünner beeinträchtigen die Gerinnung.", "S. 6"],
         ["Wie lange vor dem Piercen soll der Kunde auf Koffein verzichten?", ["24 Stunden", "2 Stunden", "48 Stunden", "1 Woche"], "Ebenso auf Alkohol, Drogen und Blutverdünner.", "S. 6"],
-        ["Fall: Ein Kunde nimmt täglich ein vom Arzt verordnetes Blutverdünnungsmittel. Was tust du?", ["Er klärt das Piercing vorher mit seinem Arzt; im Zweifel steche ich nicht", "Er setzt das Mittel 24 Stunden vorher ab", "Ich steche mit einer dünneren Kanüle", "Ich steche und drücke danach länger ab"], "Verordnete Medikamente nie eigenmächtig absetzen.", "Ergänzung"]
+        ["Fall: Ein Kunde nimmt täglich ein vom Arzt verordnetes Blutverdünnungsmittel. Was tust du?", ["Er klärt das Piercing vorher mit seinem Arzt; im Zweifel steche ich nicht", "Er setzt das Mittel einfach 24 Stunden vor dem Termin ab", "Ich steche mit einer dünneren Kanüle, dann blutet es weniger", "Ich steche wie immer und drücke danach etwas länger ab"], "Verordnete Medikamente nie eigenmächtig absetzen.", "Ergänzung"]
       ]
     }
   ],

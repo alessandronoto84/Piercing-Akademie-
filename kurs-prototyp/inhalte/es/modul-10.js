@@ -69,7 +69,7 @@ KURS.module.push({
         ] }
       ],
       fragen: [
-        ["¿Qué puede causar un sangrado posterior persistente?", ["Diabetes, debilidad del tejido conjuntivo o un trastorno de la coagulación", "Una alergia al níquel", "El cuidado con solución salina", "Demasiada longitud extra"], "En ese caso, acudir a un médico.", "S. 50"],
+        ["¿Qué puede causar un sangrado posterior persistente?", ["Diabetes, debilidad del tejido conjuntivo o un trastorno de la coagulación", "Una alergia al níquel o de contacto", "El cuidado diario con solución salina", "Demasiada longitud extra en la joya inicial"], "En ese caso, acudir a un médico.", "S. 50"],
         ["¿Qué ocurre en la epitelización?", ["Las células migran desde el borde de la herida y la herida se hace más pequeña", "El tejido de granulación prolifera fuera del canal", "El cartílago se regenera", "Comienza la fase inflamatoria"], "Fase de regeneración.", "S. 50"]
       ]
     },
@@ -119,7 +119,7 @@ KURS.module.push({
       ],
       fragen: [
         ["¿Qué es la pericondritis?", ["Una inflamación del pericondrio, normalmente en el pabellón auricular", "Una alergia al níquel en el cartílago", "Hipergranulación en un piercing de cartílago", "Una inflamación del lóbulo de la oreja"], "La complicación más peligrosa de los piercings de cartílago.", "Ergänzung"],
-        ["¿Qué parte de la oreja suele quedar respetada en una pericondritis?", ["El lóbulo, porque no contiene cartílago", "El helix", "El tragus", "El conch"], "Signo típico para reconocerla.", "Ergänzung"],
+        ["¿Qué parte de la oreja suele quedar respetada en una pericondritis?", ["El lóbulo, porque no contiene cartílago", "El helix, porque está bien irrigado", "El tragus, porque está delante del conducto auditivo", "El conch, porque está protegido en el centro"], "Signo típico para reconocerla.", "Ergänzung"],
         ["¿Qué patógeno causa con más frecuencia una pericondritis tras un piercing en la oreja?", ["Pseudomonas aeruginosa", "Staphylococcus epidermidis de la flora cutánea", "Candida albicans", "Virus del herpes"], "Vive en entornos húmedos.", "Ergänzung"],
         ["¿Qué haces ante la sospecha de una pericondritis?", ["Enviar al cliente de inmediato al médico", "Tratarla con Tyrosur y esperar una semana", "Quitar la joya tú mismo", "Recomendar frío y solución salina"], "Preferiblemente al otorrinolaringólogo.", "Ergänzung"],
         ["¿Qué riesgo hay si una pericondritis no se trata?", ["Una deformación permanente (oreja en coliflor)", "Solo una cicatriz en el canal de la perforación", "Que la joya sea expulsada", "Una alergia al níquel"], "El cartílago puede destruirse.", "Ergänzung"],
@@ -140,9 +140,9 @@ KURS.module.push({
         ] }
       ],
       fragen: [
-        ["¿Qué causa la hipergranulación?", ["Una irritación continua de la herida, por ejemplo por presión o roce", "Una alergia al níquel", "Pseudomonas", "Demasiada longitud extra"], "Masa roja con aspecto de carne.", "S. 51"],
+        ["¿Qué causa la hipergranulación?", ["Una irritación continua de la herida, p. ej. presión o roce", "Una alergia al níquel de la joya inicial", "Una infección por Pseudomonas", "Demasiada longitud extra en la joya"], "Masa roja con aspecto de carne.", "S. 51"],
         ["¿Cuál es la primera vía ante la hipergranulación?", ["No hacer nada; a menudo el cuerpo la elimina", "Tratarla de inmediato con el disco para hipergranulación", "Enviar al cliente al dermatólogo", "Quitar la joya"], "Vía 1 de 5.", "S. 51"],
-        ["¿Qué es un disco para hipergranulación?", ["Un disco de plástico que se coloca sobre la joya", "Un apósito con iones de plata", "Una pomada", "Una bola especial de titanio"], "Vía 3 de 5.", "S. 51"],
+        ["¿Qué es un disco para hipergranulación?", ["Un disco de plástico que se coloca sobre la joya", "Un apósito con iones de plata para la herida", "Una pomada contra el tejido de granulación", "Una bola plana especial de titanio"], "Vía 3 de 5.", "S. 51"],
         ["¿Qué cambio de joya puede ayudar?", ["Por ejemplo, sustituir un labret de titanio por un barbell de PTFE", "Una barra más corta sin longitud extra", "Un aro de acero más pesado", "Una joya más fina con rosca externa"], "Vía 4 de 5.", "S. 51"],
         ["¿Quién extirpa la hipergranulación si nada ayuda?", ["Un médico o dermatólogo, quirúrgicamente", "El piercer con tijeras estériles", "El cliente con agua oxigenada", "El propio cliente con unas pinzas"], "Vía 5 de 5.", "S. 51"]
       ]

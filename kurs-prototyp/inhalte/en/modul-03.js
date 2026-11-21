@@ -169,7 +169,7 @@ KURS.module.push({
       ],
       fragen: [
         ["Which groups have a higher risk of healing complications?", ["Smokers, alcoholics and diabetics", "Athletes and people with dry skin", "People with hay fever", "People under 25"], "They are more prone to complications.", "S. 50"],
-        ["Which causes of constant re-bleeding does the course book name?", ["Diabetes, connective tissue weakness or a bleeding disorder", "A nickel allergy", "Jewelry that is too short", "Aftercare with saline solution"], "Then see a doctor.", "S. 50"],
+        ["Which causes of constant re-bleeding does the course book name?", ["Diabetes, connective tissue weakness or a bleeding disorder", "A nickel allergy or a contact allergy", "Jewelry that is too short, without extra length", "Daily aftercare with saline solution"], "Then see a doctor.", "S. 50"],
         ["Case: A client states that he has diabetes. What is correct?", ["I inform him about the higher healing risk before I pierce", "I only pierce with PTFE, then there is no risk", "Diabetes is irrelevant to piercing", "I double the extra length"], "Diabetics are one of the risk groups.", "S. 50"]
       ]
     }
