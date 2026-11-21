@@ -1,7 +1,32 @@
 # Prüfbericht Online-Kurs „Fahrschule“ (Piercing Akademie)
 
 Stand der Prüfung: 21.11.2026. Geprüft wurden alle 11 Module (103 Lektionen), 575 Fragen (davon die automatisch erzeugten aus `fragen-generiert.js`), Praxislabor, Materialliste, Glossar, Checklisten, die PDF-Vorlagen sowie EN/ES (Struktur und Zahlen vollständig maschinell verglichen, Texte stichprobenartig je Modul, alle UI-Schlüssel). Alle 72 Bilder bzw. die in Lektionen eingebundenen Fotos, Grafiken, Clips und Titelbilder wurden im Browser (Playwright, 1100 px und 390 px) angesehen.
-Im Repository wurde nichts geändert.
+Im Repository wurde bei der Prüfung nichts geändert; die Korrekturen folgten danach (siehe Bearbeitungsstand).
+
+## Bearbeitungsstand (21.11.2026)
+
+Alle Korrekturen dreisprachig (DE/EN/ES, Struktur deckungsgleich: 11 Module, 103 Lektionen, Fragen und Antworten je Frage gleich; Antwort 0 bleibt die richtige). Bewusste Abweichungen vom Kursbuch sind im Kurs als „Ergänzung der Akademie“ bzw. „laut Kursbuch“ gekennzeichnet und in KURS-RECHERCHE.md (Abschnitte 7 und 15) nachgetragen.
+
+| Punkt | Stand |
+|---|---|
+| K1 | erledigt: einheitlich „steril ist alles, was Haut, Stichkanal, Überzug, Kugel oder Ersteinsatz berührt“ (Modul 5 Liste S. 16 mit Ergänzung, Lektion S. 35, Modul 7 „Steril oder nur sauber?“), Fragen 5:30, 5:308/310, 7:152–153, Praxislabor „werkzeug-sortieren“; Buchsatz als „laut Kursbuch“ |
+| K2 | erledigt: Kanülen nie aufbereiten; „nach jeder Behandlung aufbereiten, steril verpackt lagern“ |
+| K3 | erledigt: Buchnummerierung 1–26 bleibt, Unterschritte 7a, 8a, 9a, 13a als Ergänzung der Akademie (neue Darstellung in kurs.js), Achtung-Box in 9-2, zwei neue Fragen; Generator nimmt die Unterschritte in die Reihenfolgefragen auf; Praxislabor „ablauf“, Lobe-Stich, Glossar Kodan, Übungsvorlage-PDF angepasst |
+| K4 | erledigt: Achtung-Box „abbrechen, hinlegen, Beine hoch, erst dann Traubenzucker; 112“, Buchinhalt als „laut Kursbuch“ |
+| K5 | erledigt laut Entscheidung: Clips `anatomie-modelle`, `schmuck-titan`, `studio-raum` aus den Lektionen genommen (Dateien bleiben); `autoklav`, `instrumente` bleiben. Titelbild Modul 3 = lizenzfreie 3D-Hautdarstellung (mit Bildnachweis im Modulkopf), Modul 8 = Datenblattfoto Industrial (Kursbuch S. 84) |
+| K6, K7, K8 | offen (Entscheidung des Betreibers ausstehend, bewusst nicht geändert) |
+| F1–F5, F7–F14, F16–F22, F24, F25, F27, F28 | erledigt (F6: Verweis auf Modul 11 gestrichen, BG „vor dem Start klären“; F10: im Datenblatt genannte Stärken nie als Ablenker, triviale Labret-Frage und Intim-Frage mit nur 3 Antworten entfallen; F11: Hinweis nur bei Pool > 20 Fragen; F12: Quellen „Ergänzung“, „Akademie“, „Modul 2 und 8“ übersetzt; F13 + V12: PDFs neu erzeugt; F14: Materialliste und Übungsset ergänzt, CLIPS-PRAXISLABOR.md nachgetragen; F27: „in Lederhaut und Unterhaut“) |
+| F15 | offen: KURS-RECHERCHE.md beschreibt die Eskimo-Lage nicht; ohne Buchabgleich nicht eindeutig zu korrigieren |
+| F23 | offen (Entscheidung des Betreibers) |
+| F26 | offen: Welche Seite gekürzt und angesetzt wird, hängt mit K6 (Schmuck im Überzug) zusammen; ohne Klärung der Akademie-Technik nicht eindeutig |
+| B1 | siehe K5 |
+| B2, B3, B4, B5, B7, B8, B11 | erledigt (B3: Marker 4 an die Helixwurzel; B4: Nr. 4 an der Arterie, Speichelgang endet am Kaumuskel) |
+| B6, B10, B12 | offen bzw. nicht beauftragt (B10 siehe F15, B12 laut Betreiber unverändert) |
+| B9 | unverändert: Bildunterschrift nicht nötig, das Datenblatt nennt die 3 mm; ein anderes Foto liegt nicht vor |
+| S1–S7, S9, S10 | erledigt (S3 teilweise: „Nadelauffangbehälter“ und „Kunststoffkanüle“ ersetzt; „Einmalstift“ im Buchschritt 9 belassen) |
+| S8 | offen: „Gazeklemme“ ist als Fachbegriff nicht eindeutig zuzuordnen (Foerster/Pennington?); Abgleich mit Händlerbezeichnungen nötig |
+| V5, V7, V8, V9, V11, V12, V13, V14, V19 | erledigt (V7: alle 43 deutschen Treffer angeglichen, generierte Ablauffragen mit Kurzantworten; in EN/ES gibt es sprachbedingt noch etwa 9 bzw. 11 einzelne Fragen mit auffällig langer richtiger Antwort) |
+| V1–V4, V6, V10, V15–V18, V20 | offen (laut Betreiber vorerst unverändert) |
 
 Dateipfade sind relativ zu `kurs-prototyp/`. Zeilennummern beziehen sich auf den aktuellen Stand der Dateien. Punkte mit **(prüfen)** sind begründete Zweifel, keine gesicherten Fehler.
 
