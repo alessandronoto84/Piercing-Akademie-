@@ -49,14 +49,17 @@ window.KURS = window.KURS || { module: [] };
     return [286, 354].map(function (x) { return '<circle cx="' + x + '" cy="' + Y + '" r="8" fill="#FFFFFF" opacity=".8"/><circle cx="' + x + '" cy="' + Y + '" r="5" fill="' + F.mark + '"/>'; }).join("");
   }
   function klemme() {
-    // Klemme mit Fenster: zwei Stahlbacken mit Ringfenster am Stichkanal, Griffe laufen unten zum Gelenk zusammen
-    function backe(x, r) {
-      return '<path d="M' + (x - 7) + ' 108 L' + (x + 7) + ' 108 L' + (x + 7) + ' ' + (Y - 20) + ' A20 20 0 0 1 ' + (x + 7) + ' ' + (Y + 20) + ' L' + (x + 7) + ' 238 L' + (x - 7) + ' 238 L' + (x - 7) + ' ' + (Y + 20) + ' A20 20 0 0 1 ' + (x - 7) + ' ' + (Y - 20) + ' Z" fill="url(#aStahlV)" stroke="#6F7984" stroke-width="1.2"/>' +
-        '<circle cx="' + x + '" cy="' + Y + '" r="13" fill="none" stroke="#6F7984" stroke-width="1.2"/>' +
-        '<path d="M' + x + ' 238 Q' + (x + r * 26) + ' 268 ' + (320 + r * 6) + ' 300" fill="none" stroke="url(#aStahlV)" stroke-width="9" stroke-linecap="round"/>';
+    // Snaptile: flache Edelstahlzunge, U-förmig gebogen; die beiden Blätter liegen vorn und hinten am Ohrläppchen,
+    // jedes mit einem Loch genau auf der Markierung. Unten federt der Bogen.
+    function blatt(x) {
+      return '<path d="M' + (x - 5) + ' 96 Q' + (x - 5) + ' 88 ' + x + ' 88 Q' + (x + 5) + ' 88 ' + (x + 5) + ' 96 L' + (x + 5) + ' ' + (Y - 9) + ' L' + (x - 5) + ' ' + (Y - 9) + ' Z" fill="url(#aStahlV)" stroke="#6F7984" stroke-width="1"/>' +
+        '<path d="M' + (x - 5) + ' ' + (Y + 9) + ' L' + (x + 5) + ' ' + (Y + 9) + ' L' + (x + 5) + ' 286 L' + (x - 5) + ' 286 Z" fill="url(#aStahlV)" stroke="#6F7984" stroke-width="1"/>' +
+        '<ellipse cx="' + x + '" cy="' + Y + '" rx="7" ry="11" fill="none" stroke="#6F7984" stroke-width="1.5"/>';
     }
-    return '<g class="a-klemme" filter="url(#aSchatten)">' + backe(272, 1) + backe(368, -1) +
-      '<circle cx="320" cy="300" r="7" fill="url(#aKugel)" stroke="#6F7984"/></g>';
+    return '<g class="a-klemme" filter="url(#aSchatten)">' + blatt(276) + blatt(364) +
+      '<path d="M276 286 C276 336 364 336 364 286" fill="none" stroke="#6F7984" stroke-width="12" stroke-linecap="butt"/>' +
+      '<path d="M276 286 C276 336 364 336 364 286" fill="none" stroke="url(#aStahl)" stroke-width="9"/>' +
+      '<text x="420" y="300" class="a-klein" fill="#5A4632">Snaptile</text></g>';
   }
   function kanuele(x, mitNadel, ueberzugLinks, ueberzugRechts) {
     // Venenverweilkanüle 18G: Stahlnadel im durchscheinenden Kunststoffüberzug, grüner Ansatz mit Flügeln; x = Nadelspitze
@@ -164,13 +167,13 @@ window.KURS = window.KURS || { module: [] };
   };
 
   var lobe = [
-    { text: { de: "Ein- und Austrittsstelle sind markiert und desinfiziert. Die Klemme mit Fenster wird so angelegt, dass die Markierung im Fenster liegt.",
-        en: "Entry and exit points are marked and disinfected. The clamp with a window is placed so that the mark sits inside the window.",
-        es: "Los puntos de entrada y salida están marcados y desinfectados. La pinza con ventana se coloca de modo que la marca quede dentro de la ventana." },
+    { text: { de: "Ein- und Austrittsstelle sind markiert und desinfiziert. Das Snaptile wird angelegt: Die Markierungen liegen genau in seinen beiden Löchern.",
+        en: "Entry and exit points are marked and disinfected. The Snaptile is put on so that the marks sit exactly in its two holes.",
+        es: "Los puntos de entrada y salida están marcados y desinfectados. Se coloca el Snaptile de modo que las marcas queden justo en sus dos orificios." },
       svg: bild(lappen(false) + markierung() + bewegt(-60, 0, klemme())) },
-    { text: { de: "Gestochen wird von vorn, von der sichtbaren Seite aus: ein zügiger, gerader Stich durch beide Markierungen.",
-        en: "You pierce from the front, from the visible side: one swift, straight motion through both marks.",
-        es: "Se perfora desde delante, desde el lado visible: un movimiento rápido y recto a través de ambas marcas." },
+    { text: { de: "Gestochen wird von vorn, von der sichtbaren Seite aus: ein zügiger, gerader Stich durch die Löcher des Snaptiles und beide Markierungen.",
+        en: "You pierce from the front, from the visible side: one swift, straight motion through the Snaptile holes and both marks.",
+        es: "Se perfora desde delante, desde el lado visible: un movimiento rápido y recto a través de los orificios del Snaptile y de ambas marcas." },
       svg: bild(lappen(false) + markierung() + klemme() + bewegt(-150, 0, kanuele(390, true)) + pfeil(200, 260, 140)) },
     { text: { de: "Die Stahlnadel wird nach vorn herausgezogen. Das transparente Kunststoffröhrchen bleibt im Stichkanal.",
         en: "The steel needle is pulled out towards the front. The clear plastic tube stays in the channel.",
