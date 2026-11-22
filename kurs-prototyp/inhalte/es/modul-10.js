@@ -83,7 +83,7 @@ KURS.module.push({
           "El pus debe poder drenar; de lo contrario, existe riesgo de septicemia.",
           "Limpiar a diario.",
           "Según el libro del curso, la manzanilla, el aceite de árbol de té o la miel de manuka pueden ayudar (el aceite de árbol de té, solo diluido: puede provocar alergias de contacto).",
-          "La pomada «Tyrosur» de la farmacia puede ayudar mucho; recomiéndale al cliente que la compre."
+          "La pomada «Tyrosur» de la farmacia puede ayudar mucho; recomiéndale al cliente que la compre. Si en unos días no mejora, envíalo al médico."
         ] },
         { typ: "ergaenzung", text: "Si hay fiebre, enrojecimiento que se extiende o dolor intenso o creciente, envía al cliente de inmediato al médico." },
         { typ: "merke", text: "Los fumadores, las personas con un consumo elevado de alcohol y los diabéticos pertenecen a los grupos de riesgo; en ellos las complicaciones aparecen antes." }
@@ -91,7 +91,7 @@ KURS.module.push({
       fragen: [
         ["¿Cuál suele ser la causa de una inflamación?", ["Gérmenes o sustancias extrañas en la herida", "Demasiada longitud extra", "La solución salina", "Una joya inicial de PTFE"], "Por ejemplo, del pelo.", "S. 50"],
         ["¿Qué riesgo hay si el pus no puede drenar?", ["Una septicemia", "Una alergia al níquel", "Hipergranulación", "Una cicatrización más rápida"], "El pus debe poder drenar.", "S. 50"],
-        ["¿Qué pomada de farmacia menciona el libro del curso?", ["Tyrosur", "Bepanthen", "Betaisodona", "Fucidine"], "Recomiéndale al cliente que la compre.", "S. 50"],
+        ["¿Qué pomada de farmacia menciona el libro del curso?", ["Tyrosur", "Bepanthen", "Betaisodona", "Fucidine"], "Recomiéndale al cliente que la compre; si no mejora, al médico.", "S. 50"],
         ["¿Qué remedios caseros menciona el libro del curso para inflamaciones leves?", ["Manzanilla, aceite de árbol de té diluido o miel de manuka", "Pasta de dientes y zumo de limón", "Aceite de árbol de té sin diluir y alcohol", "Lavavajillas y agua caliente"], "Remedios caseros según el libro del curso, sin pruebas independientes. Lo importante es limpiar a diario. Si hay fiebre o enrojecimiento que se extiende, el cliente va al médico.", "S. 50"],
         ["Caso: un cliente llama; el piercing está muy enrojecido y tiene fiebre. ¿Qué haces?", ["Lo envío de inmediato al médico", "Le recomiendo aceite de árbol de té y esperar 3 días", "Cambio la joya por una de PTFE", "Le recomiendo Tyrosur y reposo"], "La fiebre indica que la inflamación se está extendiendo por el cuerpo. Esto debe ponerse de inmediato en manos de un médico, no tratarse con el botiquín de casa.", "Ergänzung"]
       ]

@@ -36,7 +36,7 @@ KURS.glossar = [
   ["Kodan", "Antiséptico cutáneo: con él desinfectas la zona después de marcar (paso 9a, añadido por la Academia) y vuelves a rociar tras colocar la joya.", 9],
   ["Lesión corporal (Körperverletzung)", "Jurídicamente, todo piercing es una lesión corporal deseada (§ 223 StGB, Código Penal alemán), permitida solo con consentimiento.", 2],
   ["Labret stud", "Pieza con una placa en un lado y una rosca para una bola en el otro.", 6],
-  ["Pomada de lidocaína (Xylocaína)", "Anestésico local de farmacia, según el preparado sin receta o con receta; según la Academia, permitido pero no recomendado.", 4],
+  ["Pomada de lidocaína (Xylocaína)", "Anestésico local sin receta de farmacia (p. ej. crema EMLA); permitido para uso externo, aunque la Academia no lo recomienda.", 4],
   ["N. facialis", "Nervio facial; sale del cráneo por debajo de la oreja, controla la mímica y se ramifica delante de la oreja en ramas hacia la frente, la mejilla, la boca y el mentón.", 3],
   ["N. supraorbitalis", "Nervio supraorbitario, nervio sensitivo de la frente; sale del hueso aproximadamente en el límite entre el tercio interno y el tercio medio de la ceja (más o menos por encima de la pupila).", 3],
   ["Contenedor para objetos punzantes", "Recipiente con cierre en el que se depositan de inmediato las agujas usadas.", 5],

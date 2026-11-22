@@ -83,7 +83,7 @@ KURS.module.push({
           "Pus must be able to drain, otherwise there is a risk of blood poisoning.",
           "Clean daily.",
           "According to the course book, chamomile, tea tree oil or manuka honey can help (tea tree oil only diluted: it can trigger contact allergies).",
-          "The ointment “Tyrosur” from the pharmacy can help a lot; encourage the client to buy it."
+          "The ointment “Tyrosur” from the pharmacy can help a lot; encourage the client to buy it. If it does not improve within a few days, send the client to a doctor."
         ] },
         { typ: "ergaenzung", text: "If there is fever, spreading redness, or severe or increasing pain, send the client to a doctor immediately." },
         { typ: "merke", text: "Smokers, people who drink heavily and diabetics are among the risk groups; complications occur more quickly in them." }
@@ -91,7 +91,7 @@ KURS.module.push({
       fragen: [
         ["What is usually the cause of inflammation?", ["Germs or foreign substances in the wound", "Too much extra length", "The saline solution", "Initial jewelry made of PTFE"], "For example from hair.", "S. 50"],
         ["What is the risk if pus cannot drain?", ["Blood poisoning", "A nickel allergy", "Hypergranulation", "Faster healing"], "Pus must be able to drain.", "S. 50"],
-        ["Which pharmacy ointment does the course book mention?", ["Tyrosur", "Bepanthen", "Betaisodona", "Fucidine"], "Encourage the client to buy it.", "S. 50"],
+        ["Which pharmacy ointment does the course book mention?", ["Tyrosur", "Bepanthen", "Betaisodona", "Fucidine"], "Encourage the client to buy it; if it does not improve, they should see a doctor.", "S. 50"],
         ["Which home remedies does the course book mention for mild inflammation?", ["Chamomile, diluted tea tree oil or manuka honey", "Toothpaste and lemon juice", "Undiluted tea tree oil and alcohol", "Dish soap and hot water"], "Home remedies according to the course book, not independently proven. Daily cleaning is what matters. If there is fever or spreading redness, the client goes to a doctor.", "S. 50"],
         ["Case: A client calls; the piercing is very red and he has a fever. What do you do?", ["I send him to a doctor immediately", "I recommend tea tree oil and waiting 3 days", "I change the jewelry to PTFE", "I recommend Tyrosur and rest"], "Fever shows that the inflammation is spreading in the body. This belongs in a doctor’s hands immediately, not in the home medicine cabinet.", "Ergänzung"]
       ]

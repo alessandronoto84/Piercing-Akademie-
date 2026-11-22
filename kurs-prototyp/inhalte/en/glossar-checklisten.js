@@ -36,7 +36,7 @@ KURS.glossar = [
   ["Kodan", "Skin antiseptic: you use it to disinfect the area after marking (step 9a, an Academy addition) and spray it on again after inserting the jewelry.", 9],
   ["Bodily harm (Körperverletzung)", "Legally, every piercing is intentional bodily harm (§ 223 StGB, German Criminal Code), permitted only with consent.", 2],
   ["Labret stud", "Stud with a disc on one side and a thread for a ball on the other.", 6],
-  ["Lidocaine ointment (Xylocaine)", "Local anesthetic from the pharmacy, available without prescription or prescription-only depending on the product; according to the Academy permitted, but not recommended.", 4],
+  ["Lidocaine ointment (Xylocaine)", "Local anesthetic, available over the counter at the pharmacy (e.g. EMLA cream); permitted for external use, but not recommended by the Academy.", 4],
   ["N. facialis", "Facial nerve; exits the skull below the ear, controls facial expressions and fans out in front of the ear into branches to the forehead, cheek, mouth and chin.", 3],
   ["N. supraorbitalis", "Supraorbital nerve, the sensory nerve of the forehead; exits the bone at about the border between the inner and middle third of the eyebrow (roughly above the pupil).", 3],
   ["Sharps container", "Sealable container into which used needles go immediately.", 5],

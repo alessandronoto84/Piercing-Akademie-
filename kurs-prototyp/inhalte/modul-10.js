@@ -83,7 +83,7 @@ KURS.module.push({
           "Eiter muss abfließen können, sonst besteht die Gefahr einer Blutvergiftung.",
           "Täglich reinigen.",
           "Laut Kursbuch können Kamille, Teebaumöl oder Manukahonig helfen (Teebaumöl nur verdünnt: Es kann Kontaktallergien auslösen).",
-          "Die Salbe „Tyrosur“ aus der Apotheke kann sehr helfen; lege dem Kunden nahe, sie zu kaufen."
+          "Die Salbe „Tyrosur“ aus der Apotheke kann sehr helfen; lege dem Kunden nahe, sie zu kaufen. Wird es nach einigen Tagen nicht besser, schickst du ihn zum Arzt."
         ] },
         { typ: "ergaenzung", text: "Bei Fieber, sich ausbreitender Rötung, starken oder zunehmenden Schmerzen schickst du den Kunden sofort zum Arzt." },
         { typ: "merke", text: "Raucher, Menschen mit hohem Alkoholkonsum und Diabetiker gehören zu den Risikogruppen; bei ihnen treten Komplikationen schneller auf." }
@@ -91,7 +91,7 @@ KURS.module.push({
       fragen: [
         ["Was ist meist die Ursache einer Entzündung?", ["Keime oder Fremdstoffe in der Wunde", "Zu viel Überlänge", "Die Kochsalzlösung", "Ein Ersteinsatz aus PTFE"], "Zum Beispiel von den Haaren.", "S. 50"],
         ["Was droht, wenn Eiter nicht abfließen kann?", ["Eine Blutvergiftung", "Eine Nickelallergie", "Wildes Fleisch", "Eine schnellere Heilung"], "Eiter muss abfließen können.", "S. 50"],
-        ["Welche Salbe aus der Apotheke nennt das Kursbuch?", ["Tyrosur", "Bepanthen", "Betaisodona", "Fucidine"], "Lege dem Kunden nahe, sie zu kaufen.", "S. 50"],
+        ["Welche Salbe aus der Apotheke nennt das Kursbuch?", ["Tyrosur", "Bepanthen", "Betaisodona", "Fucidine"], "Lege dem Kunden nahe, sie zu kaufen; wird es nicht besser, ab zum Arzt.", "S. 50"],
         ["Welche Hausmittel nennt das Kursbuch bei leichten Entzündungen?", ["Kamille, verdünntes Teebaumöl oder Manukahonig", "Zahnpasta und Zitronensaft", "Unverdünntes Teebaumöl und Alkohol", "Spülmittel und heißes Wasser"], "Hausmittel laut Kursbuch, nicht unabhängig belegt. Wichtig ist das tägliche Reinigen. Bei Fieber oder sich ausbreitender Rötung geht der Kunde zum Arzt.", "S. 50"],
         ["Fall: Ein Kunde ruft an, das Piercing ist stark gerötet, und er hat Fieber. Was tust du?", ["Ich schicke ihn sofort zum Arzt", "Ich empfehle Teebaumöl und 3 Tage abwarten", "Ich wechsle den Schmuck auf PTFE", "Ich empfehle Tyrosur und Ruhe"], "Fieber zeigt, dass sich die Entzündung im Körper ausbreitet. Das gehört sofort in ärztliche Hände, nicht in die Hausapotheke.", "Ergänzung"]
       ]

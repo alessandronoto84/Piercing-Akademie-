@@ -89,7 +89,7 @@ KURS.module.push({
       seite: "S. 11–12",
       inhalt: [
         { typ: "text", text: "Während der Verschaltung im Rückenmark kann der Körper das Schmerzempfinden durch eigene Stoffe (Endorphine) dämpfen. Einige Schmerzmittel, zum Beispiel Opiate, setzen an dieser Stelle an." },
-        { typ: "achtung", text: "Beim Piercen ist es unüblich und in Deutschland verboten, verschreibungspflichtige Betäubungs- und Schmerzmittel, zum Beispiel Opiate, einzusetzen. Die Teilbetäubung von Rückenmark, Nervengeflechten oder einzelnen Nerven darf nur ein Arzt durchführen." },
+        { typ: "achtung", text: "Beim Piercen ist es unüblich und in Deutschland verboten, verschreibungspflichtige Betäubungs- und Schmerzmittel, zum Beispiel Opiate, einzusetzen. Die Teilbetäubung von Rückenmark, Nervengeflechten oder einzelnen Nerven darf nur ein Arzt durchführen. Erlaubt sind rezeptfreie Präparate zur äußerlichen Anwendung aus der Apotheke, zum Beispiel lidocainhaltige Cremes wie EMLA. Jede Spritze ist Ärzten vorbehalten." },
         { typ: "tabelle", kopf: ["Verfahren", "Wirkung", "Wer"], zeilen: [
           ["Vollnarkose", "Beeinflusst das Gehirn", "Nur ein spezieller Arzt (Anästhesist)"],
           ["Teilbetäubung", "Hemmt für begrenzte Zeit Teile des Rückenmarks, Nervengeflechte oder einzelne Nerven", "Nur ein Arzt"],
@@ -114,7 +114,7 @@ KURS.module.push({
         { typ: "text", text: "In erster Linie versucht der erfahrene Piercer, dem Kunden die Angst zu nehmen und eine ruhige, harmonische Umgebung zu schaffen. Im Idealfall ist der Kunde dann angstfrei und kann ohne Betäubung gepierct werden." },
         { typ: "tabelle", kopf: ["Mittel", "Wirkung", "Hinweis"], zeilen: [
           ["Eisspray (z. B. Chlorethyl)", "Die starke, kurzfristige Kälte betäubt die Nervenenden für kurze Zeit", "Wirkt direkt"],
-          ["Lidocainsalbe (Xylocain)", "Aus der Apotheke, je nach Präparat rezeptfrei oder verschreibungspflichtig; über Schleimhaut (Mund, Intim) gut aufgenommen, auch als Spray erhältlich", "Laut Akademie erlaubt, aber nicht empfohlen"]
+          ["Lidocainsalbe (Xylocain)", "Rezeptfrei aus der Apotheke, zum Beispiel als EMLA-Creme; über Schleimhaut (Mund, Intim) gut aufgenommen, auch als Spray erhältlich", "Erlaubt (rezeptfrei, äußerlich), laut Akademie aber nicht empfohlen"]
         ] },
         { typ: "achtung", text: "Beim Einsatz von Lidocain immer die Einwirkzeit beachten, auf Nebenwirkungen hinweisen und Wechselwirkungen mit anderen Mitteln (zum Beispiel Betablockern) ausschließen, besonders im Mund. Frag den Kunden zwingend vorher nach der Verträglichkeit: schriftlich und nochmals mündlich." }
       ],

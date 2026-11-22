@@ -89,7 +89,7 @@ KURS.module.push({
       seite: "S. 11–12",
       inhalt: [
         { typ: "text", text: "While signals are being relayed in the spinal cord, the body can dampen the perception of pain with its own substances (endorphins). Some painkillers, for example opiates, act at this point." },
-        { typ: "achtung", text: "In piercing it is unusual, and in Germany prohibited, to use prescription anesthetics and painkillers, for example opiates. Regional anesthesia of the spinal cord, nerve plexuses or individual nerves may only be performed by a doctor." },
+        { typ: "achtung", text: "In piercing it is unusual, and in Germany prohibited, to use prescription anesthetics and painkillers, for example opiates. Regional anesthesia of the spinal cord, nerve plexuses or individual nerves may only be performed by a doctor. Over-the-counter products for external use from the pharmacy are permitted, for example lidocaine creams such as EMLA. Any injection is reserved for doctors." },
         { typ: "tabelle", kopf: ["Procedure", "Effect", "Who"], zeilen: [
           ["General anesthesia", "Affects the brain", "Only a specialist doctor (anesthesiologist)"],
           ["Regional anesthesia", "Inhibits parts of the spinal cord, nerve plexuses or individual nerves for a limited time", "Only a doctor"],
@@ -114,7 +114,7 @@ KURS.module.push({
         { typ: "text", text: "First and foremost, the experienced piercer tries to take away the client’s fear and create a calm, harmonious environment. Ideally, the client is then free of fear and can be pierced without anesthesia." },
         { typ: "tabelle", kopf: ["Product", "Effect", "Note"], zeilen: [
           ["Ice spray (e.g. chloroethane)", "The intense, brief cold numbs the nerve endings for a short time", "Takes effect immediately"],
-          ["Lidocaine ointment (Xylocaine)", "From the pharmacy, available over the counter or on prescription depending on the product; well absorbed through mucous membranes (mouth, intimate area), also available as a spray", "Permitted according to the Academy, but not recommended"]
+          ["Lidocaine ointment (Xylocaine)", "Available over the counter at the pharmacy, for example as EMLA cream; well absorbed through mucous membranes (mouth, intimate area), also available as a spray", "Permitted (over the counter, external use), but not recommended by the Academy"]
         ] },
         { typ: "achtung", text: "When using lidocaine, always allow time for it to take effect, point out side effects and rule out interactions with other medicines (for example beta blockers), especially in the mouth. You must ask the client about tolerance beforehand: in writing and once again verbally." }
       ],

@@ -89,7 +89,7 @@ KURS.module.push({
       seite: "S. 11–12",
       inhalt: [
         { typ: "text", text: "Durante la transmisión en la médula espinal, el cuerpo puede atenuar la percepción del dolor con sustancias propias (endorfinas). Algunos analgésicos, por ejemplo los opiáceos, actúan en este punto." },
-        { typ: "achtung", text: "En el piercing es poco habitual, y en Alemania está prohibido, usar anestésicos y analgésicos que requieren receta médica, por ejemplo opiáceos. La anestesia regional de la médula espinal, de plexos nerviosos o de nervios individuales solo puede realizarla un médico." },
+        { typ: "achtung", text: "En el piercing es poco habitual, y en Alemania está prohibido, usar anestésicos y analgésicos que requieren receta médica, por ejemplo opiáceos. La anestesia regional de la médula espinal, de plexos nerviosos o de nervios individuales solo puede realizarla un médico. Están permitidos los preparados sin receta de uso externo de la farmacia, por ejemplo cremas con lidocaína como EMLA. Cualquier inyección está reservada a los médicos." },
         { typ: "tabelle", kopf: ["Procedimiento", "Efecto", "Quién"], zeilen: [
           ["Anestesia general", "Actúa sobre el cerebro", "Solo un médico especialista (anestesiólogo)"],
           ["Anestesia regional", "Inhibe durante un tiempo limitado partes de la médula espinal, plexos nerviosos o nervios individuales", "Solo un médico"],
@@ -114,7 +114,7 @@ KURS.module.push({
         { typ: "text", text: "Ante todo, el piercer con experiencia intenta quitarle el miedo al cliente y crear un ambiente tranquilo y armonioso. En el caso ideal, el cliente pierde el miedo y se le puede perforar sin anestesia." },
         { typ: "tabelle", kopf: ["Producto", "Efecto", "Observación"], zeilen: [
           ["Espray de frío (p. ej., cloruro de etilo)", "El frío intenso y breve insensibiliza las terminaciones nerviosas durante poco tiempo", "Actúa de inmediato"],
-          ["Pomada de lidocaína (Xylocaína)", "De farmacia, sin receta o con receta según el preparado; se absorbe bien a través de la mucosa (boca, zona íntima), también disponible en espray", "Permitida según la Academia, pero no recomendada"]
+          ["Pomada de lidocaína (Xylocaína)", "Sin receta en la farmacia, por ejemplo como crema EMLA; se absorbe bien a través de la mucosa (boca, zona íntima), también disponible en espray", "Permitida (sin receta, uso externo), aunque la Academia no la recomienda"]
         ] },
         { typ: "achtung", text: "Al usar lidocaína, respeta siempre el tiempo de actuación, informa sobre los efectos secundarios y descarta interacciones con otros medicamentos (por ejemplo, betabloqueantes), sobre todo en la boca. Pregunta obligatoriamente al cliente antes sobre la tolerancia: por escrito y de nuevo de forma oral." }
       ],

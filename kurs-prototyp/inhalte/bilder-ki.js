@@ -1,7 +1,7 @@
 /* KI-generierte Titelbilder der Module (Symbolbilder, keine Fachabbildungen), erzeugt mit FLUX.1 [schnell] und FLUX.2 [klein] 4B (Apache-2.0).
    Jedes Bild wurde vor dem Einbau auf KI-Fehler geprüft. Bildbeschreibungen und verworfene Versuche: KURS-RECHERCHE.md, Abschnitt 12.
    kurs.js zeigt die Bilder auf den Modulkarten und im Modulkopf, ohne sichtbaren KI-Hinweis (Entscheidung der Akademie, 26.10.2026).
-   Module 3 und 8 (21.11.2026, Prüfbericht K5): statt KI-Bild ein echtes Bild aus bilder-frei.js bzw. bilder.js („bild“ = Schlüssel,
+   Module 3, 6 und 8 (21./22.11.2026, Prüfbericht K5; Modul 6: Labret ohne Kugel): statt KI-Bild ein echtes Bild aus bilder-frei.js bzw. bilder.js („bild“ = Schlüssel,
    „pos“ = Bildausschnitt als object-position); bei lizenzierten Bildern zeigt der Modulkopf den Bildnachweis. */
 window.KURS = window.KURS || { module: [] };
 KURS.titelbilder = {
@@ -41,11 +41,11 @@ KURS.titelbilder = {
 "ki": "FLUX.2 [klein] 4B über Cloudflare Workers AI"
 },
 "6": {
-"src": "inhalte/bilder/6.webp",
-"w": 960,
-"h": 540,
-"alt": "Titanschmuck auf Stein: Barbell, Curved Barbell, Labret und Ball Closure Ring",
-"ki": "FLUX.2 [klein] 4B über Cloudflare Workers AI"
+"src": "inhalte/bilder/titan-schmuck.webp",
+"w": 458,
+"h": 276,
+"alt": "Schmuckbeispiele aus Titan (Foto aus dem Kursbuch)",
+"bild": "titan-schmuck"
 },
 "7": {
 "src": "inhalte/bilder/7.webp",

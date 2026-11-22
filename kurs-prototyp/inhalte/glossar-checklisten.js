@@ -36,7 +36,7 @@ KURS.glossar = [
   ["Kodan", "Hautantiseptikum: Damit desinfizierst du die Stelle nach dem Anzeichnen (Schritt 9a, Ergänzung der Akademie) und sprühst nach dem Einsetzen nochmals ein.", 9],
   ["Körperverletzung", "Rechtlich ist jedes Piercing eine gewollte Körperverletzung (§ 223 StGB), erlaubt nur mit Einwilligung.", 2],
   ["Labret Stud", "Stecker mit Platte auf einer Seite und Gewinde für eine Kugel auf der anderen.", 6],
-  ["Lidocainsalbe (Xylocain)", "Örtliches Betäubungsmittel aus der Apotheke, je nach Präparat rezeptfrei oder verschreibungspflichtig; laut Akademie erlaubt, aber nicht empfohlen.", 4],
+  ["Lidocainsalbe (Xylocain)", "Örtliches Betäubungsmittel, rezeptfrei aus der Apotheke (z. B. EMLA-Creme); zur äußerlichen Anwendung erlaubt, laut Akademie aber nicht empfohlen.", 4],
   ["N. facialis", "Gesichtsnerv; tritt unter dem Ohr aus dem Schädel, steuert die Mimik und fächert sich vor dem Ohr in Äste zu Stirn, Wange, Mund und Kinn auf.", 3],
   ["N. supraorbitalis", "Gefühlsnerv der Stirn; tritt etwa an der Grenze vom inneren zum mittleren Drittel der Augenbraue (ungefähr über der Pupille) aus dem Knochen.", 3],
   ["Nadelabwurfbehälter", "Verschließbarer Behälter, in den benutzte Nadeln sofort kommen.", 5],

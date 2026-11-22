@@ -459,3 +459,5 @@ section.k-kopf,section.k-lektion,.k-layout section{padding-block:0}
 }
 @media (prefers-reduced-motion:reduce){.k-modulkarte,.k-modulkarte::after{transition:none}.k-modulkarte:hover{transform:none}}
 .k-praxis{margin-bottom:22px}.k-fortschritt{margin-top:4px}
+.k-titelbild:not(.k-klein) img{aspect-ratio:21/9;border-radius:18px}
+.k-titelbild.k-klein{border-radius:var(--radius) var(--radius) 0 0}
