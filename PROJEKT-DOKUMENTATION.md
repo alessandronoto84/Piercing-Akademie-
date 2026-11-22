@@ -95,7 +95,7 @@ Automatisiert mit Chromium (Playwright) über einen lokalen Webserver:
 | Bilder | alle 17 laden, alle mit Alt-Text |
 | Externe Anfragen (Google Fonts o. Ä.) | keine |
 | Interne Anker, doppelte IDs, `aria-describedby`-Verweise | alle korrekt |
-| 11 Module, 5 FAQ, Preise 249 € / 999 € / 2.490 € | vorhanden |
+| 11 Module, 5 FAQ, Preise 99 € / 999 € / 2.490 € | vorhanden |
 | Aufklappen der Module | funktioniert |
 | Formular leer absenden | 3 verständliche Fehlermeldungen, Fokus im ersten Fehlerfeld, kein Versand |
 | Ungültige Telefonnummer | Fehlermeldung, kein Versand |
@@ -153,7 +153,7 @@ Noch offen:
 
 Stand 24.10.2026. Entscheidung: Kurs-Prototyp und Verkaufsseite bauen; Kursplattform noch offen.
 
-**Verkaufsseite `online-kurs.html`:** Lernprinzip, alle Module mit Lektionstiteln (aus den Kursdaten erzeugt), Ablauf, Preis (Paket Basis 249 €) und Anfrage über das bestehende Formular (`index.html?paket=basis#kontakt`). In der Navigation aller Seiten verlinkt, in der Sitemap eingetragen.
+**Verkaufsseite `online-kurs.html`:** Lernprinzip, alle Module mit Lektionstiteln (aus den Kursdaten erzeugt), Ablauf, Preis (Paket Basis 99 €) und Anfrage über das bestehende Formular (`index.html?paket=basis#kontakt`). In der Navigation aller Seiten verlinkt, in der Sitemap eingetragen.
 
 **Kurs-Prototyp `kurs-prototyp/`** (umgebaut am 24.10.2026 auf Wunsch: „erst wird erklärt, dann muss man Fragen beantworten“, „viel umfangreicher“):
 - **Umfang:** 11 Module, 103 Lektionen, 605 Fragen (alle mit Erklärung und Seitenangabe im Kursbuch bzw. „Ergänzung“), 34 Übungsaufgaben, 17 Grafiken und ein Diagramm an 21 Stellen, Glossar mit 59 Fachbegriffen, 6 Checklisten für den Studioalltag.

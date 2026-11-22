@@ -301,7 +301,7 @@ async function widerruf(req, env, ctx) {
 // ---------- Bestellung: eigene Bestellseite → Stripe Checkout ----------
 // Preise stehen nur hier (Cent, Endpreise inkl. MwSt.) – nie vom Browser übernehmen. Bei Preisänderung auch die Website anpassen.
 export const PAKETE = {
-  basis: { cent: 24900, name: { de: "Paket Basis – Online-Kurs", en: "Basic package – online course", es: "Paquete Básico – curso online" } },
+  basis: { cent: 9900, name: { de: "Paket Basis – Online-Kurs", en: "Basic package – online course", es: "Paquete Básico – curso online" } },
   praxis: { cent: 99900, name: { de: "Paket Praxis – Online-Kurs + 1 Praxistag", en: "Practice package – online course + 1 practice day", es: "Paquete Práctica – curso online + 1 día de práctica" } },
   komplett: { cent: 249000, name: { de: "Paket Komplett – Online-Kurs, 2 Praxistage, 1:1-Coaching", en: "Complete package – online course, 2 practice days, 1:1 coaching", es: "Paquete Completo – curso online, 2 días de práctica, mentoría 1:1" } }
 };

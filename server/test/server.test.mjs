@@ -23,7 +23,7 @@ function webhook(ev, geheim = GEHEIM) {
 }
 const kauf = (email, id, extra = {}) => ({
   type: "checkout.session.completed",
-  data: { object: { id, payment_status: "paid", created: Math.floor(Date.now() / 1000), amount_total: 24900, currency: "eur", locale: "de",
+  data: { object: { id, payment_status: "paid", created: Math.floor(Date.now() / 1000), amount_total: 9900, currency: "eur", locale: "de",
     customer_details: { email, name: "Test Person" }, metadata: { paket: "basis", sprache: "de" },
     custom_fields: [{ key: "sofortigerkursbeginn", label: { custom: "Sofortiger Kursbeginn" }, dropdown: { value: "Ja: sofort starten, mein Widerrufsrecht für den Online-Kurs erlischt" } }], ...extra } }
 });
