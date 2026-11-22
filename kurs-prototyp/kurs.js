@@ -262,6 +262,56 @@
   // Dateien: inhalte/clips/<id>.mp4 (Pflicht), <id>.webm und <id>.jpg (Standbild) optional, erzeugt mit werkzeuge/clip-umwandeln.sh.
   // schleife: stumm in Endlosschleife, startet nur, wenn sichtbar; sonst normaler Player mit Steuerung und Ton.
   var CLIPS = KURS.clips || {};
+  // Schematische Animation (inhalte/animationen.js) an Stelle eines noch fehlenden Clips
+  var ANIM = KURS.animationen || {};
+  function animationHtml(id) {
+    var A = ANIM[id];
+    if (!A) return "";
+    var L = function (o) { return (o && (o[SPRACHE] || o.de)) || ""; };
+    return '<figure class="k-anim" data-anim="' + esc(id) + '"><p class="k-grafik-titel">' + esc(L(A.titel)) + "</p>" +
+      '<div class="k-anim-buehne" aria-live="polite"></div>' +
+      '<figcaption><span class="k-anim-nr"></span> <span class="k-anim-text"></span></figcaption>' +
+      '<div class="k-anim-steuerung"><button type="button" class="btn ghost small" data-a="zurueck" aria-label="' + tr("Voriger Schritt") + '">←</button>' +
+      '<button type="button" class="btn small" data-a="spielen">' + tr("Pause") + '</button>' +
+      '<button type="button" class="btn ghost small" data-a="weiter" aria-label="' + tr("Nächster Schritt") + '">→</button>' +
+      '<span class="k-anim-punkte">' + A.schritte.map(function (_, i) { return '<button type="button" data-a="' + i + '" aria-label="' + tr("Schritt {n}", { n: i + 1 }) + '"></button>'; }).join("") + "</span></div>" +
+      '<p class="fine">' + esc(L(A.hinweis)) + "</p></figure>";
+  }
+  function animationenStarten() {
+    var ruhig = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    app.querySelectorAll(".k-anim").forEach(function (fig) {
+      var A = ANIM[fig.dataset.anim], i = 0, laeuft = !ruhig, uhr = null, sichtbar = false;
+      var L = function (o) { return (o && (o[SPRACHE] || o.de)) || ""; };
+      var buehne = fig.querySelector(".k-anim-buehne"), knopf = fig.querySelector('[data-a="spielen"]');
+      function zeigen(n) {
+        i = (n + A.schritte.length) % A.schritte.length;
+        var svg = A.schritte[i].svg;
+        Object.keys(A.woerter || {}).forEach(function (k) { svg = svg.split("{" + k + "}").join(esc(L(A.woerter[k]))); });
+        buehne.innerHTML = svg;
+        fig.querySelector(".k-anim-nr").textContent = (i + 1) + "/" + A.schritte.length;
+        fig.querySelector(".k-anim-text").textContent = L(A.schritte[i].text);
+        fig.querySelectorAll(".k-anim-punkte button").forEach(function (b, j) { b.classList.toggle("aktiv", j === i); });
+        planen();
+      }
+      function planen() {
+        clearTimeout(uhr);
+        if (laeuft && sichtbar) uhr = setTimeout(function () { zeigen(i + 1); }, 5200);
+        knopf.textContent = laeuft ? tr("Pause") : tr("Abspielen");
+      }
+      fig.addEventListener("click", function (e) {
+        var b = e.target.closest("[data-a]"); if (!b) return;
+        var a = b.dataset.a;
+        if (a === "spielen") { laeuft = !laeuft; planen(); }
+        else if (a === "zurueck") { laeuft = false; zeigen(i - 1); }
+        else if (a === "weiter") { laeuft = false; zeigen(i + 1); }
+        else { laeuft = false; zeigen(+a); }
+      });
+      if ("IntersectionObserver" in window) new IntersectionObserver(function (es) { sichtbar = es[0].isIntersecting; planen(); }, { threshold: 0.4 }).observe(fig);
+      else sichtbar = true;
+      zeigen(0);
+    });
+  }
+
   function clip(b) {
     var c = CLIPS[b.id];
     if (!c) return "";
@@ -734,6 +784,7 @@
   function laborAufgabeHtml(a, nr) {
     var fertig = laborErledigt(a), film = "";
     if (a.clip && CLIPS[a.clip]) film = clip({ id: a.clip, text: a.clipText || a.titel, titel: tr("Clip: {titel}", { titel: a.titel }) });
+    else if (a.clip && ANIM[a.clip]) film = animationHtml(a.clip);
     else if (a.clip && stand.vorschau) film = '<p class="k-box k-ergaenzung"><strong>' + tr("Clip fehlt noch") + "</strong> „" + esc(a.clip) + "“: " + esc(a.clipText || "") + " (" + tr("siehe Drehliste CLIPS-PRAXISLABOR.md") + ")</p>";
     return '<section class="k-lektion k-labor' + (fertig ? " k-labor-fertig" : "") + '" id="labor-' + a.id + '"><p class="label">' + nr + " · " + tr('passt zu <a href="#modul-{m}">Modul {nr}</a>', { m: a.modul, nr: zwei(a.modul) }) + (fertig ? " · " + tr("erledigt") + " ✓" : "") + "</p><h2>" + esc(a.titel) + "</h2>" + film +
       "<h4>" + tr("Du brauchst") + "</h4><ul>" + a.material.map(function (m) { return "<li>" + esc(m) + "</li>"; }).join("") + "</ul>" +
@@ -741,6 +792,7 @@
       '<h4>' + tr("Selbstkontrolle") + '</h4><ul class="k-aufgaben">' + a.kontrolle.map(function (t, i) { var key = a.id + "-" + i; return '<li><label><input type="checkbox" data-labor="' + key + '"' + (stand.labor[key] ? " checked" : "") + "> " + esc(t) + "</label></li>"; }).join("") + "</ul></section>";
   }
   function laborBinden(nav) {
+    animationenStarten();
     app.querySelectorAll("[data-labor]").forEach(function (c) {
       c.addEventListener("change", function () {
         if (c.checked) stand.labor[c.dataset.labor] = true; else delete stand.labor[c.dataset.labor];
@@ -775,7 +827,7 @@
     var L = LABOR, ST = stichOffen() ? L.stich : null;
     var aufgabe = laborAufgabeHtml;
     function zuschauen(a, n) {
-      var film = a.clip && CLIPS[a.clip] ? clip({ id: a.clip, text: a.clipText || a.titel }) : (a.clip && stand.vorschau ? '<p class="k-box k-ergaenzung"><strong>' + tr("Clip fehlt noch") + "</strong> „" + esc(a.clip) + "“</p>" : "");
+      var film = a.clip && CLIPS[a.clip] ? clip({ id: a.clip, text: a.clipText || a.titel }) : a.clip && ANIM[a.clip] ? animationHtml(a.clip) : (a.clip && stand.vorschau ? '<p class="k-box k-ergaenzung"><strong>' + tr("Clip fehlt noch") + "</strong> „" + esc(a.clip) + "“</p>" : "");
       return '<section class="k-lektion k-zuschauen"><p class="label">' + tr("Clip {n}", { n: n }) + " · " + tr('passt zu <a href="#modul-{m}">Modul {nr}</a>', { m: a.modul, nr: zwei(a.modul) }) + "</p><h2>" + esc(a.titel) + "</h2>" + film +
         '<h4>' + tr("Darauf achtest du") + '</h4><ol class="k-schritte">' + a.schritte.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ol></section>";
     }

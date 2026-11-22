@@ -461,3 +461,23 @@ section.k-kopf,section.k-lektion,.k-layout section{padding-block:0}
 .k-praxis{margin-bottom:22px}.k-fortschritt{margin-top:4px}
 .k-titelbild:not(.k-klein) img{aspect-ratio:21/9;border-radius:18px}
 .k-titelbild.k-klein{border-radius:var(--radius) var(--radius) 0 0}
+
+/* Schematische Schritt-Animationen (inhalte/animationen.js) */
+.k-anim{margin:0;display:grid;gap:10px;border:1px solid var(--line);border-radius:18px;padding:16px;background:var(--bg)}
+.k-anim-buehne{border-radius:12px;background:var(--surface);overflow:hidden}
+.k-anim-buehne svg{display:block;width:100%;height:auto}
+.k-anim .a-txt{font:500 14px var(--f-mono);fill:var(--muted)}
+.k-anim .a-klein{font:500 11px var(--f-mono)}
+.k-anim figcaption{min-height:3.2em;font-size:1rem}
+.k-anim-nr{font-family:var(--f-mono);color:var(--accent);margin-right:4px}
+.k-anim-steuerung{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.k-anim-punkte{display:flex;gap:6px;margin-left:auto}
+.k-anim-punkte button{width:10px;height:10px;border-radius:50%;border:1px solid var(--accent);background:transparent;padding:0;cursor:pointer}
+.k-anim-punkte button.aktiv{background:var(--accent)}
+.a-bewegt{animation:aBewegt 1.4s cubic-bezier(.3,.7,.2,1) forwards}
+@keyframes aBewegt{from{transform:translateX(var(--a-von))}to{transform:translateX(var(--a-nach))}}
+.a-weg{animation:aWeg 1.6s .4s ease-in forwards}
+@keyframes aWeg{to{transform:translate(-230px,90px);opacity:0}}
+.a-weg-links{animation:aWegL 1.4s .3s ease forwards}
+@keyframes aWegL{to{transform:translateX(-140px);opacity:0}}
+@media (prefers-reduced-motion:reduce){.a-bewegt{animation:none;transform:translateX(var(--a-nach))}.a-weg,.a-weg-links{animation:none;opacity:0}}
