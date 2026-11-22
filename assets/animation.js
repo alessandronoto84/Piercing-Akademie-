@@ -202,7 +202,7 @@
     }, { threshold: 0.3 }).observe(karte);
   });
 
-  // ---------- Zahlen hochzählen (11 Module, 103 Lektionen, 575 Fragen) ----------
+  // ---------- Zahlen hochzählen (11 Module, 103 Lektionen, 579 Fragen) ----------
   function hochzaehlen(dd) {
     if (dd.dataset.gezaehlt) return;
     dd.dataset.gezaehlt = "1";

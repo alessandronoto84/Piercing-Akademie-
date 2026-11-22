@@ -296,6 +296,7 @@
     return '<figure class="k-titelbild">' + img + (quelle && quelle.lizenz ? "<figcaption>" + nachweis(quelle) + "</figcaption>" : "") + "</figure>";
   }
   // "Lippenbändchen (Smiley)" -> "lippenbaendchen-smiley"
+  function anzahlFragen(n) { return n === 1 ? tr("1 Frage") : tr("{n} Fragen", { n: n }); }
   function kurzname(n) {
     return n.toLowerCase().replace(/ä/g, "ae").replace(/ö/g, "oe").replace(/ü/g, "ue").replace(/ß/g, "ss").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
   }
@@ -415,7 +416,7 @@
     m.lektionen.forEach(function (l, i) {
       var st = lektionErledigt(m, i) ? "erledigt" : lektionOffen(m, i) ? "offen" : "gesperrt";
       html += '<li class="k-' + st + '"><a href="#lektion-' + m.nr + "-" + i + '"' + (st === "gesperrt" ? ' aria-disabled="true"' : "") + '><span class="n">' + (i + 1) + "</span><span><strong>" + esc(l.titel) + "</strong>" +
-        '<span class="k-meta">' + tr("{n} Fragen", { n: l.alleFragen.length }) + (l.seite ? " · " + (buchNr(l.seite) != null ? tr("Kursbuch") + " " + esc(seiteText(l.seite)) : esc(seitenLabel(l.seite))) : "") + (l.entwurf && stand.vorschau ? " · " + tr("Entwurf") : "") + '</span></span><span class="k-status">' + (st === "erledigt" ? "✓" : st === "gesperrt" ? tr("gesperrt") : tr("offen")) + "</span></a></li>";
+        '<span class="k-meta">' + anzahlFragen(l.alleFragen.length) + (l.seite ? " · " + (buchNr(l.seite) != null ? tr("Kursbuch") + " " + esc(seiteText(l.seite)) : esc(seitenLabel(l.seite))) : "") + (l.entwurf && stand.vorschau ? " · " + tr("Entwurf") : "") + '</span></span><span class="k-status">' + (st === "erledigt" ? "✓" : st === "gesperrt" ? tr("gesperrt") : tr("offen")) + "</span></a></li>";
     });
     html += "</ol>" +
       '<section class="k-lektion"><h2>' + tr("Modulprüfung") + "</h2><p>" + (m.pool.length > FRAGEN_JE_PRUEFUNG ? tr("{n} zufällige Fragen aus allen {m} Fragen dieses Moduls. Bestanden ab {b} richtigen Antworten.", { n: FRAGEN_JE_PRUEFUNG, m: m.pool.length, b: benoetigt(FRAGEN_JE_PRUEFUNG) }) : tr("Alle {m} Fragen dieses Moduls in zufälliger Reihenfolge. Bestanden ab {b} richtigen Antworten.", { m: m.pool.length, b: benoetigt(m.pool.length) })) +

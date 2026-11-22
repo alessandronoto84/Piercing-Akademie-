@@ -157,7 +157,7 @@ KURS.module.push({
           "Sedatives (benzodiazepines) and aprindine increase the side effects.",
           "Antiepileptics reduce the effect; muscle relaxants are enhanced by lidocaine."
         ] },
-        { typ: "praxis", text: "You don’t have to know this list by heart. But you do have to know that it exists, and for every client who reports taking medication, you must do without lidocaine if you cannot reliably clarify tolerance." }
+        { typ: "praxis", text: "You don’t have to memorize every drug on this list, but you should know the main examples. Above all, you have to know that it exists, and for every client who reports taking medication, you must do without lidocaine if you cannot reliably clarify tolerance." }
       ],
       fragen: [
         ["Which medicines can lidocaine interact with dangerously?", ["With heart rhythm medicines, e.g. beta blockers", "With antibiotics such as penicillin or amoxicillin", "With vitamin and mineral supplements", "With the contraceptive pill and other hormones"], "Especially when used in the mouth.", "S. 14"],

@@ -170,11 +170,11 @@ window.KURS = window.KURS || { module: [] };
         titel: "Brustwarze",
         seite: "S. 95",
         inhalt: [
-          db("Brustwarze", "Durch die Brustwarze bzw. den Warzenhof, meist horizontal oder vertikal, bei Frauen und Männern. Mehrere Piercings übereinander sind möglich. Zum Anzeichnen den Oberkörper komplett frei machen; mit sterilem Pflaster abkleben und Pflaster für 3 Tage empfehlen.", "Barbell, BCR", "16G", "Snaptile, Gazeklemme", "", "S. 95")
+          db("Brustwarze", "Abheilzeit 3 bis 12 Monate. Durch die Brustwarze bzw. den Warzenhof, meist horizontal oder vertikal, bei Frauen und Männern. Mehrere Piercings übereinander sind möglich. Zum Anzeichnen den Oberkörper komplett frei machen; mit sterilem Pflaster abkleben und Pflaster für 3 Tage empfehlen.", "Barbell, BCR", "16G", "Snaptile, Gazeklemme", "", "S. 95")
         ],
         fragen: [
           ["Was muss zum Anzeichnen eines Brustwarzenpiercings geschehen?", ["Den Oberkörper komplett frei machen", "Nur die eine Seite frei machen", "Den Kunden hinlegen", "Die Brustwarze vorher kühlen"], "Datenblatt Brustwarze.", "S. 95"],
-          ["Wie lange heilt ein Brustwarzenpiercing laut Kursbuch?", ["3 bis 12 Monate", "1 bis 2 Monate", "4 bis 6 Monate", "Mindestens 3 Monate wie Knorpel"], "Siehe Abheilzeiten.", "S. 49"]
+          ["Wie lange heilt ein Brustwarzenpiercing laut Kursbuch?", ["3 bis 12 Monate", "1 bis 2 Monate", "4 bis 6 Monate", "Mindestens 3 Monate wie Knorpel"], "Datenblatt Brustwarze; alle Abheilzeiten in Modul 10.", "S. 49"]
         ]
       },
       {

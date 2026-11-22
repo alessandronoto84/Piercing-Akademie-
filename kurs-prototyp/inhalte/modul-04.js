@@ -157,7 +157,7 @@ KURS.module.push({
           "Beruhigungsmittel (Benzodiazepine) und Aprindin verstärken die Nebenwirkungen.",
           "Antiepileptika schwächen die Wirkung ab; Muskelrelaxanzien werden durch Lidocain verstärkt."
         ] },
-        { typ: "praxis", text: "Du musst diese Liste nicht auswendig können. Du musst aber wissen, dass es sie gibt, und bei jedem Kunden, der Medikamente angibt, auf Lidocain verzichten, wenn du die Verträglichkeit nicht sicher klären kannst." }
+        { typ: "praxis", text: "Du musst nicht jedes Medikament dieser Liste auswendig können, die wichtigsten Beispiele aber kennen. Vor allem musst du wissen, dass es sie gibt, und bei jedem Kunden, der Medikamente angibt, auf Lidocain verzichten, wenn du die Verträglichkeit nicht sicher klären kannst." }
       ],
       fragen: [
         ["Mit welchen Medikamenten kann Lidocain gefährlich wechselwirken?", ["Mit Mitteln für den Herzrhythmus, z. B. Betablockern", "Mit Antibiotika wie Penicillin oder Amoxicillin", "Mit Vitamin- und Mineralstoffpräparaten", "Mit der Antibabypille und anderen Hormonen"], "Besonders bei Anwendung im Mund.", "S. 14"],

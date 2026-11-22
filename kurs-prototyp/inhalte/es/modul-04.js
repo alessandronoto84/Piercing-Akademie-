@@ -157,7 +157,7 @@ KURS.module.push({
           "Los sedantes (benzodiacepinas) y la aprindina potencian los efectos secundarios.",
           "Los antiepilépticos reducen el efecto; la lidocaína potencia los relajantes musculares."
         ] },
-        { typ: "praxis", text: "No tienes que saberte esta lista de memoria. Pero sí tienes que saber que existe y, con cada cliente que indique que toma medicamentos, renunciar a la lidocaína si no puedes aclarar con seguridad la tolerancia." }
+        { typ: "praxis", text: "No tienes que saberte de memoria cada medicamento de esta lista, pero sí los ejemplos principales. Sobre todo tienes que saber que existe y, con cada cliente que indique que toma medicamentos, renunciar a la lidocaína si no puedes aclarar con seguridad la tolerancia." }
       ],
       fragen: [
         ["¿Con qué medicamentos puede interactuar peligrosamente la lidocaína?", ["Con fármacos para el ritmo cardíaco, p. ej. betabloqueantes", "Con antibióticos como la penicilina o la amoxicilina", "Con suplementos de vitaminas y minerales", "Con la píldora anticonceptiva y otras hormonas"], "Sobre todo al aplicarla en la boca.", "S. 14"],

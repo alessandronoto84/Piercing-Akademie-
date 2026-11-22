@@ -170,11 +170,11 @@ window.KURS = window.KURS || { module: [] };
         titel: "Nipple",
         seite: "S. 95",
         inhalt: [
-          db("Nipple", "Through the nipple or areola, usually horizontally or vertically, in women and men. Several piercings one above the other are possible. For marking, the upper body must be completely uncovered; cover with a sterile bandage and recommend bandages for 3 days.", "barbell, BCR", "16G", "Snaptile, gauze clamp", "", "S. 95")
+          db("Nipple", "Healing time 3 to 12 months. Through the nipple or areola, usually horizontally or vertically, in women and men. Several piercings one above the other are possible. For marking, the upper body must be completely uncovered; cover with a sterile bandage and recommend bandages for 3 days.", "barbell, BCR", "16G", "Snaptile, gauze clamp", "", "S. 95")
         ],
         fragen: [
           ["What has to happen before marking a nipple piercing?", ["The upper body must be completely uncovered", "Only the one side is uncovered", "The client lies down", "The nipple is cooled beforehand"], "Nipple data sheet.", "S. 95"],
-          ["According to the course book, how long does a nipple piercing take to heal?", ["3 to 12 months", "1 to 2 months", "4 to 6 months", "At least 3 months, like cartilage"], "See healing times.", "S. 49"]
+          ["According to the course book, how long does a nipple piercing take to heal?", ["3 to 12 months", "1 to 2 months", "4 to 6 months", "At least 3 months, like cartilage"], "Nipple data sheet; all healing times are in module 10.", "S. 49"]
         ]
       },
       {
