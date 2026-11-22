@@ -75,7 +75,7 @@ KURS.module.push({
           "Die Nadel wird mit dem Kunststoffüberzug durch die Haut gestochen.",
           "Die Nadel wird herausgezogen und sofort fachgerecht im Nadelabwurfbehälter entsorgt.",
           "Im Stichkanal bleibt nur der Kunststoffüberzug (das Röhrchen).",
-          "Der Schmuck wird in das Röhrchen eingeführt und durch den Stichkanal geschoben."
+          "Der Schmuck wird nur 2–3 mm in das Röhrchen gesteckt und schiebt es dann vor sich her durch den Stichkanal."
         ] },
         { typ: "achtung", text: "Schieben, niemals ziehen. Beim Ziehen ist die Gefahr zu groß, dass der Schmuck während des Einführens abgleitet." },
         { typ: "praxis", text: "Das Röhrchen schützt den frischen Stichkanal. Wenn du sauber schiebst, gleitet der Schmuck ohne zusätzlichen Schmerz hinein. Lass den Kunden dabei ausatmen (mehr dazu in Modul 9)." }

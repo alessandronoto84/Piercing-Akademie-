@@ -75,7 +75,7 @@ KURS.module.push({
           "The needle is pushed through the skin together with the plastic sheath.",
           "The needle is pulled out and immediately disposed of properly in the sharps container.",
           "Only the plastic sheath (the tube) remains in the piercing channel.",
-          "The jewelry is inserted into the tube and pushed through the piercing channel."
+          "The jewelry is inserted only 2–3 mm into the tube and then pushes it ahead through the piercing channel."
         ] },
         { typ: "achtung", text: "Push, never pull. When pulling, the risk of the jewelry slipping out during insertion is too great." },
         { typ: "praxis", text: "The tube protects the fresh piercing channel. If you push cleanly, the jewelry slides in without additional pain. Have the client breathe out while you do it (more on this in module 9)." }

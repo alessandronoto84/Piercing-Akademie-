@@ -525,7 +525,7 @@ window.KURS.labor.stich = {
         "Klemme anlegen, die Markierung liegt im Fenster (Schritt 11).",
         "Zügig in die sichtbare Seite stechen, also von vorn, wo später die Kugel sitzt (Schritt 12).",
         "Stahlnadel herausziehen und entsorgen; der Kunststoffüberzug bleibt im Stichkanal (Schritte 13 und 13a).",
-        "Überzug mit der Schere leicht kürzen und den Labret hineinstecken (Schritte 14 und 15).",
+        "Überzug mit der Schere leicht kürzen und den Labret nur 2–3 mm hineinstecken (Schritte 14 und 15).",
         "Den Labret durch den Stichkanal drücken, nicht ziehen (Schritt 16). Röhrchen vorsichtig abziehen (Schritt 17).",
         "Kugel greifen, Schmuck mit der Klemmzange halten und die Kugel fest aufdrehen (Schritte 18 und 19).",
         "Dreimal an verschiedenen Stellen des Ohrläppchens wiederholen."

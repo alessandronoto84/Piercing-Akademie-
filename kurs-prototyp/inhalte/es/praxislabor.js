@@ -525,7 +525,7 @@ window.KURS.labor.stich = {
         "Colocar la pinza; la marca queda en la ventana (paso 11).",
         "Perforar con decisión hacia el lado visible, es decir, desde delante, donde después irá la bola (paso 12).",
         "Retirar la aguja de acero y desecharla; la vaina de plástico se queda en el canal de la perforación (pasos 13 y 13a).",
-        "Recortar un poco la vaina con las tijeras e introducir el labret en ella (pasos 14 y 15).",
+        "Recortar un poco la vaina con las tijeras e introducir el labret solo 2–3 mm en ella (pasos 14 y 15).",
         "Empujar el labret a través del canal de la perforación, no tirar (paso 16). Retirar con cuidado el tubito (paso 17).",
         "Tomar la bola, sujetar la joya con la pinza de sujeción y enroscar la bola firmemente (pasos 18 y 19).",
         "Repetir tres veces en distintos puntos del lóbulo."

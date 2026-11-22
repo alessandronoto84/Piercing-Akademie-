@@ -64,7 +64,7 @@ KURS.module.push({
           "Kanüle herausziehen; der Kunststoffüberzug bleibt im Stichkanal.",
           { nr: "13a", text: "Die Stahlnadel sofort in den Nadelabwurfbehälter werfen." },
           "Kunststoffüberzug mit der Schere leicht kürzen, damit der Schmuck besser hineingeht.",
-          "Ersteinsatz in den Kunststoffüberzug stecken.",
+          "Ersteinsatz nur 2–3 mm in den Kunststoffüberzug stecken. Der Schmuck schiebt das Röhrchen dann vor sich her durch den Stichkanal.",
           "Durch den Stichkanal drücken, nicht ziehen, sonst kann der Schmuck abrutschen. Das ist schmerzhaft: den Kunden dabei ausatmen lassen."
         ] },
         { typ: "grafik", id: "stich" }

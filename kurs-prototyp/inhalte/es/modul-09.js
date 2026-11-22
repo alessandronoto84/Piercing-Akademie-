@@ -64,7 +64,7 @@ KURS.module.push({
           "Retirar la cánula; la vaina de plástico se queda en el canal de la perforación.",
           { nr: "13a", text: "Tirar la aguja de acero de inmediato al contenedor para objetos punzantes." },
           "Recortar un poco la vaina de plástico con tijeras para que la joya entre mejor.",
-          "Introducir la joya inicial en la vaina de plástico.",
+          "Introducir la joya inicial solo 2–3 mm en la vaina de plástico. Después la joya empuja el tubo por delante a través del canal.",
           "Empujarla a través del canal de la perforación, no tirar de ella; si no, la joya puede salirse. Es doloroso: pide al cliente que exhale mientras tanto."
         ] },
         { typ: "grafik", id: "stich" }

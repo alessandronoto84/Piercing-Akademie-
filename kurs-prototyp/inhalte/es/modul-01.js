@@ -75,7 +75,7 @@ KURS.module.push({
           "La aguja se introduce a través de la piel junto con la vaina de plástico.",
           "La aguja se retira y se desecha de inmediato y correctamente en el contenedor para objetos punzantes.",
           "En el canal de la perforación solo queda la vaina de plástico (el tubito).",
-          "La joya se introduce en el tubito y se empuja a través del canal de la perforación."
+          "La joya se introduce solo 2–3 mm en el tubito y luego lo empuja por delante a través del canal de la perforación."
         ] },
         { typ: "achtung", text: "Empujar, nunca tirar. Si se tira, el riesgo de que la joya se escape durante la inserción es demasiado grande." },
         { typ: "praxis", text: "El tubito protege el canal recién perforado. Si empujas con limpieza, la joya entra deslizándose sin dolor adicional. Pide al cliente que suelte el aire mientras tanto (más sobre esto en el módulo 9)." }

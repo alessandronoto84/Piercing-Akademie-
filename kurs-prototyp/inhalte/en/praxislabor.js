@@ -525,7 +525,7 @@ window.KURS.labor.stich = {
         "Apply the clamp, with the marking in the window (step 11).",
         "Pierce swiftly into the visible side, i.e. from the front, where the ball will later sit (step 12).",
         "Pull out the steel needle and dispose of it; the plastic sheath stays in the piercing channel (steps 13 and 13a).",
-        "Trim the sheath slightly with the scissors and insert the labret into it (steps 14 and 15).",
+        "Trim the sheath slightly with the scissors and insert the labret only 2–3 mm into it (steps 14 and 15).",
         "Push the labret through the piercing channel, don’t pull (step 16). Carefully pull off the tube (step 17).",
         "Pick up the ball, hold the jewelry with the holding pliers and screw the ball on firmly (steps 18 and 19).",
         "Repeat three times at different points on the earlobe."

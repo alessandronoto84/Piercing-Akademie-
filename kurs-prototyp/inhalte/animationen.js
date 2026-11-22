@@ -197,6 +197,7 @@ window.KURS = window.KURS || { module: [] };
     ringOeffnen: { de: "Ring öffnen, Kugel heraus", en: "open ring, take out ball", es: "abrir el aro, sacar la bola" },
     kugelRastet: { de: "Kugel rastet fest ein", en: "ball snaps into place", es: "la bola encaja firme" },
     stichrichtung: { de: "Strich = Stichrichtung", en: "line = direction", es: "línea = dirección" },
+    nur23: { de: "nur 2–3 mm ins Röhrchen", en: "only 2–3 mm into the tube", es: "solo 2–3 mm en el tubo" },
     ueberlaenge: { de: "Überlänge ca. 4 mm", en: "extra length approx. 4 mm", es: "longitud extra aprox. 4 mm" },
     kugelSchonDrauf: { de: "Kugel schon drauf", en: "ball already on", es: "bola ya puesta" },
     zweiteKugel: { de: "nur noch 2. Kugel", en: "only the 2nd ball", es: "solo la 2.ª bola" },
@@ -240,18 +241,18 @@ window.KURS = window.KURS || { module: [] };
         en: "At the front, cut off the green plastic hub with scissors. Only the clear tube is left in the channel.",
         es: "Delante, corta con las tijeras el cono de plástico verde. Solo queda el tubo transparente en el canal." },
       svg: bild(lappen(true) + kanuele(390, false, 200, 382) + ansatzFaellt(200) + schere(214) + '<line x1="206" y1="' + (Y - 20) + '" x2="206" y2="' + (Y + 20) + '" stroke="' + F.gold + '" stroke-width="2.5" stroke-dasharray="4 3"/>' + hinweis(140, 268, 206, Y + 14, "ansatz", 170)) },
-    { text: { de: "Den Ersteinsatz in das Röhrchen stecken: beim Labret den Stab von hinten, die Platte bleibt hinten.",
-        en: "Insert the initial jewelry into the tube: with a labret, the post goes in from the back and the disc stays at the back.",
-        es: "Introduce la joya inicial en el tubo: en el labret, la barra entra por detrás y el disco se queda detrás." },
-      svg: bild(lappen(true) + kanuele(390, false, 206, 382) + bewegt(80, 0, labret(382, false)) + pfeil(530, 480, 230)) },
+    { text: { de: "Den Ersteinsatz nur 2–3 mm in das Röhrchen stecken: beim Labret den Stab von hinten, die Platte bleibt hinten.",
+        en: "Insert the initial jewelry only 2–3 mm into the tube: with a labret, the post goes in from the back and the disc stays at the back.",
+        es: "Introduce la joya inicial solo 2–3 mm en el tubo: en el labret, la barra entra por detrás y el disco se queda detrás." },
+      svg: bild(lappen(true) + kanuele(390, false, 206, 382) + bewegt(80, 0, labret(370, false)) + pfeil(530, 480, 230) + hinweis(470, 300, 376, Y + 6, "nur23", 190)) },
     { text: { de: "Den Schmuck durch den Stichkanal drücken, nicht ziehen. Das Röhrchen wird dabei vorn hinausgeschoben. Den Kunden dabei ausatmen lassen.",
         en: "Push the jewelry through the channel, do not pull. This pushes the tube out at the front. Have the client breathe out while you do it.",
         es: "Empuja la joya a través del canal, no tires. Así el tubo sale por delante. Pide al cliente que espire mientras lo haces." },
-      svg: bild(lappen(true) + bewegt(0, -124, kanuele(390, false, 206, 382)) + bewegt(0, -124, labret(382, false)) + pfeil(480, 420, 230)) },
+      svg: bild(lappen(true) + bewegt(0, -112, kanuele(390, false, 206, 382)) + bewegt(0, -112, labret(370, false)) + pfeil(480, 420, 230)) },
     { text: { de: "Das Röhrchen vorsichtig vom Schmuck abziehen. Der Stab steckt jetzt im Stichkanal, die Platte liegt hinten an.",
         en: "Carefully pull the tube off the jewelry. The post now sits in the channel, with the disc resting at the back.",
         es: "Retira con cuidado el tubo de la joya. La barra ya está en el canal y el disco queda apoyado detrás." },
-      svg: bild(lappen(true) + '<g class="a-weg-links">' + kanuele(390, false, 82, 258) + "</g>" + labret(258, false)) },
+      svg: bild(lappen(true) + '<g class="a-weg-links">' + kanuele(390, false, 94, 270) + "</g>" + labret(258, false)) },
     { text: { de: "Die Klemmzange vorn kurz vor dem Gewinde ansetzen, damit sich der Stab nicht mitdreht. Dann die Kugel mit dem Kugelgreifer aufschrauben, bis sie fest sitzt.",
         en: "Place the forceps at the front, just before the thread, so the post does not turn. Then screw the ball on with the ball grabber until it is tight.",
         es: "Coloca las pinzas delante, justo antes de la rosca, para que la barra no gire. Después enrosca la bola con el agarrador de bolas hasta que quede firme." },
@@ -363,9 +364,9 @@ window.KURS = window.KURS || { module: [] };
         en: "Open the ball closure ring with the ring-opening pliers and take out the ball. From now on, the ring stays open.",
         es: "Abre el aro de bola cautiva con los alicates de apertura y saca la bola. A partir de ahora, el aro queda abierto." },
       svg: bildRand(randKanal() + kanuele(390, false, 206, 382) + bcrVorn(520, 120, true) + zange(500, 168, true) + hinweis(470, 330, 520, 162, "ringOffen", 200)) },
-    { text: { de: "Ein Ende des offenen Rings hinten in das Röhrchen stecken und mit einer leichten Drehung einführen. Das Röhrchen wird dabei vorn hinausgeschoben.",
-        en: "Put one end of the open ring into the tube at the back and guide it in with a slight twist. This pushes the tube out at the front.",
-        es: "Mete un extremo del aro abierto en el tubo por detrás e introdúcelo con un ligero giro. Así el tubo sale por delante." },
+    { text: { de: "Ein Ende des offenen Rings nur 2–3 mm hinten in das Röhrchen stecken und mit einer leichten Drehung nachschieben. Das Röhrchen wird dabei vorn hinausgeschoben.",
+        en: "Put one end of the open ring only 2–3 mm into the tube at the back and push it after with a slight twist. This pushes the tube out at the front.",
+        es: "Mete un extremo del aro abierto solo 2–3 mm en el tubo por detrás y empújalo con un ligero giro. Así el tubo sale por delante." },
       svg: bildRand(randKanal() + bewegt(0, -110, kanuele(390, false, 206, 382)) + ringBogen("a-zeichnen", true) + drehpfeil(392, 120) + hinweis(510, 300, 396, 132, "leichteDrehung", 190)) },
     { text: { de: "Röhrchen abziehen. Den Ring mit der Ringöffnungszange wieder leicht öffnen, damit die Kugel Platz hat.",
         en: "Remove the tube. Open the ring slightly again with the ring-opening pliers so the ball fits.",
@@ -396,7 +397,7 @@ window.KURS = window.KURS || { module: [] };
     return '<g' + (klasse ? ' class="' + klasse + '"' : "") + ' transform="translate(' + q[0].toFixed(1) + ' ' + q[1].toFixed(1) + ') rotate(' + IWIN.toFixed(1) + ')">' +
       '<rect x="' + von + '" y="-6" width="' + (bis - von) + '" height="12" rx="5" fill="url(#aUeberzug)" stroke="#4F9C7C" stroke-width="1.2"/><rect x="' + (von + 5) + '" y="-4" width="' + (bis - von - 10) + '" height="2" rx="1" fill="#FFFFFF" opacity=".8"/></g>';
   }
-  var R1 = function (k) { return roehrchenLang(IN1, -105, 30, k); };
+  var R1 = function (k) { return roehrchenLang(IN1, -80, 30, k); };
   var R2W = [0, 0], R2 = function (k) { return roehrchenLang(IN2, -30, 105, k); };
   function roehrchenSchraeg(q, klasse) {
     // Röhrchen liegt im Stichkanal in Richtung des Stabs
@@ -414,6 +415,7 @@ window.KURS = window.KURS || { module: [] };
   // Stab mit Überlänge: ragt oben und unten deutlich über die Stichkanäle hinaus (Platz für die Schwellung)
   var UE = 22, SL = ILEN + UE + 32, S1 = [IN1[0] + UX * 30, IN1[1] + UY * 30], S2 = [IN2[0] + UX * 32, IN2[1] + UY * 32];
   var ENDE = [IN2[0] + UX * 32, IN2[1] + UY * 32], ANF = [ENDE[0] - UX * SL, ENDE[1] - UY * SL];
+  var T5 = [IN1[0] - UX * 68, IN1[1] - UY * 68], T6 = [IN1[0] + UX * 17, IN1[1] + UY * 17], T7 = [IN2[0] - UX * 18, IN2[1] - UY * 18];
   function strich(q) {
     // kurzer Strich mit dem Markierstift in Stichrichtung durch den Punkt
     return '<line class="a-zeichnen" style="--a-laenge:44" stroke-dasharray="44" x1="' + (q[0] - UX * 22).toFixed(1) + '" y1="' + (q[1] - UY * 22).toFixed(1) + '" x2="' + (q[0] + UX * 22).toFixed(1) + '" y2="' + (q[1] + UY * 22).toFixed(1) + '" stroke="#5B3F9A" stroke-width="2.6" stroke-linecap="round"/>';
@@ -436,18 +438,22 @@ window.KURS = window.KURS || { module: [] };
         en: "Pierce the lower point the same way. Now there is a tube in both channels, both on one line.",
         es: "Perfora el punto de abajo de la misma forma. Ahora hay un tubo en cada canal, los dos en una línea." },
       svg: bildVorn(anzeichnung() + R1() + '<g class="a-erscheinen">' + R2() + "</g>" + abwurf(true) + hinweis(530, 220, IN2[0] + 6, IN2[1] + 4, "g16unten", 170)) },
-    { text: { de: "Vorher auf einer Seite schon eine Kugel aufdrehen. Das freie Ende in das erste Röhrchen einführen und den Stab hindurchziehen.",
-        en: "Screw one ball onto one end beforehand. Insert the free end into the first tube and pull the bar through.",
-        es: "Antes, enrosca ya una bola en un extremo. Introduce el extremo libre en el primer tubo y tira de la barra a través de él." },
-      svg: bildVorn(R1() + R2() + schieben(-UX * 150, -UY * 150, stab(S1, SL, "links")) + hinweis(150, 230, S1[0] - UX * SL - 6, S1[1] - UY * SL, "kugelSchonDrauf", 190) + hinweis(150, 160, IN1[0] + 4, IN1[1] + 6, "roehrchen1", 150)) },
-    { text: { de: "Das erste Röhrchen abmachen. Der Stab steckt jetzt im oberen Stichkanal.",
-        en: "Take off the first tube. The bar now sits in the upper channel.",
-        es: "Quita el primer tubo. La barra ya está en el canal de arriba." },
-      svg: bildVorn(R2() + stab(S1, SL, "links") + R1("a-weg")) },
-    { text: { de: "Den Stab in das zweite Röhrchen einführen und komplett durch das ganze Röhrchen schieben. Das Röhrchen gleitet dabei nach außen vom Stab.",
-        en: "Insert the bar into the second tube and push it all the way through the whole tube. The tube slides outward off the bar.",
-        es: "Introduce la barra en el segundo tubo y empújala a través de todo el tubo. El tubo se desliza hacia fuera de la barra." },
-      svg: bildVorn(schieben(-UX * 50, -UY * 50, roehrchenLang([IN2[0] + UX * 50, IN2[1] + UY * 50], -30, 105)) + schieben(-(S2[0] - S1[0]), -(S2[1] - S1[1]), stab(S2, SL, "links")) + hinweis(530, 230, IN2[0] + 6, IN2[1] + 4, "roehrchen2", 150)) },
+    { text: { de: "Vorher auf einer Seite schon eine Kugel aufdrehen. Das freie Ende nur 2–3 mm in das erste Röhrchen stecken.",
+        en: "Screw one ball onto one end beforehand. Insert the free end only 2–3 mm into the first tube.",
+        es: "Antes, enrosca ya una bola en un extremo. Introduce el extremo libre solo 2–3 mm en el primer tubo." },
+      svg: bildVorn(R1() + R2() + schieben(-UX * 60, -UY * 60, stab(T5, SL, "links")) + hinweis(150, 250, T5[0] - UX * SL - 6, T5[1] - UY * SL, "kugelSchonDrauf", 190) + hinweis(150, 170, T5[0] - 4, T5[1] + 4, "nur23", 190)) },
+    { text: { de: "Den Stab schieben: Er schiebt das erste Röhrchen durch den oberen Stichkanal vor sich her. Ist das Röhrchen draußen, wird es abgemacht.",
+        en: "Push the bar: it pushes the first tube ahead of it through the upper channel. Once the tube is out, take it off.",
+        es: "Empuja la barra: empuja el primer tubo por delante a través del canal de arriba. Cuando el tubo ha salido, se quita." },
+      svg: bildVorn(R2() + schieben(-UX * 85, -UY * 85, roehrchenLang([IN1[0] + UX * 85, IN1[1] + UY * 85], -80, 30, "a-weg-spaet") + stab(T6, SL, "links")) + hinweis(150, 160, IN1[0] + 4, IN1[1] + 6, "roehrchen1", 150)) },
+    { text: { de: "Das freie Ende wieder nur 2–3 mm in das zweite Röhrchen stecken.",
+        en: "Again, insert the free end only 2–3 mm into the second tube.",
+        es: "De nuevo, introduce el extremo libre solo 2–3 mm en el segundo tubo." },
+      svg: bildVorn(R2() + schieben(-UX * 105, -UY * 105, stab(T7, SL, "links")) + hinweis(530, 240, T7[0] + 4, T7[1] + 6, "nur23", 190)) },
+    { text: { de: "Den Stab weiterschieben: Er schiebt das zweite Röhrchen komplett durch den unteren Stichkanal nach außen, bis der Stab richtig sitzt.",
+        en: "Keep pushing the bar: it pushes the second tube all the way out through the lower channel until the bar sits correctly.",
+        es: "Sigue empujando la barra: empuja el segundo tubo por completo hacia fuera a través del canal de abajo hasta que la barra queda bien colocada." },
+      svg: bildVorn(schieben(-UX * 50, -UY * 50, roehrchenLang([IN2[0] + UX * 50, IN2[1] + UY * 50], -30, 105) + stab(ENDE, SL, "links")) + hinweis(530, 240, IN2[0] + 6, IN2[1] + 4, "roehrchen2", 150)) },
     { text: { de: "Das zweite Röhrchen abmachen und nur noch die zweite Kugel auf das freie Ende drehen.",
         en: "Take off the second tube and just screw the second ball onto the free end.",
         es: "Quita el segundo tubo y solo queda enroscar la segunda bola en el extremo libre." },

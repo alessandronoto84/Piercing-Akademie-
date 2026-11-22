@@ -64,7 +64,7 @@ KURS.module.push({
           "Pull out the cannula; the plastic sheath stays in the piercing channel.",
           { nr: "13a", text: "Drop the steel needle straight into the sharps container." },
           "Trim the plastic sheath slightly with scissors so the jewelry goes in more easily.",
-          "Insert the initial jewelry into the plastic sheath.",
+          "Insert the initial jewelry only 2–3 mm into the plastic sheath. The jewelry then pushes the tube ahead of it through the channel.",
           "Push it through the piercing channel, don’t pull, or the jewelry may slip off. This is painful: have the client breathe out while you do it."
         ] },
         { typ: "grafik", id: "stich" }
