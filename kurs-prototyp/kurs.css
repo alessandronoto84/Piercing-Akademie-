@@ -485,3 +485,8 @@ section.k-kopf,section.k-lektion,.k-layout section{padding-block:0}
 .a-weg-unten{animation:aWegU 1.3s .5s ease-in forwards}
 @keyframes aWegU{to{transform:translate(-30px,140px) rotate(-25deg);opacity:0}}
 @media (prefers-reduced-motion:reduce){.a-bewegt{animation:none;transform:translateX(var(--a-nach))}.a-weg,.a-weg-links,.a-weg-unten{animation:none;opacity:0}.a-fallen{animation:none;transform:translateY(120px);opacity:.15}}
+
+.a-erscheinen{animation:aErsch 1s .3s ease both}@keyframes aErsch{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:none}}
+.a-erscheinen{transform-box:fill-box;transform-origin:center}
+.a-zeichnen{animation:aZeichnen 2s .6s ease forwards;stroke-dashoffset:var(--a-laenge)}
+@keyframes aZeichnen{to{stroke-dashoffset:0}}
