@@ -391,6 +391,13 @@ window.KURS = window.KURS || { module: [] };
   }
   var IDX = (IN2[0] - IN1[0]), IDY = (IN2[1] - IN1[1]), ILEN = Math.sqrt(IDX * IDX + IDY * IDY), UX = IDX / ILEN, UY = IDY / ILEN;
   var IWIN = Math.atan2(IDY, IDX) * 180 / Math.PI;
+  function roehrchenLang(q, von, bis, klasse) {
+    // Kunststoffröhrchen in voller Länge (so lang wie die Nadel), Ansatz bereits abgeschnitten; von/bis entlang der Stabrichtung
+    return '<g' + (klasse ? ' class="' + klasse + '"' : "") + ' transform="translate(' + q[0].toFixed(1) + ' ' + q[1].toFixed(1) + ') rotate(' + IWIN.toFixed(1) + ')">' +
+      '<rect x="' + von + '" y="-6" width="' + (bis - von) + '" height="12" rx="5" fill="url(#aUeberzug)" stroke="#4F9C7C" stroke-width="1.2"/><rect x="' + (von + 5) + '" y="-4" width="' + (bis - von - 10) + '" height="2" rx="1" fill="#FFFFFF" opacity=".8"/></g>';
+  }
+  var R1 = function (k) { return roehrchenLang(IN1, -105, 30, k); };
+  var R2W = [0, 0], R2 = function (k) { return roehrchenLang(IN2, -30, 105, k); };
   function roehrchenSchraeg(q, klasse) {
     // Röhrchen liegt im Stichkanal in Richtung des Stabs
     return '<g' + (klasse ? ' class="' + klasse + '"' : "") + ' transform="translate(' + q[0] + ' ' + q[1] + ') rotate(' + IWIN.toFixed(1) + ')">' +
@@ -424,27 +431,27 @@ window.KURS = window.KURS || { module: [] };
     { text: { de: "Oben entlang des Strichs mit der 16G-Kanüle freihand stechen. Die Nadel kommt sofort in den Abwurf, das Röhrchen bleibt im Stichkanal.",
         en: "Pierce the upper point freehand along the line with the 16G cannula. The needle goes straight into the sharps container and the tube stays in the channel.",
         es: "Perfora el punto de arriba a mano alzada siguiendo la línea con la cánula 16G. La aguja va directa al contenedor y el tubo se queda en el canal." },
-      svg: bildVorn(anzeichnung() + '<g class="a-erscheinen">' + roehrchenSchraeg(IN1) + "</g>" + abwurf(true) + hinweis(150, 160, IN1[0] - 6, IN1[1] + 4, "g16oben", 170)) },
+      svg: bildVorn(anzeichnung() + '<g class="a-erscheinen">' + R1() + "</g>" + abwurf(true) + hinweis(150, 160, IN1[0] - 6, IN1[1] + 4, "g16oben", 170)) },
     { text: { de: "Unten genauso stechen. Jetzt steckt in beiden Stichkanälen ein Röhrchen, beide auf einer Linie.",
         en: "Pierce the lower point the same way. Now there is a tube in both channels, both on one line.",
         es: "Perfora el punto de abajo de la misma forma. Ahora hay un tubo en cada canal, los dos en una línea." },
-      svg: bildVorn(anzeichnung() + roehrchenSchraeg(IN1) + '<g class="a-erscheinen">' + roehrchenSchraeg(IN2) + "</g>" + abwurf(true) + hinweis(530, 220, IN2[0] + 6, IN2[1] + 4, "g16unten", 170)) },
+      svg: bildVorn(anzeichnung() + R1() + '<g class="a-erscheinen">' + R2() + "</g>" + abwurf(true) + hinweis(530, 220, IN2[0] + 6, IN2[1] + 4, "g16unten", 170)) },
     { text: { de: "Vorher auf einer Seite schon eine Kugel aufdrehen. Das freie Ende in das erste Röhrchen einführen und den Stab hindurchziehen.",
         en: "Screw one ball onto one end beforehand. Insert the free end into the first tube and pull the bar through.",
         es: "Antes, enrosca ya una bola en un extremo. Introduce el extremo libre en el primer tubo y tira de la barra a través de él." },
-      svg: bildVorn(roehrchenSchraeg(IN1) + roehrchenSchraeg(IN2) + schieben(-UX * 90, -UY * 90, stab(S1, SL, "links")) + hinweis(150, 230, S1[0] - UX * SL - 6, S1[1] - UY * SL, "kugelSchonDrauf", 190) + hinweis(150, 160, IN1[0] + 4, IN1[1] + 6, "roehrchen1", 150)) },
+      svg: bildVorn(R1() + R2() + schieben(-UX * 150, -UY * 150, stab(S1, SL, "links")) + hinweis(150, 230, S1[0] - UX * SL - 6, S1[1] - UY * SL, "kugelSchonDrauf", 190) + hinweis(150, 160, IN1[0] + 4, IN1[1] + 6, "roehrchen1", 150)) },
     { text: { de: "Das erste Röhrchen abmachen. Der Stab steckt jetzt im oberen Stichkanal.",
         en: "Take off the first tube. The bar now sits in the upper channel.",
         es: "Quita el primer tubo. La barra ya está en el canal de arriba." },
-      svg: bildVorn(roehrchenSchraeg(IN2) + stab(S1, SL, "links") + '<g class="a-weg-links">' + roehrchenSchraeg([IN1[0] + UX * 30, IN1[1] + UY * 30]) + "</g>") },
-    { text: { de: "Den Stab in das zweite Röhrchen einführen und komplett durch das ganze Röhrchen ziehen.",
-        en: "Insert the bar into the second tube and pull it all the way through the whole tube.",
-        es: "Introduce la barra en el segundo tubo y tira de ella a través de todo el tubo." },
-      svg: bildVorn(roehrchenSchraeg(IN2) + schieben(-(S2[0] - S1[0]), -(S2[1] - S1[1]), stab(S2, SL, "links")) + hinweis(530, 230, IN2[0] + 6, IN2[1] + 4, "roehrchen2", 150)) },
+      svg: bildVorn(R2() + stab(S1, SL, "links") + R1("a-weg")) },
+    { text: { de: "Den Stab in das zweite Röhrchen einführen und komplett durch das ganze Röhrchen schieben. Das Röhrchen gleitet dabei nach außen vom Stab.",
+        en: "Insert the bar into the second tube and push it all the way through the whole tube. The tube slides outward off the bar.",
+        es: "Introduce la barra en el segundo tubo y empújala a través de todo el tubo. El tubo se desliza hacia fuera de la barra." },
+      svg: bildVorn(schieben(-UX * 50, -UY * 50, roehrchenLang([IN2[0] + UX * 50, IN2[1] + UY * 50], -30, 105)) + schieben(-(S2[0] - S1[0]), -(S2[1] - S1[1]), stab(S2, SL, "links")) + hinweis(530, 230, IN2[0] + 6, IN2[1] + 4, "roehrchen2", 150)) },
     { text: { de: "Das zweite Röhrchen abmachen und nur noch die zweite Kugel auf das freie Ende drehen.",
         en: "Take off the second tube and just screw the second ball onto the free end.",
         es: "Quita el segundo tubo y solo queda enroscar la segunda bola en el extremo libre." },
-      svg: bildVorn(stab(ENDE, SL, "links") + '<g class="a-weg-unten">' + roehrchenSchraeg(IN2) + "</g>" + bewegt(40, 0, kugelVorn(ENDE[0] + 8, ENDE[1] + 2.4, 9)) + drehpfeil(ENDE[0] + 10, ENDE[1] - 18) + hinweis(530, 260, ENDE[0] + 8, ENDE[1] + 10, "zweiteKugel", 170)) },
+      svg: bildVorn(stab(ENDE, SL, "links") + roehrchenLang([IN2[0] + UX * 50, IN2[1] + UY * 50], -30, 105, "a-weg") + bewegt(40, 0, kugelVorn(ENDE[0] + 8, ENDE[1] + 2.4, 9)) + drehpfeil(ENDE[0] + 10, ENDE[1] - 18) + hinweis(530, 260, ENDE[0] + 8, ENDE[1] + 10, "zweiteKugel", 170)) },
     { text: { de: "Fertig: Der Stab liegt gerade und hat an beiden Seiten Überlänge, damit der Knorpel anschwellen kann, ohne eingeengt zu werden.",
         en: "Done: the bar lies straight and has extra length on both sides so the cartilage can swell without being constricted.",
         es: "Listo: la barra queda recta y tiene longitud extra a ambos lados para que el cartílago pueda hincharse sin quedar oprimido." },
