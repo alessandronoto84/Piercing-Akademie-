@@ -73,7 +73,7 @@ const T = {
 };
 // „das Tragus-Piercing“, „das Upper-Lobe-Piercing“ (im Modultext heißt es „der Tragus“, deshalb nie „das Tragus“)
 function artikelDe(n) {
-  return /^(Lippenbändchen|Septum|Industrial|Allergiepiercing|Snug|Conch|Daith|Labret|Eskimo|Cheek|Surface|Frenulum|Pubic|Guiche|Christina|Upper Lobe|Lobe|Tragus|Anti-Tragus|Helix|Rook|Bridge|Hafada|Dydoe|Prinz Albert)/.test(n) ? "das " + (/piercing/i.test(n) ? n : n.replace(/ /g, "-") + "-Piercing")
+  return /^(Lippenbändchen|Septum|Industrial|Allergiepiercing|Snug|Conch|Daith|Labret|Eskimo|Ashley|Cheek|Surface|Frenulum|Pubic|Guiche|Christina|Upper Lobe|Lobe|Tragus|Anti-Tragus|Helix|Rook|Bridge|Hafada|Dydoe|Prinz Albert)/.test(n) ? "das " + (/piercing/i.test(n) ? n : n.replace(/ /g, "-") + "-Piercing")
     : ({ Zunge: "das Zungenpiercing", Augenbraue: "das Augenbrauenpiercing", Bauchnabel: "das Bauchnabelpiercing", Brustwarze: "das Brustwarzenpiercing", "Nase (Nostril)": "das Nostril", Klitorisvorhaut: "das Klitorisvorhautpiercing", Schamlippe: "das Schamlippenpiercing" })[n] || "das Piercing „" + n + "“";
 }
 

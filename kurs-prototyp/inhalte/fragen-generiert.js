@@ -447,25 +447,25 @@ KURS.lektionsfragen = {
    "S. 86"
   ],
   [
-   "Welcher Schmuck ist laut Datenblatt ein passender Ersteinsatz für das Eskimo-Piercing?",
+   "Welcher Schmuck ist laut Datenblatt ein passender Ersteinsatz für das Ashley-Piercing?",
    [
     "Barbell",
     "Hufeisen (Threaded Ring)",
     "BCR (Klemmkugelring)",
     "Dermal Anchor"
    ],
-   "Datenblatt Eskimo: Ersteinsatz Barbell, Banane; Kanüle 18G; Snaptile, Gazeklemme, Freihand.",
+   "Datenblatt Ashley: Ersteinsatz Barbell, Banane; Kanüle 18G; Snaptile, Gazeklemme, Freihand.",
    "S. 93"
   ],
   [
-   "Womit wird das Eskimo-Piercing laut Datenblatt gestochen?",
+   "Womit wird das Ashley-Piercing laut Datenblatt gestochen?",
    [
     "18G-Kanüle",
     "14G-Kanüle",
     "Biopsiestanze (Punch)",
     "20G-Kanüle"
    ],
-   "Datenblatt Eskimo: Ersteinsatz Barbell, Banane; Kanüle 18G; Snaptile, Gazeklemme, Freihand.",
+   "Datenblatt Ashley: Ersteinsatz Barbell, Banane; Kanüle 18G; Snaptile, Gazeklemme, Freihand.",
    "S. 93"
   ]
  ],

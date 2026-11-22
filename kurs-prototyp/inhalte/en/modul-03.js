@@ -66,7 +66,7 @@ KURS.module.push({
           ["Eyebrow", "On the inner side, nerves and vessels emerge (numbness, bleeding)", "Only pierce in the outer third of the eyebrow"],
           ["Cheek", "Important arteries and nerves, risk of disfigurement; dimples may remain", "Only by professional piercers; refuse as a beginner"],
           ["Bridge", "Too deep: pressure on nerve pathways; too shallow: growing out", "Refuse as a beginner"],
-          ["Eskimo", "Tearing or permanent sinking-in of the lip", "Refuse as a beginner; do not pierce into the vermilion"]
+          ["Ashley", "Tearing or permanent sinking-in of the lip", "Refuse as a beginner; do not pierce into the vermilion"]
         ] },
         { typ: "praxis", text: "Saying no to a risky request is professional. It is better to recommend an experienced colleague to a client than to pierce something you have not safely mastered." }
       ],

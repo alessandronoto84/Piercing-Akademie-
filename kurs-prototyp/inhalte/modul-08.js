@@ -116,16 +116,16 @@ window.KURS = window.KURS || { module: [] };
         ]
       },
       {
-        titel: "Lippe: Labret, Medusa und Eskimo",
+        titel: "Lippe: Labret, Medusa und Ashley",
         seite: "S. 86, 93",
         inhalt: [
           db("Labret", "Im engeren Sinn ein Piercing der Unterlippe; an der Oberlippe heißt es Medusa (mittig im Philtrum, der Rinne unter der Nase) bzw. Madonna oder Monroe (seitlich versetzt). Mehr als 3 mm Abstand zum Lippenrot.", "Labret, Hufeisen", "18G", "Snaptile, Gazeklemme", "", "S. 86"),
-          db("Eskimo", "Auch vertikales Labret. Senkrecht durch die Mitte der Unterlippe: Eintritt oben auf der Lippe, Austritt unterhalb der Lippe, sodass eine Kugel oben auf der Lippe sitzt. Gestochen wird von oben nach unten. Falsch gestochen kann die Lippe einreißen oder dauerhaft einfallen.", "Barbell, Banane", "18G", "Snaptile, Gazeklemme, Freihand", "Nur für erfahrene Piercer. Als Lernender stichst du das Eskimo nicht und stichst nicht ins Lippenrot.", "S. 93")
+          db("Ashley", "Auch vertikales Labret; im Kursbuch „Eskimo“. Senkrecht durch die Mitte der Unterlippe: Eintritt oben auf der Lippe, Austritt unterhalb der Lippe, sodass eine Kugel oben auf der Lippe sitzt. Gestochen wird von oben nach unten. Falsch gestochen kann die Lippe einreißen oder dauerhaft einfallen.", "Barbell, Banane", "18G", "Snaptile, Gazeklemme, Freihand", "Nur für erfahrene Piercer. Als Lernender stichst du das Ashley nicht und stichst nicht ins Lippenrot.", "S. 93")
         ],
         fragen: [
           ["Wie viel Abstand hält ein Labret-Piercing zum Lippenrot?", ["Mehr als 3 mm", "Genau 1 mm", "Kein Abstand, direkt am Lippenrot", "Mehr als 1 cm"], "Datenblatt Labret.", "S. 86"],
-          ["Wie heißt ein Piercing mittig in der Oberlippe, im Philtrum?", ["Medusa", "Monroe", "Smiley", "Eskimo"], "Labret im engeren Sinn ist die Unterlippe.", "S. 86"],
-          ["Was kann ein falsch gestochenes Eskimo verursachen?", ["Einreißen oder dauerhaftes Einfallen der Lippe", "Druck auf Nervenbahnen der Stirn", "Schäden am Zungenbändchen", "Eine Perichondritis"], "Als Anfänger ablehnen.", "S. 93"]
+          ["Wie heißt ein Piercing mittig in der Oberlippe, im Philtrum?", ["Medusa", "Monroe", "Smiley", "Ashley"], "Labret im engeren Sinn ist die Unterlippe.", "S. 86"],
+          ["Was kann ein falsch gestochenes Ashley-Piercing verursachen?", ["Einreißen oder dauerhaftes Einfallen der Lippe", "Druck auf Nervenbahnen der Stirn", "Schäden am Zungenbändchen", "Eine Perichondritis"], "Als Anfänger ablehnen.", "S. 93"]
         ]
       },
       {

@@ -116,16 +116,16 @@ window.KURS = window.KURS || { module: [] };
         ]
       },
       {
-        titel: "Labio: Labret, Medusa y Eskimo",
+        titel: "Labio: Labret, Medusa y Ashley",
         seite: "S. 86, 93",
         inhalt: [
           db("Labret", "En sentido estricto, un piercing del labio inferior; en el labio superior se llama Medusa (en el centro del filtrum, el surco bajo la nariz) o Madonna o Monroe (desplazado hacia un lado). A más de 3 mm del borde bermellón.", "labret, herradura (circular barbell)", "18G", "Snaptile, pinza de gasa", "", "S. 86"),
-          db("Eskimo", "También llamado labret vertical. En vertical por el centro del labio inferior: entrada en la parte superior del labio y salida por debajo del labio, de modo que una bola queda sobre el labio. Se perfora de arriba abajo. Si se perfora mal, el labio puede desgarrarse o hundirse de forma permanente.", "barbell, barbell curvo (banana)", "18G", "Snaptile, pinza de gasa, a mano alzada", "Solo para piercers con experiencia. Como aprendiz no perforas el Eskimo ni perforas el bermellón.", "S. 93")
+          db("Ashley", "También llamado labret vertical; en el libro del curso, «Eskimo». En vertical por el centro del labio inferior: entrada en la parte superior del labio y salida por debajo del labio, de modo que una bola queda sobre el labio. Se perfora de arriba abajo. Si se perfora mal, el labio puede desgarrarse o hundirse de forma permanente.", "barbell, barbell curvo (banana)", "18G", "Snaptile, pinza de gasa, a mano alzada", "Solo para piercers con experiencia. Como aprendiz no perforas el Ashley ni perforas el bermellón.", "S. 93")
         ],
         fragen: [
           ["¿A qué distancia del borde bermellón se coloca un Labret?", ["A más de 3 mm", "Exactamente a 1 mm", "Sin distancia, en el mismo bermellón", "A más de 1 cm"], "Ficha técnica del Labret.", "S. 86"],
-          ["¿Cómo se llama un piercing en el centro del labio superior, en el filtrum?", ["Medusa", "Monroe", "Smiley", "Eskimo"], "En sentido estricto, el Labret se hace en el labio inferior.", "S. 86"],
-          ["¿Qué puede causar un Eskimo mal perforado?", ["Desgarro o hundimiento permanente del labio", "Presión sobre vías nerviosas de la frente", "Daños en el frenillo lingual", "Una pericondritis"], "Rechazarlo como principiante.", "S. 93"]
+          ["¿Cómo se llama un piercing en el centro del labio superior, en el filtrum?", ["Medusa", "Monroe", "Smiley", "Ashley"], "En sentido estricto, el Labret se hace en el labio inferior.", "S. 86"],
+          ["¿Qué puede causar un Ashley mal perforado?", ["Desgarro o hundimiento permanente del labio", "Presión sobre vías nerviosas de la frente", "Daños en el frenillo lingual", "Una pericondritis"], "Rechazarlo como principiante.", "S. 93"]
         ]
       },
       {

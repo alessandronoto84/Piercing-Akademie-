@@ -531,7 +531,7 @@ ONLINE_KURS = [
     ('<li>Rook und Daith</li>', '<li>Rook and daith</li>', '<li>Rook y daith</li>'),
     ('<li>Nase: Nostril und Septum</li>', '<li>Nose: nostril and septum</li>', '<li>Nariz: nostril y septum</li>'),
     ('<li>Augenbraue und Bridge</li>', '<li>Eyebrow and bridge</li>', '<li>Ceja y bridge</li>'),
-    ('<li>Lippe: Labret, Medusa und Eskimo</li>', '<li>Lip: labret, medusa and eskimo</li>', '<li>Labio: labret, medusa y esquimal</li>'),
+    ('<li>Lippe: Labret, Medusa und Ashley</li>', '<li>Lip: labret, medusa and Ashley</li>', '<li>Labio: labret, medusa y Ashley</li>'),
     ('<li>Lippenbändchen und Zunge</li>', '<li>Lip frenulum and tongue</li>', '<li>Frenillo labial y lengua</li>'),
     ('<li>Cheek</li>', '<li>Cheek</li>', '<li>Mejilla</li>'),
     ('<li>Bauchnabel</li>', '<li>Navel</li>', '<li>Ombligo</li>'),

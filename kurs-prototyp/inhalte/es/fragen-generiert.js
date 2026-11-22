@@ -447,25 +447,25 @@ KURS.lektionsfragen = {
    "S. 86"
   ],
   [
-   "¿Qué joya indica la ficha técnica «Eskimo» como joya inicial adecuada?",
+   "¿Qué joya indica la ficha técnica «Ashley» como joya inicial adecuada?",
    [
     "Barbell",
     "Herradura (circular barbell)",
     "BCR (aro de bola cautiva)",
     "Dermal anchor"
    ],
-   "Ficha técnica Eskimo: joya inicial barbell, barbell curvo (banana); cánula 18G; Snaptile, pinza de gasa, a mano alzada.",
+   "Ficha técnica Ashley: joya inicial barbell, barbell curvo (banana); cánula 18G; Snaptile, pinza de gasa, a mano alzada.",
    "S. 93"
   ],
   [
-   "Según la ficha técnica «Eskimo», ¿con qué se perfora?",
+   "Según la ficha técnica «Ashley», ¿con qué se perfora?",
    [
     "Cánula 18G",
     "Cánula 14G",
     "Punch de biopsia",
     "Cánula 20G"
    ],
-   "Ficha técnica Eskimo: joya inicial barbell, barbell curvo (banana); cánula 18G; Snaptile, pinza de gasa, a mano alzada.",
+   "Ficha técnica Ashley: joya inicial barbell, barbell curvo (banana); cánula 18G; Snaptile, pinza de gasa, a mano alzada.",
    "S. 93"
   ]
  ],

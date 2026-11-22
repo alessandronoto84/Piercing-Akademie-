@@ -447,25 +447,25 @@ KURS.lektionsfragen = {
    "S. 86"
   ],
   [
-   "Which jewelry does the “Eskimo” data sheet list as suitable initial jewelry?",
+   "Which jewelry does the “Ashley” data sheet list as suitable initial jewelry?",
    [
     "Barbell",
     "Horseshoe (circular barbell)",
     "BCR (ball closure ring)",
     "Dermal anchor"
    ],
-   "Eskimo data sheet: initial jewelry barbell, curved barbell (banana); cannula 18G; Snaptile, gauze clamp, freehand.",
+   "Ashley data sheet: initial jewelry barbell, curved barbell (banana); cannula 18G; Snaptile, gauze clamp, freehand.",
    "S. 93"
   ],
   [
-   "What does the “Eskimo” data sheet say you pierce with?",
+   "What does the “Ashley” data sheet say you pierce with?",
    [
     "18G cannula",
     "14G cannula",
     "Biopsy punch",
     "20G cannula"
    ],
-   "Eskimo data sheet: initial jewelry barbell, curved barbell (banana); cannula 18G; Snaptile, gauze clamp, freehand.",
+   "Ashley data sheet: initial jewelry barbell, curved barbell (banana); cannula 18G; Snaptile, gauze clamp, freehand.",
    "S. 93"
   ]
  ],
