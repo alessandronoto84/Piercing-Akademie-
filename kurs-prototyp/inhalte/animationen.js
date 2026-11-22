@@ -196,6 +196,16 @@ window.KURS = window.KURS || { module: [] };
     knorpel: { de: "Knorpel", en: "cartilage", es: "cartílago" },
     ringOeffnen: { de: "Ring öffnen, Kugel heraus", en: "open ring, take out ball", es: "abrir el aro, sacar la bola" },
     kugelRastet: { de: "Kugel rastet fest ein", en: "ball snaps into place", es: "la bola encaja firme" },
+    ringOffen: { de: "Ring bleibt offen", en: "ring stays open", es: "el aro queda abierto" },
+    leichteDrehung: { de: "mit leichter Drehung", en: "with a slight twist", es: "con un ligero giro" },
+    leichtOeffnen: { de: "leicht öffnen", en: "open slightly", es: "abrir un poco" },
+    kugelPinzette: { de: "Kugel mit Pinzette", en: "ball with tweezers", es: "bola con pinzas" },
+    oben: { de: "oben", en: "upper", es: "arriba" },
+    unten: { de: "unten", en: "lower", es: "abajo" },
+    g16oben: { de: "oben: 16G, freihand", en: "upper: 16G, freehand", es: "arriba: 16G, a mano" },
+    g16unten: { de: "unten: 16G, freihand", en: "lower: 16G, freehand", es: "abajo: 16G, a mano" },
+    roehrchen1: { de: "1. Röhrchen", en: "1st tube", es: "1.er tubo" },
+    roehrchen2: { de: "2. Röhrchen", en: "2nd tube", es: "2.º tubo" },
     nahKopf: { de: "nahe dem Kopf", en: "close to the head", es: "cerca de la cabeza" },
     aussenRand: { de: "äußerer Rand", en: "outer rim", es: "borde exterior" },
     gerade: { de: "gerade Verbindung", en: "straight line", es: "línea recta" },
@@ -250,7 +260,7 @@ window.KURS = window.KURS || { module: [] };
 
 
   // ---------- Upper Lobe: drei in einer Reihe (Ansicht von vorn) ----------
-  var UL = [[352, 300], [366, 283], [380, 266]], LOCH = [336, 320];
+  var UL = [[354, 306], [370, 290], [379, 270]], LOCH = [336, 320];
   function messschieber() {
     var x1 = UL[0][0] - 10, y1 = UL[0][1] + 22, x2 = UL[2][0] + 10, y2 = UL[2][1] + 22;
     return '<g filter="url(#aSchatten)" transform="rotate(-50 ' + x1 + ' ' + y1 + ')"><rect x="' + (x1 - 20) + '" y="' + (y1 + 6) + '" width="150" height="12" rx="3" fill="url(#aStahl)" stroke="#6F7984"/>' +
@@ -262,24 +272,24 @@ window.KURS = window.KURS || { module: [] };
   }
   function hubVorn(x, y) { return '<g filter="url(#aSchatten)"><circle cx="' + x + '" cy="' + y + '" r="11" fill="url(#aAnsatz)"/><circle cx="' + x + '" cy="' + y + '" r="4" fill="#E9FBF3"/></g>'; }
   var upperLobe = [
-    { text: { de: "Ansicht von vorn: Neben dem herkömmlichen Ohrloch werden drei Punkte im oberen Ohrläppchen in einer Reihe und in gleichem Abstand angezeichnet.",
-        en: "Front view: next to the standard lobe hole, three points are marked in a row in the upper lobe, evenly spaced.",
-        es: "Vista frontal: junto al agujero habitual del lóbulo se marcan tres puntos en fila en la parte superior del lóbulo, a la misma distancia." },
+    { text: { de: "Ansicht von vorn: Neben dem herkömmlichen Ohrloch werden drei Punkte im oberen Ohrläppchen angezeichnet: in gleichem Abstand und in einem leichten Bogen, der der Rundung des Ohrs folgt.",
+        en: "Front view: next to the standard lobe hole, three points are marked in the upper lobe: evenly spaced and in a gentle curve that follows the rounding of the ear.",
+        es: "Vista frontal: junto al agujero habitual del lóbulo se marcan tres puntos en la parte superior del lóbulo: a la misma distancia y en una ligera curva que sigue el contorno de la oreja." },
       svg: bildVorn(kugelVorn(LOCH[0], LOCH[1], 6) + hinweis(470, 330, LOCH[0] + 8, LOCH[1], "ohrloch", 190) + '<g class="a-erscheinen">' + UL.map(function (q) { return punkt(q[0], q[1]); }).join("") + "</g>") },
-    { text: { de: "Erst nachmessen: Mit dem Messschieber prüfen, ob die Abstände gleich sind und die Punkte auf einer Linie liegen. Gestochen wird erst, wenn alles stimmt.",
-        en: "Measure first: use the caliper to check that the gaps are equal and the points sit on one line. Only pierce once everything is right.",
-        es: "Primero mide: comprueba con el pie de rey que las distancias son iguales y que los puntos están en línea. Solo se perfora cuando todo está bien." },
+    { text: { de: "Erst nachmessen: Mit dem Messschieber prüfen, ob die Abstände gleich sind und der Bogen der Ohrrundung folgt. Gestochen wird erst, wenn alles stimmt.",
+        en: "Measure first: use the caliper to check that the gaps are equal and the curve follows the rounding of the ear. Only pierce once everything is right.",
+        es: "Primero mide: comprueba con el pie de rey que las distancias son iguales y que la curva sigue el contorno de la oreja. Solo se perfora cuando todo está bien." },
       svg: bildVorn(kugelVorn(LOCH[0], LOCH[1], 6) + UL.map(function (q) { return punkt(q[0], q[1]); }).join("") + bewegt(-40, 0, messschieber()) + hinweis(150, 300, UL[1][0] + 20, UL[1][1] + 14, "gleicherAbstand", 180)) },
     { text: { de: "Dann Punkt für Punkt stechen, genau wie beim Lobe: Snaptile, Stich von vorn, Nadel sofort in den Abwurf, Ansatz vorn abschneiden, Labret von hinten, Kugel vorn aufschrauben.",
         en: "Then pierce point by point, exactly like the lobe: Snaptile, pierce from the front, needle straight into the sharps container, cut the hub off at the front, labret from the back, screw the ball on at the front.",
         es: "Después perfora punto por punto, igual que el lóbulo: Snaptile, perforar desde delante, aguja directa al contenedor, cortar el cono delante, labret por detrás y enroscar la bola delante." },
       svg: bildVorn(kugelVorn(LOCH[0], LOCH[1], 6) + kugelVorn(UL[0][0], UL[0][1]) + '<g class="a-erscheinen">' + hubVorn(UL[1][0], UL[1][1]) + "</g>" + punkt(UL[2][0], UL[2][1]) +
         hinweis(150, 250, UL[0][0] - 8, UL[0][1], "fertig1", 150) + hinweis(500, 220, UL[1][0] + 12, UL[1][1] - 4, "dran2", 200)) },
-    { text: { de: "Fertig: drei Labrets in einer geraden Reihe. Von vorn ein Foto machen und die Reihe beurteilen: gleiche Abstände, eine Linie?",
-        en: "Done: three labrets in a straight row. Take a photo from the front and judge the row: equal gaps, one line?",
-        es: "Listo: tres labrets en una fila recta. Haz una foto de frente y valora la fila: ¿distancias iguales, una línea?" },
+    { text: { de: "Fertig: drei Labrets in einem Bogen entlang der Ohrrundung. Von vorn ein Foto machen und die Reihe beurteilen: gleiche Abstände, harmonischer Bogen?",
+        en: "Done: three labrets in a curve along the rounding of the ear. Take a photo from the front and judge the row: equal gaps, a smooth curve?",
+        es: "Listo: tres labrets en una curva que sigue el contorno de la oreja. Haz una foto de frente y valora la fila: ¿distancias iguales, curva armoniosa?" },
       svg: bildVorn(kugelVorn(LOCH[0], LOCH[1], 6) + UL.map(function (q) { return kugelVorn(q[0], q[1]); }).join("") +
-        '<line x1="' + (UL[0][0] - 14) + '" y1="' + (UL[0][1] + 17) + '" x2="' + (UL[2][0] + 14) + '" y2="' + (UL[2][1] - 17) + '" stroke="' + F.gold + '" stroke-width="2" stroke-dasharray="5 5"/>' + haken()) }
+        '<path d="M' + LOCH[0] + ' ' + LOCH[1] + ' Q' + (UL[1][0] + 14) + ' ' + (UL[1][1] + 12) + ' ' + (UL[2][0] + 2) + ' ' + (UL[2][1] - 18) + '" fill="none" stroke="' + F.gold + '" stroke-width="2" stroke-dasharray="5 5"/>' + haken()) }
   ];
 
 
@@ -295,7 +305,7 @@ window.KURS = window.KURS || { module: [] };
     // Ring im Querschnitt um die Ohrkante. Ohne Klasse: fester Ring mit Lücke oben vorn (dort sitzt die Kugel).
     // Mit Klasse „a-zeichnen“: der Ring wird durch den Stichkanal hindurch eingezeichnet.
     var p = function (g) { var w = g * Math.PI / 180; return (RC[0] + RR * Math.cos(w)).toFixed(1) + " " + (RC[1] + RR * Math.sin(w)).toFixed(1); };
-    var d = luecke && !klasse ? "M" + p(238) + " A" + RR + " " + RR + " 0 1 1 " + p(212) : "M" + p(0) + " A" + RR + " " + RR + " 0 1 1 " + p(-0.5);
+    var d = klasse ? "M" + p(10) + " A" + RR + " " + RR + " 0 1 1 " + p(-18) : luecke ? "M" + p(238) + " A" + RR + " " + RR + " 0 1 1 " + p(212) : "M" + p(0) + " A" + RR + " " + RR + " 0 1 1 " + p(-0.5);
     var u = 2 * Math.PI * RR, st = klasse ? ' class="' + klasse + '" stroke-dasharray="' + u + '" style="--a-laenge:' + u + '"' : "";
     return '<path d="' + d + '" fill="none" stroke="#7D8792" stroke-width="9" stroke-linecap="round"' + st + "/>" +
       '<path d="' + d + '" fill="none" stroke="url(#aTitan)" stroke-width="6" stroke-linecap="round"' + st + "/>";
@@ -319,6 +329,15 @@ window.KURS = window.KURS || { module: [] };
   function bildRand(inhalt) {
     return '<svg viewBox="0 0 ' + W + " " + H + '" role="img">' + DEFS + buehne() + beschriftung() + rand() + inhalt + "</svg>";
   }
+  function pinzette(x, y) {
+    // Pinzette hält die Kugel von oben rechts
+    return '<g filter="url(#aSchatten)"><path d="M' + (x + 6) + ' ' + (y - 4) + ' L' + (x + 120) + ' ' + (y - 92) + '" stroke="url(#aStahl)" stroke-width="5" stroke-linecap="round"/>' +
+      '<path d="M' + (x + 9) + ' ' + (y + 3) + ' L' + (x + 130) + ' ' + (y - 80) + '" stroke="url(#aStahl)" stroke-width="5" stroke-linecap="round"/>' +
+      '<path d="M' + (x + 120) + ' ' + (y - 92) + ' L' + (x + 130) + ' ' + (y - 80) + '" stroke="#6F7984" stroke-width="5" stroke-linecap="round"/></g>';
+  }
+  function drehpfeil(x, y) {
+    return '<g fill="none" stroke="' + F.gold + '" stroke-width="3.5" stroke-linecap="round"><path d="M' + (x - 16) + ' ' + y + ' a16 10 0 1 0 32 0"/></g><path d="M' + (x + 16) + ' ' + (y - 8) + ' l3 10 l-10 -2 z" fill="' + F.gold + '"/>';
+  }
   var helix = [
     { text: { de: "Die Ohrkante im Querschnitt, innen der Knorpel. Die Stelle ist markiert (Datenblatt Helix) und mit dem Snaptile fixiert.",
         en: "The ear rim in cross-section, with the cartilage inside. The spot is marked (Helix data sheet) and fixed with the Snaptile.",
@@ -336,18 +355,22 @@ window.KURS = window.KURS || { module: [] };
         en: "At the front, cut off the green hub with scissors so only the tube is left.",
         es: "Delante, corta el cono verde con las tijeras para que solo quede el tubo." },
       svg: bildRand(randKanal() + kanuele(390, false, 200, 382) + ansatzFaellt(200) + schere(214)) },
-    { text: { de: "Den Klemmkugelring mit der Ringöffnungszange vorsichtig öffnen und die Kugel herausnehmen.",
-        en: "Carefully open the ball closure ring with the ring-opening pliers and take out the ball.",
-        es: "Abre con cuidado el aro de bola cautiva con los alicates de apertura y saca la bola." },
-      svg: bildRand(randKanal() + kanuele(390, false, 206, 382) + bcrVorn(520, 120, true) + zange(500, 168, true) + hinweis(470, 330, 520, 162, "ringOeffnen", 210)) },
-    { text: { de: "Ein Ende des Rings hinten in das Röhrchen stecken und durch den Stichkanal schieben. Das Röhrchen wird dabei vorn hinausgedrückt.",
-        en: "Put one end of the ring into the tube at the back and push it through the channel. This pushes the tube out at the front.",
-        es: "Mete un extremo del aro en el tubo por detrás y empújalo por el canal. Así el tubo sale por delante." },
-      svg: bildRand(randKanal() + bewegt(0, -110, kanuele(390, false, 206, 382)) + ringBogen("a-zeichnen", true)) },
-    { text: { de: "Röhrchen abziehen, die Kugel in die Lücke setzen und den Ring mit der Ringschließzange schließen, bis die Kugel fest einrastet.",
-        en: "Remove the tube, put the ball into the gap and close the ring with the ring-closing pliers until the ball snaps firmly into place.",
-        es: "Retira el tubo, coloca la bola en el hueco y cierra el aro con los alicates de cierre hasta que la bola encaje firmemente." },
-      svg: bildRand(ringBogen("", true) + bewegt(-40, 0, kugelVorn(RKUGEL[0], RKUGEL[1], 9)) + zange(480, 96, false) + hinweis(140, 160, RKUGEL[0] - 4, RKUGEL[1] + 6, "kugelRastet", 210)) },
+    { text: { de: "Den Klemmkugelring mit der Ringöffnungszange öffnen und die Kugel herausnehmen. Der Ring bleibt ab jetzt offen.",
+        en: "Open the ball closure ring with the ring-opening pliers and take out the ball. From now on, the ring stays open.",
+        es: "Abre el aro de bola cautiva con los alicates de apertura y saca la bola. A partir de ahora, el aro queda abierto." },
+      svg: bildRand(randKanal() + kanuele(390, false, 206, 382) + bcrVorn(520, 120, true) + zange(500, 168, true) + hinweis(470, 330, 520, 162, "ringOffen", 200)) },
+    { text: { de: "Ein Ende des offenen Rings hinten in das Röhrchen stecken und mit einer leichten Drehung einführen. Das Röhrchen wird dabei vorn hinausgeschoben.",
+        en: "Put one end of the open ring into the tube at the back and guide it in with a slight twist. This pushes the tube out at the front.",
+        es: "Mete un extremo del aro abierto en el tubo por detrás e introdúcelo con un ligero giro. Así el tubo sale por delante." },
+      svg: bildRand(randKanal() + bewegt(0, -110, kanuele(390, false, 206, 382)) + ringBogen("a-zeichnen", true) + drehpfeil(392, 120) + hinweis(510, 300, 396, 132, "leichteDrehung", 190)) },
+    { text: { de: "Röhrchen abziehen. Den Ring mit der Ringöffnungszange wieder leicht öffnen, damit die Kugel Platz hat.",
+        en: "Remove the tube. Open the ring slightly again with the ring-opening pliers so the ball fits.",
+        es: "Retira el tubo. Vuelve a abrir un poco el aro con los alicates de apertura para que quepa la bola." },
+      svg: bildRand('<g transform="translate(-110 0)"><g class="a-weg-links">' + kanuele(390, false, 206, 382) + "</g></g>" + ringBogen("", true) + bewegt(80, 0, zange(RKUGEL[0] - 4, RKUGEL[1] + 4, true)) + hinweis(500, 120, RKUGEL[0] + 6, RKUGEL[1] - 4, "leichtOeffnen", 190)) },
+    { text: { de: "Die Kugel mit der Pinzette in die Lücke setzen. Der Ring hält sie mit seiner Spannung fest.",
+        en: "Use tweezers to place the ball into the gap. The ring holds it firmly with its tension.",
+        es: "Coloca la bola en el hueco con las pinzas. El aro la sujeta con su propia tensión." },
+      svg: bildRand(ringBogen("", true) + bewegt(60, 0, kugelVorn(RKUGEL[0], RKUGEL[1], 9) + pinzette(RKUGEL[0], RKUGEL[1])) + hinweis(140, 230, RKUGEL[0] - 4, RKUGEL[1] + 6, "kugelPinzette", 190)) },
     { text: { de: "Fertig: Der Ring umschließt die Ohrkante, die Kugel sitzt fest. Gestochen wird hier nur ins Silikonohr.",
         en: "Done: the ring wraps around the ear rim and the ball is secure. Here you only pierce the silicone ear.",
         es: "Listo: el aro rodea el borde de la oreja y la bola está firme. Aquí solo se perfora la oreja de silicona." },
@@ -361,31 +384,55 @@ window.KURS = window.KURS || { module: [] };
     return '<g filter="url(#aSchatten)"><line x1="' + x1 + '" y1="' + y1 + '" x2="' + x2 + '" y2="' + y2 + '" stroke="#7D8792" stroke-width="8" stroke-linecap="round"/><line x1="' + x1 + '" y1="' + y1 + '" x2="' + x2 + '" y2="' + y2 + '" stroke="url(#aTitan)" stroke-width="5" stroke-linecap="round"/>' +
       (kugeln ? '<circle cx="' + (x1 - 8) + '" cy="' + (y1 - 2.4) + '" r="9" fill="url(#aKugel)" stroke="#6F7984"/><circle cx="' + (x2 + 8) + '" cy="' + (y2 + 2.4) + '" r="9" fill="url(#aKugel)" stroke="#6F7984"/>' : "") + "</g>";
   }
+  var IDX = (IN2[0] - IN1[0]), IDY = (IN2[1] - IN1[1]), ILEN = Math.sqrt(IDX * IDX + IDY * IDY), UX = IDX / ILEN, UY = IDY / ILEN;
+  var IWIN = Math.atan2(IDY, IDX) * 180 / Math.PI;
+  function roehrchenSchraeg(q, klasse) {
+    // Röhrchen liegt im Stichkanal in Richtung des Stabs
+    return '<g' + (klasse ? ' class="' + klasse + '"' : "") + ' transform="translate(' + q[0] + ' ' + q[1] + ') rotate(' + IWIN.toFixed(1) + ')">' +
+      '<rect x="-24" y="-6" width="48" height="12" rx="5" fill="url(#aUeberzug)" stroke="#4F9C7C" stroke-width="1.2"/><rect x="-20" y="-4" width="40" height="2" rx="1" fill="#FFFFFF" opacity=".8"/></g>';
+  }
+  function stab(spitze, laenge, kugeln) {
+    // Stab des Barbells, von der Spitze aus nach hinten (gegen die Richtung) gezeichnet
+    var x2 = spitze[0], y2 = spitze[1], x1 = x2 - UX * laenge, y1 = y2 - UY * laenge;
+    return barbell(x1, y1, x2, y2, kugeln);
+  }
+  function schieben(dx, dy, inhalt) {
+    return '<g class="a-schieben" style="--a-x:' + dx.toFixed(1) + 'px;--a-y:' + dy.toFixed(1) + 'px">' + inhalt + "</g>";
+  }
+  var SL = ILEN + 16, S1 = [IN1[0] + UX * 30, IN1[1] + UY * 30], S2 = [IN2[0] + UX * 8, IN2[1] + UY * 8];
   var industrial = [
-    { text: { de: "Ansicht von vorn: Beide Punkte am oberen Ohrrand anzeichnen, einen nahe dem Kopf und einen gegenüber am äußeren Rand.",
-        en: "Front view: mark both points on the upper ear rim, one close to the head and one opposite on the outer rim.",
-        es: "Vista frontal: marca los dos puntos en el borde superior de la oreja, uno cerca de la cabeza y otro enfrente, en el borde exterior." },
-      svg: bildVorn('<g class="a-erscheinen">' + punkt(IN1[0], IN1[1]) + punkt(IN2[0], IN2[1]) + "</g>" + hinweis(150, 60, IN1[0] - 6, IN1[1], "nahKopf", 170) + hinweis(530, 200, IN2[0] + 4, IN2[1] + 4, "aussenRand", 170)) },
-    { text: { de: "Den Barbell (38 mm) probehalber über die Markierungen halten: Er muss beide Punkte gerade verbinden, ohne das Ohr zu verbiegen.",
-        en: "Hold the barbell (38 mm) over the marks as a test: it must connect both points in a straight line without bending the ear.",
-        es: "Sujeta el barbell (38 mm) sobre las marcas a modo de prueba: debe unir ambos puntos en línea recta sin doblar la oreja." },
+    { text: { de: "Ansicht von vorn: Beide Punkte am oberen Ohrrand anzeichnen: oben nahe dem Kopf und unten gegenüber am äußeren Rand.",
+        en: "Front view: mark both points on the upper ear rim: the upper one close to the head and the lower one opposite on the outer rim.",
+        es: "Vista frontal: marca los dos puntos en el borde superior de la oreja: el de arriba cerca de la cabeza y el de abajo enfrente, en el borde exterior." },
+      svg: bildVorn('<g class="a-erscheinen">' + punkt(IN1[0], IN1[1]) + punkt(IN2[0], IN2[1]) + "</g>" + hinweis(150, 60, IN1[0] - 6, IN1[1], "oben", 130) + hinweis(530, 200, IN2[0] + 4, IN2[1] + 4, "unten", 130)) },
+    { text: { de: "Den langen Stab (Barbell 38 mm) probehalber über die Markierungen halten: Er muss beide Punkte gerade verbinden, ohne das Ohr zu verbiegen.",
+        en: "Hold the long bar (barbell 38 mm) over the marks as a test: it must connect both points in a straight line without bending the ear.",
+        es: "Sujeta la barra larga (barbell de 38 mm) sobre las marcas a modo de prueba: debe unir ambos puntos en línea recta sin doblar la oreja." },
       svg: bildVorn(punkt(IN1[0], IN1[1]) + punkt(IN2[0], IN2[1]) + bewegt(60, 0, '<g opacity=".9">' + barbell(IN1[0], IN1[1] - 16, IN2[0], IN2[1] - 16, true) + "</g>") + hinweis(530, 250, 380, 96, "gerade", 170)) },
-    { text: { de: "Den ersten Punkt mit der 16G-Kanüle freihand stechen. Die Nadel kommt sofort in den Abwurf, das Röhrchen bleibt stecken.",
-        en: "Pierce the first point freehand with the 16G cannula. The needle goes straight into the sharps container and the tube stays in.",
-        es: "Perfora el primer punto a mano alzada con la cánula 16G. La aguja va directa al contenedor y el tubo se queda dentro." },
-      svg: bildVorn(punkt(IN2[0], IN2[1]) + '<g class="a-erscheinen">' + hubGrau(IN1[0], IN1[1]) + "</g>" + abwurf(true) + hinweis(150, 160, IN1[0] - 8, IN1[1] + 6, "g16", 150)) },
-    { text: { de: "Den zweiten Punkt genauso stechen. Jetzt stecken zwei Röhrchen auf einer Linie.",
-        en: "Pierce the second point the same way. Now there are two tubes on one line.",
-        es: "Perfora el segundo punto de la misma forma. Ahora hay dos tubos en una misma línea." },
-      svg: bildVorn(hubGrau(IN1[0], IN1[1]) + '<g class="a-erscheinen">' + hubGrau(IN2[0], IN2[1]) + "</g>" + abwurf(true) + '<line x1="' + IN1[0] + '" y1="' + IN1[1] + '" x2="' + IN2[0] + '" y2="' + IN2[1] + '" stroke="' + F.gold + '" stroke-width="2" stroke-dasharray="5 5"/>') },
-    { text: { de: "Den Barbell durch beide Röhrchen führen; die Röhrchen werden dabei hinausgeschoben und abgezogen.",
-        en: "Guide the barbell through both tubes; this pushes the tubes out and you pull them off.",
-        es: "Pasa el barbell por los dos tubos; al hacerlo, los tubos salen y se retiran." },
-      svg: bildVorn(bewegt(80, 0, barbell(IN1[0], IN1[1], IN2[0], IN2[1], false)) + '<g class="a-weg-links">' + hubGrau(IN1[0], IN1[1]) + "</g>" + pfeil(520, 470, 150)) },
-    { text: { de: "Die Kugeln aufdrehen. Fertig: Der Stab liegt gerade und das Ohr wird nicht verbogen.",
-        en: "Screw on the balls. Done: the bar lies straight and the ear is not bent.",
-        es: "Enrosca las bolas. Listo: la barra queda recta y la oreja no se dobla." },
-      svg: bildVorn(barbell(IN1[0], IN1[1], IN2[0], IN2[1], true) + haken()) }
+    { text: { de: "Oben mit der 16G-Kanüle freihand stechen. Die Nadel kommt sofort in den Abwurf, das Röhrchen bleibt im Stichkanal.",
+        en: "Pierce the upper point freehand with the 16G cannula. The needle goes straight into the sharps container and the tube stays in the channel.",
+        es: "Perfora el punto de arriba a mano alzada con la cánula 16G. La aguja va directa al contenedor y el tubo se queda en el canal." },
+      svg: bildVorn(punkt(IN2[0], IN2[1]) + '<g class="a-erscheinen">' + roehrchenSchraeg(IN1) + "</g>" + abwurf(true) + hinweis(150, 160, IN1[0] - 6, IN1[1] + 4, "g16oben", 170)) },
+    { text: { de: "Unten genauso stechen. Jetzt steckt in beiden Stichkanälen ein Röhrchen, beide auf einer Linie.",
+        en: "Pierce the lower point the same way. Now there is a tube in both channels, both on one line.",
+        es: "Perfora el punto de abajo de la misma forma. Ahora hay un tubo en cada canal, los dos en una línea." },
+      svg: bildVorn(roehrchenSchraeg(IN1) + '<g class="a-erscheinen">' + roehrchenSchraeg(IN2) + "</g>" + abwurf(true) + hinweis(530, 220, IN2[0] + 6, IN2[1] + 4, "g16unten", 170)) },
+    { text: { de: "Den langen Stab in das erste Röhrchen einführen und durch das erste Röhrchen ziehen.",
+        en: "Insert the long bar into the first tube and pull it through the first tube.",
+        es: "Introduce la barra larga en el primer tubo y tira de ella a través del primer tubo." },
+      svg: bildVorn(roehrchenSchraeg(IN1) + roehrchenSchraeg(IN2) + schieben(-UX * 90, -UY * 90, stab(S1, SL, false)) + hinweis(150, 160, IN1[0] + 4, IN1[1] + 6, "roehrchen1", 150)) },
+    { text: { de: "Das erste Röhrchen abmachen. Der Stab steckt jetzt im oberen Stichkanal.",
+        en: "Take off the first tube. The bar now sits in the upper channel.",
+        es: "Quita el primer tubo. La barra ya está en el canal de arriba." },
+      svg: bildVorn(roehrchenSchraeg(IN2) + stab(S1, SL, false) + '<g class="a-weg-links">' + roehrchenSchraeg([IN1[0] + UX * 30, IN1[1] + UY * 30]) + "</g>") },
+    { text: { de: "Den Stab in das zweite Röhrchen einführen und komplett durch das ganze Röhrchen ziehen.",
+        en: "Insert the bar into the second tube and pull it all the way through the whole tube.",
+        es: "Introduce la barra en el segundo tubo y tira de ella a través de todo el tubo." },
+      svg: bildVorn(roehrchenSchraeg(IN2) + schieben(-(S2[0] - S1[0]), -(S2[1] - S1[1]), stab(S2, SL, false)) + hinweis(530, 230, IN2[0] + 6, IN2[1] + 4, "roehrchen2", 150)) },
+    { text: { de: "Das zweite Röhrchen abmachen und die Kugeln aufdrehen. Fertig: Der Stab liegt gerade, das Ohr wird nicht verbogen.",
+        en: "Take off the second tube and screw on the balls. Done: the bar lies straight and the ear is not bent.",
+        es: "Quita el segundo tubo y enrosca las bolas. Listo: la barra queda recta y la oreja no se dobla." },
+      svg: bildVorn(barbell(IN1[0] - UX * 6, IN1[1] - UY * 6, IN2[0] + UX * 6, IN2[1] + UY * 6, true) + haken()) }
   ];
 
   KURS.animationen = {
