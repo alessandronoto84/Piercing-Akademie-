@@ -116,16 +116,16 @@ window.KURS = window.KURS || { module: [] };
         ]
       },
       {
-        titel: "Lip: Labret, Medusa and Ashley",
+        titel: "Lip: Labret, Vertical Labret and Medusa",
         seite: "S. 86, 93",
         inhalt: [
           db("Labret", "Strictly speaking, a piercing of the lower lip; on the upper lip it is called Medusa (centered in the philtrum, the groove below the nose) or Madonna or Monroe (offset to the side). More than 3 mm away from the vermilion border.", "labret, horseshoe (circular barbell)", "18G", "Snaptile, gauze clamp", "", "S. 86"),
-          db("Ashley", "Also called a vertical labret; “Eskimo” in the course book. Straight down through the center of the lower lip: entry on top of the lip, exit below the lip, so one ball sits on top of the lip. It is pierced from top to bottom. If pierced incorrectly, the lip can tear or sink in permanently.", "barbell, curved barbell (banana)", "18G", "Snaptile, gauze clamp, freehand", "For experienced piercers only. As a trainee, you do not pierce the Ashley and you do not pierce into the vermilion.", "S. 93")
+          db("Vertical labret", "“Eskimo” in the course book. Straight down through the center of the lower lip: one end sits on top of the lip, the other below the lip. If pierced incorrectly, the lip can tear or sink in permanently.", "barbell, curved barbell (banana)", "18G", "Snaptile, gauze clamp, freehand", "For experienced piercers only. As a trainee, you do not pierce the vertical labret and you do not pierce into the vermilion.", "S. 93")
         ],
         fragen: [
           ["How far from the vermilion border is a Labret piercing placed?", ["More than 3 mm", "Exactly 1 mm", "No distance, right on the vermilion", "More than 1 cm"], "Labret data sheet.", "S. 86"],
-          ["What is a piercing centered in the upper lip, in the philtrum, called?", ["Medusa", "Monroe", "Smiley", "Ashley"], "Strictly speaking, a Labret is in the lower lip.", "S. 86"],
-          ["What can an incorrectly pierced Ashley cause?", ["Tearing or permanent sinking of the lip", "Pressure on nerve pathways of the forehead", "Damage to the tongue frenulum", "Perichondritis"], "Turn it down as a beginner.", "S. 93"]
+          ["What is a piercing centered in the upper lip, in the philtrum, called?", ["Medusa", "Monroe", "Smiley", "Vertical labret"], "Strictly speaking, a Labret is in the lower lip.", "S. 86"],
+          ["What can an incorrectly pierced vertical labret cause?", ["Tearing or permanent sinking of the lip", "Pressure on nerve pathways of the forehead", "Damage to the tongue frenulum", "Perichondritis"], "Turn it down as a beginner.", "S. 93"]
         ]
       },
       {

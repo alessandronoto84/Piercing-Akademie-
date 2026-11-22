@@ -66,7 +66,7 @@ KURS.module.push({
           ["Augenbraue", "Innen treten Nerven und Gefäße aus (Taubheit, Blutung)", "Nur im äußeren Drittel der Augenbraue stechen"],
           ["Cheek (Wange)", "Wichtige Arterien und Nerven, Gefahr einer Verunstaltung; Grübchen können bleiben", "Nur durch professionelle Piercer; als Anfänger ablehnen"],
           ["Bridge", "Zu tief: Druck auf Nervenbahnen; zu oberflächlich: Herauswachsen", "Als Anfänger ablehnen"],
-          ["Ashley", "Einreißen oder dauerhaftes Einfallen der Lippe", "Als Anfänger ablehnen, nicht ins Lippenrot stechen"]
+          ["Vertikales Labret", "Einreißen oder dauerhaftes Einfallen der Lippe", "Als Anfänger ablehnen, nicht ins Lippenrot stechen"]
         ] },
         { typ: "praxis", text: "Ein Nein zu einem riskanten Wunsch ist professionell. Empfiehl einem Kunden lieber einen erfahrenen Kollegen, als ein Piercing zu stechen, das du nicht sicher beherrschst." }
       ],

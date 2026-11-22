@@ -110,7 +110,7 @@ KURS.bilder = {
 "h": 480,
 "seite": 92
 },
-"ashley": {
+"vertikales-labret": {
 "src": "inhalte/bilder/eskimo.webp",
 "w": 409,
 "h": 480,

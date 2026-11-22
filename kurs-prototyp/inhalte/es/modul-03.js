@@ -66,7 +66,7 @@ KURS.module.push({
           ["Ceja", "En la parte interna salen nervios y vasos (entumecimiento, sangrado)", "Perforar solo en el tercio externo de la ceja"],
           ["Cheek (mejilla)", "Arterias y nervios importantes, riesgo de desfiguración; pueden quedar hoyuelos", "Solo por piercers profesionales; recházalo si eres principiante"],
           ["Bridge", "Demasiado profundo: presión sobre vías nerviosas; demasiado superficial: expulsión", "Recházalo si eres principiante"],
-          ["Ashley", "Desgarro o hundimiento permanente del labio", "Recházalo si eres principiante; no perforar en el bermellón del labio"]
+          ["Labret vertical", "Desgarro o hundimiento permanente del labio", "Recházalo si eres principiante; no perforar en el bermellón del labio"]
         ] },
         { typ: "praxis", text: "Decir que no a una petición arriesgada es profesional. Es mejor recomendar a un cliente un colega con experiencia que perforar algo que no dominas con seguridad." }
       ],

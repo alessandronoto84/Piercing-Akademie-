@@ -447,25 +447,25 @@ KURS.lektionsfragen = {
    "S. 86"
   ],
   [
-   "Welcher Schmuck ist laut Datenblatt ein passender Ersteinsatz für das Ashley-Piercing?",
+   "Welcher Schmuck ist laut Datenblatt ein passender Ersteinsatz für das vertikale Labret?",
    [
     "Barbell",
     "Hufeisen (Threaded Ring)",
     "BCR (Klemmkugelring)",
     "Dermal Anchor"
    ],
-   "Datenblatt Ashley: Ersteinsatz Barbell, Banane; Kanüle 18G; Snaptile, Gazeklemme, Freihand.",
+   "Datenblatt vertikales Labret: Ersteinsatz Barbell, Banane; Kanüle 18G; Snaptile, Gazeklemme, Freihand.",
    "S. 93"
   ],
   [
-   "Womit wird das Ashley-Piercing laut Datenblatt gestochen?",
+   "Womit wird das vertikale Labret laut Datenblatt gestochen?",
    [
     "18G-Kanüle",
     "14G-Kanüle",
     "Biopsiestanze (Punch)",
     "20G-Kanüle"
    ],
-   "Datenblatt Ashley: Ersteinsatz Barbell, Banane; Kanüle 18G; Snaptile, Gazeklemme, Freihand.",
+   "Datenblatt vertikales Labret: Ersteinsatz Barbell, Banane; Kanüle 18G; Snaptile, Gazeklemme, Freihand.",
    "S. 93"
   ]
  ],
