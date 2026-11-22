@@ -114,6 +114,42 @@ window.KURS = window.KURS || { module: [] };
   function drehen() {
     return '<path d="M230 ' + (Y + 28) + ' a20 20 0 1 0 40 0" fill="none" stroke="' + F.gold + '" stroke-width="4" stroke-linecap="round"/><path d="M270 ' + (Y + 18) + ' l2 14 l-11 -4 z" fill="' + F.gold + '"/>';
   }
+  function nadel(x) {
+    // Stahlnadel mit Griff (ohne Überzug); x = Spitze
+    return '<rect x="' + (x - 300) + '" y="' + (Y - 2.5) + '" width="286" height="5" rx="2.5" fill="url(#aStahl)"/>' +
+      '<path d="M' + (x - 16) + " " + (Y - 2.5) + " L" + x + " " + (Y + 0.5) + " L" + (x - 16) + " " + (Y + 2.5) + 'Z" fill="url(#aStahl)" stroke="#6F7984" stroke-width=".6"/>' +
+      '<rect x="' + (x - 330) + '" y="' + (Y - 11) + '" width="44" height="22" rx="6" fill="#F1F3F5" stroke="#AEB7C0"/><rect x="' + (x - 322) + '" y="' + (Y - 5) + '" width="20" height="10" rx="3" fill="#E7C4C4" opacity=".8"/>';
+  }
+  function nadelSenkrecht() {
+    // Nadel fällt mit der Spitze voran in den Abwurfbehälter
+    return '<g class="a-fallen"><rect x="72" y="70" width="5" height="150" rx="2.5" fill="url(#aStahlV)"/><path d="M72 220 L74.5 236 L77 220 Z" fill="url(#aStahlV)"/>' +
+      '<rect x="63" y="44" width="23" height="34" rx="6" fill="#F1F3F5" stroke="#AEB7C0"/></g>';
+  }
+  function hinweis(x, y, zx, zy, wort, breite) {
+    // Beschriftung mit Linie, die auf ein Detail zeigt
+    return '<g><line x1="' + x + '" y1="' + y + '" x2="' + zx + '" y2="' + zy + '" stroke="' + F.gold + '" stroke-width="2"/><circle cx="' + zx + '" cy="' + zy + '" r="4" fill="' + F.gold + '"/>' +
+      '<rect x="' + (x - breite / 2) + '" y="' + (y - 16) + '" width="' + breite + '" height="30" rx="15" fill="#FFFFFF" stroke="' + F.gold + '"/>' +
+      '<text x="' + x + '" y="' + (y + 4) + '" text-anchor="middle" class="a-klein" fill="#5A4632">{' + wort + '}</text></g>';
+  }
+  function ansatzFaellt(l) {
+    // abgeschnittener grüner Ansatz fällt weg
+    return '<g class="a-weg-unten"><rect x="' + (l - 40) + '" y="' + (Y - 12) + '" width="44" height="24" rx="6" fill="url(#aAnsatz)"/>' +
+      '<path d="M' + (l - 6) + " " + (Y - 26) + " l14 0 l6 16 l-6 0 z M" + (l - 6) + " " + (Y + 26) + " l14 0 l6 -16 l-6 0 z" + '" fill="url(#aAnsatz)"/></g>';
+  }
+  function klemmzangeVorn() {
+    // Klemmzange fasst den Stab vorn, kurz vor dem Gewinde; Griffe nach unten links
+    function arm(v) {
+      return '<path d="M' + (272 + v * 3) + ' ' + (Y + v * 7) + ' L262 ' + (Y + 34) + ' L' + (200 + v * 26) + ' 300" fill="none" stroke="url(#aStahlV)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>' +
+        '<circle cx="' + (192 + v * 30) + '" cy="312" r="13" fill="none" stroke="url(#aStahlV)" stroke-width="6"/>';
+    }
+    return '<g filter="url(#aSchatten)">' + arm(-1) + arm(1) + '<circle cx="262" cy="' + (Y + 34) + '" r="5" fill="url(#aKugel)" stroke="#6F7984"/></g>';
+  }
+  function kugelgreifer(cx) {
+    // Kugelgreifer hält die Kugel von links, Griff flach nach links oben
+    return '<g filter="url(#aSchatten)"><path d="M' + (cx - 8) + ' ' + (Y - 7) + ' L' + (cx - 150) + ' ' + (Y - 70) + '" stroke="url(#aStahl)" stroke-width="6" stroke-linecap="round"/>' +
+      '<path d="M' + (cx - 6) + ' ' + (Y - 11) + ' L' + (cx - 140) + ' ' + (Y - 82) + '" stroke="url(#aStahl)" stroke-width="6" stroke-linecap="round"/>' +
+      '<rect x="' + (cx - 196) + '" y="' + (Y - 100) + '" width="52" height="26" rx="8" fill="#3E4650" transform="rotate(25 ' + (cx - 170) + ' ' + (Y - 87) + ')"/></g>';
+  }
   function bild(inhalt) {
     return '<svg viewBox="0 0 ' + W + " " + H + '" role="img">' + DEFS + buehne() + beschriftung() + inhalt + "</svg>";
   }
@@ -121,7 +157,10 @@ window.KURS = window.KURS || { module: [] };
   var T = {
     vorne: { de: "vorn (sichtbare Seite)", en: "front (visible side)", es: "delante (lado visible)" },
     hinten: { de: "hinten", en: "back", es: "detrás" },
-    abwurf: { de: "Abwurf", en: "sharps", es: "agujas" }
+    abwurf: { de: "Abwurf", en: "sharps", es: "agujas" },
+    roehrchen: { de: "Röhrchen bleibt im Stichkanal", en: "tube stays in the channel", es: "el tubo se queda en el canal" },
+    ansatz: { de: "Ansatz abschneiden", en: "cut off the hub", es: "cortar el cono" },
+    gewinde: { de: "Klemmzange kurz vor dem Gewinde", en: "forceps just before the thread", es: "pinzas justo antes de la rosca" }
   };
 
   var lobe = [
@@ -132,35 +171,39 @@ window.KURS = window.KURS || { module: [] };
     { text: { de: "Gestochen wird von vorn, von der sichtbaren Seite aus: ein zügiger, gerader Stich durch beide Markierungen.",
         en: "You pierce from the front, from the visible side: one swift, straight motion through both marks.",
         es: "Se perfora desde delante, desde el lado visible: un movimiento rápido y recto a través de ambas marcas." },
-      svg: bild(lappen(false) + markierung() + klemme() + bewegt(-150, 0, kanuele(390, true)) + pfeil(200, 260, 150)) },
-    { text: { de: "Die Stahlnadel wird herausgezogen und kommt sofort in den Nadelabwurfbehälter. Der Kunststoffüberzug bleibt im Stichkanal.",
-        en: "The steel needle is pulled out and goes straight into the sharps container. The plastic sheath stays in the channel.",
-        es: "La aguja de acero se retira y va directamente al contenedor de objetos punzantes. La vaina de plástico se queda en el canal." },
-      svg: bild(lappen(true) + kanuele(390, false) + '<g class="a-weg"><rect x="90" y="' + (Y - 2.5) + '" width="296" height="5" rx="2.5" fill="url(#aStahl)"/><rect x="60" y="' + (Y - 11) + '" width="44" height="22" rx="6" fill="#F1F3F5" stroke="#AEB7C0"/></g>' + abwurf(true)) },
-    { text: { de: "Den Überzug hinten mit der Schere leicht kürzen, damit der Schmuck besser hineingeht.",
-        en: "Shorten the sheath at the back slightly with scissors so the jewelry goes in more easily.",
-        es: "Acorta un poco la vaina por detrás con las tijeras para que la joya entre mejor." },
-      svg: bild(lappen(true) + kanuele(390, false, null, 372) + schere(378) + '<line x1="374" y1="' + (Y - 18) + '" x2="374" y2="' + (Y + 18) + '" stroke="' + F.gold + '" stroke-width="2.5" stroke-dasharray="4 3"/>') },
-    { text: { de: "Den Ersteinsatz in den Überzug stecken: beim Labret den Stab von hinten, die Platte bleibt hinten.",
-        en: "Insert the initial jewelry into the sheath: with a labret, the post goes in from the back and the disc stays at the back.",
-        es: "Introduce la joya inicial en la vaina: en el labret, la barra entra por detrás y el disco se queda detrás." },
-      svg: bild(lappen(true) + kanuele(390, false, null, 372) + bewegt(80, 0, labret(372, false)) + pfeil(520, 470, 220)) },
-    { text: { de: "Den Schmuck durch den Stichkanal drücken, nicht ziehen. Der Überzug wird dabei nach vorn hinausgeschoben. Den Kunden dabei ausatmen lassen.",
-        en: "Push the jewelry through the channel, do not pull. This pushes the sheath out at the front. Have the client breathe out while you do it.",
-        es: "Empuja la joya a través del canal, no tires. Así la vaina sale por delante. Pide al cliente que espire mientras lo haces." },
-      svg: bild(lappen(true) + bewegt(0, -100, kanuele(390, false, null, 372)) + bewegt(0, -100, labret(372, false)) + pfeil(470, 410, 220)) },
+      svg: bild(lappen(false) + markierung() + klemme() + bewegt(-150, 0, kanuele(390, true)) + pfeil(200, 260, 140)) },
+    { text: { de: "Die Stahlnadel wird nach vorn herausgezogen. Das transparente Kunststoffröhrchen bleibt im Stichkanal.",
+        en: "The steel needle is pulled out towards the front. The clear plastic tube stays in the channel.",
+        es: "La aguja de acero se retira hacia delante. El tubo de plástico transparente se queda en el canal." },
+      svg: bild(lappen(true) + kanuele(390, false) + bewegt(0, -230, nadel(390)) + pfeil(250, 170, 140) + hinweis(470, 110, 340, Y - 7, "roehrchen", 230)) },
+    { text: { de: "Die Nadel kommt sofort in den Nadelabwurfbehälter, nie zurück in die Schutzkappe und nie auf den Tisch.",
+        en: "The needle goes straight into the sharps container, never back into its cap and never onto the table.",
+        es: "La aguja va directamente al contenedor de objetos punzantes, nunca de nuevo al capuchón ni sobre la mesa." },
+      svg: bild(lappen(true) + kanuele(390, false) + nadelSenkrecht() + abwurf(true) + hinweis(470, 110, 340, Y - 7, "roehrchen", 230)) },
+    { text: { de: "Vorn den grünen Kunststoffansatz mit der Schere abschneiden. Übrig bleibt nur das transparente Röhrchen im Stichkanal.",
+        en: "At the front, cut off the green plastic hub with scissors. Only the clear tube is left in the channel.",
+        es: "Delante, corta con las tijeras el cono de plástico verde. Solo queda el tubo transparente en el canal." },
+      svg: bild(lappen(true) + kanuele(390, false, 200, 382) + ansatzFaellt(200) + schere(214) + '<line x1="206" y1="' + (Y - 20) + '" x2="206" y2="' + (Y + 20) + '" stroke="' + F.gold + '" stroke-width="2.5" stroke-dasharray="4 3"/>' + hinweis(140, 268, 206, Y + 14, "ansatz", 170)) },
+    { text: { de: "Den Ersteinsatz in das Röhrchen stecken: beim Labret den Stab von hinten, die Platte bleibt hinten.",
+        en: "Insert the initial jewelry into the tube: with a labret, the post goes in from the back and the disc stays at the back.",
+        es: "Introduce la joya inicial en el tubo: en el labret, la barra entra por detrás y el disco se queda detrás." },
+      svg: bild(lappen(true) + kanuele(390, false, 206, 382) + bewegt(80, 0, labret(382, false)) + pfeil(530, 480, 230)) },
+    { text: { de: "Den Schmuck durch den Stichkanal drücken, nicht ziehen. Das Röhrchen wird dabei vorn hinausgeschoben. Den Kunden dabei ausatmen lassen.",
+        en: "Push the jewelry through the channel, do not pull. This pushes the tube out at the front. Have the client breathe out while you do it.",
+        es: "Empuja la joya a través del canal, no tires. Así el tubo sale por delante. Pide al cliente que espire mientras lo haces." },
+      svg: bild(lappen(true) + bewegt(0, -124, kanuele(390, false, 206, 382)) + bewegt(0, -124, labret(382, false)) + pfeil(480, 420, 230)) },
     { text: { de: "Das Röhrchen vorsichtig vom Schmuck abziehen. Der Stab steckt jetzt im Stichkanal, die Platte liegt hinten an.",
         en: "Carefully pull the tube off the jewelry. The post now sits in the channel, with the disc resting at the back.",
         es: "Retira con cuidado el tubo de la joya. La barra ya está en el canal y el disco queda apoyado detrás." },
-      svg: bild(lappen(true) + '<g class="a-weg-links">' + kanuele(290, false, 120, 286) + "</g>" + labret(258, false)) },
-    { text: { de: "Den Schmuck mit der Klemmzange festhalten und die Kugel vorn fest aufdrehen. Danach nochmals mit Kodan einsprühen.",
-        en: "Hold the jewelry with the forceps and screw the ball on firmly at the front. Then spray with Kodan once more.",
-        es: "Sujeta la joya con las pinzas y enrosca bien la bola por delante. Después, vuelve a pulverizar con Kodan." },
-      svg: bild(lappen(true) + labret(258, false) + klemmzange() + bewegt(-60, 0, kugel(249)) + drehen()) },
-    { text: { de: "Fertig: Kugel vorn auf der sichtbaren Seite, Platte hinten. Dem Kunden das Piercing im Spiegel zeigen.",
-        en: "Done: ball at the front on the visible side, disc at the back. Show the client the piercing in the mirror.",
-        es: "Listo: bola delante en el lado visible y disco detrás. Enséñale el piercing al cliente en el espejo." },
-      svg: bild(lappen(true) + labret(258, true) + '<path d="M440 150 l22 24 l44 -52" fill="none" stroke="' + F.gold + '" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>') }
+      svg: bild(lappen(true) + '<g class="a-weg-links">' + kanuele(390, false, 82, 258) + "</g>" + labret(258, false)) },
+    { text: { de: "Die Klemmzange vorn kurz vor dem Gewinde ansetzen, damit sich der Stab nicht mitdreht. Dann die Kugel mit dem Kugelgreifer aufschrauben, bis sie fest sitzt.",
+        en: "Place the forceps at the front, just before the thread, so the post does not turn. Then screw the ball on with the ball grabber until it is tight.",
+        es: "Coloca las pinzas delante, justo antes de la rosca, para que la barra no gire. Después enrosca la bola con el agarrador de bolas hasta que quede firme." },
+      svg: bild(lappen(true) + labret(258, false) + klemmzangeVorn() + bewegt(-70, 0, kugel(249) + kugelgreifer(249)) + drehen() + hinweis(470, 300, 272, Y + 6, "gewinde", 260)) },
+    { text: { de: "Fertig: Kugel vorn auf der sichtbaren Seite, Platte hinten. Nochmals mit Kodan einsprühen und dem Kunden das Piercing im Spiegel zeigen.",
+        en: "Done: ball at the front on the visible side, disc at the back. Spray with Kodan once more and show the client the piercing in the mirror.",
+        es: "Listo: bola delante en el lado visible y disco detrás. Vuelve a pulverizar con Kodan y enséñale el piercing al cliente en el espejo." },
+      svg: bild(lappen(true) + labret(258, true) + haken()) }
   ];
 
   KURS.animationen = {

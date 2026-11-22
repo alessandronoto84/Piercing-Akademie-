@@ -480,4 +480,8 @@ section.k-kopf,section.k-lektion,.k-layout section{padding-block:0}
 @keyframes aWeg{to{transform:translate(-230px,90px);opacity:0}}
 .a-weg-links{animation:aWegL 1.4s .3s ease forwards}
 @keyframes aWegL{to{transform:translateX(-140px);opacity:0}}
-@media (prefers-reduced-motion:reduce){.a-bewegt{animation:none;transform:translateX(var(--a-nach))}.a-weg,.a-weg-links{animation:none;opacity:0}}
+.a-fallen{animation:aFallen 1.5s .2s cubic-bezier(.5,0,.8,.4) forwards}
+@keyframes aFallen{from{transform:translateY(-40px)}to{transform:translateY(120px);opacity:.15}}
+.a-weg-unten{animation:aWegU 1.3s .5s ease-in forwards}
+@keyframes aWegU{to{transform:translate(-30px,140px) rotate(-25deg);opacity:0}}
+@media (prefers-reduced-motion:reduce){.a-bewegt{animation:none;transform:translateX(var(--a-nach))}.a-weg,.a-weg-links,.a-weg-unten{animation:none;opacity:0}.a-fallen{animation:none;transform:translateY(120px);opacity:.15}}
