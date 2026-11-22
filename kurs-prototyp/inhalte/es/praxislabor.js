@@ -598,17 +598,17 @@ window.KURS.labor.stich = {
       titel: "Asegurar y cambiar joyas",
       modul: 7,
       clip: "labor-schmuck",
-      clipText: "Enroscar una bola con la pinza para bolas y la pinza de sujeción, abrir y cerrar un aro de bola cautiva, cambiar joyas en la oreja de silicona.",
+      clipText: "Enroscar una bola con la pinza para bolas y la pinza de sujeción, abrir un aro de bola cautiva y colocar la bola con pinzas, cambiar joyas en la oreja de silicona.",
       material: ["Oreja de silicona con canales perforados", "Pinza para bolas", "Pinza de sujeción", "Pinza para abrir aros y pinza para cerrar aros", "Joyas de práctica"],
       schritte: [
         "Tomar una bola con la pinza para bolas y enroscarla en la barra que sujetas con la pinza de sujeción.",
-        "Abrir un aro de bola cautiva, sacar la bola, volver a colocarla y cerrar el aro.",
+        "Abrir un poco un aro de bola cautiva con los alicates de apertura, sacar la bola y volver a colocarla con pinzas. El aro la sujeta con su tensión.",
         "En un canal de perforación ya hecho, cambiar el labret por un BCR y viceversa.",
         "Recuerda: con un cliente real, la joya inicial solo se cambia tras la cicatrización completa (módulo 10)."
       ],
       kontrolle: [
         "No se me ha caído ni ha salido disparada ninguna bola.",
-        "El aro vuelve a estar redondo después de cerrarlo.",
+        "El aro está redondo y la bola queda firme en el hueco.",
         "Puedo explicar por qué con un cliente la joya inicial no se cambia pronto."
       ]
     },

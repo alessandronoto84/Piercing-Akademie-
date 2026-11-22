@@ -197,6 +197,19 @@ window.KURS = window.KURS || { module: [] };
     ringOeffnen: { de: "Ring öffnen, Kugel heraus", en: "open ring, take out ball", es: "abrir el aro, sacar la bola" },
     kugelRastet: { de: "Kugel rastet fest ein", en: "ball snaps into place", es: "la bola encaja firme" },
     stichrichtung: { de: "Strich = Stichrichtung", en: "line = direction", es: "línea = dirección" },
+    steril: { de: "sterile Verpackung", en: "sterile pack", es: "envase estéril" },
+    inReichweite: { de: "in Reichweite der Arbeitshand", en: "within reach of your working hand", es: "al alcance de la mano de trabajo" },
+    geradeAb: { de: "gerade abziehen", en: "pull off straight", es: "retirar recto" },
+    griff: { de: "am Griff", en: "by the grip", es: "por el mango" },
+    nieZurueck: { de: "Kappe nie zurück", en: "never recap", es: "nunca recapuchar" },
+    kugelgreifer: { de: "Kugelgreifer", en: "ball grabber", es: "pinza de bolas" },
+    festPruefen: { de: "sitzt fest", en: "sits firmly", es: "bien firme" },
+    ersteinsatzAbheilung: { de: "Wechsel erst nach Abheilung", en: "change only after healing", es: "cambio solo tras cicatrizar" },
+    einverstaendnis: { de: "Einverständnis", en: "Consent", es: "Consentimiento" },
+    pflegehinweise: { de: "Pflegehinweise", en: "Aftercare", es: "Cuidados" },
+    welchesPiercing: { de: "Welches Piercing?", en: "Which piercing?", es: "¿Qué piercing?" },
+    allesGut: { de: "Alles gut?", en: "All good?", es: "¿Todo bien?" },
+    passtEs: { de: "Passt es so?", en: "Is it right?", es: "¿Está bien así?" },
     nur23: { de: "nur 2–3 mm ins Röhrchen", en: "only 2–3 mm into the tube", es: "solo 2–3 mm en el tubo" },
     ueberlaenge: { de: "Überlänge ca. 4 mm", en: "extra length approx. 4 mm", es: "longitud extra aprox. 4 mm" },
     kugelSchonDrauf: { de: "Kugel schon drauf", en: "ball already on", es: "bola ya puesta" },
@@ -464,6 +477,175 @@ window.KURS = window.KURS || { module: [] };
       svg: bildVorn(stab(ENDE, SL, true) + hinweis(520, 260, ENDE[0] - 4, ENDE[1] + 6, "ueberlaenge", 170) + '<g transform="translate(60 -40)">' + haken() + "</g>") }
   ];
 
+  // ---------- Kanüle sicher handhaben, Schmuck sichern und wechseln, ganzer Ablauf ----------
+  function szene(inhalt) { return '<svg viewBox="0 0 ' + W + " " + H + '" role="img">' + DEFS + buehne() + inhalt + "</svg>"; }
+  function schutzkappe(x) {
+    // durchsichtige Schutzkappe über der Nadelspitze; x = Nadelspitze
+    return '<g filter="url(#aSchatten)"><rect x="' + (x - 150) + '" y="' + (Y - 8) + '" width="162" height="16" rx="7" fill="#F6EED8" fill-opacity=".85" stroke="#C9B88A" stroke-width="1.2"/>' +
+      '<rect x="' + (x - 146) + '" y="' + (Y - 6) + '" width="150" height="3" rx="1.5" fill="#FFFFFF" opacity=".8"/></g>';
+  }
+  function verpackung() {
+    // aufgerissene Sterilverpackung (Papier und Folie)
+    return '<g filter="url(#aSchatten)"><path d="M40 136 L300 136 L300 224 L40 224 Z" fill="#F7F3EA" stroke="#D9CFBE"/>' +
+      '<path d="M300 136 L332 120 L340 152 L300 160 Z" fill="#E9F1F6" stroke="#BFCBD3"/>' +
+      '<path d="M48 144 L292 144 L292 216 L48 216 Z" fill="none" stroke="#E2D8C6" stroke-dasharray="6 4"/></g>' +
+      '<text x="170" y="246" text-anchor="middle" class="a-klein" fill="#7A6E5E">{steril}</text>';
+  }
+  function kreuz(x, y) { return '<g stroke="#C8372D" stroke-width="7" stroke-linecap="round"><path d="M' + (x - 18) + " " + (y - 18) + " l36 36 M" + (x + 18) + " " + (y - 18) + ' l-36 36"/></g>'; }
+  function blatt(x, y, wort, unterschrift) {
+    var g = '<g filter="url(#aSchatten)"><rect x="' + x + '" y="' + y + '" width="150" height="196" rx="8" fill="#FFFFFF" stroke="#E4DACB"/></g>' +
+      '<text x="' + (x + 75) + '" y="' + (y + 28) + '" text-anchor="middle" class="a-klein" fill="#5A4632">{' + wort + '}</text>';
+    for (var i = 0; i < 6; i++) g += '<rect x="' + (x + 18) + '" y="' + (y + 48 + i * 18) + '" width="' + (i % 3 === 2 ? 70 : 114) + '" height="5" rx="2.5" fill="#E8DFD1"/>';
+    if (unterschrift) g += '<path class="a-zeichnen" style="--a-laenge:140" stroke-dasharray="140" d="M' + (x + 20) + " " + (y + 172) + " c10 -18 18 10 28 -6 s14 -14 22 2 s18 -8 30 -2" + '" fill="none" stroke="#2F4A7A" stroke-width="2.5" stroke-linecap="round"/>' +
+      '<line x1="' + (x + 18) + '" y1="' + (y + 180) + '" x2="' + (x + 132) + '" y2="' + (y + 180) + '" stroke="#CFC4B2"/>';
+    return g;
+  }
+  function blase(x, y, wort, breite) {
+    return '<g filter="url(#aSchatten)"><rect x="' + (x - breite / 2) + '" y="' + (y - 22) + '" width="' + breite + '" height="44" rx="20" fill="#FFFFFF" stroke="' + F.gold + '"/>' +
+      '<path d="M' + (x - 20) + " " + (y + 21) + " l-10 18 l26 -18 z" + '" fill="#FFFFFF" stroke="' + F.gold + '"/></g>' +
+      '<rect x="' + (x - 22) + '" y="' + (y + 19) + '" width="18" height="4" fill="#FFFFFF"/>' +
+      '<text x="' + x + '" y="' + (y + 5) + '" text-anchor="middle" class="a-klein" fill="#5A4632">{' + wort + '}</text>';
+  }
+  function flasche(x, y) {
+    // Sprühflasche Hautantiseptikum
+    return '<g filter="url(#aSchatten)"><rect x="' + (x - 26) + '" y="' + y + '" width="52" height="96" rx="12" fill="#E9F3F8" stroke="#9FB6C4"/>' +
+      '<rect x="' + (x - 26) + '" y="' + (y + 30) + '" width="52" height="34" fill="#FFFFFF" stroke="#9FB6C4"/>' +
+      '<rect x="' + (x - 10) + '" y="' + (y - 26) + '" width="20" height="28" rx="4" fill="#3E4650"/><rect x="' + (x + 6) + '" y="' + (y - 22) + '" width="18" height="8" rx="3" fill="#3E4650"/></g>' +
+      '<text x="' + x + '" y="' + (y + 52) + '" text-anchor="middle" class="a-klein" fill="#2F4A7A">Kodan</text>' +
+      '<g class="a-erscheinen" fill="#9FC8E0" opacity=".8"><circle cx="' + (x + 38) + '" cy="' + (y - 20) + '" r="3"/><circle cx="' + (x + 50) + '" cy="' + (y - 26) + '" r="2.5"/><circle cx="' + (x + 48) + '" cy="' + (y - 12) + '" r="2.5"/><circle cx="' + (x + 62) + '" cy="' + (y - 20) + '" r="2"/></g>';
+  }
+  function handschuh(x, y) {
+    var g = '<g filter="url(#aSchatten)" fill="#8DB3E2" stroke="#5F86B8" stroke-width="1.5">';
+    [-27, -9, 9, 27].forEach(function (d, i) { g += '<rect x="' + (x + d - 8) + '" y="' + (y - (i === 0 || i === 3 ? 60 : 72)) + '" width="16" height="70" rx="8"/>'; });
+    g += '<rect x="' + (x - 36) + '" y="' + (y - 20) + '" width="72" height="80" rx="18"/><rect x="' + (x - 62) + '" y="' + (y - 4) + '" width="40" height="16" rx="8" transform="rotate(-35 ' + (x - 40) + " " + (y + 4) + ')"/>' +
+      '<rect x="' + (x - 30) + '" y="' + (y + 56) + '" width="60" height="30" rx="6" fill="#7AA3D6"/></g>';
+    return g;
+  }
+  function spiegel(x, y) {
+    return '<g filter="url(#aSchatten)"><rect x="' + (x - 7) + '" y="' + (y + 52) + '" width="14" height="70" rx="6" fill="#3E4650"/>' +
+      '<ellipse cx="' + x + '" cy="' + y + '" rx="46" ry="58" fill="#3E4650"/><ellipse cx="' + x + '" cy="' + y + '" rx="39" ry="51" fill="#DDE9F0"/>' +
+      '<path d="M' + (x - 22) + " " + (y - 30) + " l26 -14 M" + (x - 26) + " " + (y - 14) + ' l36 -20" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity=".8"/></g>';
+  }
+  function mini(dx, dy, sk, inhalt) { return '<g transform="translate(' + dx + " " + dy + ") scale(" + sk + ')">' + inhalt + "</g>"; }
+  function tablett() {
+    return '<g filter="url(#aSchatten)"><rect x="70" y="110" width="500" height="170" rx="22" fill="#D9DEE3" stroke="#AEB7C0"/><rect x="84" y="124" width="472" height="142" rx="14" fill="#EEF1F4"/></g>' +
+      mini(150, 40, .55, kanuele(390, true)) + '<g transform="translate(150 40) scale(.55)">' + schutzkappe(390) + "</g>" +
+      mini(330, 60, .7, labret(258, false)) + mini(470, 150, .7, '<circle cx="0" cy="0" r="11" fill="url(#aKugel)" stroke="#6F7984"/>') +
+      mini(150, 150, .7, schere(214).replace("translate(214 " + (Y - 86) + ")", "translate(0 0)")) +
+      mini(430, 110, .45, klemme().replace('<text', '<text opacity="0"'));
+  }
+
+  // Ring um das Ohrläppchen: oben durch den Stichkanal (y = Y), Lücke vorn unten, dort sitzt die Kugel
+  var LC = [320, Y + 70], LR = 70;
+  var LK = [LC[0] + LR * Math.cos(150 * Math.PI / 180), LC[1] + LR * Math.sin(150 * Math.PI / 180)];
+  function ringLappen(klasse) {
+    var p = function (g) { var w = g * Math.PI / 180; return (LC[0] + LR * Math.cos(w)).toFixed(1) + " " + (LC[1] + LR * Math.sin(w)).toFixed(1); };
+    var d = "M" + p(162) + " A" + LR + " " + LR + " 0 1 1 " + p(138);
+    var u = 2 * Math.PI * LR, st = klasse ? ' class="' + klasse + '" stroke-dasharray="' + u + '" style="--a-laenge:' + u + '"' : "";
+    return '<path d="' + d + '" fill="none" stroke="#7D8792" stroke-width="9" stroke-linecap="round"' + st + "/>" +
+      '<path d="' + d + '" fill="none" stroke="url(#aTitan)" stroke-width="6" stroke-linecap="round"' + st + "/>";
+  }
+  var kanueleSchritte = [
+    { text: { de: "Den Abwurfbehälter so hinstellen, dass du ihn mit der Arbeitshand ohne Umgreifen erreichst.",
+        en: "Place the sharps container so you can reach it with your working hand without changing your grip.",
+        es: "Coloca el contenedor de agujas de modo que lo alcances con la mano de trabajo sin cambiar de agarre." },
+      svg: szene(bewegt(-80, 0, abwurf(false)) + hinweis(330, 250, 106, 270, "inReichweite", 260)) },
+    { text: { de: "Die Kanüle aus der sterilen Verpackung nehmen, ohne die Nadel zu berühren. Die Schutzkappe bleibt noch drauf.",
+        en: "Take the cannula out of the sterile pack without touching the needle. The protective cap stays on for now.",
+        es: "Saca la cánula del envase estéril sin tocar la aguja. El capuchón protector sigue puesto por ahora." },
+      svg: szene(verpackung() + bewegt(-180, 120, kanuele(390, true) + schutzkappe(390)) + abwurf(false)) },
+    { text: { de: "Die Schutzkappe gerade abziehen und weglegen. Nicht schräg, sonst verbiegt die Spitze.",
+        en: "Pull the protective cap off straight and put it aside. Not at an angle, or the tip bends.",
+        es: "Retira el capuchón en línea recta y déjalo aparte. No en diagonal, o la punta se dobla." },
+      svg: szene(kanuele(390, true) + bewegt(0, 150, schutzkappe(390)) + pfeil(420, 520, Y - 40) + hinweis(470, 290, 470, Y + 8, "geradeAb", 190) + abwurf(false)) },
+    { text: { de: "Die Kanüle am Griff halten und zügig ins Silikon stechen, irgendwo, nur um die Bewegung zu üben.",
+        en: "Hold the cannula by the grip and pierce the silicone swiftly, anywhere, just to practise the movement.",
+        es: "Sujeta la cánula por el mango y perfora la silicona con rapidez, en cualquier sitio, solo para practicar el movimiento." },
+      svg: bild(lappen(false) + bewegt(-150, 0, kanuele(390, true)) + pfeil(200, 260, 140) + hinweis(230, 300, 80, Y + 12, "griff", 140) + abwurf(false)) },
+    { text: { de: "Die Stahlnadel am Griff herausziehen und sofort in den Abwurfbehälter. Der Kunststoffüberzug bleibt im Silikon.",
+        en: "Pull the steel needle out by the grip and drop it straight into the sharps container. The plastic sheath stays in the silicone.",
+        es: "Retira la aguja de acero por el mango y échala directamente al contenedor. La vaina de plástico se queda en la silicona." },
+      svg: lobe[3].svg },
+    { text: { de: "Die Schutzkappe kommt nie zurück auf die Nadel. Übe den Ablauf dreimal, bis er von der Verpackung bis zum Abwurf flüssig sitzt.",
+        en: "The cap never goes back on the needle. Practise the sequence three times until it flows from the pack to the sharps container.",
+        es: "El capuchón nunca vuelve a la aguja. Practica la secuencia tres veces hasta que salga fluida del envase al contenedor." },
+      svg: szene(mini(0, -40, 1, nadel(330) + schutzkappe(470)) + kreuz(400, 140) + hinweis(330, 260, 400, 160, "nieZurueck", 220) + abwurf(true) + '<g transform="translate(60 120)">' + haken() + "</g>") }
+  ];
+
+  var schmuckSchritte = [
+    { text: { de: "Geübt wird in einem fertigen Stichkanal im Silikonohr. Die Kugel mit dem Kugelgreifer aufnehmen.",
+        en: "Practise in a finished channel in the silicone ear. Pick up the ball with the ball grabber.",
+        es: "Se practica en un canal ya hecho en la oreja de silicona. Coge la bola con la pinza de bolas." },
+      svg: bild(lappen(true) + labret(258, false) + bewegt(-90, -70, kugel(249) + kugelgreifer(249)) + hinweis(470, 300, 186, 172, "kugelgreifer", 190)) },
+    { text: { de: "Die Klemmzange vorn kurz vor dem Gewinde ansetzen und die Kugel fest aufdrehen. Der Stab dreht sich nicht mit.",
+        en: "Place the clamp at the front just before the thread and screw the ball on firmly. The bar does not turn with it.",
+        es: "Coloca la pinza delante, justo antes de la rosca, y enrosca la bola con firmeza. La barra no gira con ella." },
+      svg: lobe[8].svg },
+    { text: { de: "Prüfen: Die Kugel sitzt fest, nichts wackelt. Keine Kugel darf herunterfallen oder wegspringen.",
+        en: "Check: the ball sits firmly, nothing wobbles. No ball should drop or spring away.",
+        es: "Comprueba: la bola está firme, nada se mueve. Ninguna bola debe caerse ni salir disparada." },
+      svg: bild(lappen(true) + labret(258, true) + hinweis(150, 290, 249, Y + 10, "festPruefen", 190) + haken()) },
+    { text: { de: "Klemmkugelring: Mit der Ringöffnungszange leicht öffnen und die Kugel herausnehmen.",
+        en: "Ball closure ring: open it slightly with the ring-opening pliers and take out the ball.",
+        es: "Aro de bola cautiva: ábrelo un poco con los alicates de apertura y saca la bola." },
+      svg: szene(bcrVorn(300, 80, true) + zange(300, 128, true) + hinweis(500, 300, 360, 132, "ringOffen", 200)) },
+    { text: { de: "Die Kugel mit der Pinzette wieder in die Lücke setzen. Der Ring hält sie mit seiner Spannung, er bleibt rund.",
+        en: "Use tweezers to put the ball back into the gap. The ring holds it with its tension and stays round.",
+        es: "Vuelve a colocar la bola en el hueco con las pinzas. El aro la sujeta con su tensión y sigue redondo." },
+      svg: szene(bcrVorn(300, 80, true).replace(/<circle[^>]*r="10"[^>]*\/>/, "") + bewegt(56, 0, kugelVorn(304, 120, 10) + pinzette(304, 120)) + hinweis(150, 290, 300, 128, "kugelPinzette", 190)) },
+    { text: { de: "Wechsel üben: Kugel abdrehen, Labret herausnehmen, den offenen Ring mit leichter Drehung durch den Stichkanal führen und die Kugel einsetzen. Danach zurück zum Labret.",
+        en: "Practise a change: unscrew the ball, take out the labret, guide the open ring through the channel with a slight twist and insert the ball. Then change back to the labret.",
+        es: "Practica el cambio: desenrosca la bola, saca el labret, pasa el aro abierto por el canal con un ligero giro y coloca la bola. Después vuelve al labret." },
+      svg: bild(lappen(true) + ringLappen("a-zeichnen") + drehpfeil(410, 214) + hinweis(510, 300, 410, 226, "leichteDrehung", 190)) },
+    { text: { de: "Merke: Beim echten Kunden wird der Ersteinsatz erst nach vollständiger Abheilung gewechselt (Modul 10).",
+        en: "Remember: with a real client, the initial jewelry is changed only after complete healing (module 10).",
+        es: "Recuerda: con un cliente real, la joya inicial se cambia solo tras la cicatrización completa (módulo 10)." },
+      svg: bild(lappen(true) + ringLappen("") + kugelVorn(LK[0], LK[1], 9) + hinweis(470, 320, LK[0] + 2, LK[1] + 8, "ersteinsatzAbheilung", 270) + haken()) }
+  ];
+
+  var ablaufSchritte = [
+    { text: { de: "Schritte 1–4: Begrüßen, klären, welches Piercing gewünscht ist, Angst nehmen. Der Kunde füllt die Einverständniserklärung aus.",
+        en: "Steps 1–4: greet, clarify which piercing is wanted, ease any fear. The client fills in the consent form.",
+        es: "Pasos 1–4: saludar, aclarar qué piercing se quiere, quitar el miedo. El cliente rellena el consentimiento." },
+      svg: szene(blatt(330, 80, "einverstaendnis", true) + blase(190, 120, "welchesPiercing", 220)) },
+    { text: { de: "Schritt 5: Währenddessen den Arbeitsplatz vorbereiten und alle Instrumente parat legen.",
+        en: "Step 5: meanwhile, prepare the workstation and lay out all instruments.",
+        es: "Paso 5: mientras tanto, prepara el puesto de trabajo y deja todos los instrumentos a mano." },
+      svg: szene(tablett() + abwurf(false)) },
+    { text: { de: "Schritte 6–7: Für eine ruhige Atmosphäre sorgen, die Stelle begutachten und den Ersteinsatz mit Überlänge wählen.",
+        en: "Steps 6–7: create a calm atmosphere, examine the spot and choose the initial jewelry with extra length.",
+        es: "Pasos 6–7: crea un ambiente tranquilo, examina la zona y elige la joya inicial con longitud extra." },
+      svg: bild(lappen(false) + bewegt(-60, 0, labret(258, true)) + hinweis(150, 290, 272, Y + 8, "ueberlaenge", 180)) },
+    { text: { de: "Schritte 7a–8a: Hände desinfizieren, Handschuhe anziehen, die Stelle desinfizieren und bei Bedarf rasieren.",
+        en: "Steps 7a–8a: disinfect your hands, put on gloves, disinfect the spot and shave if needed.",
+        es: "Pasos 7a–8a: desinfecta las manos, ponte los guantes, desinfecta la zona y rasura si hace falta." },
+      svg: szene('<g class="a-erscheinen">' + handschuh(240, 170) + "</g>" + flasche(420, 150)) },
+    { text: { de: "Schritte 9–10: Ein- und Austrittsstelle markieren, mit Kodan desinfizieren, ohne die Markierung abzuwischen, und den Kunden im Spiegel schauen lassen.",
+        en: "Steps 9–10: mark entry and exit, disinfect with Kodan without wiping off the mark, and let the client check in the mirror.",
+        es: "Pasos 9–10: marca la entrada y la salida, desinfecta con Kodan sin borrar la marca y deja que el cliente lo mire en el espejo." },
+      svg: bildVorn('<g class="a-erscheinen">' + punkt(330, 306) + "</g>" + spiegel(540, 200) + hinweis(150, 300, 326, 306, "passtEs", 170)) },
+    { text: { de: "Schritte 11–12: Snaptile anlegen und zügig von der sichtbaren Seite stechen.",
+        en: "Steps 11–12: apply the Snaptile and pierce swiftly from the visible side.",
+        es: "Pasos 11–12: coloca el Snaptile y perfora con rapidez desde el lado visible." },
+      svg: lobe[1].svg },
+    { text: { de: "Schritte 13–14: Nadel heraus und sofort in den Abwurf, dann den Ansatz vorn abschneiden.",
+        en: "Steps 13–14: needle out and straight into the sharps container, then cut off the hub at the front.",
+        es: "Pasos 13–14: aguja fuera y directa al contenedor, después corta el cono delante." },
+      svg: lobe[3].svg },
+    { text: { de: "Schritte 15–17: Schmuck nur 2–3 mm ins Röhrchen, durch den Stichkanal schieben, der Kunde atmet aus. Röhrchen abziehen.",
+        en: "Steps 15–17: jewelry only 2–3 mm into the tube, push it through the channel while the client breathes out. Pull off the tube.",
+        es: "Pasos 15–17: joya solo 2–3 mm en el tubo, empújala por el canal mientras el cliente espira. Retira el tubo." },
+      svg: lobe[6].svg },
+    { text: { de: "Schritte 18–21: Kugel mit Klemmzange und Kugelgreifer fest aufdrehen, nochmals mit Kodan einsprühen und das Piercing im Spiegel zeigen.",
+        en: "Steps 18–21: screw the ball on firmly with the clamp and ball grabber, spray with Kodan again and show the piercing in the mirror.",
+        es: "Pasos 18–21: enrosca la bola con firmeza con la pinza y la pinza de bolas, vuelve a rociar con Kodan y muestra el piercing en el espejo." },
+      svg: lobe[8].svg },
+    { text: { de: "Schritte 22–25: Pflegehinweise mündlich erklären und schriftlich mitgeben, nach dem Befinden fragen. Bei Problemen kommt der Kunde zur Beratung wieder.",
+        en: "Steps 22–25: explain the aftercare verbally and hand it over in writing, ask how the client feels. If there are problems, the client comes back for advice.",
+        es: "Pasos 22–25: explica los cuidados de palabra y entrégalos por escrito, pregunta cómo se encuentra. Si hay problemas, el cliente vuelve para consultar." },
+      svg: szene(blatt(330, 80, "pflegehinweise", false) + blase(190, 120, "allesGut", 200) + '<g transform="translate(60 0)">' + haken() + "</g>") }
+  ];
+
   KURS.animationen = {
     "labor-lobe": {
       titel: { de: "Animation: Lobe stechen und Labret einsetzen", en: "Animation: piercing the lobe and inserting a labret", es: "Animación: perforar el lóbulo y colocar un labret" },
@@ -487,6 +669,30 @@ window.KURS = window.KURS || { module: [] };
         en: "Schematic illustration, not to scale. The real clip from the studio is coming soon.",
         es: "Ilustración esquemática, no a escala. Pronto estará el vídeo real del estudio." },
       schritte: helix,
+      woerter: T
+    },
+    "labor-kanuele": {
+      titel: { de: "Animation: Die Kanüle sicher handhaben", en: "Animation: handling the cannula safely", es: "Animación: manejar la cánula con seguridad" },
+      hinweis: { de: "Schematische Darstellung, nicht maßstabsgetreu. Den echten Clip aus dem Studio gibt es bald.",
+        en: "Schematic illustration, not to scale. The real clip from the studio is coming soon.",
+        es: "Ilustración esquemática, no a escala. Pronto estará el vídeo real del estudio." },
+      schritte: kanueleSchritte,
+      woerter: T
+    },
+    "labor-schmuck": {
+      titel: { de: "Animation: Schmuck sichern und wechseln", en: "Animation: securing and changing jewelry", es: "Animación: asegurar y cambiar la joya" },
+      hinweis: { de: "Schematische Darstellung, nicht maßstabsgetreu. Den echten Clip aus dem Studio gibt es bald.",
+        en: "Schematic illustration, not to scale. The real clip from the studio is coming soon.",
+        es: "Ilustración esquemática, no a escala. Pronto estará el vídeo real del estudio." },
+      schritte: schmuckSchritte,
+      woerter: T
+    },
+    "labor-ablauf": {
+      titel: { de: "Animation: Der ganze Ablauf im Überblick", en: "Animation: the whole procedure at a glance", es: "Animación: todo el procedimiento de un vistazo" },
+      hinweis: { de: "Schematische Übersicht der 25 Schritte aus Modul 9. Den echten Clip in Echtzeit aus dem Studio gibt es bald.",
+        en: "Schematic overview of the 25 steps from module 9. The real-time clip from the studio is coming soon.",
+        es: "Resumen esquemático de los 25 pasos del módulo 9. Pronto estará el vídeo real en tiempo real del estudio." },
+      schritte: ablaufSchritte,
       woerter: T
     },
     "labor-industrial": {

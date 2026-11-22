@@ -598,17 +598,17 @@ window.KURS.labor.stich = {
       titel: "Securing and changing jewelry",
       modul: 7,
       clip: "labor-schmuck",
-      clipText: "Screw on a ball with the ball grabber and holding pliers, open and close a ball closure ring, change jewelry on the silicone ear.",
+      clipText: "Screw on a ball with the ball grabber and holding pliers, open a ball closure ring and insert the ball with tweezers, change jewelry on the silicone ear.",
       material: ["Silicone ear with pierced channels", "Ball grabber", "Holding pliers", "Ring opening pliers and ring closing pliers", "Practice jewelry"],
       schritte: [
         "Pick up a ball with the ball grabber and screw it onto the bar you are holding with the holding pliers.",
-        "Open a ball closure ring, take out the ball, put it back in and close the ring.",
+        "Open a ball closure ring slightly with the ring-opening pliers, take out the ball and put it back with tweezers. The ring holds it with its tension.",
         "In a finished piercing channel, swap the labret for a BCR and back again.",
         "Remember: with a real client, the initial jewelry is only changed after complete healing (module 10)."
       ],
       kontrolle: [
         "I didn’t drop a single ball or let one spring away.",
-        "The ring is round again after closing.",
+        "The ring is round and the ball sits firmly in the gap.",
         "I can explain why the initial jewelry is not changed early on a client."
       ]
     },

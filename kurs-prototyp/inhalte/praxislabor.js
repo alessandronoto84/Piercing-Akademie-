@@ -598,17 +598,17 @@ window.KURS.labor.stich = {
       titel: "Schmuck sichern und wechseln",
       modul: 7,
       clip: "labor-schmuck",
-      clipText: "Kugel mit Kugelgreifer und Klemmzange aufdrehen, Klemmkugelring öffnen und schließen, Schmuck am Silikonohr wechseln.",
+      clipText: "Kugel mit Kugelgreifer und Klemmzange aufdrehen, Klemmkugelring öffnen und die Kugel mit der Pinzette einsetzen, Schmuck am Silikonohr wechseln.",
       material: ["Silikonohr mit gestochenen Kanälen", "Kugelgreifer", "Klemmzange", "Ringöffnungs- und Ringschließzange", "Übungsschmuck"],
       schritte: [
         "Eine Kugel mit dem Kugelgreifer aufnehmen und auf den Stab drehen, den du mit der Klemmzange hältst.",
-        "Einen Klemmkugelring öffnen, die Kugel herausnehmen, wieder einsetzen und den Ring schließen.",
+        "Einen Klemmkugelring mit der Ringöffnungszange leicht öffnen, die Kugel herausnehmen und mit der Pinzette wieder einsetzen. Der Ring hält sie mit seiner Spannung.",
         "In einem fertigen Stichkanal den Labret gegen einen BCR tauschen und zurück.",
         "Merke dir: Beim echten Kunden wird der Ersteinsatz erst nach vollständiger Abheilung gewechselt (Modul 10)."
       ],
       kontrolle: [
         "Keine Kugel ist mir heruntergefallen oder weggesprungen.",
-        "Der Ring ist nach dem Schließen wieder rund.",
+        "Der Ring ist rund und die Kugel sitzt fest in der Lücke.",
         "Ich kann erklären, warum der Ersteinsatz beim Kunden nicht früh gewechselt wird."
       ]
     },
