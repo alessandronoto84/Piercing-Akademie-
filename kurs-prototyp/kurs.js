@@ -270,10 +270,11 @@
     if (!A) return "";
     var L = function (o) { return (o && (o[SPRACHE] || o.de)) || ""; };
     return '<figure class="k-anim" data-anim="' + esc(id) + '"><p class="k-grafik-titel">' + esc(L(A.titel)) + "</p>" +
-      '<div class="k-anim-buehne" aria-live="polite"></div>' +
       '<figcaption><span class="k-anim-nr"></span> <span class="k-anim-text"></span></figcaption>' +
+      '<div class="k-anim-buehne" aria-live="polite"></div>' +
       '<div class="k-anim-steuerung"><button type="button" class="btn ghost small" data-a="zurueck" aria-label="' + tr("Voriger Schritt") + '">←</button>' +
       '<button type="button" class="btn small" data-a="spielen">' + tr("Pause") + '</button>' +
+      '<button type="button" class="btn ghost small" data-a="nochmal" aria-label="' + tr("Schritt nochmal") + '">↻ ' + tr("Schritt nochmal") + '</button>' +
       '<button type="button" class="btn ghost small" data-a="weiter" aria-label="' + tr("Nächster Schritt") + '">→</button>' +
       '<span class="k-anim-punkte">' + A.schritte.map(function (_, i) { return '<button type="button" data-a="' + i + '" aria-label="' + tr("Schritt {n}", { n: i + 1 }) + '"></button>'; }).join("") + "</span></div>" +
       '<p class="fine">' + esc(L(A.hinweis)) + "</p></figure>";
@@ -296,7 +297,7 @@
       }
       function planen() {
         clearTimeout(uhr);
-        if (laeuft && sichtbar) uhr = setTimeout(function () { zeigen(i + 1); }, 5200);
+        if (laeuft && sichtbar) uhr = setTimeout(function () { zeigen(i + 1); }, Math.max(5200, L(A.schritte[i].text).length * 68));
         knopf.textContent = laeuft ? tr("Pause") : tr("Abspielen");
       }
       fig.addEventListener("click", function (e) {
@@ -305,6 +306,7 @@
         if (a === "spielen") { laeuft = !laeuft; planen(); }
         else if (a === "zurueck") { laeuft = false; zeigen(i - 1); }
         else if (a === "weiter") { laeuft = false; zeigen(i + 1); }
+        else if (a === "nochmal") { laeuft = false; zeigen(i); }
         else { laeuft = false; zeigen(+a); }
       });
       if ("IntersectionObserver" in window) new IntersectionObserver(function (es) { sichtbar = es[0].isIntersecting; planen(); }, { threshold: 0.4 }).observe(fig);
