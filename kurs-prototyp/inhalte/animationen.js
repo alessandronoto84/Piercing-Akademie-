@@ -218,6 +218,12 @@ window.KURS = window.KURS || { module: [] };
     kan18: { de: "Kanüle 18G", en: "18G cannula", es: "cánula 18G" },
     freihand: { de: "freihand", en: "freehand", es: "a mano alzada" },
     kugelAuf: { de: "Kugel aufdrehen", en: "screw on the ball", es: "enroscar la bola" },
+    snaptile: { de: "Snaptile", en: "Snaptile", es: "Snaptile" },
+    ohrInnen: { de: "Ohr / Gehörgang", en: "ear / ear canal", es: "oreja / conducto" },
+    wegbiegen: { de: "Tragus leicht wegbiegen", en: "bend the tragus slightly away", es: "separar un poco el trago" },
+    langsamKontrolliert: { de: "langsam und kontrolliert", en: "slowly and controlled", es: "despacio y con control" },
+    spitzeKnapp: { de: "Spitze tritt nur knapp aus", en: "tip only just comes out", es: "la punta apenas sale" },
+    auffanghuetchen: { de: "Auffanghütchen (geschlossen)", en: "receiving cap (closed)", es: "capuchón receptor (cerrado)" },
     nur23: { de: "nur 2–3 mm ins Röhrchen", en: "only 2–3 mm into the tube", es: "solo 2–3 mm en el tubo" },
     ueberlaenge: { de: "Überlänge ca. 4 mm", en: "extra length approx. 4 mm", es: "longitud extra aprox. 4 mm" },
     kugelSchonDrauf: { de: "Kugel schon drauf", en: "ball already on", es: "bola ya puesta" },
@@ -663,7 +669,9 @@ window.KURS = window.KURS || { module: [] };
     var innen = "M" + i1 + " 46 L" + i1 + " " + (u - rr) + " A" + ir + " " + ir + " 0 0 0 " + i2 + " " + (u - rr) + " L" + i2 + " 46 Z";
     return '<g mask="url(#aFade)"><g filter="url(#aSchatten)"><path d="' + pfad + '" fill="url(#aHaut)" stroke="' + F.hautRand + '" stroke-width="2"/></g>' +
       '<path d="' + innen + '" fill="' + (o.knorpel ? "#EEF3F4" : "#FBE6DA") + '" opacity="' + (o.knorpel ? ".85" : ".55") + '"/></g>' +
-      '<text x="' + (x2 + 14) + '" y="96" class="a-klein" fill="#7C8A90">{' + o.gewebeWort + '}</text>';
+      (o.wand ? '<text x="' + (x1 - 14) + '" y="96" text-anchor="end" class="a-klein" fill="#7C8A90">{' + o.gewebeWort + '}</text>' : '<text x="' + (x2 + 14) + '" y="96" class="a-klein" fill="#7C8A90">{' + o.gewebeWort + '}</text>') +
+      (o.wand ? '<g filter="url(#aSchatten)"><path d="M' + o.wand + ' 40 C' + (o.wand - 14) + ' 120 ' + (o.wand - 14) + ' 240 ' + o.wand + ' 330 L640 330 L640 40 Z" fill="url(#aHaut)" stroke="' + F.hautRand + '" stroke-width="2" opacity=".9"/></g>' +
+        '<text x="' + (o.wand + 24) + '" y="300" class="a-klein" fill="#7C8A90">{' + o.wandWort + '}</text>' : "");
   }
   function kanal(o) { return '<line x1="' + (320 - o.d / 2 + 1) + '" y1="' + Y + '" x2="' + (320 + o.d / 2 - 1) + '" y2="' + Y + '" stroke="#B9735E" stroke-width="2.5" stroke-dasharray="4 3" opacity=".7"/>'; }
   function marken(o) {
@@ -715,23 +723,35 @@ window.KURS = window.KURS || { module: [] };
   // Ansicht von vorn für einzelne Stellen
   function vornOhr(punkte, hw) { return bildVorn('<g class="a-erscheinen">' + punkte.map(function (q) { return punkt(q[0], q[1]); }).join("") + "</g>" + hw); }
 
-  var tragus = piercingSchritte({
+  // Tragus: Snaptile, Tragus leicht vom Gehörgang wegbiegen, langsam und kontrolliert stechen
+  var TP = [281, 232];
+  function gehoergangVorn() { return '<ellipse cx="296" cy="226" rx="9" ry="13" fill="#B97F69" opacity=".75"/>'; }
+  function tragusGebogen() { return '<g transform="translate(-7 0)"><path d="' + OHR.tragus + '" fill="#F3CDB8" stroke="' + F.hautRand + '" stroke-width="1.6"/></g>'; }
+  function snaptileVorn(klasse) {
+    // Snaptile von vorn: Fensterbacke über dem Tragus, Bügel nach unten zum Gesicht hin
+    return '<g' + (klasse ? ' class="' + klasse + '"' : "") + ' filter="url(#aSchatten)">' +
+      '<path d="M' + (TP[0] - 7) + ' ' + (TP[1] + 13) + ' L' + (TP[0] - 16) + ' 330" stroke="#6F7984" stroke-width="10" stroke-linecap="round"/>' +
+      '<path d="M' + (TP[0] - 7) + ' ' + (TP[1] + 13) + ' L' + (TP[0] - 16) + ' 330" stroke="url(#aStahlV)" stroke-width="7" stroke-linecap="round"/>' +
+      '<circle cx="' + (TP[0] - 7) + '" cy="' + TP[1] + '" r="13" fill="none" stroke="#6F7984" stroke-width="7"/><circle cx="' + (TP[0] - 7) + '" cy="' + TP[1] + '" r="13" fill="none" stroke="url(#aStahl)" stroke-width="4.5"/></g>';
+  }
+  function kanueleSchraeg(langsam) {
+    // Kanüle schräg von vorn auf den Tragus zu (verkürzt gezeichnet, sie zeigt in die Bildebene hinein)
+    var inner = '<g class="a-bewegt" style="--a-von:-140px;--a-nach:0px' + (langsam ? ";animation-duration:3.8s" : "") + '">' + kanuele(390, true) + "</g>";
+    return '<g transform="translate(' + (TP[0] - 7) + " " + TP[1] + ') rotate(32) scale(.46 .62) translate(-390 -180)">' + inner + "</g>";
+  }
+  var tragusO = {
     d: 56, unten: Y + 96, knorpel: true, gewebeWort: "knorpelTragus", links: "vorneTragus", rechts: "gehoergang",
-    werkzeug: "rohr", gauge: "kan16", schmuck: "labret", ueberVorn: 26,
-    vorn: vornOhr([[281, 232]], hinweis(150, 290, 279, 236, "tragusStelle", 200)),
+    werkzeug: "snaptile", werkzeugWort: "snaptile", gauge: "kan16", schmuck: "labret", ueberVorn: 26,
+    vorn: vornOhr([TP], hinweis(150, 290, TP[0] - 2, TP[1] + 4, "tragusStelle", 200)),
     texte: {
       lage: { de: "Ansicht von vorn: Die Stelle mitten auf dem Tragus anzeichnen, dem Knorpelfortsatz am Gehöreingang. Der Kunde schaut im Spiegel, ob es passt.",
         en: "Front view: mark the spot in the middle of the tragus, the cartilage flap at the ear canal entrance. The client checks in the mirror that it is right.",
         es: "Vista frontal: marca el punto en el centro del trago, la prominencia de cartílago a la entrada del oído. El cliente comprueba en el espejo que está bien." },
-      halt: { de: "Querschnitt durch den Tragus: vorn die sichtbare Seite, hinten der Gehörgang. Das Nadelauffangrohr hinten anlegen. Es fängt die Nadel auf und schützt den Gehörgang.",
-        en: "Cross-section of the tragus: the visible side at the front, the ear canal at the back. Place the receiving tube at the back. It catches the needle and protects the ear canal.",
-        es: "Corte del trago: delante el lado visible, detrás el conducto auditivo. Coloca el tubo receptor detrás. Recoge la aguja y protege el conducto auditivo." },
-      stich: { de: "Mit der 16G-Kanüle zügig von vorn stechen, gerade durch beide Markierungen bis ins Auffangrohr.",
-        en: "Pierce swiftly from the front with the 16G cannula, straight through both marks into the receiving tube.",
-        es: "Perfora con rapidez desde delante con la cánula 16G, recto a través de ambas marcas hasta el tubo receptor." },
-      abwurf: { de: "Auffangrohr weg, Nadel heraus und sofort in den Abwurfbehälter. Das Röhrchen bleibt im Stichkanal.",
-        en: "Remove the receiving tube, pull the needle out and drop it straight into the sharps container. The tube stays in the channel.",
-        es: "Retira el tubo receptor, saca la aguja y échala directamente al contenedor. El tubo se queda en el canal." },
+      halt: { de: "", en: "", es: "" },
+      stich: { de: "", en: "", es: "" },
+      abwurf: { de: "Snaptile abnehmen, Nadel heraus und sofort in den Abwurfbehälter. Das Röhrchen bleibt im Stichkanal.",
+        en: "Take off the Snaptile, pull the needle out and drop it straight into the sharps container. The tube stays in the channel.",
+        es: "Quita el Snaptile, saca la aguja y échala directamente al contenedor. El tubo se queda en el canal." },
       ansatz: { de: "Vorn den grünen Ansatz mit der Schere abschneiden, sodass nur das Röhrchen bleibt.",
         en: "At the front, cut off the green hub with scissors so only the tube is left.",
         es: "Delante, corta el cono verde con las tijeras para que solo quede el tubo." },
@@ -748,7 +768,31 @@ window.KURS = window.KURS || { module: [] };
         en: "Done: ball at the front, disc at the back, with extra length for swelling. Spray with Kodan again and show it in the mirror.",
         es: "Listo: bola delante, disco detrás, con longitud extra para la hinchazón. Vuelve a rociar con Kodan y muéstralo en el espejo." }
     }
-  });
+  };
+  var tragusBasis = piercingSchritte(tragusO);
+  var tragusQ = Object.assign({}, tragusO, { wand: 470, wandWort: "ohrInnen" });
+  var tx2 = 320 + tragusO.d / 2;
+  var tragus = [
+    tragusBasis[0],
+    { text: { de: "Am ganzen Ohr: Das Snaptile am Tragus anlegen, das Fenster liegt auf der Markierung. Den Tragus damit leicht vom Gehörgang wegbiegen.",
+        en: "On the whole ear: apply the Snaptile to the tragus with the window over the mark. Use it to bend the tragus slightly away from the ear canal.",
+        es: "En toda la oreja: coloca el Snaptile en el trago con la ventana sobre la marca. Con él, separa un poco el trago del conducto auditivo." },
+      svg: bildVorn(gehoergangVorn() + tragusGebogen() + punkt(TP[0] - 7, TP[1]) + bewegt(-50, 0, snaptileVorn()) + pfeil(262, 222, 196) + hinweis(150, 120, TP[0] - 12, TP[1] - 12, "wegbiegen", 220) + hinweis(150, 300, TP[0] - 14, 300, "snaptile", 140)) },
+    { text: { de: "Langsam und kontrolliert von vorn durch das Fenster stechen. Nur so weit, dass die Spitze hinten knapp austritt, damit die Nadel nicht ins Ohr sticht.",
+        en: "Pierce slowly and under control from the front through the window. Only far enough for the tip to just come out at the back, so the needle does not go into the ear.",
+        es: "Perfora despacio y con control desde delante a través de la ventana. Solo hasta que la punta salga apenas por detrás, para que la aguja no entre en el oído." },
+      svg: bildVorn(gehoergangVorn() + tragusGebogen() + snaptileVorn() + kanueleSchraeg(true) + hinweis(470, 300, TP[0] - 4, TP[1] + 8, "langsamKontrolliert", 230)) },
+    { text: { de: "So sieht es im Querschnitt aus: Der Tragus ist vom Gehörgang weggebogen, die Nadelspitze tritt hinten nur knapp aus. Dahinter bleibt Abstand zum Ohr.",
+        en: "This is how it looks in cross-section: the tragus is bent away from the ear canal and the tip only just comes out at the back. There is still space to the ear behind it.",
+        es: "Así se ve en corte: el trago está separado del conducto auditivo y la punta apenas sale por detrás. Detrás queda distancia hasta la oreja." },
+      svg: bildQ(tragusQ, zangeQ(tragusQ, "snaptile") + bewegt(-150, 0, '<g style="animation-duration:3.8s">' + kanuele(tx2 + 14, true) + "</g>") + hinweis(530, 120, tx2 + 14, Y - 4, "spitzeKnapp", 200)) },
+    { text: { de: "Gut zu wissen: Es gibt spezielle Tragusklemmen mit einem geschlossenen Auffanghütchen, in dem die Nadel stoppt. Hier zeigen wir es mit dem Snaptile.",
+        en: "Good to know: there are special tragus clamps with a closed receiving cap that stops the needle. Here we show it with the Snaptile.",
+        es: "Bueno saberlo: hay pinzas especiales para trago con un capuchón receptor cerrado en el que se detiene la aguja. Aquí lo mostramos con el Snaptile." },
+      svg: bildQ(tragusQ, '<g filter="url(#aSchatten)"><path d="M' + (tx2 + 2) + ' ' + (Y - 18) + ' L' + (tx2 + 24) + ' ' + (Y - 18) + ' A18 18 0 0 1 ' + (tx2 + 24) + ' ' + (Y + 18) + ' L' + (tx2 + 2) + ' ' + (Y + 18) + ' Z" fill="url(#aStahl)" stroke="#6F7984"/></g>' +
+        kanuele(tx2 + 14, true) + hinweis(530, 120, tx2 + 30, Y - 8, "auffanghuetchen", 220)) }
+  ].concat(tragusBasis.slice(3));
+
 
   KURS.animationen = {
     "labor-lobe": {
