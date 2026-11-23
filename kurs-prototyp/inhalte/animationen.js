@@ -223,7 +223,9 @@ window.KURS = window.KURS || { module: [] };
     wegbiegen: { de: "Tragus leicht wegbiegen", en: "bend the tragus slightly away", es: "separar un poco el trago" },
     langsamKontrolliert: { de: "langsam und kontrolliert", en: "slowly and controlled", es: "despacio y con control" },
     spitzeKnapp: { de: "Spitze tritt nur knapp aus", en: "tip only just comes out", es: "la punta apenas sale" },
-    auffanghuetchen: { de: "Auffanghütchen (geschlossen)", en: "receiving cap (closed)", es: "capuchón receptor (cerrado)" },
+    tippTitel: { de: "Gut zu wissen", en: "Good to know", es: "Bueno saberlo" },
+    tippZeile1: { de: "Es gibt auch spezielle Tragusklemmen", en: "There are also special tragus clamps", es: "También hay pinzas especiales para trago" },
+    tippZeile2: { de: "mit Auffanghütchen.", en: "with a receiving cap.", es: "con capuchón receptor." },
     nur23: { de: "nur 2–3 mm ins Röhrchen", en: "only 2–3 mm into the tube", es: "solo 2–3 mm en el tubo" },
     ueberlaenge: { de: "Überlänge ca. 4 mm", en: "extra length approx. 4 mm", es: "longitud extra aprox. 4 mm" },
     kugelSchonDrauf: { de: "Kugel schon drauf", en: "ball already on", es: "bola ya puesta" },
@@ -786,11 +788,12 @@ window.KURS = window.KURS || { module: [] };
         en: "This is how it looks in cross-section: the tragus is bent away from the ear canal and the tip only just comes out at the back. There is still space to the ear behind it.",
         es: "Así se ve en corte: el trago está separado del conducto auditivo y la punta apenas sale por detrás. Detrás queda distancia hasta la oreja." },
       svg: bildQ(tragusQ, zangeQ(tragusQ, "snaptile") + bewegt(-150, 0, '<g style="animation-duration:3.8s">' + kanuele(tx2 + 14, true) + "</g>") + hinweis(530, 120, tx2 + 14, Y - 4, "spitzeKnapp", 200)) },
-    { text: { de: "Gut zu wissen: Es gibt spezielle Tragusklemmen mit einem geschlossenen Auffanghütchen, in dem die Nadel stoppt. Hier zeigen wir es mit dem Snaptile.",
-        en: "Good to know: there are special tragus clamps with a closed receiving cap that stops the needle. Here we show it with the Snaptile.",
-        es: "Bueno saberlo: hay pinzas especiales para trago con un capuchón receptor cerrado en el que se detiene la aguja. Aquí lo mostramos con el Snaptile." },
-      svg: bildQ(tragusQ, '<g filter="url(#aSchatten)"><path d="M' + (tx2 + 2) + ' ' + (Y - 18) + ' L' + (tx2 + 24) + ' ' + (Y - 18) + ' A18 18 0 0 1 ' + (tx2 + 24) + ' ' + (Y + 18) + ' L' + (tx2 + 2) + ' ' + (Y + 18) + ' Z" fill="url(#aStahl)" stroke="#6F7984"/></g>' +
-        kanuele(tx2 + 14, true) + hinweis(530, 120, tx2 + 30, Y - 8, "auffanghuetchen", 220)) }
+    { text: { de: "Gut zu wissen: Es gibt auch spezielle Tragusklemmen mit Auffanghütchen. Hier zeigen wir es mit dem Snaptile.",
+        en: "Good to know: there are also special tragus clamps with a receiving cap. Here we show it with the Snaptile.",
+        es: "Bueno saberlo: también hay pinzas especiales para trago con capuchón receptor. Aquí lo mostramos con el Snaptile." },
+      svg: szene('<g class="a-erscheinen" filter="url(#aSchatten)"><rect x="120" y="110" width="400" height="140" rx="22" fill="#FFFFFF" stroke="' + F.gold + '"/></g>' +
+        '<g class="a-erscheinen"><circle cx="172" cy="180" r="24" fill="' + F.gold + '"/><text x="172" y="189" text-anchor="middle" font-size="26" font-weight="700" fill="#FFFFFF">i</text>' +
+        '<text x="214" y="168" class="a-txt" fill="#5A4632">{tippTitel}</text><text x="214" y="196" class="a-klein" fill="#5A4632">{tippZeile1}</text><text x="214" y="216" class="a-klein" fill="#5A4632">{tippZeile2}</text></g>') }
   ].concat(tragusBasis.slice(3));
 
 
