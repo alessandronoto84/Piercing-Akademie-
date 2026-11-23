@@ -44,6 +44,7 @@ window.KURS = window.KURS || { module: [] };
         seite: "S. 76–77",
         inhalt: [
           db("Tragus", "Saliente de cartílago a la entrada del conducto auditivo.", "labret, BCR, barbell", "punch de biopsia, 18G, 16G", "pinza para tragus, tubo receptor", "", "S. 76"),
+          { typ: "animation", id: "labor-tragus" },
           db("Anti-Tragus", "El saliente de cartílago opuesto al Tragus.", "herradura (circular barbell), barbell curvo (banana), BCR", "18G", "tubo receptor", "", "S. 77")
         ],
         fragen: [

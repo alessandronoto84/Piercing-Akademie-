@@ -44,6 +44,7 @@ window.KURS = window.KURS || { module: [] };
         seite: "S. 76–77",
         inhalt: [
           db("Tragus", "Knorpelfortsatz am Gehöreingang.", "Labret, BCR, Barbell", "Punch, 18G, 16G", "Traguszange, Nadelauffangrohr", "", "S. 76"),
+          { typ: "animation", id: "labor-tragus" },
           db("Anti-Tragus", "Der dem Tragus gegenüberliegende Knorpelfortsatz.", "Hufeisen, Banane, BCR", "18G", "Nadelauffangrohr", "", "S. 77")
         ],
         fragen: [

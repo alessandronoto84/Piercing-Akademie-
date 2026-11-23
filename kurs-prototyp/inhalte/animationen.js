@@ -210,6 +210,14 @@ window.KURS = window.KURS || { module: [] };
     welchesPiercing: { de: "Welches Piercing?", en: "Which piercing?", es: "¿Qué piercing?" },
     allesGut: { de: "Alles gut?", en: "All good?", es: "¿Todo bien?" },
     passtEs: { de: "Passt es so?", en: "Is it right?", es: "¿Está bien así?" },
+    knorpelTragus: { de: "Knorpel (Tragus)", en: "cartilage (tragus)", es: "cartílago (trago)" },
+    vorneTragus: { de: "vorn (sichtbare Seite)", en: "front (visible side)", es: "delante (lado visible)" },
+    gehoergang: { de: "Gehörgang", en: "ear canal", es: "conducto auditivo" },
+    tragusStelle: { de: "Mitte des Tragus", en: "middle of the tragus", es: "centro del trago" },
+    kan16: { de: "Kanüle 16G", en: "16G cannula", es: "cánula 16G" },
+    kan18: { de: "Kanüle 18G", en: "18G cannula", es: "cánula 18G" },
+    freihand: { de: "freihand", en: "freehand", es: "a mano alzada" },
+    kugelAuf: { de: "Kugel aufdrehen", en: "screw on the ball", es: "enroscar la bola" },
     nur23: { de: "nur 2–3 mm ins Röhrchen", en: "only 2–3 mm into the tube", es: "solo 2–3 mm en el tubo" },
     ueberlaenge: { de: "Überlänge ca. 4 mm", en: "extra length approx. 4 mm", es: "longitud extra aprox. 4 mm" },
     kugelSchonDrauf: { de: "Kugel schon drauf", en: "ball already on", es: "bola ya puesta" },
@@ -646,6 +654,102 @@ window.KURS = window.KURS || { module: [] };
       svg: szene(blatt(330, 80, "pflegehinweise", false) + blase(190, 120, "allesGut", 200) + '<g transform="translate(60 0)">' + haken() + "</g>") }
   ];
 
+  // ---------- Baukasten für die Piercings aus Modul 8 (gleicher Stil, gleicher Grundablauf) ----------
+  // Querschnitt: Gewebe mit Dicke d, Stichkanal waagerecht auf Höhe Y; links Eintritt, rechts Austritt.
+  function gewebe(o) {
+    var x1 = 320 - o.d / 2, x2 = 320 + o.d / 2, u = o.unten, rr = o.d / 2;
+    var pfad = "M" + x1 + " 40 L" + x1 + " " + (u - rr) + " A" + rr + " " + rr + " 0 0 0 " + x2 + " " + (u - rr) + " L" + x2 + " 40 Z";
+    var i1 = x1 + 9, i2 = x2 - 9, ir = rr - 9;
+    var innen = "M" + i1 + " 46 L" + i1 + " " + (u - rr) + " A" + ir + " " + ir + " 0 0 0 " + i2 + " " + (u - rr) + " L" + i2 + " 46 Z";
+    return '<g mask="url(#aFade)"><g filter="url(#aSchatten)"><path d="' + pfad + '" fill="url(#aHaut)" stroke="' + F.hautRand + '" stroke-width="2"/></g>' +
+      '<path d="' + innen + '" fill="' + (o.knorpel ? "#EEF3F4" : "#FBE6DA") + '" opacity="' + (o.knorpel ? ".85" : ".55") + '"/></g>' +
+      '<text x="' + (x2 + 14) + '" y="96" class="a-klein" fill="#7C8A90">{' + o.gewebeWort + '}</text>';
+  }
+  function kanal(o) { return '<line x1="' + (320 - o.d / 2 + 1) + '" y1="' + Y + '" x2="' + (320 + o.d / 2 - 1) + '" y2="' + Y + '" stroke="#B9735E" stroke-width="2.5" stroke-dasharray="4 3" opacity=".7"/>'; }
+  function marken(o) {
+    var x1 = 320 - o.d / 2, x2 = 320 + o.d / 2;
+    return '<circle cx="' + (x1 - 1) + '" cy="' + Y + '" r="4.5" fill="' + F.mark + '"/><circle cx="' + (x2 + 1) + '" cy="' + Y + '" r="4.5" fill="' + F.mark + '"/>';
+  }
+  function auffangrohr(o, klasse) {
+    // Nadelauffangrohr: liegt auf der Austrittsseite an und fängt die Nadelspitze auf
+    var x2 = 320 + o.d / 2;
+    return '<g' + (klasse ? ' class="' + klasse + '"' : "") + ' filter="url(#aSchatten)"><rect x="' + (x2 + 2) + '" y="' + (Y - 10) + '" width="120" height="20" rx="4" fill="url(#aStahl)" stroke="#6F7984"/>' +
+      '<rect x="' + (x2 + 2) + '" y="' + (Y - 5) + '" width="10" height="10" fill="#5F666D" opacity=".6"/></g>';
+  }
+  function zangeQ(o, wort, klasse) {
+    // Klemme bzw. Zange mit Fenster im Querschnitt (Form wie das Snaptile), Beschriftung je nach Werkzeug
+    var dx = o.d / 2 - 33.5, x1 = 320 - o.d / 2, x2 = 320 + o.d / 2;
+    var k = klemme().replace(">Snaptile<", ">{" + wort + "}<");
+    k = k.replace(/(<g class="a-klemme"[^>]*>)/, "$1");
+    return '<g' + (klasse ? ' class="' + klasse + '"' : "") + '><g transform="translate(' + (320 - (276 + 364) / 2) + ' 0)">' +
+      '<g transform="translate(320 0) scale(' + ((o.d + 22) / 88).toFixed(3) + ' 1) translate(-320 0)">' + k + "</g></g></g>";
+  }
+  function schmuckGerade(o, x, kugelVorn, kugelHinten) {
+    // Labret (Platte auf der Austrittsseite) oder Barbell; x = vorderes Stabende, Länge mit Überlänge
+    var L = o.laenge, g = '<g filter="url(#aSchatten)"><rect x="' + x + '" y="' + (Y - 4) + '" width="' + L + '" height="8" rx="4" fill="url(#aTitan)" stroke="#7D8792" stroke-width=".8"/>';
+    if (o.schmuck === "labret") g += '<rect x="' + (x + L - 2) + '" y="' + (Y - 22) + '" width="8" height="44" rx="4" fill="url(#aTitan)" stroke="#7D8792" stroke-width=".8"/>';
+    else if (kugelHinten) g += '<circle cx="' + (x + L + 9) + '" cy="' + Y + '" r="11" fill="url(#aKugel)" stroke="#6F7984" stroke-width=".8"/>';
+    if (kugelVorn) g += '<circle cx="' + (x - 9) + '" cy="' + Y + '" r="11" fill="url(#aKugel)" stroke="#6F7984" stroke-width=".8"/>';
+    return g + "</g>";
+  }
+  function bildQ(o, inhalt) {
+    return '<svg viewBox="0 0 ' + W + " " + H + '" role="img">' + DEFS + buehne() + etikett(150, o.links, 220) + etikett(490, o.rechts, 150) + gewebe(o) + inhalt + "</svg>";
+  }
+  function piercingSchritte(o) {
+    var x1 = 320 - o.d / 2, x2 = 320 + o.d / 2, tip = x2 + 36, r = tip - 8, l = tip - 184;
+    var F0 = x1 - o.ueberVorn, xIn = r - 12, sh = xIn - F0;
+    o.laenge = x2 - x1 + o.ueberVorn + (o.schmuck === "labret" ? 2 : o.ueberVorn);
+    var halt = o.werkzeug === "rohr" ? auffangrohr(o) : o.werkzeug === "frei" ? "" : zangeQ(o, o.werkzeugWort);
+    var t = o.texte, S = [];
+    S.push({ text: t.lage, svg: o.vorn });
+    S.push({ text: t.halt, svg: bildQ(o, marken(o) + (o.werkzeug === "rohr" ? bewegt(80, 0, auffangrohr(o)) : o.werkzeug === "frei" ? hinweis(470, 290, x2 + 2, Y + 4, "freihand", 150) : bewegt(-60, 0, zangeQ(o, o.werkzeugWort)))) });
+    S.push({ text: t.stich, svg: bildQ(o, halt + bewegt(-150, 0, kanuele(tip, true)) + pfeil(200, 260, 140) + hinweis(150, 300, tip - 120, Y + 8, o.gauge, 140)) });
+    S.push({ text: t.abwurf, svg: bildQ(o, (o.werkzeug === "rohr" ? auffangrohr(o, "a-weg") : o.werkzeug === "frei" ? "" : zangeQ(o, o.werkzeugWort, "a-weg")) + kanal(o) + kanuele(tip, false) + nadelSenkrecht() + abwurf(true) + hinweis(470, 110, 320, Y - 7, "roehrchen", 230)) });
+    S.push({ text: t.ansatz, svg: bildQ(o, kanal(o) + kanuele(tip, false, l - 6, r) + ansatzFaellt(l - 6) + schere(l + 8)) });
+    S.push({ text: t.einsetzen, svg: bildQ(o, kanal(o) + kanuele(tip, false, l, r) + bewegt(80, 0, schmuckGerade(o, xIn, false, true)) + pfeil(530, 480, 250) + hinweis(470, 310, xIn + 6, Y + 6, "nur23", 190)) });
+    S.push({ text: t.schieben, svg: bildQ(o, bewegt(0, -sh, kanuele(tip, false, l, r)) + bewegt(0, -sh, schmuckGerade(o, xIn, false, true)) + pfeil(480, 420, 250)) });
+    S.push({ text: t.kugel, svg: bildQ(o, '<g class="a-weg-links">' + kanuele(tip, false, l - sh, r - sh) + "</g>" + schmuckGerade(o, F0, false, true) + '<g transform="translate(' + (F0 - 258) + ' 0)">' + klemmzangeVorn() + "</g>" + bewegt(-70, 0, kugel(F0 - 9) + kugelgreifer(F0 - 9)) + hinweis(470, 300, F0 + 4, Y + 6, "kugelAuf", 190)) });
+    S.push({ text: t.fertig, svg: bildQ(o, schmuckGerade(o, F0, true, true) + hinweis(150, 300, F0 + 12, Y + 8, "ueberlaenge", 180) + haken()) });
+    return S;
+  }
+  // Ansicht von vorn für einzelne Stellen
+  function vornOhr(punkte, hw) { return bildVorn('<g class="a-erscheinen">' + punkte.map(function (q) { return punkt(q[0], q[1]); }).join("") + "</g>" + hw); }
+
+  var tragus = piercingSchritte({
+    d: 56, unten: Y + 96, knorpel: true, gewebeWort: "knorpelTragus", links: "vorneTragus", rechts: "gehoergang",
+    werkzeug: "rohr", gauge: "kan16", schmuck: "labret", ueberVorn: 26,
+    vorn: vornOhr([[281, 232]], hinweis(150, 290, 279, 236, "tragusStelle", 200)),
+    texte: {
+      lage: { de: "Ansicht von vorn: Die Stelle mitten auf dem Tragus anzeichnen, dem Knorpelfortsatz am Gehöreingang. Der Kunde schaut im Spiegel, ob es passt.",
+        en: "Front view: mark the spot in the middle of the tragus, the cartilage flap at the ear canal entrance. The client checks in the mirror that it is right.",
+        es: "Vista frontal: marca el punto en el centro del trago, la prominencia de cartílago a la entrada del oído. El cliente comprueba en el espejo que está bien." },
+      halt: { de: "Querschnitt durch den Tragus: vorn die sichtbare Seite, hinten der Gehörgang. Das Nadelauffangrohr hinten anlegen. Es fängt die Nadel auf und schützt den Gehörgang.",
+        en: "Cross-section of the tragus: the visible side at the front, the ear canal at the back. Place the receiving tube at the back. It catches the needle and protects the ear canal.",
+        es: "Corte del trago: delante el lado visible, detrás el conducto auditivo. Coloca el tubo receptor detrás. Recoge la aguja y protege el conducto auditivo." },
+      stich: { de: "Mit der 16G-Kanüle zügig von vorn stechen, gerade durch beide Markierungen bis ins Auffangrohr.",
+        en: "Pierce swiftly from the front with the 16G cannula, straight through both marks into the receiving tube.",
+        es: "Perfora con rapidez desde delante con la cánula 16G, recto a través de ambas marcas hasta el tubo receptor." },
+      abwurf: { de: "Auffangrohr weg, Nadel heraus und sofort in den Abwurfbehälter. Das Röhrchen bleibt im Stichkanal.",
+        en: "Remove the receiving tube, pull the needle out and drop it straight into the sharps container. The tube stays in the channel.",
+        es: "Retira el tubo receptor, saca la aguja y échala directamente al contenedor. El tubo se queda en el canal." },
+      ansatz: { de: "Vorn den grünen Ansatz mit der Schere abschneiden, sodass nur das Röhrchen bleibt.",
+        en: "At the front, cut off the green hub with scissors so only the tube is left.",
+        es: "Delante, corta el cono verde con las tijeras para que solo quede el tubo." },
+      einsetzen: { de: "Das Labret nur 2–3 mm von hinten in das Röhrchen stecken. Die Platte bleibt hinten am Gehörgang.",
+        en: "Insert the labret only 2–3 mm into the tube from the back. The disc stays at the back, by the ear canal.",
+        es: "Introduce el labret solo 2–3 mm en el tubo por detrás. El disco se queda detrás, junto al conducto auditivo." },
+      schieben: { de: "Das Labret durchschieben, nicht ziehen. Es schiebt das Röhrchen vorn hinaus. Den Kunden dabei ausatmen lassen.",
+        en: "Push the labret through, do not pull. It pushes the tube out at the front. Have the client breathe out.",
+        es: "Empuja el labret, no tires. Saca el tubo por delante. Pide al cliente que espire." },
+      kugel: { de: "Röhrchen abziehen. Die Kugel vorn mit dem Kugelgreifer aufdrehen, den Stab dabei mit der Klemmzange kurz vor dem Gewinde halten.",
+        en: "Pull off the tube. Screw the ball on at the front with the ball grabber, holding the bar with the clamp just before the thread.",
+        es: "Retira el tubo. Enrosca la bola delante con la pinza de bolas, sujetando la barra con la pinza justo antes de la rosca." },
+      fertig: { de: "Fertig: Kugel vorn, Platte hinten, mit Überlänge für die Schwellung. Nochmals mit Kodan einsprühen und im Spiegel zeigen.",
+        en: "Done: ball at the front, disc at the back, with extra length for swelling. Spray with Kodan again and show it in the mirror.",
+        es: "Listo: bola delante, disco detrás, con longitud extra para la hinchazón. Vuelve a rociar con Kodan y muéstralo en el espejo." }
+    }
+  });
+
   KURS.animationen = {
     "labor-lobe": {
       titel: { de: "Animation: Lobe stechen und Labret einsetzen", en: "Animation: piercing the lobe and inserting a labret", es: "Animación: perforar el lóbulo y colocar un labret" },
@@ -693,6 +797,14 @@ window.KURS = window.KURS || { module: [] };
         en: "Schematic overview of the 25 steps from module 9. The real-time clip from the studio is coming soon.",
         es: "Resumen esquemático de los 25 pasos del módulo 9. Pronto estará el vídeo real en tiempo real del estudio." },
       schritte: ablaufSchritte,
+      woerter: T
+    },
+    "labor-tragus": {
+      titel: { de: "Animation: Tragus mit Labret", en: "Animation: tragus with a labret", es: "Animación: trago con labret" },
+      hinweis: { de: "Schematische Darstellung, nicht maßstabsgetreu. Den echten Clip aus dem Studio gibt es bald.",
+        en: "Schematic illustration, not to scale. The real clip from the studio is coming soon.",
+        es: "Ilustración esquemática, no a escala. Pronto estará el vídeo real del estudio." },
+      schritte: tragus,
       woerter: T
     },
     "labor-industrial": {

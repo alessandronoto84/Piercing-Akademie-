@@ -234,6 +234,7 @@
         if (!f) return "";
         return '<figure class="k-foto"><img src="' + f.src + '" width="' + f.w + '" height="' + f.h + '" alt="' + esc(b.text) + '" loading="lazy"><figcaption>' + esc(b.text) + nachweis(f) + "</figcaption></figure>";
       case "video": return clip(b);
+      case "animation": return ANIM[b.id] ? animationHtml(b.id) : "";
       case "galerie":
         return '<figure class="k-galerie">' + (b.titel ? '<p class="k-grafik-titel">' + esc(b.titel) + "</p>" : "") + "<ul>" +
           b.bilder.filter(function (x) { return BILDER[x[0]]; }).map(function (x) {
@@ -523,6 +524,7 @@
       '<section class="k-quiz" id="quiz" hidden aria-live="polite"></section>' +
       (stand.vorschau ? loesungen(l) + blaettern(m, i) : "");
     app.innerHTML = html;
+    animationenStarten();
     document.getElementById("fragen-start").addEventListener("click", function () {
       document.getElementById("start-bereich").hidden = true;
       document.getElementById("phase-1").classList.remove("aktiv"); document.getElementById("phase-2").classList.add("aktiv");

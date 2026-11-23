@@ -44,6 +44,7 @@ window.KURS = window.KURS || { module: [] };
         seite: "S. 76–77",
         inhalt: [
           db("Tragus", "Cartilage projection at the entrance to the ear canal.", "labret, BCR, barbell", "biopsy punch, 18G, 16G", "tragus forceps, receiving tube", "", "S. 76"),
+          { typ: "animation", id: "labor-tragus" },
           db("Anti-Tragus", "The cartilage projection opposite the Tragus.", "horseshoe (circular barbell), curved barbell (banana), BCR", "18G", "receiving tube", "", "S. 77")
         ],
         fragen: [
