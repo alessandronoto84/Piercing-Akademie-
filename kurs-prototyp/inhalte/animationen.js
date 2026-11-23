@@ -223,6 +223,8 @@ window.KURS = window.KURS || { module: [] };
     wegbiegen: { de: "Tragus leicht wegbiegen", en: "bend the tragus slightly away", es: "separar un poco el trago" },
     langsamKontrolliert: { de: "langsam und kontrolliert", en: "slowly and controlled", es: "despacio y con control" },
     spitzeKnapp: { de: "Spitze tritt nur knapp aus", en: "tip only just comes out", es: "la punta apenas sale" },
+    spitzeUnten: { de: "Spitze nach unten", en: "tip down", es: "punta hacia abajo" },
+    abwurfBehaelter: { de: "Abwurfbehälter", en: "sharps container", es: "contenedor de agujas" },
     tippTitel: { de: "Gut zu wissen", en: "Good to know", es: "Bueno saberlo" },
     tippZeile1: { de: "Es gibt auch spezielle Tragusklemmen", en: "There are also special tragus clamps", es: "También hay pinzas especiales para trago" },
     tippZeile2: { de: "mit Auffanghütchen.", en: "with a receiving cap.", es: "con capuchón receptor." },
@@ -705,6 +707,14 @@ window.KURS = window.KURS || { module: [] };
   function bildQ(o, inhalt) {
     return '<svg viewBox="0 0 ' + W + " " + H + '" role="img">' + DEFS + buehne() + etikett(150, o.links, 220) + etikett(490, o.rechts, 150) + gewebe(o) + inhalt + "</svg>";
   }
+  var ABWURF_TEXT = { de: "Die Nadel sofort in den Abwurfbehälter werfen, mit der Spitze nach unten. Nie zurück in die Schutzkappe und nie auf den Tisch.",
+    en: "Drop the needle straight into the sharps container, tip down. Never back into the cap and never onto the table.",
+    es: "Echa la aguja directamente al contenedor, con la punta hacia abajo. Nunca de nuevo al capuchón ni sobre la mesa." };
+  function abwurfGross() {
+    // großer Abwurfbehälter in der Mitte, die Nadel fällt mit der Spitze voran hinein
+    return '<svg viewBox="0 0 ' + W + " " + H + '" role="img">' + DEFS + buehne() + mini(170, -330, 2, '<defs><clipPath id="aKlipAbwurf"><rect x="0" y="-200" width="200" height="510"/></clipPath></defs><g clip-path="url(#aKlipAbwurf)"><g transform="translate(0 70)">' + nadelSenkrecht() + "</g></g>" + abwurf(true)) +
+      hinweis(500, 100, 326, 40, "spitzeUnten", 190) + hinweis(500, 260, 384, 240, "abwurfBehaelter", 190) + "</svg>";
+  }
   function piercingSchritte(o) {
     var x1 = 320 - o.d / 2, x2 = 320 + o.d / 2, tip = x2 + 36, r = tip - 8, l = tip - 184;
     var F0 = x1 - o.ueberVorn, xIn = r - 12, sh = xIn - F0;
@@ -714,7 +724,8 @@ window.KURS = window.KURS || { module: [] };
     S.push({ text: t.lage, svg: o.vorn });
     S.push({ text: t.halt, svg: bildQ(o, marken(o) + (o.werkzeug === "rohr" ? bewegt(80, 0, auffangrohr(o)) : o.werkzeug === "frei" ? hinweis(470, 290, x2 + 2, Y + 4, "freihand", 150) : bewegt(-60, 0, zangeQ(o, o.werkzeugWort)))) });
     S.push({ text: t.stich, svg: bildQ(o, halt + bewegt(-150, 0, kanuele(tip, true)) + pfeil(200, 260, 140) + hinweis(150, 300, tip - 120, Y + 8, o.gauge, 140)) });
-    S.push({ text: t.abwurf, svg: bildQ(o, (o.werkzeug === "rohr" ? auffangrohr(o, "a-weg") : o.werkzeug === "frei" ? "" : zangeQ(o, o.werkzeugWort, "a-weg")) + kanal(o) + kanuele(tip, false) + nadelSenkrecht() + abwurf(true) + hinweis(470, 110, 320, Y - 7, "roehrchen", 230)) });
+    S.push({ text: t.abwurf, svg: bildQ(o, (o.werkzeug === "rohr" ? auffangrohr(o, "a-weg") : o.werkzeug === "frei" ? "" : zangeQ(o, o.werkzeugWort, "a-weg")) + kanal(o) + kanuele(tip, false) + bewegt(0, -230, nadel(tip)) + hinweis(470, 110, 320, Y - 7, "roehrchen", 230)) });
+    S.push({ text: ABWURF_TEXT, svg: abwurfGross() });
     S.push({ text: t.ansatz, svg: bildQ(o, kanal(o) + kanuele(tip, false, l - 6, r) + ansatzFaellt(l - 6) + schere(l + 8)) });
     S.push({ text: t.einsetzen, svg: bildQ(o, kanal(o) + kanuele(tip, false, l, r) + bewegt(80, 0, schmuckGerade(o, xIn, false, true)) + pfeil(530, 480, 250) + hinweis(470, 310, xIn + 6, Y + 6, "nur23", 190)) });
     S.push({ text: t.schieben, svg: bildQ(o, bewegt(0, -sh, kanuele(tip, false, l, r)) + bewegt(0, -sh, schmuckGerade(o, xIn, false, true)) + pfeil(480, 420, 250)) });
@@ -751,9 +762,9 @@ window.KURS = window.KURS || { module: [] };
         es: "Vista frontal: marca el punto en el centro del trago, la prominencia de cartílago a la entrada del oído. El cliente comprueba en el espejo que está bien." },
       halt: { de: "", en: "", es: "" },
       stich: { de: "", en: "", es: "" },
-      abwurf: { de: "Snaptile abnehmen, Nadel heraus und sofort in den Abwurfbehälter. Das Röhrchen bleibt im Stichkanal.",
-        en: "Take off the Snaptile, pull the needle out and drop it straight into the sharps container. The tube stays in the channel.",
-        es: "Quita el Snaptile, saca la aguja y échala directamente al contenedor. El tubo se queda en el canal." },
+      abwurf: { de: "Snaptile abnehmen und die Stahlnadel nach vorn herausziehen. Das Röhrchen bleibt im Stichkanal.",
+        en: "Take off the Snaptile and pull the steel needle out towards the front. The tube stays in the channel.",
+        es: "Quita el Snaptile y saca la aguja de acero hacia delante. El tubo se queda en el canal." },
       ansatz: { de: "Vorn den grünen Ansatz mit der Schere abschneiden, sodass nur das Röhrchen bleibt.",
         en: "At the front, cut off the green hub with scissors so only the tube is left.",
         es: "Delante, corta el cono verde con las tijeras para que solo quede el tubo." },
