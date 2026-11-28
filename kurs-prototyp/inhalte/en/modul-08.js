@@ -96,6 +96,7 @@ window.KURS = window.KURS || { module: [] };
         seite: "S. 85, 88",
         inhalt: [
           db("Nose (Nostril)", "Through the side of the nose (nasal ala). First practiced about 4000 years ago in the Middle East; in India preferably worn on the left side of the nose.", "labret", "18G", "gauze clamp, Snaptile", "", "S. 85"),
+          { typ: "animation", id: "labor-nostril" },
           db("Septum", "Through the connective tissue below the cartilage of the nasal septum (Latin septum nasi). One of the oldest piercings. Can be stretched for larger jewelry.", "horseshoe (circular barbell)", "18G, 16G", "septum forceps", "", "S. 88")
         ],
         fragen: [

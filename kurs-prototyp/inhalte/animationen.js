@@ -233,6 +233,12 @@ window.KURS = window.KURS || { module: [] };
     vonObenLangsam: { de: "von oben, langsam", en: "from the top, slowly", es: "desde arriba, despacio" },
     rohrWeg: { de: "Auffangrohr weg", en: "remove receiving tube", es: "retirar tubo receptor" },
     banane: { de: "Banane", en: "curved barbell", es: "banana" },
+    nasenfluegel: { de: "Nasenflügel", en: "side of the nostril", es: "ala de la nariz" },
+    aussenSichtbar: { de: "außen (sichtbare Seite)", en: "outside (visible side)", es: "fuera (lado visible)" },
+    nasenloch: { de: "Nasenloch", en: "nostril", es: "orificio nasal" },
+    nasenfluegelStelle: { de: "Stelle am Nasenflügel", en: "spot on the nostril", es: "punto en el ala" },
+    nachObenBiegen: { de: "leicht nach oben biegen", en: "bend slightly upwards", es: "doblar un poco hacia arriba" },
+    spitzeUntenRaus: { de: "Spitze kommt unten aus dem Nasenloch", en: "tip comes out at the bottom of the nostril", es: "la punta sale por abajo del orificio" },
     tippTitel: { de: "Gut zu wissen", en: "Good to know", es: "Bueno saberlo" },
     tippZeile1: { de: "Es gibt auch spezielle Tragusklemmen", en: "There are also special tragus clamps", es: "También hay pinzas especiales para trago" },
     tippZeile2: { de: "mit Auffanghütchen.", en: "with a receiving cap.", es: "con capuchón receptor." },
@@ -807,6 +813,76 @@ window.KURS = window.KURS || { module: [] };
       svg: bildVorn(punkt(RK1[0], RK1[1]) + rohrUnterFalte() + kanueleAuf(RK2, 97, .62, true) + hinweis(150, 70, RK1[0] - 4, RK1[1], "vonObenLangsam", 210)) }
   ].concat(rookBasis.slice(2));
 
+  // ---------- Nase von vorn ----------
+  var NP = [266, 218], NAUS = [293, 242];
+  function nase(gebogen) {
+    var dy = gebogen ? -6 : 0;
+    var umriss = "M302 26 C302 92 290 142 270 184 C250 200 242 228 258 244 C272 256 290 252 300 246 C310 257 330 257 340 246 C350 252 368 256 382 244 C398 228 390 200 370 184 C350 142 338 92 338 26";
+    return '<g filter="url(#aWeich)" opacity=".35"><rect x="170" y="0" width="300" height="360" rx="80" fill="#EBC3AE"/></g>' +
+      '<g filter="url(#aSchatten)"><path d="' + umriss + '" fill="url(#aHaut)" stroke="' + F.hautRand + '" stroke-width="2"/></g>' +
+      '<ellipse cx="320" cy="214" rx="26" ry="20" fill="#FBE6DA" opacity=".5"/>' +
+      '<g transform="translate(0 ' + dy + ')"><path d="M270 196 C256 210 258 234 276 242" fill="none" stroke="' + F.hautRand + '" stroke-width="2"/>' +
+      '<ellipse cx="294" cy="243" rx="13" ry="6" fill="#8E5A4A" transform="rotate(12 294 243)"/></g>' +
+      '<path d="M370 196 C384 210 382 234 364 242" fill="none" stroke="' + F.hautRand + '" stroke-width="2"/>' +
+      '<ellipse cx="346" cy="243" rx="13" ry="6" fill="#8E5A4A" transform="rotate(-12 346 243)"/>' +
+      '<path d="M308 268 L304 320 M332 268 L336 320" stroke="' + F.hautRand + '" stroke-width="1.6" opacity=".5"/>' +
+      '<path d="M262 322 C290 312 350 312 378 322" fill="none" stroke="#D49A8A" stroke-width="3" opacity=".7"/>';
+  }
+  function bildNase(gebogen, inhalt) {
+    return '<svg viewBox="0 0 ' + W + " " + H + '" role="img">' + DEFS + buehne() + etikett(530, "ansichtVorn", 170) + nase(gebogen) + inhalt + "</svg>";
+  }
+  function klemmeAn(p, dx, dy, klasse) {
+    // Snaptile von vorn: Fensterbacke am Punkt, Bügel in Richtung (dx, dy)
+    return '<g' + (klasse ? ' class="' + klasse + '"' : "") + ' filter="url(#aSchatten)">' +
+      '<path d="M' + p[0] + " " + p[1] + " L" + (p[0] + dx) + " " + (p[1] + dy) + '" stroke="#6F7984" stroke-width="10" stroke-linecap="round"/>' +
+      '<path d="M' + p[0] + " " + p[1] + " L" + (p[0] + dx) + " " + (p[1] + dy) + '" stroke="url(#aStahlV)" stroke-width="7" stroke-linecap="round"/>' +
+      '<circle cx="' + p[0] + '" cy="' + p[1] + '" r="13" fill="#FFFFFF" fill-opacity=".15" stroke="#6F7984" stroke-width="7"/><circle cx="' + p[0] + '" cy="' + p[1] + '" r="13" fill="none" stroke="url(#aStahl)" stroke-width="4.5"/></g>';
+  }
+  var nostrilO = {
+    d: 40, unten: Y + 80, knorpel: false, gewebeWort: "nasenfluegel", links: "aussenSichtbar", rechts: "nasenloch",
+    werkzeug: "snaptile", werkzeugWort: "snaptile", gauge: "kan18", schmuck: "labret", ueberVorn: 24, vorn: "",
+    texte: {
+      lage: { de: "Ansicht von vorn: Die Stelle am Nasenflügel anzeichnen. Der Kunde schaut im Spiegel, ob Höhe und Seite passen.",
+        en: "Front view: mark the spot on the side of the nostril. The client checks in the mirror that the height and side are right.",
+        es: "Vista frontal: marca el punto en el ala de la nariz. El cliente comprueba en el espejo la altura y el lado." },
+      halt: { de: "", en: "", es: "" },
+      stich: { de: "Im Querschnitt: Mit der 18G-Kanüle von außen durch den Nasenflügel stechen. Die Spitze kommt innen im Nasenloch heraus.",
+        en: "In cross-section: pierce from the outside through the side of the nostril with the 18G cannula. The tip comes out inside the nostril.",
+        es: "En corte: perfora desde fuera el ala de la nariz con la cánula 18G. La punta sale dentro del orificio nasal." },
+      abwurf: { de: "Snaptile abnehmen und die Stahlnadel nach außen herausziehen. Das Röhrchen bleibt im Stichkanal.",
+        en: "Take off the Snaptile and pull the steel needle out towards the outside. The tube stays in the channel.",
+        es: "Quita el Snaptile y saca la aguja de acero hacia fuera. El tubo se queda en el canal." },
+      ansatz: { de: "Außen den grünen Ansatz mit der Schere abschneiden, sodass nur das Röhrchen bleibt.",
+        en: "On the outside, cut off the green hub with scissors so only the tube is left.",
+        es: "Por fuera, corta el cono verde con las tijeras para que solo quede el tubo." },
+      einsetzen: { de: "Das Labret nur 2–3 mm von innen, aus dem Nasenloch, in das Röhrchen stecken. Die Platte bleibt innen.",
+        en: "Insert the labret only 2–3 mm into the tube from the inside, from the nostril. The disc stays inside.",
+        es: "Introduce el labret solo 2–3 mm en el tubo desde dentro, desde el orificio nasal. El disco se queda dentro." },
+      schieben: { de: "Das Labret durchschieben, nicht ziehen. Es schiebt das Röhrchen außen hinaus. Den Kunden dabei ausatmen lassen.",
+        en: "Push the labret through, do not pull. It pushes the tube out on the outside. Have the client breathe out.",
+        es: "Empuja el labret, no tires. Saca el tubo por fuera. Pide al cliente que espire." },
+      kugel: { de: "Röhrchen abziehen. Die Kugel außen mit dem Kugelgreifer aufdrehen, den Stab dabei mit der Klemmzange kurz vor dem Gewinde halten.",
+        en: "Pull off the tube. Screw the ball on outside with the ball grabber, holding the bar with the clamp just before the thread.",
+        es: "Retira el tubo. Enrosca la bola por fuera con la pinza de bolas, sujetando la barra con la pinza justo antes de la rosca." },
+      fertig: { de: "Fertig: Kugel außen, Platte innen im Nasenloch, mit Überlänge für die Schwellung. Nochmals mit Kodan einsprühen und im Spiegel zeigen.",
+        en: "Done: ball outside, disc inside the nostril, with extra length for swelling. Spray with Kodan again and show it in the mirror.",
+        es: "Listo: bola por fuera, disco dentro del orificio, con longitud extra para la hinchazón. Vuelve a rociar con Kodan y muéstralo en el espejo." }
+    }
+  };
+  var nostrilBasis = piercingSchritte(nostrilO);
+  var nostril = [
+    { text: nostrilO.texte.lage, svg: bildNase(false, '<g class="a-erscheinen">' + punkt(NP[0], NP[1]) + "</g>" + hinweis(140, 110, NP[0] - 4, NP[1] - 4, "nasenfluegelStelle", 200)) },
+    { text: { de: "Das Snaptile am Nasenflügel anlegen, das Fenster liegt auf der Markierung. Den Nasenflügel damit leicht nach oben biegen.",
+        en: "Apply the Snaptile to the side of the nostril with the window over the mark. Use it to bend the nostril slightly upwards.",
+        es: "Coloca el Snaptile en el ala de la nariz con la ventana sobre la marca. Con él, dobla el ala un poco hacia arriba." },
+      svg: bildNase(true, punkt(NP[0], NP[1] - 7) + bewegt(-50, 0, klemmeAn([NP[0], NP[1] - 7], -40, 100)) +
+        '<g transform="rotate(-90 222 200)">' + pfeil(200, 240, 200) + "</g>" + hinweis(140, 110, 222, 170, "nachObenBiegen", 210) + hinweis(140, 300, NP[0] - 30, 290, "snaptile", 140)) },
+    { text: { de: "Von außen langsam und kontrolliert durch das Fenster stechen. Weil der Nasenflügel nach oben gebogen ist, kommt die Spitze unten aus dem Nasenloch heraus.",
+        en: "Pierce slowly and under control from the outside through the window. Because the nostril is bent upwards, the tip comes out at the bottom of the nostril.",
+        es: "Perfora despacio y con control desde fuera a través de la ventana. Como el ala está doblada hacia arriba, la punta sale por abajo del orificio nasal." },
+      svg: bildNase(true, klemmeAn([NP[0], NP[1] - 7], -40, 100) + kanueleAuf(NAUS, 50, .55, true) + hinweis(480, 300, NAUS[0] + 2, NAUS[1] + 2, "spitzeUntenRaus", 290)) }
+  ].concat(nostrilBasis.slice(2));
+
   // Tragus: Snaptile, Tragus leicht vom Gehörgang wegbiegen, langsam und kontrolliert stechen
   var TP = [281, 232];
   function gehoergangVorn() { return '<ellipse cx="296" cy="226" rx="9" ry="13" fill="#B97F69" opacity=".75"/>'; }
@@ -942,6 +1018,14 @@ window.KURS = window.KURS || { module: [] };
         en: "Schematic illustration, not to scale. The real clip from the studio is coming soon.",
         es: "Ilustración esquemática, no a escala. Pronto estará el vídeo real del estudio." },
       schritte: rook,
+      woerter: T
+    },
+    "labor-nostril": {
+      titel: { de: "Animation: Nostril mit Labret", en: "Animation: nostril with a labret", es: "Animación: nostril con labret" },
+      hinweis: { de: "Schematische Darstellung, nicht maßstabsgetreu. Den echten Clip aus dem Studio gibt es bald.",
+        en: "Schematic illustration, not to scale. The real clip from the studio is coming soon.",
+        es: "Ilustración esquemática, no a escala. Pronto estará el vídeo real del estudio." },
+      schritte: nostril,
       woerter: T
     },
     "labor-industrial": {

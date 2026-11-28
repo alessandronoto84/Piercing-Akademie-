@@ -96,6 +96,7 @@ window.KURS = window.KURS || { module: [] };
         seite: "S. 85, 88",
         inhalt: [
           db("Nase (Nostril)", "Durch den Nasenflügel. Erstmals vor etwa 4000 Jahren im Mittleren Osten praktiziert; in Indien vorzugsweise am linken Nasenflügel getragen.", "Labret", "18G", "Gazeklemme, Snaptile", "", "S. 85"),
+          { typ: "animation", id: "labor-nostril" },
           db("Septum", "Durch das Bindegewebe unterhalb des Nasenscheidewandknorpels (lat. Septum nasi). Eines der ältesten Piercings. Dehnbar für größeren Schmuck.", "Hufeisen", "18G, 16G", "Septum-Zange", "", "S. 88")
         ],
         fragen: [
