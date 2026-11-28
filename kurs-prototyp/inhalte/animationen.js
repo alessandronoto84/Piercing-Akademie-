@@ -225,6 +225,14 @@ window.KURS = window.KURS || { module: [] };
     spitzeKnapp: { de: "Spitze tritt nur knapp aus", en: "tip only just comes out", es: "la punta apenas sale" },
     spitzeUnten: { de: "Spitze nach unten", en: "tip down", es: "punta hacia abajo" },
     abwurfBehaelter: { de: "Abwurfbehälter", en: "sharps container", es: "contenedor de agujas" },
+    knorpelRook: { de: "Knorpel (Antihelix)", en: "cartilage (antihelix)", es: "cartílago (antehélix)" },
+    obenEinstich: { de: "oben: Einstich", en: "top: entry", es: "arriba: entrada" },
+    untenRohr: { de: "unten: Auffangrohr", en: "bottom: receiving tube", es: "abajo: tubo receptor" },
+    unterFalte: { de: "unter der Falte: Austritt", en: "under the fold: exit", es: "bajo el pliegue: salida" },
+    nadelauffangrohr: { de: "Nadelauffangrohr", en: "receiving tube", es: "tubo receptor" },
+    vonObenLangsam: { de: "von oben, langsam", en: "from the top, slowly", es: "desde arriba, despacio" },
+    rohrWeg: { de: "Auffangrohr weg", en: "remove receiving tube", es: "retirar tubo receptor" },
+    banane: { de: "Banane", en: "curved barbell", es: "banana" },
     tippTitel: { de: "Gut zu wissen", en: "Good to know", es: "Bueno saberlo" },
     tippZeile1: { de: "Es gibt auch spezielle Tragusklemmen", en: "There are also special tragus clamps", es: "También hay pinzas especiales para trago" },
     tippZeile2: { de: "mit Auffanghütchen.", en: "with a receiving cap.", es: "con capuchón receptor." },
@@ -724,17 +732,80 @@ window.KURS = window.KURS || { module: [] };
     S.push({ text: t.lage, svg: o.vorn });
     S.push({ text: t.halt, svg: bildQ(o, marken(o) + (o.werkzeug === "rohr" ? bewegt(80, 0, auffangrohr(o)) : o.werkzeug === "frei" ? hinweis(470, 290, x2 + 2, Y + 4, "freihand", 150) : bewegt(-60, 0, zangeQ(o, o.werkzeugWort)))) });
     S.push({ text: t.stich, svg: bildQ(o, halt + bewegt(-150, 0, kanuele(tip, true)) + pfeil(200, 260, 140) + hinweis(150, 300, tip - 120, Y + 8, o.gauge, 140)) });
-    S.push({ text: t.abwurf, svg: bildQ(o, (o.werkzeug === "rohr" ? auffangrohr(o, "a-weg") : o.werkzeug === "frei" ? "" : zangeQ(o, o.werkzeugWort, "a-weg")) + kanal(o) + kanuele(tip, false) + bewegt(0, -230, nadel(tip)) + hinweis(470, 110, 320, Y - 7, "roehrchen", 230)) });
+    S.push({ text: t.abwurf, svg: bildQ(o, (o.werkzeug === "rohr" ? auffangrohr(o, o.rohrBleibt ? "" : "a-weg") : o.werkzeug === "frei" ? "" : zangeQ(o, o.werkzeugWort, "a-weg")) + kanal(o) + kanuele(tip, false) + bewegt(0, -230, nadel(tip)) + hinweis(470, 110, 320, Y - 7, "roehrchen", 230)) });
     S.push({ text: ABWURF_TEXT, svg: abwurfGross() });
+    if (o.rohrBleibt) S.push({ text: t.rohrWeg, svg: bildQ(o, auffangrohr(o, "a-weg") + kanal(o) + kanuele(tip, false) + hinweis(470, 300, x2 + 60, Y + 10, "rohrWeg", 200)) });
     S.push({ text: t.ansatz, svg: bildQ(o, kanal(o) + kanuele(tip, false, l - 6, r) + ansatzFaellt(l - 6) + schere(l + 8)) });
     S.push({ text: t.einsetzen, svg: bildQ(o, kanal(o) + kanuele(tip, false, l, r) + bewegt(80, 0, schmuckGerade(o, xIn, false, true)) + pfeil(530, 480, 250) + hinweis(470, 310, xIn + 6, Y + 6, "nur23", 190)) });
     S.push({ text: t.schieben, svg: bildQ(o, bewegt(0, -sh, kanuele(tip, false, l, r)) + bewegt(0, -sh, schmuckGerade(o, xIn, false, true)) + pfeil(480, 420, 250)) });
     S.push({ text: t.kugel, svg: bildQ(o, '<g class="a-weg-links">' + kanuele(tip, false, l - sh, r - sh) + "</g>" + schmuckGerade(o, F0, false, true) + '<g transform="translate(' + (F0 - 258) + ' 0)">' + klemmzangeVorn() + "</g>" + bewegt(-70, 0, kugel(F0 - 9) + kugelgreifer(F0 - 9)) + hinweis(470, 300, F0 + 4, Y + 6, "kugelAuf", 190)) });
-    S.push({ text: t.fertig, svg: bildQ(o, schmuckGerade(o, F0, true, true) + hinweis(150, 300, F0 + 12, Y + 8, "ueberlaenge", 180) + haken()) });
+    S.push({ text: t.fertig, svg: bildQ(o, schmuckGerade(o, F0, true, true) + hinweis(150, 300, F0 + 12, Y + 8, "ueberlaenge", 180) + (o.schmuckWort ? hinweis(500, 300, 320, Y + 4, o.schmuckWort, 140) : "") + haken()) });
     return S;
   }
   // Ansicht von vorn für einzelne Stellen
   function vornOhr(punkte, hw) { return bildVorn('<g class="a-erscheinen">' + punkte.map(function (q) { return punkt(q[0], q[1]); }).join("") + "</g>" + hw); }
+
+  // Kanüle auf einen Punkt zu, beliebiger Winkel; sx < 1 verkürzt (zeigt schräg in die Bildebene)
+  function kanueleAuf(p, rot, sx, langsam) {
+    var inner = '<g class="a-bewegt" style="--a-von:-140px;--a-nach:0px' + (langsam ? ";animation-duration:3.8s" : "") + '">' + kanuele(390, true) + "</g>";
+    return '<g transform="translate(' + p[0] + " " + p[1] + ") rotate(" + rot + ") scale(" + sx + ' .62) translate(-390 -180)">' + inner + "</g>";
+  }
+
+  // Rook: von oben nach unten durch die Antihelix-Falte, Nadelauffangrohr unter der Falte, Ersteinsatz Banane
+  var RK1 = [325, 100], RK2 = [328, 124];
+  function rohrUnterFalte(klasse) {
+    // Nadelauffangrohr von unten (aus der Ohrmuschel) unter die Knorpelfalte gesetzt
+    return '<g' + (klasse ? ' class="' + klasse + '"' : "") + ' filter="url(#aSchatten)"><path d="M' + RK2[0] + " " + (RK2[1] + 2) + " L" + (RK2[0] + 22) + ' 214" stroke="#6F7984" stroke-width="12" stroke-linecap="round"/>' +
+      '<path d="M' + RK2[0] + " " + (RK2[1] + 2) + " L" + (RK2[0] + 22) + ' 214" stroke="url(#aStahlV)" stroke-width="9" stroke-linecap="round"/>' +
+      '<ellipse cx="' + RK2[0] + '" cy="' + (RK2[1] + 2) + '" rx="5" ry="3" fill="#5F666D"/></g>';
+  }
+  var rookO = {
+    d: 52, unten: Y + 92, knorpel: true, gewebeWort: "knorpelRook", links: "obenEinstich", rechts: "unten",
+    werkzeug: "rohr", rohrBleibt: true, gauge: "kan18", schmuck: "barbell", schmuckWort: "banane", ueberVorn: 22,
+    vorn: "",
+    texte: {
+      lage: { de: "Ansicht von vorn: Der Rook sitzt senkrecht in der Antihelix, dem Knorpelsteg über der Ohrmuschel. Oben den Einstich und unter der Falte den Austritt anzeichnen. Der Kunde schaut im Spiegel.",
+        en: "Front view: the rook sits vertically in the antihelix, the cartilage ridge above the concha. Mark the entry at the top and the exit under the fold. The client checks in the mirror.",
+        es: "Vista frontal: el rook va en vertical en el antehélix, el pliegue de cartílago sobre la concha. Marca la entrada arriba y la salida bajo el pliegue. El cliente lo mira en el espejo." },
+      halt: { de: "", en: "", es: "" },
+      stich: { de: "Im Querschnitt: Von oben mit der 18G-Kanüle gerade durch beide Markierungen stechen, bis die Spitze im Auffangrohr steckt.",
+        en: "In cross-section: pierce from the top with the 18G cannula straight through both marks until the tip sits in the receiving tube.",
+        es: "En corte: perfora desde arriba con la cánula 18G recto por ambas marcas hasta que la punta quede en el tubo receptor." },
+      abwurf: { de: "Die Stahlnadel nach oben herausziehen. Das Auffangrohr bleibt noch angelegt, das Röhrchen bleibt im Stichkanal.",
+        en: "Pull the steel needle out at the top. The receiving tube stays in place for now, and the tube stays in the channel.",
+        es: "Saca la aguja de acero por arriba. El tubo receptor sigue colocado por ahora y el tubo se queda en el canal." },
+      rohrWeg: { de: "Erst jetzt das Nadelauffangrohr unter der Falte wegnehmen.",
+        en: "Only now remove the receiving tube from under the fold.",
+        es: "Solo ahora retira el tubo receptor de debajo del pliegue." },
+      ansatz: { de: "Oben den grünen Ansatz mit der Schere abschneiden, sodass nur das Röhrchen bleibt.",
+        en: "At the top, cut off the green hub with scissors so only the tube is left.",
+        es: "Arriba, corta el cono verde con las tijeras para que solo quede el tubo." },
+      einsetzen: { de: "Die Banane nur 2–3 mm von unten in das Röhrchen stecken. Die untere Kugel ist schon aufgedreht.",
+        en: "Insert the curved barbell only 2–3 mm into the tube from below. The lower ball is already screwed on.",
+        es: "Introduce la banana solo 2–3 mm en el tubo por abajo. La bola de abajo ya está enroscada." },
+      schieben: { de: "Die Banane durchschieben, nicht ziehen. Sie schiebt das Röhrchen oben hinaus. Den Kunden dabei ausatmen lassen.",
+        en: "Push the curved barbell through, do not pull. It pushes the tube out at the top. Have the client breathe out.",
+        es: "Empuja la banana, no tires. Saca el tubo por arriba. Pide al cliente que espire." },
+      kugel: { de: "Röhrchen abziehen. Die obere Kugel mit dem Kugelgreifer aufdrehen, den Stab dabei mit der Klemmzange kurz vor dem Gewinde halten.",
+        en: "Pull off the tube. Screw on the upper ball with the ball grabber, holding the bar with the clamp just before the thread.",
+        es: "Retira el tubo. Enrosca la bola de arriba con la pinza de bolas, sujetando la barra con la pinza justo antes de la rosca." },
+      fertig: { de: "Fertig: Die Banane sitzt senkrecht in der Falte, mit Überlänge für die Schwellung. Nochmals mit Kodan einsprühen und im Spiegel zeigen.",
+        en: "Done: the curved barbell sits vertically in the fold, with extra length for swelling. Spray with Kodan again and show it in the mirror.",
+        es: "Listo: la banana queda vertical en el pliegue, con longitud extra para la hinchazón. Vuelve a rociar con Kodan y muéstralo en el espejo." }
+    }
+  };
+  var rookBasis = piercingSchritte(rookO);
+  var rook = [
+    { text: rookO.texte.lage, svg: vornOhr([RK1, RK2], hinweis(150, 70, RK1[0] - 4, RK1[1] - 2, "obenEinstich", 190) + hinweis(530, 200, RK2[0] + 4, RK2[1] + 2, "unterFalte", 190)) },
+    { text: { de: "Am ganzen Ohr: Das Nadelauffangrohr von unten unter die Knorpelfalte setzen, die Öffnung liegt genau auf der unteren Markierung. Eine Zange passt hier nicht.",
+        en: "On the whole ear: place the receiving tube from below under the cartilage fold, with its opening exactly on the lower mark. A clamp does not fit here.",
+        es: "En toda la oreja: coloca el tubo receptor desde abajo bajo el pliegue de cartílago, con la abertura justo sobre la marca de abajo. Aquí no cabe una pinza." },
+      svg: bildVorn(punkt(RK1[0], RK1[1]) + punkt(RK2[0], RK2[1]) + '<g class="a-erscheinen">' + rohrUnterFalte() + "</g>" + hinweis(530, 230, RK2[0] + 16, 180, "nadelauffangrohr", 210)) },
+    { text: { de: "Langsam und kontrolliert von oben stechen, durch die Falte hindurch genau in das Auffangrohr.",
+        en: "Pierce slowly and under control from the top, through the fold straight into the receiving tube.",
+        es: "Perfora despacio y con control desde arriba, a través del pliegue justo dentro del tubo receptor." },
+      svg: bildVorn(punkt(RK1[0], RK1[1]) + rohrUnterFalte() + kanueleAuf(RK2, 97, .62, true) + hinweis(150, 70, RK1[0] - 4, RK1[1], "vonObenLangsam", 210)) }
+  ].concat(rookBasis.slice(2));
 
   // Tragus: Snaptile, Tragus leicht vom Gehörgang wegbiegen, langsam und kontrolliert stechen
   var TP = [281, 232];
@@ -863,6 +934,14 @@ window.KURS = window.KURS || { module: [] };
         en: "Schematic illustration, not to scale. The real clip from the studio is coming soon.",
         es: "Ilustración esquemática, no a escala. Pronto estará el vídeo real del estudio." },
       schritte: tragus,
+      woerter: T
+    },
+    "labor-rook": {
+      titel: { de: "Animation: Rook mit Banane", en: "Animation: rook with a curved barbell", es: "Animación: rook con banana" },
+      hinweis: { de: "Schematische Darstellung, nicht maßstabsgetreu. Den echten Clip aus dem Studio gibt es bald.",
+        en: "Schematic illustration, not to scale. The real clip from the studio is coming soon.",
+        es: "Ilustración esquemática, no a escala. Pronto estará el vídeo real del estudio." },
+      schritte: rook,
       woerter: T
     },
     "labor-industrial": {

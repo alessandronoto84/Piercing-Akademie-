@@ -82,6 +82,7 @@ window.KURS = window.KURS || { module: [] };
         seite: "S. 80–81",
         inhalt: [
           db("Rook", "Senkrecht in der Antihelix, dem Knorpelsteg, der das Cavum conchae rückwärts umrandet.", "Hufeisen, Banane, BCR", "18G", "Nadelauffangrohr", "", "S. 80"),
+          { typ: "animation", id: "labor-rook" },
           db("Daith", "Durch die Helixwurzel (Crus helicis), die Knorpelfalte direkt über dem Gehörgang. Die Wirkung gegen Migräne ist wissenschaftlich nicht belegt.", "Banane, BCR", "18G (evtl. biegen)", "Nadelauffangrohr", "Keine Heilversprechen geben oder damit werben.", "S. 81")
         ],
         fragen: [

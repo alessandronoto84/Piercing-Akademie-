@@ -82,6 +82,7 @@ window.KURS = window.KURS || { module: [] };
         seite: "S. 80–81",
         inhalt: [
           db("Rook", "Vertically in the antihelix, the cartilage ridge that borders the cavum conchae at the back.", "horseshoe (circular barbell), curved barbell (banana), BCR", "18G", "receiving tube", "", "S. 80"),
+          { typ: "animation", id: "labor-rook" },
           db("Daith", "Through the root of the helix (crus helicis), the cartilage fold directly above the ear canal. There is no scientific evidence that it helps against migraine.", "curved barbell (banana), BCR", "18G (bend if necessary)", "receiving tube", "Do not make health claims or use them in advertising.", "S. 81")
         ],
         fragen: [

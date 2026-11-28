@@ -82,6 +82,7 @@ window.KURS = window.KURS || { module: [] };
         seite: "S. 80–81",
         inhalt: [
           db("Rook", "En vertical en el antihélix, el pliegue de cartílago que bordea por detrás la cavidad de la concha (cavum conchae).", "herradura (circular barbell), barbell curvo (banana), BCR", "18G", "tubo receptor", "", "S. 80"),
+          { typ: "animation", id: "labor-rook" },
           db("Daith", "A través de la raíz del hélix (crus helicis), el pliegue de cartílago justo encima del conducto auditivo. Su efecto contra la migraña no está demostrado científicamente.", "barbell curvo (banana), BCR", "18G (doblar si es necesario)", "tubo receptor", "No hagas promesas de curación ni las uses como publicidad.", "S. 81")
         ],
         fragen: [
