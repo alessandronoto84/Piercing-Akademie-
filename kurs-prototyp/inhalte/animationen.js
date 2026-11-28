@@ -247,6 +247,12 @@ window.KURS = window.KURS || { module: [] };
     sweetSpot: { de: "Sweet Spot ertasten", en: "feel for the sweet spot", es: "buscar el punto dulce" },
     geradeAnlegen: { de: "gerade anlegen", en: "apply straight", es: "colocar recta" },
     vonRechtsNachLinks: { de: "von rechts nach links", en: "from right to left", es: "de derecha a izquierda" },
+    snaptileOderGaze: { de: "Snaptile oder Gazeklemme", en: "Snaptile or gauze clamp", es: "Snaptile o pinza de gasa" },
+    unterlippe: { de: "Unterlippe", en: "lower lip", es: "labio inferior" },
+    innenMund: { de: "innen (Mund)", en: "inside (mouth)", es: "dentro (boca)" },
+    zahnfleisch: { de: "Zahnfleisch", en: "gums", es: "encía" },
+    abstandLippenrot: { de: "mehr als 3 mm zum Lippenrot", en: "more than 3 mm from the lip red", es: "a más de 3 mm del rojo del labio" },
+    vonAussenInDenMund: { de: "von außen in den Mund", en: "from outside into the mouth", es: "desde fuera hacia la boca" },
     tippTitel: { de: "Gut zu wissen", en: "Good to know", es: "Bueno saberlo" },
     tippZeile1: { de: "Es gibt auch spezielle Tragusklemmen", en: "There are also special tragus clamps", es: "También hay pinzas especiales para trago" },
     tippZeile2: { de: "mit Auffanghütchen.", en: "with a receiving cap.", es: "con capuchón receptor." },
@@ -895,11 +901,11 @@ window.KURS = window.KURS || { module: [] };
   var nostrilBasis = piercingSchritte(nostrilO);
   var nostril = [
     { text: nostrilO.texte.lage, svg: bildNase(false, '<g class="a-erscheinen">' + punkt(NP[0], NP[1]) + "</g>" + hinweis(140, 110, NP[0] - 4, NP[1] - 4, "nasenfluegelStelle", 200)) },
-    { text: { de: "Das Snaptile am Nasenflügel anlegen, das Fenster liegt auf der Markierung. Den Nasenflügel damit leicht nach oben biegen.",
-        en: "Apply the Snaptile to the side of the nostril with the window over the mark. Use it to bend the nostril slightly upwards.",
-        es: "Coloca el Snaptile en el ala de la nariz con la ventana sobre la marca. Con él, dobla el ala un poco hacia arriba." },
+    { text: { de: "Das Snaptile am Nasenflügel anlegen, das Fenster liegt auf der Markierung. Statt des Snaptiles geht auch eine Gazeklemme: Das Snaptile ist ein Einmalwerkzeug, die Gazeklemme wird nach jedem Kunden sterilisiert und wiederverwendet. Den Nasenflügel damit leicht nach oben biegen.",
+        en: "Apply the Snaptile to the side of the nostril with the window over the mark. A gauze clamp works instead: the Snaptile is single-use, the gauze clamp is sterilised after every client and reused. Use it to bend the nostril slightly upwards.",
+        es: "Coloca el Snaptile en el ala de la nariz con la ventana sobre la marca. En lugar del Snaptile sirve también una pinza de gasa: el Snaptile es de un solo uso, la pinza de gasa se esteriliza tras cada cliente y se reutiliza. Con él, dobla el ala un poco hacia arriba." },
       svg: bildNase(true, punkt(NP[0], NP[1] - 7) + bewegt(-50, 0, klemmeAn([NP[0], NP[1] - 7], -40, 100)) +
-        '<g transform="rotate(-90 222 200)">' + pfeil(200, 240, 200) + "</g>" + hinweis(140, 110, 222, 170, "nachObenBiegen", 210) + hinweis(140, 300, NP[0] - 30, 290, "snaptile", 140)) },
+        '<g transform="rotate(-90 222 200)">' + pfeil(200, 240, 200) + "</g>" + hinweis(140, 110, 222, 170, "nachObenBiegen", 210) + hinweis(150, 300, NP[0] - 30, 290, "snaptileOderGaze", 230)) },
     { text: { de: "Von außen langsam und kontrolliert durch das Fenster stechen. Weil der Nasenflügel nach oben gebogen ist, kommt die Spitze unten aus dem Nasenloch heraus.",
         en: "Pierce slowly and under control from the outside through the window. Because the nostril is bent upwards, the tip comes out at the bottom of the nostril.",
         es: "Perfora despacio y con control desde fuera a través de la ventana. Como el ala está doblada hacia arriba, la punta sale por abajo del orificio nasal." },
@@ -951,6 +957,63 @@ window.KURS = window.KURS || { module: [] };
         es: "Perfora despacio y con control de derecha a izquierda a través de la ventana." },
       svg: bildNase(false, klemmeAn(SP, 0, 100) + kanueleAuf([SP[0] - 10, SP[1]], 180, .5, true) + hinweis(150, 120, SP[0] - 12, SP[1] - 6, "vonRechtsNachLinks", 230)) }
   ].concat(septumBasis.slice(2));
+
+  // ---------- Mund von vorn ----------
+  var LP = [320, 266];
+  function mund() {
+    return '<g filter="url(#aWeich)" opacity=".35"><rect x="150" y="0" width="340" height="360" rx="90" fill="#EBC3AE"/></g>' +
+      '<g filter="url(#aSchatten)"><path d="M180 40 C200 20 440 20 460 40 L470 330 C420 350 220 350 170 330 Z" fill="url(#aHaut)" opacity=".95"/></g>' +
+      '<path d="M306 70 L302 150 M334 70 L338 150" stroke="' + F.hautRand + '" stroke-width="1.6" opacity=".5"/>' +
+      '<path d="M236 190 C262 170 298 160 320 172 C342 160 378 170 404 190 C380 196 350 198 320 196 C290 198 260 196 236 190 Z" fill="#D98C86" stroke="#B86E68" stroke-width="1.6"/>' +
+      '<path d="M236 190 C270 200 370 200 404 190 C390 228 356 244 320 244 C284 244 250 228 236 190 Z" fill="#E39C94" stroke="#B86E68" stroke-width="1.6"/>' +
+      '<path d="M240 191 C280 197 360 197 400 191" fill="none" stroke="#8E5A4A" stroke-width="2.2"/>' +
+      '<path d="M286 226 C300 232 340 232 354 226" fill="none" stroke="#FFFFFF" stroke-width="3" opacity=".45"/>' +
+      '<path d="M270 312 C300 326 340 326 370 312" fill="none" stroke="' + F.hautRand + '" stroke-width="2" opacity=".5"/>';
+  }
+  function bildMund(inhalt) { return '<svg viewBox="0 0 ' + W + " " + H + '" role="img">' + DEFS + buehne() + etikett(530, "ansichtVorn", 170) + mund() + inhalt + "</svg>"; }
+  var labretO = {
+    d: 64, unten: Y + 110, knorpel: false, gewebeWort: "unterlippe", links: "aussenSichtbar", rechts: "innenMund",
+    werkzeug: "snaptile", werkzeugWort: "snaptile", gauge: "kan18", schmuck: "labret", ueberVorn: 36, wand: 480, wandWort: "zahnfleisch", vorn: "",
+    texte: {
+      lage: { de: "Ansicht von vorn: Die Stelle mittig unter der Unterlippe anzeichnen, mit mehr als 3 mm Abstand zum Lippenrot. Der Kunde schaut im Spiegel.",
+        en: "Front view: mark the spot centred below the lower lip, more than 3 mm from the red of the lip. The client checks in the mirror.",
+        es: "Vista frontal: marca el punto centrado bajo el labio inferior, a más de 3 mm del rojo del labio. El cliente lo mira en el espejo." },
+      halt: { de: "", en: "", es: "" },
+      stich: { de: "Im Querschnitt: Mit der 18G-Kanüle von außen durch die Lippe in den Mund stechen. Dahinter liegt das Zahnfleisch, deshalb kontrolliert stechen.",
+        en: "In cross-section: pierce from the outside through the lip into the mouth with the 18G cannula. The gums are behind it, so pierce under control.",
+        es: "En corte: perfora desde fuera a través del labio hacia la boca con la cánula 18G. Detrás está la encía, así que perfora con control." },
+      abwurf: { de: "Snaptile abnehmen und die Stahlnadel nach außen herausziehen. Das Röhrchen bleibt im Stichkanal.",
+        en: "Take off the Snaptile and pull the steel needle out towards the outside. The tube stays in the channel.",
+        es: "Quita el Snaptile y saca la aguja de acero hacia fuera. El tubo se queda en el canal." },
+      ansatz: { de: "Außen den grünen Ansatz mit der Schere abschneiden, sodass nur das Röhrchen bleibt.",
+        en: "On the outside, cut off the green hub with scissors so only the tube is left.",
+        es: "Por fuera, corta el cono verde con las tijeras para que solo quede el tubo." },
+      einsetzen: { de: "Das Labret nur 2–3 mm von innen aus dem Mund in das Röhrchen stecken. Die Platte bleibt innen im Mund. Viel Überlänge wählen, die Lippe schwillt stark an.",
+        en: "Insert the labret only 2–3 mm into the tube from inside the mouth. The disc stays inside the mouth. Choose plenty of extra length, the lip swells a lot.",
+        es: "Introduce el labret solo 2–3 mm en el tubo desde dentro de la boca. El disco se queda dentro. Elige bastante longitud extra, el labio se hincha mucho." },
+      schieben: { de: "Das Labret durchschieben, nicht ziehen. Es schiebt das Röhrchen außen hinaus. Den Kunden dabei ausatmen lassen.",
+        en: "Push the labret through, do not pull. It pushes the tube out on the outside. Have the client breathe out.",
+        es: "Empuja el labret, no tires. Saca el tubo por fuera. Pide al cliente que espire." },
+      kugel: { de: "Röhrchen abziehen. Die Kugel außen mit dem Kugelgreifer aufdrehen, den Stab dabei mit der Klemmzange kurz vor dem Gewinde halten.",
+        en: "Pull off the tube. Screw the ball on outside with the ball grabber, holding the bar with the clamp just before the thread.",
+        es: "Retira el tubo. Enrosca la bola por fuera con la pinza de bolas, sujetando la barra con la pinza justo antes de la rosca." },
+      fertig: { de: "Fertig: Kugel außen, Platte innen im Mund, mit viel Überlänge, weil die Lippe stark anschwellen kann. Nochmals mit Kodan einsprühen und im Spiegel zeigen.",
+        en: "Done: ball outside, disc inside the mouth, with plenty of extra length because the lip can swell a lot. Spray with Kodan again and show it in the mirror.",
+        es: "Listo: bola por fuera, disco dentro de la boca, con bastante longitud extra porque el labio puede hincharse mucho. Vuelve a rociar con Kodan y muéstralo en el espejo." }
+    }
+  };
+  var labretBasis = piercingSchritte(labretO);
+  var labretPiercing = [
+    { text: labretO.texte.lage, svg: bildMund('<g class="a-erscheinen">' + punkt(LP[0], LP[1]) + "</g>" + hinweis(510, 270, LP[0] + 6, LP[1], "abstandLippenrot", 220)) },
+    { text: { de: "Das Snaptile anlegen, das Fenster liegt auf der Markierung. Statt des Snaptiles geht auch eine Gazeklemme: Das Snaptile ist ein Einmalwerkzeug, die Gazeklemme wird nach jedem Kunden sterilisiert und wiederverwendet.",
+        en: "Apply the Snaptile with the window over the mark. A gauze clamp works instead: the Snaptile is single-use, the gauze clamp is sterilised after every client and reused.",
+        es: "Coloca el Snaptile con la ventana sobre la marca. En lugar del Snaptile sirve también una pinza de gasa: el Snaptile es de un solo uso, la pinza de gasa se esteriliza tras cada cliente y se reutiliza." },
+      svg: bildMund(punkt(LP[0], LP[1]) + bewegt(-50, 0, klemmeAn(LP, -60, 80)) + hinweis(150, 300, LP[0] - 40, 320, "snaptileOderGaze", 230)) },
+    { text: { de: "Langsam und kontrolliert von außen durch das Fenster in den Mund hinein stechen.",
+        en: "Pierce slowly and under control from the outside through the window into the mouth.",
+        es: "Perfora despacio y con control desde fuera a través de la ventana hacia la boca." },
+      svg: bildMund(klemmeAn(LP, -60, 80) + kanueleAuf(LP, 30, .42, true) + hinweis(510, 270, LP[0] + 6, LP[1] + 2, "vonAussenInDenMund", 230)) }
+  ].concat(labretBasis.slice(2));
 
   // Tragus: Snaptile, Tragus leicht vom Gehörgang wegbiegen, langsam und kontrolliert stechen
   var TP = [281, 232];
@@ -1024,6 +1087,7 @@ window.KURS = window.KURS || { module: [] };
   ].concat(tragusBasis.slice(3));
 
 
+  var UEBUNG = { nostril: "Silikonnase", septum: "Silikonnase", labret: "Silikonmund", zunge: "Silikonzunge", bauchnabel: "Silikon-Bauchnabel", brustwarze: "Silikon-Brust", intim: "Übungsmodell" };
   KURS.animationen = {
     "labor-lobe": {
       titel: { de: "Animation: Lobe stechen und Labret einsetzen", en: "Animation: piercing the lobe and inserting a labret", es: "Animación: perforar el lóbulo y colocar un labret" },
@@ -1105,6 +1169,14 @@ window.KURS = window.KURS || { module: [] };
       schritte: septum,
       woerter: T
     },
+    "labor-labret": {
+      titel: { de: "Animation: Labret in der Unterlippe", en: "Animation: labret in the lower lip", es: "Animación: labret en el labio inferior" },
+      hinweis: { de: "Schematische Darstellung, nicht maßstabsgetreu. Den echten Clip aus dem Studio gibt es bald.",
+        en: "Schematic illustration, not to scale. The real clip from the studio is coming soon.",
+        es: "Ilustración esquemática, no a escala. Pronto estará el vídeo real del estudio." },
+      schritte: labretPiercing,
+      woerter: T
+    },
     "labor-industrial": {
       titel: { de: "Animation: Industrial – zwei Stichkanäle auf einer Linie", en: "Animation: industrial – two channels on one line", es: "Animación: industrial – dos canales en una línea" },
       hinweis: { de: "Schematische Darstellung, nicht maßstabsgetreu. Den echten Clip aus dem Studio gibt es bald.",
@@ -1114,4 +1186,5 @@ window.KURS = window.KURS || { module: [] };
       woerter: T
     }
   };
+  Object.keys(KURS.animationen).forEach(function (k) { KURS.animationen[k].uebung = UEBUNG[k.replace("labor-", "")] || "Silikonohr"; });
 })();

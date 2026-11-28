@@ -124,6 +124,7 @@ window.KURS = window.KURS || { module: [] };
         seite: "S. 86, 93",
         inhalt: [
           db("Labret", "En sentido estricto, un piercing del labio inferior; en el labio superior se llama Medusa (en el centro del filtrum, el surco bajo la nariz) o Madonna o Monroe (desplazado hacia un lado). A más de 3 mm del borde bermellón.", "labret, herradura (circular barbell)", "18G", "Snaptile, pinza de gasa", "", "S. 86"),
+          { typ: "animation", id: "labor-labret" },
           db("Labret vertical", "En el libro del curso, «Eskimo». En vertical por el centro del labio inferior: un extremo queda sobre el labio y el otro por debajo del labio. Si se perfora mal, el labio puede desgarrarse o hundirse de forma permanente.", "barbell, barbell curvo (banana)", "18G", "Snaptile, pinza de gasa, a mano alzada", "Solo para piercers con experiencia. Como aprendiz no perforas el labret vertical ni perforas el bermellón.", "S. 93")
         ],
         fragen: [

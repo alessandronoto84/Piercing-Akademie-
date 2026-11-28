@@ -85,6 +85,7 @@ KURS.module.push({
       inhalt: [
         { typ: "video", id: "instrumente", text: "Pinza de piercing, cánula intravenosa («Braunüle»), tubo receptor y pinza para bolas sobre un campo estéril.", schleife: true },
         { typ: "text", text: "Las pinzas de piercing sujetan la zona que se va a perforar para que la piel se mantenga en posición durante la perforación. Hay distintas pinzas para distintos piercings, por ejemplo Snaptile, pinza de gasa, pinza para septum, pinza para tragus o pinza para lengua. Cuál es la adecuada lo indica la ficha técnica correspondiente (módulo 8)." },
+        { typ: "merke", text: "De un solo uso o reutilizable: el Snaptile es de un solo uso y se desecha tras el cliente. La pinza de gasa es reutilizable: se esteriliza tras cada cliente y se vuelve a usar. Las dos sujetan la zona igual de bien, puedes usar cualquiera." },
         { typ: "text", text: "Algunos piercings no se pueden hacer con pinza. En los piercings del interior de la oreja, por ejemplo Rook y Daith, se utiliza el tubo receptor (receiving tube). Evita que la cánula lesione el tejido circundante." },
         { typ: "galerie", titel: "Del libro del curso", bilder: [["piercingzange", "Pinzas de piercing"], ["nadelauffangrohr", "Tubo receptor"]], text: "Libro del curso págs. 65 y 68." },
         { typ: "praxis", text: "Algunos piercings, como el Helix o el ombligo, también pueden hacerse a mano alzada. Eso requiere una mano segura; como principiante, es mejor que trabajes con pinza." }

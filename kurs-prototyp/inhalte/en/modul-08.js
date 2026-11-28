@@ -124,6 +124,7 @@ window.KURS = window.KURS || { module: [] };
         seite: "S. 86, 93",
         inhalt: [
           db("Labret", "Strictly speaking, a piercing of the lower lip; on the upper lip it is called Medusa (centered in the philtrum, the groove below the nose) or Madonna or Monroe (offset to the side). More than 3 mm away from the vermilion border.", "labret, horseshoe (circular barbell)", "18G", "Snaptile, gauze clamp", "", "S. 86"),
+          { typ: "animation", id: "labor-labret" },
           db("Vertical labret", "“Eskimo” in the course book. Straight down through the center of the lower lip: one end sits on top of the lip, the other below the lip. If pierced incorrectly, the lip can tear or sink in permanently.", "barbell, curved barbell (banana)", "18G", "Snaptile, gauze clamp, freehand", "For experienced piercers only. As a trainee, you do not pierce the vertical labret and you do not pierce into the vermilion.", "S. 93")
         ],
         fragen: [

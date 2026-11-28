@@ -31,5 +31,5 @@ function zeig(n){var svg=A.schritte[n].svg; Object.keys(W).forEach(function(k){s
 function dauer(n){return Math.max(5200, Math.round(A.schritte[n].text.de.length*68));}
 window.gesamt=function(){var t=0;for(var n=0;n<A.schritte.length;n++)t+=dauer(n);return t;};
 window.starten=function(){ setTimeout(function(){document.getElementById("titel").style.opacity=0; zeig(0);
- var n=0; (function weiter(){ setTimeout(function(){ n++; if(n>=A.schritte.length){ document.getElementById("titel").style.opacity=1; document.querySelector("#titel h1").textContent="Gleich selbst üben"; document.querySelector("#titel p").textContent="Am Silikonohr im Praxislabor · Gestochen wird am Praxistag unter Aufsicht"; return;} zeig(n); weiter(); }, dauer(n)); })();},2600);};
+ var n=0; (function weiter(){ setTimeout(function(){ n++; if(n>=A.schritte.length){ document.getElementById("titel").style.opacity=1; document.querySelector("#titel h1").textContent="Gleich selbst üben"; document.querySelector("#titel p").textContent=(A.uebung==="Übungsmodell"?"Am Übungsmodell":"An der "+A.uebung).replace("An der Silikonohr","Am Silikonohr").replace("An der Silikonmund","Am Silikonmund").replace("An der Silikon-Bauchnabel","Am Silikon-Bauchnabel")+" im Praxislabor · Gestochen wird am Praxistag unter Aufsicht"; return;} zeig(n); weiter(); }, dauer(n)); })();},2600);};
 </script></body></html>

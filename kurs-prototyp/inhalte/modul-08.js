@@ -124,6 +124,7 @@ window.KURS = window.KURS || { module: [] };
         seite: "S. 86, 93",
         inhalt: [
           db("Labret", "Im engeren Sinn ein Piercing der Unterlippe; an der Oberlippe heißt es Medusa (mittig im Philtrum, der Rinne unter der Nase) bzw. Madonna oder Monroe (seitlich versetzt). Mehr als 3 mm Abstand zum Lippenrot.", "Labret, Hufeisen", "18G", "Snaptile, Gazeklemme", "", "S. 86"),
+          { typ: "animation", id: "labor-labret" },
           db("Vertikales Labret", "Im Kursbuch „Eskimo“. Senkrecht durch die Mitte der Unterlippe: ein Ende sitzt oben auf der Lippe, das andere unterhalb der Lippe. Falsch gestochen kann die Lippe einreißen oder dauerhaft einfallen.", "Barbell, Banane", "18G", "Snaptile, Gazeklemme, Freihand", "Nur für erfahrene Piercer. Als Lernender stichst du das vertikale Labret nicht und stichst nicht ins Lippenrot.", "S. 93")
         ],
         fragen: [
