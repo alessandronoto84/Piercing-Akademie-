@@ -239,6 +239,14 @@ window.KURS = window.KURS || { module: [] };
     nasenfluegelStelle: { de: "Stelle am Nasenflügel", en: "spot on the nostril", es: "punto en el ala" },
     nachObenBiegen: { de: "leicht nach oben biegen", en: "bend slightly upwards", es: "doblar un poco hacia arriba" },
     spitzeUntenRaus: { de: "Spitze kommt unten aus dem Nasenloch", en: "tip comes out at the bottom of the nostril", es: "la punta sale por abajo del orificio" },
+    septumSweetSpot: { de: "Sweet Spot (Septum)", en: "sweet spot (septum)", es: "punto dulce (septum)" },
+    einstichseite: { de: "Einstichseite", en: "entry side", es: "lado de entrada" },
+    austrittsseite: { de: "Austrittsseite", en: "exit side", es: "lado de salida" },
+    septumzange: { de: "Septumzange", en: "septum forceps", es: "pinza de septum" },
+    hufeisen: { de: "Hufeisen", en: "horseshoe", es: "herradura" },
+    sweetSpot: { de: "Sweet Spot ertasten", en: "feel for the sweet spot", es: "buscar el punto dulce" },
+    geradeAnlegen: { de: "gerade anlegen", en: "apply straight", es: "colocar recta" },
+    vonRechtsNachLinks: { de: "von rechts nach links", en: "from right to left", es: "de derecha a izquierda" },
     tippTitel: { de: "Gut zu wissen", en: "Good to know", es: "Bueno saberlo" },
     tippZeile1: { de: "Es gibt auch spezielle Tragusklemmen", en: "There are also special tragus clamps", es: "También hay pinzas especiales para trago" },
     tippZeile2: { de: "mit Auffanghütchen.", en: "with a receiving cap.", es: "con capuchón receptor." },
@@ -742,6 +750,21 @@ window.KURS = window.KURS || { module: [] };
     S.push({ text: ABWURF_TEXT, svg: abwurfGross() });
     if (o.rohrBleibt) S.push({ text: t.rohrWeg, svg: bildQ(o, auffangrohr(o, "a-weg") + kanal(o) + kanuele(tip, false) + hinweis(470, 300, x2 + 60, Y + 10, "rohrWeg", 200)) });
     S.push({ text: t.ansatz, svg: bildQ(o, kanal(o) + kanuele(tip, false, l - 6, r) + ansatzFaellt(l - 6) + schere(l + 8)) });
+    if (o.schmuck === "hufeisen") {
+      var RRg = o.ringR, C = [320, Y + RRg];
+      var pt = function (g) { var w = g * Math.PI / 180; return [C[0] + RRg * Math.cos(w), C[1] + RRg * Math.sin(w)]; };
+      var a1 = pt(62), a2 = pt(118);
+      var ring = function (klasse) {
+        var d = "M" + a1[0].toFixed(1) + " " + a1[1].toFixed(1) + " A" + RRg + " " + RRg + " 0 1 0 " + a2[0].toFixed(1) + " " + a2[1].toFixed(1);
+        var u = 2 * Math.PI * RRg, st = klasse ? ' class="' + klasse + '" stroke-dasharray="' + u + '" style="--a-laenge:' + u + '"' : "";
+        return '<path d="' + d + '" fill="none" stroke="#7D8792" stroke-width="9" stroke-linecap="round"' + st + "/>" + '<path d="' + d + '" fill="none" stroke="url(#aTitan)" stroke-width="6" stroke-linecap="round"' + st + "/>";
+      };
+      S.push({ text: t.einsetzen, svg: bildQ(o, kanal(o) + bewegt(0, -130, kanuele(tip, false, l, r)) + ring("a-zeichnen") + kugelVorn(a1[0] + 4, a1[1] + 6, 9) + hinweis(500, 300, a1[0] + 8, a1[1] + 10, "kugelSchonDrauf", 190) + hinweis(500, 110, x2 + 12, Y - 6, "nur23", 190)) });
+      S.push({ text: t.schieben, svg: bildQ(o, '<g transform="translate(-130 0)"><g class="a-weg-links">' + kanuele(tip, false, l, r) + "</g></g>" + ring("") + kugelVorn(a1[0] + 4, a1[1] + 6, 9)) });
+      S.push({ text: t.kugel, svg: bildQ(o, ring("") + kugelVorn(a1[0] + 4, a1[1] + 6, 9) + bewegt(-60, 0, kugelVorn(a2[0] - 4, a2[1] + 6, 9)) + drehpfeil(a2[0] - 4, a2[1] + 30) + hinweis(150, 300, a2[0] - 8, a2[1] + 10, "kugelAuf", 190)) });
+      S.push({ text: t.fertig, svg: bildQ(o, ring("") + kugelVorn(a1[0] + 4, a1[1] + 6, 9) + kugelVorn(a2[0] - 4, a2[1] + 6, 9) + hinweis(500, 300, C[0] + 20, C[1] + RRg - 6, o.schmuckWort, 160) + haken()) });
+      return S;
+    }
     S.push({ text: t.einsetzen, svg: bildQ(o, kanal(o) + kanuele(tip, false, l, r) + bewegt(80, 0, schmuckGerade(o, xIn, false, true)) + pfeil(530, 480, 250) + hinweis(470, 310, xIn + 6, Y + 6, "nur23", 190)) });
     S.push({ text: t.schieben, svg: bildQ(o, bewegt(0, -sh, kanuele(tip, false, l, r)) + bewegt(0, -sh, schmuckGerade(o, xIn, false, true)) + pfeil(480, 420, 250)) });
     S.push({ text: t.kugel, svg: bildQ(o, '<g class="a-weg-links">' + kanuele(tip, false, l - sh, r - sh) + "</g>" + schmuckGerade(o, F0, false, true) + '<g transform="translate(' + (F0 - 258) + ' 0)">' + klemmzangeVorn() + "</g>" + bewegt(-70, 0, kugel(F0 - 9) + kugelgreifer(F0 - 9)) + hinweis(470, 300, F0 + 4, Y + 6, "kugelAuf", 190)) });
@@ -882,6 +905,52 @@ window.KURS = window.KURS || { module: [] };
         es: "Perfora despacio y con control desde fuera a través de la ventana. Como el ala está doblada hacia arriba, la punta sale por abajo del orificio nasal." },
       svg: bildNase(true, klemmeAn([NP[0], NP[1] - 7], -40, 100) + kanueleAuf(NAUS, 50, .55, true) + hinweis(480, 300, NAUS[0] + 2, NAUS[1] + 2, "spitzeUntenRaus", 290)) }
   ].concat(nostrilBasis.slice(2));
+
+  // Septum: Septumzange gerade in den Sweet Spot, 18G von rechts nach links, Hufeisen mit einer Kugel schon drauf
+  var SP = [320, 249];
+  var septumO = {
+    d: 30, unten: Y + 44, knorpel: false, gewebeWort: "septumSweetSpot", links: "einstichseite", rechts: "austrittsseite",
+    werkzeug: "zange", werkzeugWort: "septumzange", gauge: "kan18", schmuck: "hufeisen", schmuckWort: "hufeisen", ringR: 50, ueberVorn: 20, vorn: "",
+    texte: {
+      lage: { de: "Ansicht von vorn: Den Sweet Spot ertasten, die dünne Stelle zwischen dem Knorpel der Nasenscheidewand und der Nasenspitze. Dort sitzt das Septum.",
+        en: "Front view: feel for the sweet spot, the thin area between the septum cartilage and the tip of the nose. That is where the septum piercing sits.",
+        es: "Vista frontal: busca al tacto el punto dulce, la zona fina entre el cartílago del tabique y la punta de la nariz. Ahí va el septum." },
+      halt: { de: "", en: "", es: "" },
+      stich: { de: "Im Querschnitt: Mit der 18G-Kanüle von rechts nach links gerade durch den Sweet Spot stechen, durch das Fenster der Septumzange.",
+        en: "In cross-section: pierce straight through the sweet spot from right to left with the 18G cannula, through the window of the septum forceps.",
+        es: "En corte: perfora recto el punto dulce de derecha a izquierda con la cánula 18G, a través de la ventana de la pinza de septum." },
+      abwurf: { de: "Septumzange abnehmen und die Stahlnadel zur Einstichseite herausziehen. Das Röhrchen bleibt im Stichkanal.",
+        en: "Take off the septum forceps and pull the steel needle out on the entry side. The tube stays in the channel.",
+        es: "Quita la pinza de septum y saca la aguja de acero por el lado de entrada. El tubo se queda en el canal." },
+      ansatz: { de: "Auf der Einstichseite den grünen Ansatz mit der Schere abschneiden, sodass nur das Röhrchen bleibt.",
+        en: "On the entry side, cut off the green hub with scissors so only the tube is left.",
+        es: "En el lado de entrada, corta el cono verde con las tijeras para que solo quede el tubo." },
+      einsetzen: { de: "Am Hufeisen ist auf einer Seite schon eine Kugel drauf. Das freie Ende nur 2–3 mm von der Austrittsseite in das Röhrchen stecken und das Hufeisen durch den Stichkanal führen. Das Röhrchen geht dabei auf der Einstichseite hinaus.",
+        en: "The horseshoe already has a ball on one end. Insert the free end only 2–3 mm into the tube from the exit side and guide the horseshoe through the channel. The tube comes out on the entry side.",
+        es: "La herradura ya tiene una bola en un extremo. Introduce el extremo libre solo 2–3 mm en el tubo por el lado de salida y pasa la herradura por el canal. El tubo sale por el lado de entrada." },
+      schieben: { de: "Das Röhrchen vom Hufeisen abziehen.",
+        en: "Pull the tube off the horseshoe.",
+        es: "Retira el tubo de la herradura." },
+      kugel: { de: "Die zweite Kugel auf das freie Ende aufdrehen.",
+        en: "Screw the second ball onto the free end.",
+        es: "Enrosca la segunda bola en el extremo libre." },
+      fertig: { de: "Fertig: Das Hufeisen sitzt im Sweet Spot, die Kugeln zeigen nach unten. Nochmals mit Kodan einsprühen und im Spiegel zeigen.",
+        en: "Done: the horseshoe sits in the sweet spot with the balls pointing down. Spray with Kodan again and show it in the mirror.",
+        es: "Listo: la herradura queda en el punto dulce con las bolas hacia abajo. Vuelve a rociar con Kodan y muéstralo en el espejo." }
+    }
+  };
+  var septumBasis = piercingSchritte(septumO);
+  var septum = [
+    { text: septumO.texte.lage, svg: bildNase(false, '<g class="a-erscheinen">' + punkt(SP[0], SP[1]) + "</g>" + hinweis(500, 120, SP[0] + 4, SP[1] - 4, "sweetSpot", 200)) },
+    { text: { de: "Die Septumzange gerade in den Sweet Spot anlegen, das Fenster liegt genau auf der dünnen Stelle.",
+        en: "Apply the septum forceps straight into the sweet spot, with the window exactly over the thin area.",
+        es: "Coloca la pinza de septum recta en el punto dulce, con la ventana justo sobre la zona fina." },
+      svg: bildNase(false, punkt(SP[0], SP[1]) + '<g class="a-bewegt" style="--a-von:0px;--a-nach:0px">' + klemmeAn(SP, 0, 100) + "</g>" + hinweis(500, 120, SP[0] + 8, SP[1] - 8, "geradeAnlegen", 200) + hinweis(150, 300, SP[0] - 2, 330, "septumzange", 170)) },
+    { text: { de: "Langsam und kontrolliert von rechts nach links durch das Fenster stechen.",
+        en: "Pierce slowly and under control from right to left through the window.",
+        es: "Perfora despacio y con control de derecha a izquierda a través de la ventana." },
+      svg: bildNase(false, klemmeAn(SP, 0, 100) + kanueleAuf([SP[0] - 10, SP[1]], 180, .5, true) + hinweis(150, 120, SP[0] - 12, SP[1] - 6, "vonRechtsNachLinks", 230)) }
+  ].concat(septumBasis.slice(2));
 
   // Tragus: Snaptile, Tragus leicht vom Gehörgang wegbiegen, langsam und kontrolliert stechen
   var TP = [281, 232];
@@ -1026,6 +1095,14 @@ window.KURS = window.KURS || { module: [] };
         en: "Schematic illustration, not to scale. The real clip from the studio is coming soon.",
         es: "Ilustración esquemática, no a escala. Pronto estará el vídeo real del estudio." },
       schritte: nostril,
+      woerter: T
+    },
+    "labor-septum": {
+      titel: { de: "Animation: Septum mit Hufeisen", en: "Animation: septum with a horseshoe", es: "Animación: septum con herradura" },
+      hinweis: { de: "Schematische Darstellung, nicht maßstabsgetreu. Den echten Clip aus dem Studio gibt es bald.",
+        en: "Schematic illustration, not to scale. The real clip from the studio is coming soon.",
+        es: "Ilustración esquemática, no a escala. Pronto estará el vídeo real del estudio." },
+      schritte: septum,
       woerter: T
     },
     "labor-industrial": {

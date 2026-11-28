@@ -97,7 +97,8 @@ window.KURS = window.KURS || { module: [] };
         inhalt: [
           db("Nariz (Nostril)", "A través del ala de la nariz. Se practicó por primera vez hace unos 4000 años en Oriente Medio; en la India se lleva preferentemente en el ala izquierda.", "labret", "18G", "pinza de gasa, Snaptile", "", "S. 85"),
           { typ: "animation", id: "labor-nostril" },
-          db("Septum", "A través del tejido conjuntivo situado bajo el cartílago del tabique nasal (lat. septum nasi). Uno de los piercings más antiguos. Se puede dilatar para joyas más grandes.", "herradura (circular barbell)", "18G, 16G", "pinza para septum", "", "S. 88")
+          db("Septum", "A través del tejido conjuntivo situado bajo el cartílago del tabique nasal (lat. septum nasi). Uno de los piercings más antiguos. Se puede dilatar para joyas más grandes.", "herradura (circular barbell)", "18G, 16G", "pinza para septum", "", "S. 88"),
+          { typ: "animation", id: "labor-septum" }
         ],
         fragen: [
           ["¿Por dónde se perfora el Nostril?", ["Por el ala de la nariz", "Por el tabique nasal", "Por el dorso de la nariz", "Por la punta de la nariz"], "Ficha técnica del Nostril.", "S. 85"],
