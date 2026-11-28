@@ -1,0 +1,22 @@
+// Aufnahme mit Sprechtext: Schrittdauer = Länge der Tonspur + Pause; danach Ton mit ffmpeg anlegen
+import { chromium } from '/opt/node-tools/node_modules/playwright/index.mjs';
+import fs from 'fs'; import { execFileSync } from 'child_process';
+const [S,id,tonDir,ziel]=process.argv.slice(2);
+const dateien=fs.readdirSync(tonDir).filter(f=>f.endsWith('.mp3')).sort().map(f=>tonDir+'/'+f);
+const len=f=>parseFloat(execFileSync('ffprobe',['-v','error','-show_entries','format=duration','-of','csv=p=0',f]).toString());
+const ton=dateien.map(len); const dauern=ton.map(t=>Math.round(t*1000)+1400);
+const dir=S+'/video/roh-'+id; fs.rmSync(dir,{recursive:true,force:true});
+const b=await chromium.launch();
+const ctx=await b.newContext({viewport:{width:1280,height:720},recordVideo:{dir,size:{width:1280,height:720}}});
+const p=await ctx.newPage(); const t0=Date.now();
+await p.goto('file://'+S+'/video/clip.html?id='+id); await p.waitForTimeout(800);
+await p.evaluate(d=>window.setzeDauern(d),dauern);
+const total=await p.evaluate(()=>window.gesamt()); const t1=Date.now(); await p.evaluate(()=>window.starten());
+await p.waitForTimeout(2600+total+3500); await ctx.close(); await b.close();
+const webm=fs.readdirSync(dir).find(f=>f.endsWith('.webm'));
+const SCHNITT=0.8; let start=(t1-t0)/1000+2.6+0.45-SCHNITT; const args=['-loglevel','error','-y','-ss',String(SCHNITT),'-i',dir+'/'+webm];
+dateien.forEach(f=>args.push('-i',f)); let filt=''; let mix='';
+dateien.forEach((f,i)=>{const ms=Math.round(start*1000); filt+=`[${i+1}:a]adelay=${ms}|${ms}[a${i}];`; mix+=`[a${i}]`; start+=dauern[i]/1000;});
+filt+=`${mix}amix=inputs=${dateien.length}:normalize=0[a]`;
+args.push('-filter_complex',filt,'-map','0:v','-map','[a]','-c:v','libx264','-crf','22','-pix_fmt','yuv420p','-r','30','-c:a','aac','-b:a','128k','-movflags','+faststart','-shortest',ziel);
+execFileSync('ffmpeg',args); console.log('ok',ziel);

@@ -1143,6 +1143,7 @@ window.KURS = window.KURS || { module: [] };
         en: "Schematic illustration, not to scale. The real clip from the studio is coming soon.",
         es: "Ilustración esquemática, no a escala. Pronto estará el vídeo real del estudio." },
       schritte: tragus,
+      ton: "inhalte/ton/tragus/",
       woerter: T
     },
     "labor-rook": {

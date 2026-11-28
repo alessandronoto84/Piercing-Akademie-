@@ -274,6 +274,7 @@
       '<div class="k-anim-buehne" aria-live="polite"></div>' +
       '<div class="k-anim-steuerung"><button type="button" class="btn ghost small" data-a="zurueck" aria-label="' + tr("Voriger Schritt") + '">←</button>' +
       '<button type="button" class="btn small" data-a="spielen">' + tr("Pause") + '</button>' +
+      (A.ton && SPRACHE === "de" ? '<button type="button" class="btn ghost small" data-a="ton" aria-pressed="true">' + tr("Ton an") + '</button>' : "") +
       '<button type="button" class="btn ghost small" data-a="nochmal" aria-label="' + tr("Schritt nochmal") + '">↻ ' + tr("Schritt nochmal") + '</button>' +
       '<button type="button" class="btn ghost small" data-a="weiter" aria-label="' + tr("Nächster Schritt") + '">→</button>' +
       '<span class="k-anim-punkte">' + A.schritte.map(function (_, i) { return '<button type="button" data-a="' + i + '" aria-label="' + tr("Schritt {n}", { n: i + 1 }) + '"></button>'; }).join("") + "</span></div>" +
@@ -285,11 +286,15 @@
       var A = ANIM[fig.dataset.anim], i = 0, laeuft = !ruhig, uhr = null, sichtbar = false;
       var L = function (o) { return (o && (o[SPRACHE] || o.de)) || ""; };
       var buehne = fig.querySelector(".k-anim-buehne"), knopf = fig.querySelector('[data-a="spielen"]');
+      // Sprechtext (nur Deutsch): je Schritt eine Datei 01.mp3, 02.mp3, ... im Ordner A.ton
+      var audio = A.ton && SPRACHE === "de" ? new Audio() : null, tonAn = true, tonKnopf = fig.querySelector('[data-a="ton"]');
+      function tonAktiv() { return !!audio && tonAn; }
       function zeigen(n) {
         i = (n + A.schritte.length) % A.schritte.length;
         var svg = A.schritte[i].svg;
         Object.keys(A.woerter || {}).forEach(function (k) { svg = svg.split("{" + k + "}").join(esc(L(A.woerter[k]))); });
         buehne.innerHTML = svg;
+        if (audio) { audio.pause(); audio.onended = null; audio.removeAttribute("src"); }
         fig.querySelector(".k-anim-nr").textContent = (i + 1) + "/" + A.schritte.length;
         fig.querySelector(".k-anim-text").textContent = L(A.schritte[i].text);
         fig.querySelectorAll(".k-anim-punkte button").forEach(function (b, j) { b.classList.toggle("aktiv", j === i); });
@@ -297,7 +302,17 @@
       }
       function planen() {
         clearTimeout(uhr);
-        if (laeuft && sichtbar) uhr = setTimeout(function () { zeigen(i + 1); }, Math.max(5200, L(A.schritte[i].text).length * 68));
+        var lesezeit = function () { uhr = setTimeout(function () { zeigen(i + 1); }, Math.max(5200, L(A.schritte[i].text).length * 68)); };
+        if (audio) audio.onended = null;
+        if (laeuft && sichtbar) {
+          if (tonAktiv()) {
+            if (!audio.getAttribute("src")) audio.src = A.ton + (i < 9 ? "0" : "") + (i + 1) + ".mp3";
+            audio.onended = function () { uhr = setTimeout(function () { zeigen(i + 1); }, 1200); };
+            var spiel = audio.play();
+            if (spiel && spiel.catch) spiel.catch(function () { audio.onended = null; lesezeit(); });
+          } else lesezeit();
+        } else if (audio) audio.pause();
+        if (tonKnopf) { tonKnopf.textContent = tonAn ? tr("Ton an") : tr("Ton aus"); tonKnopf.setAttribute("aria-pressed", tonAn ? "true" : "false"); }
         knopf.textContent = laeuft ? tr("Pause") : tr("Abspielen");
       }
       fig.addEventListener("click", function (e) {
@@ -307,6 +322,7 @@
         else if (a === "zurueck") { laeuft = false; zeigen(i - 1); }
         else if (a === "weiter") { laeuft = false; zeigen(i + 1); }
         else if (a === "nochmal") { laeuft = false; zeigen(i); }
+        else if (a === "ton") { tonAn = !tonAn; if (audio) { audio.pause(); audio.removeAttribute("src"); } planen(); }
         else { laeuft = false; zeigen(+a); }
       });
       if ("IntersectionObserver" in window) new IntersectionObserver(function (es) { sichtbar = es[0].isIntersecting; planen(); }, { threshold: 0.4 }).observe(fig);

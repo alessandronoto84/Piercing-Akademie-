@@ -20,6 +20,9 @@ html,body{margin:0;width:1280px;height:720px;overflow:hidden;background:#111114;
 .a-fallen{animation:aFallen 1.5s .2s cubic-bezier(.5,0,.8,.4) forwards}@keyframes aFallen{from{transform:translateY(-40px)}to{transform:translateY(120px);opacity:.15}}
 .a-weg-unten{animation:aWegU 1.3s .5s ease-in forwards}@keyframes aWegU{to{transform:translate(-30px,140px) rotate(-25deg);opacity:0}}
 #buehne svg{transition:opacity .35s}
+body.ton #buehne{inset:0 0 64px 0}
+body.ton #leiste{top:auto;bottom:0;height:64px;gap:16px;padding:0 40px;background:rgba(17,17,20,.92)}
+body.ton #nr{font-size:16px}body.ton #text{font-size:19px;line-height:1.25}
 </style><link rel="stylesheet" href="file:///home/user/Piercing-Akademie-/kurs-prototyp/kurs.css"></head><body>
 <div id="buehne"></div><div id="leiste"><span id="nr"></span><span id="text"></span></div>
 <div id="titel"><div><div class="l">DIE PIERCING AKADEMIE · PRAXISLABOR</div><h1 id="h1"></h1><p>Schematische Darstellung · nicht maßstabsgetreu</p></div></div>
@@ -28,7 +31,8 @@ html,body{margin:0;width:1280px;height:720px;overflow:hidden;background:#111114;
 var ID=new URLSearchParams(location.search).get("id")||"labor-lobe", A=KURS.animationen[ID], W=A.woerter, i=-1; document.getElementById("h1").textContent=A.titel.de.replace(/^Animation: /,"");
 function zeig(n){var svg=A.schritte[n].svg; Object.keys(W).forEach(function(k){svg=svg.split("{"+k+"}").join(W[k].de)});
  document.getElementById("buehne").innerHTML=svg; document.getElementById("nr").textContent=(n+1)+"/"+A.schritte.length; document.getElementById("text").textContent=A.schritte[n].text.de;}
-function dauer(n){return Math.max(5200, Math.round(A.schritte[n].text.de.length*68));}
+var DAUERN=null; window.setzeDauern=function(d){DAUERN=d;document.body.classList.add('ton');};
+function dauer(n){return DAUERN?DAUERN[n]:Math.max(5200, Math.round(A.schritte[n].text.de.length*68));}
 window.gesamt=function(){var t=0;for(var n=0;n<A.schritte.length;n++)t+=dauer(n);return t;};
 window.starten=function(){ setTimeout(function(){document.getElementById("titel").style.opacity=0; zeig(0);
  var n=0; (function weiter(){ setTimeout(function(){ n++; if(n>=A.schritte.length){ document.getElementById("titel").style.opacity=1; document.querySelector("#titel h1").textContent="Gleich selbst üben"; document.querySelector("#titel p").textContent=(A.uebung==="Übungsmodell"?"Am Übungsmodell":"An der "+A.uebung).replace("An der Silikonohr","Am Silikonohr").replace("An der Silikonmund","Am Silikonmund").replace("An der Silikon-Bauchnabel","Am Silikon-Bauchnabel")+" im Praxislabor · Gestochen wird am Praxistag unter Aufsicht"; return;} zeig(n); weiter(); }, dauer(n)); })();},2600);};
