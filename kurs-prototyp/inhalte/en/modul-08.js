@@ -220,6 +220,7 @@ window.KURS = window.KURS || { module: [] };
         inhalt: [
           { typ: "text", text: "This lesson covers the female intimate piercings from the course book, without images." },
           db("Christina", "Vertically into the fold where the outer labia meet at the top, exiting at the mons pubis. Not anatomically possible in every woman.", "curved barbell (banana), barbell, BCR", "16G, 18G", "freehand, Snaptile, gauze clamp", "", "S. 105"),
+          { typ: "animation", id: "labor-christina" },
           db("Clitoral hood", "Through the clitoral hood, vertically or horizontally; the clitoris itself is not pierced.", "BCR, curved barbell (banana), barbell", "16G, 18G", "freehand", "", "S. 106"),
           db("Labia", "In the inner or outer labia.", "BCR", "16G, 18G", "freehand, Snaptile, gauze clamp", "", "S. 107")
         ],

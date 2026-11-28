@@ -280,6 +280,12 @@ window.KURS = window.KURS || { module: [] };
     barbell: { de: "Barbell", en: "barbell", es: "barbell" },
     alkoholtupfer: { de: "Alkoholtupfer", en: "alcohol swab", es: "toallita de alcohol" },
     reinigungAbheilung: { de: "Reinigung, Pflege, Abheilung", en: "cleaning, care, healing", es: "limpieza, cuidados, cicatrización" },
+    spaltSchema: { de: "Spalt (schematisch)", en: "cleft (schematic)", es: "hendidura (esquema)" },
+    schematisch: { de: "schematisch", en: "schematic", es: "esquemático" },
+    obenAmSpalt: { de: "oben am Ende des Spalts", en: "top end of the cleft", es: "extremo superior" },
+    untenSpalt: { de: "unten: Spalt", en: "bottom: cleft", es: "abajo: hendidura" },
+    gewebeSchema: { de: "Gewebe (schematisch)", en: "tissue (schematic)", es: "tejido (esquema)" },
+    kan16oder18: { de: "16G oder 18G", en: "16G or 18G", es: "16G o 18G" },
     tippTitel: { de: "Gut zu wissen", en: "Good to know", es: "Bueno saberlo" },
     tippZeile1: { de: "Es gibt auch spezielle Tragusklemmen", en: "There are also special tragus clamps", es: "También hay pinzas especiales para trago" },
     tippZeile2: { de: "mit Auffanghütchen.", en: "with a receiving cap.", es: "con capuchón receptor." },
@@ -1269,6 +1275,63 @@ window.KURS = window.KURS || { module: [] };
       svg: bildBrust(kugelVorn(BW1[0] - 10, BW1[1], 8) + kugelVorn(BW2[0] + 10, BW2[1], 8) + '<g class="a-erscheinen"><rect x="250" y="130" width="140" height="120" rx="14" fill="#F6EAD8" fill-opacity=".85" stroke="#D9C6A8" stroke-width="2"/><rect x="280" y="160" width="80" height="60" rx="6" fill="#FFFFFF" fill-opacity=".8"/></g>' + hinweis(150, 300, 252, 230, "sterilesPflaster", 190)) }
   ]);
 
+  // ---------- Christina (nur schematisch, ohne Körperdarstellung) ----------
+  var CH1 = [320, 160], CH2 = [320, 215];
+  function schemaIntim() {
+    return '<rect x="170" y="40" width="300" height="280" rx="40" fill="#F4DCCD" opacity=".7"/>' +
+      '<path d="M320 50 L320 310" stroke="' + F.hautRand + '" stroke-width="1.5" stroke-dasharray="6 7" opacity=".55"/>' +
+      '<path d="M320 ' + (CH2[1] + 4) + ' L320 310" stroke="#9C5E4E" stroke-width="5" stroke-linecap="round"/>' +
+      '<text x="332" y="300" class="a-klein" fill="#9A8E7E">{spaltSchema}</text><text x="332" y="66" class="a-klein" fill="#9A8E7E">{koerpermitte}</text>';
+  }
+  function bildSchema(inhalt) { return '<svg viewBox="0 0 ' + W + " " + H + '" role="img">' + DEFS + buehne() + schemaIntim() + etikett(540, "schematisch", 170) + inhalt + "</svg>"; }
+  function massstabZwischen(p1, p2) {
+    return '<g stroke="' + F.gold + '" stroke-width="2"><path d="M' + (p1[0] + 40) + " " + p1[1] + " L" + (p1[0] + 52) + " " + p1[1] + " M" + (p1[0] + 46) + " " + p1[1] + " L" + (p1[0] + 46) + " " + p2[1] + " M" + (p1[0] + 40) + " " + p2[1] + " L" + (p1[0] + 52) + " " + p2[1] + '"/></g>' +
+      '<text x="' + (p1[0] + 60) + '" y="' + ((p1[1] + p2[1]) / 2 + 4) + '" class="a-klein" fill="#5A4632">1 cm</text>';
+  }
+  var christinaO = {
+    d: 60, unten: Y + 100, knorpel: false, gewebeWort: "gewebeSchema", links: "obenEinstich", rechts: "untenSpalt",
+    werkzeug: "gaze", werkzeugWort: "gazeklemme", gauge: "kan16oder18", schmuck: "barbell", schmuckWort: "banane", ueberVorn: 22, vorn: "",
+    texte: {
+      lage: { de: "", en: "", es: "" }, halt: { de: "", en: "", es: "" },
+      stich: { de: "Im Querschnitt: Mit der 16G- oder 18G-Kanüle von oben durch beide Markierungen in den Spalt stechen.",
+        en: "In cross-section: pierce from the top through both marks into the cleft with the 16G or 18G cannula.",
+        es: "En corte: perfora desde arriba por ambas marcas hacia la hendidura con la cánula 16G o 18G." },
+      abwurf: { de: "Klemme abnehmen und die Stahlnadel nach oben herausziehen. Das Röhrchen bleibt im Stichkanal.",
+        en: "Take off the clamp and pull the steel needle out at the top. The tube stays in the channel.",
+        es: "Quita la pinza y saca la aguja de acero por arriba. El tubo se queda en el canal." },
+      ansatz: { de: "Oben den grünen Ansatz mit der Schere abschneiden, sodass nur das Röhrchen bleibt.",
+        en: "At the top, cut off the green hub with scissors so only the tube is left.",
+        es: "Arriba, corta el cono verde con las tijeras para que solo quede el tubo." },
+      einsetzen: { de: "Eine normale Banane nehmen, keine Bauchnabel-Banane. Nur 2–3 mm von unten in das Röhrchen stecken, die untere Kugel ist schon drauf.",
+        en: "Use a normal curved barbell, not a navel banana. Insert it only 2–3 mm into the tube from below; the lower ball is already on.",
+        es: "Usa una banana normal, no una de ombligo. Introdúcela solo 2–3 mm en el tubo desde abajo; la bola de abajo ya está puesta." },
+      schieben: { de: "Die Banane durchschieben, nicht ziehen. Sie schiebt das Röhrchen oben hinaus. Die Kundin dabei ausatmen lassen.",
+        en: "Push the curved barbell through, do not pull. It pushes the tube out at the top. Have the client breathe out.",
+        es: "Empuja la banana, no tires. Saca el tubo por arriba. Pide a la clienta que espire." },
+      kugel: { de: "Röhrchen abziehen. Die obere Kugel mit dem Kugelgreifer aufdrehen, den Stab dabei mit der Klemmzange kurz vor dem Gewinde halten.",
+        en: "Pull off the tube. Screw on the upper ball with the ball grabber, holding the bar with the clamp just before the thread.",
+        es: "Retira el tubo. Enrosca la bola de arriba con la pinza de bolas, sujetando la barra con la pinza justo antes de la rosca." },
+      fertig: { de: "Fertig: Die Banane sitzt mit Überlänge für die Schwellung. Nochmals mit Kodan einsprühen.",
+        en: "Done: the curved barbell sits with extra length for swelling. Spray with Kodan again.",
+        es: "Listo: la banana queda con longitud extra para la hinchazón. Vuelve a rociar con Kodan." }
+    }
+  };
+  var christinaBasis = piercingSchritte(christinaO);
+  var christina = [
+    { text: { de: "Schematische Darstellung. Zwei Punkte anzeichnen: einen oben am Ende des Spalts und einen zweiten 1 cm darüber, gerade auf der Körpermitte.",
+        en: "Schematic illustration. Mark two dots: one at the top end of the cleft and a second 1 cm above it, straight on the midline.",
+        es: "Ilustración esquemática. Marca dos puntos: uno en el extremo superior de la hendidura y otro 1 cm por encima, recto sobre la línea media." },
+      svg: bildSchema('<g class="a-erscheinen">' + punkt(CH1[0], CH1[1]) + punkt(CH2[0], CH2[1]) + "</g>" + massstabZwischen(CH1, CH2) + hinweis(150, 110, CH1[0] - 4, CH1[1], "obenEinstich", 170) + hinweis(150, 290, CH2[0] - 4, CH2[1] + 2, "obenAmSpalt", 190)) },
+    { text: { de: "Die Gazeklemme über beide Punkte anlegen. Statt der Gazeklemme geht auch ein Snaptile, das ist ein Einmalwerkzeug.",
+        en: "Apply the gauze clamp over both dots. A Snaptile works too, it is single-use.",
+        es: "Coloca la pinza de gasa sobre los dos puntos. También sirve un Snaptile, que es de un solo uso." },
+      svg: bildSchema(punkt(CH1[0], CH1[1]) + punkt(CH2[0], CH2[1]) + bewegt(-60, 0, klemmeFenster(CH1, CH2, -110, 60)) + hinweis(150, 300, 230, 280, "snaptileOderGaze", 230)) },
+    { text: { de: "Die Kanüle, 16G oder 18G, mit der Kundin absprechen. Dann langsam und kontrolliert von oben in den Spalt stechen, durch beide Punkte.",
+        en: "Agree on the cannula, 16G or 18G, with the client. Then pierce slowly and under control from the top into the cleft, through both dots.",
+        es: "Acuerda la cánula, 16G o 18G, con la clienta. Después perfora despacio y con control desde arriba hacia la hendidura, por ambos puntos." },
+      svg: bildSchema(klemmeFenster(CH1, CH2, -110, 60) + kanueleAuf(CH2, 90, .62, true) + hinweis(500, 150, CH1[0] + 6, CH1[1] + 10, "vonObenNachUnten", 200) + hinweis(500, 230, CH2[0] + 6, CH2[1] + 4, "kan16oder18", 170)) }
+  ].concat(christinaBasis.slice(2));
+
   // ---------- Für jedes Piercing: vorher mit Alkoholtupfer reinigen, zum Schluss den Kunden aufklären ----------
   function tupfer(x, y) {
     return '<g class="a-wischen" filter="url(#aSchatten)"><rect x="' + (x - 22) + '" y="' + (y - 18) + '" width="44" height="36" rx="6" fill="#FFFFFF" stroke="#D8D2C6"/>' +
@@ -1358,7 +1421,7 @@ window.KURS = window.KURS || { module: [] };
   ].concat(tragusBasis.slice(3));
 
 
-  var UEBUNG = { brustwarze: "Silikon-Brust", nostril: "Silikonnase", septum: "Silikonnase", labret: "Silikonmund", zunge: "Silikonzunge", bauchnabel: "Silikon-Bauchnabel", brustwarze: "Silikon-Brust", intim: "Übungsmodell" };
+  var UEBUNG = { christina: "Übungsmodell", brustwarze: "Silikon-Brust", nostril: "Silikonnase", septum: "Silikonnase", labret: "Silikonmund", zunge: "Silikonzunge", bauchnabel: "Silikon-Bauchnabel", brustwarze: "Silikon-Brust", intim: "Übungsmodell" };
   KURS.animationen = {
     "labor-lobe": {
       titel: { de: "Animation: Lobe stechen und Labret einsetzen", en: "Animation: piercing the lobe and inserting a labret", es: "Animación: perforar el lóbulo y colocar un labret" },
@@ -1472,6 +1535,14 @@ window.KURS = window.KURS || { module: [] };
       schritte: brustwarze,
       woerter: T
     },
+    "labor-christina": {
+      titel: { de: "Animation: Christina mit Banane", en: "Animation: Christina with a curved barbell", es: "Animación: Christina con banana" },
+      hinweis: { de: "Schematische Darstellung ohne Körperabbildung, nicht maßstabsgetreu.",
+        en: "Schematic illustration without depicting the body, not to scale.",
+        es: "Ilustración esquemática sin representar el cuerpo, no a escala." },
+      schritte: christina,
+      woerter: T
+    },
     "labor-industrial": {
       titel: { de: "Animation: Industrial – zwei Stichkanäle auf einer Linie", en: "Animation: industrial – two channels on one line", es: "Animación: industrial – dos canales en una línea" },
       hinweis: { de: "Schematische Darstellung, nicht maßstabsgetreu. Den echten Clip aus dem Studio gibt es bald.",
@@ -1493,7 +1564,8 @@ window.KURS = window.KURS || { module: [] };
     "labor-labret": bildMund(tupfer(LP[0], LP[1]) + TH(LP[0], LP[1])),
     "labor-zunge": null,
     "labor-bauchnabel": bildBauch(false, tupfer(BN1[0], (BN1[1] + BN2[1]) / 2) + TH(BN1[0], BN1[1] + 20)),
-    "labor-brustwarze": bildBrust(tupfer(320, 190) + TH(320, 190))
+    "labor-brustwarze": bildBrust(tupfer(320, 190) + TH(320, 190)),
+    "labor-christina": bildSchema(tupfer(CH1[0], CH1[1] + 28) + TH(CH1[0], CH1[1] + 28))
   };
   Object.keys(RAHMEN).forEach(function (k) {
     var A = KURS.animationen[k], liste = A.schritte;

@@ -220,6 +220,7 @@ window.KURS = window.KURS || { module: [] };
         inhalt: [
           { typ: "text", text: "Diese Lektion behandelt die Intimpiercings bei der Frau aus dem Kursbuch ohne Abbildungen." },
           db("Christina", "Vertikal in die Falte der oben zusammenlaufenden großen Schamlippen, Austritt am Venushügel. Nicht bei jeder Frau anatomisch möglich.", "Banane, Barbell, BCR", "16G, 18G", "Freihand, Snaptile, Gazeklemme", "", "S. 105"),
+          { typ: "animation", id: "labor-christina" },
           db("Klitorisvorhaut", "Durch die Klitorisvorhaut, vertikal oder horizontal; die Klitoris selbst wird nicht durchstochen.", "BCR, Banane, Barbell", "16G, 18G", "Freihand", "", "S. 106"),
           db("Schamlippe", "In den inneren oder äußeren Schamlippen.", "BCR", "16G, 18G", "Freihand, Snaptile, Gazeklemme", "", "S. 107")
         ],

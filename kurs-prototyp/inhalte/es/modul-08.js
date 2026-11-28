@@ -220,6 +220,7 @@ window.KURS = window.KURS || { module: [] };
         inhalt: [
           { typ: "text", text: "Esta lección trata los piercings íntimos femeninos del libro del curso, sin imágenes." },
           db("Christina", "En vertical en el pliegue donde se unen por arriba los labios mayores, con salida en el monte de Venus. No es anatómicamente posible en todas las mujeres.", "barbell curvo (banana), barbell, BCR", "16G, 18G", "a mano alzada, Snaptile, pinza de gasa", "", "S. 105"),
+          { typ: "animation", id: "labor-christina" },
           db("Capuchón del clítoris", "A través del capuchón del clítoris, en vertical u horizontal; el clítoris en sí no se perfora.", "BCR, barbell curvo (banana), barbell", "16G, 18G", "a mano alzada", "", "S. 106"),
           db("Labios vulvares", "En los labios menores o mayores.", "BCR", "16G, 18G", "a mano alzada, Snaptile, pinza de gasa", "", "S. 107")
         ],
