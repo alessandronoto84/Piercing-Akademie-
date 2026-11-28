@@ -1425,6 +1425,7 @@ window.KURS = window.KURS || { module: [] };
   var UEBUNG = { christina: "Übungsmodell", brustwarze: "Silikon-Brust", nostril: "Silikonnase", septum: "Silikonnase", labret: "Silikonmund", zunge: "Silikonzunge", bauchnabel: "Silikon-Bauchnabel", brustwarze: "Silikon-Brust", intim: "Übungsmodell" };
   KURS.animationen = {
     "labor-lobe": {
+      ton: "inhalte/ton/lobe/",
       titel: { de: "Animation: Lobe stechen und Labret einsetzen", en: "Animation: piercing the lobe and inserting a labret", es: "Animación: perforar el lóbulo y colocar un labret" },
       hinweis: { de: "Schematische Darstellung, nicht maßstabsgetreu. Den echten Clip aus dem Studio gibt es bald.",
         en: "Schematic illustration, not to scale. The real clip from the studio is coming soon.",
