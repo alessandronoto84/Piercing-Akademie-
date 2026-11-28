@@ -286,6 +286,7 @@ window.KURS = window.KURS || { module: [] };
     untenSpalt: { de: "unten: Spalt", en: "bottom: cleft", es: "abajo: hendidura" },
     gewebeSchema: { de: "Gewebe (schematisch)", en: "tissue (schematic)", es: "tejido (esquema)" },
     kan16oder18: { de: "16G oder 18G", en: "16G or 18G", es: "16G o 18G" },
+    punktAnzeichnen: { de: "Punkt anzeichnen", en: "mark the dot", es: "marcar el punto" },
     tippTitel: { de: "Gut zu wissen", en: "Good to know", es: "Bueno saberlo" },
     tippZeile1: { de: "Es gibt auch spezielle Tragusklemmen", en: "There are also special tragus clamps", es: "También hay pinzas especiales para trago" },
     tippZeile2: { de: "mit Auffanghütchen.", en: "with a receiving cap.", es: "con capuchón receptor." },
@@ -369,9 +370,9 @@ window.KURS = window.KURS || { module: [] };
   }
   function hubVorn(x, y) { return '<g filter="url(#aSchatten)"><circle cx="' + x + '" cy="' + y + '" r="11" fill="url(#aAnsatz)"/><circle cx="' + x + '" cy="' + y + '" r="4" fill="#E9FBF3"/></g>'; }
   var upperLobe = [
-    { text: { de: "Ansicht von vorn: Neben dem herkömmlichen Ohrloch werden drei Punkte im oberen Ohrläppchen angezeichnet: in gleichem Abstand und in einem leichten Bogen, der der Rundung des Ohrs folgt.",
-        en: "Front view: next to the standard lobe hole, three points are marked in the upper lobe: evenly spaced and in a gentle curve that follows the rounding of the ear.",
-        es: "Vista frontal: junto al agujero habitual del lóbulo se marcan tres puntos en la parte superior del lóbulo: a la misma distancia y en una ligera curva que sigue el contorno de la oreja." },
+    { text: { de: "Ansicht von vorn: Neben dem herkömmlichen Ohrloch werden drei Punkte im oberen Ohrläppchen angezeichnet: in gleichem Abstand und in einem leichten Bogen, der der Rundung des Ohrs folgt. Mit dem Kunden im Spiegel abstimmen, ob es passt.",
+        en: "Front view: next to the standard lobe hole, three points are marked in the upper lobe: evenly spaced and in a gentle curve that follows the rounding of the ear. Check with the client in the mirror that it is right.",
+        es: "Vista frontal: junto al agujero habitual del lóbulo se marcan tres puntos en la parte superior del lóbulo: a la misma distancia y en una ligera curva que sigue el contorno de la oreja. Comprueba con el cliente en el espejo que está bien." },
       svg: bildVorn(kugelVorn(LOCH[0], LOCH[1], 6) + hinweis(470, 330, LOCH[0] + 8, LOCH[1], "ohrloch", 190) + '<g class="a-erscheinen">' + UL.map(function (q) { return punkt(q[0], q[1]); }).join("") + "</g>") },
     { text: { de: "Erst nachmessen: Mit dem Messschieber prüfen, ob die Abstände gleich sind und der Bogen der Ohrrundung folgt. Gestochen wird erst, wenn alles stimmt.",
         en: "Measure first: use the caliper to check that the gaps are equal and the curve follows the rounding of the ear. Only pierce once everything is right.",
@@ -518,9 +519,9 @@ window.KURS = window.KURS || { module: [] };
         en: "Front view: first hold the industrial bar (barbell 38 mm) against the ear and check: it must lie straight and have extra length at both ends for swelling.",
         es: "Vista frontal: primero sujeta la barra de industrial (barbell de 38 mm) junto a la oreja y comprueba: debe quedar recta y tener longitud extra en ambos extremos para la hinchazón." },
       svg: bildVorn(bewegt(60, 0, '<g opacity=".92">' + barbell(ANF[0], ANF[1], ENDE[0], ENDE[1], true) + "</g>") + hinweis(530, 250, ENDE[0] - 6, ENDE[1], "ueberlaenge", 170)) },
-    { text: { de: "Dann anzeichnen: zwei Punkte, wo gestochen wird (oben nahe dem Kopf, unten am äußeren Rand), und durch jeden Punkt einen Strich für die Stichrichtung.",
-        en: "Then mark: two dots where you will pierce (upper one near the head, lower one on the outer rim), and a line through each dot for the piercing direction.",
-        es: "Después marca: dos puntos donde vas a perforar (arriba cerca de la cabeza, abajo en el borde exterior) y una línea por cada punto para la dirección de la perforación." },
+    { text: { de: "Dann anzeichnen: zwei Punkte, wo gestochen wird (oben nahe dem Kopf, unten am äußeren Rand), und durch jeden Punkt einen Strich für die Stichrichtung. Mit dem Kunden im Spiegel abstimmen, ob es passt.",
+        en: "Then mark: two dots where you will pierce (upper one near the head, lower one on the outer rim), and a line through each dot for the piercing direction. Check with the client in the mirror that it is right.",
+        es: "Después marca: dos puntos donde vas a perforar (arriba cerca de la cabeza, abajo en el borde exterior) y una línea por cada punto para la dirección de la perforación. Comprueba con el cliente en el espejo que está bien." },
       svg: bildVorn(anzeichnung() + hinweis(150, 60, IN1[0] - 6, IN1[1], "oben", 130) + hinweis(530, 200, IN2[0] + 4, IN2[1] + 4, "unten", 130) + hinweis(150, 130, IN1[0] + 14, IN1[1] + 6, "stichrichtung", 190)) },
     { text: { de: "Oben entlang des Strichs mit der 16G-Kanüle freihand stechen. Die Nadel kommt sofort in den Abwurf, das Röhrchen bleibt im Stichkanal.",
         en: "Pierce the upper point freehand along the line with the 16G cannula. The needle goes straight into the sharps container and the tube stays in the channel.",
@@ -959,9 +960,9 @@ window.KURS = window.KURS || { module: [] };
     d: 30, unten: Y + 44, knorpel: false, gewebeWort: "septumSweetSpot", links: "einstichseite", rechts: "austrittsseite",
     werkzeug: "zange", werkzeugWort: "septumzange", gauge: "kan18", schmuck: "hufeisen", schmuckWort: "hufeisen", ringR: 50, ueberVorn: 20, vorn: "",
     texte: {
-      lage: { de: "Ansicht von vorn: Den Sweet Spot ertasten, die dünne Stelle zwischen dem Knorpel der Nasenscheidewand und der Nasenspitze. Dort sitzt das Septum.",
-        en: "Front view: feel for the sweet spot, the thin area between the septum cartilage and the tip of the nose. That is where the septum piercing sits.",
-        es: "Vista frontal: busca al tacto el punto dulce, la zona fina entre el cartílago del tabique y la punta de la nariz. Ahí va el septum." },
+      lage: { de: "Ansicht von vorn: Den Sweet Spot ertasten und anzeichnen, die dünne Stelle zwischen dem Knorpel der Nasenscheidewand und der Nasenspitze. Dort sitzt das Septum. Mit dem Kunden im Spiegel abstimmen, ob es passt.",
+        en: "Front view: feel for the sweet spot and mark it, the thin area between the septum cartilage and the tip of the nose. That is where the septum piercing sits. Check with the client in the mirror that it is right.",
+        es: "Vista frontal: busca al tacto el punto dulce y márcalo, la zona fina entre el cartílago del tabique y la punta de la nariz. Ahí va el septum. Comprueba con el cliente en el espejo que está bien." },
       halt: { de: "", en: "", es: "" },
       stich: { de: "Im Querschnitt: Mit der 18G-Kanüle von rechts nach links gerade durch den Sweet Spot stechen, durch das Fenster der Septumzange.",
         en: "In cross-section: pierce straight through the sweet spot from right to left with the 18G cannula, through the window of the septum forceps.",
@@ -1115,9 +1116,9 @@ window.KURS = window.KURS || { module: [] };
         en: "Preparation: have the client rinse with Chlorhexamed. Then pat the tongue dry with a paper towel.",
         es: "Preparación: el cliente se enjuaga con Chlorhexamed. Después seca la lengua con un papel." },
       svg: szene(flascheMit(250, 140, "chlorhexamed") + '<g class="a-erscheinen" filter="url(#aSchatten)"><path d="M370 150 L470 140 L480 250 L380 262 Z" fill="#FFFFFF" stroke="#E4DACB"/><path d="M384 170 L468 162 M386 190 L470 182 M388 210 L472 202" stroke="#EDE6DA" stroke-width="2"/></g>' + hinweis(470, 300, 426, 240, "papiertuch", 170)) },
-    { text: { de: "Einen Punkt mittig auf die Zunge zeichnen.",
-        en: "Draw a dot in the middle of the tongue.",
-        es: "Dibuja un punto en el centro de la lengua." },
+    { text: { de: "Einen Punkt mittig auf die Zunge zeichnen. Mit dem Kunden im Spiegel abstimmen, ob es passt.",
+        en: "Draw a dot in the middle of the tongue. Check with the client in the mirror that it is right.",
+        es: "Dibuja un punto en el centro de la lengua. Comprueba con el cliente en el espejo que está bien." },
       svg: bildZunge(false, '<g class="a-erscheinen">' + punkt(ZP[0], ZP[1]) + "</g>" + hinweis(150, 300, ZP[0] - 4, ZP[1] + 4, "punktMitte", 180)) },
     { text: { de: "Snaptile oder Gazeklemme auf den Punkt anlegen, oben und unten mittig. Das Snaptile ist ein Einmalwerkzeug, die Gazeklemme wird sterilisiert und wiederverwendet.",
         en: "Apply the Snaptile or gauze clamp over the dot, centred on top and underneath. The Snaptile is single-use, the gauze clamp is sterilised and reused.",
@@ -1186,9 +1187,9 @@ window.KURS = window.KURS || { module: [] };
   };
   var nabelBasis = piercingSchritte(nabelO);
   var bauchnabel = [
-    { text: { de: "Im Stehen anzeichnen: einen Punkt oben im Nabel und einen zweiten Punkt 1 cm darüber, gerade auf der Körpermitte.",
-        en: "Mark while the client is standing: one dot at the top inside the navel and a second dot 1 cm above it, straight on the body's midline.",
-        es: "Marca con el cliente de pie: un punto arriba dentro del ombligo y otro 1 cm por encima, recto sobre la línea media del cuerpo." },
+    { text: { de: "Im Stehen anzeichnen: einen Punkt oben im Nabel und einen zweiten Punkt 1 cm darüber, gerade auf der Körpermitte. Mit dem Kunden im Spiegel abstimmen, ob es passt.",
+        en: "Mark while the client is standing: one dot at the top inside the navel and a second dot 1 cm above it, straight on the body's midline. Check with the client in the mirror that it is right.",
+        es: "Marca con el cliente de pie: un punto arriba dentro del ombligo y otro 1 cm por encima, recto sobre la línea media del cuerpo. Comprueba con el cliente en el espejo que está bien." },
       svg: bildBauch(false, '<g class="a-erscheinen">' + punkt(BN1[0], BN1[1]) + punkt(BN2[0], BN2[1]) + "</g>" + massstab() + hinweis(150, 110, BN1[0] - 4, BN1[1], "obenEinstich", 170) + hinweis(150, 300, BN2[0] - 4, BN2[1] + 2, "imNabelOben", 170)) },
     { text: { de: "Dann legt sich der Kunde hin. Die Gazeklemme über beide Punkte anlegen. Statt der Gazeklemme geht auch ein Snaptile, das ist ein Einmalwerkzeug.",
         en: "Then the client lies down. Apply the gauze clamp over both dots. A Snaptile works too, it is single-use.",
@@ -1256,9 +1257,9 @@ window.KURS = window.KURS || { module: [] };
         en: "The client takes off everything on the upper body so the chest sits exactly as it naturally does.",
         es: "El cliente se descubre por completo el torso para que el pecho quede tal como está de forma natural." },
       svg: bildBrust(hinweis(150, 300, 260, 230, "oberkoerperFrei", 230)) },
-    { text: { de: "Einen Punkt links und einen rechts neben der Brustwarze anzeichnen, gerade auf einer Linie.",
-        en: "Mark one dot to the left and one to the right of the nipple, straight on one line.",
-        es: "Marca un punto a la izquierda y otro a la derecha del pezón, rectos en una línea." },
+    { text: { de: "Einen Punkt links und einen rechts neben der Brustwarze anzeichnen, gerade auf einer Linie. Mit dem Kunden im Spiegel abstimmen, ob es passt.",
+        en: "Mark one dot to the left and one to the right of the nipple, straight on one line. Check with the client in the mirror that it is right.",
+        es: "Marca un punto a la izquierda y otro a la derecha del pezón, rectos en una línea. Comprueba con el cliente en el espejo que está bien." },
       svg: bildBrust('<g class="a-erscheinen">' + punkt(BW1[0], BW1[1]) + punkt(BW2[0], BW2[1]) + "</g>" + hinweis(150, 110, BW1[0] - 2, BW1[1] - 4, "links", 120) + hinweis(500, 110, BW2[0] + 2, BW2[1] - 4, "rechts", 120)) },
     { text: { de: "Die Gazeklemme über beide Punkte anlegen. Statt der Gazeklemme geht auch ein Snaptile, das ist ein Einmalwerkzeug.",
         en: "Apply the gauze clamp over both dots. A Snaptile works too, it is single-use.",
@@ -1318,9 +1319,9 @@ window.KURS = window.KURS || { module: [] };
   };
   var christinaBasis = piercingSchritte(christinaO);
   var christina = [
-    { text: { de: "Schematische Darstellung. Zwei Punkte anzeichnen: einen oben am Ende des Spalts und einen zweiten 1 cm darüber, gerade auf der Körpermitte.",
-        en: "Schematic illustration. Mark two dots: one at the top end of the cleft and a second 1 cm above it, straight on the midline.",
-        es: "Ilustración esquemática. Marca dos puntos: uno en el extremo superior de la hendidura y otro 1 cm por encima, recto sobre la línea media." },
+    { text: { de: "Schematische Darstellung. Zwei Punkte anzeichnen: einen oben am Ende des Spalts und einen zweiten 1 cm darüber, gerade auf der Körpermitte. Mit dem Kunden im Spiegel abstimmen, ob es passt.",
+        en: "Schematic illustration. Mark two dots: one at the top end of the cleft and a second 1 cm above it, straight on the midline. Check with the client in the mirror that it is right.",
+        es: "Ilustración esquemática. Marca dos puntos: uno en el extremo superior de la hendidura y otro 1 cm por encima, recto sobre la línea media. Comprueba con el cliente en el espejo que está bien." },
       svg: bildSchema('<g class="a-erscheinen">' + punkt(CH1[0], CH1[1]) + punkt(CH2[0], CH2[1]) + "</g>" + massstabZwischen(CH1, CH2) + hinweis(150, 110, CH1[0] - 4, CH1[1], "obenEinstich", 170) + hinweis(150, 290, CH2[0] - 4, CH2[1] + 2, "obenAmSpalt", 190)) },
     { text: { de: "Die Gazeklemme über beide Punkte anlegen. Statt der Gazeklemme geht auch ein Snaptile, das ist ein Einmalwerkzeug.",
         en: "Apply the gauze clamp over both dots. A Snaptile works too, it is single-use.",
@@ -1567,8 +1568,18 @@ window.KURS = window.KURS || { module: [] };
     "labor-brustwarze": bildBrust(tupfer(320, 190) + TH(320, 190)),
     "labor-christina": bildSchema(tupfer(CH1[0], CH1[1] + 28) + TH(CH1[0], CH1[1] + 28))
   };
+  var MARK = {
+    "labor-lobe": { text: { de: "Ansicht von vorn: Den Punkt mittig im Ohrläppchen anzeichnen. Mit dem Kunden im Spiegel abstimmen, ob es passt.",
+        en: "Front view: mark the dot in the middle of the earlobe. Check with the client in the mirror that it is right.",
+        es: "Vista frontal: marca el punto en el centro del lóbulo. Comprueba con el cliente en el espejo que está bien." },
+      svg: bildVorn('<g class="a-erscheinen">' + punkt(338, 312) + "</g>" + hinweis(150, 300, 334, 312, "punktAnzeichnen", 190) + spiegel(540, 200)) },
+    "labor-helix": { text: { de: "Ansicht von vorn: Den Punkt am Helixrand anzeichnen (Datenblatt Helix). Mit dem Kunden im Spiegel abstimmen, ob es passt.",
+        en: "Front view: mark the dot on the helix rim (Helix data sheet). Check with the client in the mirror that it is right.",
+        es: "Vista frontal: marca el punto en el borde del hélix (ficha Helix). Comprueba con el cliente en el espejo que está bien." },
+      svg: bildVorn('<g class="a-erscheinen">' + punkt(426, 116) + "</g>" + hinweis(530, 260, 428, 120, "punktAnzeichnen", 190) + spiegel(560, 120).replace(/<g filter/, '<g transform="scale(.7) translate(240 50)" filter')) }
+  };
   Object.keys(RAHMEN).forEach(function (k) {
-    var A = KURS.animationen[k], liste = A.schritte;
+    var A = KURS.animationen[k], liste = MARK[k] ? [MARK[k]].concat(A.schritte) : A.schritte;
     // Brustwarze: Tupfer nach dem Freimachen des Oberkörpers
     if (k === "labor-brustwarze") A.schritte = rahmen([liste[0]].concat([{ text: TUPFER_TEXT, svg: RAHMEN[k] }], liste.slice(1)), null);
     else A.schritte = rahmen(liste, RAHMEN[k]);

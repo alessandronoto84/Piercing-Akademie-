@@ -18,5 +18,5 @@ const SCHNITT=0.8; let start=(t1-t0)/1000+2.6+0.45-SCHNITT; const args=['-loglev
 dateien.forEach(f=>args.push('-i',f)); let filt=''; let mix='';
 dateien.forEach((f,i)=>{const ms=Math.round(start*1000); filt+=`[${i+1}:a]adelay=${ms}|${ms}[a${i}];`; mix+=`[a${i}]`; start+=dauern[i]/1000;});
 filt+=`${mix}amix=inputs=${dateien.length}:normalize=0[a]`;
-args.push('-filter_complex',filt,'-map','0:v','-map','[a]','-c:v','libx264','-crf','22','-pix_fmt','yuv420p','-r','30','-c:a','aac','-b:a','128k','-movflags','+faststart','-shortest',ziel);
+args.push('-filter_complex',filt,'-map','0:v','-map','[a]','-c:v','libx264','-crf','22','-pix_fmt','yuv420p','-r','30','-c:a','aac','-ac','2','-b:a','160k','-movflags','+faststart','-shortest',ziel);
 execFileSync('ffmpeg',args); console.log('ok',ziel);
