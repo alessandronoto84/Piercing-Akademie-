@@ -265,6 +265,14 @@ window.KURS = window.KURS || { module: [] };
     obenPunkt: { de: "oben: Punkt", en: "top: dot", es: "arriba: punto" },
     barbellMin19: { de: "Barbell mind. 19 mm", en: "barbell min. 19 mm", es: "barbell mín. 19 mm" },
     kugelObenAuf: { de: "Kugel oben aufdrehen", en: "screw on top ball", es: "enroscar bola de arriba" },
+    koerpermitte: { de: "Körpermitte", en: "midline", es: "línea media" },
+    imLiegen: { de: "Kunde liegt", en: "client lying down", es: "cliente tumbado" },
+    imNabelOben: { de: "oben im Nabel", en: "top inside the navel", es: "arriba en el ombligo" },
+    gazeklemme: { de: "Gazeklemme", en: "gauze clamp", es: "pinza de gasa" },
+    vonObenNachUnten: { de: "von oben nach unten", en: "from the top down", es: "de arriba abajo" },
+    nabelrand: { de: "Nabelrand", en: "navel rim", es: "borde del ombligo" },
+    untenNabel: { de: "unten: Nabel", en: "bottom: navel", es: "abajo: ombligo" },
+    sterilesPflaster: { de: "steriles Pflaster", en: "sterile plaster", es: "apósito estéril" },
     tippTitel: { de: "Gut zu wissen", en: "Good to know", es: "Bueno saberlo" },
     tippZeile1: { de: "Es gibt auch spezielle Tragusklemmen", en: "There are also special tragus clamps", es: "También hay pinzas especiales para trago" },
     tippZeile2: { de: "mit Auffanghütchen.", en: "with a receiving cap.", es: "con capuchón receptor." },
@@ -1112,6 +1120,78 @@ window.KURS = window.KURS || { module: [] };
       svg: bildZunge(true, punkt(ZU[0], ZU[1]) + kanueleAuf(ZU, -72, .5, true) + hinweis(510, 120, ZU[0] + 4, ZU[1] - 6, "schraegNachOben", 220)) }
   ].concat(zungeBasis.slice(2));
 
+  // ---------- Bauchnabel ----------
+  var BN1 = [320, 158], BN2 = [320, 213];
+  function bauch(liegend) {
+    return '<g filter="url(#aWeich)" opacity=".4"><rect x="120" y="0" width="400" height="360" rx="120" fill="#EBC3AE"/></g>' +
+      '<g filter="url(#aSchatten)"><path d="M150 0 L490 0 C500 120 500 240 480 360 L160 360 C140 240 140 120 150 0 Z" fill="url(#aHaut)"/></g>' +
+      '<path d="M320 20 L320 340" stroke="' + F.hautRand + '" stroke-width="1.5" stroke-dasharray="6 7" opacity=".55"/>' +
+      '<ellipse cx="320" cy="232" rx="30" ry="24" fill="#E7B39B"/><ellipse cx="320" cy="236" rx="20" ry="16" fill="#9C5E4E"/>' +
+      '<path d="M296 222 C306 210 334 210 344 222" fill="none" stroke="' + F.hautRand + '" stroke-width="3"/>' +
+      '<text x="330" y="40" class="a-klein" fill="#9A8E7E">{koerpermitte}</text>' +
+      (liegend ? '<g transform="translate(540 300)"><rect x="-70" y="-14" width="140" height="28" rx="14" fill="#FFFFFF" stroke="' + F.gold + '"/><text x="0" y="5" text-anchor="middle" class="a-klein" fill="#5A4632">{imLiegen}</text></g>' : "");
+  }
+  function bildBauch(liegend, inhalt) { return '<svg viewBox="0 0 ' + W + " " + H + '" role="img">' + DEFS + buehne() + bauch(liegend) + etikett(560, "ansichtVorn", 150) + inhalt + "</svg>"; }
+  function gazeklemmeVorn(klasse) {
+    // Gazeklemme von vorn: längliches Fenster über beiden Punkten, Griff zur Seite
+    var x = BN1[0], y1 = BN1[1] - 14, y2 = BN2[1] + 14, m = (BN1[1] + BN2[1]) / 2;
+    return '<g' + (klasse ? ' class="' + klasse + '"' : "") + ' filter="url(#aSchatten)">' +
+      '<path d="M' + (x - 16) + " " + m + ' L190 ' + (m + 70) + '" stroke="#6F7984" stroke-width="10" stroke-linecap="round"/><path d="M' + (x - 16) + " " + m + ' L190 ' + (m + 70) + '" stroke="url(#aStahlV)" stroke-width="7" stroke-linecap="round"/>' +
+      '<rect x="' + (x - 16) + '" y="' + y1 + '" width="32" height="' + (y2 - y1) + '" rx="16" fill="none" stroke="#6F7984" stroke-width="7"/><rect x="' + (x - 16) + '" y="' + y1 + '" width="32" height="' + (y2 - y1) + '" rx="16" fill="none" stroke="url(#aStahl)" stroke-width="4.5"/></g>';
+  }
+  function massstab() {
+    return '<g stroke="' + F.gold + '" stroke-width="2"><path d="M360 ' + BN1[1] + ' L372 ' + BN1[1] + ' M366 ' + BN1[1] + ' L366 ' + BN2[1] + ' M360 ' + BN2[1] + ' L372 ' + BN2[1] + '"/></g>' +
+      '<text x="380" y="' + ((BN1[1] + BN2[1]) / 2 + 4) + '" class="a-klein" fill="#5A4632">1 cm</text>';
+  }
+  var nabelO = {
+    d: 60, unten: Y + 100, knorpel: false, gewebeWort: "nabelrand", links: "obenEinstich", rechts: "untenNabel",
+    werkzeug: "gaze", werkzeugWort: "gazeklemme", gauge: "kan16", schmuck: "barbell", schmuckWort: "banane", ueberVorn: 22, vorn: "",
+    texte: {
+      lage: { de: "", en: "", es: "" }, halt: { de: "", en: "", es: "" },
+      stich: { de: "Im Querschnitt: Mit der 16G-Kanüle von oben nach unten durch beide Markierungen stechen. Die Spitze kommt im Nabel heraus.",
+        en: "In cross-section: pierce from the top down through both marks with the 16G cannula. The tip comes out inside the navel.",
+        es: "En corte: perfora de arriba abajo por ambas marcas con la cánula 16G. La punta sale dentro del ombligo." },
+      abwurf: { de: "Gazeklemme abnehmen und die Stahlnadel nach oben herausziehen. Das Röhrchen bleibt im Stichkanal.",
+        en: "Take off the gauze clamp and pull the steel needle out at the top. The tube stays in the channel.",
+        es: "Quita la pinza de gasa y saca la aguja de acero por arriba. El tubo se queda en el canal." },
+      ansatz: { de: "Oben den grünen Ansatz mit der Schere abschneiden, sodass nur das Röhrchen bleibt.",
+        en: "At the top, cut off the green hub with scissors so only the tube is left.",
+        es: "Arriba, corta el cono verde con las tijeras para que solo quede el tubo." },
+      einsetzen: { de: "Die Banane nur 2–3 mm von unten, aus dem Nabel, in das Röhrchen stecken. Die untere Kugel ist schon drauf.",
+        en: "Insert the curved barbell only 2–3 mm into the tube from below, from the navel. The lower ball is already on.",
+        es: "Introduce la banana solo 2–3 mm en el tubo desde abajo, desde el ombligo. La bola de abajo ya está puesta." },
+      schieben: { de: "Die Banane durchschieben, nicht ziehen. Sie schiebt das Röhrchen oben hinaus. Den Kunden dabei ausatmen lassen.",
+        en: "Push the curved barbell through, do not pull. It pushes the tube out at the top. Have the client breathe out.",
+        es: "Empuja la banana, no tires. Saca el tubo por arriba. Pide al cliente que espire." },
+      kugel: { de: "Röhrchen abziehen. Die obere Kugel mit dem Kugelgreifer aufdrehen, den Stab dabei mit der Klemmzange kurz vor dem Gewinde halten.",
+        en: "Pull off the tube. Screw on the upper ball with the ball grabber, holding the bar with the clamp just before the thread.",
+        es: "Retira el tubo. Enrosca la bola de arriba con la pinza de bolas, sujetando la barra con la pinza justo antes de la rosca." },
+      fertig: { de: "Die Banane sitzt mit Überlänge für die Schwellung. Nochmals mit Kodan einsprühen.",
+        en: "The curved barbell sits with extra length for swelling. Spray with Kodan again.",
+        es: "La banana queda con longitud extra para la hinchazón. Vuelve a rociar con Kodan." }
+    }
+  };
+  var nabelBasis = piercingSchritte(nabelO);
+  var bauchnabel = [
+    { text: { de: "Im Stehen anzeichnen: einen Punkt oben im Nabel und einen zweiten Punkt 1 cm darüber, gerade auf der Körpermitte.",
+        en: "Mark while the client is standing: one dot at the top inside the navel and a second dot 1 cm above it, straight on the body's midline.",
+        es: "Marca con el cliente de pie: un punto arriba dentro del ombligo y otro 1 cm por encima, recto sobre la línea media del cuerpo." },
+      svg: bildBauch(false, '<g class="a-erscheinen">' + punkt(BN1[0], BN1[1]) + punkt(BN2[0], BN2[1]) + "</g>" + massstab() + hinweis(150, 110, BN1[0] - 4, BN1[1], "obenEinstich", 170) + hinweis(150, 300, BN2[0] - 4, BN2[1] + 2, "imNabelOben", 170)) },
+    { text: { de: "Dann legt sich der Kunde hin. Die Gazeklemme über beide Punkte anlegen. Statt der Gazeklemme geht auch ein Snaptile, das ist ein Einmalwerkzeug.",
+        en: "Then the client lies down. Apply the gauze clamp over both dots. A Snaptile works too, it is single-use.",
+        es: "Después el cliente se tumba. Coloca la pinza de gasa sobre los dos puntos. También sirve un Snaptile, que es de un solo uso." },
+      svg: bildBauch(true, punkt(BN1[0], BN1[1]) + punkt(BN2[0], BN2[1]) + bewegt(-60, 0, gazeklemmeVorn()) + hinweis(150, 300, 220, 250, "gazeklemme", 170)) },
+    { text: { de: "Langsam und kontrolliert von oben nach unten stechen, durch beide Punkte, bis die Spitze im Nabel herauskommt.",
+        en: "Pierce slowly and under control from the top down, through both dots, until the tip comes out inside the navel.",
+        es: "Perfora despacio y con control de arriba abajo, por ambos puntos, hasta que la punta salga dentro del ombligo." },
+      svg: bildBauch(true, gazeklemmeVorn() + kanueleAuf(BN2, 90, .62, true) + hinweis(500, 150, BN1[0] + 6, BN1[1] + 10, "vonObenNachUnten", 200)) }
+  ].concat(nabelBasis.slice(2)).concat([
+    { text: { de: "Fertig: Mit einem sterilen Pflaster abkleben und dem Kunden Pflaster für die nächsten 3 Tage empfehlen.",
+        en: "Done: cover it with a sterile plaster and recommend plasters to the client for the next 3 days.",
+        es: "Listo: cubre con un apósito estéril y recomienda al cliente apósitos durante los próximos 3 días." },
+      svg: bildBauch(false, kugelVorn(BN1[0], BN1[1] - 6, 7) + kugelVorn(BN2[0], BN2[1] + 12, 10) + '<g class="a-erscheinen"><rect x="270" y="130" width="100" height="130" rx="14" fill="#F6EAD8" fill-opacity=".85" stroke="#D9C6A8" stroke-width="2"/><rect x="290" y="160" width="60" height="70" rx="6" fill="#FFFFFF" fill-opacity=".8"/></g>' + hinweis(150, 300, 272, 220, "sterilesPflaster", 190) + haken()) }
+  ]);
+
   // Tragus: Snaptile, Tragus leicht vom Gehörgang wegbiegen, langsam und kontrolliert stechen
   var TP = [281, 232];
   function gehoergangVorn() { return '<ellipse cx="296" cy="226" rx="9" ry="13" fill="#B97F69" opacity=".75"/>'; }
@@ -1281,6 +1361,14 @@ window.KURS = window.KURS || { module: [] };
         en: "Schematic illustration, not to scale. The real clip from the studio is coming soon.",
         es: "Ilustración esquemática, no a escala. Pronto estará el vídeo real del estudio." },
       schritte: zunge,
+      woerter: T
+    },
+    "labor-bauchnabel": {
+      titel: { de: "Animation: Bauchnabel mit Banane", en: "Animation: navel with a curved barbell", es: "Animación: ombligo con banana" },
+      hinweis: { de: "Schematische Darstellung, nicht maßstabsgetreu. Den echten Clip aus dem Studio gibt es bald.",
+        en: "Schematic illustration, not to scale. The real clip from the studio is coming soon.",
+        es: "Ilustración esquemática, no a escala. Pronto estará el vídeo real del estudio." },
+      schritte: bauchnabel,
       woerter: T
     },
     "labor-industrial": {

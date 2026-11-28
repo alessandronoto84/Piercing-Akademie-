@@ -164,7 +164,8 @@ window.KURS = window.KURS || { module: [] };
         titel: "Ombligo",
         seite: "S. 94",
         inhalt: [
-          db("Ombligo", "En vertical por encima o por debajo del ombligo, canal de aproximadamente 1 cm de longitud. Perforar con el cliente tumbado: facilita el trabajo y previene problemas circulatorios. Comprobar antes la marca con el cliente de pie, porque el ombligo se desplaza al tumbarse (nota de la Academia). Cubrir con un apósito estéril y recomendar apósitos durante los 3 días siguientes.", "barbell curvo (banana), BCR", "16G", "Snaptile, a mano alzada", "", "S. 94")
+          db("Ombligo", "En vertical por encima o por debajo del ombligo, canal de aproximadamente 1 cm de longitud. Perforar con el cliente tumbado: facilita el trabajo y previene problemas circulatorios. Comprobar antes la marca con el cliente de pie, porque el ombligo se desplaza al tumbarse (nota de la Academia). Cubrir con un apósito estéril y recomendar apósitos durante los 3 días siguientes.", "barbell curvo (banana), BCR", "16G", "Snaptile, a mano alzada", "", "S. 94"),
+          { typ: "animation", id: "labor-bauchnabel" }
         ],
         fragen: [
           ["¿Cómo se perfora un piercing de ombligo?", ["Tumbado, para prevenir problemas circulatorios", "De pie, para que el ombligo quede bien", "Sentado", "De pie y luego se revisa tumbado"], "También facilita el trabajo.", "S. 94"],

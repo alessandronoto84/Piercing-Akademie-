@@ -164,7 +164,8 @@ window.KURS = window.KURS || { module: [] };
         titel: "Navel",
         seite: "S. 94",
         inhalt: [
-          db("Navel", "Vertically above or below the navel, piercing channel about 1 cm long. Pierce with the client lying down: this makes the work easier and prevents circulatory problems. Check the marking beforehand while the client is standing, because the navel shifts when lying down (Academy note). Cover with a sterile bandage and recommend bandages for the next 3 days.", "curved barbell (banana), BCR", "16G", "Snaptile, freehand", "", "S. 94")
+          db("Navel", "Vertically above or below the navel, piercing channel about 1 cm long. Pierce with the client lying down: this makes the work easier and prevents circulatory problems. Check the marking beforehand while the client is standing, because the navel shifts when lying down (Academy note). Cover with a sterile bandage and recommend bandages for the next 3 days.", "curved barbell (banana), BCR", "16G", "Snaptile, freehand", "", "S. 94"),
+          { typ: "animation", id: "labor-bauchnabel" }
         ],
         fragen: [
           ["How is a navel piercing done?", ["Lying down, to prevent circulatory problems", "Standing, so the navel is positioned correctly", "Sitting", "Standing, then checked lying down"], "It also makes the work easier.", "S. 94"],

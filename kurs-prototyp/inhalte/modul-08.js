@@ -164,7 +164,8 @@ window.KURS = window.KURS || { module: [] };
         titel: "Bauchnabel",
         seite: "S. 94",
         inhalt: [
-          db("Bauchnabel", "Vertikal oberhalb oder unterhalb des Nabels, etwa 1 cm Stichkanallänge. Im Liegen stechen: Das erleichtert die Arbeit und beugt Kreislaufproblemen vor. Die Markierung vorher im Stehen kontrollieren, weil sich der Nabel im Liegen verschiebt (Ergänzung der Akademie). Mit sterilem Pflaster abkleben und Pflaster für die nächsten 3 Tage empfehlen.", "Banane, BCR", "16G", "Snaptile, Freihand", "", "S. 94")
+          db("Bauchnabel", "Vertikal oberhalb oder unterhalb des Nabels, etwa 1 cm Stichkanallänge. Im Liegen stechen: Das erleichtert die Arbeit und beugt Kreislaufproblemen vor. Die Markierung vorher im Stehen kontrollieren, weil sich der Nabel im Liegen verschiebt (Ergänzung der Akademie). Mit sterilem Pflaster abkleben und Pflaster für die nächsten 3 Tage empfehlen.", "Banane, BCR", "16G", "Snaptile, Freihand", "", "S. 94"),
+          { typ: "animation", id: "labor-bauchnabel" }
         ],
         fragen: [
           ["Wie wird ein Bauchnabelpiercing gestochen?", ["Im Liegen, um Kreislaufproblemen vorzubeugen", "Im Stehen, damit der Nabel richtig sitzt", "Im Sitzen", "Im Stehen, danach im Liegen kontrollieren"], "Erleichtert auch die Arbeit.", "S. 94"],
