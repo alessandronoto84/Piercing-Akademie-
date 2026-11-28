@@ -1,3 +1,6 @@
 # Kursbuch-Seiten nur lokal zum Testen; das Buch kommt nie ins Repository (Server: privater R2-Speicher)
 kurs-prototyp/buch/
 __pycache__/
+
+# Stimmaufnahmen des Nutzers (privat, nie ins Git)
+stimme-privat/
