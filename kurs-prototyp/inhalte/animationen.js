@@ -273,6 +273,13 @@ window.KURS = window.KURS || { module: [] };
     nabelrand: { de: "Nabelrand", en: "navel rim", es: "borde del ombligo" },
     untenNabel: { de: "unten: Nabel", en: "bottom: navel", es: "abajo: ombligo" },
     sterilesPflaster: { de: "steriles Pflaster", en: "sterile plaster", es: "apósito estéril" },
+    brustwarze: { de: "Brustwarze", en: "nipple", es: "pezón" },
+    oberkoerperFrei: { de: "Oberkörper ganz frei", en: "upper body fully bare", es: "torso descubierto" },
+    links: { de: "links", en: "left", es: "izquierda" },
+    rechts: { de: "rechts", en: "right", es: "derecha" },
+    barbell: { de: "Barbell", en: "barbell", es: "barbell" },
+    alkoholtupfer: { de: "Alkoholtupfer", en: "alcohol swab", es: "toallita de alcohol" },
+    reinigungAbheilung: { de: "Reinigung, Pflege, Abheilung", en: "cleaning, care, healing", es: "limpieza, cuidados, cicatrización" },
     tippTitel: { de: "Gut zu wissen", en: "Good to know", es: "Bueno saberlo" },
     tippZeile1: { de: "Es gibt auch spezielle Tragusklemmen", en: "There are also special tragus clamps", es: "También hay pinzas especiales para trago" },
     tippZeile2: { de: "mit Auffanghütchen.", en: "with a receiving cap.", es: "con capuchón receptor." },
@@ -1192,6 +1199,93 @@ window.KURS = window.KURS || { module: [] };
       svg: bildBauch(false, kugelVorn(BN1[0], BN1[1] - 6, 7) + kugelVorn(BN2[0], BN2[1] + 12, 10) + '<g class="a-erscheinen"><rect x="270" y="130" width="100" height="130" rx="14" fill="#F6EAD8" fill-opacity=".85" stroke="#D9C6A8" stroke-width="2"/><rect x="290" y="160" width="60" height="70" rx="6" fill="#FFFFFF" fill-opacity=".8"/></g>' + hinweis(150, 300, 272, 220, "sterilesPflaster", 190) + haken()) }
   ]);
 
+  // ---------- Brustwarze ----------
+  var BW1 = [296, 190], BW2 = [344, 190];
+  function brust() {
+    return '<g filter="url(#aWeich)" opacity=".4"><rect x="100" y="0" width="440" height="360" rx="120" fill="#EBC3AE"/></g>' +
+      '<g filter="url(#aSchatten)"><path d="M120 0 L520 0 C540 120 540 240 520 360 L120 360 C100 240 100 120 120 0 Z" fill="url(#aHaut)"/></g>' +
+      '<path d="M170 300 C230 340 410 340 470 300" fill="none" stroke="' + F.hautRand + '" stroke-width="2" opacity=".5"/>' +
+      '<circle cx="320" cy="190" r="54" fill="#D9A08E" opacity=".85"/><circle cx="320" cy="190" r="19" fill="#C27E6E" stroke="#A9675A" stroke-width="1.5"/><circle cx="314" cy="184" r="5" fill="#FFFFFF" opacity=".35"/>';
+  }
+  function bildBrust(inhalt) { return '<svg viewBox="0 0 ' + W + " " + H + '" role="img">' + DEFS + buehne() + brust() + etikett(560, "ansichtVorn", 150) + inhalt + "</svg>"; }
+  function klemmeFenster(p1, p2, ax, ay, klasse) {
+    // Klemme mit länglichem Fenster über zwei Punkten, Griff in Richtung (ax, ay)
+    var x1 = Math.min(p1[0], p2[0]) - 16, y1 = Math.min(p1[1], p2[1]) - 16, w = Math.abs(p2[0] - p1[0]) + 32, h = Math.abs(p2[1] - p1[1]) + 32;
+    var mx = (p1[0] + p2[0]) / 2, my = (p1[1] + p2[1]) / 2, sx = mx, sy = y1 + h;
+    return '<g' + (klasse ? ' class="' + klasse + '"' : "") + ' filter="url(#aSchatten)">' +
+      '<path d="M' + sx + " " + sy + " L" + (sx + ax) + " " + (sy + ay) + '" stroke="#6F7984" stroke-width="10" stroke-linecap="round"/><path d="M' + sx + " " + sy + " L" + (sx + ax) + " " + (sy + ay) + '" stroke="url(#aStahlV)" stroke-width="7" stroke-linecap="round"/>' +
+      '<rect x="' + x1 + '" y="' + y1 + '" width="' + w + '" height="' + h + '" rx="16" fill="none" stroke="#6F7984" stroke-width="7"/><rect x="' + x1 + '" y="' + y1 + '" width="' + w + '" height="' + h + '" rx="16" fill="none" stroke="url(#aStahl)" stroke-width="4.5"/></g>';
+  }
+  var brustO = {
+    d: 44, unten: Y + 70, knorpel: false, gewebeWort: "brustwarze", links: "einstichseite", rechts: "austrittsseite",
+    werkzeug: "gaze", werkzeugWort: "gazeklemme", gauge: "kan16", schmuck: "barbell", schmuckWort: "barbell", ueberVorn: 22, vorn: "",
+    texte: {
+      lage: { de: "", en: "", es: "" }, halt: { de: "", en: "", es: "" },
+      stich: { de: "Im Querschnitt: Mit der 16G-Kanüle waagerecht durch beide Markierungen stechen, an der Basis der Brustwarze.",
+        en: "In cross-section: pierce horizontally through both marks at the base of the nipple with the 16G cannula.",
+        es: "En corte: perfora en horizontal por ambas marcas, en la base del pezón, con la cánula 16G." },
+      abwurf: { de: "Klemme abnehmen und die Stahlnadel zur Einstichseite herausziehen. Das Röhrchen bleibt im Stichkanal.",
+        en: "Take off the clamp and pull the steel needle out on the entry side. The tube stays in the channel.",
+        es: "Quita la pinza y saca la aguja de acero por el lado de entrada. El tubo se queda en el canal." },
+      ansatz: { de: "Auf der Einstichseite den grünen Ansatz mit der Schere abschneiden, sodass nur das Röhrchen bleibt.",
+        en: "On the entry side, cut off the green hub with scissors so only the tube is left.",
+        es: "En el lado de entrada, corta el cono verde con las tijeras para que solo quede el tubo." },
+      einsetzen: { de: "Den Barbell nur 2–3 mm von der Austrittsseite in das Röhrchen stecken. Auf dieser Seite ist die Kugel schon drauf.",
+        en: "Insert the barbell only 2–3 mm into the tube from the exit side. The ball on that side is already on.",
+        es: "Introduce el barbell solo 2–3 mm en el tubo por el lado de salida. La bola de ese lado ya está puesta." },
+      schieben: { de: "Den Barbell nachschieben, nicht ziehen. Er schiebt das Röhrchen auf der Einstichseite hinaus. Den Kunden dabei ausatmen lassen.",
+        en: "Push the barbell after it, do not pull. It pushes the tube out on the entry side. Have the client breathe out.",
+        es: "Empuja el barbell detrás, no tires. Saca el tubo por el lado de entrada. Pide al cliente que espire." },
+      kugel: { de: "Röhrchen abziehen. Die zweite Kugel mit dem Kugelgreifer aufdrehen, den Stab dabei mit der Klemmzange kurz vor dem Gewinde halten.",
+        en: "Pull off the tube. Screw on the second ball with the ball grabber, holding the bar with the clamp just before the thread.",
+        es: "Retira el tubo. Enrosca la segunda bola con la pinza de bolas, sujetando la barra con la pinza justo antes de la rosca." },
+      fertig: { de: "Der Barbell sitzt mit Überlänge für die Schwellung. Nochmals mit Kodan einsprühen.",
+        en: "The barbell sits with extra length for swelling. Spray with Kodan again.",
+        es: "El barbell queda con longitud extra para la hinchazón. Vuelve a rociar con Kodan." }
+    }
+  };
+  var brustBasis = piercingSchritte(brustO);
+  var brustwarze = [
+    { text: { de: "Der Kunde oder die Kundin macht den Oberkörper komplett frei, damit die Brust genau so steht, wie sie natürlich steht.",
+        en: "The client takes off everything on the upper body so the chest sits exactly as it naturally does.",
+        es: "El cliente se descubre por completo el torso para que el pecho quede tal como está de forma natural." },
+      svg: bildBrust(hinweis(150, 300, 260, 230, "oberkoerperFrei", 230)) },
+    { text: { de: "Einen Punkt links und einen rechts neben der Brustwarze anzeichnen, gerade auf einer Linie.",
+        en: "Mark one dot to the left and one to the right of the nipple, straight on one line.",
+        es: "Marca un punto a la izquierda y otro a la derecha del pezón, rectos en una línea." },
+      svg: bildBrust('<g class="a-erscheinen">' + punkt(BW1[0], BW1[1]) + punkt(BW2[0], BW2[1]) + "</g>" + hinweis(150, 110, BW1[0] - 2, BW1[1] - 4, "links", 120) + hinweis(500, 110, BW2[0] + 2, BW2[1] - 4, "rechts", 120)) },
+    { text: { de: "Die Gazeklemme über beide Punkte anlegen. Statt der Gazeklemme geht auch ein Snaptile, das ist ein Einmalwerkzeug.",
+        en: "Apply the gauze clamp over both dots. A Snaptile works too, it is single-use.",
+        es: "Coloca la pinza de gasa sobre los dos puntos. También sirve un Snaptile, que es de un solo uso." },
+      svg: bildBrust(punkt(BW1[0], BW1[1]) + punkt(BW2[0], BW2[1]) + bewegt(-60, 0, klemmeFenster(BW1, BW2, -50, 110)) + hinweis(150, 300, 262, 300, "snaptileOderGaze", 230)) },
+    { text: { de: "Mit der 16G-Kanüle langsam und kontrolliert waagerecht durch beide Punkte stechen.",
+        en: "Pierce slowly and under control horizontally through both dots with the 16G cannula.",
+        es: "Perfora despacio y con control en horizontal por ambos puntos con la cánula 16G." },
+      svg: bildBrust(klemmeFenster(BW1, BW2, -50, 110) + kanueleAuf([BW2[0] + 8, BW2[1]], 0, .7, true) + hinweis(500, 300, BW2[0] - 4, BW2[1] + 6, "kan16", 140)) }
+  ].concat(brustBasis.slice(2)).concat([
+    { text: { de: "Mit einem sterilen Pflaster abkleben und dem Kunden Pflaster für die nächsten 3 Tage empfehlen.",
+        en: "Cover it with a sterile plaster and recommend plasters to the client for the next 3 days.",
+        es: "Cubre con un apósito estéril y recomienda al cliente apósitos durante los próximos 3 días." },
+      svg: bildBrust(kugelVorn(BW1[0] - 10, BW1[1], 8) + kugelVorn(BW2[0] + 10, BW2[1], 8) + '<g class="a-erscheinen"><rect x="250" y="130" width="140" height="120" rx="14" fill="#F6EAD8" fill-opacity=".85" stroke="#D9C6A8" stroke-width="2"/><rect x="280" y="160" width="80" height="60" rx="6" fill="#FFFFFF" fill-opacity=".8"/></g>' + hinweis(150, 300, 252, 230, "sterilesPflaster", 190)) }
+  ]);
+
+  // ---------- Für jedes Piercing: vorher mit Alkoholtupfer reinigen, zum Schluss den Kunden aufklären ----------
+  function tupfer(x, y) {
+    return '<g class="a-wischen" filter="url(#aSchatten)"><rect x="' + (x - 22) + '" y="' + (y - 18) + '" width="44" height="36" rx="6" fill="#FFFFFF" stroke="#D8D2C6"/>' +
+      '<path d="M' + (x - 14) + " " + (y - 6) + " L" + (x + 14) + " " + (y - 6) + " M" + (x - 14) + " " + (y + 4) + " L" + (x + 14) + " " + (y + 4) + '" stroke="#EAE4D8" stroke-width="2"/></g>';
+  }
+  var TUPFER_TEXT = { de: "Zuerst die Stelle mit einem Alkoholtupfer reinigen. Erst danach wird angezeichnet und gestochen.",
+    en: "First clean the spot with an alcohol swab. Only then mark and pierce.",
+    es: "Primero limpia la zona con una toallita de alcohol. Solo después se marca y se perfora." };
+  var AUFKLAER_TEXT = { de: "Zum Schluss den Kunden aufklären: Reinigung, Pflege und Abheilung. Die Pflegehinweise mündlich erklären und schriftlich mitgeben.",
+    en: "Finally, inform the client: cleaning, aftercare and healing. Explain the aftercare instructions verbally and hand them over in writing.",
+    es: "Por último, informa al cliente: limpieza, cuidados y cicatrización. Explica los cuidados de palabra y entrégalos por escrito." };
+  function rahmen(liste, tupferSvg) {
+    var anfang = tupferSvg ? [{ text: TUPFER_TEXT, svg: tupferSvg }] : [];
+    return anfang.concat(liste, [{ text: AUFKLAER_TEXT, svg: szene(blatt(330, 80, "pflegehinweise", false) + blase(190, 120, "reinigungAbheilung", 260) + '<g transform="translate(60 0)">' + haken() + "</g>") }]);
+  }
+  var TH = function (x, y) { return hinweis(150, 300, x - 10, y + 10, "alkoholtupfer", 170); };
+
   // Tragus: Snaptile, Tragus leicht vom Gehörgang wegbiegen, langsam und kontrolliert stechen
   var TP = [281, 232];
   function gehoergangVorn() { return '<ellipse cx="296" cy="226" rx="9" ry="13" fill="#B97F69" opacity=".75"/>'; }
@@ -1264,7 +1358,7 @@ window.KURS = window.KURS || { module: [] };
   ].concat(tragusBasis.slice(3));
 
 
-  var UEBUNG = { nostril: "Silikonnase", septum: "Silikonnase", labret: "Silikonmund", zunge: "Silikonzunge", bauchnabel: "Silikon-Bauchnabel", brustwarze: "Silikon-Brust", intim: "Übungsmodell" };
+  var UEBUNG = { brustwarze: "Silikon-Brust", nostril: "Silikonnase", septum: "Silikonnase", labret: "Silikonmund", zunge: "Silikonzunge", bauchnabel: "Silikon-Bauchnabel", brustwarze: "Silikon-Brust", intim: "Übungsmodell" };
   KURS.animationen = {
     "labor-lobe": {
       titel: { de: "Animation: Lobe stechen und Labret einsetzen", en: "Animation: piercing the lobe and inserting a labret", es: "Animación: perforar el lóbulo y colocar un labret" },
@@ -1320,7 +1414,6 @@ window.KURS = window.KURS || { module: [] };
         en: "Schematic illustration, not to scale. The real clip from the studio is coming soon.",
         es: "Ilustración esquemática, no a escala. Pronto estará el vídeo real del estudio." },
       schritte: tragus,
-      ton: "inhalte/ton/tragus/",
       woerter: T
     },
     "labor-rook": {
@@ -1371,6 +1464,14 @@ window.KURS = window.KURS || { module: [] };
       schritte: bauchnabel,
       woerter: T
     },
+    "labor-brustwarze": {
+      titel: { de: "Animation: Brustwarze mit Barbell", en: "Animation: nipple with a barbell", es: "Animación: pezón con barbell" },
+      hinweis: { de: "Schematische Darstellung, nicht maßstabsgetreu. Den echten Clip aus dem Studio gibt es bald.",
+        en: "Schematic illustration, not to scale. The real clip from the studio is coming soon.",
+        es: "Ilustración esquemática, no a escala. Pronto estará el vídeo real del estudio." },
+      schritte: brustwarze,
+      woerter: T
+    },
     "labor-industrial": {
       titel: { de: "Animation: Industrial – zwei Stichkanäle auf einer Linie", en: "Animation: industrial – two channels on one line", es: "Animación: industrial – dos canales en una línea" },
       hinweis: { de: "Schematische Darstellung, nicht maßstabsgetreu. Den echten Clip aus dem Studio gibt es bald.",
@@ -1380,5 +1481,25 @@ window.KURS = window.KURS || { module: [] };
       woerter: T
     }
   };
+  var RAHMEN = {
+    "labor-lobe": bildVorn(tupfer(330, 304) + TH(330, 304)),
+    "labor-upper-lobe": bildVorn(tupfer(366, 290) + TH(366, 290)),
+    "labor-helix": bildVorn(tupfer(420, 120) + TH(420, 120)),
+    "labor-industrial": bildVorn(tupfer(360, 96) + TH(360, 96)),
+    "labor-tragus": bildVorn(tupfer(TP[0], TP[1]) + TH(TP[0], TP[1])),
+    "labor-rook": bildVorn(tupfer(RK1[0], RK1[1] + 12) + TH(RK1[0], RK1[1] + 12)),
+    "labor-nostril": bildNase(false, tupfer(NP[0], NP[1]) + TH(NP[0], NP[1])),
+    "labor-septum": bildNase(false, tupfer(SP[0], SP[1]) + TH(SP[0], SP[1])),
+    "labor-labret": bildMund(tupfer(LP[0], LP[1]) + TH(LP[0], LP[1])),
+    "labor-zunge": null,
+    "labor-bauchnabel": bildBauch(false, tupfer(BN1[0], (BN1[1] + BN2[1]) / 2) + TH(BN1[0], BN1[1] + 20)),
+    "labor-brustwarze": bildBrust(tupfer(320, 190) + TH(320, 190))
+  };
+  Object.keys(RAHMEN).forEach(function (k) {
+    var A = KURS.animationen[k], liste = A.schritte;
+    // Brustwarze: Tupfer nach dem Freimachen des Oberkörpers
+    if (k === "labor-brustwarze") A.schritte = rahmen([liste[0]].concat([{ text: TUPFER_TEXT, svg: RAHMEN[k] }], liste.slice(1)), null);
+    else A.schritte = rahmen(liste, RAHMEN[k]);
+  });
   Object.keys(KURS.animationen).forEach(function (k) { KURS.animationen[k].uebung = UEBUNG[k.replace("labor-", "")] || "Silikonohr"; });
 })();

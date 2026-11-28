@@ -177,7 +177,8 @@ window.KURS = window.KURS || { module: [] };
         titel: "Brustwarze",
         seite: "S. 95",
         inhalt: [
-          db("Brustwarze", "Abheilzeit 3 bis 12 Monate. Durch die Brustwarze bzw. den Warzenhof, meist horizontal oder vertikal, bei Frauen und Männern. Mehrere Piercings übereinander sind möglich. Zum Anzeichnen den Oberkörper komplett frei machen; mit sterilem Pflaster abkleben und Pflaster für 3 Tage empfehlen.", "Barbell, BCR", "16G", "Snaptile, Gazeklemme", "", "S. 95")
+          db("Brustwarze", "Abheilzeit 3 bis 12 Monate. Durch die Brustwarze bzw. den Warzenhof, meist horizontal oder vertikal, bei Frauen und Männern. Mehrere Piercings übereinander sind möglich. Zum Anzeichnen den Oberkörper komplett frei machen; mit sterilem Pflaster abkleben und Pflaster für 3 Tage empfehlen.", "Barbell, BCR", "16G", "Snaptile, Gazeklemme", "", "S. 95"),
+          { typ: "animation", id: "labor-brustwarze" }
         ],
         fragen: [
           ["Was muss zum Anzeichnen eines Brustwarzenpiercings geschehen?", ["Den Oberkörper komplett frei machen", "Nur die eine Seite frei machen", "Den Kunden hinlegen", "Die Brustwarze vorher kühlen"], "Datenblatt Brustwarze.", "S. 95"],

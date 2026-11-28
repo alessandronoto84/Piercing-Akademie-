@@ -492,3 +492,4 @@ section.k-kopf,section.k-lektion,.k-layout section{padding-block:0}
 @keyframes aZeichnen{to{stroke-dashoffset:0}}
 .a-schieben{animation:aSchieben 1.8s .2s cubic-bezier(.3,.7,.2,1) both}@keyframes aSchieben{from{transform:translate(var(--a-x),var(--a-y))}to{transform:none}}
 .a-weg-spaet{animation:aWeg 1s 2.1s ease-in forwards}@media (prefers-reduced-motion:reduce){.a-weg-spaet{animation:none;opacity:0}}
+.a-wischen{animation:aWischen .9s ease-in-out 4 alternate}@keyframes aWischen{from{transform:translateX(-14px)}to{transform:translateX(14px)}}@media (prefers-reduced-motion:reduce){.a-wischen{animation:none}}

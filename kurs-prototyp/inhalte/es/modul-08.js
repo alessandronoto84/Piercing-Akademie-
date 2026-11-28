@@ -177,7 +177,8 @@ window.KURS = window.KURS || { module: [] };
         titel: "Pezón",
         seite: "S. 95",
         inhalt: [
-          db("Pezón", "Tiempo de cicatrización de 3 a 12 meses. A través del pezón o de la areola, normalmente en horizontal o en vertical, en mujeres y hombres. Se pueden hacer varios piercings uno encima de otro. Para marcar, el torso debe estar completamente descubierto; cubrir con un apósito estéril y recomendar apósitos durante 3 días.", "barbell, BCR", "16G", "Snaptile, pinza de gasa", "", "S. 95")
+          db("Pezón", "Tiempo de cicatrización de 3 a 12 meses. A través del pezón o de la areola, normalmente en horizontal o en vertical, en mujeres y hombres. Se pueden hacer varios piercings uno encima de otro. Para marcar, el torso debe estar completamente descubierto; cubrir con un apósito estéril y recomendar apósitos durante 3 días.", "barbell, BCR", "16G", "Snaptile, pinza de gasa", "", "S. 95"),
+          { typ: "animation", id: "labor-brustwarze" }
         ],
         fragen: [
           ["¿Qué hay que hacer para marcar un piercing de pezón?", ["Descubrir el torso por completo", "Descubrir solo un lado", "Tumbar al cliente", "Enfriar antes el pezón"], "Ficha técnica del pezón.", "S. 95"],
