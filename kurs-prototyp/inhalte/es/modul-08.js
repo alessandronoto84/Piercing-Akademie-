@@ -138,7 +138,8 @@ window.KURS = window.KURS || { module: [] };
         seite: "S. 87, 90",
         inhalt: [
           db("Frenillo labial (Smiley)", "A través del frenillo que une el centro del labio superior con la encía; solo se ve al sonreír.", "herradura (circular barbell), BCR", "18G", "pinza para septum, a mano alzada", "", "S. 87"),
-          db("Lengua", "En vertical en el centro de la lengua. No lesionar el frenillo lingual, perforar de abajo hacia arriba, enfriar de inmediato con cubitos de hielo (recomendar cubitos de manzanilla), no usar PTFE, advertir de posibles daños dentales.", "barbell de 20 mm (más corto tras 10 días si es necesario)", "16G", "Snaptile, pinza de gasa, pinza para lengua", "Solo el piercer lo acorta, en condiciones estériles y con material de joya inicial (ver módulo 10).", "S. 90")
+          db("Lengua", "En vertical en el centro de la lengua. No lesionar el frenillo lingual, perforar de abajo hacia arriba, enfriar de inmediato con cubitos de hielo (recomendar cubitos de manzanilla), no usar PTFE, advertir de posibles daños dentales.", "barbell de 20 mm (más corto tras 10 días si es necesario)", "16G", "Snaptile, pinza de gasa, pinza para lengua", "Solo el piercer lo acorta, en condiciones estériles y con material de joya inicial (ver módulo 10).", "S. 90"),
+          { typ: "animation", id: "labor-zunge" }
         ],
         fragen: [
           ["¿Por qué el piercing del frenillo labial se llama también Smiley?", ["Porque solo se ve al sonreír", "Porque forma una sonrisa", "Porque pasa por las comisuras", "Porque es un labret con bola sonriente"], "A través del frenillo.", "S. 87"],

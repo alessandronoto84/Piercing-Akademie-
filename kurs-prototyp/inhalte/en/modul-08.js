@@ -138,7 +138,8 @@ window.KURS = window.KURS || { module: [] };
         seite: "S. 87, 90",
         inhalt: [
           db("Lip frenulum (Smiley)", "Through the frenulum that connects the middle of the upper lip to the gum; only visible when smiling.", "horseshoe (circular barbell), BCR", "18G", "septum forceps, freehand", "", "S. 87"),
-          db("Tongue", "Vertically in the middle of the tongue. Do not injure the tongue frenulum, pierce from below upwards, cool with ice cubes immediately (recommend ice cubes made from chamomile tea), do not use PTFE, point out possible dental damage.", "20 mm barbell (shorter after 10 days if needed)", "16G", "Snaptile, gauze clamp, tongue forceps", "Only the piercer shortens it, under sterile conditions and with initial-jewelry material (see module 10).", "S. 90")
+          db("Tongue", "Vertically in the middle of the tongue. Do not injure the tongue frenulum, pierce from below upwards, cool with ice cubes immediately (recommend ice cubes made from chamomile tea), do not use PTFE, point out possible dental damage.", "20 mm barbell (shorter after 10 days if needed)", "16G", "Snaptile, gauze clamp, tongue forceps", "Only the piercer shortens it, under sterile conditions and with initial-jewelry material (see module 10).", "S. 90"),
+          { typ: "animation", id: "labor-zunge" }
         ],
         fragen: [
           ["Why is the lip frenulum piercing also called Smiley?", ["Because it is only visible when smiling", "Because it forms a smile", "Because it goes through the corners of the mouth", "Because it is a labret with a smiley ball"], "Through the frenulum.", "S. 87"],

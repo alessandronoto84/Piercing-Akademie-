@@ -138,7 +138,8 @@ window.KURS = window.KURS || { module: [] };
         seite: "S. 87, 90",
         inhalt: [
           db("Lippenbändchen (Smiley)", "Durch das Frenulum, das die Oberlippe in der Mitte mit dem Zahnfleisch verbindet; nur beim Lächeln sichtbar.", "Hufeisen, BCR", "18G", "Septum-Zange, Freihand", "", "S. 87"),
-          db("Zunge", "Vertikal in der Mitte der Zunge. Das Zungenbändchen nicht verletzen, von unten nach oben stechen, sofort mit Eiswürfel kühlen (Eiswürfel aus Kamillentee empfehlen), kein PTFE verwenden, auf mögliche Zahnschäden hinweisen.", "20 mm Barbell (nach 10 Tagen ggf. kürzer)", "16G", "Snaptile, Gazeklemme, Zungenklemme", "Kürzen nur durch den Piercer, steril und mit Ersteinsatz-Material (siehe Modul 10).", "S. 90")
+          db("Zunge", "Vertikal in der Mitte der Zunge. Das Zungenbändchen nicht verletzen, von unten nach oben stechen, sofort mit Eiswürfel kühlen (Eiswürfel aus Kamillentee empfehlen), kein PTFE verwenden, auf mögliche Zahnschäden hinweisen.", "20 mm Barbell (nach 10 Tagen ggf. kürzer)", "16G", "Snaptile, Gazeklemme, Zungenklemme", "Kürzen nur durch den Piercer, steril und mit Ersteinsatz-Material (siehe Modul 10).", "S. 90"),
+          { typ: "animation", id: "labor-zunge" }
         ],
         fragen: [
           ["Warum heißt das Lippenbändchen-Piercing auch Smiley?", ["Weil es nur beim Lächeln sichtbar ist", "Weil es ein Lächeln formt", "Weil es durch die Mundwinkel geht", "Weil es ein Labret mit Smiley-Kugel ist"], "Durch das Frenulum.", "S. 87"],

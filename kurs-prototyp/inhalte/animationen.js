@@ -253,6 +253,18 @@ window.KURS = window.KURS || { module: [] };
     zahnfleisch: { de: "Zahnfleisch", en: "gums", es: "encía" },
     abstandLippenrot: { de: "mehr als 3 mm zum Lippenrot", en: "more than 3 mm from the lip red", es: "a más de 3 mm del rojo del labio" },
     vonAussenInDenMund: { de: "von außen in den Mund", en: "from outside into the mouth", es: "desde fuera hacia la boca" },
+    chlorhexamed: { de: "Chlorhexamed", en: "Chlorhexamed", es: "Chlorhexamed" },
+    papiertuch: { de: "Papiertuch", en: "paper towel", es: "papel" },
+    punktMitte: { de: "Punkt mittig", en: "dot in the middle", es: "punto en el centro" },
+    unterseite: { de: "Unterseite", en: "underside", es: "parte inferior" },
+    nebenBaendchen: { de: "knapp neben dem Bändchen", en: "just beside the frenulum", es: "justo al lado del frenillo" },
+    zungenbaendchen: { de: "Zungenbändchen", en: "frenulum", es: "frenillo" },
+    schraegNachOben: { de: "leicht schräg nach oben", en: "slightly angled upwards", es: "un poco inclinado hacia arriba" },
+    zunge: { de: "Zunge", en: "tongue", es: "lengua" },
+    untenEinstich: { de: "unten: Einstich", en: "below: entry", es: "abajo: entrada" },
+    obenPunkt: { de: "oben: Punkt", en: "top: dot", es: "arriba: punto" },
+    barbellMin19: { de: "Barbell mind. 19 mm", en: "barbell min. 19 mm", es: "barbell mín. 19 mm" },
+    kugelObenAuf: { de: "Kugel oben aufdrehen", en: "screw on top ball", es: "enroscar bola de arriba" },
     tippTitel: { de: "Gut zu wissen", en: "Good to know", es: "Bueno saberlo" },
     tippZeile1: { de: "Es gibt auch spezielle Tragusklemmen", en: "There are also special tragus clamps", es: "También hay pinzas especiales para trago" },
     tippZeile2: { de: "mit Auffanghütchen.", en: "with a receiving cap.", es: "con capuchón receptor." },
@@ -771,6 +783,14 @@ window.KURS = window.KURS || { module: [] };
       S.push({ text: t.fertig, svg: bildQ(o, ring("") + kugelVorn(a1[0] + 4, a1[1] + 6, 9) + kugelVorn(a2[0] - 4, a2[1] + 6, 9) + hinweis(500, 300, C[0] + 20, C[1] + RRg - 6, o.schmuckWort, 160) + haken()) });
       return S;
     }
+    if (o.vonEintritt) {
+      var xE = l + 12 - o.laenge, sh2 = F0 - xE, ende = F0 + o.laenge;
+      S.push({ text: t.einsetzen, svg: bildQ(o, kanal(o) + kanuele(tip, false, l, r) + bewegt(-80, 0, schmuckGerade(o, xE, true, false)) + pfeil(110, 160, 250) + hinweis(150, 310, l + 6, Y + 6, "nur23", 190) + hinweis(150, 110, xE - 9, Y - 8, "kugelSchonDrauf", 190)) });
+      S.push({ text: t.schieben, svg: bildQ(o, bewegt(0, sh2, kanuele(tip, false, l, r)) + bewegt(0, sh2, schmuckGerade(o, xE, true, false)) + pfeil(160, 220, 250)) });
+      S.push({ text: t.kugel, svg: bildQ(o, '<g transform="translate(' + sh2 + ' 0)"><g class="a-weg">' + kanuele(tip, false, l, r) + "</g></g>" + schmuckGerade(o, F0, true, false) + bewegt(60, 0, kugel(ende + 9)) + drehpfeil(ende + 9, Y - 26) + hinweis(500, 300, ende + 6, Y + 8, o.kugelWort || "kugelAuf", 210)) });
+      S.push({ text: t.fertig, svg: bildQ(o, schmuckGerade(o, F0, true, false) + kugel(ende + 9) + hinweis(150, 300, F0 + 12, Y + 8, "ueberlaenge", 180) + (o.schmuckWort ? hinweis(500, 300, 320, Y + 4, o.schmuckWort, 180) : "") + haken()) });
+      return S;
+    }
     S.push({ text: t.einsetzen, svg: bildQ(o, kanal(o) + kanuele(tip, false, l, r) + bewegt(80, 0, schmuckGerade(o, xIn, false, true)) + pfeil(530, 480, 250) + hinweis(470, 310, xIn + 6, Y + 6, "nur23", 190)) });
     S.push({ text: t.schieben, svg: bildQ(o, bewegt(0, -sh, kanuele(tip, false, l, r)) + bewegt(0, -sh, schmuckGerade(o, xIn, false, true)) + pfeil(480, 420, 250)) });
     S.push({ text: t.kugel, svg: bildQ(o, '<g class="a-weg-links">' + kanuele(tip, false, l - sh, r - sh) + "</g>" + schmuckGerade(o, F0, false, true) + '<g transform="translate(' + (F0 - 258) + ' 0)">' + klemmzangeVorn() + "</g>" + bewegt(-70, 0, kugel(F0 - 9) + kugelgreifer(F0 - 9)) + hinweis(470, 300, F0 + 4, Y + 6, "kugelAuf", 190)) });
@@ -1015,6 +1035,83 @@ window.KURS = window.KURS || { module: [] };
       svg: bildMund(klemmeAn(LP, -60, 80) + kanueleAuf(LP, 30, .42, true) + hinweis(510, 270, LP[0] + 6, LP[1] + 2, "vonAussenInDenMund", 230)) }
   ].concat(labretBasis.slice(2));
 
+  // ---------- Zunge ----------
+  var ZP = [320, 196], ZU = [331, 236];
+  function flascheMit(x, y, wort) { return flasche(x, y).replace('class="a-klein" fill="#2F4A7A">Kodan<', 'class="a-klein" font-size="8" style="font-size:8px" fill="#2F4A7A">{' + wort + "}<"); }
+  function zungeVorn() {
+    // offener Mund von vorn, Zunge herausgestreckt
+    return '<g filter="url(#aWeich)" opacity=".35"><rect x="150" y="0" width="340" height="360" rx="90" fill="#EBC3AE"/></g>' +
+      '<g filter="url(#aSchatten)"><path d="M180 40 C200 20 440 20 460 40 L470 330 C420 350 220 350 170 330 Z" fill="url(#aHaut)" opacity=".95"/></g>' +
+      '<ellipse cx="320" cy="150" rx="92" ry="52" fill="#D98C86" stroke="#B86E68" stroke-width="2"/>' +
+      '<ellipse cx="320" cy="150" rx="76" ry="38" fill="#5A2E2A"/>' +
+      '<path d="M262 128 L378 128 L370 138 L270 138 Z" fill="#F6F1E8"/>' +
+      '<path d="M266 150 C266 210 286 262 320 266 C354 262 374 210 374 150 Z" fill="#E7898A" stroke="#C66A6C" stroke-width="2"/>' +
+      '<path d="M320 160 L320 244" stroke="#C66A6C" stroke-width="2" opacity=".6"/>';
+  }
+  function zungeUnten() {
+    // Zunge angehoben, Ansicht der Unterseite mit Zungenbändchen
+    return '<g filter="url(#aWeich)" opacity=".35"><rect x="150" y="0" width="340" height="360" rx="90" fill="#EBC3AE"/></g>' +
+      '<ellipse cx="320" cy="190" rx="130" ry="120" fill="#5A2E2A"/>' +
+      '<g filter="url(#aSchatten)"><path d="M230 120 C230 70 410 70 410 120 C410 200 380 270 320 276 C260 270 230 200 230 120 Z" fill="#D9777E" stroke="#B5585F" stroke-width="2"/></g>' +
+      '<path d="M320 196 L320 300" stroke="#C46068" stroke-width="7" stroke-linecap="round"/><path d="M320 196 L320 300" stroke="#E79AA0" stroke-width="3" stroke-linecap="round"/>' +
+      '<path d="M250 300 C280 290 360 290 390 300" fill="none" stroke="#C46068" stroke-width="4" opacity=".7"/>';
+  }
+  function bildZunge(unten, inhalt) {
+    return '<svg viewBox="0 0 ' + W + " " + H + '" role="img">' + DEFS + buehne() + etikett(530, unten ? "unterseite" : "ansichtVorn", 170) + (unten ? zungeUnten() : zungeVorn()) + inhalt + "</svg>";
+  }
+  var zungeO = {
+    d: 100, unten: Y + 120, knorpel: false, gewebeWort: "zunge", links: "untenEinstich", rechts: "obenPunkt",
+    werkzeug: "snaptile", werkzeugWort: "snaptile", gauge: "kan16", schmuck: "barbell", schmuckWort: "barbellMin19", kugelWort: "kugelObenAuf",
+    ueberVorn: 22, vonEintritt: true, vorn: "",
+    texte: {
+      lage: { de: "", en: "", es: "" }, halt: { de: "", en: "", es: "" },
+      stich: { de: "Im Querschnitt: Mit der 16G-Kanüle von unten durch die Zunge stechen, bis die Spitze oben am Punkt herauskommt.",
+        en: "In cross-section: pierce through the tongue from below with the 16G cannula until the tip comes out at the dot on top.",
+        es: "En corte: perfora la lengua desde abajo con la cánula 16G hasta que la punta salga arriba por el punto." },
+      abwurf: { de: "Snaptile abnehmen und die Stahlnadel nach unten herausziehen. Das Röhrchen bleibt im Stichkanal.",
+        en: "Take off the Snaptile and pull the steel needle out downwards. The tube stays in the channel.",
+        es: "Quita el Snaptile y saca la aguja de acero hacia abajo. El tubo se queda en el canal." },
+      ansatz: { de: "Unten den grünen Ansatz mit der Schere abschneiden, sodass nur das Röhrchen bleibt.",
+        en: "Underneath, cut off the green hub with scissors so only the tube is left.",
+        es: "Por debajo, corta el cono verde con las tijeras para que solo quede el tubo." },
+      einsetzen: { de: "Den Barbell nehmen, immer mindestens 19 mm lang. Unten ist schon eine Kugel drauf. Das freie Ende nur 2–3 mm von unten in das Röhrchen stecken.",
+        en: "Take the barbell, always at least 19 mm long. The lower ball is already on. Insert the free end only 2–3 mm into the tube from below.",
+        es: "Toma el barbell, siempre de al menos 19 mm. La bola de abajo ya está puesta. Introduce el extremo libre solo 2–3 mm en el tubo desde abajo." },
+      schieben: { de: "Den Barbell von unten durch die Zunge schieben. Er schiebt das Röhrchen oben hinaus.",
+        en: "Push the barbell through the tongue from below. It pushes the tube out at the top.",
+        es: "Empuja el barbell a través de la lengua desde abajo. Saca el tubo por arriba." },
+      kugel: { de: "Das Röhrchen abnehmen und oben die Kugel aufdrehen.",
+        en: "Remove the tube and screw on the ball at the top.",
+        es: "Retira el tubo y enrosca la bola de arriba." },
+      fertig: { de: "Fertig: Barbell mit Überlänge, die Zunge schwillt an. Dem Kunden sofort einen Eiswürfel zum Kühlen geben, am besten aus Kamillentee.",
+        en: "Done: barbell with extra length, as the tongue swells. Give the client an ice cube to cool it straight away, ideally made from chamomile tea.",
+        es: "Listo: barbell con longitud extra, porque la lengua se hincha. Dale al cliente enseguida un cubito de hielo para enfriar, mejor de manzanilla." }
+    }
+  };
+  var zungeBasis = piercingSchritte(zungeO);
+  var zunge = [
+    { text: { de: "Vorbereitung: Den Kunden mit Chlorhexamed spülen lassen. Danach die Zunge mit einem Papiertuch trocken tupfen.",
+        en: "Preparation: have the client rinse with Chlorhexamed. Then pat the tongue dry with a paper towel.",
+        es: "Preparación: el cliente se enjuaga con Chlorhexamed. Después seca la lengua con un papel." },
+      svg: szene(flascheMit(250, 140, "chlorhexamed") + '<g class="a-erscheinen" filter="url(#aSchatten)"><path d="M370 150 L470 140 L480 250 L380 262 Z" fill="#FFFFFF" stroke="#E4DACB"/><path d="M384 170 L468 162 M386 190 L470 182 M388 210 L472 202" stroke="#EDE6DA" stroke-width="2"/></g>' + hinweis(470, 300, 426, 240, "papiertuch", 170)) },
+    { text: { de: "Einen Punkt mittig auf die Zunge zeichnen.",
+        en: "Draw a dot in the middle of the tongue.",
+        es: "Dibuja un punto en el centro de la lengua." },
+      svg: bildZunge(false, '<g class="a-erscheinen">' + punkt(ZP[0], ZP[1]) + "</g>" + hinweis(150, 300, ZP[0] - 4, ZP[1] + 4, "punktMitte", 180)) },
+    { text: { de: "Snaptile oder Gazeklemme auf den Punkt anlegen, oben und unten mittig. Das Snaptile ist ein Einmalwerkzeug, die Gazeklemme wird sterilisiert und wiederverwendet.",
+        en: "Apply the Snaptile or gauze clamp over the dot, centred on top and underneath. The Snaptile is single-use, the gauze clamp is sterilised and reused.",
+        es: "Coloca el Snaptile o la pinza de gasa sobre el punto, centrado arriba y abajo. El Snaptile es de un solo uso, la pinza de gasa se esteriliza y se reutiliza." },
+      svg: bildZunge(false, punkt(ZP[0], ZP[1]) + bewegt(-50, 0, klemmeAn(ZP, 0, 140)) + hinweis(150, 300, ZP[0] - 2, 320, "snaptileOderGaze", 230)) },
+    { text: { de: "Von unten gesehen: Der Einstich liegt knapp neben dem Zungenbändchen. Das Zungenbändchen selbst nicht verletzen.",
+        en: "Seen from below: the entry point sits just beside the frenulum. Do not injure the frenulum itself.",
+        es: "Visto desde abajo: la entrada está justo al lado del frenillo. No lesiones el frenillo." },
+      svg: bildZunge(true, '<g class="a-erscheinen">' + punkt(ZU[0], ZU[1]) + "</g>" + hinweis(510, 290, ZU[0] + 4, ZU[1] + 4, "nebenBaendchen", 220) + hinweis(150, 300, 318, 290, "zungenbaendchen", 180)) },
+    { text: { de: "Von unten langsam und kontrolliert leicht schräg nach oben stechen, sodass die Spitze oben genau auf dem Punkt herauskommt.",
+        en: "Pierce from below slowly and under control, angled slightly upwards, so the tip comes out exactly on the dot on top.",
+        es: "Perfora desde abajo despacio y con control, un poco inclinado hacia arriba, para que la punta salga justo en el punto de arriba." },
+      svg: bildZunge(true, punkt(ZU[0], ZU[1]) + kanueleAuf(ZU, -72, .5, true) + hinweis(510, 120, ZU[0] + 4, ZU[1] - 6, "schraegNachOben", 220)) }
+  ].concat(zungeBasis.slice(2));
+
   // Tragus: Snaptile, Tragus leicht vom Gehörgang wegbiegen, langsam und kontrolliert stechen
   var TP = [281, 232];
   function gehoergangVorn() { return '<ellipse cx="296" cy="226" rx="9" ry="13" fill="#B97F69" opacity=".75"/>'; }
@@ -1176,6 +1273,14 @@ window.KURS = window.KURS || { module: [] };
         en: "Schematic illustration, not to scale. The real clip from the studio is coming soon.",
         es: "Ilustración esquemática, no a escala. Pronto estará el vídeo real del estudio." },
       schritte: labretPiercing,
+      woerter: T
+    },
+    "labor-zunge": {
+      titel: { de: "Animation: Zunge mit Barbell", en: "Animation: tongue with a barbell", es: "Animación: lengua con barbell" },
+      hinweis: { de: "Schematische Darstellung, nicht maßstabsgetreu. Den echten Clip aus dem Studio gibt es bald.",
+        en: "Schematic illustration, not to scale. The real clip from the studio is coming soon.",
+        es: "Ilustración esquemática, no a escala. Pronto estará el vídeo real del estudio." },
+      schritte: zunge,
       woerter: T
     },
     "labor-industrial": {
